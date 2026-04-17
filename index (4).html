@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SeedWave — Каталог проектов</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0a0a0a;
+    color: #999;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+  }
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 24px;
+  }
+  .tagline {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 48px;
+    line-height: 1.6;
+  }
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #333, transparent);
+    margin: 24px 0;
+  }
+  .title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 56px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 48px;
+    color: #fff;
+  }
+  .project {
+    display: flex;
+    align-items: baseline;
+    padding: 18px 0;
+    border-bottom: 1px solid #1a1a1a;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+  }
+  .project:hover {
+    border-bottom-color: #444;
+    padding-left: 8px;
+  }
+  .project:hover .project-name { color: #fff; }
+  .project:hover .arrow { opacity: 1; transform: translateX(4px); }
+  .project-num {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #444;
+    min-width: 32px;
+    flex-shrink: 0;
+  }
+  .project-info { flex: 1; }
+  .project-name {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #ccc;
+    transition: color 0.3s ease;
+    margin-bottom: 4px;
+  }
+  .project-meta {
+    font-size: 13px;
+    color: #666;
+    font-weight: 300;
+  }
+  .project-sector {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #555;
+    padding: 3px 10px;
+    border: 1px solid #2a2a2a;
+    border-radius: 2px;
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+  .arrow {
+    font-size: 18px;
+    color: #555;
+    opacity: 0;
+    transition: all 0.3s ease;
+    margin-left: 16px;
+    flex-shrink: 0;
+  }
+  .footer {
+    margin-top: 48px;
+    text-align: center;
+  }
+  .footer-text {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: #444;
+    margin-bottom: 16px;
+  }
+  .footer-link {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #666;
+    text-decoration: none;
+    padding: 10px 24px;
+    border: 1px solid #2a2a2a;
+    transition: all 0.3s ease;
+  }
+  .footer-link:hover { color: #fff; border-color: #555; }
+  .count {
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+    margin-top: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .new-badge {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #0f6e56;
+    padding: 2px 6px;
+    border: 1px solid #1a3a2e;
+    border-radius: 2px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="tagline">SeedWave — платформа, где Идеи, Люди и Деньги собираются в реальные Проекты</div>
+  <div class="divider"></div>
+  <div class="title">Каталог</div>
+
+  <a class="project" href="cooperative.html" target="_blank">
+    <span class="project-num">01</span>
+    <div class="project-info">
+      <div class="project-name">Dubai Madeira Cooperative</div>
+      <div class="project-meta">Жилищный кооператив по португальскому праву. Proof of concept: +48% за 15 мес.</div>
+    </div>
+    <span class="project-sector">Real Estate</span>
+    <span class="arrow">&rarr;</span>
+  </a>
+
+  <a class="project" href="ai-secretary.html" target="_blank">
+    <span class="project-num">02</span>
+    <div class="project-info">
+      <div class="project-name">AI Secretary Kit</div>
+      <div class="project-meta">Персональный ИИ-секретарь. Telegram + Make + Notion + OpenAI. Без кода.</div>
+    </div>
+    <span class="project-sector">AI / Tech</span>
+    <span class="arrow">&rarr;</span>
+  </a>
+
+  <a class="project" href="banya.html" target="_blank">
+    <span class="project-num">03</span>
+    <div class="project-info">
+      <div class="project-name">Банный комплекс на Мадейре<span class="new-badge">new</span></div>
+      <div class="project-meta">Русская парная, финская сауна, хаммам, японская фуро. Модульный формат. Ниша пустая.</div>
+    </div>
+    <span class="project-sector">Hospitality</span>
+    <span class="arrow">&rarr;</span>
+  </a>
+
+  <a class="project" href="ev-service.html" target="_blank">
+    <span class="project-num">04</span>
+    <div class="project-info">
+      <div class="project-name">Автосервис для электромобилей<span class="new-badge">new</span></div>
+      <div class="project-meta">Независимый EV-сервис в Фуншале. Tesla, BYD, VW ID и другие. Ниша свободна.</div>
+    </div>
+    <span class="project-sector">Services / EV</span>
+    <span class="arrow">&rarr;</span>
+  </a>
+
+  <a class="project" href="smart-home.html" target="_blank">
+    <span class="project-num">05</span>
+    <div class="project-info">
+      <div class="project-name">Умный энергосберегающий дом<span class="new-badge">new</span></div>
+      <div class="project-meta">Солнечные панели, аккумуляторы, теплые полы. Комплексная услуга для Мадейры.</div>
+    </div>
+    <span class="project-sector">Energy</span>
+    <span class="arrow">&rarr;</span>
+  </a>
+
+  <a class="project" href="dubai-invest.html" target="_blank">
+    <span class="project-num">06</span>
+    <div class="project-info">
+      <div class="project-name">Dubai Madeira — инвестиционный проект</div>
+      <div class="project-meta">Инвестиции в недвижимость Мадейры через кооператив. Вход от 5 000 EUR.</div>
+    </div>
+    <span class="project-sector">Investment</span>
+    <span class="arrow">&rarr;</span>
+  </a>
+
+  <a class="project" href="sports-creams.html" target="_blank">
+    <span class="project-num">07</span>
+    <div class="project-info">
+      <div class="project-name">Спортивные кремы</div>
+      <div class="project-meta">Разогревающие и охлаждающие кремы для спортсменов. Производство на базе.</div>
+    </div>
+    <span class="project-sector">Health</span>
+    <span class="arrow">&rarr;</span>
+  </a>
+
+  <a class="project" href="logos.html" target="_blank">
+    <span class="project-num">08</span>
+    <div class="project-info">
+      <div class="project-name">Дизайн логотипов для стартапов</div>
+      <div class="project-meta">Быстрый и доступный дизайн-сервис для начинающих проектов.</div>
+    </div>
+    <span class="project-sector">Design</span>
+    <span class="arrow">&rarr;</span>
+  </a>
+
+  <div class="footer">
+    <div class="footer-text">Есть идея? Нажми /start</div>
+    <a class="footer-link" href="https://t.me/SeedWaveBot" target="_blank">SeedWave Bot</a>
+  </div>
+
+  <div class="count">8 проектов / Madeira 2026</div>
+
+</div>
+</body>
+</html>
