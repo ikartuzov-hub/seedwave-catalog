@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeedWave — Catálogo de Projetos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .header p {
+            font-size: 1.05rem;
+            color: #888;
+            font-weight: 300;
+            letter-spacing: 0.02em;
+        }
+        .section-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #555;
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 60px;
+        }
+        .project-card {
+            display: flex;
+            align-items: center;
+            background: #111111;
+            border: 1px solid #1a1a1a;
+            border-radius: 12px;
+            padding: 24px;
+            text-decoration: none;
+            color: inherit;
+            transition: border-color 0.3s, background 0.3s;
+        }
+        .project-card:hover {
+            border-color: #333;
+            background: #141414;
+        }
+        .project-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #333;
+            min-width: 50px;
+            font-weight: 400;
+        }
+        .project-info {
+            flex: 1;
+            margin-left: 16px;
+        }
+        .project-name {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+        .project-desc {
+            font-size: 0.9rem;
+            color: #777;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        .project-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-left: 16px;
+        }
+        .tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #555;
+            background: #1a1a1a;
+            padding: 4px 10px;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+        .tag-new {
+            color: #4ade80;
+            background: rgba(74, 222, 128, 0.08);
+        }
+        .arrow {
+            font-size: 1.2rem;
+            color: #333;
+            transition: color 0.3s;
+        }
+        .project-card:hover .arrow {
+            color: #888;
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #1a1a1a;
+        }
+        .footer p {
+            color: #555;
+            font-size: 0.85rem;
+            margin-bottom: 16px;
+        }
+        .footer a {
+            display: inline-block;
+            background: #1a1a1a;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        .footer a:hover {
+            background: #222;
+        }
+        .footer .count {
+            margin-top: 24px;
+            font-size: 0.8rem;
+            color: #444;
+        }
+        .lang-switch {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .lang-switch a {
+            color: #555;
+            text-decoration: none;
+            font-size: 0.85rem;
+            margin: 0 8px;
+            transition: color 0.3s;
+        }
+        .lang-switch a:hover, .lang-switch a.active {
+            color: #fff;
+        }
+        @media (max-width: 600px) {
+            .header h1 { font-size: 1.8rem; }
+            .project-card { padding: 16px; }
+            .project-num { font-size: 1.4rem; min-width: 36px; }
+            .project-name { font-size: 1rem; }
+            .project-meta { flex-direction: column; gap: 6px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switch">
+            <a href="index.html">RU</a>
+            <a href="index-en.html">EN</a>
+            <a href="index-pt.html" class="active">PT</a>
+        </div>
+
+        <div class="header">
+            <h1>SeedWave — Catálogo de Projetos</h1>
+            <p>uma plataforma onde Ideias, Pessoas e Capital se juntam para criar Projetos reais</p>
+        </div>
+
+        <div class="section-title">Catálogo</div>
+
+        <div class="projects">
+            <a href="cooperative.html" class="project-card">
+                <div class="project-num">01</div>
+                <div class="project-info">
+                    <div class="project-name">Dubai Madeira Cooperative</div>
+                    <div class="project-desc">Cooperativa habitacional ao abrigo da lei portuguesa. Proof of concept: +48% em 15 meses.</div>
+                </div>
+                <div class="project-meta">
+                    <span class="tag">Imobiliário</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+
+            <a href="ai-secretary.html" class="project-card">
+                <div class="project-num">02</div>
+                <div class="project-info">
+                    <div class="project-name">AI Secretary Kit</div>
+                    <div class="project-desc">O teu secretário pessoal de IA. Telegram + Make + Notion + OpenAI. Sem código.</div>
+                </div>
+                <div class="project-meta">
+                    <span class="tag">IA / Tech</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+
+            <a href="banya.html" class="project-card">
+                <div class="project-num">03</div>
+                <div class="project-info">
+                    <div class="project-name">Complexo de Banhos na Madeira</div>
+                    <div class="project-desc">Sauna russa, sauna finlandesa, hammam, furo japonês. Formato modular. Nicho vazio.</div>
+                </div>
+                <div class="project-meta">
+                    <span class="tag">Hospitalidade</span>
+                    <span class="tag tag-new">novo</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+
+            <a href="ev-service.html" class="project-card">
+                <div class="project-num">04</div>
+                <div class="project-info">
+                    <div class="project-name">Centro de Serviço para Elétricos</div>
+                    <div class="project-desc">Oficina independente de veículos elétricos no Funchal. Tesla, BYD, VW ID e outros. Nicho livre.</div>
+                </div>
+                <div class="project-meta">
+                    <span class="tag">Serviços / EV</span>
+                    <span class="tag tag-new">novo</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+
+            <a href="smart-home.html" class="project-card">
+                <div class="project-num">05</div>
+                <div class="project-info">
+                    <div class="project-name">Casa Inteligente Energeticamente Eficiente</div>
+                    <div class="project-desc">Painéis solares, baterias, piso radiante. Serviço completo para a Madeira.</div>
+                </div>
+                <div class="project-meta">
+                    <span class="tag">Energia</span>
+                    <span class="tag tag-new">novo</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+
+            <a href="dubai-invest.html" class="project-card">
+                <div class="project-num">06</div>
+                <div class="project-info">
+                    <div class="project-name">Dubai Madeira — Projeto de Investimento</div>
+                    <div class="project-desc">Investimento imobiliário na Madeira através de cooperativa. Entrada a partir de 5 000 EUR.</div>
+                </div>
+                <div class="project-meta">
+                    <span class="tag">Investimento</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+
+            <a href="sports-creams.html" class="project-card">
+                <div class="project-num">07</div>
+                <div class="project-info">
+                    <div class="project-name">Cremes Desportivos de Recuperação</div>
+                    <div class="project-desc">Cremes aquecedores e refrescantes para atletas. Produção própria.</div>
+                </div>
+                <div class="project-meta">
+                    <span class="tag">Saúde</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+
+            <a href="logos.html" class="project-card">
+                <div class="project-num">08</div>
+                <div class="project-info">
+                    <div class="project-name">Design de Logótipos para Startups</div>
+                    <div class="project-desc">Serviço de design rápido e acessível para projetos em fase inicial.</div>
+                </div>
+                <div class="project-meta">
+                    <span class="tag">Design</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>Tens uma ideia? Escreve /start</p>
+            <a href="https://t.me/SeedWavePT_bot">SeedWave Bot</a>
+            <div class="count">8 projetos / Madeira 2026</div>
+        </div>
+    </div>
+</body>
+</html>
