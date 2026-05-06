@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SeedWave — Tonight: микро-ивенты по подписке</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #0a0a0a; color: #999; font-family: 'Outfit', sans-serif; font-weight: 300; min-height: 100vh; }
+.page { max-width: 720px; margin: 0 auto; padding: 64px 24px; }
+.back { display: inline-block; font-size: 13px; color: #555; text-decoration: none; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 48px; transition: color 0.3s; }
+.back:hover { color: #fff; }
+.sector { display: inline-block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: #555; padding: 3px 10px; border: 1px solid #2a2a2a; border-radius: 2px; margin-bottom: 16px; }
+.title { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 36px; color: #fff; letter-spacing: -0.5px; margin-bottom: 12px; line-height: 1.2; }
+.subtitle { font-family: 'Playfair Display', serif; font-style: italic; font-size: 16px; color: #666; margin-bottom: 48px; line-height: 1.6; }
+.divider { width: 100%; height: 1px; background: linear-gradient(90deg, transparent, #333, transparent); margin: 32px 0; }
+.section-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 3px; color: #444; margin-bottom: 12px; }
+.text { font-size: 15px; line-height: 1.8; color: #888; margin-bottom: 24px; }
+.highlight { color: #ccc; font-weight: 400; }
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: #1a1a1a; border: 1px solid #1a1a1a; margin: 32px 0; }
+.stat { background: #0a0a0a; padding: 20px; }
+.stat-label { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: #444; margin-bottom: 6px; }
+.stat-value { font-size: 20px; font-weight: 600; color: #ccc; }
+.roles { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 32px; }
+.role { font-size: 12px; font-weight: 400; color: #666; padding: 4px 12px; border: 1px solid #222; border-radius: 2px; }
+.cta { display: inline-block; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 3px; color: #666; text-decoration: none; padding: 12px 28px; border: 1px solid #2a2a2a; transition: all 0.3s; margin-top: 16px; }
+.cta:hover { color: #fff; border-color: #555; }
+.steps { margin: 8px 0 32px; }
+.step { display: flex; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #1a1a1a; }
+.step:last-child { border-bottom: none; }
+.step-num { font-size: 13px; font-weight: 300; color: #444; min-width: 32px; flex-shrink: 0; letter-spacing: 1px; }
+.step-text { font-size: 14px; line-height: 1.6; color: #888; }
+.step-text b { color: #ccc; font-weight: 600; }
+.footer-note { font-size: 12px; color: #333; text-align: center; margin-top: 48px; letter-spacing: 2px; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<div class="page">
+<a class="back" href="index.html">&larr; Каталог</a>
+<span class="sector">Events / Community</span>
+<div class="title">Tonight</div>
+<div class="subtitle">Kickstarter для микро-ивентов: 50 человек оплатили — артист в самолёте. Не оплатили — деньги вернулись</div>
+
+<div class="divider"></div>
+
+<div class="section-label">Проблема</div>
+<div class="text">У организатора в Роттердаме есть стендапер, дата и бюджет €2 000 — но никаких гарантий, что 50 человек придут. Сегодня весь риск лежит на одном человеке: посты в Telegram-каналах, в русскоязычных группах Facebook, рассылки по сообществу. Не собрал нужное число до вылета артиста — <span class="highlight">платит из своего кармана или отменяет, теряя доверие</span>.</div>
+
+<div class="section-label">Решение</div>
+<div class="text">Telegram-бот, который превращает каждое событие в мини-кампанию по подписке. Деньги резервируются, а не списываются. Если порог собран — событие идёт. Если нет — автовозврат всем участникам.</div>
+
+<div class="steps">
+<div class="step"><div class="step-num">01</div><div class="step-text"><b>Организатор публикует событие</b> — артист, дата, цена билета, минимум зрителей для выхода в ноль</div></div>
+<div class="step"><div class="step-num">02</div><div class="step-text"><b>Зрители выкупают билеты</b> через Telegram-бота. Деньги резервируются, не списываются</div></div>
+<div class="step"><div class="step-num">03</div><div class="step-text"><b>Порог достигнут</b> → событие идёт, деньги уходят, артист берёт билет</div></div>
+<div class="step"><div class="step-num">04</div><div class="step-text"><b>Порог не достигнут</b> → автовозврат, никто не теряет денег</div></div>
+</div>
+
+<div class="stats">
+<div class="stat">
+<div class="stat-label">Старт</div>
+<div class="stat-value">Роттердам</div>
+</div>
+<div class="stat">
+<div class="stat-label">Стадия</div>
+<div class="stat-value">Pre-MVP</div>
+</div>
+<div class="stat">
+<div class="stat-label">GMV события</div>
+<div class="stat-value">€2 000</div>
+</div>
+<div class="stat">
+<div class="stat-label">Комиссия платформы</div>
+<div class="stat-value">4%</div>
+</div>
+</div>
+
+<div class="section-label">Юнит-экономика — одно событие</div>
+<div class="text">50 билетов × €40 = €2 000 GMV → артисту и на дорогу. Платформа берёт 4% = €80. Площадка — бесплатно: кафе или бар зарабатывает на напитках во время события. <span class="highlight">Все стороны выигрывают на объёме, а не на марже.</span></div>
+
+<div class="section-label">Почему сейчас</div>
+<div class="text">Платежи в Telegram получают крупное обновление — нативная продажа билетов внутри приложения становится реальностью. Русскоязычная диаспора в Европе зрелая: плотные каналы, повторяющаяся аудитория, реальный спрос на родном языке. Артисты мобильны: гастрольный стендап и музыка — узкое горлышко не в талантах, а в спросе на земле.</div>
+
+<div class="section-label">Кого ищем</div>
+<div class="roles">
+<span class="role">Operator — основатель проекта (Евгений, Роттердам)</span>
+<span class="role">Pilot organizers — Мадейра, Лиссабон, Берлин, Тбилиси</span>
+<span class="role">Builder — Telegram-бот + Make</span>
+</div>
+
+<div class="section-label">Дорожная карта</div>
+<div class="text"><span class="highlight">Месяц 1:</span> MVP Telegram-бота — создание события, предзаказ, возвраты. Тест на следующем шоу Евгения в Роттердаме.<br><br><span class="highlight">Месяцы 2–3:</span> 3 города, по одному организатору в каждом. Цель — 10 событий, &gt;80% доходимость.<br><br><span class="highlight">Месяцы 4–6:</span> открытие платформы — онбординг, каталог гастрольных артистов, партнёры-площадки.</div>
+
+<div class="divider"></div>
+
+<div class="section-label">Следующий шаг</div>
+<div class="text">Подтвердить участие Евгения как оператора. Запустить первый pilot-event в Роттердаме на €2 000. Параллельно — найти 2–3 аналогичных организатора в других городах диаспоры.</div>
+
+<div style="text-align: center;">
+<a class="cta" href="https://t.me/SeedWaveBot" target="_blank">Написать в SeedWave</a>
+</div>
+
+<div class="footer-note">SeedWave / Madeira 2026 · Founder: Yevgeny @andoretz</div>
+</div>
+</body>
+</html>
