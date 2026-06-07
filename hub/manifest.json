@@ -1,0 +1,14 @@
+{
+  "hub": "SeedWave — Investment Deal Flow",
+  "defaultLang": "ru",
+  "content": "projects.json",
+  "botUrl": "https://t.me/SeedWaveBot",
+  "hubUrl": "https://ikartuzov-hub.github.io/seedwave-catalog/hub/",
+  "languages": [
+    { "code": "ru", "label": "Русский",    "flag": "🇷🇺", "ui": "ui.ru.json", "dir": "ltr", "live": true  },
+    { "code": "en", "label": "English",    "flag": "🇬🇧", "ui": "ui.en.json", "dir": "ltr", "live": true  },
+    { "code": "pt", "label": "Português",  "flag": "🇵🇹", "ui": "ui.pt.json", "dir": "ltr", "live": false },
+    { "code": "es", "label": "Español",    "flag": "🇪🇸", "ui": "ui.es.json", "dir": "ltr", "live": false },
+    { "code": "de", "label": "Deutsch",    "flag": "🇩🇪", "ui": "ui.de.json", "dir": "ltr", "live": false }
+  ]
+}
