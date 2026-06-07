@@ -1,0 +1,69 @@
+{
+  "projects": [
+    {
+      "id": "dubai-madeira-cooperative",
+      "icon": "🏢",
+      "category": "Inmobiliario",
+      "name": "Dubai Madeira Cooperative — cooperativa de vivienda",
+      "hook": "Cooperativa bajo la ley portuguesa para la compra colectiva de inmuebles. El primer activo subió +48% en 15 meses.",
+      "description": "Cooperativa de vivienda y construcción para la compra colectiva de inmuebles en Madeira y Dubái. Entidad sin ánimo de lucro con beneficios fiscales — exención de IRC, IMT e IMI. Próximo proyecto — SeedWave_11, entrada desde 5 000 EUR.",
+      "sectors": ["Real Estate", "Construction"],
+      "stage": "mvp",
+      "investment": "150 000 EUR (20% del valor del inmueble). Entrada mínima desde 5 000 EUR.",
+      "lookingFor": "Cooperativistas-inversores · Abogado · Socio operativo",
+      "demoLink": ""
+    },
+    {
+      "id": "lis",
+      "icon": "🦊",
+      "category": "IA / Tecnología",
+      "name": "Lis — tu secretario personal de IA",
+      "hook": "Secretario personal de IA en Telegram: capta tareas, las ordena por prioridad y envía un resumen cada mañana. No es suscripción — móntalo en una noche y es tuyo para siempre.",
+      "description": "Escribes al bot una tarea, idea o correo — Lis fija la prioridad por la matriz de Eisenhower, lo archiva en tus bases de Notion y por la mañana envía la lista de tareas con botones «Hecho / Mañana». Los correos importantes de Gmail se convierten en tareas automáticamente. Stack: Telegram + Make + OpenAI + Notion.",
+      "sectors": ["AI", "Technology"],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Creador de contenido · Comercial · Tester",
+      "demoLink": ""
+    },
+    {
+      "id": "treino",
+      "icon": "🗣️",
+      "category": "Educación / Idiomas",
+      "name": "Treino — un idioma a través de tu propia historia",
+      "hook": "Aprendes un idioma con tus propias frases reales: tarjetas deslizables, repetición espaciada, audio. Ya son 6 pares de idiomas y la caja está activa.",
+      "description": "Motor de aprendizaje: frases personales → tarjetas deslizables por el método Leitner con audio (TTS) y modo de escucha. Un solo motor — los nuevos idiomas se añaden como diccionario, ya 6 pares activos. Monetización vía Gumroad (Merchant of Record, IVA de la UE automático). Promoción: círculo cercano + folletos con QR.",
+      "sectors": ["Education", "Technology"],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Alumnos piloto · Socio técnico (BaaS)",
+      "demoLink": "https://ikartuzov-hub.github.io/treino/"
+    },
+    {
+      "id": "tonight",
+      "icon": "🎤",
+      "category": "Tecnología / Eventos",
+      "name": "Tonight — plataforma de giras para artistas y locales",
+      "hook": "Plataforma de giras para artistas pequeños y locales: una cadena de ciudades cercanas, taquilla única y promoción compartida.",
+      "description": "Ayuda a artistas pequeños y organizadores a encontrarse, a pagar el caché de forma segura y a vender entradas para microeventos. La plataforma arma la gira con locales de trayectos cortos y centraliza el presupuesto de promoción. El iniciador es un operador de eventos activo en Europa.",
+      "sectors": ["Technology", "Events"],
+      "stage": "validation",
+      "investment": "",
+      "lookingFor": "Builder (bot + entradas) · Operator · Locales piloto",
+      "demoLink": "https://ikartuzov-hub.github.io/seedwave-catalog/tonight.html"
+    },
+    {
+      "id": "sport-creams",
+      "icon": "💪",
+      "category": "Lifestyle",
+      "name": "Cremas deportivas — cosmética natural para deportistas",
+      "hook": "Una línea de cremas y bálsamos naturales para deportistas: recuperación, calentamiento, protección de la piel.",
+      "description": "Fórmulas propias a base de ingredientes naturales. Recuperación muscular, calentamiento antes del esfuerzo, protección de la piel.",
+      "sectors": ["Health", "Beauty"],
+      "stage": "idea",
+      "investment": "",
+      "lookingFor": "Inversor",
+      "demoLink": ""
+    }
+  ]
+}
