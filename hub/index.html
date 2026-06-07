@@ -126,6 +126,8 @@
   .cta p{color:var(--ink-soft);max-width:540px;margin:0 auto 22px}
 
   footer{text-align:center;color:var(--ink-soft);font-size:.84rem;padding:24px 0 48px;border-top:1px solid var(--line);margin-top:20px}
+  .author-link{color:var(--teal-bright);text-decoration:none;border-bottom:1px solid rgba(95,224,207,.45);transition:border-color .2s}
+  .author-link:hover{border-color:var(--teal-bright)}
 
   /* language overlay */
   .ov{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;
@@ -171,6 +173,18 @@
 (async function(){
   const $ = (s,r=document)=>r.querySelector(s);
   const esc = s => String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  function linkAuthor(raw){
+    let s = esc(raw);
+    const url = (typeof manifest!=="undefined") && manifest.authorUrl;
+    const names = (typeof manifest!=="undefined") && manifest.authorNames;
+    if(url && Array.isArray(names)){
+      names.forEach(n=>{
+        const en = esc(n);
+        s = s.split(en).join(`<a class="author-link" href="${esc(url)}" target="_blank" rel="noopener">${en}</a>`);
+      });
+    }
+    return s;
+  }
 
   // ---- load manifest ----
   let manifest;
@@ -185,13 +199,18 @@
   if(!liveCodes.includes(lang)) lang = manifest.defaultLang;
 
   // ---- load ui + content ----
+  const contentFile = c => manifest.content.replace("{lang}", c);
+  async function loadContent(code){
+    const r = await fetch(contentFile(code),{cache:"no-store"});
+    if(!r.ok) throw new Error("no content "+code);
+    return r.json();
+  }
   let ui, data;
   try{
     const langDef = manifest.languages.find(l=>l.code===lang);
-    [ui, data] = await Promise.all([
-      (await fetch(langDef.ui,{cache:"no-store"})).json(),
-      (await fetch(manifest.content,{cache:"no-store"})).json()
-    ]);
+    ui = await (await fetch(langDef.ui,{cache:"no-store"})).json();
+    try { data = await loadContent(lang); }
+    catch(e){ data = await loadContent(manifest.defaultLang); }   // fallback: cards stay in base language
   }catch(e){ $("#loading").textContent = "content load error"; return; }
 
   document.documentElement.lang = lang;
@@ -220,7 +239,7 @@
       const tags = (p.sectors||[]).map(s=>`<span class="tag">${esc((ui.sectors&&ui.sectors[s])||s)}</span>`).join("");
       const rows = [];
       if(p.investment) rows.push(`<div class="row"><span class="k">${esc(ui.labelInvestment)}</span><span class="v">${esc(p.investment)}</span></div>`);
-      if(p.lookingFor) rows.push(`<div class="row"><span class="k">${esc(ui.labelLooking)}</span><span class="v">${esc(p.lookingFor)}</span></div>`);
+      if(p.lookingFor) rows.push(`<div class="row"><span class="k">${esc(ui.labelLooking)}</span><span class="v">${linkAuthor(p.lookingFor)}</span></div>`);
       const demo = p.demoLink ? `<a class="btn ghost" href="${esc(p.demoLink)}" target="_blank" rel="noopener">${esc(ui.btnDemo)}</a>` : "";
       return `
       <article class="card" style="animation-delay:${0.32 + i*0.08}s">
@@ -230,8 +249,8 @@
           ${stageLabel?`<span class="c-stage ${stageClass}">${esc(stageLabel)}</span>`:""}
         </div>
         <h3>${esc(p.name)}</h3>
-        ${p.hook?`<p class="c-hook">${esc(p.hook)}</p>`:""}
-        ${p.description?`<p class="c-desc">${esc(p.description)}</p>`:""}
+        ${p.hook?`<p class="c-hook">${linkAuthor(p.hook)}</p>`:""}
+        ${p.description?`<p class="c-desc">${linkAuthor(p.description)}</p>`:""}
         ${tags?`<div class="tags">${tags}</div>`:""}
         ${rows.length?`<div class="meta">${rows.join("")}</div>`:""}
         <div class="actions">
@@ -264,7 +283,7 @@
         <a class="btn" href="${esc(botBase)}" target="_blank" rel="noopener">${esc(ui.hubCtaBtn)} →</a>
       </section>
 
-      <footer>${esc(ui.footer)}</footer>`;
+      <footer>${linkAuthor(ui.footer)}</footer>`;
   }
 
   // ---- language overlay ----

@@ -1,9 +1,11 @@
 {
   "hub": "SeedWave — Investment Deal Flow",
   "defaultLang": "ru",
-  "content": "projects.json",
+  "content": "projects.{lang}.json",
   "botUrl": "https://t.me/SeedWaveBot",
   "hubUrl": "https://ikartuzov-hub.github.io/seedwave-catalog/hub/",
+  "authorUrl": "https://www.linkedin.com/in/igor-kartuzov/",
+  "authorNames": ["Игорь Картузов", "Igor Kartuzov"],
   "languages": [
     { "code": "ru", "label": "Русский",    "flag": "🇷🇺", "ui": "ui.ru.json", "dir": "ltr", "live": true  },
     { "code": "en", "label": "English",    "flag": "🇬🇧", "ui": "ui.en.json", "dir": "ltr", "live": true  },

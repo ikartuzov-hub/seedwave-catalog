@@ -1,0 +1,69 @@
+{
+  "projects": [
+    {
+      "id": "dubai-madeira-cooperative",
+      "icon": "🏢",
+      "category": "Real Estate",
+      "name": "Dubai Madeira Cooperative — housing cooperative",
+      "hook": "A cooperative under Portuguese law for collective property purchase. The first asset gained +48% in 15 months.",
+      "description": "A housing and construction cooperative (Cooperativa de Habitação e Construção) for collective property purchase in Madeira and Dubai. A non-profit with tax benefits — exemption from IRC, IMT, IMI. Next project — SeedWave_11, entry from 5,000 EUR.",
+      "sectors": ["Real Estate", "Construction"],
+      "stage": "mvp",
+      "investment": "150,000 EUR (20% of asset value). Minimum entry from 5,000 EUR.",
+      "lookingFor": "Cooperative investors · Lawyer · Operating partner",
+      "demoLink": ""
+    },
+    {
+      "id": "lis",
+      "icon": "🦊",
+      "category": "AI / Technology",
+      "name": "Lis — your personal AI secretary",
+      "hook": "A personal AI secretary in Telegram: it catches your tasks, sorts them by priority and sends a morning digest. Not a subscription — build it in an evening and own it forever.",
+      "description": "Message the bot a task, idea or email — Lis sets the priority by the Eisenhower matrix, files it into your Notion bases, and each morning sends your to-do list with ‘Done / Tomorrow’ buttons. Important Gmail messages turn into tasks automatically. Stack: Telegram + Make + OpenAI + Notion.",
+      "sectors": ["AI", "Technology"],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Creator · Salesperson · Tester",
+      "demoLink": ""
+    },
+    {
+      "id": "treino",
+      "icon": "🗣️",
+      "category": "Education / Languages",
+      "name": "Treino — learn a language through your own story",
+      "hook": "Study a language on your own real phrases: swipe cards, spaced repetition, audio. 6 language pairs already, checkout is live.",
+      "description": "A learning engine: your personal phrases → swipe cards (Leitner) with text-to-speech and a listening mode. One engine — new languages are added as dictionaries, already 6 live pairs. Monetised via Gumroad (Merchant of Record, EU VAT handled). Go-to-market: warm circle + QR flyers.",
+      "sectors": ["Education", "Technology"],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Pilot learners · Tech partner (BaaS)",
+      "demoLink": "https://ikartuzov-hub.github.io/treino/"
+    },
+    {
+      "id": "tonight",
+      "icon": "🎤",
+      "category": "Tech / Events",
+      "name": "Tonight — touring platform for artists & venues",
+      "hook": "A touring platform for small artists and local venues: a chain of nearby cities, one ticket checkout and shared-cost promotion.",
+      "description": "Helps small artists and organisers find each other, settle fees safely and sell tickets to micro-events. The platform builds a tour from venues with short travel legs and centralises the tour's ad budget. The initiator is an active events operator in Europe.",
+      "sectors": ["Technology", "Events"],
+      "stage": "validation",
+      "investment": "",
+      "lookingFor": "Builder (bot + tickets) · Operator · Pilot venues",
+      "demoLink": "https://ikartuzov-hub.github.io/seedwave-catalog/tonight.html"
+    },
+    {
+      "id": "sport-creams",
+      "icon": "💪",
+      "category": "Lifestyle",
+      "name": "Sport creams — natural cosmetics for athletes",
+      "hook": "A line of natural creams and balms for athletes: recovery, warm-up, skin protection.",
+      "description": "Proprietary formulas based on natural ingredients. Muscle recovery, pre-workout warm-up, skin protection.",
+      "sectors": ["Health", "Beauty"],
+      "stage": "idea",
+      "investment": "",
+      "lookingFor": "Investor",
+      "demoLink": ""
+    }
+  ]
+}

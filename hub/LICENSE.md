@@ -1,6 +1,6 @@
 # SeedWave — Investment Deal Flow Hub
 
-© 2026 Igor Kartuzov. Все права на бренд «SeedWave» и оформление витрины защищены.
+© 2026 [Igor Kartuzov](https://www.linkedin.com/in/igor-kartuzov/) — AI systems engineer. Все права на бренд «SeedWave» и оформление витрины защищены.
 
 **Открыто:** метод и подход (как устроена витрина, архитектура «трёх слоёв»)
 можно изучать, повторять и применять в своих проектах.
