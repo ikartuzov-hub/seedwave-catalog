@@ -144,6 +144,37 @@
           "Buscamos inversor para producir el lote piloto."
         ]
       }
+    },
+    {
+      "id": "birdie",
+      "icon": "🐦",
+      "category": "Educación / Deporte",
+      "name": "Birdie — asistente multilingüe del alumno de golf",
+      "hook": "La clase de golf es en portugués — Birdie la traduce al idioma del alumno. 73 términos, 7 golpes, Q&A del grupo. v1 en producción, piloto en el campo.",
+      "description": "Un asistente de bolsillo para alumnos de golf: términos, técnica de golpes, preguntas y respuestas del grupo y etiqueta — en 5 idiomas a la vez, sin conexión (PWA). Una base que se llena sola: cada clase alimenta el banco común de Q&A, y Birdie se vuelve más listo con cada grupo. El mismo motor de tres capas que Treino — un idioma nuevo es un diccionario, no una nueva aplicación. Un instructor del campo verifica la técnica y los términos.",
+      "sectors": [
+        "Education",
+        "Sports",
+        "Technology"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Alumnos del piloto · Clubes e instructores de golf · Socios (campos, equipo)",
+      "demoLink": "https://ikartuzov-hub.github.io/birdie/",
+      "page": {
+        "how": [
+          "El alumno abre Birdie en pleno campo — término, golpe, pregunta en segundos, sin internet.",
+          "Tras la clase, 5–7 términos nuevos se fijan con el ancla emocional personal del momento — la mecánica de memoria de Treino.",
+          "La pregunta del alumno y la respuesta del entrenador quedan en la base del curso: cada grupo nuevo empieza con la experiencia de todos los anteriores.",
+          "La técnica de los golpes y los términos portugueses los verifica el instructor del campo — marcados con una bandera de confianza."
+        ],
+        "proofs": [
+          "v1 en producción: 3 idiomas, PWA en el móvil, probado en vivo en el campo.",
+          "Arquitectura para 5 idiomas desde el inicio: alemanes e hispanohablantes del grupo lo abren en el suyo.",
+          "Base de Q&A que se llena sola — el producto se vuelve más listo con cada clase impartida.",
+          "El mismo motor que Treino: prueba de un estándar de construcción reutilizable."
+        ]
+      }
     }
   ]
 }

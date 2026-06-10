@@ -144,6 +144,37 @@
           "Gesucht: Investor für die Produktion der Pilotcharge."
         ]
       }
+    },
+    {
+      "id": "birdie",
+      "icon": "🐦",
+      "category": "Bildung / Sport",
+      "name": "Birdie — mehrsprachiger Assistent für Golfkurs-Schüler",
+      "hook": "Die Golfstunde läuft auf Portugiesisch — Birdie übersetzt sie in die Sprache des Schülers. 73 Begriffe, 7 Schläge, Gruppen-Q&A. v1 in Produktion, Pilot auf dem Platz.",
+      "description": "Ein Taschen-Assistent für Golfkurs-Schüler: Begriffe, Schlagtechnik, Fragen und Antworten der Gruppe und Etikette — in 5 Sprachen gleichzeitig, offline (PWA). Eine sich selbst füllende Basis: jede Stunde speist den gemeinsamen Q&A-Speicher, und Birdie wird mit jeder Gruppe klüger. Derselbe Drei-Schichten-Motor wie Treino — eine neue Sprache ist ein Wörterbuch, keine neue App. Ein Platz-Instruktor prüft Technik und Begriffe.",
+      "sectors": [
+        "Education",
+        "Sports",
+        "Technology"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Pilot-Schüler · Golfclubs und Instruktoren · Partner (Plätze, Ausrüstung)",
+      "demoLink": "https://ikartuzov-hub.github.io/birdie/",
+      "page": {
+        "how": [
+          "Der Schüler öffnet Birdie direkt auf dem Platz — Begriff, Schlag, Frage in Sekunden, ohne Internet.",
+          "Nach der Stunde prägen sich 5–7 neue Begriffe mit dem persönlichen emotionalen Anker des Moments ein — die Gedächtnismechanik von Treino.",
+          "Frage des Schülers und Antwort des Trainers bleiben in der Kursbasis: jede neue Gruppe startet mit der Erfahrung aller vorherigen.",
+          "Schlagtechnik und portugiesische Begriffe werden vom Platz-Instruktor geprüft — mit einer Vertrauensflagge markiert."
+        ],
+        "proofs": [
+          "v1 in Produktion: 3 Sprachen, PWA auf dem Handy, live auf dem Platz getestet.",
+          "Von Anfang an für 5 Sprachen gebaut: Deutsch- und Spanischsprachige der Gruppe öffnen es in ihrer.",
+          "Sich selbst füllende Q&A-Basis — das Produkt wird mit jeder gehaltenen Stunde klüger.",
+          "Derselbe Motor wie Treino: Beweis eines wiederverwendbaren Build-Standards."
+        ]
+      }
     }
   ]
 }

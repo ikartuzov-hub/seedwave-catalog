@@ -144,6 +144,37 @@
           "Looking for an investor to produce the pilot batch."
         ]
       }
+    },
+    {
+      "id": "birdie",
+      "icon": "🐦",
+      "category": "Education / Sports",
+      "name": "Birdie — multilingual golf-course student assistant",
+      "hook": "The golf lesson is in Portuguese — Birdie translates it into the student's language. 73 terms, 7 shots, group Q&A. v1 in production, piloting on the course.",
+      "description": "A pocket assistant for golf-course students: terms, shot technique, group Q&A and etiquette — in 5 languages at once, offline (PWA). A self-filling base: every lesson feeds the shared Q&A bank, and Birdie gets smarter with every group. The same three-layer engine as Treino — a new language is a dictionary, not a new app. A course instructor verifies technique and terms.",
+      "sectors": [
+        "Education",
+        "Sports",
+        "Technology"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Pilot students · Golf clubs and instructors · Partners (courses, gear)",
+      "demoLink": "https://ikartuzov-hub.github.io/birdie/",
+      "page": {
+        "how": [
+          "The student opens Birdie right on the course — term, shot, question found in seconds, no internet.",
+          "After the lesson 5–7 new terms stick with a personal emotional anchor of the moment — the memory mechanic from Treino.",
+          "The student's question and the coach's answer stay in the course base: each new group starts with the experience of all previous ones.",
+          "Shot technique and Portuguese terms are verified by the course instructor — marked with a trust flag."
+        ],
+        "proofs": [
+          "v1 in production: 3 languages, PWA on the phone, tested live on the course.",
+          "Architected for 5 languages from the start: German and Spanish speakers in the group open it in their own.",
+          "Self-filling Q&A base — the product gets smarter with every lesson held.",
+          "The same engine as Treino: proof of a reusable build standard."
+        ]
+      }
     }
   ]
 }

@@ -144,6 +144,37 @@
           "Procuramos investidor para produzir o lote-piloto."
         ]
       }
+    },
+    {
+      "id": "birdie",
+      "icon": "🐦",
+      "category": "Educação / Desporto",
+      "name": "Birdie — assistente multilíngue do aluno de golfe",
+      "hook": "A aula de golfe é em português — o Birdie traduz para a língua do aluno. 73 termos, 7 pancadas, Q&A do grupo. v1 em produção, piloto no campo.",
+      "description": "Um assistente de bolso para alunos de golfe: termos, técnica de pancadas, perguntas e respostas do grupo e etiqueta — em 5 línguas ao mesmo tempo, offline (PWA). Uma base que se preenche sozinha: cada aula alimenta o banco comum de Q&A, e o Birdie fica mais inteligente a cada turma. O mesmo motor de três camadas do Treino — uma nova língua é um dicionário, não uma nova aplicação. Um instrutor do campo verifica a técnica e os termos.",
+      "sectors": [
+        "Education",
+        "Sports",
+        "Technology"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Alunos do piloto · Clubes e instrutores de golfe · Parceiros (campos, equipamento)",
+      "demoLink": "https://ikartuzov-hub.github.io/birdie/",
+      "page": {
+        "how": [
+          "O aluno abre o Birdie mesmo no campo — termo, pancada, pergunta encontrados em segundos, sem internet.",
+          "Depois da aula, 5–7 termos novos fixam-se com a âncora emocional pessoal do momento — a mecânica de memória do Treino.",
+          "A pergunta do aluno e a resposta do treinador ficam na base do curso: cada nova turma começa com a experiência de todas as anteriores.",
+          "A técnica das pancadas e os termos portugueses são verificados pelo instrutor do campo — marcados com uma bandeira de confiança."
+        ],
+        "proofs": [
+          "v1 em produção: 3 línguas, PWA no telemóvel, testado ao vivo no campo.",
+          "Arquitetado para 5 línguas desde o início: alemães e hispanofalantes do grupo abrem na sua.",
+          "Base de Q&A que se preenche sozinha — o produto fica mais inteligente a cada aula dada.",
+          "O mesmo motor do Treino: prova de um padrão de construção reutilizável."
+        ]
+      }
     }
   ]
 }
