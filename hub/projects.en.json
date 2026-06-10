@@ -7,11 +7,28 @@
       "name": "Dubai Madeira Cooperative — housing cooperative",
       "hook": "A cooperative under Portuguese law for collective property purchase. The first asset gained +48% in 15 months.",
       "description": "A housing and construction cooperative (Cooperativa de Habitação e Construção) for collective property purchase in Madeira and Dubai. A non-profit with tax benefits — exemption from IRC, IMT, IMI. Next project — SeedWave_11, entry from 5,000 EUR.",
-      "sectors": ["Real Estate", "Construction"],
+      "sectors": [
+        "Real Estate",
+        "Construction"
+      ],
       "stage": "mvp",
       "investment": "150,000 EUR (20% of asset value). Minimum entry from 5,000 EUR.",
       "lookingFor": "Cooperative investors · Lawyer · Operating partner",
-      "demoLink": ""
+      "demoLink": "",
+      "page": {
+        "how": [
+          "The cooperative is established under Portuguese law (Cooperativa de Habitação e Construção) — a non-profit form with tax benefits: exemption from IRC, IMT and IMI.",
+          "Members contribute shares from 5,000 EUR and jointly raise 150,000 EUR — 20% of the asset value; the rest is covered by bank financing.",
+          "The cooperative purchases the property; ownership is transparently assigned to the members, all decisions follow the statutes.",
+          "Income comes from asset appreciation and rent. Exit — sale of your share or of the property under rules agreed in advance."
+        ],
+        "proofs": [
+          "The first asset gained +48% in value over 15 months.",
+          "Cooperative tax benefits: exemption from IRC, IMT and IMI.",
+          "Next project — SeedWave_11, entry from 5,000 EUR.",
+          "Initiated by Igor Kartuzov — 35 years in real assets, living and working in Madeira."
+        ]
+      }
     },
     {
       "id": "lis",
@@ -20,11 +37,27 @@
       "name": "Lis — your personal AI secretary",
       "hook": "A personal AI secretary in Telegram: it catches your tasks, sorts them by priority and sends a morning digest. Not a subscription — build it in an evening and own it forever.",
       "description": "Message the bot a task, idea or email — Lis sets the priority by the Eisenhower matrix, files it into your Notion bases, and each morning sends your to-do list with ‘Done / Tomorrow’ buttons. Important Gmail messages turn into tasks automatically. Stack: Telegram + Make + OpenAI + Notion.",
-      "sectors": ["AI", "Technology"],
+      "sectors": [
+        "AI",
+        "Technology"
+      ],
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Creator · Salesperson · Tester",
-      "demoLink": ""
+      "demoLink": "",
+      "page": {
+        "how": [
+          "Message the bot in Telegram with a task, an idea or a forwarded email — any time of day.",
+          "AI sets the priority using the Eisenhower matrix and files everything into your Notion bases.",
+          "Every morning you get a digest of your tasks with 'Done / Tomorrow' buttons — the day starts with a clear list.",
+          "Important Gmail messages turn into tasks automatically — nothing gets lost."
+        ],
+        "proofs": [
+          "The MVP runs daily as the author's personal operating system.",
+          "A no-server, no-code stack: Telegram + Make + OpenAI + Notion.",
+          "Not a subscription: build it in an evening from a ready blueprint — and own it forever."
+        ]
+      }
     },
     {
       "id": "treino",
@@ -33,11 +66,28 @@
       "name": "Treino — learn a language through your own story",
       "hook": "Study a language on your own real phrases: swipe cards, spaced repetition, audio. 6 language pairs already, checkout is live.",
       "description": "A learning engine: your personal phrases → swipe cards (Leitner) with text-to-speech and a listening mode. One engine — new languages are added as dictionaries, already 6 live pairs. Monetised via Gumroad (Merchant of Record, EU VAT handled). Go-to-market: warm circle + QR flyers.",
-      "sectors": ["Education", "Technology"],
+      "sectors": [
+        "Education",
+        "Technology"
+      ],
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Pilot learners · Tech partner (BaaS)",
-      "demoLink": "https://ikartuzov-hub.github.io/treino/"
+      "demoLink": "https://ikartuzov-hub.github.io/treino/",
+      "page": {
+        "how": [
+          "Take your own real phrases — from life, work, lessons with your teacher.",
+          "The engine turns them into swipe cards with text-to-speech and a listening mode.",
+          "Spaced repetition (Leitner method) brings a phrase back exactly when your brain is about to forget it.",
+          "A new language is a new dictionary, not a new app: one engine, a language switcher."
+        ],
+        "proofs": [
+          "6 live language pairs: RU→PT, EN→PT, PT→RU, ES→PT, RU→DE, DE→PT.",
+          "Checkout is live: Gumroad, EU VAT handled automatically (Merchant of Record).",
+          "Igor Kartuzov's first AI-built product to reach revenue.",
+          "An open methodology is published: the method, the science, 14 sources."
+        ]
+      }
     },
     {
       "id": "tonight",
@@ -46,11 +96,27 @@
       "name": "Tonight — touring platform for artists & venues",
       "hook": "A touring platform for small artists and local venues: a chain of nearby cities, one ticket checkout and shared-cost promotion.",
       "description": "Helps small artists and organisers find each other, settle fees safely and sell tickets to micro-events. The platform builds a tour from venues with short travel legs and centralises the tour's ad budget. The initiator is an active events operator in Europe.",
-      "sectors": ["Technology", "Events"],
+      "sectors": [
+        "Technology",
+        "Events"
+      ],
       "stage": "validation",
       "investment": "",
       "lookingFor": "Builder (bot + tickets) · Operator · Pilot venues",
-      "demoLink": "https://ikartuzov-hub.github.io/seedwave-catalog/tonight.html"
+      "demoLink": "https://ikartuzov-hub.github.io/seedwave-catalog/tonight.html",
+      "page": {
+        "how": [
+          "The platform builds a tour as a chain of venues in nearby cities — short travel legs, lower costs.",
+          "Artist and venue find each other and fix the terms inside the platform.",
+          "One checkout: ticket sales for micro-events and safe payment of the artist's fee.",
+          "The tour's ad budget is pooled and spent centrally — cheaper for everyone."
+        ],
+        "proofs": [
+          "Initiated by an active events operator in Europe.",
+          "Stage: validating demand with real venues and artists.",
+          "Looking for a builder (bot + tickets), an operator and pilot venues."
+        ]
+      }
     },
     {
       "id": "sport-creams",
@@ -59,11 +125,25 @@
       "name": "Sport creams — natural cosmetics for athletes",
       "hook": "A line of natural creams and balms for athletes: recovery, warm-up, skin protection.",
       "description": "Proprietary formulas based on natural ingredients. Muscle recovery, pre-workout warm-up, skin protection.",
-      "sectors": ["Health", "Beauty"],
+      "sectors": [
+        "Health",
+        "Beauty"
+      ],
       "stage": "idea",
       "investment": "",
       "lookingFor": "Investor",
-      "demoLink": ""
+      "demoLink": "",
+      "page": {
+        "how": [
+          "Proprietary formulas based on natural ingredients — no unnecessary chemistry.",
+          "Three lines: muscle recovery after training, warm-up before exercise, skin protection.",
+          "Launch via a pilot with a sports community, then retail and online sales."
+        ],
+        "proofs": [
+          "Stage: an idea with ready formulas.",
+          "Looking for an investor to produce the pilot batch."
+        ]
+      }
     }
   ]
 }

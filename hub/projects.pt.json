@@ -7,11 +7,28 @@
       "name": "Dubai Madeira Cooperative — cooperativa de habitação",
       "hook": "Cooperativa ao abrigo da lei portuguesa para compra coletiva de imóveis. O primeiro ativo valorizou +48% em 15 meses.",
       "description": "Cooperativa de Habitação e Construção para compra coletiva de imóveis na Madeira e no Dubai. Organização sem fins lucrativos com benefícios fiscais — isenção de IRC, IMT e IMI. Próximo projeto — SeedWave_11, entrada a partir de 5 000 EUR.",
-      "sectors": ["Real Estate", "Construction"],
+      "sectors": [
+        "Real Estate",
+        "Construction"
+      ],
       "stage": "mvp",
       "investment": "150 000 EUR (20% do valor do imóvel). Entrada mínima a partir de 5 000 EUR.",
       "lookingFor": "Cooperantes-investidores · Advogado · Parceiro operacional",
-      "demoLink": ""
+      "demoLink": "",
+      "page": {
+        "how": [
+          "A cooperativa é constituída ao abrigo da lei portuguesa (Cooperativa de Habitação e Construção) — forma sem fins lucrativos com benefícios fiscais: isenção de IRC, IMT e IMI.",
+          "Os membros entram com quotas a partir de 5 000 EUR e reúnem em conjunto 150 000 EUR — 20% do valor do imóvel; o resto é coberto por financiamento bancário.",
+          "A cooperativa compra o imóvel; a propriedade fica atribuída de forma transparente aos cooperantes, e todas as decisões seguem os estatutos.",
+          "O rendimento vem da valorização do imóvel e do arrendamento. A saída — venda da quota ou do imóvel segundo regras definidas à partida."
+        ],
+        "proofs": [
+          "O primeiro imóvel valorizou +48% em 15 meses.",
+          "Benefícios fiscais da cooperativa: isenção de IRC, IMT e IMI.",
+          "Próximo projeto — SeedWave_11, entrada a partir de 5 000 EUR.",
+          "Iniciador — Igor Kartuzov, 35 anos em ativos reais, a viver e trabalhar na Madeira."
+        ]
+      }
     },
     {
       "id": "lis",
@@ -20,11 +37,27 @@
       "name": "Lis — o teu secretário pessoal de IA",
       "hook": "Secretário pessoal de IA no Telegram: capta tarefas, ordena-as por prioridade e envia um resumo todas as manhãs. Não é subscrição — monta-o numa noite e fica teu para sempre.",
       "description": "Escreves ao bot uma tarefa, ideia ou email — o Lis define a prioridade pela matriz de Eisenhower, arquiva nas bases do Notion e de manhã envia a lista de tarefas com botões «Feito / Amanhã». Emails importantes do Gmail tornam-se tarefas automaticamente. Stack: Telegram + Make + OpenAI + Notion.",
-      "sectors": ["AI", "Technology"],
+      "sectors": [
+        "AI",
+        "Technology"
+      ],
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Criador de conteúdo · Vendedor · Tester",
-      "demoLink": ""
+      "demoLink": "",
+      "page": {
+        "how": [
+          "Envias ao bot no Telegram uma tarefa, uma ideia ou um e-mail reencaminhado — a qualquer hora do dia.",
+          "A IA define a prioridade pela matriz de Eisenhower e arquiva tudo nas tuas bases do Notion.",
+          "Todas as manhãs recebes um resumo das tarefas com botões «Feito / Amanhã» — o dia começa com uma lista clara.",
+          "Os e-mails importantes do Gmail transformam-se automaticamente em tarefas — nada se perde."
+        ],
+        "proofs": [
+          "O MVP funciona todos os dias como sistema operativo pessoal do autor.",
+          "Stack sem servidores e sem código: Telegram + Make + OpenAI + Notion.",
+          "Não é uma subscrição: montas numa noite a partir de um esquema pronto — e é teu para sempre."
+        ]
+      }
     },
     {
       "id": "treino",
@@ -33,11 +66,28 @@
       "name": "Treino — uma língua através da tua própria história",
       "hook": "Aprendes uma língua com as tuas próprias frases reais: cartões deslizantes, repetição espaçada, áudio. Já são 6 pares de línguas e o checkout está ativo.",
       "description": "Motor de aprendizagem: frases pessoais → cartões deslizantes pelo método de Leitner com áudio (TTS) e modo de escuta. Um só motor — novas línguas adicionam-se como dicionário, já 6 pares ativos. Monetização via Gumroad (Merchant of Record, IVA da UE automático). Promoção: círculo próximo + folhetos com QR.",
-      "sectors": ["Education", "Technology"],
+      "sectors": [
+        "Education",
+        "Technology"
+      ],
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Alunos-piloto · Parceiro técnico (BaaS)",
-      "demoLink": "https://ikartuzov-hub.github.io/treino/"
+      "demoLink": "https://ikartuzov-hub.github.io/treino/",
+      "page": {
+        "how": [
+          "Usas as tuas frases reais — da vida, do trabalho, das aulas com o teu professor.",
+          "O motor transforma-as em cartões de swipe com voz (TTS) e modo de audição.",
+          "A repetição espaçada (método de Leitner) devolve a frase exatamente quando o cérebro está prestes a esquecê-la.",
+          "Uma nova língua é um novo dicionário, não uma nova app: um motor, um seletor de idioma."
+        ],
+        "proofs": [
+          "6 pares de línguas ativos: RU→PT, EN→PT, PT→RU, ES→PT, RU→DE, DE→PT.",
+          "Pagamentos a funcionar: Gumroad, IVA da UE tratado automaticamente (Merchant of Record).",
+          "O primeiro produto de Igor Kartuzov construído com IA a gerar receita.",
+          "Metodologia aberta publicada: o método, a ciência, 14 fontes."
+        ]
+      }
     },
     {
       "id": "tonight",
@@ -46,11 +96,27 @@
       "name": "Tonight — plataforma de digressões para artistas e espaços",
       "hook": "Plataforma de digressões para pequenos artistas e espaços locais: uma cadeia de cidades próximas, bilheteira única e promoção partilhada.",
       "description": "Ajuda pequenos artistas e organizadores a encontrarem-se, a pagar cachês com segurança e a vender bilhetes para micro-eventos. A plataforma monta a digressão com espaços de curtas distâncias e centraliza o orçamento de promoção. O iniciador é um operador de eventos ativo na Europa.",
-      "sectors": ["Technology", "Events"],
+      "sectors": [
+        "Technology",
+        "Events"
+      ],
       "stage": "validation",
       "investment": "",
       "lookingFor": "Builder (bot + bilhetes) · Operator · Espaços-piloto",
-      "demoLink": "https://ikartuzov-hub.github.io/seedwave-catalog/tonight.html"
+      "demoLink": "https://ikartuzov-hub.github.io/seedwave-catalog/tonight.html",
+      "page": {
+        "how": [
+          "A plataforma monta uma digressão como uma cadeia de salas em cidades próximas — deslocações curtas, custos mais baixos.",
+          "Artista e sala encontram-se e fixam as condições dentro da plataforma.",
+          "Uma só caixa: venda de bilhetes para micro-eventos e pagamento seguro do cachet.",
+          "O orçamento de publicidade da digressão é partilhado e gerido centralmente — mais barato para todos."
+        ],
+        "proofs": [
+          "Iniciador — operador de eventos no ativo na Europa.",
+          "Fase: validação da procura com salas e artistas reais.",
+          "Procuramos builder (bot + bilhetes), operador e salas-piloto."
+        ]
+      }
     },
     {
       "id": "sport-creams",
@@ -59,11 +125,25 @@
       "name": "Cremes desportivos — cosmética natural para atletas",
       "hook": "Uma linha de cremes e bálsamos naturais para atletas: recuperação, aquecimento, proteção da pele.",
       "description": "Fórmulas próprias à base de ingredientes naturais. Recuperação muscular, aquecimento antes do esforço, proteção da pele.",
-      "sectors": ["Health", "Beauty"],
+      "sectors": [
+        "Health",
+        "Beauty"
+      ],
       "stage": "idea",
       "investment": "",
       "lookingFor": "Investidor",
-      "demoLink": ""
+      "demoLink": "",
+      "page": {
+        "how": [
+          "Fórmulas próprias à base de ingredientes naturais — sem química desnecessária.",
+          "Três linhas: recuperação muscular após o treino, aquecimento antes do exercício, proteção da pele.",
+          "Lançamento através de um piloto numa comunidade desportiva, depois retalho e vendas online."
+        ],
+        "proofs": [
+          "Fase: ideia com fórmulas prontas.",
+          "Procuramos investidor para produzir o lote-piloto."
+        ]
+      }
     }
   ]
 }

@@ -7,11 +7,28 @@
       "name": "Dubai Madeira Cooperative — cooperativa de vivienda",
       "hook": "Cooperativa bajo la ley portuguesa para la compra colectiva de inmuebles. El primer activo subió +48% en 15 meses.",
       "description": "Cooperativa de vivienda y construcción para la compra colectiva de inmuebles en Madeira y Dubái. Entidad sin ánimo de lucro con beneficios fiscales — exención de IRC, IMT e IMI. Próximo proyecto — SeedWave_11, entrada desde 5 000 EUR.",
-      "sectors": ["Real Estate", "Construction"],
+      "sectors": [
+        "Real Estate",
+        "Construction"
+      ],
       "stage": "mvp",
       "investment": "150 000 EUR (20% del valor del inmueble). Entrada mínima desde 5 000 EUR.",
       "lookingFor": "Cooperativistas-inversores · Abogado · Socio operativo",
-      "demoLink": ""
+      "demoLink": "",
+      "page": {
+        "how": [
+          "La cooperativa se constituye según la ley portuguesa (Cooperativa de Habitação e Construção) — forma sin ánimo de lucro con ventajas fiscales: exención de IRC, IMT e IMI.",
+          "Los socios aportan participaciones desde 5.000 EUR y reúnen juntos 150.000 EUR — el 20% del valor del inmueble; el resto lo cubre la financiación bancaria.",
+          "La cooperativa compra el inmueble; la propiedad queda asignada de forma transparente a los socios, y todas las decisiones siguen los estatutos.",
+          "El ingreso viene de la revalorización del inmueble y del alquiler. La salida — venta de la participación o del inmueble según reglas acordadas de antemano."
+        ],
+        "proofs": [
+          "El primer inmueble se revalorizó un +48% en 15 meses.",
+          "Ventajas fiscales de la cooperativa: exención de IRC, IMT e IMI.",
+          "Próximo proyecto — SeedWave_11, entrada desde 5.000 EUR.",
+          "Iniciador — Igor Kartuzov, 35 años en activos reales, vive y trabaja en Madeira."
+        ]
+      }
     },
     {
       "id": "lis",
@@ -20,11 +37,27 @@
       "name": "Lis — tu secretario personal de IA",
       "hook": "Secretario personal de IA en Telegram: capta tareas, las ordena por prioridad y envía un resumen cada mañana. No es suscripción — móntalo en una noche y es tuyo para siempre.",
       "description": "Escribes al bot una tarea, idea o correo — Lis fija la prioridad por la matriz de Eisenhower, lo archiva en tus bases de Notion y por la mañana envía la lista de tareas con botones «Hecho / Mañana». Los correos importantes de Gmail se convierten en tareas automáticamente. Stack: Telegram + Make + OpenAI + Notion.",
-      "sectors": ["AI", "Technology"],
+      "sectors": [
+        "AI",
+        "Technology"
+      ],
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Creador de contenido · Comercial · Tester",
-      "demoLink": ""
+      "demoLink": "",
+      "page": {
+        "how": [
+          "Escribes al bot en Telegram una tarea, una idea o reenvías un correo — a cualquier hora del día.",
+          "La IA asigna la prioridad según la matriz de Eisenhower y lo archiva todo en tus bases de Notion.",
+          "Cada mañana recibes un resumen de tareas con botones «Hecho / Mañana» — el día empieza con una lista clara.",
+          "Los correos importantes de Gmail se convierten en tareas automáticamente — nada se pierde."
+        ],
+        "proofs": [
+          "El MVP funciona a diario como sistema operativo personal del autor.",
+          "Stack sin servidores y sin código: Telegram + Make + OpenAI + Notion.",
+          "No es una suscripción: lo montas en una tarde con un esquema listo — y es tuyo para siempre."
+        ]
+      }
     },
     {
       "id": "treino",
@@ -33,11 +66,28 @@
       "name": "Treino — un idioma a través de tu propia historia",
       "hook": "Aprendes un idioma con tus propias frases reales: tarjetas deslizables, repetición espaciada, audio. Ya son 6 pares de idiomas y la caja está activa.",
       "description": "Motor de aprendizaje: frases personales → tarjetas deslizables por el método Leitner con audio (TTS) y modo de escucha. Un solo motor — los nuevos idiomas se añaden como diccionario, ya 6 pares activos. Monetización vía Gumroad (Merchant of Record, IVA de la UE automático). Promoción: círculo cercano + folletos con QR.",
-      "sectors": ["Education", "Technology"],
+      "sectors": [
+        "Education",
+        "Technology"
+      ],
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Alumnos piloto · Socio técnico (BaaS)",
-      "demoLink": "https://ikartuzov-hub.github.io/treino/"
+      "demoLink": "https://ikartuzov-hub.github.io/treino/",
+      "page": {
+        "how": [
+          "Tomas tus frases reales — de la vida, del trabajo, de las clases con tu profesor.",
+          "El motor las convierte en tarjetas de swipe con voz (TTS) y modo de escucha.",
+          "La repetición espaciada (método Leitner) devuelve la frase justo cuando el cerebro está a punto de olvidarla.",
+          "Un idioma nuevo es un diccionario nuevo, no una app nueva: un motor, un selector de idioma."
+        ],
+        "proofs": [
+          "6 pares de idiomas activos: RU→PT, EN→PT, PT→RU, ES→PT, RU→DE, DE→PT.",
+          "El cobro funciona: Gumroad, IVA de la UE gestionado automáticamente (Merchant of Record).",
+          "El primer producto de Igor Kartuzov construido con IA que llegó a generar ingresos.",
+          "Metodología abierta publicada: el método, la ciencia, 14 fuentes."
+        ]
+      }
     },
     {
       "id": "tonight",
@@ -46,11 +96,27 @@
       "name": "Tonight — plataforma de giras para artistas y locales",
       "hook": "Plataforma de giras para artistas pequeños y locales: una cadena de ciudades cercanas, taquilla única y promoción compartida.",
       "description": "Ayuda a artistas pequeños y organizadores a encontrarse, a pagar el caché de forma segura y a vender entradas para microeventos. La plataforma arma la gira con locales de trayectos cortos y centraliza el presupuesto de promoción. El iniciador es un operador de eventos activo en Europa.",
-      "sectors": ["Technology", "Events"],
+      "sectors": [
+        "Technology",
+        "Events"
+      ],
       "stage": "validation",
       "investment": "",
       "lookingFor": "Builder (bot + entradas) · Operator · Locales piloto",
-      "demoLink": "https://ikartuzov-hub.github.io/seedwave-catalog/tonight.html"
+      "demoLink": "https://ikartuzov-hub.github.io/seedwave-catalog/tonight.html",
+      "page": {
+        "how": [
+          "La plataforma arma una gira como una cadena de salas en ciudades cercanas — trayectos cortos, menos costes.",
+          "Artista y sala se encuentran y fijan las condiciones dentro de la plataforma.",
+          "Una sola caja: venta de entradas para micro-eventos y pago seguro del caché.",
+          "El presupuesto publicitario de la gira se pone en común y se gestiona centralmente — más barato para todos."
+        ],
+        "proofs": [
+          "Iniciador — operador de eventos en activo en Europa.",
+          "Fase: validación de la demanda con salas y artistas reales.",
+          "Buscamos builder (bot + entradas), operador y salas piloto."
+        ]
+      }
     },
     {
       "id": "sport-creams",
@@ -59,11 +125,25 @@
       "name": "Cremas deportivas — cosmética natural para deportistas",
       "hook": "Una línea de cremas y bálsamos naturales para deportistas: recuperación, calentamiento, protección de la piel.",
       "description": "Fórmulas propias a base de ingredientes naturales. Recuperación muscular, calentamiento antes del esfuerzo, protección de la piel.",
-      "sectors": ["Health", "Beauty"],
+      "sectors": [
+        "Health",
+        "Beauty"
+      ],
       "stage": "idea",
       "investment": "",
       "lookingFor": "Inversor",
-      "demoLink": ""
+      "demoLink": "",
+      "page": {
+        "how": [
+          "Fórmulas propias a base de ingredientes naturales — sin química innecesaria.",
+          "Tres líneas: recuperación muscular tras el entrenamiento, calentamiento antes del ejercicio, protección de la piel.",
+          "Lanzamiento mediante un piloto en una comunidad deportiva, después retail y venta online."
+        ],
+        "proofs": [
+          "Fase: idea con fórmulas listas.",
+          "Buscamos inversor para producir el lote piloto."
+        ]
+      }
     }
   ]
 }
