@@ -42,5 +42,9 @@
     "Retail": "Retail",
     "Hospitality": "Hospitality",
     "Sports": "Sports"
-  }
+  },
+  "btnMore": "Learn more",
+  "btnBack": "← All projects",
+  "pageHow": "How it works",
+  "pageProofs": "Facts & numbers"
 }

@@ -44,5 +44,9 @@
     "Hospitality": "Hostelería",
     "Sports": "Deporte",
     "Events": "Eventos"
-  }
+  },
+  "btnMore": "Saber más",
+  "btnBack": "← Todos los proyectos",
+  "pageHow": "Cómo funciona",
+  "pageProofs": "Datos y cifras"
 }

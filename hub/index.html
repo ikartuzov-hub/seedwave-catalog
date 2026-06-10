@@ -260,6 +260,7 @@
         ${rows.length?`<div class="meta">${rows.join("")}</div>`:""}
         <div class="actions">
           <a class="btn" href="${esc(interestLink(p.id))}" target="_blank" rel="noopener">${esc(ui.btnInterested)} →</a>
+          <a class="btn ghost" href="project.html?id=${encodeURIComponent(p.id)}&lang=${encodeURIComponent(lang)}">${esc(ui.btnMore || "→")}</a>
           ${demo}
           <button class="btn ghost share" type="button" data-share="1">${esc(ui.btnShare || "↗")}</button>
           <span class="note">${esc(ui.interestNote)}</span>

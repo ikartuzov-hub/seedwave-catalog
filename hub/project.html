@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SeedWave — проект</title>
+<meta name="description" content="Открытый проект SeedWave — как это работает, факты и условия участия." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#eaf2f4;
+    --ink-soft:#a9c2c9;
+    --abyss:#06141b;
+    --deep:#0b2230;
+    --deep-2:#0e2c3d;
+    --teal:#37b4a8;
+    --teal-bright:#5fe0cf;
+    --coral:#ff7a59;
+    --sand:#f4e3c1;
+    --line:rgba(149,196,202,.16);
+    --card:rgba(255,255,255,.035);
+    --card-hover:rgba(95,224,207,.07);
+    --r:18px;
+    --display:"Spectral",Georgia,serif;
+    --body:"Manrope",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--body);
+    color:var(--ink);
+    background:var(--abyss);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;z-index:-2;
+    background:
+      radial-gradient(1100px 620px at 78% -8%, rgba(55,180,168,.20), transparent 60%),
+      radial-gradient(900px 520px at 6% 4%, rgba(255,122,89,.10), transparent 55%),
+      linear-gradient(180deg,#06141b 0%,#082230 48%,#06141b 100%);
+  }
+  body::after{
+    content:"";position:fixed;inset:0;z-index:-1;opacity:.05;pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+
+  .top{display:flex;align-items:center;justify-content:space-between;padding:26px 0 8px}
+  .brand{font-family:var(--display);font-weight:700;font-size:1.45rem;letter-spacing:-.01em;display:flex;align-items:center;gap:.5rem;color:var(--ink);text-decoration:none}
+  .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--teal-bright);box-shadow:0 0 16px var(--teal-bright)}
+  .langbtn{
+    display:inline-flex;align-items:center;gap:.45rem;cursor:pointer;
+    border:1px solid var(--line);background:var(--card);color:var(--ink);
+    padding:.5rem .8rem;border-radius:999px;font-size:.9rem;font-weight:600;
+    transition:border-color .2s, background .2s;
+  }
+  .langbtn:hover{border-color:var(--teal);background:var(--card-hover)}
+
+  /* hero */
+  .hero{padding:46px 0 8px}
+  .h-top{display:flex;align-items:center;gap:.7rem;margin-bottom:18px;opacity:0;animation:rise .7s .05s forwards}
+  .h-icon{font-size:2rem;line-height:1}
+  .h-cat{font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:var(--teal-bright);font-weight:700}
+  .h-stage{margin-left:auto;font-size:.74rem;font-weight:600;color:var(--abyss);background:var(--sand);padding:.24rem .65rem;border-radius:999px;white-space:nowrap}
+  .h-stage.idea{background:rgba(244,227,193,.18);color:var(--sand)}
+  .hero h1{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,5.6vw,3.1rem);line-height:1.08;letter-spacing:-.015em;opacity:0;animation:rise .7s .12s forwards}
+  .hook{margin-top:18px;color:var(--ink);font-size:clamp(1.05rem,2.6vw,1.22rem);font-weight:500;max-width:640px;opacity:0;animation:rise .7s .2s forwards}
+  .desc{margin-top:14px;color:var(--ink-soft);font-size:1rem;max-width:680px;opacity:0;animation:rise .7s .26s forwards}
+
+  .wave{display:block;width:100%;height:48px;margin:26px 0 6px;opacity:.6}
+
+  /* sections */
+  section{padding:18px 0 6px}
+  .sec-t{font-family:var(--display);font-weight:600;font-size:1.45rem;letter-spacing:-.01em;margin-bottom:18px}
+
+  .steps{display:grid;gap:14px}
+  .step{
+    display:flex;gap:16px;align-items:flex-start;
+    border:1px solid var(--line);background:var(--card);border-radius:var(--r);
+    padding:18px 20px;opacity:0;transform:translateY(14px);animation:rise .6s forwards;
+    transition:border-color .25s, background .25s;
+  }
+  .step:hover{border-color:rgba(95,224,207,.4);background:var(--card-hover)}
+  .step .n{
+    flex:0 0 auto;width:34px;height:34px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--display);font-weight:700;font-size:1.05rem;color:#04181a;
+    background:linear-gradient(120deg,var(--teal),var(--teal-bright));
+  }
+  .step p{color:var(--ink);font-size:.97rem}
+
+  .proofs{display:grid;gap:10px}
+  .proof{
+    display:flex;gap:12px;align-items:flex-start;font-size:.96rem;color:var(--ink-soft);
+    opacity:0;transform:translateY(12px);animation:rise .6s forwards;
+  }
+  .proof::before{content:"";flex:0 0 auto;width:9px;height:9px;border-radius:50%;margin-top:.42rem;background:var(--teal-bright);box-shadow:0 0 10px rgba(95,224,207,.7)}
+  .proof b{color:var(--ink)}
+
+  .meta-card{
+    border:1px solid var(--line);background:var(--card);border-radius:var(--r);
+    padding:20px 22px;display:grid;gap:12px;margin-top:4px;
+    opacity:0;transform:translateY(12px);animation:rise .6s .1s forwards;
+  }
+  .meta-card .row{display:flex;gap:.6rem;font-size:.95rem;flex-wrap:wrap}
+  .meta-card .k{color:var(--teal-bright);font-weight:700;flex:0 0 auto;min-width:70px}
+  .meta-card .v{color:var(--ink-soft)}
+
+  /* CTA */
+  .cta{margin:34px 0 12px;border:1px solid var(--line);border-radius:24px;
+    background:linear-gradient(135deg,rgba(55,180,168,.10),rgba(255,122,89,.06));
+    padding:30px 26px;text-align:center;opacity:0;animation:rise .7s .15s forwards}
+  .cta .actions{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;gap:.4rem;cursor:pointer;text-decoration:none;
+    font-weight:700;font-size:.98rem;padding:.78rem 1.3rem;border-radius:12px;
+    background:linear-gradient(120deg,var(--teal),var(--teal-bright));color:#04181a;
+    transition:transform .15s, box-shadow .2s;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px -10px var(--teal-bright)}
+  .btn.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
+  .btn.ghost:hover{border-color:var(--teal);box-shadow:none}
+  .note{display:block;margin-top:12px;font-size:.78rem;color:var(--ink-soft)}
+
+  footer{text-align:center;color:var(--ink-soft);font-size:.84rem;padding:24px 0 48px;border-top:1px solid var(--line);margin-top:26px}
+  .author-link{color:var(--teal-bright);text-decoration:none;border-bottom:1px solid rgba(95,224,207,.45);transition:border-color .2s}
+  .author-link:hover{border-color:var(--teal-bright)}
+
+  /* language overlay */
+  .ov{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;
+    background:rgba(4,16,21,.72);backdrop-filter:blur(6px)}
+  .ov.open{display:flex}
+  .ov-box{background:var(--deep);border:1px solid var(--line);border-radius:20px;padding:28px;width:min(380px,90vw)}
+  .ov-box h4{font-family:var(--display);font-weight:600;font-size:1.3rem;margin-bottom:18px;text-align:center}
+  .lang-list{display:grid;gap:10px}
+  .lang-item{display:flex;align-items:center;gap:.7rem;padding:.7rem .9rem;border:1px solid var(--line);
+    border-radius:12px;cursor:pointer;font-weight:600;transition:border-color .2s,background .2s;color:var(--ink)}
+  .lang-item:hover{border-color:var(--teal);background:var(--card-hover)}
+  .lang-item.soon{opacity:.45;cursor:not-allowed}
+  .lang-item .fl{font-size:1.3rem}
+  .lang-item .soon-b{margin-left:auto;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft)}
+  .lang-item.active{border-color:var(--teal-bright);background:var(--card-hover)}
+
+  @keyframes rise{to{opacity:1;transform:none}}
+  .loading{padding:120px 0;text-align:center;color:var(--ink-soft);font-size:1rem}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" id="brandLink" href="index.html"><span class="dot"></span><span id="brand">SeedWave</span></a>
+      <button class="langbtn" id="langBtn" aria-label="language">🌐 <span id="langFlag">🇷🇺</span></button>
+    </div>
+    <main id="app"><div class="loading" id="loading">…</div></main>
+  </div>
+
+  <div class="ov" id="ov">
+    <div class="ov-box">
+      <h4 id="ovTitle">Выбери язык</h4>
+      <div class="lang-list" id="langList"></div>
+    </div>
+  </div>
+
+<script>
+(async function(){
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s??"").replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+  // ---- fallback strings (если ключ ещё не добавлен в ui.{lang}.json) ----
+  const FB = {
+    ru:{btnBack:"← Все проекты", pageHow:"Как это работает", pageProofs:"Факты и цифры", btnInterested:"Мне интересно", btnDemo:"Демо", interestNote:"Откроется Telegram-бот SeedWave", langTitle:"Выбери язык", langSoon:"скоро", labelInvestment:"Нужно", labelLooking:"Ищем", footer:"© 2026 SeedWave · Игорь Картузов"},
+    en:{btnBack:"← All projects", pageHow:"How it works", pageProofs:"Facts & numbers", btnInterested:"I'm interested", btnDemo:"Demo", interestNote:"Opens the SeedWave Telegram bot", langTitle:"Choose a language", langSoon:"soon", labelInvestment:"Needed", labelLooking:"Looking for", footer:"© 2026 SeedWave · Igor Kartuzov"},
+    pt:{btnBack:"← Todos os projetos", pageHow:"Como funciona", pageProofs:"Factos e números", btnInterested:"Tenho interesse", btnDemo:"Demo", interestNote:"Abre o bot SeedWave no Telegram", langTitle:"Escolhe o idioma", langSoon:"em breve", labelInvestment:"Necessário", labelLooking:"Procuramos", footer:"© 2026 SeedWave · Igor Kartuzov"},
+    es:{btnBack:"← Todos los proyectos", pageHow:"Cómo funciona", pageProofs:"Datos y cifras", btnInterested:"Me interesa", btnDemo:"Demo", interestNote:"Se abre el bot de SeedWave en Telegram", langTitle:"Elige idioma", langSoon:"pronto", labelInvestment:"Se necesita", labelLooking:"Buscamos", footer:"© 2026 SeedWave · Igor Kartuzov"},
+    de:{btnBack:"← Alle Projekte", pageHow:"So funktioniert es", pageProofs:"Fakten & Zahlen", btnInterested:"Ich bin interessiert", btnDemo:"Demo", interestNote:"Öffnet den SeedWave-Telegram-Bot", langTitle:"Sprache wählen", langSoon:"bald", labelInvestment:"Benötigt", labelLooking:"Wir suchen", footer:"© 2026 SeedWave · Igor Kartuzov"}
+  };
+
+  // ---- load manifest ----
+  let manifest;
+  try { manifest = await (await fetch("manifest.json",{cache:"no-store"})).json(); }
+  catch(e){ $("#loading").textContent = "manifest.json not found"; return; }
+
+  // ---- resolve language: ?lang → localStorage → browser → default ----
+  const params = new URLSearchParams(location.search);
+  const saved = (()=>{ try{return localStorage.getItem("sw_lang")}catch(e){return null} })();
+  const liveCodes = manifest.languages.filter(l=>l.live).map(l=>l.code);
+  const navLang = (()=>{ try{ return (navigator.language||"").slice(0,2).toLowerCase() }catch(e){ return null } })();
+  let lang = params.get("lang") || saved || (liveCodes.includes(navLang)?navLang:null) || manifest.defaultLang;
+  if(!liveCodes.includes(lang)) lang = manifest.defaultLang;
+
+  // ---- load ui + content ----
+  const contentFile = c => manifest.content.replace("{lang}", c);
+  async function loadContent(code){
+    const r = await fetch(contentFile(code),{cache:"no-store"});
+    if(!r.ok) throw new Error("no content "+code);
+    return r.json();
+  }
+  let ui, data;
+  try{
+    const langDef = manifest.languages.find(l=>l.code===lang);
+    ui = await (await fetch(langDef.ui,{cache:"no-store"})).json();
+    try { data = await loadContent(lang); }
+    catch(e){ data = await loadContent(manifest.defaultLang); }
+  }catch(e){ $("#loading").textContent = "content load error"; return; }
+
+  document.documentElement.lang = lang;
+  const fb = FB[lang] || FB.ru;
+  const t  = k => ui[k] || fb[k] || FB.ru[k] || "";
+  const flagOf = c => (manifest.languages.find(l=>l.code===c)||{}).flag || "🌐";
+
+  function linkAuthor(raw){
+    let s = esc(raw);
+    const url = manifest.authorUrl, names = manifest.authorNames;
+    if(url && Array.isArray(names)){
+      names.forEach(n=>{
+        const en = esc(n);
+        s = s.split(en).join(`<a class="author-link" href="${esc(url)}" target="_blank" rel="noopener">${en}</a>`);
+      });
+    }
+    return s;
+  }
+
+  // ---- find project by ?id ----
+  const id = params.get("id");
+  const p = (data.projects||[]).find(x=>x.id===id);
+  const hubHref = "index.html?lang="+lang;
+  $("#brandLink").href = hubHref;
+  if(!p){ location.replace(hubHref); return; }
+
+  document.title = (p.name||"SeedWave") + " — SeedWave";
+
+  // ---- bot deep link (тот же формат, что в Хабе) ----
+  const botBase = manifest.botUrl;
+  const safeId  = s => String(s).replace(/[^A-Za-z0-9_-]/g, "");
+  const interestLink = `${botBase}?start=interest_${safeId(p.id)}_${lang}`;
+  const withLang = url => url ? url + (url.includes("?") ? "&" : "?") + "lang=" + lang : url;
+
+  // ---- render ----
+  function render(){
+    $("#brand").textContent = ui.brand || "SeedWave";
+    $("#langFlag").textContent = flagOf(lang);
+
+    const stageLabel = (ui.stages && ui.stages[p.stage]) || p.stage || "";
+    const stageClass = p.stage==="idea" ? "idea" : "";
+
+    const page = p.page || {};
+    const how = Array.isArray(page.how) ? page.how : [];
+    const proofs = Array.isArray(page.proofs) ? page.proofs : [];
+
+    const howHtml = how.length ? `
+      <section>
+        <h2 class="sec-t">${esc(t("pageHow"))}</h2>
+        <div class="steps">
+          ${how.map((s,i)=>`
+            <div class="step" style="animation-delay:${0.25+i*0.08}s">
+              <span class="n">${i+1}</span><p>${linkAuthor(s)}</p>
+            </div>`).join("")}
+        </div>
+      </section>` : "";
+
+    const proofsHtml = proofs.length ? `
+      <section>
+        <h2 class="sec-t">${esc(t("pageProofs"))}</h2>
+        <div class="proofs">
+          ${proofs.map((s,i)=>`<div class="proof" style="animation-delay:${0.25+i*0.06}s"><span>${linkAuthor(s)}</span></div>`).join("")}
+        </div>
+      </section>` : "";
+
+    const rows = [];
+    if(p.investment) rows.push(`<div class="row"><span class="k">${esc(t("labelInvestment"))}</span><span class="v">${esc(p.investment)}</span></div>`);
+    if(p.lookingFor) rows.push(`<div class="row"><span class="k">${esc(t("labelLooking"))}</span><span class="v">${linkAuthor(p.lookingFor)}</span></div>`);
+    const metaHtml = rows.length ? `<section><div class="meta-card">${rows.join("")}</div></section>` : "";
+
+    const demoBtn = p.demoLink ? `<a class="btn ghost" href="${esc(withLang(p.demoLink))}" target="_blank" rel="noopener">${esc(t("btnDemo"))}</a>` : "";
+
+    $("#app").innerHTML = `
+      <section class="hero">
+        <div class="h-top">
+          <span class="h-icon">${esc(p.icon||"💡")}</span>
+          <span class="h-cat">${esc(p.category||"")}</span>
+          ${stageLabel?`<span class="h-stage ${stageClass}">${esc(stageLabel)}</span>`:""}
+        </div>
+        <h1>${esc(p.name)}</h1>
+        ${p.hook?`<p class="hook">${linkAuthor(p.hook)}</p>`:""}
+        ${p.description?`<p class="desc">${linkAuthor(p.description)}</p>`:""}
+        <svg class="wave" viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,30 C150,55 300,5 450,30 C600,55 750,5 900,30 C1050,55 1150,15 1200,28"
+            fill="none" stroke="url(#g)" stroke-width="2"/>
+          <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#37b4a8"/><stop offset="1" stop-color="#ff7a59"/></linearGradient></defs>
+        </svg>
+      </section>
+
+      ${howHtml}
+      ${proofsHtml}
+      ${metaHtml}
+
+      <section class="cta">
+        <div class="actions">
+          <a class="btn" href="${esc(interestLink)}" target="_blank" rel="noopener">${esc(t("btnInterested"))} →</a>
+          ${demoBtn}
+          <a class="btn ghost" href="${esc(hubHref)}">${esc(t("btnBack"))}</a>
+        </div>
+        <span class="note">${esc(t("interestNote"))}</span>
+      </section>
+
+      <footer>${linkAuthor(t("footer"))}</footer>`;
+  }
+
+  // ---- language overlay (смена языка сохраняет id) ----
+  function buildLangList(){
+    $("#ovTitle").textContent = t("langTitle");
+    $("#langList").innerHTML = manifest.languages.map(l=>{
+      const cls = l.live ? (l.code===lang?"lang-item active":"lang-item") : "lang-item soon";
+      const tail = l.live ? "" : `<span class="soon-b">${esc(t("langSoon"))}</span>`;
+      return `<div class="${cls}" data-code="${esc(l.code)}" data-live="${l.live?1:0}">
+        <span class="fl">${esc(l.flag)}</span><span>${esc(l.label)}</span>${tail}</div>`;
+    }).join("");
+    $("#langList").querySelectorAll(".lang-item").forEach(el=>{
+      el.addEventListener("click",()=>{
+        if(el.dataset.live!=="1") return;
+        const code = el.dataset.code;
+        if(code===lang){ $("#ov").classList.remove("open"); return; }
+        try{ localStorage.setItem("sw_lang",code) }catch(e){}
+        const u = new URL(location.href); u.searchParams.set("lang",code);
+        location.href = u.toString();
+      });
+    });
+  }
+  $("#langBtn").addEventListener("click",()=>{ buildLangList(); $("#ov").classList.add("open"); });
+  $("#ov").addEventListener("click",e=>{ if(e.target.id==="ov") $("#ov").classList.remove("open"); });
+
+  render();
+})();
+</script>
+</body>
+</html>
