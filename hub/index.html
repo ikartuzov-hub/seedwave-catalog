@@ -90,6 +90,7 @@
 
   .c-top{display:flex;align-items:center;gap:.7rem;margin-bottom:14px}
   .c-icon{font-size:1.7rem;line-height:1}
+  .c-icon svg{width:1.7rem;height:1.7rem;display:block}
   .c-cat{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--teal-bright);font-weight:700}
   .c-stage{margin-left:auto;font-size:.72rem;font-weight:600;color:var(--abyss);background:var(--sand);padding:.22rem .6rem;border-radius:999px;white-space:nowrap}
   .c-stage.idea{background:rgba(244,227,193,.18);color:var(--sand)}
@@ -240,6 +241,7 @@
     $("#langFlag").textContent = flagOf(lang);
 
     const cards = data.projects.map((p,i)=>{
+    const iconHtml = ic => { ic=(ic||"").trim(); return ic.startsWith("<svg") ? ic : esc(ic||"💡"); };
       const stageLabel = (ui.stages && ui.stages[p.stage]) || p.stage || "";
       const stageClass = p.stage==="idea" ? "idea" : "";
       const tags = (p.sectors||[]).map(s=>`<span class="tag">${esc((ui.sectors&&ui.sectors[s])||s)}</span>`).join("");
@@ -250,7 +252,7 @@
       return `
       <article class="card" style="animation-delay:${0.32 + i*0.08}s">
         <div class="c-top">
-          <span class="c-icon">${esc(p.icon||"💡")}</span>
+          <span class="c-icon">${iconHtml(p.icon)}</span>
           <span class="c-cat">${esc(p.category||"")}</span>
           ${stageLabel?`<span class="c-stage ${stageClass}">${esc(stageLabel)}</span>`:""}
         </div>
