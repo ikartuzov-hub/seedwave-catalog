@@ -116,6 +116,7 @@
   .btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px -10px var(--teal-bright)}
   .btn.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
   .btn.ghost:hover{border-color:var(--teal);box-shadow:none}
+  .btn:active{transform:scale(1.08);filter:brightness(1.35);transition:transform .12s ease,filter .12s ease}
   .note{font-size:.74rem;color:var(--ink-soft);flex-basis:100%}
 
   /* hub cta */
@@ -245,7 +246,7 @@
       const rows = [];
       if(p.investment) rows.push(`<div class="row"><span class="k">${esc(ui.labelInvestment)}</span><span class="v">${esc(p.investment)}</span></div>`);
       if(p.lookingFor) rows.push(`<div class="row"><span class="k">${esc(ui.labelLooking)}</span><span class="v">${linkAuthor(p.lookingFor)}</span></div>`);
-      const demo = p.demoLink ? `<a class="btn ghost" href="${esc(withLang(p.demoLink))}" target="_blank" rel="noopener">${esc(ui.btnDemo)}</a>` : "";
+      const demo = p.demoLink ? `<a class="btn" href="${esc(withLang(p.demoLink))}" target="_blank" rel="noopener">${esc(ui.btnDemo)}</a>` : "";
       return `
       <article class="card" style="animation-delay:${0.32 + i*0.08}s">
         <div class="c-top">
@@ -259,9 +260,9 @@
         ${tags?`<div class="tags">${tags}</div>`:""}
         ${rows.length?`<div class="meta">${rows.join("")}</div>`:""}
         <div class="actions">
-          <a class="btn" href="project.html?id=${encodeURIComponent(p.id)}&lang=${encodeURIComponent(lang)}">${esc(ui.btnMore || "→")} →</a>
-          <a class="btn ghost" href="${esc(interestLink(p.id))}" target="_blank" rel="noopener">${esc(ui.btnInterested)}</a>
           ${demo}
+          <a class="btn ghost" href="project.html?id=${encodeURIComponent(p.id)}&lang=${encodeURIComponent(lang)}">${esc(ui.btnMore || "→")} →</a>
+          <a class="btn ghost" href="${esc(interestLink(p.id))}" target="_blank" rel="noopener">${esc(ui.btnInterested)}</a>
           <button class="btn ghost share" type="button" data-share="1">${esc(ui.btnShare || "↗")}</button>
           <span class="note">${esc(ui.interestNote)}</span>
         </div>
