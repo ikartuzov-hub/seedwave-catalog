@@ -65,6 +65,7 @@
   .hero{padding:46px 0 8px}
   .h-top{display:flex;align-items:center;gap:.7rem;margin-bottom:18px;opacity:0;animation:rise .7s .05s forwards}
   .h-icon{font-size:2rem;line-height:1}
+  .h-icon svg{width:2rem;height:2rem;display:block}
   .h-cat{font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:var(--teal-bright);font-weight:700}
   .h-stage{margin-left:auto;font-size:.74rem;font-weight:600;color:var(--abyss);background:var(--sand);padding:.24rem .65rem;border-radius:999px;white-space:nowrap}
   .h-stage.idea{background:rgba(244,227,193,.18);color:var(--sand)}
@@ -174,11 +175,11 @@
 
   // ---- fallback strings (если ключ ещё не добавлен в ui.{lang}.json) ----
   const FB = {
-    ru:{btnMethod:"Методология", btnBack:"← Все проекты", pageHow:"Как это работает", pageProofs:"Факты и цифры", btnInterested:"Мне интересно", btnDemo:"Демо", interestNote:"Откроется Telegram-бот SeedWave", langTitle:"Выбери язык", langSoon:"скоро", labelInvestment:"Нужно", labelLooking:"Ищем", footer:"© 2026 SeedWave · Игорь Картузов"},
-    en:{btnMethod:"Method", btnBack:"← All projects", pageHow:"How it works", pageProofs:"Facts & numbers", btnInterested:"I'm interested", btnDemo:"Demo", interestNote:"Opens the SeedWave Telegram bot", langTitle:"Choose a language", langSoon:"soon", labelInvestment:"Needed", labelLooking:"Looking for", footer:"© 2026 SeedWave · Igor Kartuzov"},
-    pt:{btnMethod:"Método", btnBack:"← Todos os projetos", pageHow:"Como funciona", pageProofs:"Factos e números", btnInterested:"Tenho interesse", btnDemo:"Demo", interestNote:"Abre o bot SeedWave no Telegram", langTitle:"Escolhe o idioma", langSoon:"em breve", labelInvestment:"Necessário", labelLooking:"Procuramos", footer:"© 2026 SeedWave · Igor Kartuzov"},
-    es:{btnMethod:"Método", btnBack:"← Todos los proyectos", pageHow:"Cómo funciona", pageProofs:"Datos y cifras", btnInterested:"Me interesa", btnDemo:"Demo", interestNote:"Se abre el bot de SeedWave en Telegram", langTitle:"Elige idioma", langSoon:"pronto", labelInvestment:"Se necesita", labelLooking:"Buscamos", footer:"© 2026 SeedWave · Igor Kartuzov"},
-    de:{btnMethod:"Methode", btnBack:"← Alle Projekte", pageHow:"So funktioniert es", pageProofs:"Fakten & Zahlen", btnInterested:"Ich bin interessiert", btnDemo:"Demo", interestNote:"Öffnet den SeedWave-Telegram-Bot", langTitle:"Sprache wählen", langSoon:"bald", labelInvestment:"Benötigt", labelLooking:"Wir suchen", footer:"© 2026 SeedWave · Igor Kartuzov"}
+    ru:{pageVision:"Куда растём", btnMethod:"Методология", btnBack:"← Все проекты", pageHow:"Как это работает", pageProofs:"Факты и цифры", btnInterested:"Мне интересно", btnDemo:"Демо", interestNote:"Откроется Telegram-бот SeedWave", langTitle:"Выбери язык", langSoon:"скоро", labelInvestment:"Нужно", labelLooking:"Ищем", footer:"© 2026 SeedWave · Игорь Картузов"},
+    en:{pageVision:"Where we're heading", btnMethod:"Method", btnBack:"← All projects", pageHow:"How it works", pageProofs:"Facts & numbers", btnInterested:"I'm interested", btnDemo:"Demo", interestNote:"Opens the SeedWave Telegram bot", langTitle:"Choose a language", langSoon:"soon", labelInvestment:"Needed", labelLooking:"Looking for", footer:"© 2026 SeedWave · Igor Kartuzov"},
+    pt:{pageVision:"Para onde vamos", btnMethod:"Método", btnBack:"← Todos os projetos", pageHow:"Como funciona", pageProofs:"Factos e números", btnInterested:"Tenho interesse", btnDemo:"Demo", interestNote:"Abre o bot SeedWave no Telegram", langTitle:"Escolhe o idioma", langSoon:"em breve", labelInvestment:"Necessário", labelLooking:"Procuramos", footer:"© 2026 SeedWave · Igor Kartuzov"},
+    es:{pageVision:"Hacia dónde vamos", btnMethod:"Método", btnBack:"← Todos los proyectos", pageHow:"Cómo funciona", pageProofs:"Datos y cifras", btnInterested:"Me interesa", btnDemo:"Demo", interestNote:"Se abre el bot de SeedWave en Telegram", langTitle:"Elige idioma", langSoon:"pronto", labelInvestment:"Se necesita", labelLooking:"Buscamos", footer:"© 2026 SeedWave · Igor Kartuzov"},
+    de:{pageVision:"Wohin wir wachsen", btnMethod:"Methode", btnBack:"← Alle Projekte", pageHow:"So funktioniert es", pageProofs:"Fakten & Zahlen", btnInterested:"Ich bin interessiert", btnDemo:"Demo", interestNote:"Öffnet den SeedWave-Telegram-Bot", langTitle:"Sprache wählen", langSoon:"bald", labelInvestment:"Benötigt", labelLooking:"Wir suchen", footer:"© 2026 SeedWave · Igor Kartuzov"}
   };
 
   // ---- load manifest ----
@@ -250,8 +251,10 @@
     const stageClass = p.stage==="idea" ? "idea" : "";
 
     const page = p.page || {};
+    const iconHtml = ic => { ic=(ic||"").trim(); return ic.startsWith("<svg") ? ic : esc(ic||"💡"); };
     const how = Array.isArray(page.how) ? page.how : [];
     const proofs = Array.isArray(page.proofs) ? page.proofs : [];
+    const vision = Array.isArray(page.vision) ? page.vision : [];
 
     const howHtml = how.length ? `
       <section>
@@ -272,6 +275,14 @@
         </div>
       </section>` : "";
 
+    const visionHtml = vision.length ? `
+      <section>
+        <h2 class="sec-t">${esc(t("pageVision"))}</h2>
+        <div class="proofs">
+          ${vision.map((s,i)=>`<div class="proof" style="animation-delay:${0.25+i*0.06}s"><span>${linkAuthor(s)}</span></div>`).join("")}
+        </div>
+      </section>` : "";
+
     const rows = [];
     if(p.investment) rows.push(`<div class="row"><span class="k">${esc(t("labelInvestment"))}</span><span class="v">${esc(p.investment)}</span></div>`);
     if(p.lookingFor) rows.push(`<div class="row"><span class="k">${esc(t("labelLooking"))}</span><span class="v">${linkAuthor(p.lookingFor)}</span></div>`);
@@ -283,7 +294,7 @@
     $("#app").innerHTML = `
       <section class="hero">
         <div class="h-top">
-          <span class="h-icon">${esc(p.icon||"💡")}</span>
+          <span class="h-icon">${iconHtml(p.icon)}</span>
           <span class="h-cat">${esc(p.category||"")}</span>
           ${stageLabel?`<span class="h-stage ${stageClass}">${esc(stageLabel)}</span>`:""}
         </div>
@@ -299,6 +310,7 @@
 
       ${howHtml}
       ${proofsHtml}
+      ${visionHtml}
       ${metaHtml}
 
       <section class="cta">
