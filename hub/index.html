@@ -119,6 +119,8 @@
   .btn.ghost:hover{border-color:var(--teal);box-shadow:none}
   .btn:active{transform:scale(1.08);filter:brightness(1.35);transition:transform .12s ease,filter .12s ease}
   .note{font-size:.74rem;color:var(--ink-soft);flex-basis:100%}
+  .interest-wrap{display:inline-flex;flex-direction:column;gap:5px;align-items:flex-start}
+  .interest-wrap .note{flex-basis:auto;max-width:190px;line-height:1.35}
 
   /* hub cta */
   .cta{margin:44px 0 30px;border:1px solid var(--line);border-radius:24px;
@@ -263,10 +265,11 @@
         ${rows.length?`<div class="meta">${rows.join("")}</div>`:""}
         <div class="actions">
           ${demo}
-          <a class="btn ghost" href="project.html?id=${encodeURIComponent(p.id)}&lang=${encodeURIComponent(lang)}">${esc(ui.btnMore || "→")} →</a>
-          <a class="btn ghost" href="${esc(interestLink(p.id))}" target="_blank" rel="noopener">${esc(ui.btnInterested)}</a>
-          <button class="btn ghost share" type="button" data-share="1">${esc(ui.btnShare || "↗")}</button>
-          <span class="note">${esc(ui.interestNote)}</span>
+          <a class="btn ${p.demoLink ? "ghost" : ""}" href="project.html?id=${encodeURIComponent(p.id)}&lang=${encodeURIComponent(lang)}">${esc(ui.btnMore || "Подробнее")} →</a>
+          <span class="interest-wrap">
+            <a class="btn ghost" href="${esc(interestLink(p.id))}" target="_blank" rel="noopener">${esc(ui.btnInterested)} →</a>
+            <span class="note">${esc(ui.interestNote)}</span>
+          </span>
         </div>
       </article>`;
     }).join("");

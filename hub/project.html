@@ -128,6 +128,8 @@
   .btn.ghost:hover{border-color:var(--teal);box-shadow:none}
   .btn:active{transform:scale(1.08);filter:brightness(1.35);transition:transform .12s ease,filter .12s ease}
   .note{display:block;margin-top:12px;font-size:.78rem;color:var(--ink-soft)}
+  .interest-wrap{display:inline-flex;flex-direction:column;gap:5px;align-items:flex-start}
+  .interest-wrap .note{margin-top:0;max-width:200px;line-height:1.35}
 
   footer{text-align:center;color:var(--ink-soft);font-size:.84rem;padding:24px 0 48px;border-top:1px solid var(--line);margin-top:26px}
   .author-link{color:var(--teal-bright);text-decoration:none;border-bottom:1px solid rgba(95,224,207,.45);transition:border-color .2s}
@@ -317,12 +319,14 @@
         <div class="actions">
           ${demoBtn}
           ${methodBtn}
+          <span class="interest-wrap">
+            <a class="btn ${p.demoLink ? "ghost" : ""}" href="${esc(interestLink)}" target="_blank" rel="noopener">${esc(t("btnInterested"))} →</a>
+            <span class="note">${esc(t("interestNote"))}</span>
+          </span>
+        </div>
+        <div class="actions" style="margin-top:16px;padding-top:14px;border-top:1px solid var(--line)">
           <a class="btn ghost" href="${esc(hubHref)}">${esc(t("btnBack"))}</a>
         </div>
-        <div class="actions" style="margin-top:10px">
-          <a class="btn ghost" href="${esc(interestLink)}" target="_blank" rel="noopener">${esc(t("btnInterested"))} →</a>
-        </div>
-        <span class="note">${esc(t("interestNote"))}</span>
       </section>
 
       <footer>${linkAuthor(t("footer"))}</footer>`;
