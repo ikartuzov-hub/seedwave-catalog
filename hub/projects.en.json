@@ -150,8 +150,8 @@
       "icon": "🐦",
       "category": "Education / Sports",
       "name": "Birdie — multilingual golf-course student assistant",
-      "hook": "The golf lesson is in Portuguese — Birdie translates it into the student's language. 73 terms, 7 shots, group Q&A. v1 in production, piloting on the course.",
-      "description": "A pocket assistant for golf-course students: terms, shot technique, group Q&A and etiquette — in 5 languages at once, offline (PWA). A self-filling base: every lesson feeds the shared Q&A bank, and Birdie gets smarter with every group. The same three-layer engine as Treino — a new language is a dictionary, not a new app. A course instructor verifies technique and terms.",
+      "hook": "The golf lesson is in Portuguese — Birdie opens it up in the student's own language: terms, shots, the group's questions. v1 on the course, 3 languages (RU/PT/EN).",
+      "description": "A pocket assistant for golf-course students: terms, shot technique, group Q&A and etiquette — in 3 languages now (Russian, Portuguese, English), offline (PWA). A self-filling base: every lesson feeds the shared Q&A bank, and Birdie gets smarter with every group. The same three-layer engine as Treino — a new language is added as a dictionary, architected for 5. A course instructor verifies technique and terms.",
       "sectors": [
         "Education",
         "Sports",
@@ -169,12 +169,20 @@
           "Shot technique and Portuguese terms are verified by the course instructor — marked with a trust flag."
         ],
         "proofs": [
-          "v1 in production: 3 languages, PWA on the phone, tested live on the course.",
-          "Architected for 5 languages from the start: German and Spanish speakers in the group open it in their own.",
-          "Self-filling Q&A base — the product gets smarter with every lesson held.",
-          "The same engine as Treino: proof of a reusable build standard."
+          "Filled in 3 languages (RU/PT/EN): 73 terms, 7 shots, ~30 Q&A, etiquette rules.",
+          "Architected for 5 languages from the start: every member of a multilingual group opens the app in their own. The lesson is shared — the language is each one's own.",
+          "v1 on the course: PWA, works offline, tested live in a lesson.",
+          "Self-filling base: every lesson feeds the shared Q&A bank — Birdie gets smarter with every group.",
+          "The same three-layer engine as Treino — a new language is a dictionary."
+        ],
+        "vision": [
+          "\"Lesson trace\" (v1.5): a short personal recap after the session — what you worked on and what's next.",
+          "Voice narrative (v2): tell how your round went — get a breakdown and language from your own game.",
+          "Synergy with Treino: one story after a round — both golf terms and a language lesson.",
+          "An honest direction, not promises: we open features as they're tested with real students."
         ]
-      }
+      },
+      "methodLink": "method.html"
     }
   ]
 }

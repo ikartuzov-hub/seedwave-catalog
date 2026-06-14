@@ -150,8 +150,8 @@
       "icon": "🐦",
       "category": "Bildung / Sport",
       "name": "Birdie — mehrsprachiger Assistent für Golfkurs-Schüler",
-      "hook": "Die Golfstunde läuft auf Portugiesisch — Birdie übersetzt sie in die Sprache des Schülers. 73 Begriffe, 7 Schläge, Gruppen-Q&A. v1 in Produktion, Pilot auf dem Platz.",
-      "description": "Ein Taschen-Assistent für Golfkurs-Schüler: Begriffe, Schlagtechnik, Fragen und Antworten der Gruppe und Etikette — in 5 Sprachen gleichzeitig, offline (PWA). Eine sich selbst füllende Basis: jede Stunde speist den gemeinsamen Q&A-Speicher, und Birdie wird mit jeder Gruppe klüger. Derselbe Drei-Schichten-Motor wie Treino — eine neue Sprache ist ein Wörterbuch, keine neue App. Ein Platz-Instruktor prüft Technik und Begriffe.",
+      "hook": "Die Golfstunde läuft auf Portugiesisch — Birdie erschließt sie in der eigenen Sprache des Schülers: Begriffe, Schläge, die Fragen der Gruppe. v1 auf dem Platz, 3 Sprachen (RU/PT/EN).",
+      "description": "Ein Taschen-Assistent für Golfkurs-Schüler: Begriffe, Schlagtechnik, Gruppen-Q&A und Etikette — derzeit in 3 Sprachen (Russisch, Portugiesisch, Englisch), offline (PWA). Eine sich selbst füllende Basis: jede Stunde speist den gemeinsamen Q&A-Speicher, und Birdie wird mit jeder Gruppe klüger. Derselbe Drei-Schichten-Motor wie Treino — eine neue Sprache wird als Wörterbuch hinzugefügt, ausgelegt für 5. Ein Platz-Instruktor prüft Technik und Begriffe.",
       "sectors": [
         "Education",
         "Sports",
@@ -169,12 +169,20 @@
           "Schlagtechnik und portugiesische Begriffe werden vom Platz-Instruktor geprüft — mit einer Vertrauensflagge markiert."
         ],
         "proofs": [
-          "v1 in Produktion: 3 Sprachen, PWA auf dem Handy, live auf dem Platz getestet.",
-          "Von Anfang an für 5 Sprachen gebaut: Deutsch- und Spanischsprachige der Gruppe öffnen es in ihrer.",
-          "Sich selbst füllende Q&A-Basis — das Produkt wird mit jeder gehaltenen Stunde klüger.",
-          "Derselbe Motor wie Treino: Beweis eines wiederverwendbaren Build-Standards."
+          "Befüllt in 3 Sprachen (RU/PT/EN): 73 Begriffe, 7 Schläge, ~30 Q&A, Etikette-Regeln.",
+          "Von Anfang an für 5 Sprachen gebaut: jedes Mitglied einer mehrsprachigen Gruppe öffnet die App in seiner eigenen. Der Faden der Stunde ist einer — die Sprache die eigene jedes Einzelnen.",
+          "v1 auf dem Platz: PWA, funktioniert offline, live in einer Stunde getestet.",
+          "Sich selbst füllende Basis: jede Stunde speist den gemeinsamen Q&A-Speicher — Birdie wird mit jeder Gruppe klüger.",
+          "Derselbe Drei-Schichten-Motor wie Treino — eine neue Sprache ist ein Wörterbuch."
+        ],
+        "vision": [
+          "\"Stunden-Spur\" (v1.5): eine kurze persönliche Zusammenfassung nach der Stunde — was du geübt hast und was als Nächstes kommt.",
+          "Sprach-Narrativ (v2): erzähl, wie deine Runde lief — erhalte eine Analyse und Sprache aus deinem eigenen Spiel.",
+          "Synergie mit Treino: eine Geschichte nach der Runde — Golfbegriffe und eine Sprachlektion.",
+          "Ein ehrlicher Kurs, keine Versprechen: wir öffnen Funktionen, sobald sie mit echten Schülern getestet sind."
         ]
-      }
+      },
+      "methodLink": "method.html"
     }
   ]
 }

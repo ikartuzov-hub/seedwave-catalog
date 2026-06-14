@@ -150,8 +150,8 @@
       "icon": "🐦",
       "category": "Educación / Deporte",
       "name": "Birdie — asistente multilingüe del alumno de golf",
-      "hook": "La clase de golf es en portugués — Birdie la traduce al idioma del alumno. 73 términos, 7 golpes, Q&A del grupo. v1 en producción, piloto en el campo.",
-      "description": "Un asistente de bolsillo para alumnos de golf: términos, técnica de golpes, preguntas y respuestas del grupo y etiqueta — en 5 idiomas a la vez, sin conexión (PWA). Una base que se llena sola: cada clase alimenta el banco común de Q&A, y Birdie se vuelve más listo con cada grupo. El mismo motor de tres capas que Treino — un idioma nuevo es un diccionario, no una nueva aplicación. Un instructor del campo verifica la técnica y los términos.",
+      "hook": "La clase de golf es en portugués — Birdie la abre en el propio idioma del alumno: términos, golpes, las preguntas del grupo. v1 en el campo, 3 idiomas (RU/PT/EN).",
+      "description": "Un asistente de bolsillo para alumnos de golf: términos, técnica de golpes, preguntas y respuestas del grupo y etiqueta — en 3 idiomas por ahora (ruso, portugués, inglés), sin conexión (PWA). Una base que se llena sola: cada clase alimenta el banco común de Q&A, y Birdie se vuelve más listo con cada grupo. El mismo motor de tres capas que Treino — un idioma nuevo se añade como diccionario, con arquitectura para 5. Un instructor del campo verifica la técnica y los términos.",
       "sectors": [
         "Education",
         "Sports",
@@ -169,12 +169,20 @@
           "La técnica de los golpes y los términos portugueses los verifica el instructor del campo — marcados con una bandera de confianza."
         ],
         "proofs": [
-          "v1 en producción: 3 idiomas, PWA en el móvil, probado en vivo en el campo.",
-          "Arquitectura para 5 idiomas desde el inicio: alemanes e hispanohablantes del grupo lo abren en el suyo.",
-          "Base de Q&A que se llena sola — el producto se vuelve más listo con cada clase impartida.",
-          "El mismo motor que Treino: prueba de un estándar de construcción reutilizable."
+          "Lleno en 3 idiomas (RU/PT/EN): 73 términos, 7 golpes, ~30 Q&A, reglas de etiqueta.",
+          "Arquitectura para 5 idiomas desde el inicio: cada miembro de un grupo multilingüe abre la app en el suyo. El hilo de la clase es uno — el idioma es el de cada uno.",
+          "v1 en el campo: PWA, funciona sin conexión, probado en vivo en una clase.",
+          "Base que se llena sola: cada clase alimenta el banco común de Q&A — Birdie se vuelve más listo con cada grupo.",
+          "El mismo motor de tres capas que Treino — un idioma nuevo es un diccionario."
+        ],
+        "vision": [
+          "\"Rastro de la clase\" (v1.5): un breve resumen personal tras la sesión — qué trabajaste y qué sigue.",
+          "Narrativa por voz (v2): cuenta cómo fue tu ronda — recibe un análisis e idioma de tu propio juego.",
+          "Sinergia con Treino: una historia tras la ronda — términos de golf y una lección de idioma.",
+          "Un rumbo honesto, no promesas: abrimos funciones a medida que se prueban con alumnos reales."
         ]
-      }
+      },
+      "methodLink": "method.html"
     }
   ]
 }
