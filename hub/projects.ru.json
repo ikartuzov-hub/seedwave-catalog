@@ -156,7 +156,7 @@
     },
     {
       "id": "birdie",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#6fb3dc\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M33 16 L33 72\"/><path d=\"M33 16 C57 16 57 42 35 43 C59 44 59 72 33 72\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></svg>",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#F0C24A\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M33 16 L33 72\"/><path d=\"M33 16 C57 16 57 42 35 43 C59 44 59 72 33 72\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></svg>",
       "category": "Образование / Спорт",
       "name": "Birdie — мультиязычный ассистент ученика гольф-курса",
       "hook": "Урок гольфа идёт на португальском — а Birdie раскрывает его на родном языке ученика: термины, удары, вопросы группы. v1 на поле, 3 языка (рус/порт/англ).",
