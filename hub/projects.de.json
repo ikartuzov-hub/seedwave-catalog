@@ -183,6 +183,42 @@
         ]
       },
       "methodLink": "https://ikartuzov-hub.github.io/birdie/method.html"
+    },
+    {
+      "id": "relic",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#C0894B\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M26 14 L26 66\"/><path d=\"M26 14 C52 14 52 41 28 42 L26 42\"/><path d=\"M34 42 Q49 53 58 66\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
+      "category": "Lifestyle / Funde",
+      "name": "Relic — Schatzsuche in dem, was ungenutzt herumliegt",
+      "hook": "Fotografiere eine alte Münze — die KI sagt dir, was es ist und ob es Beachtung wert ist. Wertvolles geht an einen echten Antiquitäten-Experten. Du zahlst nur beim Verkauf.",
+      "description": "Viele haben zu Hause die Sammlung vom Großvater oder eine Handvoll rätselhafter Münzen. Relic hilft dir in einer Minute zu erkennen, ob etwas wertvoll ist. Die KI gibt eine erste Bestimmung anhand des Fotos — keinen Preis; ein menschlicher Experte bewertet die wertvollen Funde und hilft beim Verkauf. Stack ohne Server: Telegram + Make + OpenAI Vision + Notion.",
+      "sectors": [
+        "Lifestyle",
+        "Marketplace",
+        "AI"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Antiquitäten-Experte · Pilot-Nutzer · Builder",
+      "demoLink": "https://ikartuzov-hub.github.io/relic/?lang=en",
+      "page": {
+        "how": [
+          "Fotografiere eine alte Münze und schick das Foto an den Telegram-Bot.",
+          "Ein KI-Numismatiker gibt anhand des Fotos eine erste Bestimmung — Epoche, Metall, worauf zu achten ist. Keinen Preis.",
+          "Sieht wertvoll aus? Mit einem Tipp schickst du den Fund an einen echten Antiquitäten-Experten.",
+          "Der Experte bewertet ihn und hilft, zum realen Preis zu verkaufen. Provision nur beim Verkauf."
+        ],
+        "proofs": [
+          "Der aktive Bot @RelicFindBot arbeitet mit echten Fotos: die Vision-Einschätzung kommt in den Chat.",
+          "Die KI erfindet keinen Preis — ein ehrliches Ampel-Urteil; die genaue Zahl kommt vom Menschen, anhand von Auktionsvergleichen.",
+          "Zahlung nur bei Ergebnis: Provision aus dem Verkauf, ohne Abos oder Vorkasse.",
+          "Stack ohne Server und ohne Code: Telegram + Make + OpenAI Vision + Notion."
+        ],
+        "vision": [
+          "Über Münzen hinaus: Geschirr, Gemälde, Schmuck — die Architektur ist bereits angelegt.",
+          "Erfassung der Objektgeschichte (Provenienz) — steigert den Wert und macht aus der Bewertung eine Familiengeschichte.",
+          "Eine Bot-Fabrik-Vorlage: 'Objekt fotografieren → KI Vision → Experte' für neue Kategorien."
+        ]
+      }
     }
   ]
 }

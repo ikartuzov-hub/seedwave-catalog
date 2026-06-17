@@ -183,6 +183,42 @@
         ]
       },
       "methodLink": "https://ikartuzov-hub.github.io/birdie/method.html"
+    },
+    {
+      "id": "relic",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#C0894B\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M26 14 L26 66\"/><path d=\"M26 14 C52 14 52 41 28 42 L26 42\"/><path d=\"M34 42 Q49 53 58 66\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
+      "category": "Lifestyle / Achados",
+      "name": "Relic — caça ao tesouro no que está esquecido",
+      "hook": "Fotografa uma moeda antiga — a IA diz o que é e se vale a pena. O valioso vai para um perito em antiguidades. Pagas só com a venda.",
+      "description": "Muita gente guarda a coleção do avô ou um punhado de moedas estranhas. O Relic ajuda a perceber num minuto se há algo valioso. A IA dá uma primeira atribuição pela foto — não um preço; um perito humano avalia os achados valiosos e ajuda a vender. Stack sem servidores: Telegram + Make + OpenAI Vision + Notion.",
+      "sectors": [
+        "Lifestyle",
+        "Marketplace",
+        "AI"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Perito em antiguidades · Utilizadores piloto · Builder",
+      "demoLink": "https://ikartuzov-hub.github.io/relic/?lang=pt",
+      "page": {
+        "how": [
+          "Fotografa uma moeda antiga e envia a foto ao bot no Telegram.",
+          "Um numismata-IA dá uma primeira atribuição pela foto — época, metal, o que observar. Não um preço.",
+          "Parece valioso? Com um toque envias o achado a um perito em antiguidades.",
+          "O perito avalia e ajuda a vender pelo preço real. Comissão só com a venda."
+        ],
+        "proofs": [
+          "Bot ativo @RelicFindBot funciona com fotos reais: a leitura Vision volta no chat.",
+          "A IA não inventa preços — um veredito honesto em semáforo; o valor exato vem de uma pessoa, com base em vendas em leilão.",
+          "Pagas só com resultado: comissão da venda, sem subscrições nem adiantamentos.",
+          "Stack sem servidores e sem código: Telegram + Make + OpenAI Vision + Notion."
+        ],
+        "vision": [
+          "Além das moedas: louça, quadros, joias — a arquitetura já está preparada.",
+          "Captura da história do objeto (proveniência) — aumenta o valor e transforma a avaliação numa história de família.",
+          "Modelo fábrica de bots: 'fotografa um objeto → IA Vision → perito' para novas categorias."
+        ]
+      }
     }
   ]
 }

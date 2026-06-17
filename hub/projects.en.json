@@ -183,6 +183,42 @@
         ]
       },
       "methodLink": "https://ikartuzov-hub.github.io/birdie/method.html"
+    },
+    {
+      "id": "relic",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#C0894B\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M26 14 L26 66\"/><path d=\"M26 14 C52 14 52 41 28 42 L26 42\"/><path d=\"M34 42 Q49 53 58 66\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
+      "category": "Lifestyle / Finds",
+      "name": "Relic — a treasure hunt through what's sitting untouched",
+      "hook": "Snap an old coin — AI tells you what it is and whether it's worth attention. Valuable finds go to a real antiques expert. You pay only on the sale.",
+      "description": "Many people keep a grandparent's collection or a handful of odd coins. Relic helps you tell in a minute whether anything is valuable. AI gives a first attribution from the photo — not a price; a human expert values the valuable finds and helps sell them. Serverless stack: Telegram + Make + OpenAI Vision + Notion.",
+      "sectors": [
+        "Lifestyle",
+        "Marketplace",
+        "AI"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Antiques expert · Pilot users · Builder",
+      "demoLink": "https://ikartuzov-hub.github.io/relic/?lang=en",
+      "page": {
+        "how": [
+          "Snap an old coin and send the photo to the Telegram bot.",
+          "An AI numismatist gives a first attribution from the photo — era, metal, what to look at. Not a price.",
+          "Looks valuable? One tap sends the find to a real antiques expert.",
+          "The expert values it and helps sell at a real price. Commission only on the sale."
+        ],
+        "proofs": [
+          "Live bot @RelicFindBot works on real photos: a Vision read comes back in chat.",
+          "AI never invents a price — an honest traffic-light verdict; the exact figure comes from a human, based on auction comparables.",
+          "Pay only on results: commission from the sale, no subscriptions or upfront fees.",
+          "Serverless, no-code stack: Telegram + Make + OpenAI Vision + Notion."
+        ],
+        "vision": [
+          "Beyond coins: tableware, paintings, jewellery — the architecture is already in place.",
+          "Provenance capture (the object's story) — raises value and turns a valuation into a family story.",
+          "A bot-factory template: 'snap an item → AI Vision → expert' for new categories."
+        ]
+      }
     }
   ]
 }
