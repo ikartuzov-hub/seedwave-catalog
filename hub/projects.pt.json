@@ -1,6 +1,42 @@
 {
   "projects": [
     {
+      "id": "forge",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E2622E\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M36 16 V84\"/><path d=\"M36 21 Q49 9 60 20 Q70 28 82 19\"/><path d=\"M36 50 H70\"/></svg>",
+      "sectors": [
+        "AI",
+        "Platform",
+        "No-Code"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "demoLink": "https://ikartuzov-hub.github.io/forge/",
+      "category": "Ferramenta SeedWave",
+      "name": "Forge — da ideia a um produto vivo",
+      "hook": "Conta a tua ideia — a IA constrói um produto funcional a partir dela. Não uma apresentação, mas um MVP vivo que abres no telemóvel.",
+      "description": "O construtor da SeedWave: um caminho comprovado da ideia em bruto até um produto vivo. A IA estrutura qualquer ideia gratuitamente; as mais fortes construímos juntos. Já provado com Treino, Birdie, Relic. O método é aberto — traz uma ideia, não procures a quem confiá-la.",
+      "lookingFor": "Ideias de participantes · Parceiros · Feedback",
+      "page": {
+        "how": [
+          "Conta a tua ideia numa frase — ao bot do Telegram ou na própria montra.",
+          "A análise por IA estrutura-a: para quem é, o que já existe, a essência, o que procurar.",
+          "As ideias fortes construímos num MVP funcional — motor multilíngue, bot, pagamento.",
+          "O produto fica vivo: um link, primeiros utilizadores, um cartão na SeedWave.",
+          "O método é aberto: o mesmo caminho sempre; um novo produto é conteúdo, não uma reconstrução."
+        ],
+        "proofs": [
+          "Treino: ideia «aprender uma língua pela tua própria história» → uma app viva com alunos pagantes.",
+          "Birdie: ideia «um assistente para alunos de golfe» → um assistente PWA multilíngue em piloto.",
+          "Relic: ideia «avaliar uma moeda antiga» → um bot de IA criado em meio dia."
+        ],
+        "vision": [
+          "Um fluxo de ideias de participantes enche a SeedWave: cada ideia estruturada torna-se um cartão no registo.",
+          "As ideias fortes tornam-se produtos vivos e alimentam o deal flow da plataforma.",
+          "O construtor é um campo de treino: cada produto criado afia o método repetível."
+        ]
+      }
+    },
+    {
       "id": "dubai-madeira-cooperative",
       "icon": "🏢",
       "category": "Imobiliário",

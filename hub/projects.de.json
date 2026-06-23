@@ -1,6 +1,42 @@
 {
   "projects": [
     {
+      "id": "forge",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E2622E\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M36 16 V84\"/><path d=\"M36 21 Q49 9 60 20 Q70 28 82 19\"/><path d=\"M36 50 H70\"/></svg>",
+      "sectors": [
+        "AI",
+        "Platform",
+        "No-Code"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "demoLink": "https://ikartuzov-hub.github.io/forge/",
+      "category": "SeedWave-Werkzeug",
+      "name": "Forge — von der Idee zum lebenden Produkt",
+      "hook": "Erzähl deine Idee — die KI baut daraus ein funktionierendes Produkt. Keine Präsentation, sondern ein lebendes MVP, das du am Telefon öffnest.",
+      "description": "Der SeedWave-Konstruktor: ein bewährter Weg von der rohen Idee zum lebenden Produkt. Die KI strukturiert jede Idee kostenlos; die starken bauen wir gemeinsam. Bereits bewiesen mit Treino, Birdie, Relic. Die Methode ist offen — bring eine Idee, statt zu suchen, wem du sie anvertraust.",
+      "lookingFor": "Teilnehmer-Ideen · Partner · Feedback",
+      "page": {
+        "how": [
+          "Erzähl deine Idee in einem Satz — dem Telegram-Bot oder direkt auf der Showcase-Seite.",
+          "Die KI-Analyse strukturiert sie: für wen, was schon existiert, der Kern, worauf zu achten ist.",
+          "Starke Ideen bauen wir zu einem funktionierenden MVP — mehrsprachige Engine, Bot, Kasse.",
+          "Das Produkt geht live: ein Link, erste Nutzer, eine Karte in SeedWave.",
+          "Die Methode ist offen: immer derselbe Weg; ein neues Produkt ist Inhalt, kein Neubau."
+        ],
+        "proofs": [
+          "Treino: Idee „eine Sprache anhand der eigenen Geschichte lernen“ → eine lebende App mit zahlenden Lernenden.",
+          "Birdie: Idee „ein Assistent für Golf-Lernende“ → ein mehrsprachiger PWA-Assistent im Pilot.",
+          "Relic: Idee „eine alte Münze bewerten“ → ein KI-Bot, in einem halben Tag gebaut."
+        ],
+        "vision": [
+          "Ein Strom von Teilnehmer-Ideen füllt SeedWave: jede strukturierte Idee wird zu einer Karte im Register.",
+          "Starke Ideen werden zu lebenden Produkten und speisen den Deal Flow der Plattform.",
+          "Der Konstruktor ist ein Trainingsfeld: jedes gebaute Produkt schärft die wiederholbare Methode."
+        ]
+      }
+    },
+    {
       "id": "dubai-madeira-cooperative",
       "icon": "🏢",
       "category": "Immobilien",

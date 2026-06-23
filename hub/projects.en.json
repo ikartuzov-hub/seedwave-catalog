@@ -1,6 +1,42 @@
 {
   "projects": [
     {
+      "id": "forge",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E2622E\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M36 16 V84\"/><path d=\"M36 21 Q49 9 60 20 Q70 28 82 19\"/><path d=\"M36 50 H70\"/></svg>",
+      "sectors": [
+        "AI",
+        "Platform",
+        "No-Code"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "demoLink": "https://ikartuzov-hub.github.io/forge/",
+      "category": "SeedWave tool",
+      "name": "Forge — from idea to a live product",
+      "hook": "Tell us your idea — AI builds a working product from it. Not a pitch deck, a live MVP you open on your phone.",
+      "description": "The SeedWave constructor: a proven path from a raw idea to a live product. AI structures any idea for free; the strong ones we build together. Already proven with Treino, Birdie, Relic. The method is open — bring an idea, don't look for someone to trust it with.",
+      "lookingFor": "Participant ideas · Partners · Feedback",
+      "page": {
+        "how": [
+          "Tell your idea in a sentence — to the Telegram bot or right on the showcase.",
+          "AI review structures it: who it's for, what already exists, the core, what to look for.",
+          "Strong ideas we build into a working MVP — multilingual engine, bot, checkout.",
+          "The product goes live: a link, first users, a card in SeedWave.",
+          "The method is open: same path every time; a new product is content, not a rebuild."
+        ],
+        "proofs": [
+          "Treino: idea “learn a language from your own story” → a live app with paying students.",
+          "Birdie: idea “an assistant for golf learners” → a multilingual PWA assistant in pilot.",
+          "Relic: idea “value an old coin” → an AI bot built in half a day."
+        ],
+        "vision": [
+          "A stream of participant ideas fills SeedWave: every structured idea becomes a card in the registry.",
+          "Strong ideas turn into live products and feed the platform's deal flow.",
+          "The constructor is a training ground: each built product sharpens the repeatable method."
+        ]
+      }
+    },
+    {
       "id": "dubai-madeira-cooperative",
       "icon": "🏢",
       "category": "Real Estate",
