@@ -126,6 +126,41 @@
       "methodLink": "https://ikartuzov-hub.github.io/treino/u/method.html"
     },
     {
+      "id": "guide",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E14B6A\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M72 36 A26 26 0 1 0 72 64 L72 50 L54 50\"/><path d=\"M20 84 Q30 78 40 84 Q50 90 60 84 Q70 78 80 84\"/></svg>",
+      "sectors": [
+        "Travel",
+        "Consumer"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "demoLink": "https://ikartuzov-hub.github.io/guide/",
+      "category": "Reisen / Guide",
+      "name": "Mein Guide — ein persönlicher Guide aus deinen Kartenpunkten",
+      "hook": "Deine markierten Orte werden zu einem schönen Guide, den du mit einem Link teilst. Szenarien für den Anlass, geheime Orte, Sonnenuntergang in Echtzeit.",
+      "description": "Eine Engine für persönliche Guides: deine gespeicherten Punkte → ein visueller Guide mit Szenarien (\"halber Tag · Auto · Sonnenuntergang\"), automatischer Geheim-Markierung und Live-Sonnenuntergangszeit. Eine Engine — ein neuer Guide ist nur ein neuer Satz Punkte. Kostenlos, der Funnel führt zu SeedWave.",
+      "lookingFor": "Guide-Autoren · Erste Nutzer · Feedback",
+      "page": {
+        "how": [
+          "Du markierst Orte auf Google Maps — wie gewohnt, mit deinen Notizen.",
+          "Die Engine macht daraus einen visuellen Guide: Karte, Karten, Bewertungen, deine Notizen.",
+          "Aus Punkten entstehen Szenarien: \"halber Tag · Auto · Sonnenuntergang\" — ein Guide für die Situation des Gastes.",
+          "Geheime Orte werden automatisch markiert; die populären wandern zur \"Basis nebenan\".",
+          "Ein neuer Guide ist ein neuer Satz Punkte, keine neue App: \"Mein Paris\", \"Mein Madeira\"."
+        ],
+        "proofs": [
+          "Ein Live-Guide \"Mein Unentdecktes Madeira\": 17 Orte, 3 Hero-Szenarien, 5 Oberflächensprachen.",
+          "Die Sonnenuntergangszeit wird live berechnet (SunCalc) — ohne Server, ohne Keys, ein sauberes Asset.",
+          "Die Ortsdaten sind ein Google-Snapshot; der Burggraben ist die persönliche Notiz des Autors."
+        ],
+        "vision": [
+          "Der Nutzer baut seinen eigenen Guide — und kann ihn als persönliches Geschenk verschenken.",
+          "Cowork baut den Guide eines neuen Autors aus seinen Punkten — die Forge-Schleife in Aktion.",
+          "Hunderte persönliche Guides → eine lebendige SeedWave-Geografie und ein Nutzerstrom."
+        ]
+      }
+    },
+    {
       "id": "tonight",
       "icon": "🎤",
       "category": "Technologie / Events",

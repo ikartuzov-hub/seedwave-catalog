@@ -126,6 +126,41 @@
       "methodLink": "https://ikartuzov-hub.github.io/treino/u/method.html"
     },
     {
+      "id": "guide",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E14B6A\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M72 36 A26 26 0 1 0 72 64 L72 50 L54 50\"/><path d=\"M20 84 Q30 78 40 84 Q50 90 60 84 Q70 78 80 84\"/></svg>",
+      "sectors": [
+        "Travel",
+        "Consumer"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "demoLink": "https://ikartuzov-hub.github.io/guide/",
+      "category": "Viajes / Guía",
+      "name": "Mi Guía — una guía personal desde tus puntos del mapa",
+      "hook": "Los lugares que marcaste se convierten en una guía bonita que compartes con un enlace. Escenarios para la ocasión, lugares secretos, atardecer en vivo.",
+      "description": "Un motor de guías personales: tus puntos guardados → una guía visual con escenarios (\"medio día · coche · atardecer\"), marca automática de lugares secretos y hora del atardecer en vivo. Un motor — una nueva guía es solo un nuevo conjunto de puntos. Gratis, el embudo lleva a SeedWave.",
+      "lookingFor": "Autores de guías · Primeros usuarios · Feedback",
+      "page": {
+        "how": [
+          "Marcas lugares en Google Maps — como siempre, con tus notas.",
+          "El motor los convierte en una guía visual: mapa, tarjetas, valoraciones, tus notas.",
+          "Los puntos forman escenarios: \"medio día · coche · atardecer\" — una guía para la situación del invitado.",
+          "Los lugares secretos se marcan automáticamente; los populares pasan a \"la base al lado\".",
+          "Una guía nueva es un nuevo conjunto de puntos, no una nueva app: \"Mi París\", \"Mi Madeira\"."
+        ],
+        "proofs": [
+          "Una guía en vivo \"Mi Madeira Inexplorada\": 17 lugares, 3 escenarios, 5 idiomas de interfaz.",
+          "La hora del atardecer se calcula en vivo (SunCalc) — sin servidores ni claves, un activo limpio.",
+          "Los datos de los lugares son una captura de Google; el foso es la nota personal del autor."
+        ],
+        "vision": [
+          "El usuario crea su propia guía — y puede regalarla como un regalo personal.",
+          "Cowork monta la guía de un nuevo autor desde sus puntos — el bucle Forge en acción.",
+          "Cientos de guías personales → una geografía viva de SeedWave y un flujo de usuarios."
+        ]
+      }
+    },
+    {
       "id": "tonight",
       "icon": "🎤",
       "category": "Tecnología / Eventos",

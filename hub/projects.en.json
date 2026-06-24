@@ -126,6 +126,41 @@
       "methodLink": "https://ikartuzov-hub.github.io/treino/u/method.html"
     },
     {
+      "id": "guide",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E14B6A\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M72 36 A26 26 0 1 0 72 64 L72 50 L54 50\"/><path d=\"M20 84 Q30 78 40 84 Q50 90 60 84 Q70 78 80 84\"/></svg>",
+      "sectors": [
+        "Travel",
+        "Consumer"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "demoLink": "https://ikartuzov-hub.github.io/guide/",
+      "category": "Travel / Guide",
+      "name": "My Guide — a personal guide from your map pins",
+      "hook": "Your saved places become a beautiful guide you share with one link. Scenarios for the situation, secret spots, live sunset times.",
+      "description": "A personal-guide engine: your saved pins → a visual guide with scenarios (\"half-day · car · sunset\"), an auto secret-spot flag and live sunset times. One engine — a new guide is just a new set of pins. Free, the funnel leads into SeedWave.",
+      "lookingFor": "Guide authors · First users · Feedback",
+      "page": {
+        "how": [
+          "Save places on Google Maps — as usual, with your own notes.",
+          "The engine turns them into a visual guide: map, cards, ratings, your notes.",
+          "Pins assemble into scenarios: \"half-day · car · sunset\" — a guide for the guest's situation.",
+          "Secret spots are flagged automatically; the popular ones move to \"the base nearby\".",
+          "A new guide is a new set of pins, not a new app: \"My Paris\", \"My Madeira\"."
+        ],
+        "proofs": [
+          "A live guide \"My Undiscovered Madeira\": 17 spots, 3 hero scenarios, 5 interface languages.",
+          "Sunset time is computed live (SunCalc) — no servers, no keys, a clean asset.",
+          "Place data is a Google snapshot (rating, hours, photo); the moat is the author's personal note."
+        ],
+        "vision": [
+          "The user builds their own guide — and can give it as a personal gift.",
+          "Cowork assembles a new author's guide from their pins — the Forge loop in action.",
+          "Hundreds of personal guides → a living SeedWave geography and a flow of users."
+        ]
+      }
+    },
+    {
       "id": "tonight",
       "icon": "🎤",
       "category": "Tech / Events",
