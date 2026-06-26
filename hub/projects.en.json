@@ -38,7 +38,7 @@
     },
     {
       "id": "dubai-madeira-cooperative",
-      "icon": "🏢",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#2A8FC0\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M34 20 L34 74\"/><path d=\"M34 20 C64 20 64 74 34 74\"/><path d=\"M18 88 Q28 82 38 88 Q48 94 58 88 Q68 82 78 88\"/></svg>",
       "category": "Real Estate",
       "name": "Dubai Madeira Cooperative — housing cooperative",
       "hook": "A cooperative under Portuguese law for collective property purchase. The first asset gained +48% in 15 months.",
@@ -50,7 +50,7 @@
       "stage": "mvp",
       "investment": "150,000 EUR (20% of asset value). Minimum entry from 5,000 EUR.",
       "lookingFor": "Cooperative investors · Lawyer · Operating partner",
-      "demoLink": "",
+      "demoLink": "https://ikartuzov-hub.github.io/dubai-madeira/",
       "page": {
         "how": [
           "The cooperative is established under Portuguese law (Cooperativa de Habitação e Construção) — a non-profit form with tax benefits: exemption from IRC, IMT and IMI.",

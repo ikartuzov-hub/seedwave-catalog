@@ -38,7 +38,7 @@
     },
     {
       "id": "dubai-madeira-cooperative",
-      "icon": "🏢",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#2A8FC0\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M34 20 L34 74\"/><path d=\"M34 20 C64 20 64 74 34 74\"/><path d=\"M18 88 Q28 82 38 88 Q48 94 58 88 Q68 82 78 88\"/></svg>",
       "category": "Недвижимость",
       "name": "Dubai Madeira Cooperative — жилищный кооператив",
       "hook": "Кооператив по португальскому праву для коллективной покупки недвижимости. Первый объект показал +48% за 15 месяцев.",
@@ -50,7 +50,7 @@
       "stage": "mvp",
       "investment": "150 000 EUR (20% от стоимости объекта). Минимальный вход от 5 000 EUR.",
       "lookingFor": "Кооператоры-инвесторы · Юрист · Операционный партнёр",
-      "demoLink": "",
+      "demoLink": "https://ikartuzov-hub.github.io/dubai-madeira/",
       "page": {
         "how": [
           "Кооператив создаётся по португальскому праву (Cooperativa de Habitação e Construção) — некоммерческая форма с налоговыми льготами: освобождение от IRC, IMT и IMI.",

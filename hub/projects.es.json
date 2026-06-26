@@ -38,7 +38,7 @@
     },
     {
       "id": "dubai-madeira-cooperative",
-      "icon": "🏢",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#2A8FC0\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M34 20 L34 74\"/><path d=\"M34 20 C64 20 64 74 34 74\"/><path d=\"M18 88 Q28 82 38 88 Q48 94 58 88 Q68 82 78 88\"/></svg>",
       "category": "Inmobiliario",
       "name": "Dubai Madeira Cooperative — cooperativa de vivienda",
       "hook": "Cooperativa bajo la ley portuguesa para la compra colectiva de inmuebles. El primer activo subió +48% en 15 meses.",
@@ -50,7 +50,7 @@
       "stage": "mvp",
       "investment": "150 000 EUR (20% del valor del inmueble). Entrada mínima desde 5 000 EUR.",
       "lookingFor": "Cooperativistas-inversores · Abogado · Socio operativo",
-      "demoLink": "",
+      "demoLink": "https://ikartuzov-hub.github.io/dubai-madeira/",
       "page": {
         "how": [
           "La cooperativa se constituye según la ley portuguesa (Cooperativa de Habitação e Construção) — forma sin ánimo de lucro con ventajas fiscales: exención de IRC, IMT e IMI.",
