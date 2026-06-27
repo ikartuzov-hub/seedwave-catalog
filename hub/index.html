@@ -28,6 +28,20 @@
     --display:"Spectral",Georgia,serif;
     --body:"Manrope",system-ui,sans-serif;
   }
+  :root[data-theme="light"]{
+    --ink:#0c2a33;
+    --ink-soft:#557079;
+    --abyss:#eef5f6;
+    --deep:#e2eef0;
+    --deep-2:#d6e6e9;
+    --teal:#0e8fa8;
+    --teal-bright:#0b7d94;
+    --coral:#e0623f;
+    --sand:#a8772a;
+    --line:rgba(14,90,110,.18);
+    --card:rgba(10,45,55,.045);
+    --card-hover:rgba(14,143,168,.09);
+  }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{
@@ -49,6 +63,13 @@
     content:"";position:fixed;inset:0;z-index:-1;opacity:.05;pointer-events:none;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
+  :root[data-theme="light"] body::before{
+    background:
+      radial-gradient(1100px 620px at 78% -8%, rgba(14,143,168,.14), transparent 60%),
+      radial-gradient(900px 520px at 6% 4%, rgba(224,98,63,.08), transparent 55%),
+      linear-gradient(180deg,#f2f8f9 0%,#e6f1f3 48%,#f2f8f9 100%);
+  }
+  :root[data-theme="light"] body::after{opacity:.03}
 
   .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
 
@@ -56,13 +77,20 @@
   .top{display:flex;align-items:center;justify-content:space-between;padding:26px 0 8px}
   .brand{font-family:var(--display);font-weight:700;font-size:1.45rem;letter-spacing:-.01em;display:flex;align-items:center;gap:.5rem}
   .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--teal-bright);box-shadow:0 0 16px var(--teal-bright)}
-  .langbtn{
-    display:inline-flex;align-items:center;gap:.45rem;cursor:pointer;
-    border:1px solid var(--line);background:var(--card);color:var(--ink);
-    padding:.5rem .8rem;border-radius:999px;font-size:.9rem;font-weight:600;
-    transition:border-color .2s, background .2s;
+  .brandmark{display:inline-flex;width:30px;height:30px;color:var(--teal-bright)}
+  .brandmark svg{width:100%;height:100%;display:block}
+  .brandlock{display:inline-flex;align-items:center;gap:.55rem;text-decoration:none}
+  .brandlock .bw{font-family:var(--display);font-weight:700;font-size:1.2rem;letter-spacing:-.01em;color:var(--ink)}
+  .topctrl{display:flex;align-items:center;gap:8px}
+  .cbtn{
+    width:40px;height:40px;border-radius:50%;
+    display:inline-flex;align-items:center;justify-content:center;
+    border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;
+    font-size:.8rem;font-weight:700;letter-spacing:.02em;line-height:1;
+    transition:border-color .2s, background .2s, transform .15s;
   }
-  .langbtn:hover{border-color:var(--teal);background:var(--card-hover)}
+  .cbtn:hover{border-color:var(--teal);background:var(--card-hover)}
+  .cbtn:active{transform:scale(.92)}
 
   /* hero */
   .hero{position:relative;padding:64px 0 30px}
@@ -158,8 +186,16 @@
 <body>
   <div class="wrap">
     <div class="top">
-      <div class="brand"><span class="dot"></span><span id="brand">SeedWave</span></div>
-      <button class="langbtn" id="langBtn" aria-label="language">🌐 <span id="langFlag">🇷🇺</span></button>
+      <div class="brandlock">
+        <span class="brandmark" aria-label="SeedWave">
+          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" role="img"><title>SeedWave</title><path d="M67 31 C67 20 45 18 38 27 C31 36 42 44 51 47 C62 51 69 55 66 65 C63 76 42 78 34 69"/><path d="M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86"/></svg>
+        </span>
+        <span class="bw" id="brandWord">SeedWave</span>
+      </div>
+      <div class="topctrl">
+        <button class="cbtn" id="langBtn" aria-label="language"><span id="langCode">RU</span></button>
+        <button class="cbtn" id="themeBtn" aria-label="theme">☾</button>
+      </div>
     </div>
   </div>
 
@@ -205,6 +241,16 @@
   let lang = params.get("lang") || saved || (liveCodes.includes(navLang)?navLang:null) || manifest.defaultLang;
   if(!liveCodes.includes(lang)) lang = manifest.defaultLang;
 
+  // ---- resolve theme: ?theme → localStorage → night ----
+  const savedTheme = (()=>{ try{return localStorage.getItem("sw_theme")}catch(e){return null} })();
+  let theme = params.get("theme") || savedTheme || "night";
+  if(theme!=="light" && theme!=="night") theme="night";
+  function applyTheme(t){
+    document.documentElement.setAttribute("data-theme", t==="light"?"light":"night");
+    const b=document.getElementById("themeBtn"); if(b) b.textContent = t==="light" ? "☀" : "☾";
+  }
+  applyTheme(theme);
+
   // ---- load ui + content ----
   const contentFile = c => manifest.content.replace("{lang}", c);
   async function loadContent(code){
@@ -237,12 +283,12 @@
   const safeId  = s => String(s).replace(/[^A-Za-z0-9_-]/g, "");
   const interestLink = id => `${botBase}?start=interest_${safeId(id)}_${lang}`;
   const joinLink     = () => `${botBase}?start=join_${lang}`;
-  const withLang     = url => url ? url + (url.includes("?") ? "&" : "?") + "lang=" + lang : url;
+  const withLang     = url => url ? url + (url.includes("?") ? "&" : "?") + "lang=" + lang + "&theme=" + theme : url;
 
   // ---- render ----
   function render(){
-    $("#brand").textContent = ui.brand;
-    $("#langFlag").textContent = flagOf(lang);
+    $("#langCode").textContent = lang.toUpperCase();
+    { const bw=document.getElementById("brandWord"); if(bw) bw.textContent = ui.brand; }
 
     const cards = data.projects.map((p,i)=>{
     const iconHtml = ic => { ic=(ic||"").trim(); return ic.startsWith("<svg") ? ic : esc(ic||"💡"); };
@@ -298,7 +344,7 @@
         <a class="btn" href="${esc(joinLink())}" target="_blank" rel="noopener">${esc(ui.hubCtaBtn)} →</a>
       </section>
 
-      <footer>${linkAuthor(ui.footer)}</footer>`;
+      <footer>© ${new Date().getFullYear()} <a class="author-link" href="${esc(withLang(manifest.hubUrl))}">${esc(ui.brand)}</a> · <a class="author-link" href="${esc(manifest.authorUrl)}" target="_blank" rel="noopener">Igor Kartuzov</a></footer>`;
   }
 
   // ---- language overlay ----
@@ -316,12 +362,18 @@
         const code = el.dataset.code;
         if(code===lang){ $("#ov").classList.remove("open"); return; }
         try{ localStorage.setItem("sw_lang",code) }catch(e){}
-        const u = new URL(location.href); u.searchParams.set("lang",code);
+        const u = new URL(location.href); u.searchParams.set("lang",code); u.searchParams.set("theme",theme);
         location.href = u.toString();
       });
     });
   }
   $("#langBtn").addEventListener("click",()=>{ buildLangList(); $("#ov").classList.add("open"); });
+  $("#themeBtn").addEventListener("click",()=>{
+    theme = (theme==="light") ? "night" : "light";
+    try{ localStorage.setItem("sw_theme", theme) }catch(e){}
+    applyTheme(theme);
+    const u=new URL(location.href); u.searchParams.set("theme",theme); history.replaceState(null,"",u.toString());
+  });
   $("#ov").addEventListener("click",e=>{ if(e.target.id==="ov") $("#ov").classList.remove("open"); });
 
   // ---- share (sarafan, language-neutral link) ----
