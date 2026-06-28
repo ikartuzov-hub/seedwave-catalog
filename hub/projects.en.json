@@ -68,7 +68,7 @@
     },
     {
       "id": "lis",
-      "icon": "🦊",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Lis\"><title>Lis</title><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></svg>",
       "category": "AI / Technology",
       "name": "Lis — your personal AI secretary",
       "hook": "A personal AI secretary in Telegram: it catches your tasks, sorts them by priority and sends a morning digest. Not a subscription — build it in an evening and own it forever.",
@@ -162,7 +162,7 @@
     },
     {
       "id": "tonight",
-      "icon": "🎤",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#6C5CE7\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Tonight\"><title>Tonight</title><path d=\"M30 68 L30 24 L62 66 L62 22\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></svg>",
       "category": "Tech / Events",
       "name": "Tonight — touring platform for artists & venues",
       "hook": "A touring platform for small artists and local venues: a chain of nearby cities, one ticket checkout and shared-cost promotion.",
