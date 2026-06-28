@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tonight — собери свой тур</title>
-<meta name="description" content="Tonight — туровая платформа для малых артистов и локальных площадок. Опубликуй карточку — площадки откликнутся, маршрут соберётся сам.">
+<meta name="description" content="Tonight — туровая платформа для малых артистов и локальных площадок.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%237C6CF0' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M30 68 L30 24 L62 66 L62 22'/%3E%3Cpath d='M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,60 +22,35 @@
   }
   *{box-sizing:border-box}
   html,body{margin:0;padding:0}
-  body{
-    background:var(--bg); color:var(--ink); font-family:var(--body);
-    -webkit-font-smoothing:antialiased; min-height:100vh; position:relative; overflow-x:hidden;
-  }
-  body::before{
-    content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
-    background:
-      radial-gradient(820px 540px at 50% -12%, rgba(124,108,240,.28), transparent 62%),
-      radial-gradient(620px 420px at 88% 8%, rgba(157,141,240,.12), transparent 60%);
-  }
-  :root[data-theme="light"] body::before{
-    background:
-      radial-gradient(820px 540px at 50% -12%, rgba(91,75,214,.14), transparent 62%),
-      radial-gradient(620px 420px at 88% 8%, rgba(91,75,214,.07), transparent 60%);
-  }
+  body{background:var(--bg); color:var(--ink); font-family:var(--body); -webkit-font-smoothing:antialiased; min-height:100vh; position:relative; overflow-x:hidden}
+  body::before{content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
+    background:radial-gradient(820px 540px at 50% -12%, rgba(124,108,240,.28), transparent 62%), radial-gradient(620px 420px at 88% 8%, rgba(157,141,240,.12), transparent 60%)}
+  :root[data-theme="light"] body::before{background:radial-gradient(820px 540px at 50% -12%, rgba(91,75,214,.14), transparent 62%), radial-gradient(620px 420px at 88% 8%, rgba(91,75,214,.07), transparent 60%)}
   .wrap{position:relative; z-index:1; max-width:560px; margin:0 auto; padding:0 20px 40px}
-
-  /* ---- topbar §7.8 ---- */
   .top{display:flex; align-items:center; justify-content:space-between; padding:18px 0 6px}
   .brandlock{display:inline-flex; align-items:center; gap:9px; text-decoration:none}
   .brandmark{display:inline-flex; width:28px; height:28px; color:var(--accent)}
   .brandmark svg{width:100%; height:100%; display:block}
   .bw{font-family:var(--display); font-size:1.45rem; letter-spacing:.01em; color:var(--ink); line-height:1}
   .topctrl{display:flex; align-items:center; gap:8px}
-  .cbtn{
-    width:40px; height:40px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center;
-    border:1px solid var(--line); background:var(--card); color:var(--ink); cursor:pointer;
-    font-size:.8rem; font-weight:600; letter-spacing:.02em; line-height:1; font-family:var(--body);
-    transition:border-color .2s, background .2s, transform .15s;
-  }
+  .cbtn{width:40px; height:40px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; border:1px solid var(--line); background:var(--card); color:var(--ink); cursor:pointer; font-size:.8rem; font-weight:600; letter-spacing:.02em; line-height:1; font-family:var(--body); transition:border-color .2s, background .2s, transform .15s}
   .cbtn:hover{border-color:var(--accent); background:var(--card-2)}
   .cbtn:active{transform:scale(.92)}
-
-  /* ---- intro ---- */
   .intro{text-align:center; padding:34px 6px 10px}
   .intro-mark{display:inline-flex; width:74px; height:74px; color:var(--accent); margin-bottom:24px; animation:markReveal 1.5s cubic-bezier(.2,.7,.2,1) both}
   .intro-mark svg{width:100%; height:100%}
   @keyframes markReveal{0%{opacity:0; transform:scale(.3) translateY(8px)} 58%{opacity:1; transform:scale(1.12)} 100%{opacity:1; transform:scale(1) translateY(0)}}
   .eyebrow{font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:var(--accent-2); font-weight:600}
   .intro h1{font-family:var(--display); font-weight:400; font-size:2.55rem; line-height:1.05; margin:16px 0 0; letter-spacing:.005em; animation:rise .7s .25s ease both}
-  .intro .lead{font-size:1.02rem; color:var(--soft); line-height:1.6; margin:16px auto 0; max-width:380px; animation:rise .7s .4s ease both}
+  .intro .lead{font-size:1.02rem; color:var(--soft); line-height:1.6; margin:16px auto 0; max-width:390px; animation:rise .7s .4s ease both}
   @keyframes rise{from{opacity:0; transform:translateY(12px)} to{opacity:1; transform:translateY(0)}}
-
-  /* ---- ticker ---- */
   .ticker{margin:30px 0 4px; padding:11px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--card); overflow:hidden; white-space:nowrap; animation:rise .7s .55s ease both}
   .ticker-row{display:inline-block; animation:tkr 26s linear infinite; font-size:.8rem; color:var(--soft)}
   .ticker-row b{color:var(--accent-2); font-weight:600}
   @keyframes tkr{from{transform:translateX(0)} to{transform:translateX(-50%)}}
-
   .cta{display:block; width:100%; border:none; cursor:pointer; background:var(--accent); color:var(--btn-ink); font-family:var(--body); font-weight:600; font-size:1rem; padding:15px; border-radius:14px; margin-top:26px; transition:transform .15s, filter .2s; animation:rise .7s .7s ease both}
   .cta:hover{filter:brightness(1.07)}
   .cta:active{transform:scale(.985)}
-
-  /* ---- demo ---- */
   .demo{padding:18px 0 6px; animation:rise .5s ease both}
   .demo h2{font-family:var(--display); font-weight:400; font-size:2.2rem; line-height:1.05; margin:6px 0 4px; letter-spacing:.01em}
   .meta{font-size:.86rem; color:var(--soft)}
@@ -83,107 +58,85 @@
   .pick{border:1px solid var(--line); background:var(--card); color:var(--soft); border-radius:999px; padding:7px 13px; font-size:.8rem; font-family:var(--body); cursor:pointer; transition:all .18s}
   .pick:hover{border-color:var(--accent)}
   .pick.on{background:var(--accent); color:var(--btn-ink); border-color:var(--accent); font-weight:600}
-
   .panel{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:15px 16px; margin-bottom:12px}
   .panel-h{font-size:.8rem; color:var(--accent-2); font-weight:600; margin-bottom:12px}
-  .chain text{font-family:var(--body)}
   .legs{font-size:.72rem; color:var(--soft); text-align:center; margin-top:2px}
-
   .stats{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px}
   .stat{background:var(--card-2); border-radius:12px; padding:11px 13px}
   .stat .l{font-size:.72rem; color:var(--soft)}
   .stat .v{font-size:.95rem; color:var(--ink); font-weight:600; margin-top:2px}
-
   .split{margin-bottom:12px}
   .split-top{display:flex; justify-content:space-between; font-size:.78rem; color:var(--soft); margin-bottom:8px}
   .split-top b{color:var(--accent-2); font-weight:600}
   input[type=range]{width:100%; accent-color:var(--accent); height:22px}
   .split-note{font-size:.72rem; color:var(--soft); margin-top:7px}
-
   .safety{background:var(--card-2); border-radius:12px; padding:11px 14px; margin-bottom:14px}
   .safety p{margin:0; font-size:.8rem; color:var(--ink); line-height:1.5; opacity:.92}
-
   footer{text-align:center; color:var(--soft); font-size:.78rem; padding:26px 0 8px; border-top:1px solid var(--line); margin-top:26px}
   footer a{color:var(--accent-2); text-decoration:none}
   footer a:hover{text-decoration:underline}
-
+  .ov{position:fixed; inset:0; background:rgba(10,8,24,.72); display:none; align-items:center; justify-content:center; z-index:50; padding:20px}
+  .ov.open{display:flex}
+  .ov-card{background:var(--bg2); border:1px solid var(--line); border-radius:18px; padding:18px; width:100%; max-width:300px}
+  .ov-card h3{margin:0 0 12px; font-family:var(--body); font-weight:600; font-size:.92rem; color:var(--ink); text-align:center}
+  .ov-list{display:flex; flex-direction:column; gap:8px}
+  .ov-btn{display:flex; justify-content:space-between; align-items:center; border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:12px; padding:11px 14px; font-family:var(--body); font-size:.9rem; cursor:pointer}
+  .ov-btn:hover{border-color:var(--accent); background:var(--card-2)}
+  .ov-btn .code{color:var(--soft); font-size:.76rem}
   .hidden{display:none}
   @media (max-width:380px){ .intro h1{font-size:2.1rem} .demo h2{font-size:1.85rem} }
-  @media (prefers-reduced-motion:reduce){
-    .intro-mark,.intro h1,.intro .lead,.ticker,.cta,.demo{animation:none}
-    .ticker-row{animation:none}
-  }
+  @media (prefers-reduced-motion:reduce){ .intro-mark,.intro h1,.intro .lead,.ticker,.cta,.demo{animation:none} .ticker-row{animation:none} }
 </style>
 </head>
 <body>
 <div class="wrap">
-
   <div class="top">
     <span class="brandlock" aria-label="Tonight">
-      <span class="brandmark">
-        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" role="img"><title>Tonight</title><path d="M30 68 L30 24 L62 66 L62 22"/><path d="M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86"/></svg>
-      </span>
+      <span class="brandmark"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" role="img"><title>Tonight</title><path d="M30 68 L30 24 L62 66 L62 22"/><path d="M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86"/></svg></span>
       <span class="bw">Tonight</span>
     </span>
     <div class="topctrl">
-      <button class="cbtn" id="langBtn" aria-label="язык"><span id="langCode">RU</span></button>
-      <button class="cbtn" id="themeBtn" aria-label="тема">☾</button>
+      <button class="cbtn" id="langBtn" aria-label="language"><span id="langCode">RU</span></button>
+      <button class="cbtn" id="themeBtn" aria-label="theme">&#9790;</button>
     </div>
   </div>
 
-  <!-- ИНТРО -->
   <section class="intro" id="intro">
-    <span class="intro-mark">
-      <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" role="img"><title>Tonight</title><path d="M30 68 L30 24 L62 66 L62 22"/><path d="M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86"/></svg>
-    </span>
-    <div class="eyebrow" id="introEyebrow">Туровая платформа для артистов</div>
-    <h1 id="introTitle">Один концерт — риск.<br>Тур — доход.</h1>
-    <p class="lead" id="introLead">Tonight собирает тебе тур из близких городов. Опубликуй карточку — площадки откликнутся сами.</p>
-
-    <div class="ticker">
-      <span class="ticker-row" id="tickerRow"></span>
-    </div>
-
-    <button class="cta" id="toDemo">Покажи мой тур →</button>
+    <span class="intro-mark"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" role="img"><title>Tonight</title><path d="M30 68 L30 24 L62 66 L62 22"/><path d="M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86"/></svg></span>
+    <div class="eyebrow" id="introEyebrow"></div>
+    <h1 id="introTitle"></h1>
+    <p class="lead" id="introLead"></p>
+    <div class="ticker"><span class="ticker-row" id="tickerRow"></span></div>
+    <button class="cta" id="toDemo"></button>
   </section>
 
-  <!-- ДЕМО -->
   <section class="demo hidden" id="demo">
-    <div class="eyebrow" id="cardEyebrow">Твоя карточка</div>
-    <h2 id="artName">—</h2>
-    <div class="meta" id="artMeta">—</div>
-
+    <div class="eyebrow" id="cardEyebrow"></div>
+    <h2 id="artName">&mdash;</h2>
+    <div class="meta" id="artMeta">&mdash;</div>
     <div class="picks" id="picks"></div>
-
     <div class="panel">
-      <div class="panel-h" id="respondHead">—</div>
+      <div class="panel-h" id="respondHead">&mdash;</div>
       <svg class="chain" id="chain" viewBox="0 0 320 66" style="width:100%"></svg>
-      <div class="legs" id="legs">—</div>
+      <div class="legs" id="legs">&mdash;</div>
     </div>
-
     <div class="stats">
-      <div class="stat"><div class="l" id="kassaL">Единая касса</div><div class="v" id="kassaV">билеты · отчётность</div></div>
-      <div class="stat"><div class="l" id="feeL">Гонорар</div><div class="v" id="feeV">после концерта · по акту</div></div>
+      <div class="stat"><div class="l" id="kassaL"></div><div class="v" id="kassaV"></div></div>
+      <div class="stat"><div class="l" id="feeL"></div><div class="v" id="feeV"></div></div>
     </div>
-
     <div class="split">
-      <div class="split-top"><span id="splitLbl">реклама вскладчину</span><span><b id="splitVal">—</b></span></div>
+      <div class="split-top"><span id="splitLbl"></span><span><b id="splitVal">&mdash;</b></span></div>
       <input type="range" id="venues" min="2" max="5" step="1" value="5">
-      <div class="split-note" id="splitNote">В одиночку реклама тонет в шуме — общий пул пробивает.</div>
+      <div class="split-note" id="splitNote"></div>
     </div>
-
-    <div class="safety">
-      <p id="safetyText">Не наберётся по городу — тур не рушится, маршрут корректируется. Худший случай — персональный концерт.</p>
-    </div>
-
-    <button class="cta" id="toFunnel">Хочу свой тур → мне интересно</button>
+    <div class="safety"><p id="safetyText"></p></div>
+    <button class="cta" id="toFunnel"></button>
   </section>
 
-  <footer>
-    © <span id="yr"></span> <a id="brandLink" href="#">SeedWave</a> · <a href="https://www.linkedin.com/in/igor-kartuzov/" target="_blank" rel="noopener">Igor Kartuzov</a>
-  </footer>
-
+  <footer>&copy; <span id="yr"></span> <a id="brandLink" href="#">SeedWave</a> &middot; <a href="https://www.linkedin.com/in/igor-kartuzov/" target="_blank" rel="noopener">Igor Kartuzov</a></footer>
 </div>
+
+<div class="ov" id="ov"><div class="ov-card"><h3>Язык · Language</h3><div class="ov-list" id="ovList"></div></div></div>
 
 <script>
 (function(){
@@ -191,147 +144,159 @@
   var $=function(s){return document.querySelector(s)};
   var params=new URLSearchParams(location.search);
 
-  /* ---------- LANG (задел под мультиязык; live: ru) ---------- */
   var L={
-    ru:{
-      eyebrow:"Туровая платформа для артистов",
-      title:"Один концерт — риск.<br>Тур — доход.",
+    ru:{ dir:"ltr", eyebrow:"Туровая платформа для артистов", title:"Один концерт — риск.<br>Тур — доход.",
       lead:"Tonight собирает тебе тур из близких городов. Опубликуй карточку — площадки откликнутся сами.",
-      ticker:["<b>близкие города</b>","короткие переезды","<b>площадки откликаются сами</b>","единая касса билетов","<b>реклама вскладчину пробивает шум</b>","гонорар после концерта по акту","<b>не наберёшь — тур не рухнет</b>"],
-      toDemo:"Покажи мой тур →",
-      cardEyebrow:"Твоя карточка",
+      ticker:["близкие города","короткие переезды","площадки откликаются сами","единая касса билетов","реклама вскладчину пробивает шум","гонорар после концерта по акту","не наберёшь — тур не рухнет"],
+      toDemo:"Покажи мой тур →", cardEyebrow:"Твоя карточка",
       respond:function(n){return n+" площадок откликнулись · «готов принять»"},
-      legs:"короткие переезды · 40–70 км между городами",
-      kassaL:"Единая касса", kassaV:"билеты · отчётность",
-      feeL:"Гонорар", feeV:"после концерта · по акту",
-      splitLbl:"реклама вскладчину",
-      splitVal:function(n,p){return n+" городов → −"+p+"% твоя доля"},
+      legs:function(a,b){return "короткие переезды · "+a+"–"+b+" км между городами"},
+      kassaL:"Единая касса", kassaV:"билеты · отчётность", feeL:"Гонорар", feeV:"после концерта · по акту",
+      splitLbl:"реклама вскладчину", splitVal:function(n,p){return n+" городов → −"+p+"% твоя доля"},
       splitNote:"В одиночку реклама тонет в шуме — общий пул пробивает.",
       safety:"Не наберётся по городу — тур не рушится, маршрут корректируется. Худший случай — персональный концерт.",
-      toFunnel:"Хочу свой тур → мне интересно"
-    }
+      toFunnel:"Хочу свой тур → мне интересно",
+      genres:{indie:"инди",standup:"стендап",songwriter:"автор-песни"}, win:"окна дат: ",
+      months:{7:"июль",8:"август",9:"сентябрь"}, fee:"гонорар по запросу",
+      dur:function(m){return m%60===0?(m/60)+" ч":m+" мин"} },
+    en:{ dir:"ltr", eyebrow:"Touring platform for artists", title:"One show is a risk.<br>A tour is income.",
+      lead:"Tonight builds your tour from nearby cities. Post your card — venues respond on their own.",
+      ticker:["nearby cities","short drives","venues respond on their own","one ticketing system","pooled ads cut through the noise","fee paid after the show by act","short on sales — the tour holds"],
+      toDemo:"Show my tour →", cardEyebrow:"Your card",
+      respond:function(n){return n+" venues responded · “ready to host”"},
+      legs:function(a,b){return "short drives · "+a+"–"+b+" km between cities"},
+      kassaL:"One box office", kassaV:"tickets · reporting", feeL:"Fee", feeV:"after the show · by act",
+      splitLbl:"pooled ads", splitVal:function(n,p){return n+" cities → −"+p+"% your share"},
+      splitNote:"Alone, ads drown in the noise — the pool cuts through.",
+      safety:"If a city falls short, the tour doesn’t collapse — the route adjusts. Worst case: a private show.",
+      toFunnel:"I want my tour → I’m interested",
+      genres:{indie:"indie",standup:"stand-up",songwriter:"singer-songwriter"}, win:"dates: ",
+      months:{7:"July",8:"August",9:"September"}, fee:"fee on request",
+      dur:function(m){return m%60===0?(m/60)+" h":m+" min"} },
+    pt:{ dir:"ltr", eyebrow:"Plataforma de digressões para artistas", title:"Um concerto é risco.<br>Uma digressão é renda.",
+      lead:"A Tonight monta a tua digressão por cidades próximas. Publica o teu cartão — os espaços respondem sozinhos.",
+      ticker:["cidades próximas","percursos curtos","os espaços respondem sozinhos","bilheteira única","publicidade em conjunto fura o ruído","cachê após o concerto, por ata","sem lotação — a digressão aguenta"],
+      toDemo:"Mostra a minha digressão →", cardEyebrow:"O teu cartão",
+      respond:function(n){return n+" espaços responderam · «prontos a receber»"},
+      legs:function(a,b){return "percursos curtos · "+a+"–"+b+" km entre cidades"},
+      kassaL:"Bilheteira única", kassaV:"bilhetes · relatórios", feeL:"Cachê", feeV:"após o concerto · por ata",
+      splitLbl:"publicidade em conjunto", splitVal:function(n,p){return n+" cidades → −"+p+"% a tua parte"},
+      splitNote:"Sozinha, a publicidade afunda no ruído — o conjunto fura.",
+      safety:"Se uma cidade não encher, a digressão não cai — o percurso ajusta-se. Pior caso: um concerto privado.",
+      toFunnel:"Quero a minha digressão → tenho interesse",
+      genres:{indie:"indie",standup:"stand-up",songwriter:"cantautor"}, win:"datas: ",
+      months:{7:"julho",8:"agosto",9:"setembro"}, fee:"cachê sob consulta",
+      dur:function(m){return m%60===0?(m/60)+" h":m+" min"} },
+    es:{ dir:"ltr", eyebrow:"Plataforma de giras para artistas", title:"Un concierto es riesgo.<br>Una gira es ingreso.",
+      lead:"Tonight arma tu gira por ciudades cercanas. Publica tu ficha — los locales responden solos.",
+      ticker:["ciudades cercanas","trayectos cortos","los locales responden solos","taquilla única","publicidad en común rompe el ruido","caché tras el concierto, por acta","sin lleno — la gira se sostiene"],
+      toDemo:"Muestra mi gira →", cardEyebrow:"Tu ficha",
+      respond:function(n){return n+" locales respondieron · «listos para recibir»"},
+      legs:function(a,b){return "trayectos cortos · "+a+"–"+b+" km entre ciudades"},
+      kassaL:"Taquilla única", kassaV:"entradas · informes", feeL:"Caché", feeV:"tras el concierto · por acta",
+      splitLbl:"publicidad en común", splitVal:function(n,p){return n+" ciudades → −"+p+"% tu parte"},
+      splitNote:"Sola, la publicidad se ahoga en el ruido — el conjunto rompe.",
+      safety:"Si una ciudad no llena, la gira no cae — la ruta se ajusta. Peor caso: un concierto privado.",
+      toFunnel:"Quiero mi gira → me interesa",
+      genres:{indie:"indie",standup:"stand-up",songwriter:"cantautor"}, win:"fechas: ",
+      months:{7:"julio",8:"agosto",9:"septiembre"}, fee:"caché a consultar",
+      dur:function(m){return m%60===0?(m/60)+" h":m+" min"} },
+    de:{ dir:"ltr", eyebrow:"Tour-Plattform für Künstler", title:"Ein Konzert ist Risiko.<br>Eine Tour ist Einkommen.",
+      lead:"Tonight baut deine Tour aus nahen Städten. Veröffentliche deine Karte — die Venues melden sich von selbst.",
+      ticker:["nahe Städte","kurze Fahrten","Venues melden sich selbst","ein Ticketing-System","gebündelte Werbung durchbricht den Lärm","Gage nach dem Konzert per Akt","zu wenig verkauft — die Tour hält"],
+      toDemo:"Zeig meine Tour →", cardEyebrow:"Deine Karte",
+      respond:function(n){return n+" Venues haben geantwortet · „bereit zu empfangen“"},
+      legs:function(a,b){return "kurze Fahrten · "+a+"–"+b+" km zwischen Städten"},
+      kassaL:"Zentrale Kasse", kassaV:"Tickets · Reporting", feeL:"Gage", feeV:"nach dem Konzert · per Akt",
+      splitLbl:"gebündelte Werbung", splitVal:function(n,p){return n+" Städte → −"+p+"% dein Anteil"},
+      splitNote:"Allein geht Werbung im Lärm unter — der Pool bricht durch.",
+      safety:"Füllt sich eine Stadt nicht, bricht die Tour nicht — die Route passt sich an. Schlimmstenfalls: ein privates Konzert.",
+      toFunnel:"Ich will meine Tour → ich bin interessiert",
+      genres:{indie:"Indie",standup:"Stand-up",songwriter:"Singer-Songwriter"}, win:"Termine: ",
+      months:{7:"Juli",8:"August",9:"September"}, fee:"Gage auf Anfrage",
+      dur:function(m){return m%60===0?(m/60)+" Std.":m+" Min."} }
   };
+  var langNames={ru:"Русский",en:"English",pt:"Português",es:"Español",de:"Deutsch"};
   var liveLangs=Object.keys(L);
   var nav=(navigator.language||"ru").slice(0,2).toLowerCase();
-  var lang=params.get("lang"); 
-  if(!lang){try{lang=localStorage.getItem("tn_lang")}catch(e){}}
+  var lang=params.get("lang"); if(!lang){try{lang=localStorage.getItem("tn_lang")}catch(e){}}
   if(!lang||liveLangs.indexOf(lang)<0) lang=(liveLangs.indexOf(nav)>=0?nav:"ru");
   var ui=L[lang];
+  document.documentElement.setAttribute("lang",lang);
 
-  /* ---------- THEME ---------- */
-  var theme=params.get("theme");
-  if(!theme){try{theme=localStorage.getItem("tn_theme")}catch(e){}}
+  var theme=params.get("theme"); if(!theme){try{theme=localStorage.getItem("tn_theme")}catch(e){}}
   if(theme!=="light"&&theme!=="night") theme="night";
-  function applyTheme(t){
-    document.documentElement.setAttribute("data-theme", t==="light"?"light":"night");
-    var b=$("#themeBtn"); if(b) b.textContent=(t==="light"?"☀":"☾");
-  }
+  function applyTheme(t){ document.documentElement.setAttribute("data-theme", t==="light"?"light":"night"); var b=$("#themeBtn"); if(b) b.innerHTML=(t==="light"?"&#9728;":"&#9790;"); }
   applyTheme(theme);
 
-  /* ---------- CONTENT (пресеты-артисты) ---------- */
   var PRESETS=[
-    { name:"LUNA RIOS", meta:"indie · сет 70 мин · окна дат: июль · гонорар по запросу",
-      cities:["Lisboa","Leiria","Coimbra","Aveiro","Porto"],
-      dates:["12.07","13.07","14.07","15.07","16.07"], legs:[60,70,55,65] },
-    { name:"DUARTE COSTA", meta:"стендап · 2 ч · окна дат: сентябрь · гонорар по запросу",
-      cities:["Porto","Braga","Guimarães","Aveiro","Coimbra"],
-      dates:["05.09","06.09","07.09","08.09","09.09"], legs:[55,25,70,55] },
-    { name:"MARA VITÓRIA", meta:"автор-песни · сет 80 мин · окна дат: август · гонорар по запросу",
-      cities:["Faro","Loulé","Albufeira","Portimão","Lagos"],
-      dates:["02.08","03.08","04.08","05.08","06.08"], legs:[20,30,25,20] }
+    { name:"LUNA RIOS", genre:"indie", lenMin:70, month:7, cities:["Lisboa","Leiria","Coimbra","Aveiro","Porto"], dates:["12.07","13.07","14.07","15.07","16.07"], legs:[60,70,55,65] },
+    { name:"DUARTE COSTA", genre:"standup", lenMin:120, month:9, cities:["Porto","Braga","Guimarães","Aveiro","Coimbra"], dates:["05.09","06.09","07.09","08.09","09.09"], legs:[55,25,70,55] },
+    { name:"MARA VITÓRIA", genre:"songwriter", lenMin:80, month:8, cities:["Faro","Loulé","Albufeira","Portimão","Lagos"], dates:["02.08","03.08","04.08","05.08","06.08"], legs:[20,30,25,20] }
   ];
   var cur=0;
 
-  /* ---------- APPLY LOCALE TEXT ---------- */
   function applyLocale(){
     $("#langCode").textContent=lang.toUpperCase();
     $("#introEyebrow").textContent=ui.eyebrow;
     $("#introTitle").innerHTML=ui.title;
     $("#introLead").textContent=ui.lead;
-    var seq=ui.ticker.join(" · ");
+    var seq=ui.ticker.map(function(x,i){return (i%2===0)?("<b>"+x+"</b>"):x}).join(" · ");
     $("#tickerRow").innerHTML=seq+" · &nbsp;&nbsp;"+seq+" · &nbsp;&nbsp;";
     $("#toDemo").textContent=ui.toDemo;
     $("#cardEyebrow").textContent=ui.cardEyebrow;
     $("#kassaL").textContent=ui.kassaL; $("#kassaV").textContent=ui.kassaV;
     $("#feeL").textContent=ui.feeL; $("#feeV").textContent=ui.feeV;
-    $("#splitLbl").textContent=ui.splitLbl;
-    $("#splitNote").textContent=ui.splitNote;
-    $("#safetyText").textContent=ui.safety;
-    $("#toFunnel").textContent=ui.toFunnel;
+    $("#splitLbl").textContent=ui.splitLbl; $("#splitNote").textContent=ui.splitNote;
+    $("#safetyText").textContent=ui.safety; $("#toFunnel").textContent=ui.toFunnel;
   }
+  function metaOf(p){ return ui.genres[p.genre]+" · "+ui.dur(p.lenMin)+" · "+ui.win+ui.months[p.month]+" · "+ui.fee; }
 
-  /* ---------- RENDER DEMO ---------- */
   function renderPicks(){
     var box=$("#picks"); box.innerHTML="";
-    PRESETS.forEach(function(p,i){
-      var b=document.createElement("button");
-      b.className="pick"+(i===cur?" on":"");
-      b.textContent=p.name;
-      b.onclick=function(){ cur=i; renderPicks(); renderTour(); };
-      box.appendChild(b);
-    });
+    PRESETS.forEach(function(p,i){ var b=document.createElement("button"); b.className="pick"+(i===cur?" on":""); b.textContent=p.name; b.onclick=function(){cur=i; renderPicks(); renderTour();}; box.appendChild(b); });
   }
   function renderTour(){
-    var p=PRESETS[cur];
-    var n=parseInt($("#venues").value,10);
-    $("#artName").textContent=p.name;
-    $("#artMeta").textContent=p.meta;
+    var p=PRESETS[cur]; var n=parseInt($("#venues").value,10);
+    $("#artName").textContent=p.name; $("#artMeta").textContent=metaOf(p);
     $("#respondHead").textContent=ui.respond(n);
-
-    // цепочка
-    var svg=$("#chain"); var W=320, x0=22, x1=298, y=20;
-    var pts=[]; for(var i=0;i<n;i++){ pts.push(x0+(x1-x0)*(n===1?0:i/(n-1))); }
+    var x0=22,x1=298,y=20,pts=[]; for(var i=0;i<n;i++){pts.push(x0+(x1-x0)*(n===1?0:i/(n-1)))}
     var s='<line x1="'+x0+'" y1="'+y+'" x2="'+x1+'" y2="'+y+'" stroke="var(--line)" stroke-width="2"/>';
-    for(var j=0;j<n;j++){
-      s+='<circle cx="'+pts[j]+'" cy="'+y+'" r="5" fill="var(--accent)"/>';
-      s+='<text x="'+pts[j]+'" y="40" text-anchor="middle" fill="var(--ink)" font-size="10.5">'+p.cities[j]+'</text>';
-      s+='<text x="'+pts[j]+'" y="54" text-anchor="middle" fill="var(--soft)" font-size="9">'+p.dates[j]+'</text>';
-    }
-    svg.innerHTML=s;
-
-    // переезды (средн. по активным плечам)
-    var usedLegs=p.legs.slice(0,Math.max(0,n-1));
-    if(usedLegs.length){
-      var mn=Math.min.apply(null,usedLegs), mx=Math.max.apply(null,usedLegs);
-      $("#legs").textContent="короткие переезды · "+mn+"–"+mx+" км между городами";
-    } else { $("#legs").textContent=""; }
-
-    // реклама вскладчину: доля 1/n, экономия (1-1/n)
-    var saving=Math.round((1-1/n)*100);
-    $("#splitVal").textContent=ui.splitVal(n,saving);
+    for(var j=0;j<n;j++){ s+='<circle cx="'+pts[j]+'" cy="'+y+'" r="5" fill="var(--accent)"/>'; s+='<text x="'+pts[j]+'" y="40" text-anchor="middle" fill="var(--ink)" font-size="10.5" font-family="Inter,sans-serif">'+p.cities[j]+'</text>'; s+='<text x="'+pts[j]+'" y="54" text-anchor="middle" fill="var(--soft)" font-size="9" font-family="Inter,sans-serif">'+p.dates[j]+'</text>'; }
+    $("#chain").innerHTML=s;
+    var used=p.legs.slice(0,Math.max(0,n-1));
+    if(used.length){ var mn=Math.min.apply(null,used), mx=Math.max.apply(null,used); $("#legs").textContent=ui.legs(mn,mx); } else { $("#legs").textContent=""; }
+    var saving=Math.round((1-1/n)*100); $("#splitVal").textContent=ui.splitVal(n,saving);
   }
 
-  /* ---------- NAV ---------- */
-  function hubUrl(){
-    var base="https://ikartuzov-hub.github.io/seedwave-catalog/hub/";
-    return base+"?lang="+lang+"&theme="+theme;
-  }
+  function hubUrl(){ return "https://ikartuzov-hub.github.io/seedwave-catalog/hub/?lang="+lang+"&theme="+theme; }
   $("#brandLink").setAttribute("href", hubUrl());
   $("#toFunnel").addEventListener("click", function(){ location.href=hubUrl(); });
-  $("#toDemo").addEventListener("click", function(){
-    $("#intro").classList.add("hidden");
-    $("#demo").classList.remove("hidden");
-    window.scrollTo({top:0,behavior:"smooth"});
-  });
+  $("#toDemo").addEventListener("click", function(){ $("#intro").classList.add("hidden"); $("#demo").classList.remove("hidden"); window.scrollTo({top:0,behavior:"smooth"}); });
 
-  /* ---------- CONTROLS ---------- */
   $("#themeBtn").addEventListener("click", function(){
     theme=(theme==="light"?"night":"light");
     try{localStorage.setItem("tn_theme",theme)}catch(e){}
-    applyTheme(theme);
-    $("#brandLink").setAttribute("href", hubUrl());
+    applyTheme(theme); $("#brandLink").setAttribute("href", hubUrl());
     try{ var u=new URL(location.href); u.searchParams.set("theme",theme); history.replaceState(null,"",u.toString()); }catch(e){}
   });
-  $("#langBtn").addEventListener("click", function(){
-    // задел: пока один live-язык (ru). Когда добавим EN/PT/ES/DE — здесь оверлей выбора.
-  });
+
+  function buildLangList(){
+    var box=$("#ovList"); box.innerHTML="";
+    liveLangs.forEach(function(code){
+      var b=document.createElement("button"); b.className="ov-btn";
+      b.innerHTML='<span>'+langNames[code]+'</span><span class="code">'+code.toUpperCase()+'</span>';
+      b.onclick=function(){ try{localStorage.setItem("tn_lang",code)}catch(e){} var u=new URL(location.href); u.searchParams.set("lang",code); u.searchParams.set("theme",theme); location.href=u.toString(); };
+      box.appendChild(b);
+    });
+  }
+  $("#langBtn").addEventListener("click", function(){ buildLangList(); $("#ov").classList.add("open"); });
+  $("#ov").addEventListener("click", function(e){ if(e.target===this) this.classList.remove("open"); });
+
   $("#venues").addEventListener("input", renderTour);
 
-  /* ---------- INIT ---------- */
   $("#yr").textContent=new Date().getFullYear();
-  applyLocale();
-  renderPicks();
-  renderTour();
+  applyLocale(); renderPicks(); renderTour();
 })();
 </script>
 </body>
