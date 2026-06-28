@@ -164,19 +164,16 @@
   .author-link:hover{border-color:var(--teal-bright)}
 
   /* language overlay */
-  .ov{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;
-    background:rgba(4,16,21,.72);backdrop-filter:blur(6px)}
-  .ov.open{display:flex}
-  .ov-box{background:var(--deep);border:1px solid var(--line);border-radius:20px;padding:28px;width:min(380px,90vw)}
-  .ov-box h4{font-family:var(--display);font-weight:600;font-size:1.3rem;margin-bottom:18px;text-align:center}
-  .lang-list{display:grid;gap:10px}
-  .lang-item{display:flex;align-items:center;gap:.7rem;padding:.7rem .9rem;border:1px solid var(--line);
-    border-radius:12px;cursor:pointer;font-weight:600;transition:border-color .2s,background .2s;color:var(--ink)}
-  .lang-item:hover{border-color:var(--teal);background:var(--card-hover)}
-  .lang-item.soon{opacity:.45;cursor:not-allowed}
-  .lang-item .fl{font-size:1.3rem}
-  .lang-item .soon-b{margin-left:auto;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft)}
-  .lang-item.active{border-color:var(--teal-bright);background:var(--card-hover)}
+  .langwrap{position:relative}
+  .langmenu{position:absolute;top:calc(100% + 8px);right:0;min-width:186px;background:var(--deep);border:1px solid var(--line);border-radius:14px;padding:6px;display:none;flex-direction:column;z-index:60}
+  .langmenu.open{display:flex}
+  .langmenu button{display:flex;align-items:center;gap:6px;background:transparent;border:none;color:var(--ink-soft);text-align:left;padding:9px 11px;border-radius:9px;font-family:inherit;font-size:.92rem;font-weight:600;cursor:pointer}
+  .langmenu button:hover{background:var(--card-hover);color:var(--ink)}
+  .langmenu button.on{color:var(--teal-bright)}
+  .langmenu button.soon{opacity:.45;cursor:not-allowed}
+  .langmenu .lc{display:inline-block;width:26px;font-weight:700;font-size:.75rem;color:var(--ink-soft)}
+  .langmenu button.on .lc{color:var(--teal-bright)}
+  .langmenu .soon-b{margin-left:auto;font-size:.66rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft)}
 
   @keyframes rise{to{opacity:1;transform:none}}
 
@@ -193,7 +190,10 @@
         <span class="bw" id="brandWord">SeedWave</span>
       </div>
       <div class="topctrl">
-        <button class="cbtn" id="langBtn" aria-label="language"><span id="langCode">RU</span></button>
+        <div class="langwrap">
+          <button class="cbtn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="language"><span id="langCode">RU</span></button>
+          <div class="langmenu" id="langmenu"></div>
+        </div>
         <button class="cbtn" id="themeBtn" aria-label="theme">☾</button>
       </div>
     </div>
@@ -203,13 +203,6 @@
     <div class="loading" id="loading">Загрузка…</div>
   </main>
 
-  <!-- language overlay -->
-  <div class="ov" id="ov">
-    <div class="ov-box">
-      <h4 id="ovTitle">Выбери язык</h4>
-      <div class="lang-list" id="langList"></div>
-    </div>
-  </div>
 
 <script>
 (async function(){
@@ -349,32 +342,32 @@
 
   // ---- language overlay ----
   function buildLangList(){
-    $("#ovTitle").textContent = ui.langTitle;
-    $("#langList").innerHTML = manifest.languages.map(l=>{
-      const cls = l.live ? (l.code===lang?"lang-item active":"lang-item") : "lang-item soon";
+    $("#langmenu").innerHTML = manifest.languages.map(l=>{
+      const on = (l.live && l.code===lang) ? " on" : "";
+      const soon = l.live ? "" : " soon";
       const tail = l.live ? "" : `<span class="soon-b">${esc(ui.langSoon)}</span>`;
-      return `<div class="${cls}" data-code="${esc(l.code)}" data-live="${l.live?1:0}">
-        <span class="fl">${esc(l.flag)}</span><span>${esc(l.label)}</span>${tail}</div>`;
+      return `<button class="${(on+soon).trim()}" data-code="${esc(l.code)}" data-live="${l.live?1:0}"><span class="lc">${esc(l.code.toUpperCase())}</span>${esc(l.label)}${tail}</button>`;
     }).join("");
-    $("#langList").querySelectorAll(".lang-item").forEach(el=>{
+    $("#langmenu").querySelectorAll("button").forEach(el=>{
       el.addEventListener("click",()=>{
         if(el.dataset.live!=="1") return;
         const code = el.dataset.code;
-        if(code===lang){ $("#ov").classList.remove("open"); return; }
+        if(code===lang){ closeLang(); return; }
         try{ localStorage.setItem("sw_lang",code) }catch(e){}
         const u = new URL(location.href); u.searchParams.set("lang",code); u.searchParams.set("theme",theme);
         location.href = u.toString();
       });
     });
   }
-  $("#langBtn").addEventListener("click",()=>{ buildLangList(); $("#ov").classList.add("open"); });
+  function closeLang(){ $("#langmenu").classList.remove("open"); $("#langBtn").setAttribute("aria-expanded","false"); }
+  $("#langBtn").addEventListener("click",(e)=>{ e.stopPropagation(); const m=$("#langmenu"); const open=m.classList.toggle("open"); $("#langBtn").setAttribute("aria-expanded",open?"true":"false"); if(open) buildLangList(); });
+  document.addEventListener("click",(e)=>{ if(!e.target.closest(".langwrap")) closeLang(); });
   $("#themeBtn").addEventListener("click",()=>{
     theme = (theme==="light") ? "night" : "light";
     try{ localStorage.setItem("sw_theme", theme) }catch(e){}
     applyTheme(theme);
     const u=new URL(location.href); u.searchParams.set("theme",theme); history.replaceState(null,"",u.toString());
   });
-  $("#ov").addEventListener("click",e=>{ if(e.target.id==="ov") $("#ov").classList.remove("open"); });
 
   // ---- share (sarafan, language-neutral link) ----
   const shareUrl = manifest.hubUrl || (location.origin + location.pathname);
