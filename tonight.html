@@ -1,156 +1,338 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SeedWave — Tonight: туровая платформа для артистов</title>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+<title>Tonight — собери свой тур</title>
+<meta name="description" content="Tonight — туровая платформа для малых артистов и локальных площадок. Опубликуй карточку — площадки откликнутся, маршрут соберётся сам.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%237C6CF0' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M30 68 L30 24 L62 66 L62 22'/%3E%3Cpath d='M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { background: #0a0a0a; color: #999; font-family: 'Outfit', sans-serif; font-weight: 300; min-height: 100vh; }
-.page { max-width: 720px; margin: 0 auto; padding: 64px 24px; }
-.back { display: inline-block; font-size: 13px; color: #555; text-decoration: none; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 48px; transition: color 0.3s; }
-.back:hover { color: #fff; }
-.sector { display: inline-block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: #555; padding: 3px 10px; border: 1px solid #2a2a2a; border-radius: 2px; margin-bottom: 16px; }
-.title { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 36px; color: #fff; letter-spacing: -0.5px; margin-bottom: 12px; line-height: 1.2; }
-.subtitle { font-family: 'Playfair Display', serif; font-style: italic; font-size: 16px; color: #666; margin-bottom: 48px; line-height: 1.6; }
-.divider { width: 100%; height: 1px; background: linear-gradient(90deg, transparent, #333, transparent); margin: 32px 0; }
-.section-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 3px; color: #444; margin-bottom: 12px; }
-.text { font-size: 15px; line-height: 1.8; color: #888; margin-bottom: 24px; }
-.highlight { color: #ccc; font-weight: 400; }
-.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: #1a1a1a; border: 1px solid #1a1a1a; margin: 32px 0; }
-.stat { background: #0a0a0a; padding: 20px; }
-.stat-label { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: #444; margin-bottom: 6px; }
-.stat-value { font-size: 20px; font-weight: 600; color: #ccc; }
-.roles { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 32px; }
-.role { font-size: 12px; font-weight: 400; color: #666; padding: 4px 12px; border: 1px solid #222; border-radius: 2px; }
-.cta { display: inline-block; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 3px; color: #666; text-decoration: none; padding: 12px 28px; border: 1px solid #2a2a2a; transition: all 0.3s; margin-top: 16px; }
-.cta:hover { color: #fff; border-color: #555; }
-.steps { margin: 8px 0 32px; }
-.step { display: flex; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #1a1a1a; }
-.step:last-child { border-bottom: none; }
-.step-num { font-size: 13px; font-weight: 300; color: #444; min-width: 32px; flex-shrink: 0; letter-spacing: 1px; }
-.step-text { font-size: 14px; line-height: 1.6; color: #888; }
-.step-text b { color: #ccc; font-weight: 600; }
+  :root{
+    --bg:#15122B; --bg2:#1E1A3D; --card:rgba(255,255,255,.045); --card-2:rgba(124,108,240,.10);
+    --ink:#F2EFFF; --soft:#A6A0CC; --accent:#7C6CF0; --accent-2:#9D8DF0; --line:#2E2850;
+    --btn-ink:#171430; --display:"Anton",system-ui,sans-serif; --body:"Inter",system-ui,sans-serif;
+  }
+  :root[data-theme="light"]{
+    --bg:#F5F2FC; --bg2:#ffffff; --card:rgba(91,75,214,.05); --card-2:rgba(91,75,214,.08);
+    --ink:#1A1633; --soft:#6B6494; --accent:#5B4BD6; --accent-2:#4A3CC0; --line:#E3DEF4;
+    --btn-ink:#ffffff;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--ink); font-family:var(--body);
+    -webkit-font-smoothing:antialiased; min-height:100vh; position:relative; overflow-x:hidden;
+  }
+  body::before{
+    content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
+    background:
+      radial-gradient(820px 540px at 50% -12%, rgba(124,108,240,.28), transparent 62%),
+      radial-gradient(620px 420px at 88% 8%, rgba(157,141,240,.12), transparent 60%);
+  }
+  :root[data-theme="light"] body::before{
+    background:
+      radial-gradient(820px 540px at 50% -12%, rgba(91,75,214,.14), transparent 62%),
+      radial-gradient(620px 420px at 88% 8%, rgba(91,75,214,.07), transparent 60%);
+  }
+  .wrap{position:relative; z-index:1; max-width:560px; margin:0 auto; padding:0 20px 40px}
 
-/* Роли — расширенный блок */
-.role-card { padding: 16px 0; border-bottom: 1px solid #1a1a1a; }
-.role-card:last-child { border-bottom: none; }
-.role-name { font-size: 14px; font-weight: 600; color: #ccc; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 6px; }
-.role-desc { font-size: 13px; line-height: 1.6; color: #777; }
-.role-desc b { color: #999; font-weight: 400; }
+  /* ---- topbar §7.8 ---- */
+  .top{display:flex; align-items:center; justify-content:space-between; padding:18px 0 6px}
+  .brandlock{display:inline-flex; align-items:center; gap:9px; text-decoration:none}
+  .brandmark{display:inline-flex; width:28px; height:28px; color:var(--accent)}
+  .brandmark svg{width:100%; height:100%; display:block}
+  .bw{font-family:var(--display); font-size:1.45rem; letter-spacing:.01em; color:var(--ink); line-height:1}
+  .topctrl{display:flex; align-items:center; gap:8px}
+  .cbtn{
+    width:40px; height:40px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center;
+    border:1px solid var(--line); background:var(--card); color:var(--ink); cursor:pointer;
+    font-size:.8rem; font-weight:600; letter-spacing:.02em; line-height:1; font-family:var(--body);
+    transition:border-color .2s, background .2s, transform .15s;
+  }
+  .cbtn:hover{border-color:var(--accent); background:var(--card-2)}
+  .cbtn:active{transform:scale(.92)}
 
-/* Переменные платформы */
-.vars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #1a1a1a; border: 1px solid #1a1a1a; margin: 24px 0; }
-.var { background: #0a0a0a; padding: 14px 12px; text-align: center; }
-.var-key { font-family: 'Playfair Display', serif; font-style: italic; font-size: 24px; color: #ccc; line-height: 1; margin-bottom: 4px; }
-.var-desc { font-size: 10px; color: #555; text-transform: uppercase; letter-spacing: 1px; line-height: 1.3; }
+  /* ---- intro ---- */
+  .intro{text-align:center; padding:34px 6px 10px}
+  .intro-mark{display:inline-flex; width:74px; height:74px; color:var(--accent); margin-bottom:24px; animation:markReveal 1.5s cubic-bezier(.2,.7,.2,1) both}
+  .intro-mark svg{width:100%; height:100%}
+  @keyframes markReveal{0%{opacity:0; transform:scale(.3) translateY(8px)} 58%{opacity:1; transform:scale(1.12)} 100%{opacity:1; transform:scale(1) translateY(0)}}
+  .eyebrow{font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:var(--accent-2); font-weight:600}
+  .intro h1{font-family:var(--display); font-weight:400; font-size:2.55rem; line-height:1.05; margin:16px 0 0; letter-spacing:.005em; animation:rise .7s .25s ease both}
+  .intro .lead{font-size:1.02rem; color:var(--soft); line-height:1.6; margin:16px auto 0; max-width:380px; animation:rise .7s .4s ease both}
+  @keyframes rise{from{opacity:0; transform:translateY(12px)} to{opacity:1; transform:translateY(0)}}
 
-.footer-note { font-size: 12px; color: #333; text-align: center; margin-top: 48px; letter-spacing: 2px; text-transform: uppercase; }
-.draft-note { font-size: 11px; color: #555; font-style: italic; text-align: center; margin-top: 8px; letter-spacing: 1px; }
+  /* ---- ticker ---- */
+  .ticker{margin:30px 0 4px; padding:11px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--card); overflow:hidden; white-space:nowrap; animation:rise .7s .55s ease both}
+  .ticker-row{display:inline-block; animation:tkr 26s linear infinite; font-size:.8rem; color:var(--soft)}
+  .ticker-row b{color:var(--accent-2); font-weight:600}
+  @keyframes tkr{from{transform:translateX(0)} to{transform:translateX(-50%)}}
+
+  .cta{display:block; width:100%; border:none; cursor:pointer; background:var(--accent); color:var(--btn-ink); font-family:var(--body); font-weight:600; font-size:1rem; padding:15px; border-radius:14px; margin-top:26px; transition:transform .15s, filter .2s; animation:rise .7s .7s ease both}
+  .cta:hover{filter:brightness(1.07)}
+  .cta:active{transform:scale(.985)}
+
+  /* ---- demo ---- */
+  .demo{padding:18px 0 6px; animation:rise .5s ease both}
+  .demo h2{font-family:var(--display); font-weight:400; font-size:2.2rem; line-height:1.05; margin:6px 0 4px; letter-spacing:.01em}
+  .meta{font-size:.86rem; color:var(--soft)}
+  .picks{display:flex; gap:8px; flex-wrap:wrap; margin:16px 0 18px}
+  .pick{border:1px solid var(--line); background:var(--card); color:var(--soft); border-radius:999px; padding:7px 13px; font-size:.8rem; font-family:var(--body); cursor:pointer; transition:all .18s}
+  .pick:hover{border-color:var(--accent)}
+  .pick.on{background:var(--accent); color:var(--btn-ink); border-color:var(--accent); font-weight:600}
+
+  .panel{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:15px 16px; margin-bottom:12px}
+  .panel-h{font-size:.8rem; color:var(--accent-2); font-weight:600; margin-bottom:12px}
+  .chain text{font-family:var(--body)}
+  .legs{font-size:.72rem; color:var(--soft); text-align:center; margin-top:2px}
+
+  .stats{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px}
+  .stat{background:var(--card-2); border-radius:12px; padding:11px 13px}
+  .stat .l{font-size:.72rem; color:var(--soft)}
+  .stat .v{font-size:.95rem; color:var(--ink); font-weight:600; margin-top:2px}
+
+  .split{margin-bottom:12px}
+  .split-top{display:flex; justify-content:space-between; font-size:.78rem; color:var(--soft); margin-bottom:8px}
+  .split-top b{color:var(--accent-2); font-weight:600}
+  input[type=range]{width:100%; accent-color:var(--accent); height:22px}
+  .split-note{font-size:.72rem; color:var(--soft); margin-top:7px}
+
+  .safety{background:var(--card-2); border-radius:12px; padding:11px 14px; margin-bottom:14px}
+  .safety p{margin:0; font-size:.8rem; color:var(--ink); line-height:1.5; opacity:.92}
+
+  footer{text-align:center; color:var(--soft); font-size:.78rem; padding:26px 0 8px; border-top:1px solid var(--line); margin-top:26px}
+  footer a{color:var(--accent-2); text-decoration:none}
+  footer a:hover{text-decoration:underline}
+
+  .hidden{display:none}
+  @media (max-width:380px){ .intro h1{font-size:2.1rem} .demo h2{font-size:1.85rem} }
+  @media (prefers-reduced-motion:reduce){
+    .intro-mark,.intro h1,.intro .lead,.ticker,.cta,.demo{animation:none}
+    .ticker-row{animation:none}
+  }
 </style>
 </head>
 <body>
-<div class="page">
-<a class="back" href="index.html">&larr; Каталог</a>
-<span class="sector">Events / Tour Platform</span>
-<div class="title">Tonight</div>
-<div class="subtitle">Туровая платформа для малых артистов и локальных площадок. Цепочка близких городов, единая касса билетов, реклама «вскладчину»</div>
+<div class="wrap">
 
-<div class="divider"></div>
+  <div class="top">
+    <span class="brandlock" aria-label="Tonight">
+      <span class="brandmark">
+        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" role="img"><title>Tonight</title><path d="M30 68 L30 24 L62 66 L62 22"/><path d="M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86"/></svg>
+      </span>
+      <span class="bw">Tonight</span>
+    </span>
+    <div class="topctrl">
+      <button class="cbtn" id="langBtn" aria-label="язык"><span id="langCode">RU</span></button>
+      <button class="cbtn" id="themeBtn" aria-label="тема">☾</button>
+    </div>
+  </div>
 
-<div class="section-label">Ключевая идея</div>
-<div class="text"><span class="highlight">Артист рентабелен только в туре.</span> Одиночные концерты в городе не покрывают расходов на промо — выигрывает только мощная реклама, которая окупается на всём туре. Платформа собирает цепочку организаторов с короткими плечами переезда, стандартизирует операции и централизует рекламный пул.</div>
+  <!-- ИНТРО -->
+  <section class="intro" id="intro">
+    <span class="intro-mark">
+      <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" role="img"><title>Tonight</title><path d="M30 68 L30 24 L62 66 L62 22"/><path d="M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86"/></svg>
+    </span>
+    <div class="eyebrow" id="introEyebrow">Туровая платформа для артистов</div>
+    <h1 id="introTitle">Один концерт — риск.<br>Тур — доход.</h1>
+    <p class="lead" id="introLead">Tonight собирает тебе тур из близких городов. Опубликуй карточку — площадки откликнутся сами.</p>
 
-<div class="text"><span class="highlight">Два режима работы.</span> Первый: артист публикует продукт → платформа собирает тур из площадок. Второй: заказчик с готовым бюджетом размещает запрос (например, ведущий на свадьбу) — платформа работает как доска объявлений и место независимых отзывов.</div>
+    <div class="ticker">
+      <span class="ticker-row" id="tickerRow"></span>
+    </div>
 
-<div class="section-label">Роли</div>
-<div class="role-card">
-<div class="role-name">Артист</div>
-<div class="role-desc">Публикует карточку выступления: формат, длительность, гонорар <b>X</b>, доступные окна дат. Прикладывает афишу, синопсис, фото/видео, техрайдер, тайминг.</div>
-</div>
-<div class="role-card">
-<div class="role-name">Площадка</div>
-<div class="role-desc">Подтверждает дату/время и вместимость. Базовый пакет по себестоимости <b>Y</b> евро: контроль билетов, гардероб, сцена, звук/свет, съёмка, онлайн-трансляция.</div>
-</div>
-<div class="role-card">
-<div class="role-name">Инициатор/организатор</div>
-<div class="role-desc">Локальная координация события, листинг в платформе, подключение к общей туровой рекламе «вскладчину».</div>
-</div>
-<div class="role-card">
-<div class="role-name">Платформа</div>
-<div class="role-desc">Матчинг артиста и площадок, билеты и отчётность, независимые отзывы. Централизует рекламный пул тура, даёт шаблоны и чек-листы.</div>
-</div>
+    <button class="cta" id="toDemo">Покажи мой тур →</button>
+  </section>
 
-<div class="section-label" style="margin-top: 32px;">Процесс — как запускается тур</div>
-<div class="steps">
-<div class="step"><div class="step-num">01</div><div class="step-text"><b>Артист публикует карточку</b> — формат, длительность, гонорар X, окна дат</div></div>
-<div class="step"><div class="step-num">02</div><div class="step-text"><b>Площадки откликаются</b> — города, даты, вместимость, ограничения</div></div>
-<div class="step"><div class="step-num">03</div><div class="step-text"><b>Маршрут сводится</b> с короткими плечами переезда</div></div>
-<div class="step"><div class="step-num">04</div><div class="step-text"><b>Фиксируются пороги по датам</b> — например: до T-30 — N1 билетов; до T-14 — N2</div></div>
-<div class="step"><div class="step-num">05</div><div class="step-text"><b>Подписание оферты</b> — пакет площадки Y евро, расчёты, правила отмен и переносов</div></div>
-<div class="step"><div class="step-num">06</div><div class="step-text"><b>Запуск централизованной рекламы</b> + локальная дистрибуция, открытие продаж</div></div>
-<div class="step"><div class="step-num">07</div><div class="step-text"><b>Оптимизация рекламы</b> по городам — приоритизация отстающих в продажах</div></div>
-<div class="step"><div class="step-num">08</div><div class="step-text"><b>Проведение концертов</b> по единому стандарту качества</div></div>
-<div class="step"><div class="step-num">09</div><div class="step-text"><b>Выплаты</b> — гонорар артисту после концерта; площадка получает Y евро себестоимости</div></div>
-<div class="step"><div class="step-num">10</div><div class="step-text"><b>Отчётность</b> и независимые отзывы — закрепляют репутацию всех участников</div></div>
-</div>
+  <!-- ДЕМО -->
+  <section class="demo hidden" id="demo">
+    <div class="eyebrow" id="cardEyebrow">Твоя карточка</div>
+    <h2 id="artName">—</h2>
+    <div class="meta" id="artMeta">—</div>
 
-<div class="section-label">Переменные платформы</div>
-<div class="vars">
-<div class="var"><div class="var-key">X</div><div class="var-desc">Гонорар артиста</div></div>
-<div class="var"><div class="var-key">Y</div><div class="var-desc">Себестоимость площадки</div></div>
-<div class="var"><div class="var-key">N₁/N₂</div><div class="var-desc">Пороги продаж по датам</div></div>
-<div class="var"><div class="var-key">T</div><div class="var-desc">Точки таймлайна тура</div></div>
-</div>
-<div class="text" style="font-size: 13px; color: #666;">Конкретные значения индивидуальны для каждого тура и согласуются на этапе подписания оферты. В листовку конкретные цифры намеренно не выносятся — экономика каждого события своя.</div>
+    <div class="picks" id="picks"></div>
 
-<div class="section-label">Реклама и промо</div>
-<div class="text"><span class="highlight">Что делаем:</span> единый креатив и лендинг тура + городские лендинги, таргет, контекст, ретаргет, паблики и инфлюенсеры по городам.<br><br><span class="highlight">Как измеряем:</span> UTM, пиксели, сквозная аналитика. Приоритизация городов с отстающими продажами в реальном времени.</div>
+    <div class="panel">
+      <div class="panel-h" id="respondHead">—</div>
+      <svg class="chain" id="chain" viewBox="0 0 320 66" style="width:100%"></svg>
+      <div class="legs" id="legs">—</div>
+    </div>
 
-<div class="section-label">Финансы и риски</div>
-<div class="text">У площадки нет рекламного бюджета — только себестоимость Y евро за комплекс услуг. Гонорар артисту — после концерта. Пороговые условия по датам защищают обе стороны: при недоборе сетка корректируется или тур пересобирается.<br><br><span class="highlight">Худший сценарий:</span> инициатор получает персональный концерт. Мелкие концерты не отменяются по причине плохих продаж.</div>
+    <div class="stats">
+      <div class="stat"><div class="l" id="kassaL">Единая касса</div><div class="v" id="kassaV">билеты · отчётность</div></div>
+      <div class="stat"><div class="l" id="feeL">Гонорар</div><div class="v" id="feeV">после концерта · по акту</div></div>
+    </div>
 
-<div class="section-label">Стандарты — что входит в Y евро</div>
-<div class="text"><span class="highlight">Технические:</span> звук, свет, сцена — минимум по техрайдеру.<br><span class="highlight">Операционные:</span> билеты и контроль, гардероб, техперсонал, съёмка концерта, базовая онлайн-трансляция.<br><span class="highlight">Тайминг дня:</span> сбор, саундчек, двери, сет, фотоколл, закрытие.<br><span class="highlight">Контент-пак:</span> афиша, тизеры, КП для локальных пабликов.</div>
+    <div class="split">
+      <div class="split-top"><span id="splitLbl">реклама вскладчину</span><span><b id="splitVal">—</b></span></div>
+      <input type="range" id="venues" min="2" max="5" step="1" value="5">
+      <div class="split-note" id="splitNote">В одиночку реклама тонет в шуме — общий пул пробивает.</div>
+    </div>
 
-<div class="stats">
-<div class="stat">
-<div class="stat-label">Старт</div>
-<div class="stat-value">Роттердам</div>
-</div>
-<div class="stat">
-<div class="stat-label">Стадия</div>
-<div class="stat-value">Pre-MVP</div>
-</div>
-<div class="stat">
-<div class="stat-label">Формат</div>
-<div class="stat-value">Туры × площадки</div>
-</div>
-<div class="stat">
-<div class="stat-label">Тест</div>
-<div class="stat-value">Стендап-тур</div>
-</div>
+    <div class="safety">
+      <p id="safetyText">Не наберётся по городу — тур не рушится, маршрут корректируется. Худший случай — персональный концерт.</p>
+    </div>
+
+    <button class="cta" id="toFunnel">Хочу свой тур → мне интересно</button>
+  </section>
+
+  <footer>
+    © <span id="yr"></span> <a id="brandLink" href="#">SeedWave</a> · <a href="https://www.linkedin.com/in/igor-kartuzov/" target="_blank" rel="noopener">Igor Kartuzov</a>
+  </footer>
+
 </div>
 
-<div class="section-label">Кого ищем</div>
-<div class="roles">
-<span class="role">Operator — основатель проекта</span>
-<span class="role">Pilot venues — Мадейра, Лиссабон, Берлин, Тбилиси</span>
-<span class="role">Артисты — стендап, музыка, лекции, мастер-классы</span>
-<span class="role">Builder — Telegram-бот, билетная система, аналитика</span>
-</div>
+<script>
+(function(){
+  "use strict";
+  var $=function(s){return document.querySelector(s)};
+  var params=new URLSearchParams(location.search);
 
-<div class="divider"></div>
+  /* ---------- LANG (задел под мультиязык; live: ru) ---------- */
+  var L={
+    ru:{
+      eyebrow:"Туровая платформа для артистов",
+      title:"Один концерт — риск.<br>Тур — доход.",
+      lead:"Tonight собирает тебе тур из близких городов. Опубликуй карточку — площадки откликнутся сами.",
+      ticker:["<b>близкие города</b>","короткие переезды","<b>площадки откликаются сами</b>","единая касса билетов","<b>реклама вскладчину пробивает шум</b>","гонорар после концерта по акту","<b>не наберёшь — тур не рухнет</b>"],
+      toDemo:"Покажи мой тур →",
+      cardEyebrow:"Твоя карточка",
+      respond:function(n){return n+" площадок откликнулись · «готов принять»"},
+      legs:"короткие переезды · 40–70 км между городами",
+      kassaL:"Единая касса", kassaV:"билеты · отчётность",
+      feeL:"Гонорар", feeV:"после концерта · по акту",
+      splitLbl:"реклама вскладчину",
+      splitVal:function(n,p){return n+" городов → −"+p+"% твоя доля"},
+      splitNote:"В одиночку реклама тонет в шуме — общий пул пробивает.",
+      safety:"Не наберётся по городу — тур не рушится, маршрут корректируется. Худший случай — персональный концерт.",
+      toFunnel:"Хочу свой тур → мне интересно"
+    }
+  };
+  var liveLangs=Object.keys(L);
+  var nav=(navigator.language||"ru").slice(0,2).toLowerCase();
+  var lang=params.get("lang"); 
+  if(!lang){try{lang=localStorage.getItem("tn_lang")}catch(e){}}
+  if(!lang||liveLangs.indexOf(lang)<0) lang=(liveLangs.indexOf(nav)>=0?nav:"ru");
+  var ui=L[lang];
 
-<div class="section-label">Следующий шаг</div>
-<div class="text">Тестирование первой ветки тура с реальным артистом в работе. Параллельно — поиск 2-3 площадок-партнёров в смежных городах для сборки первой цепочки.</div>
+  /* ---------- THEME ---------- */
+  var theme=params.get("theme");
+  if(!theme){try{theme=localStorage.getItem("tn_theme")}catch(e){}}
+  if(theme!=="light"&&theme!=="night") theme="night";
+  function applyTheme(t){
+    document.documentElement.setAttribute("data-theme", t==="light"?"light":"night");
+    var b=$("#themeBtn"); if(b) b.textContent=(t==="light"?"☀":"☾");
+  }
+  applyTheme(theme);
 
-<div style="text-align: center;">
-<a class="cta" href="https://t.me/SeedWaveBot" target="_blank">Написать в SeedWave</a>
-</div>
+  /* ---------- CONTENT (пресеты-артисты) ---------- */
+  var PRESETS=[
+    { name:"LUNA RIOS", meta:"indie · сет 70 мин · окна дат: июль · гонорар по запросу",
+      cities:["Lisboa","Leiria","Coimbra","Aveiro","Porto"],
+      dates:["12.07","13.07","14.07","15.07","16.07"], legs:[60,70,55,65] },
+    { name:"DUARTE COSTA", meta:"стендап · 2 ч · окна дат: сентябрь · гонорар по запросу",
+      cities:["Porto","Braga","Guimarães","Aveiro","Coimbra"],
+      dates:["05.09","06.09","07.09","08.09","09.09"], legs:[55,25,70,55] },
+    { name:"MARA VITÓRIA", meta:"автор-песни · сет 80 мин · окна дат: август · гонорар по запросу",
+      cities:["Faro","Loulé","Albufeira","Portimão","Lagos"],
+      dates:["02.08","03.08","04.08","05.08","06.08"], legs:[20,30,25,20] }
+  ];
+  var cur=0;
 
-<div class="footer-note">SeedWave / Madeira 2026 · Связь по проекту через @SeedWaveBot</div>
-</div>
+  /* ---------- APPLY LOCALE TEXT ---------- */
+  function applyLocale(){
+    $("#langCode").textContent=lang.toUpperCase();
+    $("#introEyebrow").textContent=ui.eyebrow;
+    $("#introTitle").innerHTML=ui.title;
+    $("#introLead").textContent=ui.lead;
+    var seq=ui.ticker.join(" · ");
+    $("#tickerRow").innerHTML=seq+" · &nbsp;&nbsp;"+seq+" · &nbsp;&nbsp;";
+    $("#toDemo").textContent=ui.toDemo;
+    $("#cardEyebrow").textContent=ui.cardEyebrow;
+    $("#kassaL").textContent=ui.kassaL; $("#kassaV").textContent=ui.kassaV;
+    $("#feeL").textContent=ui.feeL; $("#feeV").textContent=ui.feeV;
+    $("#splitLbl").textContent=ui.splitLbl;
+    $("#splitNote").textContent=ui.splitNote;
+    $("#safetyText").textContent=ui.safety;
+    $("#toFunnel").textContent=ui.toFunnel;
+  }
+
+  /* ---------- RENDER DEMO ---------- */
+  function renderPicks(){
+    var box=$("#picks"); box.innerHTML="";
+    PRESETS.forEach(function(p,i){
+      var b=document.createElement("button");
+      b.className="pick"+(i===cur?" on":"");
+      b.textContent=p.name;
+      b.onclick=function(){ cur=i; renderPicks(); renderTour(); };
+      box.appendChild(b);
+    });
+  }
+  function renderTour(){
+    var p=PRESETS[cur];
+    var n=parseInt($("#venues").value,10);
+    $("#artName").textContent=p.name;
+    $("#artMeta").textContent=p.meta;
+    $("#respondHead").textContent=ui.respond(n);
+
+    // цепочка
+    var svg=$("#chain"); var W=320, x0=22, x1=298, y=20;
+    var pts=[]; for(var i=0;i<n;i++){ pts.push(x0+(x1-x0)*(n===1?0:i/(n-1))); }
+    var s='<line x1="'+x0+'" y1="'+y+'" x2="'+x1+'" y2="'+y+'" stroke="var(--line)" stroke-width="2"/>';
+    for(var j=0;j<n;j++){
+      s+='<circle cx="'+pts[j]+'" cy="'+y+'" r="5" fill="var(--accent)"/>';
+      s+='<text x="'+pts[j]+'" y="40" text-anchor="middle" fill="var(--ink)" font-size="10.5">'+p.cities[j]+'</text>';
+      s+='<text x="'+pts[j]+'" y="54" text-anchor="middle" fill="var(--soft)" font-size="9">'+p.dates[j]+'</text>';
+    }
+    svg.innerHTML=s;
+
+    // переезды (средн. по активным плечам)
+    var usedLegs=p.legs.slice(0,Math.max(0,n-1));
+    if(usedLegs.length){
+      var mn=Math.min.apply(null,usedLegs), mx=Math.max.apply(null,usedLegs);
+      $("#legs").textContent="короткие переезды · "+mn+"–"+mx+" км между городами";
+    } else { $("#legs").textContent=""; }
+
+    // реклама вскладчину: доля 1/n, экономия (1-1/n)
+    var saving=Math.round((1-1/n)*100);
+    $("#splitVal").textContent=ui.splitVal(n,saving);
+  }
+
+  /* ---------- NAV ---------- */
+  function hubUrl(){
+    var base="https://ikartuzov-hub.github.io/seedwave-catalog/hub/";
+    return base+"?lang="+lang+"&theme="+theme;
+  }
+  $("#brandLink").setAttribute("href", hubUrl());
+  $("#toFunnel").addEventListener("click", function(){ location.href=hubUrl(); });
+  $("#toDemo").addEventListener("click", function(){
+    $("#intro").classList.add("hidden");
+    $("#demo").classList.remove("hidden");
+    window.scrollTo({top:0,behavior:"smooth"});
+  });
+
+  /* ---------- CONTROLS ---------- */
+  $("#themeBtn").addEventListener("click", function(){
+    theme=(theme==="light"?"night":"light");
+    try{localStorage.setItem("tn_theme",theme)}catch(e){}
+    applyTheme(theme);
+    $("#brandLink").setAttribute("href", hubUrl());
+    try{ var u=new URL(location.href); u.searchParams.set("theme",theme); history.replaceState(null,"",u.toString()); }catch(e){}
+  });
+  $("#langBtn").addEventListener("click", function(){
+    // задел: пока один live-язык (ru). Когда добавим EN/PT/ES/DE — здесь оверлей выбора.
+  });
+  $("#venues").addEventListener("input", renderTour);
+
+  /* ---------- INIT ---------- */
+  $("#yr").textContent=new Date().getFullYear();
+  applyLocale();
+  renderPicks();
+  renderTour();
+})();
+</script>
 </body>
 </html>
