@@ -75,17 +75,17 @@
   footer{text-align:center; color:var(--soft); font-size:.78rem; padding:26px 0 8px; border-top:1px solid var(--line); margin-top:26px}
   footer a{color:var(--accent-2); text-decoration:none}
   footer a:hover{text-decoration:underline}
-  .ov{position:fixed; inset:0; background:rgba(10,8,24,.72); display:none; align-items:center; justify-content:center; z-index:50; padding:20px}
-  .ov.open{display:flex}
-  .ov-card{background:var(--bg2); border:1px solid var(--line); border-radius:18px; padding:18px; width:100%; max-width:300px}
-  .ov-card h3{margin:0 0 12px; font-family:var(--body); font-weight:600; font-size:.92rem; color:var(--ink); text-align:center}
-  .ov-list{display:flex; flex-direction:column; gap:8px}
-  .ov-btn{display:flex; justify-content:space-between; align-items:center; border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:12px; padding:11px 14px; font-family:var(--body); font-size:.9rem; cursor:pointer}
-  .ov-btn:hover{border-color:var(--accent); background:var(--card-2)}
-  .ov-btn .code{color:var(--soft); font-size:.76rem}
+  .langwrap{position:relative}
+  .langmenu{position:absolute; top:calc(100% + 8px); right:0; min-width:172px; background:var(--bg2); border:1px solid var(--line); border-radius:14px; padding:6px; display:none; flex-direction:column; z-index:60}
+  .langmenu.open{display:flex}
+  .langmenu button{display:flex; align-items:center; gap:6px; background:transparent; border:none; color:var(--soft); text-align:left; padding:9px 11px; border-radius:9px; font-family:var(--body); font-size:.9rem; cursor:pointer}
+  .langmenu button:hover{background:var(--card-2); color:var(--ink)}
+  .langmenu button.on{color:var(--accent-2)}
+  .langmenu .lc{display:inline-block; width:26px; font-weight:600; font-size:.75rem; color:var(--soft)}
+  .langmenu button.on .lc{color:var(--accent-2)}
   .hidden{display:none}
   @media (max-width:380px){ .intro h1{font-size:2.1rem} .demo h2{font-size:1.85rem} }
-  @media (prefers-reduced-motion:reduce){ .intro-mark,.intro h1,.intro .lead,.ticker,.cta,.demo{animation:none} .ticker-row{animation:none} }
+  @media (prefers-reduced-motion:reduce){ .intro-mark,.intro h1,.intro .lead,.ticker,.cta,.demo{animation:none} }
 </style>
 </head>
 <body>
@@ -96,7 +96,10 @@
       <span class="bw">Tonight</span>
     </span>
     <div class="topctrl">
-      <button class="cbtn" id="langBtn" aria-label="language"><span id="langCode">RU</span></button>
+      <div class="langwrap">
+        <button class="cbtn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="language"><span id="langCode">RU</span></button>
+        <div class="langmenu" id="langmenu"></div>
+      </div>
       <button class="cbtn" id="themeBtn" aria-label="theme">&#9790;</button>
     </div>
   </div>
@@ -135,8 +138,6 @@
 
   <footer>&copy; <span id="yr"></span> <a id="brandLink" href="#">SeedWave</a> &middot; <a href="https://www.linkedin.com/in/igor-kartuzov/" target="_blank" rel="noopener">Igor Kartuzov</a></footer>
 </div>
-
-<div class="ov" id="ov"><div class="ov-card"><h3>Язык · Language</h3><div class="ov-list" id="ovList"></div></div></div>
 
 <script>
 (function(){
@@ -270,8 +271,9 @@
   }
 
   function hubUrl(){ return "https://ikartuzov-hub.github.io/seedwave-catalog/hub/?lang="+lang+"&theme="+theme; }
+  function botUrl(){ return "https://t.me/SeedWaveBot?start=tonight_"+lang; }
   $("#brandLink").setAttribute("href", hubUrl());
-  $("#toFunnel").addEventListener("click", function(){ location.href=hubUrl(); });
+  $("#toFunnel").addEventListener("click", function(){ location.href=botUrl(); });
   $("#toDemo").addEventListener("click", function(){ $("#intro").classList.add("hidden"); $("#demo").classList.remove("hidden"); window.scrollTo({top:0,behavior:"smooth"}); });
 
   $("#themeBtn").addEventListener("click", function(){
@@ -282,16 +284,17 @@
   });
 
   function buildLangList(){
-    var box=$("#ovList"); box.innerHTML="";
+    var box=$("#langmenu"); box.innerHTML="";
     liveLangs.forEach(function(code){
-      var b=document.createElement("button"); b.className="ov-btn";
-      b.innerHTML='<span>'+langNames[code]+'</span><span class="code">'+code.toUpperCase()+'</span>';
-      b.onclick=function(){ try{localStorage.setItem("tn_lang",code)}catch(e){} var u=new URL(location.href); u.searchParams.set("lang",code); u.searchParams.set("theme",theme); location.href=u.toString(); };
+      var b=document.createElement("button"); if(code===lang) b.className="on";
+      b.innerHTML='<span class="lc">'+code.toUpperCase()+'</span>'+langNames[code];
+      b.onclick=function(){ if(code===lang){ closeLang(); return; } try{localStorage.setItem("tn_lang",code)}catch(e){} var u=new URL(location.href); u.searchParams.set("lang",code); u.searchParams.set("theme",theme); location.href=u.toString(); };
       box.appendChild(b);
     });
   }
-  $("#langBtn").addEventListener("click", function(){ buildLangList(); $("#ov").classList.add("open"); });
-  $("#ov").addEventListener("click", function(e){ if(e.target===this) this.classList.remove("open"); });
+  function closeLang(){ $("#langmenu").classList.remove("open"); $("#langBtn").setAttribute("aria-expanded","false"); }
+  $("#langBtn").addEventListener("click", function(e){ e.stopPropagation(); var m=$("#langmenu"); var open=m.classList.toggle("open"); this.setAttribute("aria-expanded",open?"true":"false"); if(open) buildLangList(); });
+  document.addEventListener("click", function(e){ if(!e.target.closest(".langwrap")) closeLang(); });
 
   $("#venues").addEventListener("input", renderTour);
 
