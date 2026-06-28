@@ -1,0 +1,14 @@
+{
+  "name": "Tonight — собери свой тур",
+  "short_name": "Tonight",
+  "description": "Туровая платформа для малых артистов и локальных площадок.",
+  "start_url": "tonight.html",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#15122B",
+  "theme_color": "#6C5CE7",
+  "icons": [
+    { "src": "tonight-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
