@@ -1,6 +1,43 @@
 {
   "projects": [
     {
+      "id": "nem",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"var(--accent, #12D68A)\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nEm\"><title>nEm — Nova Energia da Madeira</title><path d=\"M22 20 L22 62\"/><path d=\"M22 20 Q31 14 40 20 Q49 26 58 20\"/><path d=\"M22 41 Q30 35 38 41 Q46 47 54 41\"/><path d=\"M22 62 Q31 56 40 62 Q49 68 58 62\"/><path d=\"M15 86 Q28 80 39 86 Q50 92 61 86 Q72 80 85 86\"/></svg>",
+      "category": "Energy",
+      "name": "nEm — Nova Energia da Madeira",
+      "hook": "Solar, batteries and charging with a subsidy and state support — turnkey.",
+      "description": "Nova Energia da Madeira: clean, green energy for Madeira homes and condominiums — panels, battery and charging with state support, turnkey. One window: design, documents, subsidy application management (+ENERGIA, Fundo Ambiental) and a certified installer recommendation. The project does not install, is not a financial intermediary and does not hold residents' money. Energy efficiency is the foundation and first step of the ILYNQ horizon — a decentralized AI on the island.",
+      "sectors": [
+        "Energy saving",
+        "New technology",
+        "State support"
+      ],
+      "stage": "pilot",
+      "investment": "",
+      "lookingFor": "Pilot condominiums · Certified installers · Partners",
+      "demoLink": "https://ikartuzov-hub.github.io/nem/",
+      "page": {
+        "how": [
+          "The roof, consumption and payback are assessed — the package's benefit is calculated.",
+          "Documents are prepared and the condominium approval is handled: assembly minutes, datasheets, registration.",
+          "The subsidy application is filed in the right window — +ENERGIA (panels + battery) and Fundo Ambiental / e-mobility (charging).",
+          "One energy loop is installed turnkey: sun by day → battery → charging in the evening and a lower shared bill.",
+          "A certified installer is selected and the project is carried through to the subsidy payout. From you — one word: “I want it”."
+        ],
+        "proofs": [
+          "First pilot — the VARINO coalition (Dubai Madeira, Funchal): block 8 handed over in August 2026, block 9 prepared energy-ready during construction. Pilot in progress, not completed.",
+          "Alignment with AREAM — the regional energy and environment agency — as a mission partner (in line with PAESC-RAM goals).",
+          "Programmes: +ENERGIA up to €10,000 per condominium (75% generation, 85% storage); Fundo Ambiental — T7 charging up to 80%.",
+          "Legal basis: DL 93/2025 requires new buildings to have charging infrastructure — the project ensures this and goes solar-ready during construction."
+        ],
+        "vision": [
+          "Every closed project is an Opportunity card and proof of method, not a slide.",
+          "From facilitator to node: energy communities and deal flow into construction — as the phases progress.",
+          "The ILYNQ horizon: the island's cheap clean energy as the foundation of a distributed AI. Building toward it, not claiming it works."
+        ]
+      }
+    },
+    {
       "id": "forge",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E2622E\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M36 16 V84\"/><path d=\"M36 21 Q49 9 60 20 Q70 28 82 19\"/><path d=\"M36 50 H70\"/></svg>",
       "sectors": [

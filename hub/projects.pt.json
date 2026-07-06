@@ -1,6 +1,43 @@
 {
   "projects": [
     {
+      "id": "nem",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"var(--accent, #12D68A)\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nEm\"><title>nEm — Nova Energia da Madeira</title><path d=\"M22 20 L22 62\"/><path d=\"M22 20 Q31 14 40 20 Q49 26 58 20\"/><path d=\"M22 41 Q30 35 38 41 Q46 47 54 41\"/><path d=\"M22 62 Q31 56 40 62 Q49 68 58 62\"/><path d=\"M15 86 Q28 80 39 86 Q50 92 61 86 Q72 80 85 86\"/></svg>",
+      "category": "Energia",
+      "name": "nEm — Nova Energia da Madeira",
+      "hook": "Solar, baterias e carregamento com subsídio e apoio do Estado — chave-na-mão.",
+      "description": "Nova Energia da Madeira: energia limpa e verde para casas e condomínios da Madeira — painéis, bateria e carregamento com apoio do Estado, chave-na-mão. Ponto único: projeto, documentação, gestão da candidatura ao subsídio (+ENERGIA, Fundo Ambiental) e recomendação de instalador certificado. O projeto não faz a instalação, não é intermediário financeiro e não detém o dinheiro dos condóminos. A eficiência energética é a base e o primeiro passo do horizonte ILYNQ — uma IA descentralizada na ilha.",
+      "sectors": [
+        "Poupança de energia",
+        "Novas tecnologias",
+        "Apoio do Estado"
+      ],
+      "stage": "pilot",
+      "investment": "",
+      "lookingFor": "Condomínios-piloto · Instaladores certificados · Parceiros",
+      "demoLink": "https://ikartuzov-hub.github.io/nem/",
+      "page": {
+        "how": [
+          "Avaliam-se o telhado, o consumo e o retorno — calcula-se a vantagem do pacote.",
+          "Prepara-se a documentação e trata-se da aprovação em condomínio: ata da assembleia, fichas técnicas, registo.",
+          "Trata-se e submete-se a candidatura ao subsídio na janela certa — +ENERGIA (painéis + bateria) e Fundo Ambiental / mobilidade elétrica (carregamento).",
+          "Instala-se chave-na-mão um único circuito: sol de dia → bateria → carregamento à noite e redução da fatura comum.",
+          "Escolhe-se um instalador certificado e acompanha-se o projeto até ao pagamento do apoio. De si — uma palavra: «Quero»."
+        ],
+        "proofs": [
+          "Primeiro piloto — coligação VARINO (Dubai Madeira, Funchal): Corpo 8 com entrega em agosto de 2026, Corpo 9 preparado para energia ainda em obra. Piloto em curso, não concluído.",
+          "Alinhamento com a AREAM — agência regional de energia e ambiente — como parceira de missão (em linha com as metas do PAESC-RAM).",
+          "Programas: +ENERGIA até €10 000 por condomínio (75% produção, 85% armazenamento); Fundo Ambiental — carregamento T7 até 80%.",
+          "Base legal: o DL 93/2025 obriga os novos edifícios a terem infraestrutura de carregamento — o projeto assegura isso e vai solar-ready em obra."
+        ],
+        "vision": [
+          "Cada projeto concluído é um cartão Opportunity e prova do método, não um slide.",
+          "De facilitador a nó: comunidades de energia e deal flow para a construção — à medida que as fases avançam.",
+          "Horizonte ILYNQ: a energia limpa e barata da ilha como base de uma IA distribuída. Em preparação, não a afirmamos como funcionando."
+        ]
+      }
+    },
+    {
       "id": "forge",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E2622E\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M36 16 V84\"/><path d=\"M36 21 Q49 9 60 20 Q70 28 82 19\"/><path d=\"M36 50 H70\"/></svg>",
       "sectors": [

@@ -1,6 +1,43 @@
 {
   "projects": [
     {
+      "id": "nem",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"var(--accent, #12D68A)\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nEm\"><title>nEm — Nova Energia da Madeira</title><path d=\"M22 20 L22 62\"/><path d=\"M22 20 Q31 14 40 20 Q49 26 58 20\"/><path d=\"M22 41 Q30 35 38 41 Q46 47 54 41\"/><path d=\"M22 62 Q31 56 40 62 Q49 68 58 62\"/><path d=\"M15 86 Q28 80 39 86 Q50 92 61 86 Q72 80 85 86\"/></svg>",
+      "category": "Energie",
+      "name": "nEm — Nova Energia da Madeira",
+      "hook": "Solar, Batterien und Ladepunkte mit Förderung und staatlicher Unterstützung — schlüsselfertig.",
+      "description": "Nova Energia da Madeira: saubere, grüne Energie für Häuser und Eigentümergemeinschaften auf Madeira — Module, Batterie und Ladepunkte mit staatlicher Förderung, schlüsselfertig. Ein Ansprechpartner: Planung, Unterlagen, Betreuung des Förderantrags (+ENERGIA, Fundo Ambiental) und Empfehlung eines zertifizierten Installateurs. Das Projekt installiert nicht, ist kein Finanzvermittler und hält kein Geld der Bewohner. Energieeffizienz ist die Grundlage und der erste Schritt des ILYNQ-Horizonts — einer dezentralen KI auf der Insel.",
+      "sectors": [
+        "Energie sparen",
+        "Neue Technologien",
+        "Staatliche Förderung"
+      ],
+      "stage": "pilot",
+      "investment": "",
+      "lookingFor": "Pilot-Eigentümergemeinschaften · Zertifizierte Installateure · Partner",
+      "demoLink": "https://ikartuzov-hub.github.io/nem/",
+      "page": {
+        "how": [
+          "Dach, Verbrauch und Amortisation werden geprüft — der Nutzen des Pakets wird berechnet.",
+          "Unterlagen werden vorbereitet und die Zustimmung der Gemeinschaft eingeholt: Versammlungsprotokoll, Datenblätter, Registrierung.",
+          "Der Förderantrag wird im richtigen Fenster gestellt — +ENERGIA (Module + Batterie) und Fundo Ambiental / E-Mobilität (Ladepunkte).",
+          "Ein Energiekreislauf wird schlüsselfertig installiert: Sonne am Tag → Batterie → Laden am Abend und niedrigere gemeinsame Rechnung.",
+          "Ein zertifizierter Installateur wird ausgewählt und das Projekt bis zur Förderauszahlung begleitet. Von Ihnen — ein Wort: „Ich will“."
+        ],
+        "proofs": [
+          "Erstes Pilotprojekt — VARINO-Koalition (Dubai Madeira, Funchal): Block 8 Übergabe im August 2026, Block 9 energiebereit im Bau vorbereitet. Pilot läuft, nicht abgeschlossen.",
+          "Abstimmung mit AREAM — der regionalen Energie- und Umweltagentur — als Missionspartner (im Einklang mit den PAESC-RAM-Zielen).",
+          "Programme: +ENERGIA bis zu 10.000 € pro Gemeinschaft (75% Erzeugung, 85% Speicherung); Fundo Ambiental — T7-Ladung bis 80%.",
+          "Rechtsgrundlage: DL 93/2025 verpflichtet Neubauten zur Ladeinfrastruktur — das Projekt stellt dies sicher und geht solar-ready im Bau."
+        ],
+        "vision": [
+          "Jedes abgeschlossene Projekt ist eine Opportunity-Karte und ein Beweis der Methode, keine Folie.",
+          "Vom Vermittler zum Knoten: Energiegemeinschaften und Deal Flow in den Bau — mit dem Fortschritt der Phasen.",
+          "ILYNQ-Horizont: die günstige saubere Energie der Insel als Grundlage einer verteilten KI. In Vorbereitung, nicht als funktionierend behauptet."
+        ]
+      }
+    },
+    {
       "id": "forge",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E2622E\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M36 16 V84\"/><path d=\"M36 21 Q49 9 60 20 Q70 28 82 19\"/><path d=\"M36 50 H70\"/></svg>",
       "sectors": [
