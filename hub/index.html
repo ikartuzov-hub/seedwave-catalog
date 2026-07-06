@@ -307,7 +307,7 @@
         ${rows.length?`<div class="meta">${rows.join("")}</div>`:""}
         <div class="actions">
           ${demo}
-          <a class="btn ${p.demoLink ? "ghost" : ""}" href="project.html?id=${encodeURIComponent(p.id)}&lang=${encodeURIComponent(lang)}">${esc(ui.btnMore || "Подробнее")} →</a>
+          <a class="btn ${p.demoLink ? "ghost" : ""}" href="${p.moreLink ? esc(withLang(p.moreLink)) : `project.html?id=${encodeURIComponent(p.id)}&lang=${encodeURIComponent(lang)}`}"${p.moreLink ? ` target="_blank" rel="noopener"` : ""}>${esc(ui.btnMore || "Подробнее")} →</a>
           <span class="interest-wrap">
             <a class="btn ghost" href="${esc(interestLink(p.id))}" target="_blank" rel="noopener">${esc(ui.btnInterested)} →</a>
             <span class="note">${esc(ui.interestNote)}</span>

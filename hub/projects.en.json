@@ -15,7 +15,7 @@
       "stage": "pilot",
       "investment": "",
       "lookingFor": "Pilot condominiums · Certified installers · Partners",
-      "demoLink": "https://ikartuzov-hub.github.io/nem/",
+      "demoLink": "",
       "page": {
         "how": [
           "The roof, consumption and payback are assessed — the package's benefit is calculated.",
@@ -35,7 +35,8 @@
           "From facilitator to node: energy communities and deal flow into construction — as the phases progress.",
           "The ILYNQ horizon: the island's cheap clean energy as the foundation of a distributed AI. Building toward it, not claiming it works."
         ]
-      }
+      },
+      "moreLink": "https://ikartuzov-hub.github.io/nem/"
     },
     {
       "id": "forge",

@@ -15,7 +15,7 @@
       "stage": "pilot",
       "investment": "",
       "lookingFor": "Pilot-Eigentümergemeinschaften · Zertifizierte Installateure · Partner",
-      "demoLink": "https://ikartuzov-hub.github.io/nem/",
+      "demoLink": "",
       "page": {
         "how": [
           "Dach, Verbrauch und Amortisation werden geprüft — der Nutzen des Pakets wird berechnet.",
@@ -35,7 +35,8 @@
           "Vom Vermittler zum Knoten: Energiegemeinschaften und Deal Flow in den Bau — mit dem Fortschritt der Phasen.",
           "ILYNQ-Horizont: die günstige saubere Energie der Insel als Grundlage einer verteilten KI. In Vorbereitung, nicht als funktionierend behauptet."
         ]
-      }
+      },
+      "moreLink": "https://ikartuzov-hub.github.io/nem/"
     },
     {
       "id": "forge",

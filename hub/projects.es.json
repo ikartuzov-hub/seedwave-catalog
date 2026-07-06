@@ -15,7 +15,7 @@
       "stage": "pilot",
       "investment": "",
       "lookingFor": "Comunidades piloto · Instaladores certificados · Socios",
-      "demoLink": "https://ikartuzov-hub.github.io/nem/",
+      "demoLink": "",
       "page": {
         "how": [
           "Se evalúan el tejado, el consumo y la amortización — se calcula la ventaja del paquete.",
@@ -35,7 +35,8 @@
           "De facilitador a nodo: comunidades energéticas y deal flow hacia la construcción — a medida que avanzan las fases.",
           "Horizonte ILYNQ: la energía limpia y barata de la isla como base de una IA distribuida. En preparación, no la afirmamos como funcionando."
         ]
-      }
+      },
+      "moreLink": "https://ikartuzov-hub.github.io/nem/"
     },
     {
       "id": "forge",
