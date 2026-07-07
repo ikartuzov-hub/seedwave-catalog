@@ -39,6 +39,24 @@
    "moreLink": "https://ikartuzov-hub.github.io/nem/"
   },
   {
+   "id": "nam",
+   "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#4C8DFF\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nAm\"><title>nAm — Novos Apoios da Madeira</title><path d=\"M30 72 L50 16 L70 72\"/><path d=\"M37 52 Q43.5 46 50 52 Q56.5 58 63 52\"/><path d=\"M15 88 Q28 82 39 88 Q50 94 61 88 Q72 82 85 88\"/></svg>",
+   "category": "Grants",
+   "name": "nAm — Novos Apoios da Madeira",
+   "hook": "How much does the State owe your business? 6 questions — and your number in euros.",
+   "description": "Madeira grants checker: 6 quick questions and you see the support programmes and amounts your business may qualify for — hiring, cost compensation, energy, starting up. Then one word — «I want it»: documents, application in the right window, follow-through to payout. Sister of nEm under the ILYNQ umbrella: a grants client is a warm lead for the energy package.",
+   "sectors": [
+    "State support",
+    "Small business",
+    "Finance"
+   ],
+   "stage": "pilot",
+   "investment": "",
+   "lookingFor": "Madeira restaurants & small businesses · Partner contabilistas",
+   "demoLink": "https://ikartuzov-hub.github.io/nam/",
+   "moreLink": "https://ikartuzov-hub.github.io/nam/flyer.html"
+  },
+  {
    "id": "forge",
    "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E2622E\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M36 16 V84\"/><path d=\"M36 21 Q49 9 60 20 Q70 28 82 19\"/><path d=\"M36 50 H70\"/></svg>",
    "sectors": [

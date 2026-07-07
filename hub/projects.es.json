@@ -39,6 +39,24 @@
    "moreLink": "https://ikartuzov-hub.github.io/nem/"
   },
   {
+   "id": "nam",
+   "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#4C8DFF\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nAm\"><title>nAm — Novos Apoios da Madeira</title><path d=\"M30 72 L50 16 L70 72\"/><path d=\"M37 52 Q43.5 46 50 52 Q56.5 58 63 52\"/><path d=\"M15 88 Q28 82 39 88 Q50 94 61 88 Q72 82 85 88\"/></svg>",
+   "category": "Ayudas",
+   "name": "nAm — Novos Apoios da Madeira",
+   "hook": "¿Cuánto le debe el Estado a su negocio? 6 preguntas — y su cifra en euros.",
+   "description": "Verificador de ayudas de Madeira: 6 preguntas rápidas y ve los programas e importes a los que su negocio puede optar — contratación, compensación de gastos, energía, creación del propio negocio. Después, una palabra — «Quiero»: documentos, solicitud en la ventana correcta, seguimiento hasta el pago. Hermana de nEm bajo el paraguas ILYNQ: un cliente de ayudas es un lead caliente del paquete energético.",
+   "sectors": [
+    "Apoyo estatal",
+    "Pequeños negocios",
+    "Finanzas"
+   ],
+   "stage": "pilot",
+   "investment": "",
+   "lookingFor": "Restaurantes y pequeños negocios de Madeira · Contabilistas socios",
+   "demoLink": "https://ikartuzov-hub.github.io/nam/",
+   "moreLink": "https://ikartuzov-hub.github.io/nam/flyer.html"
+  },
+  {
    "id": "forge",
    "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E2622E\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M36 16 V84\"/><path d=\"M36 21 Q49 9 60 20 Q70 28 82 19\"/><path d=\"M36 50 H70\"/></svg>",
    "sectors": [
