@@ -1,0 +1,34 @@
+{
+  "id": "ncm",
+  "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#C88A2E\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nCm\"><title>nCm — Nova Colheita da Madeira</title><path d=\"M69 29 A27 27 0 1 0 69 71\"/><path d=\"M15 86 Q28 80 39 86 Q50 92 61 86 Q72 80 85 86\"/></svg>",
+  "category": "Agrotecnologia",
+  "name": "nCm — Nova Colheita da Madeira",
+  "hook": "Quinta 2.0 por uma fração do preço: os programas da Madeira pagam até 85% da modernização da exploração — chave na mão.",
+  "description": "A Nova Colheita da Madeira mostra ao agricultor as tecnologias do futuro — rega gota a gota, sensores, estufa inteligente, frio, solar, drone — e o essencial: os programas da Madeira (F.1 PEPAC) pagam até 85% dessa modernização. O construtor «Quinta 2.0» monta o plano em três números: custo, quanto paga o programa, a sua parte. Depois, uma só janela: documentos, registo no IFAP, candidatura na janela certa, acompanhamento até ao pagamento. Pagamentos diretos (POSEI, Pedido Único, ANC, biológico) como rendimento regular da exploração. O projeto não atribui apoios nem retém dinheiro do agricultor. Um degrau da escada ILYNQ: o solar na estufa liga ao nEm, a transformação ao nAm. Tecnologia primeiro, o apoio é o combustível do crescimento.",
+  "sectors": ["Agrotech", "Apoios", "Madeira"],
+  "stage": "pilot",
+  "investment": "",
+  "lookingFor": "Explorações-piloto · Cooperativas · Fornecedores de agrotecnologia · Parceiro SRA",
+  "demoLink": "",
+  "page": {
+    "how": [
+      "Monta a sua quinta 2.0 no construtor: rega, sensores, estufa, frio, solar, drone — e vê logo três números: custo, quanto paga o programa, a sua parte.",
+      "Responde a 7 perguntas — confirmamos os programas e a sua taxa: base 65%, jovem agricultor até 85%.",
+      "Plano de futuro pronto: tecnologias com valores + pagamentos regulares da exploração (POSEI, Pedido Único, ANC, biológico) — conta honesta, tipo A/B.",
+      "Preparamos documentos e o registo no IFAP, candidatamos na janela certa: diretos — anuais; investimento F.1 e prémio jovem agricultor — por aviso.",
+      "Acompanhamos até ao pagamento. De si — uma só palavra: «Quero»."
+    ],
+    "proofs": [
+      "26 anos de agronegócio de ciclo completo (Kartofel / Freshland): produção, armazenamento frigorífico, comercialização — a quinta 2.0 foi construída à mão antes de ser tendência.",
+      "Instrumentos reais da Madeira: F.1 investimento até 85% (Portaria 583/2025 — prémio jovem agricultor F.1.2), POSEI, Pedido Único, ANC, agroambiental.",
+      "Canais trabalhados: SRA Madeira, IFAP, AREAM, cooperativas — entrada por feiras e Direção Regional de Agricultura.",
+      "Conta honesta (tipo A/B): pagamentos diretos e por fórmula no cabeçalho; medidas de investimento por concurso num trilho à parte, sem promessas infladas."
+    ],
+    "vision": [
+      "Cada exploração modernizada é uma ficha Opportunity e uma prova de método, não um slide.",
+      "A escada ILYNQ em ação: solar na estufa → nEm, transformação e comercialização → nAm; o cliente cresce degrau a degrau.",
+      "Horizonte ILYNQ: agro tecnológico + energia limpa excedente da ilha como base de IA distribuída. Preparamos, não anunciamos como já operacional."
+    ]
+  },
+  "moreLink": "https://ikartuzov-hub.github.io/ncm/"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "ncm",
+  "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#C88A2E\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nCm\"><title>nCm — Nova Colheita da Madeira</title><path d=\"M69 29 A27 27 0 1 0 69 71\"/><path d=\"M15 86 Q28 80 39 86 Q50 92 61 86 Q72 80 85 86\"/></svg>",
+  "category": "Agrotecnología",
+  "name": "nCm — Nova Colheita da Madeira",
+  "hook": "Granja 2.0 por una fracción del precio: los programas de Madeira pagan hasta el 85% de la modernización — llave en mano.",
+  "description": "Nova Colheita da Madeira enseña al agricultor las tecnologías del futuro — riego por goteo, sensores, invernadero inteligente, frío, solar, dron — y lo esencial: los programas de Madeira (F.1 PEPAC) pagan hasta el 85% de esa modernización. El constructor «Granja 2.0» arma el plan en tres cifras: coste, cuánto paga el programa, tu parte. Después, una sola ventana: documentos, registro en IFAP, solicitud en la ventana correcta, seguimiento hasta el pago. Pagos directos (POSEI, Pedido Único, ANC, ecológico) como ingreso regular de la explotación. El proyecto no concede ayudas ni retiene el dinero del agricultor. Un peldaño de la escalera ILYNQ: el solar en el invernadero conecta con nEm, la transformación con nAm. La tecnología primero — la ayuda es el combustible del crecimiento.",
+  "sectors": ["Agrotech", "Ayudas", "Madeira"],
+  "stage": "pilot",
+  "investment": "",
+  "lookingFor": "Explotaciones piloto · Cooperativas · Proveedores de agrotecnología · Socio SRA",
+  "demoLink": "",
+  "page": {
+    "how": [
+      "Monta tu granja 2.0 en el constructor: riego, sensores, invernadero, frío, solar, dron — y ves al instante tres cifras: coste, cuánto paga el programa, tu parte.",
+      "Responde a 7 preguntas — confirmamos los programas y tu tasa: base 65%, joven agricultor hasta 85%.",
+      "Tu plan de futuro está listo: tecnologías con importes + pagos regulares de la explotación (POSEI, Pedido Único, ANC, ecológico) — cuenta honesta, tipo A/B.",
+      "Preparamos documentos y el registro en IFAP, presentamos en la ventana correcta: directos — anuales; inversión F.1 y prima de joven agricultor — por aviso.",
+      "Acompañamos hasta el pago. De ti — una sola palabra: «Quiero»."
+    ],
+    "proofs": [
+      "26 años de agronegocio de ciclo completo (Kartofel / Freshland): producción, almacenamiento frigorífico, venta — la granja 2.0 construida a mano antes de ser tendencia.",
+      "Instrumentos reales de Madeira: F.1 inversión hasta 85% (Portaria 583/2025 — prima joven agricultor F.1.2), POSEI, Pedido Único, ANC, agroambiental.",
+      "Canales trabajados: SRA Madeira, IFAP, AREAM, cooperativas — entrada por feiras y la Dirección Regional de Agricultura.",
+      "Cuenta honesta (tipo A/B): pagos directos y por fórmula en el titular; medidas de inversión por concurso en una vía aparte, sin promesas infladas."
+    ],
+    "vision": [
+      "Cada explotación modernizada es una ficha Opportunity y una prueba de método, no una diapositiva.",
+      "La escalera ILYNQ en acción: solar en el invernadero → nEm, transformación y comercialización → nAm; el cliente crece peldaño a peldaño.",
+      "Horizonte ILYNQ: agricultura tecnológica + energía limpia excedente de la isla como base de IA distribuida. Lo preparamos, no lo anunciamos como ya operativo."
+    ]
+  },
+  "moreLink": "https://ikartuzov-hub.github.io/ncm/"
+}
