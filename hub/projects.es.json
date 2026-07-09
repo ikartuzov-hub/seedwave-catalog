@@ -95,6 +95,40 @@
       "moreLink": "https://ikartuzov-hub.github.io/ncm/flyer.html"
     },
     {
+      "id": "ntm",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#29B5CF\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nTm\"><title>nTm — Novos Trilhos da Madeira</title><path d=\"M28 22 H72\"/><path d=\"M50 22 V68\"/><path d=\"M15 84 Q28 78 39 84 Q50 90 61 84 Q72 78 85 84\"/></svg>",
+      "category": "Turismo · Naturaleza",
+      "name": "nTm — Novos Trilhos da Madeira",
+      "hook": "¿Abierto hoy? Estado de los 14 senderos, tiempo en vivo al inicio de la ruta y reserva SIMplifica en un toque.",
+      "description": "Desde el 1 de enero de 2026 todos los senderos clasificados de Madeira exigen reservar un slot de 30 minutos en el portal SIMplifica — y cierran sin avisar por desprendimientos o mal tiempo. nTm responde a una sola pregunta antes de que el visitante suba a la montaña: ¿está abierto hoy? Muestra el estado de los 14 senderos (fuente oficial IFCN), el tiempo en vivo al inicio de cada ruta según su altitud real — el contraste «Funchal +26°, en la cumbre +9° con viento de 62 km/h» — y lleva directo al portal oficial de reservas. Si el sendero está cerrado, sugiere la alternativa abierta más cercana del mismo tipo. No somos operador de pagos ni agencia de viajes: el botón de reserva es un enlace a SIMplifica. Cada semana, un «secreto de un local»: un lugar que los autobuses no conocen. Cima del embudo SeedWave: tráfico y confianza, primer peldaño hacia la Guía y hacia la vivienda en Funchal.",
+      "sectors": [
+        "Turismo",
+        "Naturaleza",
+        "Madeira"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Operadores con protocolo IFCN · Alojamiento local · Guías · Socios de contenido",
+      "demoLink": "https://ikartuzov-hub.github.io/ntm/",
+      "page": {
+        "how": [
+          "Abres nTm — los 14 senderos con su estado actual: abierto, parcial, cerrado. Sello de hora y enlace a la fuente oficial IFCN.",
+          "Ves el tiempo en vivo al inicio de cada ruta, calculado por la altitud real del punto de partida (Open-Meteo), no por la ciudad.",
+          "Eliges tu sendero. Si está cerrado, mostramos la alternativa abierta más cercana del mismo tipo: costa en vez de montaña.",
+          "Reservas el slot de 30 minutos en el portal oficial SIMplifica: 4,50 € por sendero, PR1 10,50 €, residentes y niños ≤12 gratis (reserva igualmente obligatoria).",
+          "Cada semana, un secreto de un local. Y para quienes vuelven, el camino para vivir aquí, no solo visitar."
+        ],
+        "proofs": [
+          "Cinco años viviendo y caminando en Madeira: los senderos, las horas correctas, el tiempo que cambia a 1 800 m.",
+          "Base legal verificada: Portaria 801/2025 (10.12) y Portaria 48/2026 (13.02); estado de los senderos según IFCN, IP-RAM.",
+          "Tiempo en vivo vía la API pública Open-Meteo, por coordenadas y altitud de cada inicio de ruta — sin clave, sin coste, sin servidor.",
+          "Arquitectura de tres capas SeedWave: motor, cinco idiomas, datos. Un sendero nuevo o un idioma nuevo no tocan el motor."
+        ],
+        "vision": "Un peldaño de la escalera ILYNQ. nTm es la cima del embudo: el visitante vuelve cada día porque la pregunta «¿abierto hoy?» se repite. De la utilidad nace la confianza; de la confianza, la Guía de lugares secretos; y para quien se enamora de la isla, el siguiente paso: un apartamento en Funchal, en cooperativa. Fase 2: webcams, GPX, avisos «el sendero ha reabierto»."
+      },
+      "moreLink": "https://ikartuzov-hub.github.io/ntm/flyer.html"
+    },
+    {
       "id": "forge",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E2622E\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M36 16 V84\"/><path d=\"M36 21 Q49 9 60 20 Q70 28 82 19\"/><path d=\"M36 50 H70\"/></svg>",
       "sectors": [

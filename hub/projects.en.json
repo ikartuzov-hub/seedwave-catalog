@@ -95,6 +95,40 @@
       "moreLink": "https://ikartuzov-hub.github.io/ncm/flyer.html"
     },
     {
+      "id": "ntm",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#29B5CF\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nTm\"><title>nTm — Novos Trilhos da Madeira</title><path d=\"M28 22 H72\"/><path d=\"M50 22 V68\"/><path d=\"M15 84 Q28 78 39 84 Q50 90 61 84 Q72 78 85 84\"/></svg>",
+      "category": "Tourism · Nature",
+      "name": "nTm — Novos Trilhos da Madeira",
+      "hook": "Open today? Status of all 14 trails, live weather at the trailhead and SIMplifica booking in one tap.",
+      "description": "Since 1 January 2026 every classified walking trail on Madeira requires a booked 30-minute slot on the SIMplifica portal — and trails close without warning after landslides or bad weather. nTm answers one question before a visitor drives into the mountains: is it open today? It shows the status of 14 trails (official IFCN source), live weather at each trailhead computed from its real altitude — the contrast «Funchal +26°, on the ridge +9° with 62 km/h wind» — and links straight to the official booking portal. If a trail is closed, it suggests the nearest open trail of the same kind. We are not a payment operator or a travel agency: the booking button is a link to SIMplifica. Every week, a «secret from a local» — a place the tour buses don't know. Top of the SeedWave funnel: traffic and trust, the first step towards the Guide and towards housing in Funchal.",
+      "sectors": [
+        "Tourism",
+        "Nature",
+        "Madeira"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Operators with IFCN protocol · Local accommodation · Guides · Content partners",
+      "demoLink": "https://ikartuzov-hub.github.io/ntm/",
+      "page": {
+        "how": [
+          "Open nTm — all 14 trails with current status: open, partial, closed. Timestamp and a link to the official IFCN source.",
+          "See live weather at each trailhead, computed from the real altitude of the starting point (Open-Meteo), not from the city.",
+          "Pick your trail. If it's closed, we show the nearest open trail of the same kind — coast instead of mountain.",
+          "Book your 30-minute slot on the official SIMplifica portal: €4.50 per trail, PR1 €10.50, residents and children ≤12 free (booking still required).",
+          "Each week, a secret from a local — and for those who keep coming back, the path to living here, not just visiting."
+        ],
+        "proofs": [
+          "Five years living and walking on Madeira: the trails, the right hours, the weather that changes at 1,800 m.",
+          "Verified legal basis: Portaria 801/2025 (10.12) and Portaria 48/2026 (13.02); trail status from IFCN, IP-RAM.",
+          "Live weather via the public Open-Meteo API, by coordinates and altitude of each trailhead — no key, no cost, no server.",
+          "SeedWave three-layer architecture: engine, five languages, data. A new trail or a new language never touches the engine."
+        ],
+        "vision": "A step on the ILYNQ ladder. nTm is the top of the funnel: the visitor returns every day because the question «open today?» keeps coming back. Utility builds trust; trust opens the Guide to secret places; and for those who fall for the island, the next step — an apartment in Funchal, cooperatively. Phase 2: webcams, GPX, «the trail has reopened» alerts."
+      },
+      "moreLink": "https://ikartuzov-hub.github.io/ntm/flyer.html"
+    },
+    {
       "id": "forge",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E2622E\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M36 16 V84\"/><path d=\"M36 21 Q49 9 60 20 Q70 28 82 19\"/><path d=\"M36 50 H70\"/></svg>",
       "sectors": [
