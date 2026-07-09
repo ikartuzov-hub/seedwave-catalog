@@ -1,6 +1,36 @@
 {
   "projects": [
     {
+      "id": "dubai-madeira-cooperative",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#2A8FC0\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M34 20 L34 74\"/><path d=\"M34 20 C64 20 64 74 34 74\"/><path d=\"M18 88 Q28 82 38 88 Q48 94 58 88 Q68 82 78 88\"/></svg>",
+      "category": "Immobilien",
+      "name": "Dubai Madeira Cooperative — Wohnungsbaugenossenschaft",
+      "hook": "Genossenschaft nach portugiesischem Recht für den gemeinsamen Immobilienkauf. Das erste Objekt legte in 15 Monaten um +48% zu.",
+      "description": "Wohnungsbau- und Baugenossenschaft für den gemeinsamen Immobilienkauf im Projekt «Dubai» Madeira — einem Premium-Projekt mit 400 Wohnungen in Funchal (Madeira). Gemeinnützige Organisation mit Steuervorteilen — Befreiung von IRC, IMT und IMI. Nächstes Projekt — SeedWave_11, Einstieg ab 5 000 EUR.",
+      "sectors": [
+        "Real Estate",
+        "Construction"
+      ],
+      "stage": "mvp",
+      "investment": "150 000 EUR (20% des Objektwerts). Mindesteinstieg ab 5 000 EUR.",
+      "lookingFor": "Genossen-Investoren · Anwalt · Operativer Partner",
+      "demoLink": "https://ikartuzov-hub.github.io/dubai-madeira/",
+      "page": {
+        "how": [
+          "Die Genossenschaft wird nach portugiesischem Recht gegründet (Cooperativa de Habitação e Construção) — eine gemeinnützige Form mit Steuervorteilen: Befreiung von IRC, IMT und IMI.",
+          "Die Mitglieder zeichnen Anteile ab 5.000 EUR und bringen gemeinsam 150.000 EUR auf — 20% des Objektwerts; den Rest deckt die Bankfinanzierung.",
+          "Die Genossenschaft kauft das Objekt; das Eigentum ist transparent den Mitgliedern zugeordnet, alle Entscheidungen folgen der Satzung.",
+          "Erträge kommen aus Wertsteigerung und Vermietung. Der Ausstieg — Verkauf des Anteils oder des Objekts nach vorab vereinbarten Regeln."
+        ],
+        "proofs": [
+          "Das erste Objekt legte in 15 Monaten um +48% an Wert zu.",
+          "Steuervorteile der Genossenschaft: Befreiung von IRC, IMT und IMI.",
+          "Nächstes Projekt — SeedWave_11, Einstieg ab 5.000 EUR.",
+          "Initiator — Igor Kartuzov, 35 Jahre in Realwerten, lebt und arbeitet auf Madeira."
+        ]
+      }
+    },
+    {
       "id": "nem",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#12D68A\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nEm\"><title>nEm — Nova Energia da Madeira</title><path d=\"M22 20 L22 62\"/><path d=\"M22 20 Q31 14 40 20 Q49 26 58 20\"/><path d=\"M22 41 Q30 35 38 41 Q46 47 54 41\"/><path d=\"M22 62 Q31 56 40 62 Q49 68 58 62\"/><path d=\"M15 86 Q28 80 39 86 Q50 92 61 86 Q72 80 85 86\"/></svg>",
       "category": "Energie",
@@ -39,6 +69,42 @@
       "moreLink": "https://ikartuzov-hub.github.io/nem/"
     },
     {
+      "id": "forge",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E2622E\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M36 16 V84\"/><path d=\"M36 21 Q49 9 60 20 Q70 28 82 19\"/><path d=\"M36 50 H70\"/></svg>",
+      "sectors": [
+        "AI",
+        "Platform",
+        "No-Code"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "demoLink": "https://ikartuzov-hub.github.io/forge/",
+      "category": "SeedWave-Werkzeug",
+      "name": "Forge — von der Idee zum lebenden Produkt",
+      "hook": "Erzähl deine Idee — die KI baut daraus ein funktionierendes Produkt. Keine Präsentation, sondern ein lebendes MVP, das du am Telefon öffnest.",
+      "description": "Der SeedWave-Konstruktor: ein bewährter Weg von der rohen Idee zum lebenden Produkt. Die KI strukturiert jede Idee kostenlos; die starken bauen wir gemeinsam. Bereits bewiesen mit Treino, Birdie, Relic. Die Methode ist offen — bring eine Idee, statt zu suchen, wem du sie anvertraust.",
+      "lookingFor": "Teilnehmer-Ideen · Partner · Feedback",
+      "page": {
+        "how": [
+          "Erzähl deine Idee in einem Satz — dem Telegram-Bot oder direkt auf der Showcase-Seite.",
+          "Die KI-Analyse strukturiert sie: für wen, was schon existiert, der Kern, worauf zu achten ist.",
+          "Starke Ideen bauen wir zu einem funktionierenden MVP — mehrsprachige Engine, Bot, Kasse.",
+          "Das Produkt geht live: ein Link, erste Nutzer, eine Karte in SeedWave.",
+          "Die Methode ist offen: immer derselbe Weg; ein neues Produkt ist Inhalt, kein Neubau."
+        ],
+        "proofs": [
+          "Treino: Idee „eine Sprache anhand der eigenen Geschichte lernen“ → eine lebende App mit zahlenden Lernenden.",
+          "Birdie: Idee „ein Assistent für Golf-Lernende“ → ein mehrsprachiger PWA-Assistent im Pilot.",
+          "Relic: Idee „eine alte Münze bewerten“ → ein KI-Bot, in einem halben Tag gebaut."
+        ],
+        "vision": [
+          "Ein Strom von Teilnehmer-Ideen füllt SeedWave: jede strukturierte Idee wird zu einer Karte im Register.",
+          "Starke Ideen werden zu lebenden Produkten und speisen den Deal Flow der Plattform.",
+          "Der Konstruktor ist ein Trainingsfeld: jedes gebaute Produkt schärft die wiederholbare Methode."
+        ]
+      }
+    },
+    {
       "id": "nam",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#4C8DFF\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nAm\"><title>nAm — Novos Apoios da Madeira</title><path d=\"M30 72 L50 16 L70 72\"/><path d=\"M37 52 Q43.5 46 50 52 Q56.5 58 63 52\"/><path d=\"M15 88 Q28 82 39 88 Q50 94 61 88 Q72 82 85 88\"/></svg>",
       "category": "Förderungen",
@@ -55,6 +121,69 @@
       "lookingFor": "Restaurants & Kleinunternehmen Madeiras · Partner-Contabilistas",
       "demoLink": "https://ikartuzov-hub.github.io/nam/",
       "moreLink": "https://ikartuzov-hub.github.io/nam/flyer.html"
+    },
+    {
+      "id": "lis",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Lis\"><title>Lis</title><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></svg>",
+      "category": "KI / Technologie",
+      "name": "Lis — dein persönlicher KI-Sekretär",
+      "hook": "Persönlicher KI-Sekretär in Telegram: erfasst Aufgaben, ordnet sie nach Priorität und schickt jeden Morgen eine Übersicht. Kein Abo — bau ihn an einem Abend und besitze ihn für immer.",
+      "description": "Du schreibst dem Bot eine Aufgabe, Idee oder E-Mail — Lis setzt die Priorität nach der Eisenhower-Matrix, legt sie in deinen Notion-Datenbanken ab und schickt morgens die To-do-Liste mit Buttons «Erledigt / Morgen». Wichtige Gmail-Mails werden automatisch zu Aufgaben. Stack: Telegram + Make + OpenAI + Notion.",
+      "sectors": [
+        "AI",
+        "Technology"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Content-Creator · Vertrieb · Tester",
+      "demoLink": "",
+      "page": {
+        "how": [
+          "Du schreibst dem Bot in Telegram eine Aufgabe, eine Idee oder leitest eine E-Mail weiter — zu jeder Tageszeit.",
+          "Die KI setzt die Priorität nach der Eisenhower-Matrix und legt alles in deinen Notion-Datenbanken ab.",
+          "Jeden Morgen kommt eine Übersicht deiner Aufgaben mit den Buttons «Erledigt / Morgen» — der Tag beginnt mit einer klaren Liste.",
+          "Wichtige Gmail-Nachrichten werden automatisch zu Aufgaben — nichts geht verloren."
+        ],
+        "proofs": [
+          "Das MVP läuft täglich als persönliches Betriebssystem des Autors.",
+          "Stack ohne Server und ohne Code: Telegram + Make + OpenAI + Notion.",
+          "Kein Abo: an einem Abend nach fertigem Bauplan aufgebaut — und für immer dein."
+        ]
+      }
+    },
+    {
+      "id": "ntm",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#29B5CF\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nTm\"><title>nTm — Novos Trilhos da Madeira</title><path d=\"M28 22 H72\"/><path d=\"M50 22 V68\"/><path d=\"M15 84 Q28 78 39 84 Q50 90 61 84 Q72 78 85 84\"/></svg>",
+      "category": "Tourismus · Natur",
+      "name": "nTm — Novos Trilhos da Madeira",
+      "hook": "Heute offen? Status aller 14 Wege, Live-Wetter am Startpunkt und SIMplifica-Buchung mit einem Tipp.",
+      "description": "Seit dem 1. Januar 2026 verlangt jeder klassifizierte Wanderweg Madeiras ein gebuchtes 30-Minuten-Zeitfenster im SIMplifica-Portal — und die Wege werden nach Erdrutschen oder Unwettern ohne Vorwarnung gesperrt. nTm beantwortet eine einzige Frage, bevor der Besucher in die Berge fährt: ist er heute offen? Es zeigt den Status von 14 Wegen (offizielle IFCN-Quelle), das Live-Wetter an jedem Startpunkt nach dessen echter Höhe — der Kontrast «Funchal +26°, am Grat +9° bei 62 km/h Wind» — und führt direkt zum offiziellen Buchungsportal. Ist ein Weg gesperrt, schlägt nTm den nächsten offenen Weg derselben Art vor. Wir sind weder Zahlungsdienstleister noch Reisebüro: der Buchungsbutton ist ein Link zu SIMplifica. Jede Woche ein «Geheimtipp von einem Einheimischen» — ein Ort, den die Reisebusse nicht kennen. Die Spitze des SeedWave-Trichters: Reichweite und Vertrauen, die erste Stufe zum Guide und zum Wohnen in Funchal.",
+      "sectors": [
+        "Tourismus",
+        "Natur",
+        "Madeira"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Betreiber mit IFCN-Protokoll · Ferienunterkünfte · Guides · Content-Partner",
+      "demoLink": "https://ikartuzov-hub.github.io/ntm/",
+      "page": {
+        "how": [
+          "nTm öffnen — alle 14 Wege mit aktuellem Status: offen, teilweise, gesperrt. Zeitstempel und Link zur offiziellen IFCN-Quelle.",
+          "Live-Wetter an jedem Startpunkt sehen, berechnet nach der echten Höhe des Ausgangspunkts (Open-Meteo), nicht nach der Stadt.",
+          "Ihren Weg wählen. Ist er gesperrt, zeigen wir den nächsten offenen Weg derselben Art — Küste statt Berg.",
+          "Das 30-Minuten-Zeitfenster im offiziellen SIMplifica-Portal buchen: 4,50 € pro Weg, PR1 10,50 €, Einwohner und Kinder ≤12 gratis (Reservierung dennoch Pflicht).",
+          "Jede Woche ein Geheimtipp von einem Einheimischen. Und für alle, die wiederkommen, der Weg, hier zu leben statt nur zu besuchen."
+        ],
+        "proofs": [
+          "Fünf Jahre Leben und Wandern auf Madeira: die Wege, die richtigen Stunden, das Wetter, das sich auf 1 800 m ändert.",
+          "Geprüfte Rechtsgrundlage: Portaria 801/2025 (10.12) und Portaria 48/2026 (13.02); Wegstatus vom IFCN, IP-RAM.",
+          "Live-Wetter über die öffentliche Open-Meteo-API, nach Koordinaten und Höhe jedes Startpunkts — ohne Schlüssel, ohne Kosten, ohne Server.",
+          "SeedWave-Dreischichtarchitektur: Motor, fünf Sprachen, Daten. Ein neuer Weg oder eine neue Sprache berühren den Motor nie."
+        ],
+        "vision": "Eine Stufe der ILYNQ-Leiter. nTm ist die Spitze des Trichters: der Besucher kehrt täglich zurück, weil sich die Frage «heute offen?» immer wieder stellt. Aus Nutzen wächst Vertrauen; aus Vertrauen der Guide zu geheimen Orten; und für alle, die sich in die Insel verlieben, der nächste Schritt — eine Wohnung in Funchal, genossenschaftlich. Phase 2: Webcams, GPX, «der Weg ist wieder offen»-Meldungen."
+      },
+      "moreLink": "https://ikartuzov-hub.github.io/ntm/flyer.html"
     },
     {
       "id": "ncm",
@@ -93,135 +222,6 @@
         ]
       },
       "moreLink": "https://ikartuzov-hub.github.io/ncm/flyer.html"
-    },
-    {
-      "id": "ntm",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#29B5CF\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nTm\"><title>nTm — Novos Trilhos da Madeira</title><path d=\"M28 22 H72\"/><path d=\"M50 22 V68\"/><path d=\"M15 84 Q28 78 39 84 Q50 90 61 84 Q72 78 85 84\"/></svg>",
-      "category": "Tourismus · Natur",
-      "name": "nTm — Novos Trilhos da Madeira",
-      "hook": "Heute offen? Status aller 14 Wege, Live-Wetter am Startpunkt und SIMplifica-Buchung mit einem Tipp.",
-      "description": "Seit dem 1. Januar 2026 verlangt jeder klassifizierte Wanderweg Madeiras ein gebuchtes 30-Minuten-Zeitfenster im SIMplifica-Portal — und die Wege werden nach Erdrutschen oder Unwettern ohne Vorwarnung gesperrt. nTm beantwortet eine einzige Frage, bevor der Besucher in die Berge fährt: ist er heute offen? Es zeigt den Status von 14 Wegen (offizielle IFCN-Quelle), das Live-Wetter an jedem Startpunkt nach dessen echter Höhe — der Kontrast «Funchal +26°, am Grat +9° bei 62 km/h Wind» — und führt direkt zum offiziellen Buchungsportal. Ist ein Weg gesperrt, schlägt nTm den nächsten offenen Weg derselben Art vor. Wir sind weder Zahlungsdienstleister noch Reisebüro: der Buchungsbutton ist ein Link zu SIMplifica. Jede Woche ein «Geheimtipp von einem Einheimischen» — ein Ort, den die Reisebusse nicht kennen. Die Spitze des SeedWave-Trichters: Reichweite und Vertrauen, die erste Stufe zum Guide und zum Wohnen in Funchal.",
-      "sectors": [
-        "Tourismus",
-        "Natur",
-        "Madeira"
-      ],
-      "stage": "mvp",
-      "investment": "",
-      "lookingFor": "Betreiber mit IFCN-Protokoll · Ferienunterkünfte · Guides · Content-Partner",
-      "demoLink": "https://ikartuzov-hub.github.io/ntm/",
-      "page": {
-        "how": [
-          "nTm öffnen — alle 14 Wege mit aktuellem Status: offen, teilweise, gesperrt. Zeitstempel und Link zur offiziellen IFCN-Quelle.",
-          "Live-Wetter an jedem Startpunkt sehen, berechnet nach der echten Höhe des Ausgangspunkts (Open-Meteo), nicht nach der Stadt.",
-          "Ihren Weg wählen. Ist er gesperrt, zeigen wir den nächsten offenen Weg derselben Art — Küste statt Berg.",
-          "Das 30-Minuten-Zeitfenster im offiziellen SIMplifica-Portal buchen: 4,50 € pro Weg, PR1 10,50 €, Einwohner und Kinder ≤12 gratis (Reservierung dennoch Pflicht).",
-          "Jede Woche ein Geheimtipp von einem Einheimischen. Und für alle, die wiederkommen, der Weg, hier zu leben statt nur zu besuchen."
-        ],
-        "proofs": [
-          "Fünf Jahre Leben und Wandern auf Madeira: die Wege, die richtigen Stunden, das Wetter, das sich auf 1 800 m ändert.",
-          "Geprüfte Rechtsgrundlage: Portaria 801/2025 (10.12) und Portaria 48/2026 (13.02); Wegstatus vom IFCN, IP-RAM.",
-          "Live-Wetter über die öffentliche Open-Meteo-API, nach Koordinaten und Höhe jedes Startpunkts — ohne Schlüssel, ohne Kosten, ohne Server.",
-          "SeedWave-Dreischichtarchitektur: Motor, fünf Sprachen, Daten. Ein neuer Weg oder eine neue Sprache berühren den Motor nie."
-        ],
-        "vision": "Eine Stufe der ILYNQ-Leiter. nTm ist die Spitze des Trichters: der Besucher kehrt täglich zurück, weil sich die Frage «heute offen?» immer wieder stellt. Aus Nutzen wächst Vertrauen; aus Vertrauen der Guide zu geheimen Orten; und für alle, die sich in die Insel verlieben, der nächste Schritt — eine Wohnung in Funchal, genossenschaftlich. Phase 2: Webcams, GPX, «der Weg ist wieder offen»-Meldungen."
-      },
-      "moreLink": "https://ikartuzov-hub.github.io/ntm/flyer.html"
-    },
-    {
-      "id": "forge",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E2622E\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M36 16 V84\"/><path d=\"M36 21 Q49 9 60 20 Q70 28 82 19\"/><path d=\"M36 50 H70\"/></svg>",
-      "sectors": [
-        "AI",
-        "Platform",
-        "No-Code"
-      ],
-      "stage": "mvp",
-      "investment": "",
-      "demoLink": "https://ikartuzov-hub.github.io/forge/",
-      "category": "SeedWave-Werkzeug",
-      "name": "Forge — von der Idee zum lebenden Produkt",
-      "hook": "Erzähl deine Idee — die KI baut daraus ein funktionierendes Produkt. Keine Präsentation, sondern ein lebendes MVP, das du am Telefon öffnest.",
-      "description": "Der SeedWave-Konstruktor: ein bewährter Weg von der rohen Idee zum lebenden Produkt. Die KI strukturiert jede Idee kostenlos; die starken bauen wir gemeinsam. Bereits bewiesen mit Treino, Birdie, Relic. Die Methode ist offen — bring eine Idee, statt zu suchen, wem du sie anvertraust.",
-      "lookingFor": "Teilnehmer-Ideen · Partner · Feedback",
-      "page": {
-        "how": [
-          "Erzähl deine Idee in einem Satz — dem Telegram-Bot oder direkt auf der Showcase-Seite.",
-          "Die KI-Analyse strukturiert sie: für wen, was schon existiert, der Kern, worauf zu achten ist.",
-          "Starke Ideen bauen wir zu einem funktionierenden MVP — mehrsprachige Engine, Bot, Kasse.",
-          "Das Produkt geht live: ein Link, erste Nutzer, eine Karte in SeedWave.",
-          "Die Methode ist offen: immer derselbe Weg; ein neues Produkt ist Inhalt, kein Neubau."
-        ],
-        "proofs": [
-          "Treino: Idee „eine Sprache anhand der eigenen Geschichte lernen“ → eine lebende App mit zahlenden Lernenden.",
-          "Birdie: Idee „ein Assistent für Golf-Lernende“ → ein mehrsprachiger PWA-Assistent im Pilot.",
-          "Relic: Idee „eine alte Münze bewerten“ → ein KI-Bot, in einem halben Tag gebaut."
-        ],
-        "vision": [
-          "Ein Strom von Teilnehmer-Ideen füllt SeedWave: jede strukturierte Idee wird zu einer Karte im Register.",
-          "Starke Ideen werden zu lebenden Produkten und speisen den Deal Flow der Plattform.",
-          "Der Konstruktor ist ein Trainingsfeld: jedes gebaute Produkt schärft die wiederholbare Methode."
-        ]
-      }
-    },
-    {
-      "id": "dubai-madeira-cooperative",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#2A8FC0\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M34 20 L34 74\"/><path d=\"M34 20 C64 20 64 74 34 74\"/><path d=\"M18 88 Q28 82 38 88 Q48 94 58 88 Q68 82 78 88\"/></svg>",
-      "category": "Immobilien",
-      "name": "Dubai Madeira Cooperative — Wohnungsbaugenossenschaft",
-      "hook": "Genossenschaft nach portugiesischem Recht für den gemeinsamen Immobilienkauf. Das erste Objekt legte in 15 Monaten um +48% zu.",
-      "description": "Wohnungsbau- und Baugenossenschaft für den gemeinsamen Immobilienkauf im Projekt «Dubai» Madeira — einem Premium-Projekt mit 400 Wohnungen in Funchal (Madeira). Gemeinnützige Organisation mit Steuervorteilen — Befreiung von IRC, IMT und IMI. Nächstes Projekt — SeedWave_11, Einstieg ab 5 000 EUR.",
-      "sectors": [
-        "Real Estate",
-        "Construction"
-      ],
-      "stage": "mvp",
-      "investment": "150 000 EUR (20% des Objektwerts). Mindesteinstieg ab 5 000 EUR.",
-      "lookingFor": "Genossen-Investoren · Anwalt · Operativer Partner",
-      "demoLink": "https://ikartuzov-hub.github.io/dubai-madeira/",
-      "page": {
-        "how": [
-          "Die Genossenschaft wird nach portugiesischem Recht gegründet (Cooperativa de Habitação e Construção) — eine gemeinnützige Form mit Steuervorteilen: Befreiung von IRC, IMT und IMI.",
-          "Die Mitglieder zeichnen Anteile ab 5.000 EUR und bringen gemeinsam 150.000 EUR auf — 20% des Objektwerts; den Rest deckt die Bankfinanzierung.",
-          "Die Genossenschaft kauft das Objekt; das Eigentum ist transparent den Mitgliedern zugeordnet, alle Entscheidungen folgen der Satzung.",
-          "Erträge kommen aus Wertsteigerung und Vermietung. Der Ausstieg — Verkauf des Anteils oder des Objekts nach vorab vereinbarten Regeln."
-        ],
-        "proofs": [
-          "Das erste Objekt legte in 15 Monaten um +48% an Wert zu.",
-          "Steuervorteile der Genossenschaft: Befreiung von IRC, IMT und IMI.",
-          "Nächstes Projekt — SeedWave_11, Einstieg ab 5.000 EUR.",
-          "Initiator — Igor Kartuzov, 35 Jahre in Realwerten, lebt und arbeitet auf Madeira."
-        ]
-      }
-    },
-    {
-      "id": "lis",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Lis\"><title>Lis</title><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></svg>",
-      "category": "KI / Technologie",
-      "name": "Lis — dein persönlicher KI-Sekretär",
-      "hook": "Persönlicher KI-Sekretär in Telegram: erfasst Aufgaben, ordnet sie nach Priorität und schickt jeden Morgen eine Übersicht. Kein Abo — bau ihn an einem Abend und besitze ihn für immer.",
-      "description": "Du schreibst dem Bot eine Aufgabe, Idee oder E-Mail — Lis setzt die Priorität nach der Eisenhower-Matrix, legt sie in deinen Notion-Datenbanken ab und schickt morgens die To-do-Liste mit Buttons «Erledigt / Morgen». Wichtige Gmail-Mails werden automatisch zu Aufgaben. Stack: Telegram + Make + OpenAI + Notion.",
-      "sectors": [
-        "AI",
-        "Technology"
-      ],
-      "stage": "mvp",
-      "investment": "",
-      "lookingFor": "Content-Creator · Vertrieb · Tester",
-      "demoLink": "",
-      "page": {
-        "how": [
-          "Du schreibst dem Bot in Telegram eine Aufgabe, eine Idee oder leitest eine E-Mail weiter — zu jeder Tageszeit.",
-          "Die KI setzt die Priorität nach der Eisenhower-Matrix und legt alles in deinen Notion-Datenbanken ab.",
-          "Jeden Morgen kommt eine Übersicht deiner Aufgaben mit den Buttons «Erledigt / Morgen» — der Tag beginnt mit einer klaren Liste.",
-          "Wichtige Gmail-Nachrichten werden automatisch zu Aufgaben — nichts geht verloren."
-        ],
-        "proofs": [
-          "Das MVP läuft täglich als persönliches Betriebssystem des Autors.",
-          "Stack ohne Server und ohne Code: Telegram + Make + OpenAI + Notion.",
-          "Kein Abo: an einem Abend nach fertigem Bauplan aufgebaut — und für immer dein."
-        ]
-      }
     },
     {
       "id": "treino",

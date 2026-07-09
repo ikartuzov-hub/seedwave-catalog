@@ -1,6 +1,36 @@
 {
   "projects": [
     {
+      "id": "dubai-madeira-cooperative",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#2A8FC0\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M34 20 L34 74\"/><path d=\"M34 20 C64 20 64 74 34 74\"/><path d=\"M18 88 Q28 82 38 88 Q48 94 58 88 Q68 82 78 88\"/></svg>",
+      "category": "Imobiliário",
+      "name": "Dubai Madeira Cooperative — cooperativa de habitação",
+      "hook": "Cooperativa ao abrigo da lei portuguesa para compra coletiva de imóveis. O primeiro ativo valorizou +48% em 15 meses.",
+      "description": "Cooperativa de Habitação e Construção para compra coletiva de imóveis no empreendimento «Dubai» Madeira — um projeto premium de 400 apartamentos no Funchal (Madeira). Organização sem fins lucrativos com benefícios fiscais — isenção de IRC, IMT e IMI. Próximo projeto — SeedWave_11, entrada a partir de 5 000 EUR.",
+      "sectors": [
+        "Real Estate",
+        "Construction"
+      ],
+      "stage": "mvp",
+      "investment": "150 000 EUR (20% do valor do imóvel). Entrada mínima a partir de 5 000 EUR.",
+      "lookingFor": "Cooperantes-investidores · Advogado · Parceiro operacional",
+      "demoLink": "https://ikartuzov-hub.github.io/dubai-madeira/",
+      "page": {
+        "how": [
+          "A cooperativa é constituída ao abrigo da lei portuguesa (Cooperativa de Habitação e Construção) — forma sem fins lucrativos com benefícios fiscais: isenção de IRC, IMT e IMI.",
+          "Os membros entram com quotas a partir de 5 000 EUR e reúnem em conjunto 150 000 EUR — 20% do valor do imóvel; o resto é coberto por financiamento bancário.",
+          "A cooperativa compra o imóvel; a propriedade fica atribuída de forma transparente aos cooperantes, e todas as decisões seguem os estatutos.",
+          "O rendimento vem da valorização do imóvel e do arrendamento. A saída — venda da quota ou do imóvel segundo regras definidas à partida."
+        ],
+        "proofs": [
+          "O primeiro imóvel valorizou +48% em 15 meses.",
+          "Benefícios fiscais da cooperativa: isenção de IRC, IMT e IMI.",
+          "Próximo projeto — SeedWave_11, entrada a partir de 5 000 EUR.",
+          "Iniciador — Igor Kartuzov, 35 anos em ativos reais, a viver e trabalhar na Madeira."
+        ]
+      }
+    },
+    {
       "id": "nem",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#12D68A\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nEm\"><title>nEm — Nova Energia da Madeira</title><path d=\"M22 20 L22 62\"/><path d=\"M22 20 Q31 14 40 20 Q49 26 58 20\"/><path d=\"M22 41 Q30 35 38 41 Q46 47 54 41\"/><path d=\"M22 62 Q31 56 40 62 Q49 68 58 62\"/><path d=\"M15 86 Q28 80 39 86 Q50 92 61 86 Q72 80 85 86\"/></svg>",
       "category": "Energia",
@@ -39,6 +69,42 @@
       "moreLink": "https://ikartuzov-hub.github.io/nem/"
     },
     {
+      "id": "forge",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E2622E\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M36 16 V84\"/><path d=\"M36 21 Q49 9 60 20 Q70 28 82 19\"/><path d=\"M36 50 H70\"/></svg>",
+      "sectors": [
+        "AI",
+        "Platform",
+        "No-Code"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "demoLink": "https://ikartuzov-hub.github.io/forge/",
+      "category": "Ferramenta SeedWave",
+      "name": "Forge — da ideia a um produto vivo",
+      "hook": "Conta a tua ideia — a IA constrói um produto funcional a partir dela. Não uma apresentação, mas um MVP vivo que abres no telemóvel.",
+      "description": "O construtor da SeedWave: um caminho comprovado da ideia em bruto até um produto vivo. A IA estrutura qualquer ideia gratuitamente; as mais fortes construímos juntos. Já provado com Treino, Birdie, Relic. O método é aberto — traz uma ideia, não procures a quem confiá-la.",
+      "lookingFor": "Ideias de participantes · Parceiros · Feedback",
+      "page": {
+        "how": [
+          "Conta a tua ideia numa frase — ao bot do Telegram ou na própria montra.",
+          "A análise por IA estrutura-a: para quem é, o que já existe, a essência, o que procurar.",
+          "As ideias fortes construímos num MVP funcional — motor multilíngue, bot, pagamento.",
+          "O produto fica vivo: um link, primeiros utilizadores, um cartão na SeedWave.",
+          "O método é aberto: o mesmo caminho sempre; um novo produto é conteúdo, não uma reconstrução."
+        ],
+        "proofs": [
+          "Treino: ideia «aprender uma língua pela tua própria história» → uma app viva com alunos pagantes.",
+          "Birdie: ideia «um assistente para alunos de golfe» → um assistente PWA multilíngue em piloto.",
+          "Relic: ideia «avaliar uma moeda antiga» → um bot de IA criado em meio dia."
+        ],
+        "vision": [
+          "Um fluxo de ideias de participantes enche a SeedWave: cada ideia estruturada torna-se um cartão no registo.",
+          "As ideias fortes tornam-se produtos vivos e alimentam o deal flow da plataforma.",
+          "O construtor é um campo de treino: cada produto criado afia o método repetível."
+        ]
+      }
+    },
+    {
       "id": "nam",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#4C8DFF\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nAm\"><title>nAm — Novos Apoios da Madeira</title><path d=\"M30 72 L50 16 L70 72\"/><path d=\"M37 52 Q43.5 46 50 52 Q56.5 58 63 52\"/><path d=\"M15 88 Q28 82 39 88 Q50 94 61 88 Q72 82 85 88\"/></svg>",
       "category": "Apoios",
@@ -55,6 +121,69 @@
       "lookingFor": "Restaurantes e pequenos negócios da Madeira · Contabilistas parceiros",
       "demoLink": "https://ikartuzov-hub.github.io/nam/",
       "moreLink": "https://ikartuzov-hub.github.io/nam/flyer.html"
+    },
+    {
+      "id": "lis",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Lis\"><title>Lis</title><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></svg>",
+      "category": "IA / Tecnologia",
+      "name": "Lis — o teu secretário pessoal de IA",
+      "hook": "Secretário pessoal de IA no Telegram: capta tarefas, ordena-as por prioridade e envia um resumo todas as manhãs. Não é subscrição — monta-o numa noite e fica teu para sempre.",
+      "description": "Escreves ao bot uma tarefa, ideia ou email — o Lis define a prioridade pela matriz de Eisenhower, arquiva nas bases do Notion e de manhã envia a lista de tarefas com botões «Feito / Amanhã». Emails importantes do Gmail tornam-se tarefas automaticamente. Stack: Telegram + Make + OpenAI + Notion.",
+      "sectors": [
+        "AI",
+        "Technology"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Criador de conteúdo · Vendedor · Tester",
+      "demoLink": "",
+      "page": {
+        "how": [
+          "Envias ao bot no Telegram uma tarefa, uma ideia ou um e-mail reencaminhado — a qualquer hora do dia.",
+          "A IA define a prioridade pela matriz de Eisenhower e arquiva tudo nas tuas bases do Notion.",
+          "Todas as manhãs recebes um resumo das tarefas com botões «Feito / Amanhã» — o dia começa com uma lista clara.",
+          "Os e-mails importantes do Gmail transformam-se automaticamente em tarefas — nada se perde."
+        ],
+        "proofs": [
+          "O MVP funciona todos os dias como sistema operativo pessoal do autor.",
+          "Stack sem servidores e sem código: Telegram + Make + OpenAI + Notion.",
+          "Não é uma subscrição: montas numa noite a partir de um esquema pronto — e é teu para sempre."
+        ]
+      }
+    },
+    {
+      "id": "ntm",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#29B5CF\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nTm\"><title>nTm — Novos Trilhos da Madeira</title><path d=\"M28 22 H72\"/><path d=\"M50 22 V68\"/><path d=\"M15 84 Q28 78 39 84 Q50 90 61 84 Q72 78 85 84\"/></svg>",
+      "category": "Turismo · Natureza",
+      "name": "nTm — Novos Trilhos da Madeira",
+      "hook": "Aberto hoje? Estado dos 14 percursos, tempo real no início do trilho e reserva SIMplifica num toque.",
+      "description": "Desde 1 de janeiro de 2026 todos os percursos pedestres classificados da Madeira exigem reserva prévia de slot no portal SIMplifica — e fecham sem aviso por derrocadas ou mau tempo. O nTm responde a uma única pergunta antes de o visitante subir a serra: está aberto hoje? Mostra o estado dos 14 percursos (fonte oficial IFCN), o tempo ao vivo no início de cada trilho pela altitude real — o contraste «Funchal +26°, no cume +9° com vento de 62 km/h» — e leva diretamente ao portal oficial para reservar. Se o trilho estiver fechado, sugere a alternativa aberta mais próxima do mesmo tipo. Não somos operador de pagamentos nem agência: o botão de reserva é um link para o SIMplifica. Todas as semanas, um «segredo de um local» — um lugar que os autocarros não conhecem. Topo do funil da ecologia SeedWave: tráfego e confiança, primeiro degrau para o Guia e para a habitação no Funchal.",
+      "sectors": [
+        "Turismo",
+        "Natureza",
+        "Madeira"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Operadores com protocolo IFCN · Alojamento local · Guias · Parceiros de conteúdo",
+      "demoLink": "https://ikartuzov-hub.github.io/ntm/",
+      "page": {
+        "how": [
+          "Abre o nTm — os 14 percursos com estado atual: aberto, parcial, fechado. Carimbo da hora e link à fonte oficial IFCN.",
+          "Vê o tempo ao vivo no início de cada trilho, calculado pela altitude real do ponto de partida (Open-Meteo), não pela cidade.",
+          "Escolhe o percurso. Se estiver fechado, mostramos a alternativa aberta mais próxima do mesmo tipo — costa em vez de montanha.",
+          "Reserva o slot de 30 minutos no portal oficial SIMplifica: €4,50 por percurso, PR1 €10,50, residentes e crianças ≤12 grátis (reserva na mesma obrigatória).",
+          "Cada semana, um segredo de um local — e, para quem volta, o caminho para viver aqui, não só visitar."
+        ],
+        "proofs": [
+          "Cinco anos a viver e a caminhar na Madeira: os trilhos, as horas certas, o tempo que muda a 1 800 m.",
+          "Base legal verificada: Portaria 801/2025 (10.12) e Portaria 48/2026 (13.02); estado dos percursos pelo IFCN, IP-RAM.",
+          "Tempo ao vivo por API pública Open-Meteo, por coordenadas e altitude de cada início de trilho — sem chave, sem custo, sem servidor.",
+          "Arquitetura de três camadas SeedWave: motor, cinco línguas, dados. Novo percurso ou novo idioma não tocam no motor."
+        ],
+        "vision": "Um degrau da escada ILYNQ. O nTm é o topo do funil: o visitante volta todos os dias porque a pergunta «aberto hoje?» repete-se. Da utilidade nasce a confiança; da confiança, o Guia dos lugares secretos; e de quem se apaixona pela ilha, o passo seguinte — o apartamento no Funchal, em cooperativa. Fase 2: webcams, GPX, alertas «o trilho reabriu»."
+      },
+      "moreLink": "https://ikartuzov-hub.github.io/ntm/flyer.html"
     },
     {
       "id": "ncm",
@@ -93,135 +222,6 @@
         ]
       },
       "moreLink": "https://ikartuzov-hub.github.io/ncm/flyer.html"
-    },
-    {
-      "id": "ntm",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#29B5CF\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nTm\"><title>nTm — Novos Trilhos da Madeira</title><path d=\"M28 22 H72\"/><path d=\"M50 22 V68\"/><path d=\"M15 84 Q28 78 39 84 Q50 90 61 84 Q72 78 85 84\"/></svg>",
-      "category": "Turismo · Natureza",
-      "name": "nTm — Novos Trilhos da Madeira",
-      "hook": "Aberto hoje? Estado dos 14 percursos, tempo real no início do trilho e reserva SIMplifica num toque.",
-      "description": "Desde 1 de janeiro de 2026 todos os percursos pedestres classificados da Madeira exigem reserva prévia de slot no portal SIMplifica — e fecham sem aviso por derrocadas ou mau tempo. O nTm responde a uma única pergunta antes de o visitante subir a serra: está aberto hoje? Mostra o estado dos 14 percursos (fonte oficial IFCN), o tempo ao vivo no início de cada trilho pela altitude real — o contraste «Funchal +26°, no cume +9° com vento de 62 km/h» — e leva diretamente ao portal oficial para reservar. Se o trilho estiver fechado, sugere a alternativa aberta mais próxima do mesmo tipo. Não somos operador de pagamentos nem agência: o botão de reserva é um link para o SIMplifica. Todas as semanas, um «segredo de um local» — um lugar que os autocarros não conhecem. Topo do funil da ecologia SeedWave: tráfego e confiança, primeiro degrau para o Guia e para a habitação no Funchal.",
-      "sectors": [
-        "Turismo",
-        "Natureza",
-        "Madeira"
-      ],
-      "stage": "mvp",
-      "investment": "",
-      "lookingFor": "Operadores com protocolo IFCN · Alojamento local · Guias · Parceiros de conteúdo",
-      "demoLink": "https://ikartuzov-hub.github.io/ntm/",
-      "page": {
-        "how": [
-          "Abre o nTm — os 14 percursos com estado atual: aberto, parcial, fechado. Carimbo da hora e link à fonte oficial IFCN.",
-          "Vê o tempo ao vivo no início de cada trilho, calculado pela altitude real do ponto de partida (Open-Meteo), não pela cidade.",
-          "Escolhe o percurso. Se estiver fechado, mostramos a alternativa aberta mais próxima do mesmo tipo — costa em vez de montanha.",
-          "Reserva o slot de 30 minutos no portal oficial SIMplifica: €4,50 por percurso, PR1 €10,50, residentes e crianças ≤12 grátis (reserva na mesma obrigatória).",
-          "Cada semana, um segredo de um local — e, para quem volta, o caminho para viver aqui, não só visitar."
-        ],
-        "proofs": [
-          "Cinco anos a viver e a caminhar na Madeira: os trilhos, as horas certas, o tempo que muda a 1 800 m.",
-          "Base legal verificada: Portaria 801/2025 (10.12) e Portaria 48/2026 (13.02); estado dos percursos pelo IFCN, IP-RAM.",
-          "Tempo ao vivo por API pública Open-Meteo, por coordenadas e altitude de cada início de trilho — sem chave, sem custo, sem servidor.",
-          "Arquitetura de três camadas SeedWave: motor, cinco línguas, dados. Novo percurso ou novo idioma não tocam no motor."
-        ],
-        "vision": "Um degrau da escada ILYNQ. O nTm é o topo do funil: o visitante volta todos os dias porque a pergunta «aberto hoje?» repete-se. Da utilidade nasce a confiança; da confiança, o Guia dos lugares secretos; e de quem se apaixona pela ilha, o passo seguinte — o apartamento no Funchal, em cooperativa. Fase 2: webcams, GPX, alertas «o trilho reabriu»."
-      },
-      "moreLink": "https://ikartuzov-hub.github.io/ntm/flyer.html"
-    },
-    {
-      "id": "forge",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E2622E\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M36 16 V84\"/><path d=\"M36 21 Q49 9 60 20 Q70 28 82 19\"/><path d=\"M36 50 H70\"/></svg>",
-      "sectors": [
-        "AI",
-        "Platform",
-        "No-Code"
-      ],
-      "stage": "mvp",
-      "investment": "",
-      "demoLink": "https://ikartuzov-hub.github.io/forge/",
-      "category": "Ferramenta SeedWave",
-      "name": "Forge — da ideia a um produto vivo",
-      "hook": "Conta a tua ideia — a IA constrói um produto funcional a partir dela. Não uma apresentação, mas um MVP vivo que abres no telemóvel.",
-      "description": "O construtor da SeedWave: um caminho comprovado da ideia em bruto até um produto vivo. A IA estrutura qualquer ideia gratuitamente; as mais fortes construímos juntos. Já provado com Treino, Birdie, Relic. O método é aberto — traz uma ideia, não procures a quem confiá-la.",
-      "lookingFor": "Ideias de participantes · Parceiros · Feedback",
-      "page": {
-        "how": [
-          "Conta a tua ideia numa frase — ao bot do Telegram ou na própria montra.",
-          "A análise por IA estrutura-a: para quem é, o que já existe, a essência, o que procurar.",
-          "As ideias fortes construímos num MVP funcional — motor multilíngue, bot, pagamento.",
-          "O produto fica vivo: um link, primeiros utilizadores, um cartão na SeedWave.",
-          "O método é aberto: o mesmo caminho sempre; um novo produto é conteúdo, não uma reconstrução."
-        ],
-        "proofs": [
-          "Treino: ideia «aprender uma língua pela tua própria história» → uma app viva com alunos pagantes.",
-          "Birdie: ideia «um assistente para alunos de golfe» → um assistente PWA multilíngue em piloto.",
-          "Relic: ideia «avaliar uma moeda antiga» → um bot de IA criado em meio dia."
-        ],
-        "vision": [
-          "Um fluxo de ideias de participantes enche a SeedWave: cada ideia estruturada torna-se um cartão no registo.",
-          "As ideias fortes tornam-se produtos vivos e alimentam o deal flow da plataforma.",
-          "O construtor é um campo de treino: cada produto criado afia o método repetível."
-        ]
-      }
-    },
-    {
-      "id": "dubai-madeira-cooperative",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#2A8FC0\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M34 20 L34 74\"/><path d=\"M34 20 C64 20 64 74 34 74\"/><path d=\"M18 88 Q28 82 38 88 Q48 94 58 88 Q68 82 78 88\"/></svg>",
-      "category": "Imobiliário",
-      "name": "Dubai Madeira Cooperative — cooperativa de habitação",
-      "hook": "Cooperativa ao abrigo da lei portuguesa para compra coletiva de imóveis. O primeiro ativo valorizou +48% em 15 meses.",
-      "description": "Cooperativa de Habitação e Construção para compra coletiva de imóveis no empreendimento «Dubai» Madeira — um projeto premium de 400 apartamentos no Funchal (Madeira). Organização sem fins lucrativos com benefícios fiscais — isenção de IRC, IMT e IMI. Próximo projeto — SeedWave_11, entrada a partir de 5 000 EUR.",
-      "sectors": [
-        "Real Estate",
-        "Construction"
-      ],
-      "stage": "mvp",
-      "investment": "150 000 EUR (20% do valor do imóvel). Entrada mínima a partir de 5 000 EUR.",
-      "lookingFor": "Cooperantes-investidores · Advogado · Parceiro operacional",
-      "demoLink": "https://ikartuzov-hub.github.io/dubai-madeira/",
-      "page": {
-        "how": [
-          "A cooperativa é constituída ao abrigo da lei portuguesa (Cooperativa de Habitação e Construção) — forma sem fins lucrativos com benefícios fiscais: isenção de IRC, IMT e IMI.",
-          "Os membros entram com quotas a partir de 5 000 EUR e reúnem em conjunto 150 000 EUR — 20% do valor do imóvel; o resto é coberto por financiamento bancário.",
-          "A cooperativa compra o imóvel; a propriedade fica atribuída de forma transparente aos cooperantes, e todas as decisões seguem os estatutos.",
-          "O rendimento vem da valorização do imóvel e do arrendamento. A saída — venda da quota ou do imóvel segundo regras definidas à partida."
-        ],
-        "proofs": [
-          "O primeiro imóvel valorizou +48% em 15 meses.",
-          "Benefícios fiscais da cooperativa: isenção de IRC, IMT e IMI.",
-          "Próximo projeto — SeedWave_11, entrada a partir de 5 000 EUR.",
-          "Iniciador — Igor Kartuzov, 35 anos em ativos reais, a viver e trabalhar na Madeira."
-        ]
-      }
-    },
-    {
-      "id": "lis",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Lis\"><title>Lis</title><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></svg>",
-      "category": "IA / Tecnologia",
-      "name": "Lis — o teu secretário pessoal de IA",
-      "hook": "Secretário pessoal de IA no Telegram: capta tarefas, ordena-as por prioridade e envia um resumo todas as manhãs. Não é subscrição — monta-o numa noite e fica teu para sempre.",
-      "description": "Escreves ao bot uma tarefa, ideia ou email — o Lis define a prioridade pela matriz de Eisenhower, arquiva nas bases do Notion e de manhã envia a lista de tarefas com botões «Feito / Amanhã». Emails importantes do Gmail tornam-se tarefas automaticamente. Stack: Telegram + Make + OpenAI + Notion.",
-      "sectors": [
-        "AI",
-        "Technology"
-      ],
-      "stage": "mvp",
-      "investment": "",
-      "lookingFor": "Criador de conteúdo · Vendedor · Tester",
-      "demoLink": "",
-      "page": {
-        "how": [
-          "Envias ao bot no Telegram uma tarefa, uma ideia ou um e-mail reencaminhado — a qualquer hora do dia.",
-          "A IA define a prioridade pela matriz de Eisenhower e arquiva tudo nas tuas bases do Notion.",
-          "Todas as manhãs recebes um resumo das tarefas com botões «Feito / Amanhã» — o dia começa com uma lista clara.",
-          "Os e-mails importantes do Gmail transformam-se automaticamente em tarefas — nada se perde."
-        ],
-        "proofs": [
-          "O MVP funciona todos os dias como sistema operativo pessoal do autor.",
-          "Stack sem servidores e sem código: Telegram + Make + OpenAI + Notion.",
-          "Não é uma subscrição: montas numa noite a partir de um esquema pronto — e é teu para sempre."
-        ]
-      }
     },
     {
       "id": "treino",
