@@ -289,6 +289,41 @@
       }
     },
     {
+      "id": "guide-paris",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#6C8CB4\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M72 36 A26 26 0 1 0 72 64 L72 50 L54 50\"/><path d=\"M20 84 Q30 78 40 84 Q50 90 60 84 Q70 78 80 84\"/></svg>",
+      "category": "Viajes / Guía",
+      "name": "Mi París — una guía para un par de días",
+      "hook": "Barrios gastronómicos, pasajes cubiertos y vistas de la torre fuera de las rutas turísticas — 65 lugares de quien camina por estas calles. Tres rutas-héroe, atardecer en vivo.",
+      "description": "La guía «Mi París para un Par de Días» en el motor de guías personales de SeedWave: 65 lugares verificados en siete barrios, tres rutas-héroe, puntos secretos, hora del atardecer en vivo, 5 idiomas. El mismo motor que Madeira — un nuevo destino es un nuevo conjunto de puntos, no una nueva app.",
+      "sectors": [
+        "Travel",
+        "Consumer"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Autores de guías · Primeros usuarios · Feedback",
+      "demoLink": "https://ikartuzov-hub.github.io/guide/?guide=paris-igor",
+      "page": {
+        "how": [
+          "Abres la guía — 65 lugares en el mapa en siete barrios de París, con valoraciones y notas personales del autor.",
+          "Tres rutas-héroe para la ocasión: el barrio gastronómico (queso-té-chocolate en 400 metros), pasajes antes de las multitudes, vistas de la torre sin turistas.",
+          "Los puntos secretos están marcados — panaderías y queserías locales en vez de colas turísticas.",
+          "La hora del atardecer en vivo y el mapa te llevan a pie por los barrios, sin traslados.",
+          "Cinco idiomas de interfaz — la guía se abre en el idioma del visitante."
+        ],
+        "proofs": [
+          "65 lugares, 3 rutas-héroe, 7 barrios, 5 idiomas — a partir de los puntos del autor en Google Maps.",
+          "Los datos de los lugares son una instantánea de Google (valoración, horarios), y el foso es la nota personal de quien camina por estas calles.",
+          "El mismo motor que «Mi Madeira por Descubrir»: un nuevo destino no toca el código, solo los datos y la paleta."
+        ],
+        "vision": [
+          "París es el segundo destino en la línea de guías personales: prueba de que el motor escala a cualquier lugar.",
+          "Después — ciudades y lugares a demanda, cada uno con su tarjeta bajo una futura sección «Guías».",
+          "Una guía personal como regalo para el visitante y puerta de entrada al ecosistema SeedWave."
+        ]
+      }
+    },
+    {
       "id": "tonight",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#6C5CE7\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Tonight\"><title>Tonight</title><path d=\"M30 68 L30 24 L62 66 L62 22\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></svg>",
       "category": "Tecnología / Eventos",

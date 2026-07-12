@@ -289,6 +289,41 @@
       }
     },
     {
+      "id": "guide-paris",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#6C8CB4\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M72 36 A26 26 0 1 0 72 64 L72 50 L54 50\"/><path d=\"M20 84 Q30 78 40 84 Q50 90 60 84 Q70 78 80 84\"/></svg>",
+      "category": "Travel / Guide",
+      "name": "My Paris — a guide for a couple of days",
+      "hook": "Gourmet quarters, covered passages and tower views off the tourist trail — 65 places from someone who walks these streets. Three hero routes, live sunset.",
+      "description": "The «My Paris for a Couple of Days» guide on SeedWave's personal-guide engine: 65 verified places across seven quarters, three hero routes, secret spots, live sunset times, 5 languages. The same engine as Madeira — a new destination is a new set of pins, not a new app.",
+      "sectors": [
+        "Travel",
+        "Consumer"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Guide authors · First users · Feedback",
+      "demoLink": "https://ikartuzov-hub.github.io/guide/?guide=paris-igor",
+      "page": {
+        "how": [
+          "Open the guide — 65 places on the map across seven Paris quarters, with ratings and the author's personal notes.",
+          "Three hero routes for the occasion: the gourmet quarter (cheese-tea-chocolate within 400 metres), passages before the crowds, tower views without tourists.",
+          "Secret spots are flagged — local bakeries and cheese shops instead of tourist queues.",
+          "Live sunset times and the map lead you through the quarters on foot, no transfers.",
+          "Five interface languages — the guide opens in the visitor's language."
+        ],
+        "proofs": [
+          "65 places, 3 hero routes, 7 quarters, 5 languages — built from the author's Google Maps pins.",
+          "Place data is a Google snapshot (rating, hours), and the moat is the personal note of someone who walks these streets.",
+          "The same engine as «My Undiscovered Madeira»: a new destination touches no code, only data and palette."
+        ],
+        "vision": [
+          "Paris is the second destination in the personal-guide line: proof the engine scales to any place.",
+          "Next — cities and places on demand, each with its own card under a future «Guides» section.",
+          "A personal guide as a gift for the visitor and an entry point to the SeedWave ecosystem."
+        ]
+      }
+    },
+    {
       "id": "tonight",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#6C5CE7\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Tonight\"><title>Tonight</title><path d=\"M30 68 L30 24 L62 66 L62 22\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></svg>",
       "category": "Tech / Events",

@@ -289,6 +289,41 @@
       }
     },
     {
+      "id": "guide-paris",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#6C8CB4\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M72 36 A26 26 0 1 0 72 64 L72 50 L54 50\"/><path d=\"M20 84 Q30 78 40 84 Q50 90 60 84 Q70 78 80 84\"/></svg>",
+      "category": "Reisen / Guide",
+      "name": "Mein Paris — ein Guide für ein paar Tage",
+      "hook": "Gourmet-Viertel, überdachte Passagen und Turmblicke abseits der Touristenpfade — 65 Orte von jemandem, der diese Straßen kennt. Drei Held-Routen, Sonnenuntergang in Echtzeit.",
+      "description": "Der Guide «Mein Paris für ein paar Tage» auf der Personal-Guide-Engine von SeedWave: 65 geprüfte Orte in sieben Vierteln, drei Held-Routen, geheime Orte, Sonnenuntergang in Echtzeit, 5 Sprachen. Dieselbe Engine wie Madeira — ein neues Ziel ist ein neuer Satz Punkte, keine neue App.",
+      "sectors": [
+        "Travel",
+        "Consumer"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Guide-Autoren · Erste Nutzer · Feedback",
+      "demoLink": "https://ikartuzov-hub.github.io/guide/?guide=paris-igor",
+      "page": {
+        "how": [
+          "Du öffnest den Guide — 65 Orte auf der Karte in sieben Pariser Vierteln, mit Bewertungen und persönlichen Notizen des Autors.",
+          "Drei Held-Routen für den Anlass: das Gourmet-Viertel (Käse-Tee-Schokolade in 400 Metern), Passagen vor den Massen, Turmblicke ohne Touristen.",
+          "Geheime Orte sind markiert — lokale Bäckereien und Käseläden statt Touristenschlangen.",
+          "Sonnenuntergang in Echtzeit und die Karte führen dich zu Fuß durch die Viertel, ohne Wege.",
+          "Fünf Oberflächensprachen — der Guide öffnet in der Sprache des Gastes."
+        ],
+        "proofs": [
+          "65 Orte, 3 Held-Routen, 7 Viertel, 5 Sprachen — aus den Google-Maps-Punkten des Autors.",
+          "Die Ortsdaten sind eine Google-Momentaufnahme (Bewertung, Zeiten), und der Burggraben ist die persönliche Notiz von jemandem, der diese Straßen kennt.",
+          "Dieselbe Engine wie «Mein unentdecktes Madeira»: ein neues Ziel berührt keinen Code, nur Daten und Palette."
+        ],
+        "vision": [
+          "Paris ist das zweite Ziel in der Personal-Guide-Reihe: Beweis, dass die Engine auf jeden Ort skaliert.",
+          "Als Nächstes — Städte und Orte auf Anfrage, jede mit eigener Karte unter einer künftigen Sektion «Guides».",
+          "Ein persönlicher Guide als Geschenk für den Gast und Eintritt ins SeedWave-Ökosystem."
+        ]
+      }
+    },
+    {
       "id": "tonight",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#6C5CE7\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Tonight\"><title>Tonight</title><path d=\"M30 68 L30 24 L62 66 L62 22\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></svg>",
       "category": "Technologie / Events",
