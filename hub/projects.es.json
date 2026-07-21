@@ -136,20 +136,8 @@
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Creador de contenido · Comercial · Tester",
-      "demoLink": "https://l.seedwave.dev/",
-      "page": {
-        "how": [
-          "Conectas una vez el correo, el calendario, el banco y las notas — y dices qué quitar de tu vista.",
-          "Lis trae el flujo de todas las fuentes solo, entiende cada punto y resuelve todo lo que puede sin ti.",
-          "Lo que no se puede decidir por ti — lo trae como bifurcación lista: un toque, «Sí» o «No».",
-          "Quieres no olvidar algo — envía una foto. Lis la reconoce y pregunta o lo hace al momento."
-        ],
-        "proofs": [
-          "Las acciones y el pensar se te quitan — no una lista de tareas, sino decisiones listas.",
-          "Funciona sobre Cowork y Claude: máximo acceso — mínimo de toques tuyos.",
-          "Lo configuras una vez — después es tuyo. Método: matriz de Eisenhower + bucles."
-        ]
-      }
+      "demoLink": "https://l.seedwave.dev/onboarding.html",
+      "moreLink": "https://l.seedwave.dev/"
     },
     {
       "id": "ntm",

@@ -136,20 +136,8 @@
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Creator · Salesperson · Tester",
-      "demoLink": "https://l.seedwave.dev/",
-      "page": {
-        "how": [
-          "Connect email, calendar, bank and notes once — and tell it what to take off your plate.",
-          "Lis pulls the flow from every source itself, understands each item and settles all it can without you.",
-          "What can't be decided for you — it brings as a ready fork: one tap, ‘Yes’ or ‘No’.",
-          "Want to remember something — drop a photo. Lis reads it and either asks or just does it."
-        ],
-        "proofs": [
-          "Actions and thinking are lifted off you — not a to-do list, but ready decisions.",
-          "Runs on top of Cowork and Claude: maximum access — minimum taps from you.",
-          "Set up once — then it's yours. Method: Eisenhower matrix + loops."
-        ]
-      }
+      "demoLink": "https://l.seedwave.dev/onboarding.html",
+      "moreLink": "https://l.seedwave.dev/"
     },
     {
       "id": "ntm",

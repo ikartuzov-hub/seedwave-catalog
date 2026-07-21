@@ -136,20 +136,8 @@
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Content-Creator · Vertrieb · Tester",
-      "demoLink": "https://l.seedwave.dev/",
-      "page": {
-        "how": [
-          "Du verbindest einmal E-Mail, Kalender, Bank und Notizen — und sagst, was von deinem Tisch soll.",
-          "Lis zieht den Fluss aus allen Quellen selbst, versteht jeden Punkt und erledigt alles Mögliche ohne dich.",
-          "Was nicht für dich entschieden werden kann — bringt er als fertige Weiche: ein Tipp, «Ja» oder «Nein».",
-          "Willst du etwas nicht vergessen — schick ein Foto. Lis erkennt es und fragt oder macht es sofort."
-        ],
-        "proofs": [
-          "Handeln und Nachdenken werden dir abgenommen — keine To-do-Liste, sondern fertige Entscheidungen.",
-          "Läuft auf Cowork und Claude: maximaler Zugang — minimale Tipps von dir.",
-          "Einmal eingerichtet — dann gehört er dir. Methode: Eisenhower-Matrix + Schleifen."
-        ]
-      }
+      "demoLink": "https://l.seedwave.dev/onboarding.html",
+      "moreLink": "https://l.seedwave.dev/"
     },
     {
       "id": "ntm",
