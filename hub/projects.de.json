@@ -124,11 +124,11 @@
     },
     {
       "id": "lis",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Lis\"><title>Lis</title><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></svg>",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
       "category": "KI / Technologie",
-      "name": "Lis — dein persönlicher KI-Sekretär",
-      "hook": "Persönlicher KI-Sekretär in Telegram: erfasst Aufgaben, ordnet sie nach Priorität und schickt jeden Morgen eine Übersicht. Kein Abo — bau ihn an einem Abend und besitze ihn für immer.",
-      "description": "Du schreibst dem Bot eine Aufgabe, Idee oder E-Mail — Lis setzt die Priorität nach der Eisenhower-Matrix, legt sie in deinen Notion-Datenbanken ab und schickt morgens die To-do-Liste mit Buttons «Erledigt / Morgen». Wichtige Gmail-Mails werden automatisch zu Aufgaben. Stack: Telegram + Make + OpenAI + Notion.",
+      "name": "Lis — lebt deine Routine für dich",
+      "hook": "Persönlicher KI-Sekretär auf Cowork und Claude. Du verbindest einmal E-Mail, Kalender, Bank und Notizen — danach ordnet er den Fluss von selbst. Von dir: nur «Ja» oder «Nein».",
+      "description": "Kein Eingangs-Bot, den du füttern musst, sondern eine Schicht auf deinem Claude: die Quellen füllen Lis von selbst, er versteht jeden Punkt, erledigt Umkehrbares still und bringt dir nur das Ergebnis und eine Ja/Nein-Weiche. Willst du etwas nicht vergessen — schick ein Foto, den Rest macht er.",
       "sectors": [
         "AI",
         "Technology"
@@ -136,18 +136,18 @@
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Content-Creator · Vertrieb · Tester",
-      "demoLink": "",
+      "demoLink": "https://l.seedwave.dev/",
       "page": {
         "how": [
-          "Du schreibst dem Bot in Telegram eine Aufgabe, eine Idee oder leitest eine E-Mail weiter — zu jeder Tageszeit.",
-          "Die KI setzt die Priorität nach der Eisenhower-Matrix und legt alles in deinen Notion-Datenbanken ab.",
-          "Jeden Morgen kommt eine Übersicht deiner Aufgaben mit den Buttons «Erledigt / Morgen» — der Tag beginnt mit einer klaren Liste.",
-          "Wichtige Gmail-Nachrichten werden automatisch zu Aufgaben — nichts geht verloren."
+          "Du verbindest einmal E-Mail, Kalender, Bank und Notizen — und sagst, was von deinem Tisch soll.",
+          "Lis zieht den Fluss aus allen Quellen selbst, versteht jeden Punkt und erledigt alles Mögliche ohne dich.",
+          "Was nicht für dich entschieden werden kann — bringt er als fertige Weiche: ein Tipp, «Ja» oder «Nein».",
+          "Willst du etwas nicht vergessen — schick ein Foto. Lis erkennt es und fragt oder macht es sofort."
         ],
         "proofs": [
-          "Das MVP läuft täglich als persönliches Betriebssystem des Autors.",
-          "Stack ohne Server und ohne Code: Telegram + Make + OpenAI + Notion.",
-          "Kein Abo: an einem Abend nach fertigem Bauplan aufgebaut — und für immer dein."
+          "Handeln und Nachdenken werden dir abgenommen — keine To-do-Liste, sondern fertige Entscheidungen.",
+          "Läuft auf Cowork und Claude: maximaler Zugang — minimale Tipps von dir.",
+          "Einmal eingerichtet — dann gehört er dir. Methode: Eisenhower-Matrix + Schleifen."
         ]
       }
     },
@@ -289,11 +289,40 @@
       }
     },
     {
+      "id": "guide-paris",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#6C8CB4\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M72 36 A26 26 0 1 0 72 64 L72 50 L54 50\"/><path d=\"M20 84 Q30 78 40 84 Q50 90 60 84 Q70 78 80 84\"/></svg>",
+      "category": "Reisen / Guide",
+      "name": "Guide «Mein Paris für ein paar Tage»",
+      "hook": "Gourmet-Viertel, Passagen und Turmblicke abseits der Touristenpfade — von jemandem, der diese Straßen kennt.",
+      "description": "Ein persönlicher Paris-Guide auf der «Mein Guide»-Engine: eigene Orte in 7 Vierteln, Szenario-Routen für die Situation («halber Tag · Auto · Sonnenuntergang»), geheime Orte und Live-Sonnenuntergangszeit. Kostenlos, der Funnel führt zu SeedWave.",
+      "sectors": [
+        "Travel",
+        "Consumer"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Guide-Autoren · Erste Nutzer · Feedback",
+      "demoLink": "https://ikartuzov-hub.github.io/guide/paris/",
+      "page": {
+        "how": [
+          "Du öffnest den Guide — 7 Pariser Viertel: Turm, Saint-Germain, Quartier Latin, Louvre, Oper, Le Marais, Montmartre.",
+          "Die Orte haben Notizen des Autors: der Blick, wann kommen, was probieren; geheime Orte sind markiert.",
+          "Aus den Orten entstehen Szenarien: «halber Tag · Auto · Sonnenuntergang» — eine Route für deinen Tag.",
+          "Jede Route hat drei Links: Google Maps, auf Karte zeigen, teilen. Die Sonnenuntergangszeit wird vor Ort berechnet."
+        ],
+        "proofs": [
+          "Eigene Orte in 7 Vierteln × 5 Sprachen, Szenario-Routen.",
+          "Von jemandem, der diese Straßen kennt — persönliche Notizen, kein Reiseführer.",
+          "Dieselbe Engine wie «Mein unentdecktes Madeira»: ein neuer Guide ist ein neuer Satz an Orten."
+        ]
+      }
+    },
+    {
       "id": "tonight",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#6C5CE7\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Tonight\"><title>Tonight</title><path d=\"M30 68 L30 24 L62 66 L62 22\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></svg>",
       "category": "Technologie / Events",
       "name": "Tonight — Tour-Plattform für Künstler und Venues",
-      "hook": "Tour-Plattform für kleine Künstler und lokale Venues: eine Kette nahegelegener Städte, ein gemeinsamer Ticketverkauf und geteilte Werbung.",
+      "hook": "Tour-Plattform für kleine Künstler und lokale Venues: eine Kette nahegelegener Stätte, ein gemeinsamer Ticketverkauf und geteilte Werbung.",
       "description": "Hilft kleinen Künstlern und Veranstaltern, sich zu finden, Gagen sicher abzuwickeln und Tickets für Mikro-Events zu verkaufen. Die Plattform baut die Tour aus Venues mit kurzen Wegen und bündelt das Werbebudget der Tour. Der Initiator ist ein aktiver Event-Operator in Europa.",
       "sectors": [
         "Technology",
@@ -308,7 +337,7 @@
           "Die Plattform baut eine Tour als Kette von Spielstätten in nahen Städten — kurze Wege, geringere Kosten.",
           "Künstler und Spielstätte finden einander und fixieren die Konditionen in der Plattform.",
           "Eine Kasse: Ticketverkauf für Mikro-Events und sichere Auszahlung der Gage.",
-          "Das Werbebudget der Tour wird gebündelt und zentral eingesetzt — günstiger für alle."
+          "Das Werbebudget der Tour wird genündelt und zentral eingesetzt — günstiger für alle."
         ],
         "proofs": [
           "Initiator — aktiver Event-Veranstalter in Europa.",

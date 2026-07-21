@@ -124,11 +124,11 @@
     },
     {
       "id": "lis",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Lis\"><title>Lis</title><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></svg>",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
       "category": "AI / Technology",
-      "name": "Lis — your personal AI secretary",
-      "hook": "A personal AI secretary in Telegram: it catches your tasks, sorts them by priority and sends a morning digest. Not a subscription — build it in an evening and own it forever.",
-      "description": "Message the bot a task, idea or email — Lis sets the priority by the Eisenhower matrix, files it into your Notion bases, and each morning sends your to-do list with ‘Done / Tomorrow’ buttons. Important Gmail messages turn into tasks automatically. Stack: Telegram + Make + OpenAI + Notion.",
+      "name": "Lis — lives your routine for you",
+      "hook": "A personal AI secretary on top of Cowork and Claude. Connect email, calendar, bank and notes once — then it sorts the flow itself. From you: just ‘Yes’ or ‘No’.",
+      "description": "Not an inbox bot you have to feed, but a layer on top of your Claude: your sources fill Lis themselves, it understands every item, handles the reversible silently, and brings you only the result and a Yes/No fork. Want to remember something — just drop a photo, it does the rest.",
       "sectors": [
         "AI",
         "Technology"
@@ -136,18 +136,18 @@
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Creator · Salesperson · Tester",
-      "demoLink": "",
+      "demoLink": "https://l.seedwave.dev/",
       "page": {
         "how": [
-          "Message the bot in Telegram with a task, an idea or a forwarded email — any time of day.",
-          "AI sets the priority using the Eisenhower matrix and files everything into your Notion bases.",
-          "Every morning you get a digest of your tasks with 'Done / Tomorrow' buttons — the day starts with a clear list.",
-          "Important Gmail messages turn into tasks automatically — nothing gets lost."
+          "Connect email, calendar, bank and notes once — and tell it what to take off your plate.",
+          "Lis pulls the flow from every source itself, understands each item and settles all it can without you.",
+          "What can't be decided for you — it brings as a ready fork: one tap, ‘Yes’ or ‘No’.",
+          "Want to remember something — drop a photo. Lis reads it and either asks or just does it."
         ],
         "proofs": [
-          "The MVP runs daily as the author's personal operating system.",
-          "A no-server, no-code stack: Telegram + Make + OpenAI + Notion.",
-          "Not a subscription: build it in an evening from a ready blueprint — and own it forever."
+          "Actions and thinking are lifted off you — not a to-do list, but ready decisions.",
+          "Runs on top of Cowork and Claude: maximum access — minimum taps from you.",
+          "Set up once — then it's yours. Method: Eisenhower matrix + loops."
         ]
       }
     },
@@ -285,6 +285,35 @@
           "The user builds their own guide — and can give it as a personal gift.",
           "Cowork assembles a new author's guide from their pins — the Forge loop in action.",
           "Hundreds of personal guides → a living SeedWave geography and a flow of users."
+        ]
+      }
+    },
+    {
+      "id": "guide-paris",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#6C8CB4\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M72 36 A26 26 0 1 0 72 64 L72 50 L54 50\"/><path d=\"M20 84 Q30 78 40 84 Q50 90 60 84 Q70 78 80 84\"/></svg>",
+      "category": "Travel / Guide",
+      "name": "Guide «My Paris for a Couple of Days»",
+      "hook": "Gourmet quarters, covered passages and tower views off the tourist trail — from someone who walks these streets.",
+      "description": "A personal Paris guide on the «My Guide» engine: authored spots across 7 quarters, scenario routes for the situation («half a day · car · sunset»), secret places and live sunset time. Free, the funnel leads into SeedWave.",
+      "sectors": [
+        "Travel",
+        "Consumer"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Guide authors · First users · Feedback",
+      "demoLink": "https://ikartuzov-hub.github.io/guide/paris/",
+      "page": {
+        "how": [
+          "Open the guide — 7 Paris quarters: Tower, Saint-Germain, Latin Quarter, Louvre, Opera, Le Marais, Montmartre.",
+          "Spots come with the author's notes: the framing, when to come, what to try; secret places are flagged.",
+          "Scenarios are built from the spots: «half a day · car · sunset» — a route for your day.",
+          "Each route has three links: Google Maps, show on map, share. Live sunset time is computed on the spot."
+        ],
+        "proofs": [
+          "Authored spots across 7 quarters × 5 languages, scenario routes.",
+          "From someone who walks these streets — personal notes, not a guidebook.",
+          "The same engine as «My Undiscovered Madeira»: a new guide is a new set of spots."
         ]
       }
     },

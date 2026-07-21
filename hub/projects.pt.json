@@ -124,11 +124,11 @@
     },
     {
       "id": "lis",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Lis\"><title>Lis</title><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></svg>",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
       "category": "IA / Tecnologia",
-      "name": "Lis — o teu secretário pessoal de IA",
-      "hook": "Secretário pessoal de IA no Telegram: capta tarefas, ordena-as por prioridade e envia um resumo todas as manhãs. Não é subscrição — monta-o numa noite e fica teu para sempre.",
-      "description": "Escreves ao bot uma tarefa, ideia ou email — o Lis define a prioridade pela matriz de Eisenhower, arquiva nas bases do Notion e de manhã envia a lista de tarefas com botões «Feito / Amanhã». Emails importantes do Gmail tornam-se tarefas automaticamente. Stack: Telegram + Make + OpenAI + Notion.",
+      "name": "Lis — vive a tua rotina por ti",
+      "hook": "Secretário pessoal de IA sobre o Cowork e o Claude. Ligas uma vez o email, o calendário, o banco e as notas — depois trata do fluxo sozinho. De ti: só «Sim» ou «Não».",
+      "description": "Não é um bot de entrada que tens de alimentar, mas uma camada sobre o teu Claude: as fontes enchem o Lis sozinhas, ele percebe cada item, resolve o reversível em silêncio e traz-te só o resultado e uma escolha «Sim/Não». Queres não esquecer algo — envia uma foto, ele faz o resto.",
       "sectors": [
         "AI",
         "Technology"
@@ -136,18 +136,18 @@
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Criador de conteúdo · Vendedor · Tester",
-      "demoLink": "",
+      "demoLink": "https://l.seedwave.dev/",
       "page": {
         "how": [
-          "Envias ao bot no Telegram uma tarefa, uma ideia ou um e-mail reencaminhado — a qualquer hora do dia.",
-          "A IA define a prioridade pela matriz de Eisenhower e arquiva tudo nas tuas bases do Notion.",
-          "Todas as manhãs recebes um resumo das tarefas com botões «Feito / Amanhã» — o dia começa com uma lista clara.",
-          "Os e-mails importantes do Gmail transformam-se automaticamente em tarefas — nada se perde."
+          "Ligas uma vez o email, o calendário, o banco e as notas — e dizes o que tirar da tua frente.",
+          "O Lis puxa o fluxo de todas as fontes sozinho, percebe cada item e resolve tudo o que pode sem ti.",
+          "O que não se pode decidir por ti — traz como escolha pronta: um toque, «Sim» ou «Não».",
+          "Queres não esquecer algo — envia uma foto. O Lis reconhece e pergunta ou faz logo."
         ],
         "proofs": [
-          "O MVP funciona todos os dias como sistema operativo pessoal do autor.",
-          "Stack sem servidores e sem código: Telegram + Make + OpenAI + Notion.",
-          "Não é uma subscrição: montas numa noite a partir de um esquema pronto — e é teu para sempre."
+          "As ações e a reflexão saem de ti — não uma lista de tarefas, mas decisões prontas.",
+          "Corre sobre o Cowork e o Claude: máximo de acessos — mínimo de toques teus.",
+          "Configuras uma vez — depois é teu. Método: matriz de Eisenhower + laços."
         ]
       }
     },
@@ -289,12 +289,41 @@
       }
     },
     {
+      "id": "guide-paris",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#6C8CB4\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M72 36 A26 26 0 1 0 72 64 L72 50 L54 50\"/><path d=\"M20 84 Q30 78 40 84 Q50 90 60 84 Q70 78 80 84\"/></svg>",
+      "category": "Viagens / Guia",
+      "name": "Guia «A minha Paris por uns dias»",
+      "hook": "Bairros gastronómicos, passagens e vistas da torre fora dos trilhos turísticos — de quem anda por estas ruas.",
+      "description": "Um guia pessoal de Paris no motor «O Meu Guia»: pontos de autor em 7 bairros, rotas por situação («meio dia · carro · pôr do sol»), lugares secretos e hora do pôr do sol em direto. Grátis, o funil leva ao SeedWave.",
+      "sectors": [
+        "Travel",
+        "Consumer"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Autores de guias · Primeiros utilizadores · Feedback",
+      "demoLink": "https://ikartuzov-hub.github.io/guide/paris/",
+      "page": {
+        "how": [
+          "Abres o guia — 7 bairros de Paris: Torre, Saint-Germain, Bairro Latino, Louvre, Ópera, Le Marais, Montmartre.",
+          "Os pontos têm notas do autor: o enquadramento, quando ir, o que provar; os lugares secretos vêm assinalados.",
+          "As rotas montam-se a partir dos pontos: «meio dia · carro · pôr do sol» — um percurso para o teu dia.",
+          "Cada rota tem três ligações: Google Maps, mostrar no mapa, partilhar. A hora do pôr do sol é calculada no momento."
+        ],
+        "proofs": [
+          "Pontos de autor em 7 bairros × 5 línguas, rotas por cenário.",
+          "De quem anda por estas ruas — notas pessoais, não um guia turístico.",
+          "O mesmo motor de «A Minha Madeira por Descobrir»: um novo guia é um novo conjunto de pontos."
+        ]
+      }
+    },
+    {
       "id": "tonight",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#6C5CE7\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Tonight\"><title>Tonight</title><path d=\"M30 68 L30 24 L62 66 L62 22\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></svg>",
       "category": "Tecnologia / Eventos",
       "name": "Tonight — plataforma de digressões para artistas e espaços",
       "hook": "Plataforma de digressões para pequenos artistas e espaços locais: uma cadeia de cidades próximas, bilheteira única e promoção partilhada.",
-      "description": "Ajuda pequenos artistas e organizadores a encontrarem-se, a pagar cachês com segurança e a vender bilhetes para micro-eventos. A plataforma monta a digressão com espaços de curtas distâncias e centraliza o orçamento de promoção. O iniciador é um operador de eventos ativo na Europa.",
+      "description": "Ajuda pequenos artistas e organizadores a encontrarem-se, a pagar cachés com segurança e a vender bilhetes para micro-eventos. A plataforma monta a digressão com espaços de curtas distâncias e centraliza o orçamento de promoção. O iniciador é um operador de eventos ativo na Europa.",
       "sectors": [
         "Technology",
         "Events"

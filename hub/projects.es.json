@@ -124,11 +124,11 @@
     },
     {
       "id": "lis",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Lis\"><title>Lis</title><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></svg>",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
       "category": "IA / Tecnología",
-      "name": "Lis — tu secretario personal de IA",
-      "hook": "Secretario personal de IA en Telegram: capta tareas, las ordena por prioridad y envía un resumen cada mañana. No es suscripción — móntalo en una noche y es tuyo para siempre.",
-      "description": "Escribes al bot una tarea, idea o correo — Lis fija la prioridad por la matriz de Eisenhower, lo archiva en tus bases de Notion y por la mañana envía la lista de tareas con botones «Hecho / Mañana». Los correos importantes de Gmail se convierten en tareas automáticamente. Stack: Telegram + Make + OpenAI + Notion.",
+      "name": "Lis — vive tu rutina por ti",
+      "hook": "Secretario personal de IA sobre Cowork y Claude. Conectas una vez el correo, el calendario, el banco y las notas — después ordena el flujo solo. De ti: solo «Sí» o «No».",
+      "description": "No es un bot de entrada que hay que alimentar, sino una capa sobre tu Claude: las fuentes llenan a Lis solas, entiende cada punto, resuelve lo reversible en silencio y te trae solo el resultado y una bifurcación «Sí/No». Quieres no olvidar algo — envía una foto, él hace el resto.",
       "sectors": [
         "AI",
         "Technology"
@@ -136,18 +136,18 @@
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Creador de contenido · Comercial · Tester",
-      "demoLink": "",
+      "demoLink": "https://l.seedwave.dev/",
       "page": {
         "how": [
-          "Escribes al bot en Telegram una tarea, una idea o reenvías un correo — a cualquier hora del día.",
-          "La IA asigna la prioridad según la matriz de Eisenhower y lo archiva todo en tus bases de Notion.",
-          "Cada mañana recibes un resumen de tareas con botones «Hecho / Mañana» — el día empieza con una lista clara.",
-          "Los correos importantes de Gmail se convierten en tareas automáticamente — nada se pierde."
+          "Conectas una vez el correo, el calendario, el banco y las notas — y dices qué quitar de tu vista.",
+          "Lis trae el flujo de todas las fuentes solo, entiende cada punto y resuelve todo lo que puede sin ti.",
+          "Lo que no se puede decidir por ti — lo trae como bifurcación lista: un toque, «Sí» o «No».",
+          "Quieres no olvidar algo — envía una foto. Lis la reconoce y pregunta o lo hace al momento."
         ],
         "proofs": [
-          "El MVP funciona a diario como sistema operativo personal del autor.",
-          "Stack sin servidores y sin código: Telegram + Make + OpenAI + Notion.",
-          "No es una suscripción: lo montas en una tarde con un esquema listo — y es tuyo para siempre."
+          "Las acciones y el pensar se te quitan — no una lista de tareas, sino decisiones listas.",
+          "Funciona sobre Cowork y Claude: máximo acceso — mínimo de toques tuyos.",
+          "Lo configuras una vez — después es tuyo. Método: matriz de Eisenhower + bucles."
         ]
       }
     },
@@ -285,6 +285,35 @@
           "El usuario crea su propia guía — y puede regalarla como un regalo personal.",
           "Cowork monta la guía de un nuevo autor desde sus puntos — el bucle Forge en acción.",
           "Cientos de guías personales → una geografía viva de SeedWave y un flujo de usuarios."
+        ]
+      }
+    },
+    {
+      "id": "guide-paris",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#6C8CB4\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M72 36 A26 26 0 1 0 72 64 L72 50 L54 50\"/><path d=\"M20 84 Q30 78 40 84 Q50 90 60 84 Q70 78 80 84\"/></svg>",
+      "category": "Viajes / Guía",
+      "name": "Guía «Mi París para un par de días»",
+      "hook": "Barrios gastronómicos, pasajes y vistas de la torre fuera de las rutas turísticas — de quien camina por estas calles.",
+      "description": "Una guía personal de París en el motor «Mi Guía»: puntos de autor en 7 barrios, rutas por situación («medio día · coche · atardecer»), lugares secretos y hora del atardecer en vivo. Gratis, el embudo lleva a SeedWave.",
+      "sectors": [
+        "Travel",
+        "Consumer"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Autores de guías · Primeros usuarios · Comentarios",
+      "demoLink": "https://ikartuzov-hub.github.io/guide/paris/",
+      "page": {
+        "how": [
+          "Abres la guía — 7 barrios de París: Torre, Saint-Germain, Barrio Latino, Louvre, Ópera, Le Marais, Montmartre.",
+          "Los puntos traen notas del autor: el encuadre, cuándo ir, qué probar; los lugares secretos están marcados.",
+          "Las rutas se arman a partir de los puntos: «medio día · coche · atardecer» — un recorrido para tu día.",
+          "Cada ruta tiene tres enlaces: Google Maps, mostrar en el mapa, compartir. La hora del atardecer se calcula al momento."
+        ],
+        "proofs": [
+          "Puntos de autor en 7 barrios × 5 idiomas, rutas por escenario.",
+          "De quien camina por estas calles — notas personales, no una guía turística.",
+          "El mismo motor que «Mi Madeira por Descubrir»: una guía nueva es un nuevo conjunto de puntos."
         ]
       }
     },
