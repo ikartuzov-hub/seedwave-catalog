@@ -14,7 +14,8 @@
       "stage": "mvp",
       "investment": "150 000 EUR (20% des Objektwerts). Mindesteinstieg ab 5 000 EUR.",
       "lookingFor": "Genossen-Investoren · Anwalt · Operativer Partner",
-      "demoLink": "https://ikartuzov-hub.github.io/dubai-madeira/",
+      "demoLink": "",
+      "moreLink": "https://ikartuzov-hub.github.io/dubai-madeira/",
       "page": {
         "how": [
           "Die Genossenschaft wird nach portugiesischem Recht gegründet (Cooperativa de Habitação e Construção) — eine gemeinnützige Form mit Steuervorteilen: Befreiung von IRC, IMT und IMI.",
@@ -78,7 +79,8 @@
       ],
       "stage": "mvp",
       "investment": "",
-      "demoLink": "https://ikartuzov-hub.github.io/forge/",
+      "demoLink": "",
+      "moreLink": "https://ikartuzov-hub.github.io/forge/",
       "category": "SeedWave-Werkzeug",
       "name": "Forge — von der Idee zum lebenden Produkt",
       "hook": "Erzähl deine Idee — die KI baut daraus ein funktionierendes Produkt. Keine Präsentation, sondern ein lebendes MVP, das du am Telefon öffnest.",
@@ -250,7 +252,8 @@
       ],
       "stage": "mvp",
       "investment": "",
-      "demoLink": "https://ikartuzov-hub.github.io/guide/",
+      "demoLink": "",
+      "moreLink": "https://ikartuzov-hub.github.io/guide/",
       "category": "Reisen / Guide",
       "name": "Mein Guide — ein persönlicher Guide aus deinen Kartenpunkten",
       "hook": "Deine markierten Orte werden zu einem schönen Guide, den du mit einem Link teilst. Szenarien für den Anlass, geheime Orte, Sonnenuntergang in Echtzeit.",
@@ -290,7 +293,8 @@
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Guide-Autoren · Erste Nutzer · Feedback",
-      "demoLink": "https://ikartuzov-hub.github.io/guide/paris/",
+      "demoLink": "",
+      "moreLink": "https://ikartuzov-hub.github.io/guide/paris/",
       "page": {
         "how": [
           "Du öffnest den Guide — 7 Pariser Viertel: Turm, Saint-Germain, Quartier Latin, Louvre, Oper, Le Marais, Montmartre.",
@@ -319,7 +323,8 @@
       "stage": "validation",
       "investment": "",
       "lookingFor": "Builder (Bot + Tickets) · Operator · Pilot-Venues",
-      "demoLink": "https://ikartuzov-hub.github.io/seedwave-catalog/tonight.html",
+      "demoLink": "",
+      "moreLink": "https://ikartuzov-hub.github.io/seedwave-catalog/tonight.html",
       "page": {
         "how": [
           "Die Plattform baut eine Tour als Kette von Spielstätten in nahen Städten — kurze Wege, geringere Kosten.",
@@ -349,6 +354,7 @@
       "investment": "",
       "lookingFor": "Investor",
       "demoLink": "",
+      "moreLink": "https://ikartuzov-hub.github.io/seedwave-catalog/sports-creams.html",
       "page": {
         "how": [
           "Eigene Rezepturen auf Basis natürlicher Inhaltsstoffe — ohne unnötige Chemie.",
@@ -376,7 +382,8 @@
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Pilot-Schüler · Golfclubs und Instruktoren · Partner (Plätze, Ausrüstung)",
-      "demoLink": "https://ikartuzov-hub.github.io/birdie/intro.html",
+      "demoLink": "",
+      "moreLink": "https://ikartuzov-hub.github.io/birdie/intro.html",
       "page": {
         "how": [
           "Der Schüler öffnet Birdie direkt auf dem Platz — Begriff, Schlag, Frage in Sekunden, ohne Internet.",
@@ -415,7 +422,8 @@
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Antiquitäten-Experte · Pilot-Nutzer · Builder",
-      "demoLink": "https://ikartuzov-hub.github.io/relic/?lang=en",
+      "demoLink": "",
+      "moreLink": "https://ikartuzov-hub.github.io/relic/",
       "page": {
         "how": [
           "Fotografiere eine alte Münze und schick das Foto an den Telegram-Bot.",
