@@ -2,11 +2,11 @@
   "projects": [
     {
       "id": "dubai-madeira-cooperative",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#2A8FC0\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M34 20 L34 74\"/><path d=\"M34 20 C64 20 64 74 34 74\"/><path d=\"M18 88 Q28 82 38 88 Q48 94 58 88 Q68 82 78 88\"/></svg>",
+      "icon": "🏢",
       "category": "Immobilien",
       "name": "Dubai Madeira Cooperative — Wohnungsbaugenossenschaft",
       "hook": "Genossenschaft nach portugiesischem Recht für den gemeinsamen Immobilienkauf. Das erste Objekt legte in 15 Monaten um +48% zu.",
-      "description": "Wohnungsbau- und Baugenossenschaft für den gemeinsamen Immobilienkauf im Projekt «Dubai» Madeira — einem Premium-Projekt mit 400 Wohnungen in Funchal (Madeira). Gemeinnützige Organisation mit Steuervorteilen — Befreiung von IRC, IMT und IMI. Nächstes Projekt — SeedWave_11, Einstieg ab 5 000 EUR.",
+      "description": "Wohnungsbau- und Baugenossenschaft für den gemeinsamen Immobilienkauf auf Madeira und in Dubai. Gemeinnützige Organisation mit Steuervorteilen — Befreiung von IRC, IMT und IMI. Nächstes Projekt — SeedWave_11, Einstieg ab 5 000 EUR.",
       "sectors": [
         "Real Estate",
         "Construction"
@@ -14,7 +14,7 @@
       "stage": "mvp",
       "investment": "150 000 EUR (20% des Objektwerts). Mindesteinstieg ab 5 000 EUR.",
       "lookingFor": "Genossen-Investoren · Anwalt · Operativer Partner",
-      "demoLink": "https://ikartuzov-hub.github.io/dubai-madeira/",
+      "demoLink": "",
       "page": {
         "how": [
           "Die Genossenschaft wird nach portugiesischem Recht gegründet (Cooperativa de Habitação e Construção) — eine gemeinnützige Form mit Steuervorteilen: Befreiung von IRC, IMT und IMI.",
@@ -31,104 +31,12 @@
       }
     },
     {
-      "id": "nem",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#12D68A\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nEm\"><title>nEm — Nova Energia da Madeira</title><path d=\"M22 20 L22 62\"/><path d=\"M22 20 Q31 14 40 20 Q49 26 58 20\"/><path d=\"M22 41 Q30 35 38 41 Q46 47 54 41\"/><path d=\"M22 62 Q31 56 40 62 Q49 68 58 62\"/><path d=\"M15 86 Q28 80 39 86 Q50 92 61 86 Q72 80 85 86\"/></svg>",
-      "category": "Energie",
-      "name": "nEm — Nova Energia da Madeira",
-      "hook": "Solar, Batterien und Ladepunkte mit Förderung und staatlicher Unterstützung — schlüsselfertig.",
-      "description": "Nova Energia da Madeira: saubere, grüne Energie für Häuser und Eigentümergemeinschaften auf Madeira — Module, Batterie und Ladepunkte mit staatlicher Förderung, schlüsselfertig. Ein Ansprechpartner: Planung, Unterlagen, Betreuung des Förderantrags (+ENERGIA, Fundo Ambiental) und Empfehlung eines zertifizierten Installateurs. Das Projekt installiert nicht, ist kein Finanzvermittler und hält kein Geld der Bewohner. Energieeffizienz ist die Grundlage und der erste Schritt des ILYNQ-Horizonts — einer dezentralen KI auf der Insel.",
-      "sectors": [
-        "Energie sparen",
-        "Neue Technologien",
-        "Staatliche Förderung"
-      ],
-      "stage": "pilot",
-      "investment": "",
-      "lookingFor": "Pilot-Eigentümergemeinschaften · Zertifizierte Installateure · Partner",
-      "demoLink": "",
-      "page": {
-        "how": [
-          "Dach, Verbrauch und Amortisation werden geprüft — der Nutzen des Pakets wird berechnet.",
-          "Unterlagen werden vorbereitet und die Zustimmung der Gemeinschaft eingeholt: Versammlungsprotokoll, Datenblätter, Registrierung.",
-          "Der Förderantrag wird im richtigen Fenster gestellt — +ENERGIA (Module + Batterie) und Fundo Ambiental / E-Mobilität (Ladepunkte).",
-          "Ein Energiekreislauf wird schlüsselfertig installiert: Sonne am Tag → Batterie → Laden am Abend und niedrigere gemeinsame Rechnung.",
-          "Ein zertifizierter Installateur wird ausgewählt und das Projekt bis zur Förderauszahlung begleitet. Von Ihnen — ein Wort: „Ich will“."
-        ],
-        "proofs": [
-          "Erstes Pilotprojekt — VARINO-Koalition (Dubai Madeira, Funchal): Block 8 Übergabe im August 2026, Block 9 energiebereit im Bau vorbereitet. Pilot läuft, nicht abgeschlossen.",
-          "Abstimmung mit AREAM — der regionalen Energie- und Umweltagentur — als Missionspartner (im Einklang mit den PAESC-RAM-Zielen).",
-          "Programme: +ENERGIA bis zu 10.000 € pro Gemeinschaft (75% Erzeugung, 85% Speicherung); Fundo Ambiental — T7-Ladung bis 80%.",
-          "Rechtsgrundlage: DL 93/2025 verpflichtet Neubauten zur Ladeinfrastruktur — das Projekt stellt dies sicher und geht solar-ready im Bau."
-        ],
-        "vision": [
-          "Jedes abgeschlossene Projekt ist eine Opportunity-Karte und ein Beweis der Methode, keine Folie.",
-          "Vom Vermittler zum Knoten: Energiegemeinschaften und Deal Flow in den Bau — mit dem Fortschritt der Phasen.",
-          "ILYNQ-Horizont: die günstige saubere Energie der Insel als Grundlage einer verteilten KI. In Vorbereitung, nicht als funktionierend behauptet."
-        ]
-      },
-      "moreLink": "https://ikartuzov-hub.github.io/nem/"
-    },
-    {
-      "id": "forge",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E2622E\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M36 16 V84\"/><path d=\"M36 21 Q49 9 60 20 Q70 28 82 19\"/><path d=\"M36 50 H70\"/></svg>",
-      "sectors": [
-        "AI",
-        "Platform",
-        "No-Code"
-      ],
-      "stage": "mvp",
-      "investment": "",
-      "demoLink": "https://ikartuzov-hub.github.io/forge/",
-      "category": "SeedWave-Werkzeug",
-      "name": "Forge — von der Idee zum lebenden Produkt",
-      "hook": "Erzähl deine Idee — die KI baut daraus ein funktionierendes Produkt. Keine Präsentation, sondern ein lebendes MVP, das du am Telefon öffnest.",
-      "description": "Der SeedWave-Konstruktor: ein bewährter Weg von der rohen Idee zum lebenden Produkt. Die KI strukturiert jede Idee kostenlos; die starken bauen wir gemeinsam. Bereits bewiesen mit Treino, Birdie, Relic. Die Methode ist offen — bring eine Idee, statt zu suchen, wem du sie anvertraust.",
-      "lookingFor": "Teilnehmer-Ideen · Partner · Feedback",
-      "page": {
-        "how": [
-          "Erzähl deine Idee in einem Satz — dem Telegram-Bot oder direkt auf der Showcase-Seite.",
-          "Die KI-Analyse strukturiert sie: für wen, was schon existiert, der Kern, worauf zu achten ist.",
-          "Starke Ideen bauen wir zu einem funktionierenden MVP — mehrsprachige Engine, Bot, Kasse.",
-          "Das Produkt geht live: ein Link, erste Nutzer, eine Karte in SeedWave.",
-          "Die Methode ist offen: immer derselbe Weg; ein neues Produkt ist Inhalt, kein Neubau."
-        ],
-        "proofs": [
-          "Treino: Idee „eine Sprache anhand der eigenen Geschichte lernen“ → eine lebende App mit zahlenden Lernenden.",
-          "Birdie: Idee „ein Assistent für Golf-Lernende“ → ein mehrsprachiger PWA-Assistent im Pilot.",
-          "Relic: Idee „eine alte Münze bewerten“ → ein KI-Bot, in einem halben Tag gebaut."
-        ],
-        "vision": [
-          "Ein Strom von Teilnehmer-Ideen füllt SeedWave: jede strukturierte Idee wird zu einer Karte im Register.",
-          "Starke Ideen werden zu lebenden Produkten und speisen den Deal Flow der Plattform.",
-          "Der Konstruktor ist ein Trainingsfeld: jedes gebaute Produkt schärft die wiederholbare Methode."
-        ]
-      }
-    },
-    {
-      "id": "nam",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#4C8DFF\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nAm\"><title>nAm — Novos Apoios da Madeira</title><path d=\"M30 72 L50 16 L70 72\"/><path d=\"M37 52 Q43.5 46 50 52 Q56.5 58 63 52\"/><path d=\"M15 88 Q28 82 39 88 Q50 94 61 88 Q72 82 85 88\"/></svg>",
-      "category": "Förderungen",
-      "name": "nAm — Novos Apoios da Madeira",
-      "hook": "Wie viel schuldet der Staat Ihrem Unternehmen? 6 Fragen — und Ihre Zahl in Euro.",
-      "description": "Förder-Check für Madeira: 6 kurze Fragen — und Sie sehen die Programme und Beträge, die Ihrem Unternehmen zustehen könnten: Einstellung, Kostenerstattung, Energie, Gründung. Danach ein Wort — «Ich will»: Unterlagen, Antrag im richtigen Fenster, Begleitung bis zur Auszahlung. Schwester von nEm unter dem ILYNQ-Dach: ein Förder-Kunde ist ein warmer Lead für das Energiepaket.",
-      "sectors": [
-        "Staatliche Förderung",
-        "Kleinunternehmen",
-        "Finanzen"
-      ],
-      "stage": "pilot",
-      "investment": "",
-      "lookingFor": "Restaurants & Kleinunternehmen Madeiras · Partner-Contabilistas",
-      "demoLink": "https://ikartuzov-hub.github.io/nam/",
-      "moreLink": "https://ikartuzov-hub.github.io/nam/flyer.html"
-    },
-    {
       "id": "lis",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Lis\"><title>Lis</title><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></svg>",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
       "category": "KI / Technologie",
-      "name": "Lis — dein persönlicher KI-Sekretär",
-      "hook": "Persönlicher KI-Sekretär in Telegram: erfasst Aufgaben, ordnet sie nach Priorität und schickt jeden Morgen eine Übersicht. Kein Abo — bau ihn an einem Abend und besitze ihn für immer.",
-      "description": "Du schreibst dem Bot eine Aufgabe, Idee oder E-Mail — Lis setzt die Priorität nach der Eisenhower-Matrix, legt sie in deinen Notion-Datenbanken ab und schickt morgens die To-do-Liste mit Buttons «Erledigt / Morgen». Wichtige Gmail-Mails werden automatisch zu Aufgaben. Stack: Telegram + Make + OpenAI + Notion.",
+      "name": "Lis — lebt deine Routine für dich",
+      "hook": "Persönlicher KI-Sekretär auf Cowork und Claude. Du verbindest einmal E-Mail, Kalender, Bank und Notizen — danach ordnet er den Fluss von selbst. Von dir: nur «Ja» oder «Nein».",
+      "description": "Kein Eingangs-Bot, den du füttern musst, sondern eine Schicht auf deinem Claude: die Quellen füllen Lis von selbst, er versteht jeden Punkt, erledigt Umkehrbares still und bringt dir nur das Ergebnis und eine Ja/Nein-Weiche. Willst du etwas nicht vergessen — schick ein Foto, den Rest macht er.",
       "sectors": [
         "AI",
         "Technology"
@@ -136,92 +44,20 @@
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Content-Creator · Vertrieb · Tester",
-      "demoLink": "",
+      "demoLink": "https://l.seedwave.dev/",
       "page": {
         "how": [
-          "Du schreibst dem Bot in Telegram eine Aufgabe, eine Idee oder leitest eine E-Mail weiter — zu jeder Tageszeit.",
-          "Die KI setzt die Priorität nach der Eisenhower-Matrix und legt alles in deinen Notion-Datenbanken ab.",
-          "Jeden Morgen kommt eine Übersicht deiner Aufgaben mit den Buttons «Erledigt / Morgen» — der Tag beginnt mit einer klaren Liste.",
-          "Wichtige Gmail-Nachrichten werden automatisch zu Aufgaben — nichts geht verloren."
+          "Du verbindest einmal E-Mail, Kalender, Bank und Notizen — und sagst, was von deinem Tisch soll.",
+          "Lis zieht den Fluss aus allen Quellen selbst, versteht jeden Punkt und erledigt alles Mögliche ohne dich.",
+          "Was nicht für dich entschieden werden kann — bringt er als fertige Weiche: ein Tipp, «Ja» oder «Nein».",
+          "Willst du etwas nicht vergessen — schick ein Foto. Lis erkennt es und fragt oder macht es sofort."
         ],
         "proofs": [
-          "Das MVP läuft täglich als persönliches Betriebssystem des Autors.",
-          "Stack ohne Server und ohne Code: Telegram + Make + OpenAI + Notion.",
-          "Kein Abo: an einem Abend nach fertigem Bauplan aufgebaut — und für immer dein."
+          "Handeln und Nachdenken werden dir abgenommen — keine To-do-Liste, sondern fertige Entscheidungen.",
+          "Läuft auf Cowork und Claude: maximaler Zugang — minimale Tipps von dir.",
+          "Einmal eingerichtet — dann gehört er dir. Methode: Eisenhower-Matrix + Schleifen."
         ]
       }
-    },
-    {
-      "id": "ntm",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#29B5CF\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nTm\"><title>nTm — Novos Trilhos da Madeira</title><path d=\"M28 22 H72\"/><path d=\"M50 22 V68\"/><path d=\"M15 84 Q28 78 39 84 Q50 90 61 84 Q72 78 85 84\"/></svg>",
-      "category": "Tourismus · Natur",
-      "name": "nTm — Novos Trilhos da Madeira",
-      "hook": "Heute offen? Status aller 14 Wege, Live-Wetter am Startpunkt und SIMplifica-Buchung mit einem Tipp.",
-      "description": "Seit dem 1. Januar 2026 verlangt jeder klassifizierte Wanderweg Madeiras ein gebuchtes 30-Minuten-Zeitfenster im SIMplifica-Portal — und die Wege werden nach Erdrutschen oder Unwettern ohne Vorwarnung gesperrt. nTm beantwortet eine einzige Frage, bevor der Besucher in die Berge fährt: ist er heute offen? Es zeigt den Status von 14 Wegen (offizielle IFCN-Quelle), das Live-Wetter an jedem Startpunkt nach dessen echter Höhe — der Kontrast «Funchal +26°, am Grat +9° bei 62 km/h Wind» — und führt direkt zum offiziellen Buchungsportal. Ist ein Weg gesperrt, schlägt nTm den nächsten offenen Weg derselben Art vor. Wir sind weder Zahlungsdienstleister noch Reisebüro: der Buchungsbutton ist ein Link zu SIMplifica. Jede Woche ein «Geheimtipp von einem Einheimischen» — ein Ort, den die Reisebusse nicht kennen. Die Spitze des SeedWave-Trichters: Reichweite und Vertrauen, die erste Stufe zum Guide und zum Wohnen in Funchal.",
-      "sectors": [
-        "Tourismus",
-        "Natur",
-        "Madeira"
-      ],
-      "stage": "mvp",
-      "investment": "",
-      "lookingFor": "Betreiber mit IFCN-Protokoll · Ferienunterkünfte · Guides · Content-Partner",
-      "demoLink": "https://ikartuzov-hub.github.io/ntm/",
-      "page": {
-        "how": [
-          "nTm öffnen — alle 14 Wege mit aktuellem Status: offen, teilweise, gesperrt. Zeitstempel und Link zur offiziellen IFCN-Quelle.",
-          "Live-Wetter an jedem Startpunkt sehen, berechnet nach der echten Höhe des Ausgangspunkts (Open-Meteo), nicht nach der Stadt.",
-          "Ihren Weg wählen. Ist er gesperrt, zeigen wir den nächsten offenen Weg derselben Art — Küste statt Berg.",
-          "Das 30-Minuten-Zeitfenster im offiziellen SIMplifica-Portal buchen: 4,50 € pro Weg, PR1 10,50 €, Einwohner und Kinder ≤12 gratis (Reservierung dennoch Pflicht).",
-          "Jede Woche ein Geheimtipp von einem Einheimischen. Und für alle, die wiederkommen, der Weg, hier zu leben statt nur zu besuchen."
-        ],
-        "proofs": [
-          "Fünf Jahre Leben und Wandern auf Madeira: die Wege, die richtigen Stunden, das Wetter, das sich auf 1 800 m ändert.",
-          "Geprüfte Rechtsgrundlage: Portaria 801/2025 (10.12) und Portaria 48/2026 (13.02); Wegstatus vom IFCN, IP-RAM.",
-          "Live-Wetter über die öffentliche Open-Meteo-API, nach Koordinaten und Höhe jedes Startpunkts — ohne Schlüssel, ohne Kosten, ohne Server.",
-          "SeedWave-Dreischichtarchitektur: Motor, fünf Sprachen, Daten. Ein neuer Weg oder eine neue Sprache berühren den Motor nie."
-        ],
-        "vision": "Eine Stufe der ILYNQ-Leiter. nTm ist die Spitze des Trichters: der Besucher kehrt täglich zurück, weil sich die Frage «heute offen?» immer wieder stellt. Aus Nutzen wächst Vertrauen; aus Vertrauen der Guide zu geheimen Orten; und für alle, die sich in die Insel verlieben, der nächste Schritt — eine Wohnung in Funchal, genossenschaftlich. Phase 2: Webcams, GPX, «der Weg ist wieder offen»-Meldungen."
-      },
-      "moreLink": "https://ikartuzov-hub.github.io/ntm/flyer.html"
-    },
-    {
-      "id": "ncm",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#C88A2E\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nCm\"><title>nCm — Nova Colheita da Madeira</title><path d=\"M69 29 A27 27 0 1 0 69 71\"/><path d=\"M15 86 Q28 80 39 86 Q50 92 61 86 Q72 80 85 86\"/></svg>",
-      "category": "Agrartech",
-      "name": "nCm — Nova Colheita da Madeira",
-      "hook": "Hof 2.0 für einen Bruchteil des Preises: Madeiras Programme zahlen bis zu 85% der Modernisierung — schlüsselfertig.",
-      "description": "Nova Colheita da Madeira zeigt dem Landwirt die Technologien der Zukunft — Tröpfchenbewässerung, Sensoren, smartes Gewächshaus, Kühlung, Solar, Drohne — und das Entscheidende: Madeiras Programme (F.1 PEPAC) zahlen bis zu 85% dieser Modernisierung. Der «Hof 2.0»-Konfigurator formt den Plan in drei Zahlen: Kosten, was das Programm zahlt, Ihr Anteil. Danach ein Fenster: Unterlagen, IFAP-Registrierung, Antrag im richtigen Fenster, Begleitung bis zur Auszahlung. Direktzahlungen (POSEI, Sammelantrag, ANC, Bio) als regelmäßiges Einkommen des Hofs. Das Projekt vergibt keine Förderung und hält kein Geld des Landwirts. Eine Stufe der ILYNQ-Leiter: Solar auf dem Gewächshaus führt zu nEm, Verarbeitung zu nAm. Technologie zuerst — die Förderung ist der Treibstoff für Wachstum.",
-      "sectors": [
-        "Agrartech",
-        "Förderung",
-        "Madeira"
-      ],
-      "stage": "pilot",
-      "investment": "",
-      "lookingFor": "Pilot-Höfe · Genossenschaften · Agrartech-Anbieter · SRA-Partner",
-      "demoLink": "https://ikartuzov-hub.github.io/ncm/",
-      "page": {
-        "how": [
-          "Bauen Sie Ihren Hof 2.0 im Konfigurator: Bewässerung, Sensoren, Gewächshaus, Kühlung, Solar, Drohne — und sehen sofort drei Zahlen: Kosten, was das Programm zahlt, Ihr Anteil.",
-          "Beantworten Sie 7 Fragen — wir bestätigen die Programme und Ihren Satz: Basis 65%, Junglandwirt bis 85%.",
-          "Ihr Zukunftsplan steht: Technologien mit Beträgen + regelmäßige Zahlungen des Hofs (POSEI, Sammelantrag, ANC, Bio) — ehrliche Rechnung, Stufe A/B.",
-          "Wir bereiten Unterlagen und IFAP-Registrierung vor, reichen im richtigen Fenster ein: direkt — jährlich; F.1-Investition und Junglandwirt-Prämie — per Aviso.",
-          "Wir begleiten bis zur Auszahlung. Von Ihnen — nur ein Wort: «Ich will»."
-        ],
-        "proofs": [
-          "26 Jahre Agrarbusiness im vollen Zyklus (Kartofel / Freshland): Produktion, Kühllagerung, Vertrieb — Hof 2.0 mit den Händen gebaut, bevor es Trend war.",
-          "Echte Madeira-Instrumente: F.1-Investition bis 85% (Portaria 583/2025 — Junglandwirt-Prämie F.1.2), POSEI, Sammelantrag, ANC, Agrarumwelt.",
-          "Kanäle erarbeitet: SRA Madeira, IFAP, AREAM, Genossenschaften — Zugang über feiras und die Regionaldirektion für Landwirtschaft.",
-          "Ehrliche Rechnung (Stufe A/B): Direkt- und Formelzahlungen in der Überschrift; wettbewerbliche Investitionsmaßnahmen auf separatem Weg, keine überhöhten Versprechen."
-        ],
-        "vision": [
-          "Jeder modernisierte Hof ist ein Opportunity-Eintrag und ein Beweis der Methode, keine Folie.",
-          "Die ILYNQ-Leiter in Aktion: Solar auf dem Gewächshaus → nEm, Verarbeitung und Vermarktung → nAm; der Kunde wächst Stufe für Stufe.",
-          "ILYNQ-Horizont: technologiegetriebene Landwirtschaft + überschüssige saubere Energie der Insel als Basis verteilter KI. Wir bereiten es vor, wir behaupten nicht, dass es bereits läuft."
-        ]
-      },
-      "moreLink": "https://ikartuzov-hub.github.io/ncm/flyer.html"
     },
     {
       "id": "treino",
@@ -254,78 +90,8 @@
       "methodLink": "https://ikartuzov-hub.github.io/treino/u/method.html"
     },
     {
-      "id": "guide",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E14B6A\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M72 36 A26 26 0 1 0 72 64 L72 50 L54 50\"/><path d=\"M20 84 Q30 78 40 84 Q50 90 60 84 Q70 78 80 84\"/></svg>",
-      "sectors": [
-        "Travel",
-        "Consumer"
-      ],
-      "stage": "mvp",
-      "investment": "",
-      "demoLink": "https://ikartuzov-hub.github.io/guide/",
-      "category": "Reisen / Guide",
-      "name": "Mein Guide — ein persönlicher Guide aus deinen Kartenpunkten",
-      "hook": "Deine markierten Orte werden zu einem schönen Guide, den du mit einem Link teilst. Szenarien für den Anlass, geheime Orte, Sonnenuntergang in Echtzeit.",
-      "description": "Eine Engine für persönliche Guides: deine gespeicherten Punkte → ein visueller Guide mit Szenarien (\"halber Tag · Auto · Sonnenuntergang\"), automatischer Geheim-Markierung und Live-Sonnenuntergangszeit. Eine Engine — ein neuer Guide ist nur ein neuer Satz Punkte. Kostenlos, der Funnel führt zu SeedWave.",
-      "lookingFor": "Guide-Autoren · Erste Nutzer · Feedback",
-      "page": {
-        "how": [
-          "Du markierst Orte auf Google Maps — wie gewohnt, mit deinen Notizen.",
-          "Die Engine macht daraus einen visuellen Guide: Karte, Karten, Bewertungen, deine Notizen.",
-          "Aus Punkten entstehen Szenarien: \"halber Tag · Auto · Sonnenuntergang\" — ein Guide für die Situation des Gastes.",
-          "Geheime Orte werden automatisch markiert; die populären wandern zur \"Basis nebenan\".",
-          "Ein neuer Guide ist ein neuer Satz Punkte, keine neue App: \"Mein Paris\", \"Mein Madeira\"."
-        ],
-        "proofs": [
-          "Ein Live-Guide \"Mein Unentdecktes Madeira\": 17 Orte, 3 Hero-Szenarien, 5 Oberflächensprachen.",
-          "Die Sonnenuntergangszeit wird live berechnet (SunCalc) — ohne Server, ohne Keys, ein sauberes Asset.",
-          "Die Ortsdaten sind ein Google-Snapshot; der Burggraben ist die persönliche Notiz des Autors."
-        ],
-        "vision": [
-          "Der Nutzer baut seinen eigenen Guide — und kann ihn als persönliches Geschenk verschenken.",
-          "Cowork baut den Guide eines neuen Autors aus seinen Punkten — die Forge-Schleife in Aktion.",
-          "Hunderte persönliche Guides → eine lebendige SeedWave-Geografie und ein Nutzerstrom."
-        ]
-      }
-    },
-    {
-      "id": "guide-paris",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#6C8CB4\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M72 36 A26 26 0 1 0 72 64 L72 50 L54 50\"/><path d=\"M20 84 Q30 78 40 84 Q50 90 60 84 Q70 78 80 84\"/></svg>",
-      "category": "Reisen / Guide",
-      "name": "Mein Paris — ein Guide für ein paar Tage",
-      "hook": "Gourmet-Viertel, überdachte Passagen und Turmblicke abseits der Touristenpfade — 65 Orte von jemandem, der diese Straßen kennt. Drei Held-Routen, Sonnenuntergang in Echtzeit.",
-      "description": "Der Guide «Mein Paris für ein paar Tage» auf der Personal-Guide-Engine von SeedWave: 65 geprüfte Orte in sieben Vierteln, drei Held-Routen, geheime Orte, Sonnenuntergang in Echtzeit, 5 Sprachen. Dieselbe Engine wie Madeira — ein neues Ziel ist ein neuer Satz Punkte, keine neue App.",
-      "sectors": [
-        "Travel",
-        "Consumer"
-      ],
-      "stage": "mvp",
-      "investment": "",
-      "lookingFor": "Guide-Autoren · Erste Nutzer · Feedback",
-      "demoLink": "https://ikartuzov-hub.github.io/guide/?guide=paris-igor",
-      "page": {
-        "how": [
-          "Du öffnest den Guide — 65 Orte auf der Karte in sieben Pariser Vierteln, mit Bewertungen und persönlichen Notizen des Autors.",
-          "Drei Held-Routen für den Anlass: das Gourmet-Viertel (Käse-Tee-Schokolade in 400 Metern), Passagen vor den Massen, Turmblicke ohne Touristen.",
-          "Geheime Orte sind markiert — lokale Bäckereien und Käseläden statt Touristenschlangen.",
-          "Sonnenuntergang in Echtzeit und die Karte führen dich zu Fuß durch die Viertel, ohne Wege.",
-          "Fünf Oberflächensprachen — der Guide öffnet in der Sprache des Gastes."
-        ],
-        "proofs": [
-          "65 Orte, 3 Held-Routen, 7 Viertel, 5 Sprachen — aus den Google-Maps-Punkten des Autors.",
-          "Die Ortsdaten sind eine Google-Momentaufnahme (Bewertung, Zeiten), und der Burggraben ist die persönliche Notiz von jemandem, der diese Straßen kennt.",
-          "Dieselbe Engine wie «Mein unentdecktes Madeira»: ein neues Ziel berührt keinen Code, nur Daten und Palette."
-        ],
-        "vision": [
-          "Paris ist das zweite Ziel in der Personal-Guide-Reihe: Beweis, dass die Engine auf jeden Ort skaliert.",
-          "Als Nächstes — Städte und Orte auf Anfrage, jede mit eigener Karte unter einer künftigen Sektion «Guides».",
-          "Ein persönlicher Guide als Geschenk für den Gast und Eintritt ins SeedWave-Ökosystem."
-        ]
-      }
-    },
-    {
       "id": "tonight",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#6C5CE7\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Tonight\"><title>Tonight</title><path d=\"M30 68 L30 24 L62 66 L62 22\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></svg>",
+      "icon": "🎤",
       "category": "Technologie / Events",
       "name": "Tonight — Tour-Plattform für Künstler und Venues",
       "hook": "Tour-Plattform für kleine Künstler und lokale Venues: eine Kette nahegelegener Städte, ein gemeinsamer Ticketverkauf und geteilte Werbung.",
@@ -417,42 +183,6 @@
         ]
       },
       "methodLink": "https://ikartuzov-hub.github.io/birdie/method.html"
-    },
-    {
-      "id": "relic",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#C0894B\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M26 14 L26 66\"/><path d=\"M26 14 C52 14 52 41 28 42 L26 42\"/><path d=\"M34 42 Q49 53 58 66\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
-      "category": "Lifestyle / Funde",
-      "name": "Relic — Schatzsuche in dem, was ungenutzt herumliegt",
-      "hook": "Fotografiere eine alte Münze — die KI sagt dir, was es ist und ob es Beachtung wert ist. Wertvolles geht an einen echten Antiquitäten-Experten. Du zahlst nur beim Verkauf.",
-      "description": "Viele haben zu Hause die Sammlung vom Großvater oder eine Handvoll rätselhafter Münzen. Relic hilft dir in einer Minute zu erkennen, ob etwas wertvoll ist. Die KI gibt eine erste Bestimmung anhand des Fotos — keinen Preis; ein menschlicher Experte bewertet die wertvollen Funde und hilft beim Verkauf. Stack ohne Server: Telegram + Make + OpenAI Vision + Notion.",
-      "sectors": [
-        "Lifestyle",
-        "Marketplace",
-        "AI"
-      ],
-      "stage": "mvp",
-      "investment": "",
-      "lookingFor": "Antiquitäten-Experte · Pilot-Nutzer · Builder",
-      "demoLink": "https://ikartuzov-hub.github.io/relic/?lang=en",
-      "page": {
-        "how": [
-          "Fotografiere eine alte Münze und schick das Foto an den Telegram-Bot.",
-          "Ein KI-Numismatiker gibt anhand des Fotos eine erste Bestimmung — Epoche, Metall, worauf zu achten ist. Keinen Preis.",
-          "Sieht wertvoll aus? Mit einem Tipp schickst du den Fund an einen echten Antiquitäten-Experten.",
-          "Der Experte bewertet ihn und hilft, zum realen Preis zu verkaufen. Provision nur beim Verkauf."
-        ],
-        "proofs": [
-          "Der aktive Bot @RelicFindBot arbeitet mit echten Fotos: die Vision-Einschätzung kommt in den Chat.",
-          "Die KI erfindet keinen Preis — ein ehrliches Ampel-Urteil; die genaue Zahl kommt vom Menschen, anhand von Auktionsvergleichen.",
-          "Zahlung nur bei Ergebnis: Provision aus dem Verkauf, ohne Abos oder Vorkasse.",
-          "Stack ohne Server und ohne Code: Telegram + Make + OpenAI Vision + Notion."
-        ],
-        "vision": [
-          "Über Münzen hinaus: Geschirr, Gemälde, Schmuck — die Architektur ist bereits angelegt.",
-          "Erfassung der Objektgeschichte (Provenienz) — steigert den Wert und macht aus der Bewertung eine Familiengeschichte.",
-          "Eine Bot-Fabrik-Vorlage: 'Objekt fotografieren → KI Vision → Experte' für neue Kategorien."
-        ]
-      }
     }
   ]
 }
