@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SeedWave — install any product as an app icon</title>
+<meta name="theme-color" content="#0F1720">
+<link rel="icon" type="image/svg+xml" href="hub/icon.svg">
+<link rel="canonical" href="https://ikartuzov-hub.github.io/seedwave-catalog/install.html">
+
+<meta property="og:title" content="SeedWave apps — right on your home screen">
+<meta property="og:description" content="Any SeedWave product installs on iPhone and Android in 4 steps — no App Store, no Google Play. The icon lands on the home screen and opens like a normal app.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ikartuzov-hub.github.io/seedwave-catalog/install-en.html">
+<meta property="og:image" content="https://ikartuzov-hub.github.io/seedwave-catalog/og-install-en.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="SeedWave">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ikartuzov-hub.github.io/seedwave-catalog/og-install-en.jpg">
+<style>
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
+    background:#0F1720;color:#E8EEF2;font:500 15px/1.6 system-ui,sans-serif;text-align:center;padding:24px}
+  a{color:#0E8FA8;font-weight:700}
+</style>
+</head>
+<body>
+  <div>
+    Opening the guide…<br>
+    <a id="go" href="install.html?lang=en">Install on your phone</a>
+  </div>
+<script>
+/* переносим все параметры продукта (app, name, icon, hub, theme) и подставляем язык */
+(function(){
+  var p = new URLSearchParams(location.search);
+  p.set('lang','en');
+  var url = 'install.html?' + p.toString();
+  document.getElementById('go').href = url;
+  location.replace(url);
+})();
+</script>
+</body>
+</html>

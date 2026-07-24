@@ -3,7 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Установка приложения</title>
+<title>SeedWave — install any product as an app icon</title>
+<meta name="theme-color" content="#0F1720">
+<meta name="apple-mobile-web-app-title" content="SeedWave">
+<link rel="icon" type="image/svg+xml" href="hub/icon.svg">
+
+<meta property="og:title" content="SeedWave apps — right on your home screen">
+<meta property="og:description" content="Any SeedWave product installs in 4 steps on iPhone and Android — no App Store, no Google Play. The icon lands on the home screen and opens like a normal app.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ikartuzov-hub.github.io/seedwave-catalog/install.html">
+<meta property="og:image" content="https://ikartuzov-hub.github.io/seedwave-catalog/og-install-en.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="pt_PT">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:site_name" content="SeedWave">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ikartuzov-hub.github.io/seedwave-catalog/og-install-en.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
@@ -82,8 +101,18 @@
   #qr img,#qr canvas{display:block}
   .qrhint{color:var(--dim);font-size:12.5px;margin-top:8px}
 
-  footer{margin-top:30px;text-align:center;font-size:12px;color:var(--dim)}
-  footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--line)}
+  .hubbox{margin-top:26px;background:linear-gradient(160deg,var(--card) 0%,var(--card-2) 100%);
+    border:1px solid var(--line);border-radius:16px;padding:20px}
+  .hubbox h2{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;margin-bottom:6px}
+  .hubbox p{color:var(--dim);font-size:14px;margin-bottom:15px}
+  .hubbtn{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;
+    background:none;border:1px solid var(--accent);color:var(--accent);text-decoration:none;
+    font-weight:600;font-size:15px;padding:14px;border-radius:13px;font-family:inherit;transition:.2s}
+  .hubbtn:hover{background:var(--accent);color:var(--accent-ink)}
+  .hubbtn:active{transform:scale(.985)}
+  footer{margin-top:34px;text-align:center;font-size:15px;color:var(--dim);line-height:1.6;padding-bottom:56px}
+  footer a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);
+    text-underline-offset:4px;display:inline-block;padding:8px 4px}
   @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
@@ -125,6 +154,12 @@
     <div id="qrwrap"><div id="qr"></div><div class="qrhint" id="qrHint"></div></div>
   </div>
 
+  <div class="hubbox">
+    <h2 id="hubH"></h2>
+    <p id="hubP"></p>
+    <a class="hubbtn" id="hubBtn" target="_blank" rel="noopener"><span>🌊</span><span id="hubBtnT"></span></a>
+  </div>
+
   <footer>© <span id="yr"></span> <a id="hubLink" target="_blank" rel="noopener">SeedWave</a> · <a href="https://www.linkedin.com/in/igor-kartuzov/" target="_blank" rel="noopener">Igor Kartuzov</a></footer>
 </div>
 
@@ -148,7 +183,8 @@ const T={
    open:"Открыть {n}", installed:"✓ {n} уже установлено на этом устройстве",
    shareH:"Поделиться установкой", shareP:"Отправь ссылку, покажи QR или скопируй — чтобы установить на другом телефоне.",
    shareBtn:"Поделиться", copyBtn:"Скопировать ссылку", copied:"Скопировано ✓", qrBtn:"QR-код",
-   qrHint:"Наведи камеру телефона — откроется эта инструкция."},
+   qrHint:"Наведи камеру телефона — откроется эта инструкция.",
+   hubH:"Что ещё есть в SeedWave", hubP:"Каталог продуктов платформы: меню для кафе, тренажёры языка, гиды, чекеры субсидий. Всё ставится на телефон так же — за 4 шага.", hubBtn:"Открыть каталог SeedWave"},
  en:{name:"English", appWord:"the app",
    h1:"Install {n} on your phone",
    lead:"It works like a normal app icon — opens from the home screen, no browser.",
@@ -158,7 +194,8 @@ const T={
    open:"Open {n}", installed:"✓ {n} is already installed on this device",
    shareH:"Share the install", shareP:"Send the link, show the QR, or copy it — to install on another phone.",
    shareBtn:"Share", copyBtn:"Copy link", copied:"Copied ✓", qrBtn:"QR code",
-   qrHint:"Point your phone camera at it to open these steps."},
+   qrHint:"Point your phone camera at it to open these steps.",
+   hubH:"More from SeedWave", hubP:"The platform catalogue: café menus, language trainers, guides, grant checkers. Everything installs the same way — in 4 steps.", hubBtn:"Open the SeedWave catalogue"},
  pt:{name:"Português", appWord:"a aplicação",
    h1:"Instala {n} no telemóvel",
    lead:"Fica como um ícone normal de app — abre do ecrã principal, sem navegador.",
@@ -168,7 +205,8 @@ const T={
    open:"Abrir {n}", installed:"✓ {n} já está instalado neste dispositivo",
    shareH:"Partilhar a instalação", shareP:"Envia o link, mostra o QR ou copia — para instalar noutro telemóvel.",
    shareBtn:"Partilhar", copyBtn:"Copiar link", copied:"Copiado ✓", qrBtn:"Código QR",
-   qrHint:"Aponta a câmara do telemóvel para abrir estes passos."},
+   qrHint:"Aponta a câmara do telemóvel para abrir estes passos.",
+   hubH:"Mais da SeedWave", hubP:"O catálogo da plataforma: menus para cafés, treinadores de línguas, guias, verificadores de apoios. Tudo se instala da mesma forma — em 4 passos.", hubBtn:"Abrir o catálogo SeedWave"},
  es:{name:"Español", appWord:"la app",
    h1:"Instala {n} en tu móvil",
    lead:"Funciona como un icono normal — se abre desde la pantalla, sin navegador.",
@@ -178,7 +216,8 @@ const T={
    open:"Abrir {n}", installed:"✓ {n} ya está instalado en este dispositivo",
    shareH:"Compartir la instalación", shareP:"Envía el enlace, muestra el QR o cópialo — para instalar en otro móvil.",
    shareBtn:"Compartir", copyBtn:"Copiar enlace", copied:"Copiado ✓", qrBtn:"Código QR",
-   qrHint:"Apunta la cámara del móvil para abrir estos pasos."},
+   qrHint:"Apunta la cámara del móvil para abrir estos pasos.",
+   hubH:"Más de SeedWave", hubP:"El catálogo de la plataforma: menús para cafeterías, entrenadores de idiomas, guías, verificadores de ayudas. Todo se instala igual — en 4 pasos.", hubBtn:"Abrir el catálogo SeedWave"},
  de:{name:"Deutsch", appWord:"die App",
    h1:"Installiere {n} auf dem Handy",
    lead:"Wie ein normales App-Symbol — öffnet vom Startbildschirm, ohne Browser.",
@@ -188,7 +227,8 @@ const T={
    open:"{n} öffnen", installed:"✓ {n} ist auf diesem Gerät bereits installiert",
    shareH:"Installation teilen", shareP:"Sende den Link, zeige den QR oder kopiere ihn — zum Installieren auf einem anderen Handy.",
    shareBtn:"Teilen", copyBtn:"Link kopieren", copied:"Kopiert ✓", qrBtn:"QR-Code",
-   qrHint:"Richte die Handy-Kamera darauf, um diese Anleitung zu öffnen."}
+   qrHint:"Richte die Handy-Kamera darauf, um diese Anleitung zu öffnen.",
+   hubH:"Mehr von SeedWave", hubP:"Der Katalog der Plattform: Café-Karten, Sprachtrainer, Guides, Förder-Checker. Alles wird genauso installiert — in 4 Schritten.", hubBtn:"SeedWave-Katalog öffnen"}
 };
 
 /* ===== Язык / тема ===== */
@@ -217,6 +257,9 @@ function render(){
   const openHref = APP ? (APP+(APP.includes('?')?'&':'?')+'lang='+lang+'&theme='+theme) : (HUB+'?lang='+lang);
   $('openIos').href=openHref; $('openAnd').href=openHref;
   $('hubLink').href=HUB+'?lang='+lang;
+  $('hubH').textContent=t.hubH; $('hubP').textContent=t.hubP;
+  $('hubBtnT').textContent=t.hubBtn; $('hubBtn').href=HUB+'?lang='+lang+'&theme='+theme;
+  if(ICON){ $('appIc').innerHTML='<img src="'+ICON+'" alt="" width="26" height="26" style="border-radius:7px">'; }
 }
 
 /* меню §7.8.1 */
