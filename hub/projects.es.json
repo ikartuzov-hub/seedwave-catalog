@@ -15,7 +15,7 @@
       "investment": "150 000 EUR (20% del valor del inmueble). Entrada mínima desde 5 000 EUR.",
       "lookingFor": "Cooperativistas-inversores · Abogado · Socio operativo",
       "demoLink": "",
-      "moreLink": "https://ikartuzov-hub.github.io/dubai-madeira/",
+      "moreLink": "https://d.seedwave.pt/",
       "page": {
         "how": [
           "La cooperativa se constituye según la ley portuguesa (Cooperativa de Habitação e Construção) — forma sin ánimo de lucro con ventajas fiscales: exención de IRC, IMT e IMI.",
@@ -67,7 +67,7 @@
           "Horizonte ILYNQ: la energía limpia y barata de la isla como base de una IA distribuida. En preparación, no la afirmamos como funcionando."
         ]
       },
-      "moreLink": "https://ikartuzov-hub.github.io/nem/"
+      "moreLink": "https://nem.seedwave.pt/"
     },
     {
       "id": "forge",
@@ -80,7 +80,7 @@
       "stage": "mvp",
       "investment": "",
       "demoLink": "",
-      "moreLink": "https://ikartuzov-hub.github.io/forge/",
+      "moreLink": "https://f.seedwave.pt/",
       "category": "Herramienta SeedWave",
       "name": "Forge — de la idea a un producto vivo",
       "hook": "Cuéntanos tu idea — la IA construye un producto funcional a partir de ella. No una presentación, sino un MVP vivo que abres en el móvil.",
@@ -121,8 +121,8 @@
       "stage": "pilot",
       "investment": "",
       "lookingFor": "Restaurantes y pequeños negocios de Madeira · Contabilistas socios",
-      "demoLink": "https://ikartuzov-hub.github.io/nam/",
-      "moreLink": "https://ikartuzov-hub.github.io/nam/flyer.html"
+      "demoLink": "https://nam.seedwave.pt/",
+      "moreLink": "https://nam.seedwave.pt/flyer.html"
     },
     {
       "id": "lis",
@@ -138,8 +138,8 @@
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Creador de contenido · Comercial · Tester",
-      "demoLink": "https://l.seedwave.dev/onboarding.html",
-      "moreLink": "https://l.seedwave.dev/"
+      "demoLink": "https://l.seedwave.pt/onboarding.html",
+      "moreLink": "https://l.seedwave.pt/"
     },
     {
       "id": "ntm",
@@ -156,7 +156,7 @@
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Operadores con protocolo IFCN · Alojamiento local · Guías · Socios de contenido",
-      "demoLink": "https://ikartuzov-hub.github.io/ntm/",
+      "demoLink": "https://ntm.seedwave.pt/",
       "page": {
         "how": [
           "Abres nTm — los 14 senderos con su estado actual: abierto, parcial, cerrado. Sello de hora y enlace a la fuente oficial IFCN.",
@@ -173,7 +173,7 @@
         ],
         "vision": "Un peldaño de la escalera ILYNQ. nTm es la cima del embudo: el visitante vuelve cada día porque la pregunta «¿abierto hoy?» se repite. De la utilidad nace la confianza; de la confianza, la Guía de lugares secretos; y para quien se enamora de la isla, el siguiente paso: un apartamento en Funchal, en cooperativa. Fase 2: webcams, GPX, avisos «el sendero ha reabierto»."
       },
-      "moreLink": "https://ikartuzov-hub.github.io/ntm/flyer.html"
+      "moreLink": "https://ntm.seedwave.pt/flyer.html"
     },
     {
       "id": "ncm",
@@ -190,7 +190,7 @@
       "stage": "pilot",
       "investment": "",
       "lookingFor": "Explotaciones piloto · Cooperativas · Proveedores de agrotecnología · Socio SRA",
-      "demoLink": "https://ikartuzov-hub.github.io/ncm/",
+      "demoLink": "https://ncm.seedwave.pt/",
       "page": {
         "how": [
           "Monta tu granja 2.0 en el constructor: riego, sensores, invernadero, frío, solar, dron — y ves al instante tres cifras: coste, cuánto paga el programa, tu parte.",
@@ -211,7 +211,7 @@
           "Horizonte ILYNQ: agricultura tecnológica + energía limpia excedente de la isla como base de IA distribuida. Lo preparamos, no lo anunciamos como ya operativo."
         ]
       },
-      "moreLink": "https://ikartuzov-hub.github.io/ncm/flyer.html"
+      "moreLink": "https://ncm.seedwave.pt/flyer.html"
     },
     {
       "id": "treino",
@@ -227,7 +227,7 @@
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Alumnos piloto · Socio técnico (BaaS)",
-      "demoLink": "https://ikartuzov-hub.github.io/treino/intro.html",
+      "demoLink": "https://t.seedwave.pt/intro.html",
       "page": {
         "how": [
           "Tomas tus frases reales — de la vida, del trabajo, de las clases con tu profesor.",
@@ -241,7 +241,7 @@
           "Metodología abierta publicada: el método, la ciencia, 14 fuentes."
         ]
       },
-      "methodLink": "https://ikartuzov-hub.github.io/treino/u/method.html"
+      "methodLink": "https://t.seedwave.pt/u/method.html"
     },
     {
       "id": "guide",
@@ -253,7 +253,7 @@
       "stage": "mvp",
       "investment": "",
       "demoLink": "",
-      "moreLink": "https://ikartuzov-hub.github.io/guide/",
+      "moreLink": "https://g.seedwave.pt/",
       "category": "Viajes / Guía",
       "name": "Mi Guía — una guía personal desde tus puntos del mapa",
       "hook": "Los lugares que marcaste se convierten en una guía bonita que compartes con un enlace. Escenarios para la ocasión, lugares secretos, atardecer en vivo.",
@@ -294,7 +294,7 @@
       "investment": "",
       "lookingFor": "Autores de guías · Primeros usuarios · Comentarios",
       "demoLink": "",
-      "moreLink": "https://ikartuzov-hub.github.io/guide/paris/",
+      "moreLink": "https://g.seedwave.pt/paris/",
       "page": {
         "how": [
           "Abres la guía — 7 barrios de París: Torre, Saint-Germain, Barrio Latino, Louvre, Ópera, Le Marais, Montmartre.",
@@ -324,7 +324,7 @@
       "investment": "",
       "lookingFor": "Builder (bot + entradas) · Operator · Locales piloto",
       "demoLink": "",
-      "moreLink": "https://ikartuzov-hub.github.io/seedwave-catalog/tonight.html",
+      "moreLink": "https://seedwave.pt/tonight.html",
       "page": {
         "how": [
           "La plataforma arma una gira como una cadena de salas en ciudades cercanas — trayectos cortos, menos costes.",
@@ -354,7 +354,7 @@
       "investment": "",
       "lookingFor": "Inversor",
       "demoLink": "",
-      "moreLink": "https://ikartuzov-hub.github.io/seedwave-catalog/sports-creams.html",
+      "moreLink": "https://seedwave.pt/sports-creams.html",
       "page": {
         "how": [
           "Fórmulas propias a base de ingredientes naturales — sin química innecesaria.",
@@ -383,7 +383,7 @@
       "investment": "",
       "lookingFor": "Alumnos del piloto · Clubes e instructores de golf · Socios (campos, equipo)",
       "demoLink": "",
-      "moreLink": "https://ikartuzov-hub.github.io/birdie/intro.html",
+      "moreLink": "https://b.seedwave.pt/intro.html",
       "page": {
         "how": [
           "El alumno abre Birdie en pleno campo — término, golpe, pregunta en segundos, sin internet.",
@@ -405,7 +405,7 @@
           "Un rumbo honesto, no promesas: abrimos funciones a medida que se prueban con alumnos reales."
         ]
       },
-      "methodLink": "https://ikartuzov-hub.github.io/birdie/method.html"
+      "methodLink": "https://b.seedwave.pt/method.html"
     },
     {
       "id": "relic",
@@ -423,7 +423,7 @@
       "investment": "",
       "lookingFor": "Experto en antigüedades · Usuarios piloto · Builder",
       "demoLink": "",
-      "moreLink": "https://ikartuzov-hub.github.io/relic/",
+      "moreLink": "https://r.seedwave.pt/",
       "page": {
         "how": [
           "Fotografía una moneda antigua y envía la foto al bot de Telegram.",

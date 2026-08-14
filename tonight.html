@@ -89,6 +89,7 @@
   @media (max-width:380px){ .intro h1{font-size:2.1rem} .demo h2{font-size:1.85rem} }
   @media (prefers-reduced-motion:reduce){ .intro-mark,.intro h1,.intro .lead,.ticker,.cta,.demo{animation:none} }
 </style>
+<link rel="canonical" href="https://seedwave.pt/tonight.html">
 </head>
 <body>
 <div class="wrap">
@@ -272,7 +273,7 @@
     var saving=Math.round((1-1/n)*100); $("#splitVal").textContent=ui.splitVal(n,saving);
   }
 
-  function hubUrl(){ return "https://ikartuzov-hub.github.io/seedwave-catalog/hub/?lang="+lang+"&theme="+theme; }
+  function hubUrl(){ return "https://seedwave.pt/hub/?lang="+lang+"&theme="+theme; }
   function botUrl(){ return "https://t.me/SeedWaveBot?start=tonight_"+lang; }
   $("#brandLink").setAttribute("href", hubUrl());
   $("#toFunnel").addEventListener("click", function(){ location.href=botUrl(); });

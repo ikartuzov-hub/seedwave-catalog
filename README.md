@@ -6,8 +6,8 @@
 
 <p align="center">
   <em>The storefront of the SeedWave studio — every product on one map.</em><br>
-  <a href="https://ikartuzov-hub.github.io/seedwave-catalog/hub/">Live demo</a> ·
-  <a href="https://ikartuzov-hub.github.io/seedwave-catalog/hub">SeedWave Hub</a> ·
+  <a href="https://seedwave.pt/hub/">Live demo</a> ·
+  <a href="https://seedwave.pt/hub/">SeedWave Hub</a> ·
   <a href="https://www.linkedin.com/in/igor-kartuzov">Built by Igor Kartuzov</a>
 </p>
 
@@ -23,7 +23,7 @@ The repository root is a language-preserving redirect into `/hub/` — the regis
 `JavaScript redirect` · `JSON-driven cards (projects.{lang}.json)` · `GitHub Pages` · `multilingual (RU/EN/PT/ES/DE)`
 
 ## See it live
-- **Demo:** https://ikartuzov-hub.github.io/seedwave-catalog/hub/
+- **Demo:** https://seedwave.pt/hub/
 - Language is auto-detected and carried through every link as `?lang=`.
 
 ## Screenshots
@@ -44,5 +44,5 @@ The repository root is a language-preserving redirect into `/hub/` — the regis
 ---
 
 <p align="center">
-  <sub>© Igor Kartuzov · <a href="https://ikartuzov-hub.github.io/seedwave-catalog/hub">SeedWave</a> — AI-first studio · Madeira, EU</sub>
+  <sub>© Igor Kartuzov · <a href="https://seedwave.pt/hub/">SeedWave</a> — AI-first studio · Madeira, EU</sub>
 </p>

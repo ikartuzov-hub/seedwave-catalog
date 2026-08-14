@@ -3,7 +3,7 @@
   "defaultLang": "ru",
   "content": "projects.{lang}.json",
   "botUrl": "https://t.me/SeedWaveBot",
-  "hubUrl": "https://seedwave.dev/hub/",
+  "hubUrl": "https://seedwave.pt/hub/",
   "authorUrl": "https://www.linkedin.com/in/igor-kartuzov/",
   "authorNames": [
     "Игорь Картузов",
