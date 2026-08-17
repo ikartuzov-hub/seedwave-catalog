@@ -125,6 +125,24 @@
       "moreLink": "https://nam.seedwave.pt/flyer.html"
     },
     {
+      "id": "nrm",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#17998A\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nRm\"><title>nRm — Novo Reforço da Madeira</title><path d=\"M34 16 L34 72\"/><path d=\"M34 16 Q62 16 62 31 Q62 46 34 46\"/><path d=\"M42 46 Q52 56 58 72\"/><path d=\"M15 88 Q28 82 39 88 Q50 94 61 88 Q72 82 85 88\"/></svg>",
+      "category": "Apoios",
+      "name": "nRm — Novo Reforço da Madeira",
+      "hook": "O Estado entra consigo: três perguntas — e quanto o IEM comparticipa na contratação ou no estágio.",
+      "description": "Quanto o IEM comparticipa quando contrata ou acolhe um estagiário na Madeira. Três perguntas, sem registo — e o seu número em euros. Par do nAm sob o mesmo teto: o nAm encontra dinheiro para equipamento, o nRm — para o reforço da equipa.",
+      "sectors": [
+        "Apoio do Estado",
+        "Contratação e estágios",
+        "Pequenos negócios"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Empresas da Madeira que contratam · Restaurantes e serviços",
+      "demoLink": "https://contratar.seedwave.pt/",
+      "moreLink": "https://contratar.seedwave.pt/flyer.html"
+    },
+    {
       "id": "lis",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
       "category": "IA / Tecnologia",
