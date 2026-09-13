@@ -461,6 +461,36 @@
           "Modelo fábrica de bots: 'fotografa um objeto → IA Vision → perito' para novas categorias."
         ]
       }
+    },
+    {
+      "id": "ndm",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#C24A18\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M33 18 L33 70\"/><path d=\"M33 18 C68 18 78 30 78 44 C78 58 68 70 33 70\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></svg>",
+      "category": "Serviços ao cidadão",
+      "name": "nDm — guias da burocracia portuguesa",
+      "hook": "O Estado passou os apoios para online e deixou para trás quem não sabe. O nDm escreve guias com os quais se consegue à primeira.",
+      "description": "Série de guias gratuitos sobre a burocracia portuguesa em cinco línguas: ecrãs com setas, as armadilhas em que quase toda a gente cai e os nomes exactos dos campos em português. Primeira edição — «Documentos TAP»: os dois documentos da companhia aérea sem os quais não há subsídio de mobilidade. A seguir: o pedido no portal e os descontos das transportadoras.",
+      "sectors": [
+        "Civic Tech",
+        "Education"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Tradutor nativo · Testador da faixa sénior · Jurista de burocracia portuguesa",
+      "demoLink": "https://ajuda.seedwave.pt/tap/",
+      "page": {
+        "how": [
+          "Escolhemos um procedimento, fazemo-lo nós próprios até ao fim e registamos cada ecrã.",
+          "Dividimos em passos: o que carregar, o que escrever, onde o formulário se cala e porquê.",
+          "Destacamos as armadilhas — os pontos onde quase toda a gente erra e o documento sai inútil.",
+          "Publicamos gratuitamente em cinco línguas. Os nomes dos campos ficam em português: a pessoa procura com os olhos a mesma palavra que vê no ecrã."
+        ],
+        "proofs": [
+          "A primeira edição foi feita a partir de um pedido real de documentos — oito ecrãs captados ao vivo.",
+          "Foram encontradas três armadilhas que nem a companhia aérea nem o portal do subsídio explicam.",
+          "Os prazos de chegada dos documentos foram verificados em três viagens: de uma hora a dia e meio.",
+          "Cinco línguas desde o primeiro dia: PT · EN · RU · DE · ES."
+        ]
+      }
     }
   ]
 }

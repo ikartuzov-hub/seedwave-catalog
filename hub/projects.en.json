@@ -461,6 +461,36 @@
           "A bot-factory template: 'snap an item → AI Vision → expert' for new categories."
         ]
       }
+    },
+    {
+      "id": "ndm",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#C24A18\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M33 18 L33 70\"/><path d=\"M33 18 C68 18 78 30 78 44 C78 58 68 70 33 70\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></svg>",
+      "category": "Civic tech",
+      "name": "nDm — guides to Portuguese bureaucracy",
+      "hook": "The state moved its subsidies online and left behind the people who cannot follow. nDm writes the guides that get it right the first time.",
+      "description": "A series of free guides to Portuguese bureaucracy in five languages: annotated screens, the traps almost everyone falls into, and the exact Portuguese field names. First issue — “Documentos TAP”: the two airline documents without which there is no mobility subsidy. Next: the claim on the portal, and carrier discounts.",
+      "sectors": [
+        "Civic Tech",
+        "Education"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Native translator · Tester from the older audience · Portuguese bureaucracy lawyer",
+      "demoLink": "https://ajuda.seedwave.pt/tap/",
+      "page": {
+        "how": [
+          "We take one procedure, go through it ourselves to the end, and capture every screen.",
+          "We break it into steps: what to press, what to type, where the form goes silent and why.",
+          "We pull out the traps separately — the places where almost everyone errs and the document comes out useless.",
+          "We publish it free in five languages. Field names stay in Portuguese: the reader hunts for the very word that is on the screen."
+        ],
+        "proofs": [
+          "The first issue was built from a real document request — eight screens captured live.",
+          "Three traps were found that neither the airline nor the subsidy portal explains.",
+          "Delivery times were checked across three trips: from one hour to a day and a half.",
+          "Five languages from day one: PT · EN · RU · DE · ES."
+        ]
+      }
     }
   ]
 }

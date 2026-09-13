@@ -461,6 +461,36 @@
           "Una plantilla fábrica de bots: 'fotografía un objeto → IA Vision → experto' para nuevas categorías."
         ]
       }
+    },
+    {
+      "id": "ndm",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#C24A18\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M33 18 L33 70\"/><path d=\"M33 18 C68 18 78 30 78 44 C78 58 68 70 33 70\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></svg>",
+      "category": "Servicios al ciudadano",
+      "name": "nDm — guías de la burocracia portuguesa",
+      "hook": "El Estado pasó las ayudas a internet y dejó atrás a quien no sabe. nDm escribe las guías con las que sale bien a la primera.",
+      "description": "Una serie de guías gratuitas sobre la burocracia portuguesa en cinco idiomas: pantallas señalizadas, las trampas en las que cae casi todo el mundo y los nombres exactos de los campos en portugués. Primera edición: «Documentos TAP», los dos documentos de la aerolínea sin los cuales no hay subsidio de movilidad. Después: la solicitud en el portal y los descuentos de los transportistas.",
+      "sectors": [
+        "Civic Tech",
+        "Education"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Traductor nativo · Probador del público mayor · Jurista de burocracia portuguesa",
+      "demoLink": "https://ajuda.seedwave.pt/tap/",
+      "page": {
+        "how": [
+          "Tomamos un trámite, lo hacemos nosotros mismos hasta el final y capturamos cada pantalla.",
+          "Lo partimos en pasos: qué pulsar, qué escribir, dónde calla el formulario y por qué.",
+          "Sacamos aparte las trampas: los puntos donde se equivoca casi todo el mundo y el documento sale inservible.",
+          "Lo publicamos gratis en cinco idiomas. Los nombres de los campos quedan en portugués: uno busca con los ojos la misma palabra que ve en la pantalla."
+        ],
+        "proofs": [
+          "La primera edición se hizo a partir de una solicitud real de documentos: ocho pantallas capturadas en vivo.",
+          "Se encontraron tres trampas que no explican ni la aerolínea ni el portal del subsidio.",
+          "Los plazos de llegada se verificaron en tres viajes: de una hora a día y medio.",
+          "Cinco idiomas desde el primer día: PT · EN · RU · DE · ES."
+        ]
+      }
     }
   ]
 }

@@ -461,6 +461,36 @@
           "Eine Bot-Fabrik-Vorlage: 'Objekt fotografieren → KI Vision → Experte' für neue Kategorien."
         ]
       }
+    },
+    {
+      "id": "ndm",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#C24A18\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M33 18 L33 70\"/><path d=\"M33 18 C68 18 78 30 78 44 C78 58 68 70 33 70\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></svg>",
+      "category": "Bürgerdienste",
+      "name": "nDm — Anleitungen durch die portugiesische Bürokratie",
+      "hook": "Der Staat hat die Zuschüsse ins Netz verlegt und die zurückgelassen, die damit nicht umgehen. nDm schreibt Anleitungen, mit denen es beim ersten Mal klappt.",
+      "description": "Eine Reihe kostenloser Anleitungen durch die portugiesische Bürokratie in fünf Sprachen: markierte Bildschirme, die Fallen, in die fast alle tappen, und die genauen portugiesischen Feldnamen. Erste Ausgabe — „Documentos TAP“: die zwei Dokumente der Fluggesellschaft, ohne die es keinen Mobilitätszuschuss gibt. Danach: der Antrag im Portal und die Ermäßigungen der Verkehrsträger.",
+      "sectors": [
+        "Civic Tech",
+        "Education"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Muttersprachlicher Übersetzer · Tester aus der älteren Zielgruppe · Jurist für portugiesische Bürokratie",
+      "demoLink": "https://ajuda.seedwave.pt/tap/",
+      "page": {
+        "how": [
+          "Wir nehmen ein Verfahren, gehen es selbst bis zum Ende durch und halten jeden Bildschirm fest.",
+          "Wir zerlegen es in Schritte: was zu drücken, was einzutragen ist, wo das Formular schweigt und warum.",
+          "Die Fallen stellen wir gesondert heraus — die Stellen, an denen fast alle scheitern und das Dokument unbrauchbar wird.",
+          "Wir veröffentlichen kostenlos in fünf Sprachen. Die Feldnamen bleiben portugiesisch: man sucht mit den Augen genau das Wort, das auf dem Bildschirm steht."
+        ],
+        "proofs": [
+          "Die erste Ausgabe entstand aus einer echten Dokumentenbestellung — acht live aufgenommene Bildschirme.",
+          "Gefunden wurden drei Fallen, die weder die Fluggesellschaft noch das Zuschussportal erklärt.",
+          "Die Lieferzeiten wurden über drei Reisen geprüft: von einer Stunde bis zu anderthalb Tagen.",
+          "Fünf Sprachen vom ersten Tag an: PT · EN · RU · DE · ES."
+        ]
+      }
     }
   ]
 }
