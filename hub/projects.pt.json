@@ -468,7 +468,7 @@
       "category": "Serviços ao cidadão",
       "name": "nDm — guias da burocracia portuguesa",
       "hook": "O Estado passou os apoios para online e deixou para trás quem não sabe. O nDm escreve guias com os quais se consegue à primeira.",
-      "description": "Série de guias gratuitos sobre a burocracia portuguesa em cinco línguas: ecrãs com setas, as armadilhas em que quase toda a gente cai e os nomes exactos dos campos em português. Primeira edição — «Documentos TAP»: os dois documentos da companhia aérea sem os quais não há subsídio de mobilidade. A seguir: o pedido no portal e os descontos das transportadoras.",
+      "description": "Série de guias gratuitos sobre a burocracia portuguesa em cinco línguas: ecrãs com setas, as armadilhas em que quase toda a gente cai e os nomes exactos dos campos em português. Já saíram duas edições: «Documentos TAP» — os dois documentos da companhia aérea sem os quais não há subsídio de mobilidade — e «Subsídio de Mobilidade» — o pedido em si: cinco ecrãs do portal e sete números copiados da fatura, mais três fichas de apoio. A seguir: os descontos das transportadoras.",
       "sectors": [
         "Civic Tech",
         "Education"
@@ -476,7 +476,7 @@
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Tradutor nativo · Testador da faixa sénior · Jurista de burocracia portuguesa",
-      "demoLink": "https://ajuda.seedwave.pt/tap/",
+      "demoLink": "https://ajuda.seedwave.pt/",
       "page": {
         "how": [
           "Escolhemos um procedimento, fazemo-lo nós próprios até ao fim e registamos cada ecrã.",
@@ -485,9 +485,10 @@
           "Publicamos gratuitamente em cinco línguas. Os nomes dos campos ficam em português: a pessoa procura com os olhos a mesma palavra que vê no ecrã."
         ],
         "proofs": [
-          "A primeira edição foi feita a partir de um pedido real de documentos — oito ecrãs captados ao vivo.",
-          "Foram encontradas três armadilhas que nem a companhia aérea nem o portal do subsídio explicam.",
-          "Os prazos de chegada dos documentos foram verificados em três viagens: de uma hora a dia e meio.",
+          "As duas edições foram feitas a partir de pedidos reais — vinte e sete ecrãs captados ao vivo.",
+          "Um pedido de 365,15 € é desmontado ao cêntimo: de onde vem cada número do formulário.",
+          "Foram encontrados seis sítios onde o portal tira dinheiro em silêncio: os campos das taxas não têm asterisco e o rascunho guardado perde o regresso.",
+          "O tecto de 400 € saiu da lei e continua na página oficial — encontrado aqui e verificado em pedidos nossos.",
           "Cinco línguas desde o primeiro dia: PT · EN · RU · DE · ES."
         ]
       }

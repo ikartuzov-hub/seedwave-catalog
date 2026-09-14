@@ -468,7 +468,7 @@
       "category": "Civic tech",
       "name": "nDm — guides to Portuguese bureaucracy",
       "hook": "The state moved its subsidies online and left behind the people who cannot follow. nDm writes the guides that get it right the first time.",
-      "description": "A series of free guides to Portuguese bureaucracy in five languages: annotated screens, the traps almost everyone falls into, and the exact Portuguese field names. First issue — “Documentos TAP”: the two airline documents without which there is no mobility subsidy. Next: the claim on the portal, and carrier discounts.",
+      "description": "A series of free guides to Portuguese bureaucracy in five languages: annotated screens, the traps almost everyone falls into, and the exact Portuguese field names. Two issues are out: “Documentos TAP” — the two airline documents without which there is no mobility subsidy — and “Subsídio de Mobilidade” — the claim itself: five portal screens and seven figures copied from the invoice, plus three reference pages. Next: carrier discounts.",
       "sectors": [
         "Civic Tech",
         "Education"
@@ -476,7 +476,7 @@
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Native translator · Tester from the older audience · Portuguese bureaucracy lawyer",
-      "demoLink": "https://ajuda.seedwave.pt/tap/",
+      "demoLink": "https://ajuda.seedwave.pt/",
       "page": {
         "how": [
           "We take one procedure, go through it ourselves to the end, and capture every screen.",
@@ -485,9 +485,10 @@
           "We publish it free in five languages. Field names stay in Portuguese: the reader hunts for the very word that is on the screen."
         ],
         "proofs": [
-          "The first issue was built from a real document request — eight screens captured live.",
-          "Three traps were found that neither the airline nor the subsidy portal explains.",
-          "Delivery times were checked across three trips: from one hour to a day and a half.",
+          "Both issues were built from real claims — twenty-seven screens captured live.",
+          "A €365.15 claim is taken apart to the cent: where every figure in the form comes from.",
+          "Six places were found where the portal quietly costs you money: the tax fields carry no asterisk, and a saved draft loses the return leg.",
+          "The €400 cap left the law but is still on the official page — found here and checked against our own claims.",
           "Five languages from day one: PT · EN · RU · DE · ES."
         ]
       }

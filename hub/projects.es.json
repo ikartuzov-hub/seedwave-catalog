@@ -468,7 +468,7 @@
       "category": "Servicios al ciudadano",
       "name": "nDm — guías de la burocracia portuguesa",
       "hook": "El Estado pasó las ayudas a internet y dejó atrás a quien no sabe. nDm escribe las guías con las que sale bien a la primera.",
-      "description": "Una serie de guías gratuitas sobre la burocracia portuguesa en cinco idiomas: pantallas señalizadas, las trampas en las que cae casi todo el mundo y los nombres exactos de los campos en portugués. Primera edición: «Documentos TAP», los dos documentos de la aerolínea sin los cuales no hay subsidio de movilidad. Después: la solicitud en el portal y los descuentos de los transportistas.",
+      "description": "Una serie de guías gratuitas sobre la burocracia portuguesa en cinco idiomas: pantallas señalizadas, las trampas en las que cae casi todo el mundo y los nombres exactos de los campos en portugués. Ya hay dos ediciones: «Documentos TAP», los dos documentos de la aerolínea sin los cuales no hay subsidio de movilidad, y «Subsídio de Mobilidade», la solicitud en sí: cinco pantallas del portal y siete cifras copiadas de la factura, más tres fichas. Después: los descuentos de los transportistas.",
       "sectors": [
         "Civic Tech",
         "Education"
@@ -476,7 +476,7 @@
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Traductor nativo · Probador del público mayor · Jurista de burocracia portuguesa",
-      "demoLink": "https://ajuda.seedwave.pt/tap/",
+      "demoLink": "https://ajuda.seedwave.pt/",
       "page": {
         "how": [
           "Tomamos un trámite, lo hacemos nosotros mismos hasta el final y capturamos cada pantalla.",
@@ -485,9 +485,10 @@
           "Lo publicamos gratis en cinco idiomas. Los nombres de los campos quedan en portugués: uno busca con los ojos la misma palabra que ve en la pantalla."
         ],
         "proofs": [
-          "La primera edición se hizo a partir de una solicitud real de documentos: ocho pantallas capturadas en vivo.",
-          "Se encontraron tres trampas que no explican ni la aerolínea ni el portal del subsidio.",
-          "Los plazos de llegada se verificaron en tres viajes: de una hora a día y medio.",
+          "Las dos ediciones se hicieron a partir de solicitudes reales: veintisiete pantallas capturadas en vivo.",
+          "Una solicitud de 365,15 € se desmonta al céntimo: de dónde sale cada cifra del formulario.",
+          "Se encontraron seis sitios donde el portal quita dinero en silencio: los campos de tasas no llevan asterisco y el borrador guardado pierde la vuelta.",
+          "El techo de 400 € salió de la ley y sigue en la página oficial: encontrado aquí y verificado en solicitudes nuestras.",
           "Cinco idiomas desde el primer día: PT · EN · RU · DE · ES."
         ]
       }
