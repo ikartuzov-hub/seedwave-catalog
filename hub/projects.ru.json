@@ -125,6 +125,24 @@
       "moreLink": "https://nam.seedwave.pt/flyer.html"
     },
     {
+      "id": "painel",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#1F4FD1\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Painel de Apoios\"><title>Painel de Apoios</title><path d=\"M36 66 L36 16 L54 16 C66 16 72 24 72 33 C72 42 66 50 54 50 L36 50\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
+      "category": "Субсидии",
+      "name": "Painel de Apoios",
+      "hook": "Всё, что открыто для бизнеса Мадейры, на одном табло — бесплатно для экрана на ресепшене.",
+      "description": "Живое табло открытых программ поддержки, сроков и семинаров недели для бизнеса Мадейры. Каждая строка сверена с официальным источником и несёт дату сверки. Подключается за минуту, без аккаунта и рекламы: экран-киоск для ресепшена, лист недели A4 для стойки и виджет для сайта. QR в углу ведёт в чекер nAm.",
+      "sectors": [
+        "Господдержка",
+        "Малый бизнес",
+        "Civic Tech"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Бухгалтерские офисы · Бизнес-ассоциации · Отели с экраном на ресепшене",
+      "demoLink": "https://painel.seedwave.pt/",
+      "moreLink": "https://painel.seedwave.pt/flyer.html"
+    },
+    {
       "id": "nrm",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#17998A\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nRm\"><title>nRm — Novo Reforço da Madeira</title><path d=\"M34 16 L34 72\"/><path d=\"M34 16 Q62 16 62 31 Q62 46 34 46\"/><path d=\"M42 46 Q52 56 58 72\"/><path d=\"M15 88 Q28 82 39 88 Q50 94 61 88 Q72 82 85 88\"/></svg>",
       "category": "Субсидии",

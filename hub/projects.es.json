@@ -125,6 +125,24 @@
       "moreLink": "https://nam.seedwave.pt/flyer.html"
     },
     {
+      "id": "painel",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#1F4FD1\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Painel de Apoios\"><title>Painel de Apoios</title><path d=\"M36 66 L36 16 L54 16 C66 16 72 24 72 33 C72 42 66 50 54 50 L36 50\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
+      "category": "Ayudas",
+      "name": "Painel de Apoios",
+      "hook": "Todo lo abierto para las empresas de Madeira, en un solo panel — gratis para la pantalla de la recepción.",
+      "description": "Panel en vivo con las ayudas abiertas, los plazos y los seminarios de la semana para empresas de Madeira. Cada línea se verifica en la fuente oficial y lleva la fecha de verificación. Se configura en un minuto, sin cuenta ni publicidad: pantalla en modo quiosco para la recepción, hoja A4 semanal para el mostrador y widget para la web. El QR de la esquina lleva al verificador nAm.",
+      "sectors": [
+        "Apoyo público",
+        "Pequeñas empresas",
+        "Civic Tech"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Despachos de contabilidad · Asociaciones empresariales · Hoteles con pantalla en recepción",
+      "demoLink": "https://painel.seedwave.pt/",
+      "moreLink": "https://painel.seedwave.pt/flyer.html"
+    },
+    {
       "id": "nrm",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#17998A\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nRm\"><title>nRm — Novo Reforço da Madeira</title><path d=\"M34 16 L34 72\"/><path d=\"M34 16 Q62 16 62 31 Q62 46 34 46\"/><path d=\"M42 46 Q52 56 58 72\"/><path d=\"M15 88 Q28 82 39 88 Q50 94 61 88 Q72 82 85 88\"/></svg>",
       "category": "Ayudas",

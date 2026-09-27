@@ -125,6 +125,24 @@
       "moreLink": "https://nam.seedwave.pt/flyer.html"
     },
     {
+      "id": "painel",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#1F4FD1\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Painel de Apoios\"><title>Painel de Apoios</title><path d=\"M36 66 L36 16 L54 16 C66 16 72 24 72 33 C72 42 66 50 54 50 L36 50\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
+      "category": "Grants",
+      "name": "Painel de Apoios",
+      "hook": "Everything open for businesses in Madeira, on one board — free for your reception screen.",
+      "description": "A live board of open grants, deadlines and this week's seminars for businesses in Madeira. Every line is checked against the official source and shows the check date. Set up in one minute, no account, no ads: kiosk screen for reception, weekly A4 sheet for the counter and a website widget. The QR in the corner leads to the nAm checker.",
+      "sectors": [
+        "Public support",
+        "Small business",
+        "Civic Tech"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Accounting firms · Business associations · Hotels with a reception screen",
+      "demoLink": "https://painel.seedwave.pt/",
+      "moreLink": "https://painel.seedwave.pt/flyer.html"
+    },
+    {
       "id": "nrm",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#17998A\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nRm\"><title>nRm — Novo Reforço da Madeira</title><path d=\"M34 16 L34 72\"/><path d=\"M34 16 Q62 16 62 31 Q62 46 34 46\"/><path d=\"M42 46 Q52 56 58 72\"/><path d=\"M15 88 Q28 82 39 88 Q50 94 61 88 Q72 82 85 88\"/></svg>",
       "category": "Grants",
