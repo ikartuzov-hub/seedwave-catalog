@@ -143,6 +143,24 @@
       "moreLink": "https://painel.seedwave.pt/flyer.html"
     },
     {
+      "id": "prazos",
+      "icon": "<svg viewBox=\"0 0 64 64\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Prazos\"><title>Prazos</title><rect width=\"64\" height=\"64\" rx=\"16\" fill=\"#D9890B\"/><path d=\"M24 46V16h11a9.5 9.5 0 0 1 0 19H24\" fill=\"none\" stroke=\"#1B1200\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M12 53c6.5-4 13-4 19.5 0s13 4 19.5 0\" fill=\"none\" stroke=\"#1B1200\" stroke-width=\"3.5\" stroke-linecap=\"round\"/></svg>",
+      "category": "Bürgerdienste",
+      "name": "Prazos",
+      "hook": "Keine Frist rutscht durch: der persönliche Kalender für Sozialversicherung und Finanzamt für Selbstständige in Portugal.",
+      "description": "Vier Fragen, und Selbstständige erhalten ihr Fristenjahr: Meldungen und Beiträge zur Segurança Social, IRS, Vorauszahlungen, Mehrwertsteuer. Jeder Termin nennt die Aufgabe, die Folgen eines Versäumnisses und die Rechtsgrundlage, geprüft anhand offizieller Quellen. Erinnert rechtzeitig, wenn eine Frist auf einen arbeitsfreien Tag fällt, und zeigt, bis wann eine verspätete Abgabe noch möglich ist. Kostenlos, ohne Konto, Export in den Handykalender.",
+      "sectors": [
+        "Selbstständige",
+        "Kleinunternehmen",
+        "Civic Tech"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Steuerberater · Gründungsservices · Expat-Communities",
+      "demoLink": "https://prazos.seedwave.pt/",
+      "moreLink": "https://prazos.seedwave.pt/flyer.html"
+    },
+    {
       "id": "nrm",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#17998A\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nRm\"><title>nRm — Novo Reforço da Madeira</title><path d=\"M34 16 L34 72\"/><path d=\"M34 16 Q62 16 62 31 Q62 46 34 46\"/><path d=\"M42 46 Q52 56 58 72\"/><path d=\"M15 88 Q28 82 39 88 Q50 94 61 88 Q72 82 85 88\"/></svg>",
       "category": "Förderungen",
