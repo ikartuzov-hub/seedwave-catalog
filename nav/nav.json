@@ -33,7 +33,8 @@
     "apoios",
     "painel",
     "prazos",
-    "guias"
+    "guias",
+    "simplifica"
   ],
   "items": {
     "ajuda": {
@@ -255,6 +256,28 @@
         "ru": "Какие тропы открыты сегодня",
         "es": "Qué senderos están abiertos hoy",
         "de": "Welche Wege heute offen sind"
+      }
+    },
+    "simplifica": {
+      "url": "https://ajuda.seedwave.pt/cartao/",
+      "match": [
+        "ajuda.seedwave.pt/cartao/",
+        "ajuda.seedwave.pt/trilhos/",
+        "ajuda.seedwave.pt/magnolia/"
+      ],
+      "label": {
+        "pt": "SIMplifica",
+        "en": "SIMplifica",
+        "ru": "SIMplifica",
+        "es": "SIMplifica",
+        "de": "SIMplifica"
+      },
+      "tagline": {
+        "pt": "Cartão de Residente, trilhos e campos — ecrã a ecrã",
+        "en": "Resident card, trails and courts — screen by screen",
+        "ru": "Карта резидента, тропы и корты — экран за экраном",
+        "es": "Tarjeta de residente, senderos y pistas — pantalla a pantalla",
+        "de": "Residentenkarte, Wanderwege und Plätze — Schritt für Schritt"
       }
     }
   },

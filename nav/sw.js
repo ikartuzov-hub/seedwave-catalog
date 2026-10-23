@@ -22,7 +22,7 @@
 .sw-eco__h{display:flex;align-items:center;gap:10px;margin:0 0 12px;font-size:14px;letter-spacing:.02em;opacity:.85}\
 .sw-eco__h a{color:inherit;text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:7px}\
 .sw-eco__h svg{width:20px;height:20px;flex:none}\
-.sw-eco__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px;margin:0;padding:0;list-style:none}\
+.sw-eco__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0;padding:0;list-style:none}\
 .sw-eco__grid li{margin:0}\
 .sw-eco__card{display:block;padding:10px 12px;border:1px solid var(--sw-line);border-radius:12px;background:var(--sw-bg);color:inherit;text-decoration:none;min-height:100%;transition:border-color .15s,transform .15s}\
 .sw-eco__card:hover,.sw-eco__card:focus-visible{border-color:var(--sw-acc);transform:translateY(-1px);outline:none}\
@@ -55,9 +55,16 @@
     return p.replace(/\/(index\.html)?$/, '/').replace(/\/(pt|en|ru|es|de)\//, '/');
   }
 
-  function matchItem(data, id, cur) {
-    var it = data.items[id]; if (!it || !it.match) return false;
-    return it.match.some(function (m) { return cur.indexOf(m) === 0; });
+  function matchLen(data, id, cur) {
+    var it = data.items[id]; if (!it || !it.match) return 0;
+    return it.match.reduce(function (n, m) { return cur.indexOf(m) === 0 && m.length > n ? m.length : n; }, 0);
+  }
+  function matchItem(data, id, cur) { return matchLen(data, id, cur) > 0; }
+  // «вы здесь» в сетке — только у самого точного совпадения (SIMplifica внутри Ajuda)
+  function hereId(data, cur) {
+    var best = null, n = 0;
+    data.menu.forEach(function (id) { var k = matchLen(data, id, cur); if (k > n) { n = k; best = id; } });
+    return best;
   }
 
   function relatedFor(data, cur) {
@@ -68,10 +75,10 @@
 
   function render(data) {
     var L = lang(), ui = data.ui[L] || data.ui.pt, cur = here();
-    var curMenu = null;
+    var curMenu = hereId(data, cur);
     var cards = data.menu.map(function (id) {
       var it = data.items[id]; if (!it) return '';
-      var isHere = matchItem(data, id, cur); if (isHere) curMenu = id;
+      var isHere = id === curMenu;
       var lab = esc(it.label[L] || it.label.pt), tag = esc(it.tagline[L] || it.tagline.pt);
       if (isHere) return '<li><span class="sw-eco__card is-here"><b>' + lab + '</b><i>' + esc(ui.current) + '</i></span></li>';
       return '<li><a class="sw-eco__card" href="' + esc(withLang(it.url, L)) + '"><b>' + lab + '</b><small>' + tag + '</small></a></li>';
