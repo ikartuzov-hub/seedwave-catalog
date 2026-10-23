@@ -1,19 +1,53 @@
 {
   "_": "Слой 3 — контент общего блока «Ещё на SeedWave». Правится без движка. Ссылки — только из Реестра ссылок продуктов.",
   "ui": {
-    "pt": { "more": "Mais no SeedWave", "related": "Relacionado", "current": "está aqui" },
-    "en": { "more": "More from SeedWave", "related": "See also", "current": "you are here" },
-    "ru": { "more": "Ещё на SeedWave", "related": "По теме", "current": "вы здесь" },
-    "es": { "more": "Más en SeedWave", "related": "Relacionado", "current": "está aquí" },
-    "de": { "more": "Mehr von SeedWave", "related": "Siehe auch", "current": "Sie sind hier" }
+    "pt": {
+      "more": "Mais no SeedWave",
+      "related": "Relacionado",
+      "current": "está aqui"
+    },
+    "en": {
+      "more": "More from SeedWave",
+      "related": "See also",
+      "current": "you are here"
+    },
+    "ru": {
+      "more": "Ещё на SeedWave",
+      "related": "По теме",
+      "current": "вы здесь"
+    },
+    "es": {
+      "more": "Más en SeedWave",
+      "related": "Relacionado",
+      "current": "está aquí"
+    },
+    "de": {
+      "more": "Mehr von SeedWave",
+      "related": "Siehe auch",
+      "current": "Sie sind hier"
+    }
   },
   "hub": "https://seedwave.pt/hub/",
-  "menu": ["ajuda", "apoios", "painel", "prazos", "guias"],
+  "menu": [
+    "ajuda",
+    "apoios",
+    "painel",
+    "prazos",
+    "guias"
+  ],
   "items": {
     "ajuda": {
       "url": "https://ajuda.seedwave.pt/",
-      "match": ["ajuda.seedwave.pt/"],
-      "label": { "pt": "Ajuda", "en": "Help", "ru": "Помощь", "es": "Ayuda", "de": "Hilfe" },
+      "match": [
+        "ajuda.seedwave.pt/"
+      ],
+      "label": {
+        "pt": "Ajuda",
+        "en": "Help",
+        "ru": "Помощь",
+        "es": "Ayuda",
+        "de": "Hilfe"
+      },
       "tagline": {
         "pt": "Guias passo a passo: CESD, AIMA, voos",
         "en": "Step-by-step guides: EHIC, AIMA, flights",
@@ -24,8 +58,16 @@
     },
     "apoios": {
       "url": "https://apoios.seedwave.pt/",
-      "match": ["apoios.seedwave.pt/"],
-      "label": { "pt": "Apoios", "en": "Subsidies", "ru": "Субсидии", "es": "Apoyos", "de": "Förderung" },
+      "match": [
+        "apoios.seedwave.pt/"
+      ],
+      "label": {
+        "pt": "Apoios",
+        "en": "Subsidies",
+        "ru": "Субсидии",
+        "es": "Apoyos",
+        "de": "Förderung"
+      },
       "tagline": {
         "pt": "Apoios à empresa na Madeira, explicados",
         "en": "Business support in Madeira, explained",
@@ -36,8 +78,16 @@
     },
     "painel": {
       "url": "https://painel.seedwave.pt/",
-      "match": ["painel.seedwave.pt/"],
-      "label": { "pt": "Painel", "en": "Board", "ru": "Табло", "es": "Panel", "de": "Tafel" },
+      "match": [
+        "painel.seedwave.pt/"
+      ],
+      "label": {
+        "pt": "Painel",
+        "en": "Board",
+        "ru": "Табло",
+        "es": "Panel",
+        "de": "Tafel"
+      },
       "tagline": {
         "pt": "Programas abertos esta semana",
         "en": "Programmes open this week",
@@ -48,8 +98,16 @@
     },
     "prazos": {
       "url": "https://prazos.seedwave.pt/",
-      "match": ["prazos.seedwave.pt/"],
-      "label": { "pt": "Prazos", "en": "Deadlines", "ru": "Сроки", "es": "Plazos", "de": "Fristen" },
+      "match": [
+        "prazos.seedwave.pt/"
+      ],
+      "label": {
+        "pt": "Prazos",
+        "en": "Deadlines",
+        "ru": "Сроки",
+        "es": "Plazos",
+        "de": "Fristen"
+      },
       "tagline": {
         "pt": "Nenhum prazo passa: SS, IRS, IVA",
         "en": "No deadline slips: SS, IRS, VAT",
@@ -60,8 +118,16 @@
     },
     "guias": {
       "url": "https://g.seedwave.pt/",
-      "match": ["g.seedwave.pt/"],
-      "label": { "pt": "Guias", "en": "Guides", "ru": "Гиды", "es": "Guías", "de": "Guides" },
+      "match": [
+        "g.seedwave.pt/"
+      ],
+      "label": {
+        "pt": "Guias",
+        "en": "Guides",
+        "ru": "Гиды",
+        "es": "Guías",
+        "de": "Guides"
+      },
       "tagline": {
         "pt": "Madeira, Paris, Málaga — com plano para o dia",
         "en": "Madeira, Paris, Málaga — with a plan for the day",
@@ -72,8 +138,16 @@
     },
     "cesd": {
       "url": "https://ajuda.seedwave.pt/cesd/",
-      "match": ["ajuda.seedwave.pt/cesd/"],
-      "label": { "pt": "CESD", "en": "EHIC", "ru": "CESD", "es": "TSE", "de": "EHIC" },
+      "match": [
+        "ajuda.seedwave.pt/cesd/"
+      ],
+      "label": {
+        "pt": "CESD",
+        "en": "EHIC",
+        "ru": "CESD",
+        "es": "TSE",
+        "de": "EHIC"
+      },
       "tagline": {
         "pt": "Cartão Europeu de Seguro de Doença — grátis, em 10 minutos",
         "en": "European Health Insurance Card — free, in 10 minutes",
@@ -84,8 +158,17 @@
     },
     "voos": {
       "url": "https://ajuda.seedwave.pt/subsidio/",
-      "match": ["ajuda.seedwave.pt/subsidio/", "ajuda.seedwave.pt/tap/"],
-      "label": { "pt": "Subsídio de voos", "en": "Flight subsidy", "ru": "Субсидия за перелёты", "es": "Subsidio de vuelos", "de": "Flugzuschuss" },
+      "match": [
+        "ajuda.seedwave.pt/subsidio/",
+        "ajuda.seedwave.pt/tap/"
+      ],
+      "label": {
+        "pt": "Subsídio de voos",
+        "en": "Flight subsidy",
+        "ru": "Субсидия за перелёты",
+        "es": "Subsidio de vuelos",
+        "de": "Flugzuschuss"
+      },
       "tagline": {
         "pt": "Residente da Madeira? O Estado devolve parte do bilhete",
         "en": "Madeira resident? The State refunds part of your ticket",
@@ -96,8 +179,16 @@
     },
     "aima": {
       "url": "https://ajuda.seedwave.pt/aima/",
-      "match": ["ajuda.seedwave.pt/aima/"],
-      "label": { "pt": "AIMA", "en": "AIMA", "ru": "AIMA", "es": "AIMA", "de": "AIMA" },
+      "match": [
+        "ajuda.seedwave.pt/aima/"
+      ],
+      "label": {
+        "pt": "AIMA",
+        "en": "AIMA",
+        "ru": "AIMA",
+        "es": "AIMA",
+        "de": "AIMA"
+      },
       "tagline": {
         "pt": "Como acompanhar o seu processo",
         "en": "How to track your case",
@@ -108,8 +199,16 @@
     },
     "nam": {
       "url": "https://nam.seedwave.pt/",
-      "match": ["nam.seedwave.pt/"],
-      "label": { "pt": "nAm", "en": "nAm", "ru": "nAm", "es": "nAm", "de": "nAm" },
+      "match": [
+        "nam.seedwave.pt/"
+      ],
+      "label": {
+        "pt": "nAm",
+        "en": "nAm",
+        "ru": "nAm",
+        "es": "nAm",
+        "de": "nAm"
+      },
       "tagline": {
         "pt": "Quanto apoio pode a sua empresa receber — em 2 minutos",
         "en": "How much support your business can get — in 2 minutes",
@@ -120,8 +219,16 @@
     },
     "contratar": {
       "url": "https://contratar.seedwave.pt/",
-      "match": ["contratar.seedwave.pt/"],
-      "label": { "pt": "Contratar", "en": "Hiring", "ru": "Найм", "es": "Contratar", "de": "Einstellen" },
+      "match": [
+        "contratar.seedwave.pt/"
+      ],
+      "label": {
+        "pt": "Contratar",
+        "en": "Hiring",
+        "ru": "Найм",
+        "es": "Contratar",
+        "de": "Einstellen"
+      },
       "tagline": {
         "pt": "Apoios à contratação na Madeira",
         "en": "Hiring support in Madeira",
@@ -132,8 +239,16 @@
     },
     "trilhos": {
       "url": "https://ntm.seedwave.pt/",
-      "match": ["ntm.seedwave.pt/"],
-      "label": { "pt": "Trilhos", "en": "Trails", "ru": "Тропы", "es": "Senderos", "de": "Wanderwege" },
+      "match": [
+        "ntm.seedwave.pt/"
+      ],
+      "label": {
+        "pt": "Trilhos",
+        "en": "Trails",
+        "ru": "Тропы",
+        "es": "Senderos",
+        "de": "Wanderwege"
+      },
       "tagline": {
         "pt": "Que trilhos estão abertos hoje",
         "en": "Which trails are open today",
@@ -144,18 +259,60 @@
     }
   },
   "related": {
-    "ajuda.seedwave.pt/cesd/": ["voos", "aima", "prazos"],
-    "ajuda.seedwave.pt/subsidio/": ["cesd", "aima", "prazos"],
-    "ajuda.seedwave.pt/tap/": ["cesd", "aima", "prazos"],
-    "ajuda.seedwave.pt/aima/": ["cesd", "voos"],
-    "ajuda.seedwave.pt/": ["cesd", "voos", "aima"],
-    "prazos.seedwave.pt/": ["painel", "nam", "cesd"],
-    "painel.seedwave.pt/": ["prazos", "nam", "contratar"],
-    "apoios.seedwave.pt/": ["nam", "painel", "contratar"],
-    "nam.seedwave.pt/": ["contratar", "painel", "prazos"],
-    "contratar.seedwave.pt/": ["nam", "painel", "prazos"],
-    "ntm.seedwave.pt/": ["guias"],
-    "g.seedwave.pt/": ["trilhos", "voos"],
-    "i.seedwave.pt/": ["ajuda", "prazos", "painel"]
+    "ajuda.seedwave.pt/cesd/": [
+      "voos",
+      "aima",
+      "prazos"
+    ],
+    "ajuda.seedwave.pt/subsidio/": [
+      "cesd",
+      "aima",
+      "prazos"
+    ],
+    "ajuda.seedwave.pt/tap/": [
+      "cesd",
+      "aima",
+      "prazos"
+    ],
+    "ajuda.seedwave.pt/aima/": [
+      "cesd",
+      "voos"
+    ],
+    "ajuda.seedwave.pt/": [
+      "cesd",
+      "voos",
+      "aima"
+    ],
+    "prazos.seedwave.pt/": [
+      "nam",
+      "cesd",
+      "contratar"
+    ],
+    "painel.seedwave.pt/": [
+      "nam",
+      "contratar"
+    ],
+    "apoios.seedwave.pt/": [
+      "nam",
+      "contratar"
+    ],
+    "nam.seedwave.pt/": [
+      "contratar"
+    ],
+    "contratar.seedwave.pt/": [
+      "nam"
+    ],
+    "ntm.seedwave.pt/": [
+      "guias"
+    ],
+    "g.seedwave.pt/": [
+      "trilhos",
+      "voos"
+    ],
+    "i.seedwave.pt/": [
+      "cesd",
+      "voos",
+      "nam"
+    ]
   }
 }

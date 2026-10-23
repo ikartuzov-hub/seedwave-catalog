@@ -77,7 +77,8 @@
       return '<li><a class="sw-eco__card" href="' + esc(withLang(it.url, L)) + '"><b>' + lab + '</b><small>' + tag + '</small></a></li>';
     }).join('');
 
-    var rel = relatedFor(data, cur).filter(function (id) { return id !== curMenu && data.items[id] && !matchItem(data, id, cur); });
+    // «по теме» — только то, чего нет в сетке выше, и не текущая страница
+    var rel = relatedFor(data, cur).filter(function (id) { return data.menu.indexOf(id) < 0 && data.items[id] && !matchItem(data, id, cur); });
     var relHtml = rel.length ? '<p class="sw-eco__rel"><span>' + esc(ui.related) + ':</span>' + rel.map(function (id) {
       var it = data.items[id];
       return '<a href="' + esc(withLang(it.url, L)) + '" title="' + esc(it.tagline[L] || it.tagline.pt) + '">' + esc(it.label[L] || it.label.pt) + '</a>';
