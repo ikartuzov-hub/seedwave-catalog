@@ -504,7 +504,7 @@
       "category": "Bürgerdienste",
       "name": "nDm — Anleitungen durch die portugiesische Bürokratie",
       "hook": "Der Staat hat die Zuschüsse ins Netz verlegt und die zurückgelassen, die damit nicht umgehen. nDm schreibt Anleitungen, mit denen es beim ersten Mal klappt.",
-      "description": "Eine Reihe kostenloser Anleitungen durch die portugiesische Bürokratie in fünf Sprachen: markierte Bildschirme, die Fallen, in die fast alle tappen, und die genauen portugiesischen Feldnamen. Zwei Ausgaben sind fertig: „Documentos TAP“ — die zwei Dokumente der Fluggesellschaft, ohne die es keinen Mobilitätszuschuss gibt — und „Subsídio de Mobilidade“ — der Antrag selbst: fünf Portal-Bildschirme und sieben Zahlen aus der Rechnung, dazu drei Merkblätter. Danach: die Ermäßigungen der Verkehrsträger.",
+      "description": "Eine Reihe kostenloser Anleitungen durch die portugiesische Bürokratie in fünf Sprachen: markierte Bildschirme, die Fallen, in die fast alle tappen, und die genauen portugiesischen Feldnamen. Erschienen: „Documentos TAP“ und „Subsídio de Mobilidade“ — wie man einen Teil des Flugtickets zurückbekommt (plus drei Merkblätter); die Residentenkarte Madeiras im Portal SIMplifica; die Buchung von Wanderwegen und Plätzen in der Quinta Magnólia; und neu — die Europäische Krankenversicherungskarte (CESD): was tun, wenn die Segurança Social den Online-Antrag ablehnt, mit Musterformularen und Unterschrift per Chave Móvel Digital ohne Drucker.",
       "sectors": [
         "Civic Tech",
         "Education"
@@ -521,10 +521,41 @@
           "Wir veröffentlichen kostenlos in fünf Sprachen. Die Feldnamen bleiben portugiesisch: man sucht mit den Augen genau das Wort, das auf dem Bildschirm steht."
         ],
         "proofs": [
-          "Beide Ausgaben entstanden aus echten Anträgen — siebenundzwanzig live aufgenommene Bildschirme.",
+          "Die CESD-Anleitung entstand aus zwei echten Anträgen: der Weg über e-Clic, die Formulare GIT-53 und MG2 und das Raster der CMD-Signatur — wo der Stempel landet (Seite 3, Feld 12 und Seite 1, Feld 15).",
           "Ein Antrag über 365,15 € ist auf den Cent zerlegt: woher jede Zahl im Formular stammt.",
           "Sechs Stellen gefunden, an denen das Portal stillschweigend Geld kostet: die Gebührenfelder haben kein Sternchen, und der gespeicherte Entwurf verliert den Rückflug.",
           "Die 400-€-Grenze steht nicht mehr im Gesetz, auf der amtlichen Seite aber schon — hier gefunden und an eigenen Anträgen geprüft.",
+          "Fünf Sprachen vom ersten Tag an: PT · EN · RU · DE · ES."
+        ]
+      }
+    },
+    {
+      "id": "cesd",
+      "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"CESD\"><title>CESD</title><rect width=\"100\" height=\"100\" rx=\"23\" fill=\"#EAF0FA\"/><g fill=\"none\" stroke=\"#1D4FA0\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M68 20 L32 20 L52 45 L32 70 L68 70\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></g></svg>",
+      "category": "Bürgerdienste",
+      "name": "CESD — Europäische Krankenversicherungskarte, wenn das Portal ablehnt",
+      "hook": "Die kostenlose Karte, mit der man in jedem EU-Land im öffentlichen Gesundheitswesen wie Einheimische behandelt wird. Wenn die Segurança Social Direta den Online-Antrag nicht zulässt — der ganze Weg: e-Clic, zwei Formulare und Unterschrift ohne Drucker.",
+      "description": "Eine Schritt-für-Schritt-Anleitung in fünf Sprachen für alle in Portugal, die „Atualmente não reúne condições para solicitar o CESD por esta via“ bekommen haben. Wofür die Karte da ist und was sie nicht abdeckt, wo sie für Drittstaatsangehörige nicht gilt, die e-Clic-Anfrage mit fertigem Text, erklärte Muster von GIT-53 und MG2, die Unterschrift per Chave Móvel Digital mit der genauen Stempelposition, die Kopie des Aufenthaltstitels, die Antwort mit Unterlagen — und unser Fall nach Datum.",
+      "sectors": [
+        "Civic Tech",
+        "Gesundheit",
+        "Expats"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Wer die CESD schon auf diesem Weg bekommen hat · Expat-Communitys · Jurist für Sozialversicherung",
+      "demoLink": "https://ajuda.seedwave.pt/cesd/de/",
+      "page": {
+        "how": [
+          "Wir sind den Weg selbst gegangen: Online-Ablehnung, e-Clic-Anfrage, Rückfrage der Segurança Social, Unterschrift und Versand.",
+          "Wiederholt bei einem zweiten Antrag — gleich mit vollem Paket, um zu sehen, ob sich die Rückfrage vermeiden lässt.",
+          "Die Formulare zeigen erfundene Daten; die Erklärungen stehen als Text unter dem Bild, in jeder Sprache.",
+          "Fertige portugiesische Texte mit „Kopieren“-Knopf."
+        ],
+        "proofs": [
+          "Zwei echte Anträge bei der Segurança Social, Oktober 2026.",
+          "Die unauffällige Mechanik der CMD-Signatur gefunden: der Stempel landet im oberen Teil des Feldes — wir lagen zweimal daneben.",
+          "Einschränkungen für Drittstaatsangehörige mit Your Europe und dem Guia Prático CESD abgeglichen.",
           "Fünf Sprachen vom ersten Tag an: PT · EN · RU · DE · ES."
         ]
       }

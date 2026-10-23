@@ -504,7 +504,7 @@
       "category": "Civic tech",
       "name": "nDm — guides to Portuguese bureaucracy",
       "hook": "The state moved its subsidies online and left behind the people who cannot follow. nDm writes the guides that get it right the first time.",
-      "description": "A series of free guides to Portuguese bureaucracy in five languages: annotated screens, the traps almost everyone falls into, and the exact Portuguese field names. Two issues are out: “Documentos TAP” — the two airline documents without which there is no mobility subsidy — and “Subsídio de Mobilidade” — the claim itself: five portal screens and seven figures copied from the invoice, plus three reference pages. Next: carrier discounts.",
+      "description": "A series of free guides to Portuguese bureaucracy in five languages: annotated screens, the traps almost everyone falls into, and the exact Portuguese field names. Out so far: “Documentos TAP” and “Subsídio de Mobilidade” — how to get part of your flight back (plus three reference pages); the Madeira resident card on the SIMplifica portal; booking trails and the Quinta Magnólia courts; and the newest — the European Health Insurance Card (CESD): what to do when Segurança Social refuses the online request, with sample forms and signing with Chave Móvel Digital without a printer.",
       "sectors": [
         "Civic Tech",
         "Education"
@@ -521,10 +521,41 @@
           "We publish it free in five languages. Field names stay in Portuguese: the reader hunts for the very word that is on the screen."
         ],
         "proofs": [
-          "Both issues were built from real claims — twenty-seven screens captured live.",
+          "The CESD guide was built on two live applications: the e-Clic route, forms GIT-53 and MG2, and the CMD signature grid — where the stamp lands (page 3, cell 12 and page 1, cell 15).",
           "A €365.15 claim is taken apart to the cent: where every figure in the form comes from.",
           "Six places were found where the portal quietly costs you money: the tax fields carry no asterisk, and a saved draft loses the return leg.",
           "The €400 cap left the law but is still on the official page — found here and checked against our own claims.",
+          "Five languages from day one: PT · EN · RU · DE · ES."
+        ]
+      }
+    },
+    {
+      "id": "cesd",
+      "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"CESD\"><title>CESD</title><rect width=\"100\" height=\"100\" rx=\"23\" fill=\"#EAF0FA\"/><g fill=\"none\" stroke=\"#1D4FA0\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M68 20 L32 20 L52 45 L32 70 L68 70\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></g></svg>",
+      "category": "Civic tech",
+      "name": "CESD — European Health Insurance Card when the portal says no",
+      "hook": "The free card that gets you public healthcare in any EU country on local terms. When Segurança Social Direta will not let you apply online — the full route: e-Clic, two forms and signing without a printer.",
+      "description": "A step-by-step guide in five languages for people living in Portugal who got «Atualmente não reúne condições para solicitar o CESD por esta via». What the card is for and what it does not cover, where it is not valid for non-EU nationals, the e-Clic request with ready text, explained samples of GIT-53 and MG2, signing with Chave Móvel Digital with the exact stamp position, the residence permit copy, the reply with documents — and our case by date.",
+      "sectors": [
+        "Civic Tech",
+        "Health",
+        "Expats"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "People who already got the CESD this way · Expat communities · Social security lawyer",
+      "demoLink": "https://ajuda.seedwave.pt/cesd/en/",
+      "page": {
+        "how": [
+          "We walked the route ourselves: online refusal, e-Clic request, Segurança Social's request for documents, signing and sending.",
+          "We repeated it on a second application — with the full package up front, to see whether the request for documents can be skipped.",
+          "The forms are shown with made-up data; explanations are text under the image, in every language.",
+          "Ready Portuguese texts with a «Copy» button."
+        ],
+        "proofs": [
+          "Two live applications to Segurança Social, October 2026.",
+          "Found the non-obvious CMD signing mechanics: the stamp lands in the upper part of the cell — we missed twice.",
+          "Limits for non-EU nationals checked against Your Europe and the CESD Guia Prático.",
           "Five languages from day one: PT · EN · RU · DE · ES."
         ]
       }

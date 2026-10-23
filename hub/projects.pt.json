@@ -504,7 +504,7 @@
       "category": "Serviços ao cidadão",
       "name": "nDm — guias da burocracia portuguesa",
       "hook": "O Estado passou os apoios para online e deixou para trás quem não sabe. O nDm escreve guias com os quais se consegue à primeira.",
-      "description": "Série de guias gratuitos sobre a burocracia portuguesa em cinco línguas: ecrãs com setas, as armadilhas em que quase toda a gente cai e os nomes exactos dos campos em português. Já saíram duas edições: «Documentos TAP» — os dois documentos da companhia aérea sem os quais não há subsídio de mobilidade — e «Subsídio de Mobilidade» — o pedido em si: cinco ecrãs do portal e sete números copiados da fatura, mais três fichas de apoio. A seguir: os descontos das transportadoras.",
+      "description": "Série de guias gratuitos sobre a burocracia portuguesa em cinco línguas: ecrãs com setas, as armadilhas em que quase toda a gente cai e os nomes exatos dos campos em português. Já saíram: «Documentos TAP» e «Subsídio de Mobilidade» — como recuperar parte do bilhete de avião (mais três fichas); o «Cartão de Residente na RAM» no SIMplifica; a reserva de trilhos e dos campos da Quinta Magnólia; e a nova — «Cartão Europeu de Seguro de Doença»: o que fazer quando a Segurança Social recusa o pedido online, com modelos dos formulários e assinatura com a Chave Móvel Digital sem impressora.",
       "sectors": [
         "Civic Tech",
         "Education"
@@ -521,10 +521,41 @@
           "Publicamos gratuitamente em cinco línguas. Os nomes dos campos ficam em português: a pessoa procura com os olhos a mesma palavra que vê no ecrã."
         ],
         "proofs": [
-          "As duas edições foram feitas a partir de pedidos reais — vinte e sete ecrãs captados ao vivo.",
+          "O CESD foi feito em dois pedidos reais: o caminho pelo e-Clic, os modelos GIT-53 e MG2 e a grelha da assinatura CMD — onde fica o selo (página 3, posição 12 e página 1, posição 15).",
           "Um pedido de 365,15 € é desmontado ao cêntimo: de onde vem cada número do formulário.",
           "Foram encontrados seis sítios onde o portal tira dinheiro em silêncio: os campos das taxas não têm asterisco e o rascunho guardado perde o regresso.",
           "O tecto de 400 € saiu da lei e continua na página oficial — encontrado aqui e verificado em pedidos nossos.",
+          "Cinco línguas desde o primeiro dia: PT · EN · RU · DE · ES."
+        ]
+      }
+    },
+    {
+      "id": "cesd",
+      "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"CESD\"><title>CESD</title><rect width=\"100\" height=\"100\" rx=\"23\" fill=\"#EAF0FA\"/><g fill=\"none\" stroke=\"#1D4FA0\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M68 20 L32 20 L52 45 L32 70 L68 70\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></g></svg>",
+      "category": "Serviços ao cidadão",
+      "name": "CESD — Cartão Europeu de Seguro de Doença, quando o portal recusa",
+      "hook": "O cartão gratuito que dá acesso ao serviço público de saúde em qualquer país da UE como a um residente. Quando a Segurança Social Direta não deixa pedir online — o caminho completo: e-Clic, dois formulários e assinatura sem impressora.",
+      "description": "Guia passo a passo em cinco línguas para quem vive em Portugal e recebeu «Atualmente não reúne condições para solicitar o CESD por esta via». Para que serve o cartão e o que não cobre, onde não vale para nacionais de países terceiros, o pedido no e-Clic com texto pronto, modelos do GIT-53 e do MG2 explicados, a assinatura com a Chave Móvel Digital com a posição exata do selo, a cópia do título de residência, a resposta com os documentos — e o nosso caso por datas.",
+      "sectors": [
+        "Civic Tech",
+        "Saúde",
+        "Imigrantes"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Quem já recebeu o CESD por este caminho · Comunidades de imigrantes · Jurista de segurança social",
+      "demoLink": "https://ajuda.seedwave.pt/cesd/",
+      "page": {
+        "how": [
+          "Fizemos o caminho nós próprios: recusa online, pedido no e-Clic, pedido de informação da Segurança Social, assinatura e envio.",
+          "Repetimos num segundo pedido — já com o pacote completo, para ver se se evita o pedido de informação.",
+          "Os formulários aparecem com dados fictícios; as explicações estão em texto, por baixo da imagem, em cada língua.",
+          "Textos prontos em português, com botão «Copiar»."
+        ],
+        "proofs": [
+          "Dois pedidos reais na Segurança Social, outubro de 2026.",
+          "Descoberta a mecânica pouco óbvia da assinatura CMD: o selo fica na parte de cima da posição — falhámos duas vezes.",
+          "As limitações para nacionais de países terceiros foram confirmadas no Your Europe e no Guia Prático do CESD.",
           "Cinco línguas desde o primeiro dia: PT · EN · RU · DE · ES."
         ]
       }
