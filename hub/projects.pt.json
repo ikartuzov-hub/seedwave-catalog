@@ -531,7 +531,7 @@
     },
     {
       "id": "cesd",
-      "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"CESD\"><title>CESD</title><rect width=\"100\" height=\"100\" rx=\"23\" fill=\"#EAF0FA\"/><g fill=\"none\" stroke=\"#1D4FA0\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M68 26 C63 19 55 17 48 17 C37 17 31 23 32 31 C33 40 43 42 50 44 C60 46 68 50 68 58 C68 66 60 71 50 71 C42 71 35 68 31 63\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></g></svg>",
+      "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"CESD\"><title>CESD</title><rect width=\"100\" height=\"100\" rx=\"23\" fill=\"#EAF0FA\"/><g fill=\"none\" stroke=\"#1D4FA0\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M44 29 A21 21 0 1 0 44 61\"/><path d=\"M76 20 L76 70\"/><path d=\"M76 57 A12 12 0 1 1 52 57 A12 12 0 1 1 76 57\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></g></svg>",
       "category": "Serviços ao cidadão",
       "name": "CESD — Cartão Europeu de Seguro de Doença, quando o portal recusa",
       "hook": "O cartão gratuito que dá acesso ao serviço público de saúde em qualquer país da UE como a um residente. Quando a Segurança Social Direta não deixa pedir online — o caminho completo: e-Clic, dois formulários e assinatura sem impressora.",
