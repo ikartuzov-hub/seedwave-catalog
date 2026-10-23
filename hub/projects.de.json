@@ -504,7 +504,7 @@
       "category": "Bürgerdienste",
       "name": "nDm — Anleitungen durch die portugiesische Bürokratie",
       "hook": "Der Staat hat die Zuschüsse ins Netz verlegt und die zurückgelassen, die damit nicht umgehen. nDm schreibt Anleitungen, mit denen es beim ersten Mal klappt.",
-      "description": "Eine Reihe kostenloser Anleitungen durch die portugiesische Bürokratie in fünf Sprachen: markierte Bildschirme, die Fallen, in die fast alle tappen, und die genauen portugiesischen Feldnamen. Erschienen: „Documentos TAP“ und „Subsídio de Mobilidade“ — wie man einen Teil des Flugtickets zurückbekommt (plus drei Merkblätter); die Residentenkarte Madeiras im Portal SIMplifica; die Buchung von Wanderwegen und Plätzen in der Quinta Magnólia; und neu — die Europäische Krankenversicherungskarte (CESD): was tun, wenn die Segurança Social den Online-Antrag ablehnt, mit Musterformularen und Unterschrift per Chave Móvel Digital ohne Drucker.",
+      "description": "Eine Reihe kostenloser Anleitungen durch die portugiesische Bürokratie in fünf Sprachen: markierte Bildschirme, die Fallen, in die fast alle tappen, und die genauen portugiesischen Feldnamen. Erschienen: „Documentos TAP“ und „Subsídio de Mobilidade“ — wie man einen Teil des Flugtickets zurückbekommt (plus drei Merkblätter); die Residentenkarte Madeiras im Portal SIMplifica; die Buchung von Wanderwegen und Plätzen in der Quinta Magnólia; und neu — die Europäische Krankenversicherungskarte (CESD): was tun, wenn die Segurança Social den Online-Antrag ablehnt, mit Musterformularen und Unterschrift per Chave Móvel Digital ohne Drucker. Und jetzt «Wo ist mein Verfahren bei der AIMA?»: der offizielle Tracker mit acht Stufen, ohne Konto, Link per E-Mail.",
       "sectors": [
         "Civic Tech",
         "Education"
@@ -557,6 +557,36 @@
           "Die unauffällige Mechanik der CMD-Signatur gefunden: der Stempel landet im oberen Teil des Feldes — wir lagen zweimal daneben.",
           "Einschränkungen für Drittstaatsangehörige mit Your Europe und dem Guia Prático CESD abgeglichen.",
           "Fünf Sprachen vom ersten Tag an: PT · EN · RU · DE · ES."
+        ]
+      }
+    },
+    {
+      "id": "aima",
+      "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"AIMA\"><title>AIMA</title><rect width=\"100\" height=\"100\" rx=\"23\" fill=\"#F0E8F7\"/><g fill=\"none\" stroke=\"#5B2A86\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M30 70 L50 20 L70 70\"/><path d=\"M38 50 L62 50\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></g></svg>",
+      "category": "Bürgerdienste",
+      "name": "AIMA — Wo ist mein Verfahren? Der offizielle Tracker",
+      "hook": "Die AIMA hat einen Tracker mit acht Stufen, von der Entscheidung bis zur zugestellten Karte. Er steht nicht auf der Website und braucht kein Konto: Der Link kommt in fünf Minuten per E-Mail. So erfuhren wir, dass unser Antrag seit viereinhalb Monaten genehmigt war.",
+      "description": "Anleitung in fünf Sprachen für alle mit einem Verfahren bei der AIMA: wie man den Tracker-Link über das Kontaktformular bekommt (Art, Unterart, Code per E-Mail, sieben Angaben — und sonst nichts), wie man die acht Stufen anhand echter Screenshots liest und wie lange jede bei uns dauerte, die CTT-Nummer beim Versand der Karte, warum das Portal de Renovações sechs Monate hinterherhinkt und was zu tun ist, wenn der Tracker «Pedido não aceite» antwortet.",
+      "sectors": [
+        "Civic Tech",
+        "Expats"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Wer den Tracker mit anderen Verfahrensarten getestet hat · Expat-Communities · Anwalt für Ausländerrecht",
+      "demoLink": "https://ajuda.seedwave.pt/aima/de/",
+      "page": {
+        "how": [
+          "Wir sind den Weg selbst gegangen: vier Formulare, ein Tracker-Ausfall, eine Entscheidung, die wir viereinhalb Monate zu spät entdeckten.",
+          "Die Bilder stammen aus unserer Verlängerung 2026 — Nummern, Code und Token wurden vor dem Repository entfernt.",
+          "Der Formularbildschirm wurde auf der AIMA-Website aufgenommen; die Feldliste stammt aus unserer eigenen Bestätigungs-E-Mail.",
+          "Fünf Sprachen vom ersten Tag an: PT · EN · RU · DE · ES."
+        ],
+        "proofs": [
+          "Ein echtes Verfahren, verfolgt von Januar bis September 2026, von der Einreichung bis «Cartão entregue».",
+          "Die Entscheidung erschien im Tracker sechs Monate vor dem Portal de Renovações.",
+          "«Pedido não aceite» reproduziert und erklärt: am nächsten Tag, mit denselben Daten, ging es durch.",
+          "Reihe A: die erste Seite einer Reihe über die AIMA."
         ]
       }
     }

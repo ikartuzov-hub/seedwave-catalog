@@ -504,7 +504,7 @@
       "category": "Civic tech",
       "name": "nDm — guides to Portuguese bureaucracy",
       "hook": "The state moved its subsidies online and left behind the people who cannot follow. nDm writes the guides that get it right the first time.",
-      "description": "A series of free guides to Portuguese bureaucracy in five languages: annotated screens, the traps almost everyone falls into, and the exact Portuguese field names. Out so far: “Documentos TAP” and “Subsídio de Mobilidade” — how to get part of your flight back (plus three reference pages); the Madeira resident card on the SIMplifica portal; booking trails and the Quinta Magnólia courts; and the newest — the European Health Insurance Card (CESD): what to do when Segurança Social refuses the online request, with sample forms and signing with Chave Móvel Digital without a printer.",
+      "description": "A series of free guides to Portuguese bureaucracy in five languages: annotated screens, the traps almost everyone falls into, and the exact Portuguese field names. Out so far: “Documentos TAP” and “Subsídio de Mobilidade” — how to get part of your flight back (plus three reference pages); the Madeira resident card on the SIMplifica portal; booking trails and the Quinta Magnólia courts; and the newest — the European Health Insurance Card (CESD): what to do when Segurança Social refuses the online request, with sample forms and signing with Chave Móvel Digital without a printer. And now «Where is my AIMA case?»: the official eight-stage tracker, no account, the link by e-mail.",
       "sectors": [
         "Civic Tech",
         "Education"
@@ -557,6 +557,36 @@
           "Found the non-obvious CMD signing mechanics: the stamp lands in the upper part of the cell — we missed twice.",
           "Limits for non-EU nationals checked against Your Europe and the CESD Guia Prático.",
           "Five languages from day one: PT · EN · RU · DE · ES."
+        ]
+      }
+    },
+    {
+      "id": "aima",
+      "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"AIMA\"><title>AIMA</title><rect width=\"100\" height=\"100\" rx=\"23\" fill=\"#F0E8F7\"/><g fill=\"none\" stroke=\"#5B2A86\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M30 70 L50 20 L70 70\"/><path d=\"M38 50 L62 50\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></g></svg>",
+      "category": "Civic tech",
+      "name": "AIMA — Where is my case? The official tracker",
+      "hook": "AIMA has an eight-stage tracker, from decision to card delivered. It is not on the website and needs no account: the link arrives by e-mail in five minutes. That is how we learned our application had been approved four and a half months earlier.",
+      "description": "A five-language guide for anyone with an AIMA case: how to get the tracker link through the contact form (type, subtype, e-mail code, seven details — and nothing else), how to read the eight stages with real screenshots and how long each took in our case, the CTT code when the card ships, why the Portal de Renovações lags six months, and what to do when the tracker answers «Pedido não aceite».",
+      "sectors": [
+        "Civic Tech",
+        "Expats"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "People who tested the tracker with other case types · Expat communities · Immigration lawyer",
+      "demoLink": "https://ajuda.seedwave.pt/aima/en/",
+      "page": {
+        "how": [
+          "We walked the path ourselves: four forms, one tracker outage, a decision discovered four and a half months late.",
+          "The images are from our 2026 renewal — numbers, code and token removed before entering the repository.",
+          "The form screen was captured on the AIMA site; the field list comes from our own confirmation e-mail.",
+          "Five languages from day one: PT · EN · RU · DE · ES."
+        ],
+        "proofs": [
+          "One real case followed from January to September 2026, from submission to «Cartão entregue».",
+          "The decision showed in the tracker six months before the Portal de Renovações.",
+          "«Pedido não aceite» reproduced and explained: the next day, same data, it went through.",
+          "Series A: the first page of a series about AIMA."
         ]
       }
     }

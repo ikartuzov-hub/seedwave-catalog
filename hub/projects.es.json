@@ -504,7 +504,7 @@
       "category": "Servicios al ciudadano",
       "name": "nDm — guías de la burocracia portuguesa",
       "hook": "El Estado pasó las ayudas a internet y dejó atrás a quien no sabe. nDm escribe las guías con las que sale bien a la primera.",
-      "description": "Una serie de guías gratuitas sobre la burocracia portuguesa en cinco idiomas: pantallas señalizadas, las trampas en las que cae casi todo el mundo y los nombres exactos de los campos en portugués. Ya están: «Documentos TAP» y «Subsídio de Mobilidade», cómo recuperar parte del billete de avión (más tres fichas); la tarjeta de residente de Madeira en el portal SIMplifica; la reserva de senderos y de las pistas de la Quinta Magnólia; y la nueva, la Tarjeta Sanitaria Europea (CESD): qué hacer cuando la Segurança Social rechaza la solicitud online, con modelos de formularios y firma con la Chave Móvel Digital sin impresora.",
+      "description": "Una serie de guías gratuitas sobre la burocracia portuguesa en cinco idiomas: pantallas señalizadas, las trampas en las que cae casi todo el mundo y los nombres exactos de los campos en portugués. Ya están: «Documentos TAP» y «Subsídio de Mobilidade», cómo recuperar parte del billete de avión (más tres fichas); la tarjeta de residente de Madeira en el portal SIMplifica; la reserva de senderos y de las pistas de la Quinta Magnólia; y la nueva, la Tarjeta Sanitaria Europea (CESD): qué hacer cuando la Segurança Social rechaza la solicitud online, con modelos de formularios y firma con la Chave Móvel Digital sin impresora. Y ahora «¿Dónde está mi expediente en la AIMA?»: el rastreador oficial de ocho etapas, sin cuenta, con el enlace por correo.",
       "sectors": [
         "Civic Tech",
         "Education"
@@ -557,6 +557,36 @@
           "Descubierta la mecánica poco evidente de la firma CMD: el sello queda en la parte de arriba de la casilla; fallamos dos veces.",
           "Las limitaciones para nacionales de terceros países se contrastaron con Your Europe y la Guia Prático del CESD.",
           "Cinco idiomas desde el primer día: PT · EN · RU · DE · ES."
+        ]
+      }
+    },
+    {
+      "id": "aima",
+      "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"AIMA\"><title>AIMA</title><rect width=\"100\" height=\"100\" rx=\"23\" fill=\"#F0E8F7\"/><g fill=\"none\" stroke=\"#5B2A86\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M30 70 L50 20 L70 70\"/><path d=\"M38 50 L62 50\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></g></svg>",
+      "category": "Servicios al ciudadano",
+      "name": "AIMA — ¿Dónde está mi expediente? El rastreador oficial",
+      "hook": "La AIMA tiene un rastreador de ocho etapas, de la decisión a la tarjeta entregada. No está en la web y no necesita cuenta: el enlace llega por correo en cinco minutos. Así supimos que nuestra solicitud llevaba cuatro meses y medio aprobada.",
+      "description": "Guía en cinco idiomas para quien tiene un expediente en la AIMA: cómo pedir el enlace del rastreador por el formulario de contacto (tipo, subtipo, código por correo, siete datos y nada más), cómo leer las ocho etapas con capturas reales y cuánto tardó cada una en nuestro caso, el código de CTT cuando sale la tarjeta, por qué el Portal de Renovações va seis meses retrasado y qué hacer cuando el rastreador responde «Pedido não aceite».",
+      "sectors": [
+        "Civic Tech",
+        "Expatriados"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Quien haya probado el rastreador con otros tipos de expediente · Comunidades de inmigrantes · Abogado de extranjería",
+      "demoLink": "https://ajuda.seedwave.pt/aima/es/",
+      "page": {
+        "how": [
+          "Recorrimos el camino nosotros mismos: cuatro formularios, una caída del rastreador, una decisión descubierta con cuatro meses y medio de retraso.",
+          "Las imágenes son de nuestra renovación de 2026: números, código y token borrados antes de entrar en el repositorio.",
+          "La pantalla del formulario se capturó en la web de la AIMA; la lista de campos viene de nuestro propio correo de confirmación.",
+          "Cinco idiomas desde el primer día: PT · EN · RU · DE · ES."
+        ],
+        "proofs": [
+          "Un expediente real seguido de enero a septiembre de 2026, de la presentación a «Cartão entregue».",
+          "La decisión apareció en el rastreador seis meses antes que en el Portal de Renovações.",
+          "«Pedido não aceite» reproducido y explicado: al día siguiente, con los mismos datos, pasó.",
+          "Serie A: la primera página de una serie sobre la AIMA."
         ]
       }
     }

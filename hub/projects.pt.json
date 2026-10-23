@@ -504,7 +504,7 @@
       "category": "Serviços ao cidadão",
       "name": "nDm — guias da burocracia portuguesa",
       "hook": "O Estado passou os apoios para online e deixou para trás quem não sabe. O nDm escreve guias com os quais se consegue à primeira.",
-      "description": "Série de guias gratuitos sobre a burocracia portuguesa em cinco línguas: ecrãs com setas, as armadilhas em que quase toda a gente cai e os nomes exatos dos campos em português. Já saíram: «Documentos TAP» e «Subsídio de Mobilidade» — como recuperar parte do bilhete de avião (mais três fichas); o «Cartão de Residente na RAM» no SIMplifica; a reserva de trilhos e dos campos da Quinta Magnólia; e a nova — «Cartão Europeu de Seguro de Doença»: o que fazer quando a Segurança Social recusa o pedido online, com modelos dos formulários e assinatura com a Chave Móvel Digital sem impressora.",
+      "description": "Série de guias gratuitos sobre a burocracia portuguesa em cinco línguas: ecrãs com setas, as armadilhas em que quase toda a gente cai e os nomes exatos dos campos em português. Já saíram: «Documentos TAP» e «Subsídio de Mobilidade» — como recuperar parte do bilhete de avião (mais três fichas); o «Cartão de Residente na RAM» no SIMplifica; a reserva de trilhos e dos campos da Quinta Magnólia; e a nova — «Cartão Europeu de Seguro de Doença»: o que fazer quando a Segurança Social recusa o pedido online, com modelos dos formulários e assinatura com a Chave Móvel Digital sem impressora. E agora «Onde está o meu processo na AIMA?»: o rastreador oficial de oito etapas, sem conta, com o link por e-mail.",
       "sectors": [
         "Civic Tech",
         "Education"
@@ -557,6 +557,36 @@
           "Descoberta a mecânica pouco óbvia da assinatura CMD: o selo fica na parte de cima da posição — falhámos duas vezes.",
           "As limitações para nacionais de países terceiros foram confirmadas no Your Europe e no Guia Prático do CESD.",
           "Cinco línguas desde o primeiro dia: PT · EN · RU · DE · ES."
+        ]
+      }
+    },
+    {
+      "id": "aima",
+      "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"AIMA\"><title>AIMA</title><rect width=\"100\" height=\"100\" rx=\"23\" fill=\"#F0E8F7\"/><g fill=\"none\" stroke=\"#5B2A86\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M30 70 L50 20 L70 70\"/><path d=\"M38 50 L62 50\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></g></svg>",
+      "category": "Serviços ao cidadão",
+      "name": "AIMA — Onde está o meu processo? O rastreador oficial",
+      "hook": "A AIMA tem um rastreador de oito etapas, da decisão ao cartão entregue. Não está no site e não precisa de conta: o link chega por e-mail em cinco minutos. Foi assim que soubemos que o nosso pedido estava aprovado há quatro meses e meio.",
+      "description": "Instrução em cinco línguas para quem tem um processo na AIMA: como pedir o link do rastreador pelo formulário de contacto (tipo, subtipo, código por e-mail, sete dados — e nada mais), como ler as oito etapas com imagens reais e quanto tempo cada uma levou no nosso caso, o código dos CTT quando o cartão sai, porque é que o Portal de Renovações se atrasa seis meses, e o que fazer quando o rastreador responde «Pedido não aceite».",
+      "sectors": [
+        "Civic Tech",
+        "Imigrantes"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Quem testou o rastreador com outros tipos de processo · Comunidades de imigrantes · Jurista de direito dos estrangeiros",
+      "demoLink": "https://ajuda.seedwave.pt/aima/",
+      "page": {
+        "how": [
+          "Passámos pelo caminho nós próprios: quatro formulários, um rastreador em baixo, uma decisão descoberta com quatro meses e meio de atraso.",
+          "As imagens são do nosso processo de renovação de 2026 — números, código e token apagados antes de entrarem no repositório.",
+          "O ecrã do formulário foi captado no site da AIMA; a lista de campos vem do nosso próprio e-mail de confirmação.",
+          "Cinco línguas desde o primeiro dia: PT · EN · RU · DE · ES."
+        ],
+        "proofs": [
+          "Um processo real seguido de janeiro a setembro de 2026, da submissão ao «Cartão entregue».",
+          "A decisão apareceu no rastreador seis meses antes do Portal de Renovações.",
+          "«Pedido não aceite» reproduzido e explicado: no dia seguinte, com os mesmos dados, passou.",
+          "Série A: a primeira página de uma série sobre a AIMA."
         ]
       }
     }
