@@ -531,7 +531,7 @@
     },
     {
       "id": "cesd",
-      "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"CESD\"><title>CESD</title><rect width=\"100\" height=\"100\" rx=\"23\" fill=\"#EAF0FA\"/><g fill=\"none\" stroke=\"#1D4FA0\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M68 20 L32 20 L52 45 L32 70 L68 70\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></g></svg>",
+      "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"CESD\"><title>CESD</title><rect width=\"100\" height=\"100\" rx=\"23\" fill=\"#EAF0FA\"/><g fill=\"none\" stroke=\"#1D4FA0\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M68 26 C63 19 55 17 48 17 C37 17 31 23 32 31 C33 40 43 42 50 44 C60 46 68 50 68 58 C68 66 60 71 50 71 C42 71 35 68 31 63\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></g></svg>",
       "category": "Civic tech",
       "name": "CESD — European Health Insurance Card when the portal says no",
       "hook": "The free card that gets you public healthcare in any EU country on local terms. When Segurança Social Direta will not let you apply online — the full route: e-Clic, two forms and signing without a printer.",
