@@ -335,9 +335,14 @@
     });
     L.push('END:VCALENDAR');
     const ics = L.map(fold).join('\r\n') + '\r\n';
-    const ios = /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-    if (ios) { location.href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics); }
-    else {
+    const ios = /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) || qs.get('ics') === 'hook';
+    if (ios && R.icsHook) {
+      // iOS принимает календарь только с настоящего https-адреса: POST → Make сохраняет → 303 → GET отдаёт text/calendar
+      const f = document.createElement('form');
+      f.method = 'POST'; f.action = R.icsHook; f.acceptCharset = 'UTF-8'; f.style.display = 'none';
+      const t = document.createElement('textarea'); t.name = 'd'; t.value = ics; f.appendChild(t);
+      document.body.appendChild(f); f.submit(); setTimeout(() => f.remove(), 3000);
+    } else {
       const url = URL.createObjectURL(new Blob([ics], { type: 'text/calendar;charset=utf-8' }));
       const a = document.createElement('a'); a.href = url; a.download = 'carro-seedwave.ics'; document.body.appendChild(a); a.click(); a.remove();
       setTimeout(() => URL.revokeObjectURL(url), 4000);

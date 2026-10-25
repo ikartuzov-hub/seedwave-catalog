@@ -13,6 +13,7 @@
   "iuc": { "monthRuleUntil": 2026, "fixedMonth": 4 },
   "season": { "month": 11 },
   "horizonYears": 4,
+  "icsHook": "https://hook.eu1.make.com/bjpax9l2ambbav2w32vpmkj7t4kl8yvo",
   "botLive": false,
   "bot": "https://t.me/SeedWaveBot?start=",
   "hub": "https://seedwave.pt/hub/",
