@@ -1,0 +1,21 @@
+{
+  "_": "Слой 3 — правила дат nCr «Tenho carro!». Правится без движка. Сверено 25.10.2026: IPO (IMT, тарифы 2026), IUC (DL 161/2026), форматы матрикул (DL 54/2005, DL 2/2020).",
+  "updated": "2026-10-25",
+  "plate": [
+    { "id": "s1", "re": "^[A-Z]{2}[0-9]{4}$", "from": 1937, "to": 1992.1, "style": "black", "askYear": false },
+    { "id": "s2", "re": "^[0-9]{4}[A-Z]{2}$", "from": 1992.2, "to": 2005.2, "style": "yellow", "askYear": false },
+    { "id": "s3", "re": "^[0-9]{2}[A-Z]{2}[0-9]{2}$", "from": 2005.2, "to": 2020.15, "style": "yellow", "askYear": true, "estimate": true, "lettersAt": 2 },
+    { "id": "s4", "re": "^[A-Z]{2}[0-9]{2}[A-Z]{2}$", "from": 2020.2, "to": null, "style": "modern", "askYear": true }
+  ],
+  "letters": "ABCDEFGHIJLMNOPQRSTUVXZ",
+  "ipo": { "firstAt": 4, "biennialUntil": 8 },
+  "ipoPrice": { "continente": 37.47, "madeira": 37.89, "acores": null },
+  "iuc": { "monthRuleUntil": 2026, "fixedMonth": 4 },
+  "season": { "month": 11 },
+  "horizonYears": 4,
+  "botLive": false,
+  "bot": "https://t.me/SeedWaveBot?start=",
+  "hub": "https://seedwave.pt/hub/",
+  "author": "https://www.linkedin.com/in/igor-kartuzov/",
+  "url": "https://seedwave.pt/carro/"
+}

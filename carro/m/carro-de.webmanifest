@@ -1,0 +1,30 @@
+{
+  "id": "/carro/de/",
+  "name": "Ich hab ein Auto!",
+  "short_name": "Ich hab ein Auto!",
+  "description": "Kennzeichen eingeben, drei Mal tippen und das Jahr deines Autos landet im Kalender: Hauptuntersuchung, IUC, Versicherung und Wartung in Portugal. Kostenlos, ohne Anmeldung.",
+  "lang": "de",
+  "start_url": "/carro/de/",
+  "scope": "/carro/",
+  "display": "standalone",
+  "background_color": "#06141b",
+  "theme_color": "#06141b",
+  "icons": [
+    {
+      "src": "/carro/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/carro/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/carro/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

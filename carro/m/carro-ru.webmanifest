@@ -1,0 +1,30 @@
+{
+  "id": "/carro/ru/",
+  "name": "У меня есть авто!",
+  "short_name": "У меня есть авто!",
+  "description": "Введи номер машины, нажми три кнопки — и год твоей машины уже в календаре: инспекция, IUC, страховка и ТО в Португалии. Бесплатно и без регистрации.",
+  "lang": "ru",
+  "start_url": "/carro/ru/",
+  "scope": "/carro/",
+  "display": "standalone",
+  "background_color": "#06141b",
+  "theme_color": "#06141b",
+  "icons": [
+    {
+      "src": "/carro/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/carro/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/carro/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

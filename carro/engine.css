@@ -1,0 +1,126 @@
+/* nCr · Tenho carro! — слой 1 (движок). Палитра — токены SeedWave, акцент продукта — коралл. */
+:root{
+  --bg:#06141b;--surface:#0b2230;--ink:#eaf2f4;--ink-soft:#a9c2c9;--line:rgba(149,196,202,.18);
+  --accent:#ff7a59;--accent-ink:#1a0b05;--teal:#5fe0cf;--chip:rgba(255,255,255,.05);--chip-on:rgba(255,122,89,.16);
+  --display:"Spectral",Georgia,serif;--body:"Manrope",system-ui,sans-serif;--r:18px;
+}
+:root[data-theme="light"]{
+  --bg:#eef5f6;--surface:#ffffff;--ink:#0c2a33;--ink-soft:#557079;--line:rgba(14,90,110,.18);
+  --accent:#e0623f;--accent-ink:#ffffff;--teal:#0e8fa8;--chip:rgba(10,45,55,.045);--chip-on:rgba(224,98,63,.12);
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.5 var(--body);-webkit-font-smoothing:antialiased;min-height:100vh}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+.wrap{max-width:600px;margin:0 auto;padding:0 16px}
+
+/* шапка */
+.top{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:17px;letter-spacing:-.01em}
+.brand img{width:36px;height:36px;border-radius:10px}
+.tools{display:flex;gap:8px;position:relative}
+.rb{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:transparent;font-size:13px;font-weight:700;display:grid;place-items:center}
+.menu{position:absolute;right:48px;top:46px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:6px;display:none;z-index:20;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.menu.open{display:block}
+.menu a{display:block;padding:8px 16px;border-radius:9px;text-decoration:none;font-weight:600}
+.menu a[aria-current]{background:var(--chip-on);color:var(--accent)}
+
+/* герой */
+.hero{padding:18px 0 6px}
+.hero h1{font:600 clamp(30px,7.5vw,42px)/1.08 var(--display);margin:0 0 10px;letter-spacing:-.01em}
+.hero p{color:var(--ink-soft);margin:0;font-size:17px}
+
+/* карточка шагов */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px 18px;margin:18px 0}
+.dots{display:flex;gap:6px;margin-bottom:14px}
+.dots i{height:4px;flex:1;border-radius:4px;background:var(--line);transition:background .3s}
+.dots i.on{background:var(--accent)}
+.q{font-weight:800;font-size:20px;margin:6px 0 4px}
+.hint{color:var(--ink-soft);font-size:14px;margin:0 0 14px}
+.label{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);margin:0 0 8px}
+
+/* номер-табличка — вау */
+.plate{display:flex;height:76px;border-radius:12px;border:3px solid #15191c;background:#fbfbf8;color:#15191c;overflow:hidden;transition:background .5s,color .5s,border-color .5s;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.plate .eu{width:46px;flex:none;background:#1f4fbf;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:8px 0 6px;font:800 18px/1 var(--body);transition:opacity .4s,width .4s}
+.plate .eu svg{width:26px;height:26px}
+.plate input{flex:1;min-width:0;border:0;background:transparent;color:inherit;text-align:center;font:800 clamp(30px,9vw,42px)/1 var(--body);letter-spacing:.06em;text-transform:uppercase;outline:none;padding:0 6px}
+.plate input::placeholder{color:rgba(21,25,28,.25)}
+.plate .yb{width:0;flex:none;background:#ffd21f;color:#15191c;display:flex;flex-direction:column;align-items:center;justify-content:space-around;font:800 15px/1 var(--body);overflow:hidden;transition:width .45s}
+.plate.s1{background:#141414;color:#f2f2f2;border-color:#141414}
+.plate.s1 .eu{width:0;padding:0;opacity:0}
+.plate.s1 input::placeholder{color:rgba(255,255,255,.25)}
+.plate.s2 .yb,.plate.s3 .yb{width:40px}
+.plate .yb b{display:block;transition:transform .35s}
+.plate .yb b.pop{transform:scale(1.35)}
+.plate-wrap{position:relative}
+.found{min-height:58px;margin-top:12px;display:flex;align-items:center;gap:12px}
+.found .badge{background:var(--chip-on);color:var(--accent);font-weight:800;border-radius:99px;padding:5px 12px;font-size:14px;white-space:nowrap}
+.found .txt{font-size:14px;color:var(--ink-soft);line-height:1.35}
+.found .txt b{color:var(--ink)}
+.err{color:var(--accent);font-size:14px}
+
+/* маскот */
+.road{position:relative;height:64px;overflow:hidden;margin:6px 0 2px}
+.road::after{content:"";position:absolute;left:0;right:0;bottom:6px;border-bottom:2px dashed var(--line)}
+.mascot{position:absolute;bottom:6px;left:50%;width:110px;transform:translateX(-50%);transition:transform .2s}
+.mascot .wh{transform-box:fill-box;transform-origin:center}
+.mascot.go{animation:drive 1.3s cubic-bezier(.2,.8,.25,1) both}
+.mascot.go .wh{animation:spin .5s linear 3}
+.mascot.bump{animation:bump .5s ease}
+@keyframes drive{0%{transform:translateX(-260%)}70%{transform:translateX(-46%)}85%{transform:translateX(-53%) rotate(-2deg)}100%{transform:translateX(-50%)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes bump{30%{transform:translateX(-50%) translateY(-7px)}60%{transform:translateX(-50%) translateY(0)}}
+.mascot .lid{transform-box:fill-box;transform-origin:center;animation:blink 4.5s infinite}
+@keyframes blink{0%,94%,100%{transform:scaleY(0)}96%{transform:scaleY(1)}}
+
+/* кнопки и чипы */
+.grid{display:grid;gap:8px;grid-template-columns:repeat(3,1fr)}
+.grid.g4{grid-template-columns:repeat(4,1fr)}
+.grid.g2{grid-template-columns:repeat(2,1fr)}
+.chip{border:1px solid var(--line);background:var(--chip);border-radius:12px;padding:12px 6px;font-weight:700;font-size:15px;min-height:48px;transition:background .15s,border-color .15s,transform .1s}
+.chip:active{transform:scale(.97)}
+.chip.on,.chip:hover{border-color:var(--accent);background:var(--chip-on)}
+.chip.wide{grid-column:1/-1}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:16px}
+.btn{border:0;border-radius:14px;padding:14px 20px;font-weight:800;font-size:16px;background:var(--accent);color:var(--accent-ink);min-height:50px;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.link{background:none;border:0;color:var(--ink-soft);text-decoration:underline;text-underline-offset:4px;padding:8px 2px;font-size:15px}
+.note{font-size:13px;color:var(--ink-soft);margin:12px 0 0}
+
+/* результат */
+.rhythm{display:inline-block;background:var(--chip-on);color:var(--accent);font-weight:800;border-radius:99px;padding:6px 14px;margin:2px 0 14px}
+.tl{list-style:none;margin:0;padding:0;position:relative}
+.tl li{display:grid;grid-template-columns:62px 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--line);opacity:0;transform:translateY(8px);animation:rise .45s forwards}
+.tl li:first-child{border-top:0}
+@keyframes rise{to{opacity:1;transform:none}}
+.tl .d{font-weight:800;color:var(--accent);line-height:1.15;font-size:15px}
+.tl .d small{display:block;color:var(--ink-soft);font-weight:600}
+.tl .t{font-weight:800}
+.tl .s{color:var(--ink-soft);font-size:14px}
+.box{border:1px solid var(--line);border-radius:14px;padding:14px;margin-top:14px}
+.box h3{margin:0 0 6px;font-size:17px}
+.box p{margin:0 0 10px;color:var(--ink-soft);font-size:15px}
+.ck{display:flex;gap:10px;align-items:flex-start;font-size:14px;margin:8px 0;color:var(--ink-soft)}
+.ck input{width:20px;height:20px;accent-color:var(--accent);flex:none;margin-top:1px}
+.tips{margin:0;padding-left:18px;color:var(--ink-soft);font-size:15px}
+.tips li{margin:4px 0}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:99px;font-weight:700;opacity:0;transition:opacity .3s;pointer-events:none;z-index:50}
+.toast.on{opacity:1}
+
+/* «что напоминаем» — статичный текст для людей и поисковиков */
+.about{margin:28px 0 8px}
+.about h2{font:600 24px/1.2 var(--display);margin:0 0 10px}
+.about ul{margin:0;padding-left:20px;color:var(--ink-soft)}
+.about li{margin:6px 0}
+.honest{font-size:13px;color:var(--ink-soft);margin-top:14px}
+
+/* футер — стандарт SeedWave */
+footer.sw{text-align:center;padding:28px 0 64px;font-size:15px;color:var(--ink-soft)}
+footer.sw a{display:inline-block;padding:8px 4px;text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:4px}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .tl li{opacity:1;transform:none}
+}

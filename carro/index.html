@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Tenho carro! — inspeção, IUC e seguro num só calendário</title>
+<meta name="description" content="Escreve a matrícula, toca em três botões e recebe o ano do teu carro no calendário: inspeção, IUC, seguro e revisão. Grátis e sem registo.">
+<link rel="canonical" href="https://seedwave.pt/carro/">
+<link rel="alternate" hreflang="pt" href="https://seedwave.pt/carro/">
+<link rel="alternate" hreflang="en" href="https://seedwave.pt/carro/en/">
+<link rel="alternate" hreflang="ru" href="https://seedwave.pt/carro/ru/">
+<link rel="alternate" hreflang="es" href="https://seedwave.pt/carro/es/">
+<link rel="alternate" hreflang="de" href="https://seedwave.pt/carro/de/">
+<link rel="alternate" hreflang="x-default" href="https://seedwave.pt/carro/">
+<link rel="icon" type="image/svg+xml" href="/carro/carro-icon.svg">
+<link rel="apple-touch-icon" href="/carro/apple-touch-icon.png">
+<link rel="manifest" href="/carro/m/carro-pt.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Tenho carro!">
+<meta name="theme-color" content="#06141b">
+<meta property="og:title" content="Tenho carro! — O carro lembra-se por ti">
+<meta property="og:description" content="Escreve a matrícula, toca em três botões e recebe o ano do teu carro no calendário: inspeção, IUC, seguro e revisão. Grátis e sem registo.">
+<meta property="og:image" content="https://seedwave.pt/carro/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://seedwave.pt/carro/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_PT">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Spectral:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/carro/engine.css?v=202610251041">
+<script>try{var t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('carro.theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.dataset.theme=t}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Tenho carro!", "url": "https://seedwave.pt/carro/", "inLanguage": "pt", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "description": "Escreve a matrícula, toca em três botões e recebe o ano do teu carro no calendário: inspeção, IUC, seguro e revisão. Grátis e sem registo.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "author": {"@type": "Person", "name": "Igor Kartuzov", "url": "https://www.linkedin.com/in/igor-kartuzov/"}, "publisher": {"@type": "Organization", "name": "SeedWave", "url": "https://seedwave.pt/"}}</script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="https://seedwave.pt/carro/"><img src="/carro/carro-icon.svg" alt="" width="36" height="36"><span>Tenho carro!</span></a>
+    <div class="tools">
+      <button class="rb" id="langBtn" type="button">PT</button>
+      <button class="rb" id="themeBtn" type="button">☀</button>
+      <nav class="menu" id="langMenu"><a href="/carro/" hreflang="pt" aria-current="true">PT</a><a href="/carro/en/" hreflang="en">EN</a><a href="/carro/ru/" hreflang="ru">RU</a><a href="/carro/es/" hreflang="es">ES</a><a href="/carro/de/" hreflang="de">DE</a></nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>O teu carro tem um ano cheio de prazos</h1>
+      <p>Inspeção, IUC, seguro, revisão. Escreve a matrícula — o resto fazemos nós.</p>
+    </section>
+
+    <div id="app"><div class="card"><p class="label">Matrícula do carro</p><p class="note">🔒 Não guardamos a matrícula: o cálculo fica no teu telemóvel.</p></div></div>
+
+    <section class="about">
+      <h2>O que lembramos</h2>
+      <ul>
+        <li>🚗 Inspeção periódica: aos 4 anos, depois de 2 em 2 anos até aos 8, depois todos os anos — no mês da primeira matrícula.</li>
+        <li>💶 IUC: em 2026, até ao fim do mês da matrícula; a partir de 2027, em abril.</li>
+        <li>🛡️ Seguro: um aviso antes da renovação, para comparar preços.</li>
+        <li>🔧 Revisão: no mês antes da inspeção — uma ida à oficina para as duas coisas.</li>
+      </ul>
+      <p class="honest">Regras verificadas em outubro de 2026. Em caso de dúvida, valem o Portal das Finanças e o IMT.</p>
+    </section>
+  </main>
+
+  <footer class="sw">© <span id="year">2026</span> <a id="hubLink" href="https://seedwave.pt/hub/?lang=pt">SeedWave</a> · <a href="https://www.linkedin.com/in/igor-kartuzov/" target="_blank" rel="noopener">Igor Kartuzov</a></footer>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script defer src="/carro/engine.js?v=202610251041"></script>
+<script defer src="https://seedwave.pt/nav/sw.js"></script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8a509477310442638b80e4b22319b89b"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "id": "/carro/en/",
+  "name": "I've got a car!",
+  "short_name": "I've got a car!",
+  "description": "Type your plate, tap three buttons and get your car's year in your calendar: inspection, IUC road tax, insurance and service in Portugal. Free, no sign-up.",
+  "lang": "en",
+  "start_url": "/carro/en/",
+  "scope": "/carro/",
+  "display": "standalone",
+  "background_color": "#06141b",
+  "theme_color": "#06141b",
+  "icons": [
+    {
+      "src": "/carro/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/carro/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/carro/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

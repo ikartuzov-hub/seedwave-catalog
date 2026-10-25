@@ -1,0 +1,30 @@
+{
+  "id": "/carro/es/",
+  "name": "¡Tengo coche!",
+  "short_name": "¡Tengo coche!",
+  "description": "Escribe la matrícula, toca tres botones y recibe el año de tu coche en el calendario: inspección, IUC, seguro y revisión en Portugal. Gratis y sin registro.",
+  "lang": "es",
+  "start_url": "/carro/es/",
+  "scope": "/carro/",
+  "display": "standalone",
+  "background_color": "#06141b",
+  "theme_color": "#06141b",
+  "icons": [
+    {
+      "src": "/carro/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/carro/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/carro/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

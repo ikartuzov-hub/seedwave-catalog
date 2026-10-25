@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://seedwave.pt/hub/</loc></url>
+  <url><loc>https://seedwave.pt/carro/</loc></url>
+  <url><loc>https://seedwave.pt/carro/en/</loc></url>
+  <url><loc>https://seedwave.pt/carro/ru/</loc></url>
+  <url><loc>https://seedwave.pt/carro/es/</loc></url>
+  <url><loc>https://seedwave.pt/carro/de/</loc></url>
 </urlset>

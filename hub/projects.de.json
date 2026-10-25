@@ -161,6 +161,23 @@
       "moreLink": "https://prazos.seedwave.pt/flyer.html"
     },
     {
+      "id": "carro",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E0623F\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Tenho carro!\"><title>Tenho carro!</title><path d=\"M66 31 A21 21 0 1 0 66 59\"/><circle cx=\"75\" cy=\"25\" r=\"3\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
+      "category": "Bürgerdienste",
+      "name": "Ich hab ein Auto!",
+      "hook": "Inspektion, IUC, Versicherung und Wartung deines Autos in einem Kalender — drei Mal tippen, ohne Anmeldung.",
+      "description": "Kennzeichen eingeben, und die Seite erkennt das Baujahr-Zeitalter am Format. Noch drei Mal tippen — Zulassungsmonat, Versicherung, Kraftstoff — und du bekommst das Jahr deines Autos: Hauptuntersuchung nach der 4/2/1-Jahre-Regel, IUC (inklusive neuem Kalender ab 2027), Versicherungsverlängerung und Wartung vor der Inspektion. Alles in einer Kalenderdatei mit Erinnerungen für iPhone, Android und Google. Wir speichern dein Kennzeichen nicht. Fünf Sprachen.",
+      "sectors": [
+        "Autofahrer",
+        "Mobilität",
+        "Civic Tech"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Partner-Autowäschen und Werkstätten · Versicherer · Fahrschulen",
+      "demoLink": "https://seedwave.pt/carro/de/"
+    },
+    {
       "id": "nrm",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#17998A\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nRm\"><title>nRm — Novo Reforço da Madeira</title><path d=\"M34 16 L34 72\"/><path d=\"M34 16 Q62 16 62 31 Q62 46 34 46\"/><path d=\"M42 46 Q52 56 58 72\"/><path d=\"M15 88 Q28 82 39 88 Q50 94 61 88 Q72 82 85 88\"/></svg>",
       "category": "Förderungen",

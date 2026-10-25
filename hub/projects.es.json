@@ -161,6 +161,23 @@
       "moreLink": "https://prazos.seedwave.pt/flyer.html"
     },
     {
+      "id": "carro",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E0623F\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Tenho carro!\"><title>Tenho carro!</title><path d=\"M66 31 A21 21 0 1 0 66 59\"/><circle cx=\"75\" cy=\"25\" r=\"3\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
+      "category": "Servicios al ciudadano",
+      "name": "¡Tengo coche!",
+      "hook": "Inspección, IUC, seguro y revisión de tu coche en un solo calendario — tres toques, sin registro.",
+      "description": "Escribe la matrícula y la página reconoce la época del coche por el formato. Tres toques más — mes de matriculación, seguro, combustible — y recibes el año de tu coche: inspección periódica con la regla de 4/2/1 años, IUC (incluido el nuevo calendario de 2027), renovación del seguro y revisión antes de la inspección. Todo en un archivo de calendario con alertas para iPhone, Android y Google. No guardamos la matrícula. Cinco idiomas.",
+      "sectors": [
+        "Conductores",
+        "Movilidad",
+        "Civic Tech"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Lavados y talleres asociados · Aseguradoras · Autoescuelas",
+      "demoLink": "https://seedwave.pt/carro/es/"
+    },
+    {
       "id": "nrm",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#17998A\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nRm\"><title>nRm — Novo Reforço da Madeira</title><path d=\"M34 16 L34 72\"/><path d=\"M34 16 Q62 16 62 31 Q62 46 34 46\"/><path d=\"M42 46 Q52 56 58 72\"/><path d=\"M15 88 Q28 82 39 88 Q50 94 61 88 Q72 82 85 88\"/></svg>",
       "category": "Ayudas",
