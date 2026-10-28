@@ -1,0 +1,30 @@
+{
+  "id": "/capsula/de/",
+  "name": "Cápsula",
+  "short_name": "Cápsula",
+  "description": "Gedächtnis, Konzentration, Schlaf, Angst vor Schlaganfall. Vier Tipps, nichts tippen — und du bekommst ein klares Profil und einen Plan für die Woche. Kostenlos, ohne Anmeldung, nichts wird gespeichert.",
+  "lang": "de",
+  "start_url": "/capsula/de/",
+  "scope": "/capsula/",
+  "display": "standalone",
+  "background_color": "#120d0a",
+  "theme_color": "#120d0a",
+  "icons": [
+    {
+      "src": "/capsula/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/capsula/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/capsula/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "lang": "en",
+  "brand": "Cápsula",
+  "slogan": "Your head needs a service too",
+  "title": "Cápsula — your head needs a service too",
+  "metaDesc": "Memory, focus, sleep, fear of stroke. Four taps, nothing to type — and you get a clear profile and a plan for the week. Free, no sign-up, nothing is stored.",
+  "heroTitle": "Just tired — or something more?",
+  "heroSub": "Four taps, nothing to type. A clear profile, a plan for the week, reminders in your calendar.",
+  "introLabel": "A digital brain-health route",
+  "introNote": "Nothing is stored: your answers stay on your phone.",
+  "startBtn": "Start",
+  "soon": "Under construction — the first version arrives in November.",
+  "aboutTitle": "What Cápsula does",
+  "about": {
+    "vessels": "Vessels: when you last checked your blood pressure and bloods — and what is worth checking.",
+    "sleep": "Sleep: snoring, waking up exhausted, under 6 hours — and whom to ask.",
+    "head": "Head: memory, focus, interest in things — and what to do this week.",
+    "plan": "Weekly plan: at most three actions, with reminders in your calendar."
+  },
+  "disclaimer": "This is not medical advice — discuss it with your doctor.",
+  "emergency": "Symptoms right now? Call 112 / SNS 24",
+  "honest": "No diagnoses, no risk percentages, no promises. Only what is worth checking, whom to see and when to be reminded.",
+  "themeLabel": "Day / night",
+  "langLabel": "Language",
+  "shareBtn": "Send to a friend",
+  "shareText": "Your head needs a service too. Four taps, nothing to type — a profile and a plan for the week:",
+  "shareCopied": "Link copied ✓",
+  "offline": "Offline? Try again."
+}

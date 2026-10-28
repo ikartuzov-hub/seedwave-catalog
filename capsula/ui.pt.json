@@ -1,0 +1,29 @@
+{
+  "lang": "pt",
+  "brand": "Cápsula",
+  "slogan": "A cabeça também precisa de revisão",
+  "title": "Cápsula — a cabeça também precisa de revisão",
+  "metaDesc": "Memória, concentração, sono, medo do AVC. Quatro toques, sem escrever nada — e recebes um perfil claro e um plano para a semana. Grátis, sem registo, nada é guardado.",
+  "heroTitle": "Estás cansado — ou é algo mais?",
+  "heroSub": "Quatro toques, sem escrever nada. Um perfil claro, um plano para a semana, lembretes no calendário.",
+  "introLabel": "Percurso digital de saúde do cérebro",
+  "introNote": "Nada é guardado: as respostas ficam no teu telemóvel.",
+  "startBtn": "Começar",
+  "soon": "Em construção — a primeira versão chega em novembro.",
+  "aboutTitle": "O que a Cápsula faz",
+  "about": {
+    "vessels": "Vasos: quando foi a última vez que mediste a tensão e fizeste análises — e o que vale a pena verificar.",
+    "sleep": "Sono: ressonar, acordar cansado, dormir menos de 6 horas — e a quem perguntar.",
+    "head": "Cabeça: memória, concentração, interesse pelas coisas — e o que fazer esta semana.",
+    "plan": "Plano da semana: no máximo três ações, com lembretes no calendário."
+  },
+  "disclaimer": "Isto não é uma consulta médica — fala com o teu médico.",
+  "emergency": "Se tens sintomas agora: 112 / SNS 24",
+  "honest": "Sem diagnósticos, sem percentagens de risco, sem promessas. Só o que vale a pena verificar, a quem ir e quando lembrar.",
+  "themeLabel": "Dia / noite",
+  "langLabel": "Idioma",
+  "shareBtn": "Enviar a um amigo",
+  "shareText": "A cabeça também precisa de revisão. Quatro toques, sem escrever nada — perfil e plano para a semana:",
+  "shareCopied": "Ligação copiada ✓",
+  "offline": "Sem ligação? Tenta outra vez."
+}

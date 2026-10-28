@@ -1,0 +1,29 @@
+{
+  "lang": "es",
+  "brand": "Cápsula",
+  "slogan": "La cabeza también necesita revisión",
+  "title": "Cápsula — la cabeza también necesita revisión",
+  "metaDesc": "Memoria, concentración, sueño, miedo al ictus. Cuatro toques, sin escribir nada — y recibes un perfil claro y un plan para la semana. Gratis, sin registro, no se guarda nada.",
+  "heroTitle": "¿Solo cansado — o algo más?",
+  "heroSub": "Cuatro toques, sin escribir nada. Un perfil claro, un plan para la semana, recordatorios en el calendario.",
+  "introLabel": "Ruta digital de salud del cerebro",
+  "introNote": "No se guarda nada: las respuestas se quedan en tu móvil.",
+  "startBtn": "Empezar",
+  "soon": "En construcción — la primera versión llega en noviembre.",
+  "aboutTitle": "Qué hace Cápsula",
+  "about": {
+    "vessels": "Vasos: cuándo te mediste la tensión y te hiciste análisis por última vez — y qué conviene revisar.",
+    "sleep": "Sueño: roncar, despertar agotado, dormir menos de 6 horas — y a quién preguntar.",
+    "head": "Cabeza: memoria, concentración, interés por las cosas — y qué hacer esta semana.",
+    "plan": "Plan de la semana: como máximo tres acciones, con recordatorios en el calendario."
+  },
+  "disclaimer": "Esto no es una consulta médica — háblalo con tu médico.",
+  "emergency": "¿Síntomas ahora mismo? 112 / SNS 24",
+  "honest": "Sin diagnósticos, sin porcentajes de riesgo, sin promesas. Solo qué conviene revisar, a quién acudir y cuándo recordar.",
+  "themeLabel": "Día / noche",
+  "langLabel": "Idioma",
+  "shareBtn": "Enviar a un amigo",
+  "shareText": "La cabeza también necesita revisión. Cuatro toques, sin escribir nada — perfil y plan para la semana:",
+  "shareCopied": "Enlace copiado ✓",
+  "offline": "¿Sin conexión? Inténtalo de nuevo."
+}

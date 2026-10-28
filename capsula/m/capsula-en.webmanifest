@@ -1,0 +1,30 @@
+{
+  "id": "/capsula/en/",
+  "name": "Cápsula",
+  "short_name": "Cápsula",
+  "description": "Memory, focus, sleep, fear of stroke. Four taps, nothing to type — and you get a clear profile and a plan for the week. Free, no sign-up, nothing is stored.",
+  "lang": "en",
+  "start_url": "/capsula/en/",
+  "scope": "/capsula/",
+  "display": "standalone",
+  "background_color": "#120d0a",
+  "theme_color": "#120d0a",
+  "icons": [
+    {
+      "src": "/capsula/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/capsula/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/capsula/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

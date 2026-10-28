@@ -1,0 +1,24 @@
+{
+  "_": "Слой 3 — правила nCp «Cápsula». Правится без движка. Этап 0 (каркас, 28.10.2026): вопросов и профилей ещё нет — они появятся здесь на этапе 1. Движок не знает ни числа вопросов, ни их смысла: он рендерит то, что лежит в questions/profiles.",
+  "updated": "2026-10-28",
+  "stage": 0,
+  "live": false,
+  "questions": [],
+  "profiles": {},
+  "emergency": {
+    "pt": "112 / SNS 24 — 808 24 24 24",
+    "note": "Номер 112 и линия SNS 24 (808 24 24 24) — сверено 28.10.2026 по sns24.gov.pt"
+  },
+  "verified": {
+    "prices": null,
+    "note": "Цены чек-апов и сроки на страницу не выводятся до сверки по первоисточнику (правило «честный счёт»)."
+  },
+  "horizonMonths": 6,
+  "icsHook": null,
+  "_icsHook": "Этап 1: свой webhook Make для iOS-пути календаря (по образцу nCr), пока пусто.",
+  "botLive": false,
+  "bot": "https://t.me/SeedWaveBot?start=",
+  "hub": "https://seedwave.pt/hub/",
+  "author": "https://www.linkedin.com/in/igor-kartuzov/",
+  "url": "https://seedwave.pt/capsula/"
+}

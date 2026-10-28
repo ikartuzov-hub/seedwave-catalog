@@ -1,0 +1,29 @@
+{
+  "lang": "de",
+  "brand": "Cápsula",
+  "slogan": "Auch der Kopf braucht eine Inspektion",
+  "title": "Cápsula — auch der Kopf braucht eine Inspektion",
+  "metaDesc": "Gedächtnis, Konzentration, Schlaf, Angst vor Schlaganfall. Vier Tipps, nichts tippen — und du bekommst ein klares Profil und einen Plan für die Woche. Kostenlos, ohne Anmeldung, nichts wird gespeichert.",
+  "heroTitle": "Nur müde — oder steckt mehr dahinter?",
+  "heroSub": "Vier Tipps, nichts tippen. Ein klares Profil, ein Plan für die Woche, Erinnerungen im Kalender.",
+  "introLabel": "Digitale Route für die Gesundheit des Gehirns",
+  "introNote": "Nichts wird gespeichert: deine Antworten bleiben auf deinem Handy.",
+  "startBtn": "Starten",
+  "soon": "Im Aufbau — die erste Version kommt im November.",
+  "aboutTitle": "Was Cápsula macht",
+  "about": {
+    "vessels": "Gefäße: wann du zuletzt Blutdruck gemessen und Blut abgenommen hast — und was sich zu prüfen lohnt.",
+    "sleep": "Schlaf: Schnarchen, zerschlagen aufwachen, unter 6 Stunden — und wen du fragen kannst.",
+    "head": "Kopf: Gedächtnis, Konzentration, Interesse an den Dingen — und was diese Woche zu tun ist.",
+    "plan": "Wochenplan: höchstens drei Schritte, mit Erinnerungen im Kalender."
+  },
+  "disclaimer": "Das ist keine medizinische Beratung — besprich es mit deinem Arzt.",
+  "emergency": "Symptome gerade jetzt? 112 / SNS 24",
+  "honest": "Keine Diagnosen, keine Risikoprozente, keine Versprechen. Nur, was sich zu prüfen lohnt, zu wem du gehst und wann erinnert wird.",
+  "themeLabel": "Tag / Nacht",
+  "langLabel": "Sprache",
+  "shareBtn": "An einen Freund senden",
+  "shareText": "Auch der Kopf braucht eine Inspektion. Vier Tipps, nichts tippen — Profil und Plan für die Woche:",
+  "shareCopied": "Link kopiert ✓",
+  "offline": "Offline? Versuch es noch einmal."
+}
