@@ -12,8 +12,9 @@ ACCENT, TILE, INK = "#c4703a", "#fbf1e8", "#2a1a10"   # вариант A «ме�
 # значок белым на фоне акцента — для «На экран Домой» (стандарт запуска §3)
 MARK = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
 <rect width="64" height="64" fill="{bg}"/>
-<path d="M43.5 19.5a14 14 0 1 0 0 21" fill="none" stroke="{ink}" stroke-width="6" stroke-linecap="round"/>
-<path d="M25 30q4.5-5 9 0t9 0 9 0" fill="none" stroke="{ink}" stroke-width="3.4" stroke-linecap="round"/></svg>'''
+<path d="M43 20.5a13 13 0 1 0 0 19" fill="none" stroke="{ink}" stroke-width="6" stroke-linecap="round"/>
+<path d="M36 11l6-5" fill="none" stroke="{ink}" stroke-width="5" stroke-linecap="round"/>
+<path d="M12 50c5-4 9-4 13 0s9 4 13 0 9-4 14 0" fill="none" stroke="{ink}" stroke-width="3.2" stroke-linecap="round"/></svg>'''
 
 
 def png(svg, size):
