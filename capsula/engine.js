@@ -21,7 +21,7 @@
   const applyTheme = () => {
     document.documentElement.dataset.theme = theme;
     const m = $('meta[name="theme-color"]');
-    if (m) m.content = theme === 'light' ? '#f8f1ea' : '#120d0a';
+    if (m) m.content = theme === 'light' ? '#f3f1fb' : '#0b0a1f';
     const b = $('#themeBtn'); if (b) b.textContent = theme === 'light' ? '☾' : '☀';
   };
   applyTheme();

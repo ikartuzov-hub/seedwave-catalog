@@ -7,14 +7,11 @@ import cairosvg
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-ACCENT, TILE, INK = "#c4703a", "#fbf1e8", "#2a1a10"   # вариант A «медь»
+import sys; sys.path.insert(0, str(ROOT / "_src")); import mark
+ACCENT = mark.VARIANTS[mark.DEFAULT][1]; NIGHT = mark.VARIANTS[mark.DEFAULT][2]
 
 # значок белым на фоне акцента — для «На экран Домой» (стандарт запуска §3)
-MARK = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-<rect width="64" height="64" fill="{bg}"/>
-<path d="M43 20.5a13 13 0 1 0 0 19" fill="none" stroke="{ink}" stroke-width="6" stroke-linecap="round"/>
-<path d="M36 11l6-5" fill="none" stroke="{ink}" stroke-width="5" stroke-linecap="round"/>
-<path d="M12 50c5-4 9-4 13 0s9 4 13 0 9-4 14 0" fill="none" stroke="{ink}" stroke-width="3.2" stroke-linecap="round"/></svg>'''
+MARK = None
 
 
 def png(svg, size):
@@ -22,17 +19,17 @@ def png(svg, size):
 
 
 for name, size in [("apple-touch-icon.png", 180), ("icon-192.png", 192), ("icon-512.png", 512)]:
-    png(MARK.format(bg=ACCENT, ink="#ffffff"), size).convert("RGB").save(ROOT / name, optimize=True)
+    png(mark.svg("home", "#ffffff", ACCENT, tile=False), size).convert("RGB").save(ROOT / name, optimize=True)
     print("ok", name)
 
 # OG 1200×630: тёплый тёмный фон, значок-тайл, словомарка, слоган (PT — канонический)
 import json
 T = json.loads((ROOT / "ui.pt.json").read_text(encoding="utf-8"))
-og = Image.new("RGB", (1200, 630), "#1a110c")
+og = Image.new("RGB", (1200, 630), "#0b0a1f")
 d = ImageDraw.Draw(og)
 for y in range(630):   # лёгкий тёплый градиент снизу
     k = y / 630
-    d.line([(0, y), (1200, y)], fill=(int(26 + 30 * k), int(17 + 14 * k), int(12 + 8 * k)))
+    d.line([(0, y), (1200, y)], fill=(int(11 + 18 * k), int(10 + 10 * k), int(31 + 30 * k)))
 tile = png((ROOT / "capsula-icon.svg").read_text(encoding="utf-8"), 220)
 og.paste(tile, (90, 150), tile)
 F = "/usr/share/fonts/truetype/dejavu/"
@@ -40,7 +37,7 @@ f1 = ImageFont.truetype(F + "DejaVuSerif-Bold.ttf", 110)
 f2 = ImageFont.truetype(F + "DejaVuSans.ttf", 40)
 f3 = ImageFont.truetype(F + "DejaVuSans.ttf", 26)
 d.text((350, 150), T["brand"], font=f1, fill="#f5e9df")
-d.text((352, 300), T["slogan"], font=f2, fill="#e8975e")
+d.text((352, 300), T["slogan"], font=f2, fill=NIGHT)
 import textwrap
 for i, line in enumerate(textwrap.wrap(T["heroSub"], 58)[:2]):
     d.text((352, 372 + i * 36), line, font=f3, fill="#b8a394")

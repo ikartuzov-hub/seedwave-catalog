@@ -58,7 +58,7 @@ for lang in LANGS:
         "id": path(lang), "name": T["brand"], "short_name": T["brand"],
         "description": T["metaDesc"], "lang": lang,
         "start_url": path(lang), "scope": "/capsula/", "display": "standalone",
-        "background_color": "#120d0a", "theme_color": "#120d0a",
+        "background_color": "#0b0a1f", "theme_color": "#0b0a1f",
         "icons": [
             {"src": "/capsula/icon-192.png", "sizes": "192x192", "type": "image/png"},
             {"src": "/capsula/icon-512.png", "sizes": "512x512", "type": "image/png"},

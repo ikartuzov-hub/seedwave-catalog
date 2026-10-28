@@ -1,17 +1,17 @@
-/* nCp · Cápsula — слой 1 (движок). Токены палитры SeedWave как в carro/; акцент продукта — вариант A «медь» (B гранат / C янтарь — в _src/variants). */
+/* nCp · Cápsula — слой 1 (движок). Токены палитры SeedWave как в carro/; акцент продукта — вариант A «нейро-фиолет» (B электрик-циан / C бирюза — в _src/mark.py). */
 :root{
-  --bg:#120d0a;--surface:#1f1612;--ink:#f5ebe2;--ink-soft:#bfa996;--line:rgba(232,151,94,.2);
-  --accent:#e8975e;--accent-ink:#1a0e06;--teal:#5fe0cf;--chip:rgba(255,255,255,.05);--chip-on:rgba(232,151,94,.16);
+  --bg:#0b0a1f;--surface:#16143a;--ink:#eeebff;--ink-soft:#a9a4cf;--line:rgba(143,123,255,.22);
+  --accent:#8f7bff;--accent-ink:#0b0a1f;--teal:#49d4ff;--chip:rgba(255,255,255,.05);--chip-on:rgba(143,123,255,.16);
   --ok:#7fd3a0;--warn:#f0c05a;--bad:#ef6b6b;
   --display:"Spectral",Georgia,serif;--body:"Manrope",system-ui,sans-serif;--r:18px;
 }
 :root[data-theme="light"]{
-  --bg:#f8f1ea;--surface:#ffffff;--ink:#2a1a10;--ink-soft:#6f5a4c;--line:rgba(120,70,30,.18);
-  --accent:#c4703a;--accent-ink:#ffffff;--teal:#0e8fa8;--chip:rgba(60,30,10,.045);--chip-on:rgba(196,112,58,.12);
+  --bg:#f3f1fb;--surface:#ffffff;--ink:#17143a;--ink-soft:#5e5a85;--line:rgba(91,63,214,.18);
+  --accent:#5b3fd6;--accent-ink:#ffffff;--teal:#1a7fd1;--chip:rgba(40,30,90,.045);--chip-on:rgba(91,63,214,.12);
   --ok:#2f8f5b;--warn:#b8860b;--bad:#c23b3b;
 }
 /* варианты акцента (выбирает Игорь, этап 0):
-   B «гранат»: ночь #e5758a / день #a63d4e · C «янтарь»: ночь #f0b545 / день #c48a1d */
+   B «электрик-циан»: ночь #49d4ff / день #1a7fd1 · C «бирюза»: ночь #2dd4bf / день #0f9f8c */
 *{box-sizing:border-box}
 html,body{margin:0}
 body{background:var(--bg);color:var(--ink);font:400 16px/1.5 var(--body);-webkit-font-smoothing:antialiased;min-height:100vh}
