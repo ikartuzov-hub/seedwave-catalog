@@ -1,13 +1,13 @@
 /* nCp · Cápsula — слой 1 (движок). Токены палитры SeedWave как в carro/; акцент продукта — вариант A «нейро-фиолет» (B электрик-циан / C бирюза — в _src/mark.py). */
 :root{
   --bg:#0b0a1f;--surface:#16143a;--ink:#eeebff;--ink-soft:#a9a4cf;--line:rgba(143,123,255,.22);
-  --accent:#8f7bff;--accent-ink:#0b0a1f;--teal:#49d4ff;--chip:rgba(255,255,255,.05);--chip-on:rgba(143,123,255,.16);
+  --accent:#8f7bff;--accent-ink:#0b0a1f;--teal:#49d4ff;--teal2:#2dd4bf;--chip:rgba(255,255,255,.05);--chip-on:rgba(143,123,255,.16);
   --ok:#7fd3a0;--warn:#f0c05a;--bad:#ef6b6b;
   --display:"Spectral",Georgia,serif;--body:"Manrope",system-ui,sans-serif;--r:18px;
 }
 :root[data-theme="light"]{
   --bg:#f3f1fb;--surface:#ffffff;--ink:#17143a;--ink-soft:#5e5a85;--line:rgba(91,63,214,.18);
-  --accent:#5b3fd6;--accent-ink:#ffffff;--teal:#1a7fd1;--chip:rgba(40,30,90,.045);--chip-on:rgba(91,63,214,.12);
+  --accent:#5b3fd6;--accent-ink:#ffffff;--teal:#1a7fd1;--teal2:#0f9f8c;--chip:rgba(40,30,90,.045);--chip-on:rgba(91,63,214,.12);
   --ok:#2f8f5b;--warn:#b8860b;--bad:#c23b3b;
 }
 /* варианты акцента (выбирает Игорь, этап 0):
@@ -46,11 +46,13 @@ button{font:inherit;color:inherit;cursor:pointer}
 .capsule-wrap{display:flex;justify-content:center;margin:6px 0 10px}
 .capsule{width:150px;height:150px}
 .capsule .shell{fill:none;stroke:var(--accent);stroke-width:3;opacity:.55}
-.capsule .fill{fill:var(--accent);opacity:.9;transition:transform .7s cubic-bezier(.4,0,.2,1)}
+.capsule .fill{opacity:.92;transition:transform .7s cubic-bezier(.4,0,.2,1)}
 .capsule .glow{fill:var(--accent);opacity:.18;filter:blur(6px)}
 .capsule .wave{fill:none;stroke:var(--accent-ink);stroke-width:3;stroke-linecap:round;opacity:.0;transition:opacity .4s}
 .capsule.breathe{animation:breathe 4.2s ease-in-out infinite;transform-origin:center}
 @keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
+.capsule.inhale{animation:inhale .9s cubic-bezier(.4,0,.2,1) forwards;transform-origin:center}
+@keyframes inhale{0%{transform:scale(1)}35%{transform:scale(.86)}70%{transform:scale(1.18);opacity:1}100%{transform:scale(1.6);opacity:0}}
 
 /* кнопки и чипы */
 .grid{display:grid;gap:8px;grid-template-columns:repeat(2,1fr)}
@@ -58,6 +60,9 @@ button{font:inherit;color:inherit;cursor:pointer}
 .chip:active{transform:scale(.97)}
 .chip.on,.chip:hover{border-color:var(--accent);background:var(--chip-on)}
 .chip.wide{grid-column:1/-1}
+.chip.alarm{border-color:var(--bad);color:var(--bad);background:transparent;font-size:14px}
+.chip.alarm:hover{background:rgba(239,107,107,.1)}
+.alarmcard{border-color:var(--bad)}
 .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:16px}
 .btn{border:0;border-radius:14px;padding:14px 20px;font-weight:800;font-size:16px;background:var(--accent);color:var(--accent-ink);min-height:50px;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
 .btn[disabled]{opacity:.45;cursor:not-allowed}
@@ -65,7 +70,21 @@ button{font:inherit;color:inherit;cursor:pointer}
 .btn.alarm{background:var(--bad);color:#fff;width:100%;justify-content:center;font-size:18px}
 .link{background:none;border:0;color:var(--ink-soft);text-decoration:underline;text-underline-offset:4px;padding:8px 2px;font-size:15px}
 
-/* результат — три строки профиля (этап 1) */
+/* результат — три строки профиля, план, места */
+.rt{font:600 26px/1.15 var(--display);margin:4px 0 2px}
+.pt{font:600 20px/1.2 var(--display);margin:18px 0 2px}
+.pf b em{font-style:normal;font-weight:600;color:var(--ink-soft)}
+.plan{margin:0;padding-left:22px}
+.plan li{margin:8px 0;padding-left:4px}
+.plan b{display:block}
+.plan span{color:var(--ink-soft);font-size:14px}
+.pl{list-style:none;margin:0;padding:0}
+.pl li{padding:10px 0;border-top:1px solid var(--line)}
+.pl li:first-child{border-top:0}
+.pl a{text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:4px}
+.pl small{color:var(--ink-soft);font-weight:600;margin-left:4px}
+.pl span{display:block;color:var(--ink-soft);font-size:14px;margin-top:2px}
+.btn[aria-disabled="true"]{opacity:.5}
 .pf{list-style:none;margin:0;padding:0}
 .pf li{display:grid;grid-template-columns:14px 1fr;gap:12px;align-items:start;padding:10px 0;border-top:1px solid var(--line)}
 .pf li:first-child{border-top:0}

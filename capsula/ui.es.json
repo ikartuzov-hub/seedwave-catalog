@@ -9,7 +9,7 @@
   "introLabel": "Ruta digital de salud del cerebro",
   "introNote": "No se guarda nada: las respuestas se quedan en tu móvil.",
   "startBtn": "Empezar",
-  "soon": "En construcción — la primera versión llega en noviembre.",
+  "soon": "Pronto",
   "aboutTitle": "Qué hace Cápsula",
   "about": {
     "vessels": "Vasos: cuándo te mediste la tensión y te hiciste análisis por última vez — y qué conviene revisar.",
@@ -18,12 +18,140 @@
     "plan": "Plan de la semana: como máximo tres acciones, con recordatorios en el calendario."
   },
   "disclaimer": "Esto no es una consulta médica — háblalo con tu médico.",
-  "emergency": "¿Síntomas ahora mismo? 112 / SNS 24",
+  "emergency": "¿Síntomas ahora mismo? Llama al 112",
   "honest": "Sin diagnósticos, sin porcentajes de riesgo, sin promesas. Solo qué conviene revisar, a quién acudir y cuándo recordar.",
   "themeLabel": "Día / noche",
   "langLabel": "Idioma",
   "shareBtn": "Enviar a un amigo",
   "shareText": "La cabeza también necesita revisión. Cuatro toques, sin escribir nada — perfil y plan para la semana:",
   "shareCopied": "Enlace copiado ✓",
-  "offline": "¿Sin conexión? Inténtalo de nuevo."
+  "offline": "¿Sin conexión? Inténtalo de nuevo.",
+  "back": "Atrás",
+  "restart": "Empezar de nuevo",
+  "q": {
+    "worry": {
+      "text": "¿Qué te preocupa más?",
+      "o": {
+        "memory": "Memoria, olvidos",
+        "focus": "Concentración",
+        "tired": "Cansancio y sueño",
+        "stroke": "Miedo al ictus",
+        "check": "Nada, solo revisar",
+        "now": "🚨 Síntomas ahora mismo: entumecimiento, cara torcida, habla arrastrada"
+      }
+    },
+    "age": {
+      "text": "¿Cuántos años tienes?",
+      "o": {
+        "u40": "Menos de 40",
+        "a40": "40–49",
+        "a50": "50–59",
+        "a60": "60+"
+      }
+    },
+    "check": {
+      "text": "¿Cuándo te mediste la tensión y te hiciste análisis por última vez?",
+      "hint": "Tensión, colesterol, azúcar — en el médico o en la farmacia.",
+      "o": {
+        "y1": "Hace menos de un año",
+        "y3": "Hace 1–3 años",
+        "dk": "No me acuerdo"
+      }
+    },
+    "sleep": {
+      "text": "¿Cómo duermes?",
+      "o": {
+        "ok": "Bien",
+        "snore": "Ronco / me despierto agotado",
+        "fall": "Me cuesta dormirme",
+        "short": "Menos de 6 horas"
+      }
+    }
+  },
+  "resultTitle": "Tu perfil",
+  "resultSub": "Tres líneas — y qué significan ahora.",
+  "level": {
+    "ok": "tranquilo",
+    "warn": "conviene revisar",
+    "bad": "no lo dejes"
+  },
+  "lines": {
+    "head": "Cabeza",
+    "sleep": "Sueño",
+    "vessels": "Vasos"
+  },
+  "profile": {
+    "head": {
+      "ok": "Memoria y concentración no son, por ahora, el tema principal.",
+      "warn": "Memoria y concentración casi siempre chocan con el sueño y la carga — empieza por ahí.",
+      "bad": "La cabeza pide atención: toca hablar con el médico, no aguantar."
+    },
+    "sleep": {
+      "ok": "El sueño está bien — cuídalo.",
+      "warn": "Te falta sueño — una semana de rutina mostrará dónde está el problema.",
+      "bad": "Roncar y despertar agotado es motivo para preguntar por un estudio del sueño."
+    },
+    "vessels": {
+      "ok": "Tensión y análisis revisados hace poco — bien.",
+      "warn": "Hace tiempo que no miras la tensión y los análisis — es fácil de hacer.",
+      "bad": "Vasos primero: tensión, colesterol, azúcar."
+    }
+  },
+  "planTitle": "Plan de la semana",
+  "planHint": "Como máximo tres acciones. El resto, después.",
+  "plan": {
+    "bp3": {
+      "t": "Medir la tensión tres mañanas seguidas",
+      "s": "Sentado, antes del café, apuntar las cifras."
+    },
+    "gp": {
+      "t": "Pedir cita con el médico de familia / análisis",
+      "s": "Tensión, colesterol, azúcar — en una sola visita."
+    },
+    "sleepq": {
+      "t": "Preguntar al médico por un estudio del sueño",
+      "s": "Roncar y despertar agotado se puede comprobar."
+    },
+    "sleep7": {
+      "t": "Una semana: 7 horas y levantarse a la misma hora",
+      "s": "Sin pantallas la hora antes de dormir."
+    },
+    "walk": {
+      "t": "30 minutos caminando cada día",
+      "s": "La cabeza necesita más oxígeno que café."
+    },
+    "recheck": {
+      "t": "Repetir la revisión Cápsula",
+      "s": "Han pasado seis meses — cuatro toques otra vez."
+    }
+  },
+  "addCal": "Añadir al calendario",
+  "addCalHint": "Archivo .ics: plan de la semana + recordatorio dentro de seis meses.",
+  "calDone": "¡Hecho! Abre el archivo y pulsa «Añadir todo».",
+  "placesBtn": "Dónde revisarse en Madeira",
+  "placesTitle": "Dónde revisarse en Madeira",
+  "placesNote": "Lista sin publicidad y sin precios. Empieza por el médico de familia — es gratis por el SNS.",
+  "places": {
+    "sns": {
+      "t": "Médico de família (SNS)",
+      "s": "A través de tu centro de saúde o de la línea SNS 24: 808 24 24 24."
+    },
+    "sesaram": {
+      "t": "SESARAM — Hospital Dr. Nélio Mendonça",
+      "s": "Hospital público de Madeira; unidad de ictus."
+    },
+    "hpa": {
+      "t": "Hospital Particular da Madeira (HPA)",
+      "s": "Clínica privada: neurología, medicina del sueño."
+    }
+  },
+  "kind": {
+    "public": "público",
+    "private": "privado"
+  },
+  "botBtn": "Recordatorios en Telegram",
+  "botSoon": "Pronto — cuando el bot esté activo",
+  "emergencyText": "Brazo o cara dormidos, habla arrastrada, debilidad repentina — esto no es para una página. Llama ya.",
+  "emergencySns": "O la línea SNS 24: 808 24 24 24",
+  "icsCal": "Cápsula — plan de la semana"
 }

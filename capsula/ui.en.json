@@ -9,7 +9,7 @@
   "introLabel": "A digital brain-health route",
   "introNote": "Nothing is stored: your answers stay on your phone.",
   "startBtn": "Start",
-  "soon": "Under construction — the first version arrives in November.",
+  "soon": "Soon",
   "aboutTitle": "What Cápsula does",
   "about": {
     "vessels": "Vessels: when you last checked your blood pressure and bloods — and what is worth checking.",
@@ -18,12 +18,140 @@
     "plan": "Weekly plan: at most three actions, with reminders in your calendar."
   },
   "disclaimer": "This is not medical advice — discuss it with your doctor.",
-  "emergency": "Symptoms right now? Call 112 / SNS 24",
+  "emergency": "Symptoms right now? Call 112",
   "honest": "No diagnoses, no risk percentages, no promises. Only what is worth checking, whom to see and when to be reminded.",
   "themeLabel": "Day / night",
   "langLabel": "Language",
   "shareBtn": "Send to a friend",
   "shareText": "Your head needs a service too. Four taps, nothing to type — a profile and a plan for the week:",
   "shareCopied": "Link copied ✓",
-  "offline": "Offline? Try again."
+  "offline": "Offline? Try again.",
+  "back": "Back",
+  "restart": "Start over",
+  "q": {
+    "worry": {
+      "text": "What worries you most?",
+      "o": {
+        "memory": "Memory, forgetfulness",
+        "focus": "Focus",
+        "tired": "Tiredness and sleep",
+        "stroke": "Fear of stroke",
+        "check": "Nothing, just checking",
+        "now": "🚨 Symptoms right now: numbness, drooping face, slurred speech"
+      }
+    },
+    "age": {
+      "text": "How old are you?",
+      "o": {
+        "u40": "Under 40",
+        "a40": "40–49",
+        "a50": "50–59",
+        "a60": "60+"
+      }
+    },
+    "check": {
+      "text": "When did you last check your blood pressure and bloods?",
+      "hint": "Blood pressure, cholesterol, sugar — at the doctor or a pharmacy.",
+      "o": {
+        "y1": "Less than a year ago",
+        "y3": "1–3 years ago",
+        "dk": "Can't remember"
+      }
+    },
+    "sleep": {
+      "text": "How do you sleep?",
+      "o": {
+        "ok": "Fine",
+        "snore": "I snore / wake up exhausted",
+        "fall": "Hard to fall asleep",
+        "short": "Under 6 hours"
+      }
+    }
+  },
+  "resultTitle": "Your profile",
+  "resultSub": "Three lines — and what they mean right now.",
+  "level": {
+    "ok": "fine",
+    "warn": "worth checking",
+    "bad": "don't put it off"
+  },
+  "lines": {
+    "head": "Head",
+    "sleep": "Sleep",
+    "vessels": "Vessels"
+  },
+  "profile": {
+    "head": {
+      "ok": "Memory and focus aren't the main issue for now.",
+      "warn": "Memory and focus usually come down to sleep and load — start there.",
+      "bad": "Your head is asking for attention: time to talk to a doctor, not to push through."
+    },
+    "sleep": {
+      "ok": "Sleep is fine — protect it.",
+      "warn": "You're short on sleep — a week of routine will show where the problem is.",
+      "bad": "Snoring and waking up exhausted is a reason to ask about a sleep study."
+    },
+    "vessels": {
+      "ok": "Blood pressure and bloods checked recently — good.",
+      "warn": "It's been a while since you checked blood pressure and bloods — it's easy to do.",
+      "bad": "Vessels first: blood pressure, cholesterol, sugar."
+    }
+  },
+  "planTitle": "Plan for the week",
+  "planHint": "Three actions at most. The rest can wait.",
+  "plan": {
+    "bp3": {
+      "t": "Measure blood pressure three mornings in a row",
+      "s": "Seated, before coffee, write down the numbers."
+    },
+    "gp": {
+      "t": "Book your médico de família / blood tests",
+      "s": "Blood pressure, cholesterol, sugar — one visit."
+    },
+    "sleepq": {
+      "t": "Ask your doctor about a sleep study",
+      "s": "Snoring and exhaustion can be checked."
+    },
+    "sleep7": {
+      "t": "One week: 7 hours and the same wake-up time",
+      "s": "No screens in the hour before bed."
+    },
+    "walk": {
+      "t": "30 minutes of walking every day",
+      "s": "Your head needs oxygen more than coffee."
+    },
+    "recheck": {
+      "t": "Repeat the Cápsula check",
+      "s": "Six months have passed — four taps again."
+    }
+  },
+  "addCal": "Add to calendar",
+  "addCalHint": ".ics file: the week's plan + a reminder in six months.",
+  "calDone": "Done! Open the file and tap \"Add all\".",
+  "placesBtn": "Where to get checked in Madeira",
+  "placesTitle": "Where to get checked in Madeira",
+  "placesNote": "No ads, no prices. Start with your médico de família — it's free through the SNS.",
+  "places": {
+    "sns": {
+      "t": "Médico de família (SNS)",
+      "s": "Through your centro de saúde or the SNS 24 line: 808 24 24 24."
+    },
+    "sesaram": {
+      "t": "SESARAM — Hospital Dr. Nélio Mendonça",
+      "s": "Madeira's public hospital; stroke unit."
+    },
+    "hpa": {
+      "t": "Hospital Particular da Madeira (HPA)",
+      "s": "Private clinic: neurology, sleep medicine."
+    }
+  },
+  "kind": {
+    "public": "public",
+    "private": "private"
+  },
+  "botBtn": "Remind me on Telegram",
+  "botSoon": "Soon — once the bot is live",
+  "emergencyText": "Numb arm or face, slurred speech, sudden weakness — this is not for a web page. Call now.",
+  "emergencySns": "Or the SNS 24 line: 808 24 24 24",
+  "icsCal": "Cápsula — plan for the week"
 }

@@ -9,7 +9,7 @@
   "introLabel": "Digitale Route für die Gesundheit des Gehirns",
   "introNote": "Nichts wird gespeichert: deine Antworten bleiben auf deinem Handy.",
   "startBtn": "Starten",
-  "soon": "Im Aufbau — die erste Version kommt im November.",
+  "soon": "Bald",
   "aboutTitle": "Was Cápsula macht",
   "about": {
     "vessels": "Gefäße: wann du zuletzt Blutdruck gemessen und Blut abgenommen hast — und was sich zu prüfen lohnt.",
@@ -18,12 +18,140 @@
     "plan": "Wochenplan: höchstens drei Schritte, mit Erinnerungen im Kalender."
   },
   "disclaimer": "Das ist keine medizinische Beratung — besprich es mit deinem Arzt.",
-  "emergency": "Symptome gerade jetzt? 112 / SNS 24",
+  "emergency": "Symptome gerade jetzt? Ruf 112",
   "honest": "Keine Diagnosen, keine Risikoprozente, keine Versprechen. Nur, was sich zu prüfen lohnt, zu wem du gehst und wann erinnert wird.",
   "themeLabel": "Tag / Nacht",
   "langLabel": "Sprache",
   "shareBtn": "An einen Freund senden",
   "shareText": "Auch der Kopf braucht eine Inspektion. Vier Tipps, nichts tippen — Profil und Plan für die Woche:",
   "shareCopied": "Link kopiert ✓",
-  "offline": "Offline? Versuch es noch einmal."
+  "offline": "Offline? Versuch es noch einmal.",
+  "back": "Zurück",
+  "restart": "Neu starten",
+  "q": {
+    "worry": {
+      "text": "Was beschäftigt dich am meisten?",
+      "o": {
+        "memory": "Gedächtnis, Vergesslichkeit",
+        "focus": "Konzentration",
+        "tired": "Müdigkeit und Schlaf",
+        "stroke": "Angst vor Schlaganfall",
+        "check": "Nichts, nur prüfen",
+        "now": "🚨 Symptome gerade jetzt: Taubheit, hängendes Gesicht, verwaschene Sprache"
+      }
+    },
+    "age": {
+      "text": "Wie alt bist du?",
+      "o": {
+        "u40": "Unter 40",
+        "a40": "40–49",
+        "a50": "50–59",
+        "a60": "60+"
+      }
+    },
+    "check": {
+      "text": "Wann hast du zuletzt Blutdruck gemessen und Blut abgenommen?",
+      "hint": "Blutdruck, Cholesterin, Zucker — beim Arzt oder in der Apotheke.",
+      "o": {
+        "y1": "Vor weniger als einem Jahr",
+        "y3": "Vor 1–3 Jahren",
+        "dk": "Weiß ich nicht mehr"
+      }
+    },
+    "sleep": {
+      "text": "Wie schläfst du?",
+      "o": {
+        "ok": "Gut",
+        "snore": "Ich schnarche / wache zerschlagen auf",
+        "fall": "Schlecht einschlafen",
+        "short": "Unter 6 Stunden"
+      }
+    }
+  },
+  "resultTitle": "Dein Profil",
+  "resultSub": "Drei Linien — und was sie jetzt bedeuten.",
+  "level": {
+    "ok": "entspannt",
+    "warn": "lohnt sich zu prüfen",
+    "bad": "nicht aufschieben"
+  },
+  "lines": {
+    "head": "Kopf",
+    "sleep": "Schlaf",
+    "vessels": "Gefäße"
+  },
+  "profile": {
+    "head": {
+      "ok": "Gedächtnis und Konzentration sind im Moment nicht das Hauptthema.",
+      "warn": "Gedächtnis und Konzentration hängen meist an Schlaf und Belastung — fang dort an.",
+      "bad": "Der Kopf bittet um Aufmerksamkeit: Zeit, mit dem Arzt zu sprechen, statt durchzuhalten."
+    },
+    "sleep": {
+      "ok": "Der Schlaf ist in Ordnung — schütze ihn.",
+      "warn": "Dir fehlt Schlaf — eine Woche Routine zeigt, wo das Problem liegt.",
+      "bad": "Schnarchen und zerschlagen aufwachen ist ein Grund, nach einer Schlafuntersuchung zu fragen."
+    },
+    "vessels": {
+      "ok": "Blutdruck und Blutwerte kürzlich geprüft — gut.",
+      "warn": "Blutdruck und Blutwerte lange nicht angeschaut — das ist leicht nachzuholen.",
+      "bad": "Gefäße zuerst: Blutdruck, Cholesterin, Zucker."
+    }
+  },
+  "planTitle": "Plan für die Woche",
+  "planHint": "Höchstens drei Schritte. Der Rest kommt später.",
+  "plan": {
+    "bp3": {
+      "t": "Drei Morgen hintereinander den Blutdruck messen",
+      "s": "Im Sitzen, vor dem Kaffee, Werte notieren."
+    },
+    "gp": {
+      "t": "Termin beim Médico de família / Blutabnahme",
+      "s": "Blutdruck, Cholesterin, Zucker — ein Besuch."
+    },
+    "sleepq": {
+      "t": "Den Arzt nach einer Schlafuntersuchung fragen",
+      "s": "Schnarchen und Erschöpfung lassen sich prüfen."
+    },
+    "sleep7": {
+      "t": "Eine Woche: 7 Stunden und immer zur selben Zeit aufstehen",
+      "s": "Kein Bildschirm in der Stunde vor dem Schlafen."
+    },
+    "walk": {
+      "t": "Jeden Tag 30 Minuten gehen",
+      "s": "Der Kopf braucht mehr Sauerstoff als Kaffee."
+    },
+    "recheck": {
+      "t": "Den Cápsula-Check wiederholen",
+      "s": "Sechs Monate sind um — wieder vier Tipps."
+    }
+  },
+  "addCal": "In den Kalender",
+  "addCalHint": ".ics-Datei: Wochenplan + Erinnerung in sechs Monaten.",
+  "calDone": "Fertig! Datei öffnen und „Alle hinzufügen“ tippen.",
+  "placesBtn": "Wo man sich auf Madeira prüfen lässt",
+  "placesTitle": "Wo man sich auf Madeira prüfen lässt",
+  "placesNote": "Liste ohne Werbung und ohne Preise. Fang beim Médico de família an — über den SNS kostenlos.",
+  "places": {
+    "sns": {
+      "t": "Médico de família (SNS)",
+      "s": "Über dein Centro de saúde oder die Linie SNS 24: 808 24 24 24."
+    },
+    "sesaram": {
+      "t": "SESARAM — Hospital Dr. Nélio Mendonça",
+      "s": "Öffentliches Krankenhaus Madeiras; Schlaganfall-Station."
+    },
+    "hpa": {
+      "t": "Hospital Particular da Madeira (HPA)",
+      "s": "Privatklinik: Neurologie, Schlafmedizin."
+    }
+  },
+  "kind": {
+    "public": "öffentlich",
+    "private": "privat"
+  },
+  "botBtn": "Erinnerungen in Telegram",
+  "botSoon": "Bald — sobald der Bot läuft",
+  "emergencyText": "Tauber Arm oder Gesicht, verwaschene Sprache, plötzliche Schwäche — das ist nichts für eine Webseite. Ruf sofort an.",
+  "emergencySns": "Oder die Linie SNS 24: 808 24 24 24",
+  "icsCal": "Cápsula — Plan für die Woche"
 }
