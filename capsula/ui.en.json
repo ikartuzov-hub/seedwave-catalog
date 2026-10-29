@@ -140,9 +140,9 @@
       "t": "SESARAM — Hospital Dr. Nélio Mendonça",
       "s": "Madeira's public hospital; stroke unit."
     },
-    "hpa": {
-      "t": "Hospital Particular da Madeira (HPA)",
-      "s": "Private clinic: neurology, sleep medicine."
+    "cuf": {
+      "t": "Hospital CUF Madeira",
+      "s": "Private hospital: neurology, sleep medicine."
     }
   },
   "kind": {

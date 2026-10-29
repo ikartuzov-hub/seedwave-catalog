@@ -3,34 +3,34 @@
   "brand": "Cápsula",
   "slogan": "A cabeça também precisa de revisão",
   "title": "Cápsula — a cabeça também precisa de revisão",
-  "metaDesc": "Memória, concentração, sono, medo do AVC. Quatro toques, sem escrever nada — e recebes um perfil claro e um plano para a semana. Grátis, sem registo, nada é guardado.",
-  "heroTitle": "Estás cansado — ou é algo mais?",
+  "metaDesc": "Memória, concentração, sono, medo do AVC. Quatro toques, sem escrever nada — e recebe um perfil claro e um plano para a semana. Grátis, sem registo, nada é guardado.",
+  "heroTitle": "Está cansado — ou é algo mais?",
   "heroSub": "Quatro toques, sem escrever nada. Um perfil claro, um plano para a semana, lembretes no calendário.",
   "introLabel": "Percurso digital de saúde do cérebro",
-  "introNote": "Nada é guardado: as respostas ficam no teu telemóvel.",
+  "introNote": "Nada é guardado: as respostas ficam no seu telemóvel.",
   "startBtn": "Começar",
   "soon": "Em breve",
   "aboutTitle": "O que a Cápsula faz",
   "about": {
-    "vessels": "Vasos: quando foi a última vez que mediste a tensão e fizeste análises — e o que vale a pena verificar.",
+    "vessels": "Vasos: quando foi a última vez que mediu a tensão e fez análises — e o que vale a pena verificar.",
     "sleep": "Sono: ressonar, acordar cansado, dormir menos de 6 horas — e a quem perguntar.",
     "head": "Cabeça: memória, concentração, interesse pelas coisas — e o que fazer esta semana.",
     "plan": "Plano da semana: no máximo três ações, com lembretes no calendário."
   },
-  "disclaimer": "Isto não é uma consulta médica — fala com o teu médico.",
-  "emergency": "Se tens sintomas agora — liga 112",
+  "disclaimer": "Isto não é uma consulta médica — fale com o seu médico.",
+  "emergency": "Se tem sintomas agora — ligue 112",
   "honest": "Sem diagnósticos, sem percentagens de risco, sem promessas. Só o que vale a pena verificar, a quem ir e quando lembrar.",
   "themeLabel": "Dia / noite",
   "langLabel": "Idioma",
   "shareBtn": "Enviar a um amigo",
   "shareText": "A cabeça também precisa de revisão. Quatro toques, sem escrever nada — perfil e plano para a semana:",
   "shareCopied": "Ligação copiada ✓",
-  "offline": "Sem ligação? Tenta outra vez.",
+  "offline": "Sem ligação? Tente outra vez.",
   "back": "Voltar",
   "restart": "Repetir",
   "q": {
     "worry": {
-      "text": "O que te preocupa mais?",
+      "text": "O que o preocupa mais?",
       "o": {
         "memory": "Memória, esquecimentos",
         "focus": "Concentração",
@@ -41,7 +41,7 @@
       }
     },
     "age": {
-      "text": "Que idade tens?",
+      "text": "Que idade tem?",
       "o": {
         "u40": "Menos de 40",
         "a40": "40–49",
@@ -50,7 +50,7 @@
       }
     },
     "check": {
-      "text": "Quando mediste a tensão e fizeste análises pela última vez?",
+      "text": "Quando mediu a tensão e fez análises pela última vez?",
       "hint": "Tensão, colesterol, açúcar — no médico ou na farmácia.",
       "o": {
         "y1": "Há menos de um ano",
@@ -59,7 +59,7 @@
       }
     },
     "sleep": {
-      "text": "Como dormes?",
+      "text": "Como dorme?",
       "o": {
         "ok": "Bem",
         "snore": "Ressono / acordo cansado",
@@ -68,7 +68,7 @@
       }
     }
   },
-  "resultTitle": "O teu perfil",
+  "resultTitle": "O seu perfil",
   "resultSub": "Três linhas — e o que isso significa agora.",
   "level": {
     "ok": "tranquilo",
@@ -83,17 +83,17 @@
   "profile": {
     "head": {
       "ok": "Memória e concentração não são, para já, o tema principal.",
-      "warn": "Memória e concentração esbarram quase sempre no sono e na carga — começa por aí.",
+      "warn": "Memória e concentração esbarram quase sempre no sono e na carga — comece por aí.",
       "bad": "A cabeça pede atenção: é altura de falar com o médico, não de aguentar."
     },
     "sleep": {
-      "ok": "O sono está em ordem — cuida dele.",
+      "ok": "O sono está em ordem — cuide dele.",
       "warn": "O sono não chega — uma semana de rotina mostra onde está o problema.",
       "bad": "Ressonar e acordar cansado é motivo para perguntar por um estudo do sono."
     },
     "vessels": {
       "ok": "Tensão e análises verificadas há pouco — bom.",
-      "warn": "Há muito que não vês a tensão e as análises — é simples de fazer.",
+      "warn": "Há muito tempo que não verifica a tensão e as análises — é simples de fazer.",
       "bad": "Vasos primeiro: tensão, colesterol, açúcar."
     }
   },
@@ -127,22 +127,22 @@
   },
   "addCal": "Adicionar ao calendário",
   "addCalHint": "Ficheiro .ics: plano da semana + lembrete daqui a seis meses.",
-  "calDone": "Feito! Abre o ficheiro e escolhe «Adicionar tudo».",
+  "calDone": "Feito! Abra o ficheiro e escolha «Adicionar tudo».",
   "placesBtn": "Onde verificar na Madeira",
   "placesTitle": "Onde verificar na Madeira",
-  "placesNote": "Lista sem publicidade e sem preços. Começa pelo médico de família — é gratuito pelo SNS.",
+  "placesNote": "Lista sem publicidade e sem preços. Comece pelo médico de família — é gratuito pelo SNS.",
   "places": {
     "sns": {
       "t": "Médico de família (SNS)",
-      "s": "Pelo teu centro de saúde ou pela linha SNS 24: 808 24 24 24."
+      "s": "No seu centro de saúde ou pela linha SNS 24: 808 24 24 24."
     },
     "sesaram": {
       "t": "SESARAM — Hospital Dr. Nélio Mendonça",
       "s": "Hospital público da Madeira; unidade de AVC."
     },
-    "hpa": {
-      "t": "Hospital Particular da Madeira (HPA)",
-      "s": "Clínica privada: neurologia, medicina do sono."
+    "cuf": {
+      "t": "Hospital CUF Madeira",
+      "s": "Hospital privado: neurologia, medicina do sono."
     }
   },
   "kind": {
@@ -151,7 +151,7 @@
   },
   "botBtn": "Lembretes no Telegram",
   "botSoon": "Em breve — depois do lançamento do bot",
-  "emergencyText": "Dormência no braço ou na cara, fala arrastada, fraqueza súbita — isto não é para uma página. Liga já.",
+  "emergencyText": "Dormência no braço ou na cara, fala arrastada, fraqueza súbita — isto não é para uma página. Ligue já.",
   "emergencySns": "Ou a linha SNS 24: 808 24 24 24",
   "icsCal": "Cápsula — plano da semana"
 }

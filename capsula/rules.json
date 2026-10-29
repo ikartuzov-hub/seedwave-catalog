@@ -38,9 +38,9 @@
   "places": [
     { "id": "sns",     "kind": "public",  "url": "https://www.sns24.gov.pt/", "phone": "808 24 24 24" },
     { "id": "sesaram", "kind": "public",  "url": "https://www.sesaram.pt/" },
-    { "id": "hpa",     "kind": "private", "url": "https://www.grupohpa.com/" }
+    { "id": "cuf",     "kind": "private", "url": "https://www.cuf.pt/hospitais-e-clinicas/hospital-cuf-madeira" }
   ],
-  "placesVerified": "2026-10-28",
+  "placesVerified": "2026-10-29",
   "_places": "Hospital da Luz Funchal — не добавлен до проверки по первоисточнику (хвост в Досье). Цены не выводятся (честный счёт).",
 
   "emergency": { "tel": "112", "sns24": "808 24 24 24" },

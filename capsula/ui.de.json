@@ -140,9 +140,9 @@
       "t": "SESARAM — Hospital Dr. Nélio Mendonça",
       "s": "Öffentliches Krankenhaus Madeiras; Schlaganfall-Station."
     },
-    "hpa": {
-      "t": "Hospital Particular da Madeira (HPA)",
-      "s": "Privatklinik: Neurologie, Schlafmedizin."
+    "cuf": {
+      "t": "Hospital CUF Madeira",
+      "s": "Privatkrankenhaus: Neurologie, Schlafmedizin."
     }
   },
   "kind": {

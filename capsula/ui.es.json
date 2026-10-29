@@ -140,9 +140,9 @@
       "t": "SESARAM — Hospital Dr. Nélio Mendonça",
       "s": "Hospital público de Madeira; unidad de ictus."
     },
-    "hpa": {
-      "t": "Hospital Particular da Madeira (HPA)",
-      "s": "Clínica privada: neurología, medicina del sueño."
+    "cuf": {
+      "t": "Hospital CUF Madeira",
+      "s": "Hospital privado: neurología, medicina del sueño."
     }
   },
   "kind": {
