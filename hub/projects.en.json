@@ -165,7 +165,7 @@
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E0623F\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Tenho carro!\"><title>Tenho carro!</title><path d=\"M66 31 A21 21 0 1 0 66 59\"/><circle cx=\"75\" cy=\"25\" r=\"3\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
       "category": "Civic tech",
       "name": "I've got a car!",
-      "hook": "Inspection, IUC road tax, insurance and service for your car in one calendar — three taps, no sign-up.",
+      "hook": "Overdue inspection = fine up to €1,250. Three steps in one evening: insurance, service + inspection, vest and triangle. Then, if you like, the full calendar.",
       "description": "Type your plate and the page recognises the car's era from the plate format. Three more taps — registration month, insurance, fuel — and you get your car's year: periodic inspection with the 4/2/1-year rule, IUC (including the new 2027 calendar), insurance renewal and a service before inspection. All in one calendar file with alerts for iPhone, Android and Google. We don't store your plate. Five languages.",
       "sectors": [
         "Drivers",
@@ -175,7 +175,7 @@
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Partner car washes and garages · Insurers · Driving schools",
-      "demoLink": "https://seedwave.pt/carro/en/"
+      "demoLink": "https://seedwave.pt/carro/lite/en/"
     },
     {
       "id": "nrm",

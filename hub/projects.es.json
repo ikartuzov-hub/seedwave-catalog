@@ -165,7 +165,7 @@
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E0623F\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Tenho carro!\"><title>Tenho carro!</title><path d=\"M66 31 A21 21 0 1 0 66 59\"/><circle cx=\"75\" cy=\"25\" r=\"3\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
       "category": "Servicios al ciudadano",
       "name": "¡Tengo coche!",
-      "hook": "Inspección, IUC, seguro y revisión de tu coche en un solo calendario — tres toques, sin registro.",
+      "hook": "Inspección caducada = multa de hasta 1 250 €. Tres pasos en una tarde: seguro, taller + inspección, chaleco y triángulo. Luego, si quieres, el calendario completo.",
       "description": "Escribe la matrícula y la página reconoce la época del coche por el formato. Tres toques más — mes de matriculación, seguro, combustible — y recibes el año de tu coche: inspección periódica con la regla de 4/2/1 años, IUC (incluido el nuevo calendario de 2027), renovación del seguro y revisión antes de la inspección. Todo en un archivo de calendario con alertas para iPhone, Android y Google. No guardamos la matrícula. Cinco idiomas.",
       "sectors": [
         "Conductores",
@@ -175,7 +175,7 @@
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Lavados y talleres asociados · Aseguradoras · Autoescuelas",
-      "demoLink": "https://seedwave.pt/carro/es/"
+      "demoLink": "https://seedwave.pt/carro/lite/es/"
     },
     {
       "id": "nrm",

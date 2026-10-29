@@ -165,7 +165,7 @@
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E0623F\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Tenho carro!\"><title>Tenho carro!</title><path d=\"M66 31 A21 21 0 1 0 66 59\"/><circle cx=\"75\" cy=\"25\" r=\"3\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
       "category": "Bürgerdienste",
       "name": "Ich hab ein Auto!",
-      "hook": "Inspektion, IUC, Versicherung und Wartung deines Autos in einem Kalender — drei Mal tippen, ohne Anmeldung.",
+      "hook": "Inspektion überfällig = bis 1 250 € Bußgeld. Drei Schritte an einem Abend: Versicherung, Werkstatt + Inspektion, Weste und Dreieck. Danach, wenn du willst, der volle Kalender.",
       "description": "Kennzeichen eingeben, und die Seite erkennt das Baujahr-Zeitalter am Format. Noch drei Mal tippen — Zulassungsmonat, Versicherung, Kraftstoff — und du bekommst das Jahr deines Autos: Hauptuntersuchung nach der 4/2/1-Jahre-Regel, IUC (inklusive neuem Kalender ab 2027), Versicherungsverlängerung und Wartung vor der Inspektion. Alles in einer Kalenderdatei mit Erinnerungen für iPhone, Android und Google. Wir speichern dein Kennzeichen nicht. Fünf Sprachen.",
       "sectors": [
         "Autofahrer",
@@ -175,7 +175,7 @@
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Partner-Autowäschen und Werkstätten · Versicherer · Fahrschulen",
-      "demoLink": "https://seedwave.pt/carro/de/"
+      "demoLink": "https://seedwave.pt/carro/lite/de/"
     },
     {
       "id": "nrm",
