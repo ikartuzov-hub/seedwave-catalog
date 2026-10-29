@@ -15,7 +15,12 @@
   "back": "Atrás",
   "skip": "Omitir",
   "found": "¡Reconocido!",
-  "era": { "s1": "Clásico de antes de 1992", "s2": "Matrícula de 1992–2005", "s3": "Matrícula de 2005–2020", "s4": "Matrícula de 2020 o más nueva" },
+  "era": {
+    "s1": "Clásico de antes de 1992",
+    "s2": "Matrícula de 1992–2005",
+    "s3": "Matrícula de 2005–2020",
+    "s4": "Matrícula de 2020 o más nueva"
+  },
   "estimate": "parece de ~{y}",
   "oldInspection": "Más de 8 años — inspección todos los años.",
   "qYear": "¿Año de la primera matriculación?",
@@ -29,13 +34,52 @@
   "insHint": "Está en la póliza o en el e-mail de la aseguradora.",
   "insUnknown": "No lo sé",
   "qFuel": "¿Combustible?",
-  "fuel": { "diesel": "Diésel", "petrol": "Gasolina", "hybrid": "Híbrido", "ev": "Eléctrico" },
+  "fuel": {
+    "diesel": "Diésel",
+    "petrol": "Gasolina",
+    "hybrid": "Híbrido",
+    "ev": "Eléctrico"
+  },
   "qRegion": "¿Dónde circula el coche?",
-  "region": { "madeira": "Madeira", "acores": "Azores", "continente": "Continente" },
-  "months": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
-  "monthsShort": ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"],
+  "region": {
+    "madeira": "Madeira",
+    "acores": "Azores",
+    "continente": "Continente"
+  },
+  "months": [
+    "Enero",
+    "Febrero",
+    "Marzo",
+    "Abril",
+    "Mayo",
+    "Junio",
+    "Julio",
+    "Agosto",
+    "Septiembre",
+    "Octubre",
+    "Noviembre",
+    "Diciembre"
+  ],
+  "monthsShort": [
+    "ene",
+    "feb",
+    "mar",
+    "abr",
+    "may",
+    "jun",
+    "jul",
+    "ago",
+    "sep",
+    "oct",
+    "nov",
+    "dic"
+  ],
   "resultTitle": "El año de tu coche",
-  "rhythm": { "none": "Primera inspección en {y}", "bi": "Inspección cada 2 años — la próxima en {y}", "yearly": "Inspección todos los años" },
+  "rhythm": {
+    "none": "Primera inspección en {y}",
+    "bi": "Inspección cada 2 años — la próxima en {y}",
+    "yearly": "Inspección todos los años"
+  },
   "next12": "Próximos 12 meses",
   "nothing12": "Nada en los próximos 12 meses — el calendario avisará más tarde.",
   "addCal": "Añadir al calendario",
@@ -60,13 +104,34 @@
     "price": "Precio de la inspección en 2026: ~{p} €."
   },
   "ev": {
-    "ipo": { "t": "Inspección (IPO) — este mes", "d": "Plazo: hasta fin de mes; puedes ir hasta 3 meses antes. Lleva el Certificado de Matrícula. Antes de ir: lava el coche y revisa las luces." },
-    "service": { "t": "Revisión antes de la inspección", "d": "Aceite, filtros, frenos, neumáticos y luces. Una visita al taller prepara la inspección del mes siguiente." },
-    "iuc": { "t": "IUC — pagar antes de fin de mes", "d": "Portal das Finanças → IUC → emitir documento de pago. Consejo: la domiciliación evita olvidos." },
-    "iucNew": { "t": "IUC — nuevo calendario (abril)", "d": "Desde 2027 el IUC se paga en abril (importes hasta 100 €). Confirma importe y plazo en el Portal das Finanças." },
-    "ins": { "t": "El seguro se renueva este mes", "d": "Compara precios antes de renovar. Sin inspección al día no hay seguro." },
-    "season": { "t": "Coche listo para el invierno", "d": "Neumáticos (mínimo 1,6 mm), batería, escobillas y aire acondicionado." },
-    "renew": { "t": "Renovar el calendario del coche", "d": "Genera los próximos años en seedwave.pt/carro" }
+    "ipo": {
+      "t": "Inspección (IPO) — este mes",
+      "d": "Plazo: hasta fin de mes; puedes ir hasta 3 meses antes. Lleva el Certificado de Matrícula. Antes de ir: lava el coche y revisa las luces."
+    },
+    "service": {
+      "t": "Revisión antes de la inspección",
+      "d": "Aceite, filtros, frenos, neumáticos y luces. Una visita al taller prepara la inspección del mes siguiente."
+    },
+    "iuc": {
+      "t": "IUC — pagar antes de fin de mes",
+      "d": "Portal das Finanças → IUC → emitir documento de pago. Consejo: la domiciliación evita olvidos."
+    },
+    "iucNew": {
+      "t": "IUC — nuevo calendario (abril)",
+      "d": "Desde 2027 el IUC se paga en abril (importes hasta 100 €). Confirma importe y plazo en el Portal das Finanças."
+    },
+    "ins": {
+      "t": "El seguro se renueva este mes",
+      "d": "Compara precios antes de renovar. Sin inspección al día no hay seguro."
+    },
+    "season": {
+      "t": "Coche listo para el invierno",
+      "d": "Neumáticos (mínimo 1,6 mm), batería, escobillas y aire acondicionado."
+    },
+    "renew": {
+      "t": "Renovar el calendario del coche",
+      "d": "Genera los próximos años en seedwave.pt/carro"
+    }
   },
   "aboutTitle": "Qué te recordamos",
   "about": {
@@ -77,5 +142,45 @@
   },
   "honest": "Reglas verificadas en octubre de 2026. En caso de duda, mandan el Portal das Finanças y el IMT.",
   "langLabel": "Idioma",
-  "themeLabel": "Cambiar tema"
+  "themeLabel": "Cambiar tema",
+  "lite": {
+    "title": "Tenho carro! Lite — 3 pasos y tranquilo un año",
+    "metaDesc": "¿Inspección caducada? Multa de hasta 1 250 €. Tres pasos en una tarde: seguro, taller + inspección, chaleco y triángulo. Sin registro, sin lecturas largas.",
+    "kicker": "Para quien nunca tiene tiempo",
+    "h1": "¿Inspección caducada? Son hasta 1 250 € de multa.",
+    "sub": "A nadie le gusta pensar en esto. Por eso aquí solo hay tres pasos. Hazlos hoy — y olvídate hasta el año que viene.",
+    "steps": [
+      {
+        "emoji": "🛡️",
+        "t": "Seguro",
+        "one": "Comprueba que el seguro está pagado y activo. Sin él, lo demás no cuenta.",
+        "btn": "¿Cómo lo compruebo?",
+        "more": "Abre la app de tu aseguradora o el último correo y busca la fecha de fin de la póliza. La carta verde de papel en la guantera ya no demuestra nada — el certificado es digital. Si la renovación está cerca, pide 2 precios en otras aseguradoras: 10 minutos, ahorro típico de 50–150 € al año."
+      },
+      {
+        "emoji": "🔧",
+        "t": "Taller + inspección",
+        "one": "Reserva taller para aceite, luces y una revisión previa. Del taller, directo a la inspección (IPO).",
+        "btn": "¿Cómo reservo?",
+        "more": "Luego reserva la inspección en un centro IPO cercano (Google Maps → «inspeção automóvel»). Precio en 2026: unos 38 €. Lleva el permiso de circulación. Si ya vas tarde: no circules más de lo necesario — la multa es de 250 a 1 250 €.",
+        "msg": "Olá, queria marcar mudança de óleo e filtros, verificação de luzes e um pré-check para a inspeção. Matrícula __-__-__. Que dia têm livre?",
+        "copyBtn": "Copiar el mensaje para el taller",
+        "lead": "Envía esto a cualquier taller:"
+      },
+      {
+        "emoji": "🦺",
+        "t": "Chaleco y triángulo",
+        "one": "Abre el maletero. Chaleco reflectante y triángulo tienen que estar — la ley exige los dos.",
+        "btn": "¿Y si falta?",
+        "more": "Cualquier gasolinera o supermercado vende el kit (chaleco + triángulo) por 8–15 €. Sin ellos, en un control la multa puede llegar a 600 €. El chaleco debe estar al alcance del conductor (guantera o puerta), no en el fondo del maletero. El botiquín no es obligatorio en turismos en Portugal — pero no sobra."
+      }
+    ],
+    "doneTitle": "¿Hecho? Entonces tranquilo un año.",
+    "doneText": "¿Quieres que el calendario del móvil te avise antes de los plazos del año que viene? La versión completa lo hace en tres toques, sin registro.",
+    "full": "Poner los plazos en el calendario",
+    "share": "Enviar a quien nunca tiene tiempo",
+    "shareText": "Inspección, seguro, chaleco — tres pasos en una tarde y tranquilo un año. Sin lecturas largas:",
+    "copied": "Enlace copiado ✓",
+    "honest": "Normas verificadas en octubre de 2026 (IMT, Código da Estrada). En caso de duda, valen las fuentes oficiales."
+  }
 }

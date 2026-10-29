@@ -15,7 +15,12 @@
   "back": "Zurück",
   "skip": "Überspringen",
   "found": "Erkannt!",
-  "era": { "s1": "Klassiker von vor 1992", "s2": "Kennzeichen von 1992–2005", "s3": "Kennzeichen von 2005–2020", "s4": "Kennzeichen ab 2020" },
+  "era": {
+    "s1": "Klassiker von vor 1992",
+    "s2": "Kennzeichen von 1992–2005",
+    "s3": "Kennzeichen von 2005–2020",
+    "s4": "Kennzeichen ab 2020"
+  },
   "estimate": "sieht nach ~{y} aus",
   "oldInspection": "Älter als 8 Jahre — Inspektion jedes Jahr.",
   "qYear": "Jahr der Erstzulassung?",
@@ -29,13 +34,52 @@
   "insHint": "Steht in der Police oder in der E-Mail des Versicherers.",
   "insUnknown": "Weiß nicht",
   "qFuel": "Kraftstoff?",
-  "fuel": { "diesel": "Diesel", "petrol": "Benzin", "hybrid": "Hybrid", "ev": "Elektro" },
+  "fuel": {
+    "diesel": "Diesel",
+    "petrol": "Benzin",
+    "hybrid": "Hybrid",
+    "ev": "Elektro"
+  },
   "qRegion": "Wo fährt das Auto?",
-  "region": { "madeira": "Madeira", "acores": "Azoren", "continente": "Festland" },
-  "months": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
-  "monthsShort": ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"],
+  "region": {
+    "madeira": "Madeira",
+    "acores": "Azoren",
+    "continente": "Festland"
+  },
+  "months": [
+    "Januar",
+    "Februar",
+    "März",
+    "April",
+    "Mai",
+    "Juni",
+    "Juli",
+    "August",
+    "September",
+    "Oktober",
+    "November",
+    "Dezember"
+  ],
+  "monthsShort": [
+    "Jan",
+    "Feb",
+    "Mär",
+    "Apr",
+    "Mai",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Okt",
+    "Nov",
+    "Dez"
+  ],
   "resultTitle": "Das Jahr deines Autos",
-  "rhythm": { "none": "Erste Inspektion {y}", "bi": "Inspektion alle 2 Jahre — die nächste {y}", "yearly": "Inspektion jedes Jahr" },
+  "rhythm": {
+    "none": "Erste Inspektion {y}",
+    "bi": "Inspektion alle 2 Jahre — die nächste {y}",
+    "yearly": "Inspektion jedes Jahr"
+  },
   "next12": "Die nächsten 12 Monate",
   "nothing12": "In den nächsten 12 Monaten nichts — der Kalender erinnert dich später.",
   "addCal": "Zum Kalender hinzufügen",
@@ -60,13 +104,34 @@
     "price": "Preis der Inspektion 2026: ~{p} €."
   },
   "ev": {
-    "ipo": { "t": "Inspektion (IPO) — diesen Monat", "d": "Frist: Monatsende; bis zu 3 Monate früher möglich. Certificado de Matrícula mitnehmen. Vorher: Auto waschen und Licht prüfen." },
-    "service": { "t": "Wartung vor der Inspektion", "d": "Öl, Filter, Bremsen, Reifen und Licht. Ein Werkstattbesuch bereitet die Inspektion im nächsten Monat vor." },
-    "iuc": { "t": "IUC — bis Monatsende zahlen", "d": "Portal das Finanças → IUC → Zahlungsbeleg erstellen. Tipp: Lastschrift, dann vergisst du es nie." },
-    "iucNew": { "t": "IUC — neuer Kalender (April)", "d": "Ab 2027 wird die IUC im April gezahlt (Beträge bis 100 €). Betrag und Frist im Portal das Finanças prüfen." },
-    "ins": { "t": "Versicherung verlängert sich diesen Monat", "d": "Vor der Verlängerung Preise vergleichen. Ohne gültige Inspektion keine Versicherung." },
-    "season": { "t": "Auto winterfit machen", "d": "Reifen (mindestens 1,6 mm), Batterie, Wischer und Klimaanlage." },
-    "renew": { "t": "Auto-Kalender erneuern", "d": "Die nächsten Jahre auf seedwave.pt/carro erstellen" }
+    "ipo": {
+      "t": "Inspektion (IPO) — diesen Monat",
+      "d": "Frist: Monatsende; bis zu 3 Monate früher möglich. Certificado de Matrícula mitnehmen. Vorher: Auto waschen und Licht prüfen."
+    },
+    "service": {
+      "t": "Wartung vor der Inspektion",
+      "d": "Öl, Filter, Bremsen, Reifen und Licht. Ein Werkstattbesuch bereitet die Inspektion im nächsten Monat vor."
+    },
+    "iuc": {
+      "t": "IUC — bis Monatsende zahlen",
+      "d": "Portal das Finanças → IUC → Zahlungsbeleg erstellen. Tipp: Lastschrift, dann vergisst du es nie."
+    },
+    "iucNew": {
+      "t": "IUC — neuer Kalender (April)",
+      "d": "Ab 2027 wird die IUC im April gezahlt (Beträge bis 100 €). Betrag und Frist im Portal das Finanças prüfen."
+    },
+    "ins": {
+      "t": "Versicherung verlängert sich diesen Monat",
+      "d": "Vor der Verlängerung Preise vergleichen. Ohne gültige Inspektion keine Versicherung."
+    },
+    "season": {
+      "t": "Auto winterfit machen",
+      "d": "Reifen (mindestens 1,6 mm), Batterie, Wischer und Klimaanlage."
+    },
+    "renew": {
+      "t": "Auto-Kalender erneuern",
+      "d": "Die nächsten Jahre auf seedwave.pt/carro erstellen"
+    }
   },
   "aboutTitle": "Woran wir erinnern",
   "about": {
@@ -77,5 +142,45 @@
   },
   "honest": "Regeln geprüft im Oktober 2026. Im Zweifel gelten Portal das Finanças und IMT.",
   "langLabel": "Sprache",
-  "themeLabel": "Design wechseln"
+  "themeLabel": "Design wechseln",
+  "lite": {
+    "title": "Tenho carro! Lite — 3 Schritte, ein Jahr Ruhe",
+    "metaDesc": "TÜV (IPO) überfällig? Bußgeld bis 1 250 €. Drei Schritte an einem Abend: Versicherung, Werkstatt + Inspektion, Weste und Warndreieck. Ohne Anmeldung, ohne langes Lesen.",
+    "kicker": "Für alle, die nie Zeit haben",
+    "h1": "Inspektion überfällig? Das kostet bis zu 1 250 €.",
+    "sub": "Niemand denkt gern daran. Deshalb gibt es hier nur drei Schritte. Heute erledigen — und bis nächstes Jahr vergessen.",
+    "steps": [
+      {
+        "emoji": "🛡️",
+        "t": "Versicherung",
+        "one": "Prüfe, dass die Versicherung bezahlt und aktiv ist. Ohne sie zählt der Rest nicht.",
+        "btn": "Wie prüfe ich das?",
+        "more": "Öffne die App deines Versicherers oder die letzte E-Mail und such das Ablaufdatum der Police. Die grüne Karte aus Papier im Handschuhfach beweist nichts mehr — das Zertifikat ist digital. Steht die Verlängerung an, hol 2 Angebote woanders ein: 10 Minuten, typische Ersparnis 50–150 € im Jahr."
+      },
+      {
+        "emoji": "🔧",
+        "t": "Werkstatt + Inspektion",
+        "one": "Werkstatt buchen: Öl, Lampen, Vorab-Check. Von der Werkstatt direkt zur Inspektion (IPO).",
+        "btn": "Wie buche ich?",
+        "more": "Dann die Inspektion in einem IPO-Zentrum in der Nähe buchen (Google Maps → „inspeção automóvel“). Preis 2026: etwa 38 €. Fahrzeugschein mitnehmen. Wenn du überfällig bist: nicht mehr fahren als nötig — das Bußgeld beträgt 250–1 250 €.",
+        "msg": "Olá, queria marcar mudança de óleo e filtros, verificação de luzes e um pré-check para a inspeção. Matrícula __-__-__. Que dia têm livre?",
+        "copyBtn": "Nachricht für die Werkstatt kopieren",
+        "lead": "Schick das an jede Werkstatt:"
+      },
+      {
+        "emoji": "🦺",
+        "t": "Weste und Warndreieck",
+        "one": "Kofferraum auf. Warnweste und Warndreieck müssen drin sein — das Gesetz verlangt beides.",
+        "btn": "Und wenn etwas fehlt?",
+        "more": "Jede Tankstelle und jeder Supermarkt verkauft das Set (Weste + Dreieck) für 8–15 €. Fehlt es bei einer Kontrolle, kann das Bußgeld bis 600 € erreichen. Die Weste gehört in Reichweite des Fahrers (Handschuhfach, Türfach), nicht auf den Kofferraumboden. Ein Verbandskasten ist in Portugal für Pkw nicht Pflicht — aber sinnvoll."
+      }
+    ],
+    "doneTitle": "Erledigt? Dann hast du ein Jahr Ruhe.",
+    "doneText": "Soll der Kalender am Handy dich vor den Terminen im nächsten Jahr warnen? Die Vollversion macht das in drei Tipps, ohne Anmeldung.",
+    "full": "Termine in den Kalender",
+    "share": "An jemanden schicken, der nie Zeit hat",
+    "shareText": "Inspektion, Versicherung, Weste — drei Schritte an einem Abend, ein Jahr Ruhe. Ohne langes Lesen:",
+    "copied": "Link kopiert ✓",
+    "honest": "Regeln geprüft im Oktober 2026 (IMT, Código da Estrada). Im Zweifel gelten die offiziellen Quellen."
+  }
 }

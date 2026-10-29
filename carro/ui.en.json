@@ -15,7 +15,12 @@
   "back": "Back",
   "skip": "Skip",
   "found": "Recognised!",
-  "era": { "s1": "Classic from before 1992", "s2": "Plate from 1992–2005", "s3": "Plate from 2005–2020", "s4": "Plate from 2020 or newer" },
+  "era": {
+    "s1": "Classic from before 1992",
+    "s2": "Plate from 1992–2005",
+    "s3": "Plate from 2005–2020",
+    "s4": "Plate from 2020 or newer"
+  },
   "estimate": "looks like ~{y}",
   "oldInspection": "Over 8 years old — inspection every year.",
   "qYear": "Year of first registration?",
@@ -29,13 +34,52 @@
   "insHint": "Check your policy or the insurer's e-mail.",
   "insUnknown": "Not sure",
   "qFuel": "Fuel?",
-  "fuel": { "diesel": "Diesel", "petrol": "Petrol", "hybrid": "Hybrid", "ev": "Electric" },
+  "fuel": {
+    "diesel": "Diesel",
+    "petrol": "Petrol",
+    "hybrid": "Hybrid",
+    "ev": "Electric"
+  },
   "qRegion": "Where does the car live?",
-  "region": { "madeira": "Madeira", "acores": "Azores", "continente": "Mainland" },
-  "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-  "monthsShort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+  "region": {
+    "madeira": "Madeira",
+    "acores": "Azores",
+    "continente": "Mainland"
+  },
+  "months": [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ],
+  "monthsShort": [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+  ],
   "resultTitle": "Your car's year",
-  "rhythm": { "none": "First inspection in {y}", "bi": "Inspection every 2 years — next one in {y}", "yearly": "Inspection every year" },
+  "rhythm": {
+    "none": "First inspection in {y}",
+    "bi": "Inspection every 2 years — next one in {y}",
+    "yearly": "Inspection every year"
+  },
   "next12": "Next 12 months",
   "nothing12": "Nothing in the next 12 months — your calendar will remind you later.",
   "addCal": "Add to calendar",
@@ -60,13 +104,34 @@
     "price": "Inspection price in 2026: ~€{p}."
   },
   "ev": {
-    "ipo": { "t": "Inspection (IPO) — this month", "d": "Deadline: end of the month; you can go up to 3 months early. Bring the Certificado de Matrícula. Before going: wash the car and check the lights." },
-    "service": { "t": "Service before inspection", "d": "Oil, filters, brakes, tyres and lights. One garage visit gets you ready for next month's inspection." },
-    "iuc": { "t": "IUC — pay by the end of the month", "d": "Portal das Finanças → IUC → issue payment document. Tip: direct debit means you never forget." },
-    "iucNew": { "t": "IUC — new calendar (April)", "d": "From 2027 IUC is paid in April (amounts up to €100). Check amount and deadline on Portal das Finanças." },
-    "ins": { "t": "Insurance renews this month", "d": "Compare prices before renewing. No valid inspection, no insurance." },
-    "season": { "t": "Get the car ready for winter", "d": "Tyres (1.6 mm minimum), battery, wipers and air conditioning." },
-    "renew": { "t": "Renew your car calendar", "d": "Generate the next years at seedwave.pt/carro" }
+    "ipo": {
+      "t": "Inspection (IPO) — this month",
+      "d": "Deadline: end of the month; you can go up to 3 months early. Bring the Certificado de Matrícula. Before going: wash the car and check the lights."
+    },
+    "service": {
+      "t": "Service before inspection",
+      "d": "Oil, filters, brakes, tyres and lights. One garage visit gets you ready for next month's inspection."
+    },
+    "iuc": {
+      "t": "IUC — pay by the end of the month",
+      "d": "Portal das Finanças → IUC → issue payment document. Tip: direct debit means you never forget."
+    },
+    "iucNew": {
+      "t": "IUC — new calendar (April)",
+      "d": "From 2027 IUC is paid in April (amounts up to €100). Check amount and deadline on Portal das Finanças."
+    },
+    "ins": {
+      "t": "Insurance renews this month",
+      "d": "Compare prices before renewing. No valid inspection, no insurance."
+    },
+    "season": {
+      "t": "Get the car ready for winter",
+      "d": "Tyres (1.6 mm minimum), battery, wipers and air conditioning."
+    },
+    "renew": {
+      "t": "Renew your car calendar",
+      "d": "Generate the next years at seedwave.pt/carro"
+    }
   },
   "aboutTitle": "What we remind you about",
   "about": {
@@ -77,5 +142,45 @@
   },
   "honest": "Rules checked in October 2026. When in doubt, Portal das Finanças and IMT have the final word.",
   "langLabel": "Language",
-  "themeLabel": "Switch theme"
+  "themeLabel": "Switch theme",
+  "lite": {
+    "title": "Tenho carro! Lite — 3 steps and you're sorted for a year",
+    "metaDesc": "Inspection overdue? Fine up to €1,250. Three steps, one evening: insurance, service + inspection, vest and triangle. No sign-up, no long reading.",
+    "kicker": "For people who never have time",
+    "h1": "Inspection overdue? That's a fine up to €1,250.",
+    "sub": "Nobody likes thinking about this. So there are only three steps here. Do them tonight — and forget about it until next year.",
+    "steps": [
+      {
+        "emoji": "🛡️",
+        "t": "Insurance",
+        "one": "Check your insurance is paid and active. Without it, nothing else counts.",
+        "btn": "How do I check?",
+        "more": "Open your insurer's app or the last e-mail and look for the policy end date. The paper green card in the glovebox proves nothing any more — the certificate is digital. If renewal is close, get 2 quotes elsewhere: 10 minutes, typical saving €50–150 a year."
+      },
+      {
+        "emoji": "🔧",
+        "t": "Service + inspection",
+        "one": "Book a garage for oil, lights and a pre-check. From the garage go straight to the inspection (IPO).",
+        "btn": "How do I book?",
+        "more": "Then book the inspection at an IPO centre near you (Google Maps → “inspeção automóvel”). Price in 2026: about €38. Bring the registration certificate. If you're overdue: don't drive more than needed — the fine is €250–1,250.",
+        "msg": "Olá, queria marcar mudança de óleo e filtros, verificação de luzes e um pré-check para a inspeção. Matrícula __-__-__. Que dia têm livre?",
+        "copyBtn": "Copy the message for the garage",
+        "lead": "Send this to any garage:"
+      },
+      {
+        "emoji": "🦺",
+        "t": "Vest and triangle",
+        "one": "Open the boot. A reflective vest and a warning triangle must be there — the law requires both.",
+        "btn": "What if one is missing?",
+        "more": "Any petrol station or supermarket sells the kit (vest + triangle) for €8–15. Without them at a police stop the fine can reach €600. Keep the vest within the driver's reach (glovebox or door pocket), not at the bottom of the boot. A first-aid kit is not mandatory in cars in Portugal — but it's a good idea."
+      }
+    ],
+    "doneTitle": "Done? Then you're sorted for a year.",
+    "doneText": "Want your phone calendar to warn you before next year's deadlines? The full version does it in three taps, no sign-up.",
+    "full": "Put the deadlines in my calendar",
+    "share": "Send to someone who never has time",
+    "shareText": "Inspection, insurance, vest — three steps, one evening, sorted for a year. No long reading:",
+    "copied": "Link copied ✓",
+    "honest": "Rules checked in October 2026 (IMT, Código da Estrada). When in doubt, official sources prevail."
+  }
 }

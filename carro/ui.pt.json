@@ -15,7 +15,12 @@
   "back": "Voltar",
   "skip": "Saltar",
   "found": "Reconhecido!",
-  "era": { "s1": "Clássico de antes de 1992", "s2": "Matrícula de 1992–2005", "s3": "Matrícula de 2005–2020", "s4": "Matrícula de 2020 ou mais nova" },
+  "era": {
+    "s1": "Clássico de antes de 1992",
+    "s2": "Matrícula de 1992–2005",
+    "s3": "Matrícula de 2005–2020",
+    "s4": "Matrícula de 2020 ou mais nova"
+  },
   "estimate": "parece ser de ~{y}",
   "oldInspection": "Mais de 8 anos — inspeção todos os anos.",
   "qYear": "Ano da primeira matrícula?",
@@ -29,13 +34,52 @@
   "insHint": "Está na apólice ou no e-mail da seguradora.",
   "insUnknown": "Não sei",
   "qFuel": "Combustível?",
-  "fuel": { "diesel": "Gasóleo", "petrol": "Gasolina", "hybrid": "Híbrido", "ev": "Elétrico" },
+  "fuel": {
+    "diesel": "Gasóleo",
+    "petrol": "Gasolina",
+    "hybrid": "Híbrido",
+    "ev": "Elétrico"
+  },
   "qRegion": "Onde anda o carro?",
-  "region": { "madeira": "Madeira", "acores": "Açores", "continente": "Continente" },
-  "months": ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
-  "monthsShort": ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"],
+  "region": {
+    "madeira": "Madeira",
+    "acores": "Açores",
+    "continente": "Continente"
+  },
+  "months": [
+    "Janeiro",
+    "Fevereiro",
+    "Março",
+    "Abril",
+    "Maio",
+    "Junho",
+    "Julho",
+    "Agosto",
+    "Setembro",
+    "Outubro",
+    "Novembro",
+    "Dezembro"
+  ],
+  "monthsShort": [
+    "jan",
+    "fev",
+    "mar",
+    "abr",
+    "mai",
+    "jun",
+    "jul",
+    "ago",
+    "set",
+    "out",
+    "nov",
+    "dez"
+  ],
   "resultTitle": "O ano do teu carro",
-  "rhythm": { "none": "Primeira inspeção em {y}", "bi": "Inspeção de 2 em 2 anos — a próxima em {y}", "yearly": "Inspeção todos os anos" },
+  "rhythm": {
+    "none": "Primeira inspeção em {y}",
+    "bi": "Inspeção de 2 em 2 anos — a próxima em {y}",
+    "yearly": "Inspeção todos os anos"
+  },
   "next12": "Próximos 12 meses",
   "nothing12": "Nada nos próximos 12 meses — o calendário avisa mais tarde.",
   "addCal": "Adicionar ao calendário",
@@ -60,13 +104,34 @@
     "price": "Preço da inspeção em 2026: ~{p} €."
   },
   "ev": {
-    "ipo": { "t": "Inspeção (IPO) — este mês", "d": "Prazo: até ao fim do mês; pode ir até 3 meses antes. Leva o Certificado de Matrícula. Antes de ir: lava o carro e confirma as luzes." },
-    "service": { "t": "Revisão antes da inspeção", "d": "Óleo, filtros, travões, pneus e luzes. Uma ida à oficina prepara a inspeção do próximo mês." },
-    "iuc": { "t": "IUC — pagar até ao fim do mês", "d": "Portal das Finanças → IUC → emitir documento de pagamento. Dica: o débito direto evita esquecimentos." },
-    "iucNew": { "t": "IUC — novo calendário (abril)", "d": "Desde 2027 o IUC passa a ser pago em abril (valores até 100 €). Confirma valor e prazo no Portal das Finanças." },
-    "ins": { "t": "Seguro renova este mês", "d": "Compara preços antes de renovar. Sem inspeção em dia não há seguro." },
-    "season": { "t": "Carro pronto para o inverno", "d": "Pneus (mínimo 1,6 mm), bateria, escovas e ar condicionado." },
-    "renew": { "t": "Renovar o calendário do carro", "d": "Gera os próximos anos em seedwave.pt/carro" }
+    "ipo": {
+      "t": "Inspeção (IPO) — este mês",
+      "d": "Prazo: até ao fim do mês; pode ir até 3 meses antes. Leva o Certificado de Matrícula. Antes de ir: lava o carro e confirma as luzes."
+    },
+    "service": {
+      "t": "Revisão antes da inspeção",
+      "d": "Óleo, filtros, travões, pneus e luzes. Uma ida à oficina prepara a inspeção do próximo mês."
+    },
+    "iuc": {
+      "t": "IUC — pagar até ao fim do mês",
+      "d": "Portal das Finanças → IUC → emitir documento de pagamento. Dica: o débito direto evita esquecimentos."
+    },
+    "iucNew": {
+      "t": "IUC — novo calendário (abril)",
+      "d": "Desde 2027 o IUC passa a ser pago em abril (valores até 100 €). Confirma valor e prazo no Portal das Finanças."
+    },
+    "ins": {
+      "t": "Seguro renova este mês",
+      "d": "Compara preços antes de renovar. Sem inspeção em dia não há seguro."
+    },
+    "season": {
+      "t": "Carro pronto para o inverno",
+      "d": "Pneus (mínimo 1,6 mm), bateria, escovas e ar condicionado."
+    },
+    "renew": {
+      "t": "Renovar o calendário do carro",
+      "d": "Gera os próximos anos em seedwave.pt/carro"
+    }
   },
   "aboutTitle": "O que lembramos",
   "about": {
@@ -77,5 +142,45 @@
   },
   "honest": "Regras verificadas em outubro de 2026. Em caso de dúvida, valem o Portal das Finanças e o IMT.",
   "langLabel": "Idioma",
-  "themeLabel": "Mudar tema"
+  "themeLabel": "Mudar tema",
+  "lite": {
+    "title": "Tenho carro! Lite — 3 passos e ficas tranquilo um ano",
+    "metaDesc": "Inspeção atrasada? Multa até 1 250 €. Três passos, uma noite: seguro, revisão + inspeção, colete e triângulo. Sem registo, sem leitura longa.",
+    "kicker": "Para quem nunca tem tempo",
+    "h1": "Inspeção atrasada? Isso é multa até 1 250 €.",
+    "sub": "Ninguém gosta de pensar nisto. Por isso aqui só há três passos. Faz hoje — e esquece até ao ano que vem.",
+    "steps": [
+      {
+        "emoji": "🛡️",
+        "t": "Seguro",
+        "one": "Confirma que o seguro está pago e ativo. Sem seguro em dia, o resto não conta.",
+        "btn": "Como confirmo?",
+        "more": "Abre a app ou o e-mail da tua seguradora e procura a data de validade da apólice. A carta verde em papel no porta-luvas já não prova nada — o certificado é digital. Se a renovação está perto, pede 2 preços noutras seguradoras: 10 minutos, poupança típica 50–150 € por ano."
+      },
+      {
+        "emoji": "🔧",
+        "t": "Revisão + inspeção",
+        "one": "Marca a oficina para óleo, luzes e pré-check. Da oficina vais direto à inspeção (IPO).",
+        "btn": "Como marco?",
+        "more": "Depois marca a inspeção num centro IPO perto de ti (Google Maps → «inspeção automóvel»). Preço da inspeção em 2026: cerca de 38 €. Leva o Certificado de Matrícula. Com o carro atrasado: não andes com ele além do necessário — a multa é de 250 a 1 250 €.",
+        "msg": "Olá, queria marcar mudança de óleo e filtros, verificação de luzes e um pré-check para a inspeção. Matrícula __-__-__. Que dia têm livre?",
+        "copyBtn": "Copiar a mensagem para a oficina",
+        "lead": "Manda esta mensagem a qualquer oficina:"
+      },
+      {
+        "emoji": "🦺",
+        "t": "Colete e triângulo",
+        "one": "Abre a mala. Colete refletor e triângulo têm de lá estar — a lei exige os dois.",
+        "btn": "E se faltar?",
+        "more": "Qualquer estação de serviço ou supermercado vende o kit (colete + triângulo) por 8–15 €. Sem eles numa operação stop a coima pode chegar a 600 €. O colete deve estar ao alcance do condutor (porta-luvas ou bolsa da porta), não no fundo da mala. Caixa de primeiros socorros não é obrigatória em ligeiros — mas é boa ideia."
+      }
+    ],
+    "doneTitle": "Feito? Então estás tranquilo um ano.",
+    "doneText": "Queres que o calendário do telemóvel te avise antes dos prazos do próximo ano? A versão completa faz isso em três toques, sem registo.",
+    "full": "Pôr os prazos no calendário",
+    "share": "Enviar a quem nunca tem tempo",
+    "shareText": "Inspeção, seguro, colete — três passos, uma noite, e ficas tranquilo um ano. Sem leitura longa:",
+    "copied": "Ligação copiada ✓",
+    "honest": "Regras verificadas em outubro de 2026 (IMT, Código da Estrada). Em caso de dúvida, valem as fontes oficiais."
+  }
 }
