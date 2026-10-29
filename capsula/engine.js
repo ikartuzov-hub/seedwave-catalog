@@ -4,6 +4,9 @@
 (() => {
   'use strict';
   const BASE = '/capsula/';
+  /* версия сборки из src движка (engine.js?v=…) → в запросы ui/rules, чтобы кэш не смешивал новый пререндер со старыми текстами */
+  const VER = (() => { try { return new URL(document.currentScript.src).searchParams.get('v') || ''; } catch (e) { return ''; } })();
+  const vq = VER ? '?v=' + VER : '';
   const LANGS = ['pt', 'en', 'ru', 'es', 'de'];
   const LANG = LANGS.includes(document.documentElement.lang) ? document.documentElement.lang : 'pt';
   const $ = (s, r = document) => r.querySelector(s);
@@ -42,8 +45,8 @@
   let placesOpen = false;
 
   Promise.all([
-    fetch(BASE + 'ui.' + LANG + '.json').then(r => r.json()),
-    fetch(BASE + 'rules.json').then(r => r.json())
+    fetch(BASE + 'ui.' + LANG + '.json' + vq).then(r => r.json()),
+    fetch(BASE + 'rules.json' + vq).then(r => r.json())
   ]).then(([ui, rules]) => { T = ui; R = rules; init(); })
     .catch(() => { const a = $('#app'); if (a) a.innerHTML = '<p class="note">⚠️ ' + (T ? esc(T.offline) : 'Offline?') + '</p>'; });
 
