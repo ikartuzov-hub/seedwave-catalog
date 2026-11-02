@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="{{lang}}" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>{{title}}</title>
+<meta name="description" content="{{metaDesc}}">
+<link rel="canonical" href="{{url}}">
+{{hreflang}}
+<link rel="icon" type="image/svg+xml" href="/piloto/piloto-icon.svg">
+<link rel="apple-touch-icon" href="/piloto/apple-touch-icon.png">
+<link rel="manifest" href="/piloto/m/piloto-{{lang}}.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="{{brand}}">
+<meta name="theme-color" content="#0f1114">
+<meta property="og:title" content="{{brand}} — {{slogan}}">
+<meta property="og:description" content="{{metaDesc}}">
+<meta property="og:image" content="https://seedwave.pt/piloto/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="{{url}}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="{{locale}}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/piloto/engine.css?v={{v}}">
+<script>try{var t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('piloto.theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.dataset.theme=t}catch(e){}</script>
+<script type="application/ld+json">{{jsonld}}</script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="{{url}}"><img src="/piloto/piloto-icon.svg" alt="{{brand}}" width="36" height="36"><span>{{brand}}</span></a>
+    <div class="tools">
+      <button class="rb" id="langBtn" type="button" aria-label="{{langLabel}}">{{LANG}}</button>
+      <button class="rb" id="themeBtn" type="button" aria-label="{{themeLabel}}">☀</button>
+      <nav class="menu" id="langMenu">{{langMenu}}</nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">{{slogan}}</p>
+      <h1>{{heroTitle}}</h1>
+      <p>{{heroSub}}</p>
+    </section>
+
+    <div id="app">
+      <div class="card">
+        <div class="pwrap"><svg class="pmark breathe" viewBox="0 0 100 100" aria-hidden="true"><path class="p" d="M28 14 h30 a17 17 0 0 1 0 34 h-18 v26 h-12 z M40 25 v12 h18 a6 6 0 0 0 0-12 z" fill-rule="evenodd"/><path class="w" d="M14 86 Q 32 77 50 86 T 86 86"/></svg></div>
+        <p class="label">{{introLabel}}</p>
+        <p class="note">🔒 {{introNote}}</p>
+        <div class="row"><button class="btn" id="startBtn" type="button">{{startBtn}}</button></div>
+      </div>
+    </div>
+
+    <section class="about">
+      <h2>{{aboutTitle}}</h2>
+      <ul class="mods">
+        <li><i style="--c:#ff7a1a"></i><b>Pulso</b><span>{{mod.pulso}}</span></li>
+        <li><i style="--c:#7c3aed"></i><b>Bússola</b><span>{{mod.bussola}}</span></li>
+        <li><i style="--c:#0ea5e9"></i><b>Rotina</b><span>{{mod.rotina}}</span></li>
+        <li><i style="--c:#16a34a"></i><b>Saúde</b><span>{{mod.saude}}</span></li>
+      </ul>
+      <p class="disclaimer">{{disclaimer}}</p>
+      <p class="honest">{{honest}}</p>
+    </section>
+  </main>
+
+  <footer class="sw">© <span id="year">2026</span> <a id="hubLink" href="https://seedwave.pt/hub/?lang={{lang}}">SeedWave</a> · <a href="https://www.linkedin.com/in/igor-kartuzov/" target="_blank" rel="noopener">Igor Kartuzov</a></footer>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script defer src="/piloto/engine.js?v={{v}}"></script>
+<script defer src="https://seedwave.pt/nav/sw.js"></script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8a509477310442638b80e4b22319b89b"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

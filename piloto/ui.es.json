@@ -1,0 +1,25 @@
+{
+  "lang": "es",
+  "brand": "Piloto",
+  "slogan": "Tu piloto conoce el rumbo",
+  "title": "Piloto — tu piloto conoce el rumbo",
+  "metaDesc": "Un piloto personal para la energía, la rutina y la salud. Dos botones al día: por la mañana la batería, por la noche qué dio y qué quitó fuerzas. Sin diagnósticos y sin escribir.",
+  "heroTitle": "Adónde se va la energía — y de dónde viene",
+  "heroSub": "Dos botones al día. Por la mañana, la batería. Por la noche, qué le dio fuerzas y qué se las quitó. En una semana se ve qué le alimenta.",
+  "introLabel": "Piloto personal de energía",
+  "introNote": "Nada se guarda en esta página: los registros son solo suyos.",
+  "startBtn": "Empezar",
+  "soon": "En construcción — pronto",
+  "aboutTitle": "Qué acompaña Piloto",
+  "mod": {
+    "pulso": "Energía: batería por la mañana, fuentes y fugas por la noche, resumen semanal.",
+    "bussola": "Rumbo: hacia dónde va — objetivos y horizonte. En desarrollo.",
+    "rotina": "Rutina: recordatorios de lo que se repite — coche, plazos, documentos.",
+    "saude": "Salud: cuándo revisar y con quién — sin diagnósticos."
+  },
+  "disclaimer": "No es medicina ni psicología: el piloto cuenta y recuerda, no diagnostica.",
+  "honest": "Sin interpretaciones ni promesas. Solo botones, como máximo dos toques al día.",
+  "themeLabel": "Día / noche",
+  "langLabel": "Idioma",
+  "offline": "¿Sin conexión? Inténtelo de nuevo."
+}

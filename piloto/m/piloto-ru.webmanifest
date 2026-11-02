@@ -1,0 +1,30 @@
+{
+  "id": "/piloto/ru/",
+  "name": "Piloto",
+  "short_name": "Piloto",
+  "description": "Личный пилот для энергии, рутины и здоровья. Две кнопки в день — утром батарея, вечером что дало и что забрало сил. Без диагнозов и без ввода текста.",
+  "lang": "ru",
+  "start_url": "/piloto/ru/",
+  "scope": "/piloto/",
+  "display": "standalone",
+  "background_color": "#0f1114",
+  "theme_color": "#0f1114",
+  "icons": [
+    {
+      "src": "/piloto/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/piloto/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/piloto/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

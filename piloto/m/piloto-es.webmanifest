@@ -1,0 +1,30 @@
+{
+  "id": "/piloto/es/",
+  "name": "Piloto",
+  "short_name": "Piloto",
+  "description": "Un piloto personal para la energía, la rutina y la salud. Dos botones al día: por la mañana la batería, por la noche qué dio y qué quitó fuerzas. Sin diagnósticos y sin escribir.",
+  "lang": "es",
+  "start_url": "/piloto/es/",
+  "scope": "/piloto/",
+  "display": "standalone",
+  "background_color": "#0f1114",
+  "theme_color": "#0f1114",
+  "icons": [
+    {
+      "src": "/piloto/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/piloto/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/piloto/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

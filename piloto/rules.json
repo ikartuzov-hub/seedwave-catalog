@@ -1,0 +1,15 @@
+{
+  "_": "nPl · Piloto — слой 3 (контент/правила). Этап 0: каркас. Этап 2 добавит questions (карта источников: новизна · тело · ожидание · выбор) — движок не правится.",
+  "updated": "2026-11-02",
+  "stage": 0,
+  "live": false,
+  "modules": ["pulso", "bussola", "rotina", "saude"],
+  "colors": { "pulso": "#ff7a1a", "bussola": "#7c3aed", "rotina": "#0ea5e9", "saude": "#16a34a", "amber": "#e39a00", "amberNight": "#ffb627" },
+  "questions": [],
+  "botLive": false,
+  "bot": "https://t.me/IgorSecretaryBot",
+  "botPayload": "piloto_{card}_{lang}",
+  "hub": "https://seedwave.pt/hub/",
+  "author": "https://www.linkedin.com/in/igor-kartuzov/",
+  "url": "https://seedwave.pt/piloto/"
+}

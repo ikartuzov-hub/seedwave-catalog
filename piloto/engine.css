@@ -1,0 +1,73 @@
+/* nPl · Piloto — слой 1 (движок). Бренд монохромный: белое поле, чёрная P, чёрная волна. Нейтрали — холодные серые.
+   Цвет в продукте — только как показатель: янтарь (курс/сигнал), зелень (батарея полна), цвета модулей в точках. */
+:root{
+  --bg:#0f1114;--surface:#171a1f;--ink:#f4f5f7;--ink-soft:#9aa3ad;--line:rgba(255,255,255,.12);
+  --accent:#f4f5f7;--accent-ink:#0f1114;--amber:#ffb627;--green:#3fcaa6;--chip:rgba(255,255,255,.05);--chip-on:rgba(255,255,255,.12);
+  --pulso:#ff7a1a;--bussola:#7c3aed;--rotina:#0ea5e9;--saude:#16a34a;
+  --display:"Poppins",system-ui,sans-serif;--body:"Manrope",system-ui,sans-serif;--r:18px;
+}
+:root[data-theme="light"]{
+  --bg:#ffffff;--surface:#f6f7f9;--ink:#111111;--ink-soft:#5b6572;--line:rgba(17,17,17,.12);
+  --accent:#111111;--accent-ink:#ffffff;--amber:#e39a00;--green:#1a9a7a;--chip:rgba(17,17,17,.04);--chip-on:rgba(17,17,17,.1);
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.5 var(--body);-webkit-font-smoothing:antialiased;min-height:100vh}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+.wrap{max-width:600px;margin:0 auto;padding:0 16px}
+
+/* шапка — стандарт серии */
+.top{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:17px;letter-spacing:-.01em}
+.brand img{width:36px;height:36px;border-radius:10px;border:1px solid var(--line)}
+.tools{display:flex;gap:8px;position:relative}
+.rb{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:transparent;font-size:13px;font-weight:700;display:grid;place-items:center}
+.menu{position:absolute;right:48px;top:46px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:6px;display:none;z-index:20;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.menu.open{display:block}
+.menu a{display:block;padding:8px 16px;border-radius:9px;text-decoration:none;font-weight:600}
+.menu a[aria-current]{background:var(--chip-on)}
+
+/* герой */
+.hero{padding:18px 0 6px}
+.eyebrow{margin:0 0 8px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber)}
+.hero h1{font:700 clamp(30px,7.5vw,42px)/1.08 var(--display);margin:0 0 10px;letter-spacing:-.02em}
+.hero p{color:var(--ink-soft);margin:0;font-size:17px}
+
+/* карточка */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px 18px;margin:18px 0}
+.label{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);margin:0 0 8px}
+.note{font-size:13px;color:var(--ink-soft);margin:12px 0 0}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:16px}
+.btn{border:0;border-radius:14px;padding:14px 20px;font-weight:800;font-size:16px;background:var(--accent);color:var(--accent-ink);min-height:50px;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+
+/* значок на карточке — дышит на этапе 0; на этапе 2 волна станет батареей */
+.pwrap{display:flex;justify-content:center;margin:4px 0 14px}
+.pmark{width:120px;height:120px}
+.pmark .p{fill:var(--ink)}
+.pmark .w{fill:none;stroke:var(--ink);stroke-width:4.5;stroke-linecap:round}
+.pmark.breathe{animation:breathe 4.2s ease-in-out infinite;transform-origin:center}
+@keyframes breathe{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+
+/* модули — статичный текст для людей и поисковиков */
+.about{margin:28px 0 8px}
+.about h2{font:700 24px/1.2 var(--display);margin:0 0 10px}
+.mods{list-style:none;margin:0;padding:0}
+.mods li{display:grid;grid-template-columns:14px 1fr;gap:12px;align-items:start;padding:12px 0;border-top:1px solid var(--line)}
+.mods li:first-child{border-top:0}
+.mods i{width:14px;height:14px;border-radius:50%;margin-top:5px;background:var(--c)}
+.mods b{display:block}
+.mods span{color:var(--ink-soft);font-size:14px}
+.disclaimer{font-size:14px;color:var(--ink-soft);border-left:3px solid var(--amber);padding:6px 12px;margin:14px 0 0}
+.honest{font-size:13px;color:var(--ink-soft);margin-top:14px}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:99px;font-weight:700;opacity:0;transition:opacity .3s;pointer-events:none;z-index:50}
+.toast.on{opacity:1}
+
+/* футер — стандарт SeedWave */
+footer.sw{text-align:center;padding:28px 0 64px;font-size:15px;color:var(--ink-soft)}
+footer.sw a{display:inline-block;padding:8px 4px;text-decoration:underline;text-decoration-color:var(--amber);text-underline-offset:4px}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}

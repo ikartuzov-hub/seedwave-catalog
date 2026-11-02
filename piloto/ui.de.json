@@ -1,0 +1,25 @@
+{
+  "lang": "de",
+  "brand": "Piloto",
+  "slogan": "Ihr Pilot kennt den Kurs",
+  "title": "Piloto — Ihr Pilot kennt den Kurs",
+  "metaDesc": "Ein persönlicher Pilot für Energie, Routine und Gesundheit. Zwei Tasten am Tag: morgens die Batterie, abends was Kraft gab und was sie nahm. Ohne Diagnosen, ohne Tippen.",
+  "heroTitle": "Wohin die Energie geht — und woher sie kommt",
+  "heroSub": "Zwei Tasten am Tag. Morgens: die Batterie. Abends: was Ihnen Kraft gab und was sie nahm. Nach einer Woche sieht man, was Sie nährt.",
+  "introLabel": "Persönlicher Energie-Pilot",
+  "introNote": "Auf dieser Seite wird nichts gespeichert: Ihre Einträge bleiben bei Ihnen.",
+  "startBtn": "Starten",
+  "soon": "Im Aufbau — bald",
+  "aboutTitle": "Was Piloto begleitet",
+  "mod": {
+    "pulso": "Energie: Batterie am Morgen, Quellen und Lecks am Abend, Wochenbilanz.",
+    "bussola": "Kurs: wohin Sie wollen — Ziele und Horizont. In Arbeit.",
+    "rotina": "Routine: Erinnerungen an das, was sich wiederholt — Auto, Fristen, Dokumente.",
+    "saude": "Gesundheit: wann prüfen und bei wem — ohne Diagnosen."
+  },
+  "disclaimer": "Keine Medizin und keine Psychologie: der Pilot zählt und erinnert, er stellt keine Diagnosen.",
+  "honest": "Keine Deutungen, keine Versprechen. Nur Tasten, höchstens zwei Tipps am Tag.",
+  "themeLabel": "Tag / Nacht",
+  "langLabel": "Sprache",
+  "offline": "Offline? Bitte noch einmal versuchen."
+}
