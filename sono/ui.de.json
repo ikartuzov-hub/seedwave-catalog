@@ -20,7 +20,7 @@
   },
   "disclaimer": "Das ist keine ärztliche Beratung — sprechen Sie mit Ihrem Arzt.",
   "orient": "Orientierung, kein validierter Test.",
-  "emergencyLine": "Atemnot, Brustschmerzen oder Ohnmacht jetzt — rufen Sie 112 oder SNS 24: 808 24 24 24.",
+  "emergencyLine": "Atemnot, Brustschmerzen oder Ohnmacht jetzt — rufen Sie 112.",
   "honest": "Keine Diagnosen, keine Prozente, keine Versprechen. Nur ob es sich lohnt zu gehen, zu wem und was Sie sagen.",
   "themeLabel": "Tag / Nacht",
   "langLabel": "Sprache",
@@ -32,39 +32,59 @@
   "restart": "Von vorn",
   "emergency": "Wenn Sie jetzt Symptome haben — rufen Sie 112",
   "emergencyText": "Atemnot, Brustschmerzen, Ohnmacht — das ist nichts für eine Webseite. Rufen Sie sofort an.",
-  "emergencySns": "Oder die Linie SNS 24: 808 24 24 24",
   "resultTitle": "Ihre Ampel",
   "q": {
-    "sleep": { "text": "Was ist mit Ihrem Schlaf?", "o": {
-      "snore": "Ich schnarche / man sagt, ich setze mit dem Atmen aus",
-      "tired": "Ich wache müde auf, tagsüber bin ich schläfrig",
-      "insomnia": "Schwer einzuschlafen / ich wache nachts auf",
-      "short": "Ich schlafe wenig (unter 6 h)",
-      "check": "Nur mal prüfen",
-      "alarm": "🚨 Atemnot, Brustschmerzen oder Ohnmacht — jetzt gerade"
-    } },
-    "day": { "text": "Und tagsüber?", "o": {
-      "drive": "Ich nicke beim Fahren / in Besprechungen ein",
-      "often": "Ich bin oft schläfrig",
-      "ok": "Normal"
-    } },
-    "body": { "text": "Blutdruck und Gewicht", "o": {
-      "bp": "Hoher Blutdruck oder Tabletten dagegen",
-      "weight": "Deutliches Übergewicht / breiter Hals",
-      "neither": "Weder noch",
-      "unknown": "Weiß ich nicht"
-    } },
-    "who": { "text": "Alter und Geschlecht", "o": {
-      "m_u50": "Mann, unter 50",
-      "m_50": "Mann, 50+",
-      "f_u50": "Frau, unter 50",
-      "f_50": "Frau, 50+"
-    } }
+    "sleep": {
+      "text": "Was ist mit Ihrem Schlaf?",
+      "o": {
+        "snore": "Ich schnarche / man sagt, ich setze mit dem Atmen aus",
+        "tired": "Ich wache müde auf, tagsüber bin ich schläfrig",
+        "insomnia": "Schwer einzuschlafen / ich wache nachts auf",
+        "short": "Ich schlafe wenig (unter 6 h)",
+        "check": "Nur mal prüfen",
+        "alarm": "🚨 Atemnot, Brustschmerzen oder Ohnmacht — jetzt gerade"
+      }
+    },
+    "day": {
+      "text": "Und tagsüber?",
+      "o": {
+        "drive": "Ich nicke beim Fahren / in Besprechungen ein",
+        "often": "Ich bin oft schläfrig",
+        "ok": "Normal"
+      }
+    },
+    "body": {
+      "text": "Blutdruck und Gewicht",
+      "o": {
+        "bp": "Hoher Blutdruck oder Tabletten dagegen",
+        "weight": "Deutliches Übergewicht / breiter Hals",
+        "neither": "Weder noch",
+        "unknown": "Weiß ich nicht"
+      }
+    },
+    "who": {
+      "text": "Alter und Geschlecht",
+      "o": {
+        "m_u50": "Mann, unter 50",
+        "m_50": "Mann, 50+",
+        "f_u50": "Frau, unter 50",
+        "f_50": "Frau, 50+"
+      }
+    }
   },
   "zone": {
-    "green": { "t": "Entspannt", "sub": "Nichts weist bisher zum Arzt. Wenn sich etwas ändert, kommen Sie zu dieser Tür zurück." },
-    "yellow": { "t": "Lohnt sich", "sub": "Es gibt Grund, mit dem Hausarzt zu sprechen — ohne Eile, aber nicht monatelang aufschieben." },
-    "red": { "t": "Nicht aufschieben", "sub": "Es lohnt sich, diese Woche einen Termin zu vereinbaren." }
+    "green": {
+      "t": "Entspannt",
+      "sub": "Nichts weist bisher zum Arzt. Wenn sich etwas ändert, kommen Sie zu dieser Tür zurück."
+    },
+    "yellow": {
+      "t": "Lohnt sich",
+      "sub": "Es gibt Grund, mit dem Hausarzt zu sprechen — ohne Eile, aber nicht monatelang aufschieben."
+    },
+    "red": {
+      "t": "Nicht aufschieben",
+      "sub": "Es lohnt sich, diese Woche einen Termin zu vereinbaren."
+    }
   },
   "why": {
     "day.drive": "Beim Fahren oder in Besprechungen einzunicken ist das stärkste Zeichen, dass der Schlaf nicht erholt.",
@@ -85,18 +105,27 @@
     "sns": {
       "t": "Über den SNS",
       "steps": {
-        "mgf": "Termin beim Hausarzt — im Gesundheitszentrum, in der AppSESARAM oder über die Linie SNS 24.",
+        "mgf": "Termin beim Hausarzt — im Gesundheitszentrum oder in der AppSESARAM.",
         "ref": "Zeigen Sie ihm diesen Bildschirm. Wenn er zustimmt, überweist er Sie zum Facharzt.",
         "exam": "Bei Apnoe wird meist eine Schlafuntersuchung angeordnet — oft zu Hause, mit einem Gerät."
       },
-      "links": { "sns24": "SNS 24", "app": "sns24.gov.pt" }
+      "links": {
+        "app": "AppSESARAM"
+      }
     },
     "private": {
       "t": "Privat auf Madeira",
       "intro": "Direkter Termin, ohne Überweisung. Geprüfte Orte und Ärzte:",
-      "consult": { "apneia": "Sprechstunde Schlafapnoe" },
-      "spec": { "pneumo": "Pneumologie" },
-      "exams": { "psg": "Polysomnographie", "home": "Schlafuntersuchung zu Hause" },
+      "consult": {
+        "apneia": "Sprechstunde Schlafapnoe"
+      },
+      "spec": {
+        "pneumo": "Pneumologie"
+      },
+      "exams": {
+        "psg": "Polysomnographie",
+        "home": "Schlafuntersuchung zu Hause"
+      },
       "langs": "Sprachen",
       "price": "Preis und Versicherungsdeckung: bei der Terminvergabe fragen.",
       "call": "Anrufen"
@@ -114,11 +143,11 @@
     "hint": "Zeigen Sie diesen Bildschirm dem Arzt — er ist auf Portugiesisch. Darunter die Übersetzung für Sie.",
     "mine": "Was der Arzt sieht",
     "lead": {
-      "pneumo": "Ich komme mit Verdacht auf Schlafapnoe.",
-      "mgf": "Ich komme wegen Schlafproblemen."
+      "apneia": "Ich komme mit Verdacht auf Schlafapnoe.",
+      "neutral": "Ich komme wegen meines Schlafs."
     },
     "a": {
-      "sleep.snore": "Ich schnarche laut, und man sagt mir, dass ich im Schlaf mit dem Atmen aussetze.",
+      "sleep.snore": "Ich schnarche oder man sagt mir, dass ich im Schlaf mit dem Atmen aussetze.",
       "sleep.tired": "Ich wache müde auf und bin tagsüber schläfrig.",
       "sleep.insomnia": "Ich kann schwer einschlafen und wache nachts auf.",
       "sleep.short": "Ich schlafe weniger als 6 Stunden pro Nacht.",
@@ -131,19 +160,28 @@
       "body.neither": "Kein hoher Blutdruck, kein Übergewicht.",
       "body.unknown": "Ich kenne meinen Blutdruck nicht.",
       "who.m_u50": "Mann, unter 50 Jahre.",
-      "who.m_50": "Mann, über 50 Jahre.",
+      "who.m_50": "Mann, 50 Jahre oder älter.",
       "who.f_u50": "Frau, unter 50 Jahre.",
-      "who.f_50": "Frau, über 50 Jahre."
+      "who.f_50": "Frau, 50 Jahre oder älter."
     },
     "ask": {
       "pneumo": "Ich bitte um eine Untersuchung und, falls Sie es für nötig halten, um eine Überweisung in die Schlafsprechstunde / Pneumologie.",
       "mgf": "Ich bitte um eine Untersuchung und Rat zum nächsten Schritt."
     },
-    "note": "Ich spreche wenig Portugiesisch — bitte antworten Sie langsam oder schriftlich. Danke."
+    "note": "Ich spreche wenig Portugiesisch — bitte sprechen Sie langsam oder schreiben Sie. Danke."
   },
   "cal": {
-    "mgf": { "t": "Termin vereinbaren — Hausarzt", "d": "Porta do Sono: Termin vereinbaren und den Bildschirm «Für den Arzt» mitnehmen." },
-    "repeat": { "t": "Porta do Sono wiederholen", "d": "3 Monate sind vorbei — noch einmal viermal tippen." },
+    "mgf": {
+      "t": "Termin vereinbaren — Hausarzt",
+      "d": "Porta do Sono: Termin vereinbaren und den Bildschirm «Für den Arzt» mitnehmen."
+    },
+    "repeat": {
+      "t": "Porta do Sono wiederholen",
+      "d": "3 Monate sind vorbei — noch einmal viermal tippen."
+    },
     "done": "Kalender bereit ✓"
+  },
+  "warn": {
+    "drive": "Solange Sie so schläfrig sind, setzen Sie sich nicht ans Steuer."
   }
 }

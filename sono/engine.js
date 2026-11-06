@@ -99,7 +99,10 @@
   function zone() { const s = score(); return s >= R.zones.red ? 'red' : s >= R.zones.yellow ? 'yellow' : 'green'; }
   const flags = () => Q().map(q => q.id + '.' + A[q.id]);
   function whyKey() { const f = flags(); return (R.whyOrder || []).find(k => f.includes(k)) || f[0]; }
-  function specialty() { const f = flags(); const hit = Object.keys(R.specialty).find(k => k !== 'default' && f.includes(k)); return hit ? R.specialty[hit] : R.specialty.default; }
+  const resolve = map => { const f = flags(); const hit = Object.keys(map || {}).find(k => k !== 'default' && f.includes(k)); return hit ? map[hit] : (map || {}).default; };
+  function specialty() { return resolve(R.specialty); }
+  function docLead() { return resolve(R.docLead) || 'neutral'; }
+  function warnings() { const f = flags(); return Object.keys(R.warnings || {}).filter(k => f.includes(k)).map(k => R.warnings[k]); }
   function routeVisible(r) { if (r.show === 'always') return true; if (Array.isArray(r.show)) return r.show.includes(zone()); return false; }
 
   /* ---------- рендер ---------- */
@@ -140,7 +143,6 @@
     app().innerHTML = `<div class="card alarmcard"><p class="q">${esc(T.emergency)}</p>
       <a class="btn alarm" href="tel:${esc(red.tel)}">📞 ${esc(red.tel)}</a>
       <p class="hint">${esc(T.emergencyText)}</p>
-      <p class="note">${esc(T.emergencySns)}</p>
       <div class="row"><button class="link" id="restartBtn">${esc(T.restart)}</button></div></div>`;
     $('#restartBtn').onclick = restart;
     scrollTop();
@@ -158,7 +160,7 @@
       <h2 class="rt"><span class="dot"></span>${esc(T.zone[z].t)}</h2>
       <p class="zsub">${esc(T.zone[z].sub)}</p>
       <p class="why">${esc(T.why[whyKey()] || '')}</p>
-      <p class="spec">→ ${esc(T.spec[sp])}</p>
+      <p class="spec">→ ${esc(T.spec[sp])}</p>${warnings().map(w => `<p class="warnline">⚠️ ${esc(T.warn[w])}</p>`).join('')}
       <p class="orient">${esc(T.orient)}</p>
       <div class="row main"><button class="btn" id="showBtn">🩺 ${esc(T.btn.show)}</button><button class="btn ghost" id="calBtn">📅 ${esc(T.btn.cal)}</button></div>
       <div class="row"><button class="btn ghost" id="shareBtn">↗ ${esc(T.shareBtn)}</button>${botBtn}<button class="link" id="restartBtn">↺ ${esc(T.restart)}</button></div>
@@ -190,7 +192,8 @@
   function showDoctor() {
     const go = () => {
       const sp = specialty(), f = flags();
-      const lines = D => [D.doc.lead[sp], ...f.map(k => D.doc.a[k]).filter(Boolean), D.doc.ask[sp]];
+      const lead = docLead();
+      const lines = D => [D.doc.lead[lead], ...f.map(k => D.doc.a[k]).filter(Boolean), D.doc.ask[sp]];
       const ptLines = lines(TPT);
       app().innerHTML = `<div class="card doc"><p class="label">🩺 ${esc(TPT.doc.title)}</p>
         <div class="docbox" lang="pt"><p class="big">${ptLines.map(esc).join('</p><p class="big">')}</p>${LANG !== 'pt' ? `<p class="docnote">${esc(TPT.doc.note)}</p>` : ''}</div>
@@ -247,5 +250,5 @@
     (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject()).then(() => toast(T.shareCopied)).catch(() => prompt('', txt));
   }
 
-  window.__sono = { answers: A, set: (k, v) => { A[k] = v; }, go: n => { step = n; render(); }, zone, score, whyKey, specialty, result: renderResult, doctor: showDoctor }; // для аудита
+  window.__sono = { answers: A, set: (k, v) => { A[k] = v; }, go: n => { step = n; render(); }, zone, score, whyKey, specialty, docLead, result: renderResult, doctor: showDoctor }; // для аудита
 })();

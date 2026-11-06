@@ -3,72 +3,187 @@
   "updated": "2026-11-06",
   "stage": 1,
   "live": true,
-
   "questions": [
-    { "id": "sleep", "options": [
-      { "id": "snore", "w": 2, "wide": true },
-      { "id": "tired", "w": 1 },
-      { "id": "insomnia", "w": 1 },
-      { "id": "short", "w": 1 },
-      { "id": "check", "w": 0 },
-      { "id": "alarm", "w": 0, "alarm": true, "wide": true }
-    ] },
-    { "id": "day", "options": [
-      { "id": "drive", "w": 2, "wide": true },
-      { "id": "often", "w": 1 },
-      { "id": "ok", "w": 0 }
-    ] },
-    { "id": "body", "options": [
-      { "id": "bp", "w": 1 },
-      { "id": "weight", "w": 1 },
-      { "id": "neither", "w": 0 },
-      { "id": "unknown", "w": 0 }
-    ] },
-    { "id": "who", "options": [
-      { "id": "m_u50", "w": 0 },
-      { "id": "m_50", "w": 1 },
-      { "id": "f_u50", "w": 0 },
-      { "id": "f_50", "w": 1 }
-    ] }
+    {
+      "id": "sleep",
+      "options": [
+        {
+          "id": "snore",
+          "w": 2,
+          "wide": true
+        },
+        {
+          "id": "tired",
+          "w": 1
+        },
+        {
+          "id": "insomnia",
+          "w": 1
+        },
+        {
+          "id": "short",
+          "w": 1
+        },
+        {
+          "id": "check",
+          "w": 0
+        },
+        {
+          "id": "alarm",
+          "w": 0,
+          "alarm": true,
+          "wide": true
+        }
+      ]
+    },
+    {
+      "id": "day",
+      "options": [
+        {
+          "id": "drive",
+          "w": 4,
+          "wide": true
+        },
+        {
+          "id": "often",
+          "w": 1
+        },
+        {
+          "id": "ok",
+          "w": 0
+        }
+      ]
+    },
+    {
+      "id": "body",
+      "options": [
+        {
+          "id": "bp",
+          "w": 1
+        },
+        {
+          "id": "weight",
+          "w": 1
+        },
+        {
+          "id": "neither",
+          "w": 0
+        },
+        {
+          "id": "unknown",
+          "w": 0
+        }
+      ]
+    },
+    {
+      "id": "who",
+      "options": [
+        {
+          "id": "m_u50",
+          "w": 0
+        },
+        {
+          "id": "m_50",
+          "w": 1
+        },
+        {
+          "id": "f_u50",
+          "w": 0
+        },
+        {
+          "id": "f_50",
+          "w": 1
+        }
+      ]
+    }
   ],
-
-  "zones": { "yellow": 2, "red": 4 },
-  "_zones": "сумма весов: < yellow → green (спокойно), ≥ yellow → yellow (стоит показаться), ≥ red → red (не откладывать). Ориентир, не валидированный тест — подпись на экране результата.",
-
-  "whyOrder": ["day.drive", "sleep.snore", "day.often", "sleep.tired", "body.bp", "body.weight", "sleep.short", "sleep.insomnia", "sleep.check"],
+  "zones": {
+    "yellow": 2,
+    "red": 4
+  },
+  "_zones": "сумма весов: < yellow → green (спокойно), ≥ yellow → yellow (стоит показаться), ≥ red → red (не откладывать). Ориентир, не валидированный тест — подпись на экране результата. «Засыпаю за рулём» весит 4 = сразу red (решение Игоря 06.11).",
+  "whyOrder": [
+    "day.drive",
+    "sleep.snore",
+    "day.often",
+    "sleep.tired",
+    "body.bp",
+    "body.weight",
+    "sleep.short",
+    "sleep.insomnia",
+    "sleep.check"
+  ],
   "_whyOrder": "одно предложение «почему» — первый совпавший ответ по этому порядку; тексты в ui.why.*",
-
-  "specialty": { "default": "pneumo", "sleep.insomnia": "mgf" },
-  "_specialty": "к кому направляет médico de família: pneumo (apneia / sono) по умолчанию; при бессоннице без храпа — остаётся у MGF (sono / psicologia по его решению). Тексты в ui.spec.*",
-
+  "specialty": {
+    "default": "mgf",
+    "sleep.snore": "pneumo",
+    "day.drive": "pneumo"
+  },
+  "_specialty": "направление pneumo (apneia / sono) — только при храпе или «засыпаю за рулём» (аудит 1, Б1); иначе MGF решает. Тексты в ui.spec.*",
   "routes": [
     {
       "id": "sns",
       "show": "always",
-      "steps": ["mgf", "ref", "exam"],
-      "links": [
-        { "id": "sns24", "tel": "808 24 24 24" },
-        { "id": "app", "url": "https://www.sns24.gov.pt/" }
+      "steps": [
+        "mgf",
+        "ref",
+        "exam"
       ],
-      "source": "https://www.gov.pt/guias/a-minha-saude",
-      "sourceNote": "gov.pt «A minha saúde» (atualizado 09/10/2026): médico de família pede exames e encaminha para especialistas; marcação na app SNS 24, Área Pessoal ou centro de saúde. Madeira: AppSESARAM — pedido de consulta ao médico de família ou consulta de recurso (dnoticias.pt 29/12/2022).",
+      "links": [
+        {
+          "id": "app",
+          "url": "https://apps.apple.com/pt/app/appsesaram/id6444682325"
+        }
+      ],
+      "source": "https://www.dnoticias.pt/2022/12/29/342224-aplicacao-movel-appsesaram-ja-se-encontra-disponivel/",
+      "sourceNote": "Мадейра: SESARAM — запись к médico de família в centro de saúde или через AppSESARAM (App Store id6444682325, Play Store; dnoticias.pt 29/12/2022; AppSESARAM в App Store проверена 06.11.2026). MGF направляет к специалисту — gov.pt «A minha saúde» 09/10/2026. Линия 808 24 24 24 для Мадейры не подтверждена → убрана (аудит 1, Б2).",
       "verified": "2026-11-06"
     },
     {
       "id": "private",
-      "show": ["yellow", "red"],
+      "show": [
+        "yellow",
+        "red"
+      ],
       "places": [
         {
           "id": "cuf-madeira",
           "name": "Hospital CUF Madeira",
           "addr": "Av. Mário Soares 143, 9000-783 Funchal",
           "tel": "291 003 300",
-          "langs": ["pt", "en"],
+          "langs": [
+            "pt",
+            "en"
+          ],
           "doctors": [
-            { "name": "Samuel Pereira", "spec": "pneumo", "consult": "apneia", "langs": ["pt", "en"], "exams": ["psg", "home"],
-              "source": "https://www.grupohpa.com/en/staff/doctor/samuel-pereira", "verified": "2026-11-06" },
-            { "name": "Rudi Fernandes", "spec": "pneumo", "consult": "apneia", "langs": ["pt", "en", "it"], "exams": [],
-              "source": "https://www.grupohpa.com/en/staff/doctor/rudi-fernandes", "verified": "2026-11-06" }
+            {
+              "name": "Samuel Pereira",
+              "spec": "pneumo",
+              "consult": "apneia",
+              "langs": [
+                "pt",
+                "en"
+              ],
+              "exams": [
+                "psg",
+                "home"
+              ],
+              "source": "https://www.grupohpa.com/en/staff/doctor/samuel-pereira",
+              "verified": "2026-11-06"
+            },
+            {
+              "name": "Rudi Fernandes",
+              "spec": "pneumo",
+              "consult": "apneia",
+              "langs": [
+                "pt",
+                "en",
+                "it"
+              ],
+              "exams": [],
+              "source": "https://www.grupohpa.com/en/staff/doctor/rudi-fernandes",
+              "verified": "2026-11-06"
+            }
           ],
           "source": "https://www.cuf.pt/hospitais-e-clinicas/hospital-cuf-madeira",
           "verified": "2026-11-06"
@@ -76,14 +191,41 @@
         {
           "id": "cuf-funchal",
           "name": "Clínica CUF Funchal",
-          "addr": "Funchal (centro)",
+          "addr": "Rua do Hospital Velho, 23 A, 9060-129 Funchal",
           "tel": "291 003 300",
-          "langs": ["pt", "en"],
+          "langs": [
+            "pt",
+            "en"
+          ],
           "doctors": [
-            { "name": "Samuel Pereira", "spec": "pneumo", "consult": "apneia", "langs": ["pt", "en"], "exams": ["psg", "home"],
-              "source": "https://www.grupohpa.com/en/staff/doctor/samuel-pereira", "verified": "2026-11-06" },
-            { "name": "Rudi Fernandes", "spec": "pneumo", "consult": "apneia", "langs": ["pt", "en", "it"], "exams": [],
-              "source": "https://www.grupohpa.com/en/staff/doctor/rudi-fernandes", "verified": "2026-11-06" }
+            {
+              "name": "Samuel Pereira",
+              "spec": "pneumo",
+              "consult": "apneia",
+              "langs": [
+                "pt",
+                "en"
+              ],
+              "exams": [
+                "psg",
+                "home"
+              ],
+              "source": "https://www.grupohpa.com/en/staff/doctor/samuel-pereira",
+              "verified": "2026-11-06"
+            },
+            {
+              "name": "Rudi Fernandes",
+              "spec": "pneumo",
+              "consult": "apneia",
+              "langs": [
+                "pt",
+                "en",
+                "it"
+              ],
+              "exams": [],
+              "source": "https://www.grupohpa.com/en/staff/doctor/rudi-fernandes",
+              "verified": "2026-11-06"
+            }
           ],
           "source": "https://www.cuf.pt/hospitais-e-clinicas/clinica-cuf-funchal",
           "verified": "2026-11-06"
@@ -97,24 +239,36 @@
       "id": "red",
       "show": "alarm",
       "tel": "112",
-      "sns24": "808 24 24 24",
       "source": "https://www.sns.min-saude.pt/wp-content/uploads/2024/07/FAQs_Ligue-Antes-Salve-Vidas.pdf",
-      "sourceNote": "SNS «Ligue antes, salve vidas»: risco de vida → 112; restante → 808 24 24 24.",
+      "sourceNote": "Risco de vida → 112 (INEM). Региональная линия для Мадейры не подтверждена → не показываем (аудит 1, Б2).",
       "verified": "2026-11-06"
     }
   ],
-
-  "scales": { "ess": "license-pending", "stopbang": "license-pending", "berlin": "not-used" },
+  "scales": {
+    "ess": "license-pending",
+    "stopbang": "license-pending",
+    "berlin": "not-used"
+  },
   "_scales": "Решение аудитора 06.11.2026 (вариант б): свои вопросы, подпись «ориентир». Полная проверка (ESS/STOP-BANG) — заморожена до лицензий; отдельное решение Игоря.",
-
   "calendar": {
-    "mgf": { "days": 3, "alarms": ["PT9H"] },
-    "repeat": { "days": 90, "alarms": ["PT9H", "P7DT9H"] }
+    "mgf": {
+      "days": 3,
+      "alarms": [
+        "PT9H"
+      ]
+    },
+    "repeat": {
+      "days": 90,
+      "alarms": [
+        "PT9H",
+        "P7DT9H"
+      ]
+    }
   },
   "_calendar": "два события .ics: «записаться к médico de família» (через 3 дня) и «повторить дверь» (через 90 дней). Тексты — ui.cal.*",
-
-  "emergency": { "tel": "112", "sns24": "808 24 24 24" },
-
+  "emergency": {
+    "tel": "112"
+  },
   "icsHook": "https://hook.eu1.make.com/bjpax9l2ambbav2w32vpmkj7t4kl8yvo",
   "_icsHook": "Общий механизм iOS-календаря SeedWave (тот же, что у nCr и capsula): POST d=ics → 303 → GET text/calendar.",
   "botLive": false,
@@ -123,5 +277,14 @@
   "_botPayload": "{profile} = зона (green/yellow/red); в бот уходит только код зоны и язык, не ответы. Кнопка скрыта, пока botLive=false (этап 3).",
   "hub": "https://seedwave.pt/hub/",
   "author": "https://www.linkedin.com/in/igor-kartuzov/",
-  "url": "https://seedwave.pt/sono/"
+  "url": "https://seedwave.pt/sono/",
+  "docLead": {
+    "default": "neutral",
+    "sleep.snore": "apneia"
+  },
+  "_docLead": "вступление экрана врача: «suspeita de apneia» только при храпе (аудит 1, Б1); иначе нейтральное. Тексты в ui.doc.lead.*",
+  "warnings": {
+    "day.drive": "drive"
+  },
+  "_warnings": "строка-предупреждение на результате по совпавшему ответу; тексты ui.warn.*"
 }

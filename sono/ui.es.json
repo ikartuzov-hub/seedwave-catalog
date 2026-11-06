@@ -20,7 +20,7 @@
   },
   "disclaimer": "Esto no es una consulta médica — hable con su médico.",
   "orient": "Orientación, no un test validado.",
-  "emergencyLine": "Falta de aire, dolor en el pecho o desmayo ahora mismo — llame al 112 o al SNS 24: 808 24 24 24.",
+  "emergencyLine": "Falta de aire, dolor en el pecho o desmayo ahora mismo — llame al 112.",
   "honest": "Sin diagnósticos, sin porcentajes, sin promesas. Solo si merece la pena ir, a quién y qué decir.",
   "themeLabel": "Día / noche",
   "langLabel": "Idioma",
@@ -32,39 +32,59 @@
   "restart": "Repetir",
   "emergency": "Si tiene síntomas ahora mismo — llame al 112",
   "emergencyText": "Falta de aire, dolor en el pecho, desmayo — esto no es para una página. Llame ya.",
-  "emergencySns": "O la línea SNS 24: 808 24 24 24",
   "resultTitle": "Su semáforo",
   "q": {
-    "sleep": { "text": "¿Qué pasa con su sueño?", "o": {
-      "snore": "Ronco / dicen que dejo de respirar",
-      "tired": "Me despierto cansado, de día tengo sueño",
-      "insomnia": "Me cuesta dormirme / me despierto de noche",
-      "short": "Duermo poco (menos de 6 h)",
-      "check": "Solo quiero comprobar",
-      "alarm": "🚨 Falta de aire, dolor en el pecho o desmayo — ahora mismo"
-    } },
-    "day": { "text": "¿Y durante el día?", "o": {
-      "drive": "Me duermo conduciendo / en reuniones",
-      "often": "Tengo sueño a menudo",
-      "ok": "Normal"
-    } },
-    "body": { "text": "Tensión y peso", "o": {
-      "bp": "Tensión alta o tomo pastillas",
-      "weight": "Sobrepeso notable / cuello ancho",
-      "neither": "Ni lo uno ni lo otro",
-      "unknown": "No lo sé"
-    } },
-    "who": { "text": "Edad y sexo", "o": {
-      "m_u50": "Hombre, menos de 50",
-      "m_50": "Hombre, 50+",
-      "f_u50": "Mujer, menos de 50",
-      "f_50": "Mujer, 50+"
-    } }
+    "sleep": {
+      "text": "¿Qué pasa con su sueño?",
+      "o": {
+        "snore": "Ronco / dicen que dejo de respirar",
+        "tired": "Me despierto cansado, de día tengo sueño",
+        "insomnia": "Me cuesta dormirme / me despierto de noche",
+        "short": "Duermo poco (menos de 6 h)",
+        "check": "Solo quiero comprobar",
+        "alarm": "🚨 Falta de aire, dolor en el pecho o desmayo — ahora mismo"
+      }
+    },
+    "day": {
+      "text": "¿Y durante el día?",
+      "o": {
+        "drive": "Me duermo conduciendo / en reuniones",
+        "often": "Tengo sueño a menudo",
+        "ok": "Normal"
+      }
+    },
+    "body": {
+      "text": "Tensión y peso",
+      "o": {
+        "bp": "Tensión alta o tomo pastillas",
+        "weight": "Sobrepeso notable / cuello ancho",
+        "neither": "Ni lo uno ni lo otro",
+        "unknown": "No lo sé"
+      }
+    },
+    "who": {
+      "text": "Edad y sexo",
+      "o": {
+        "m_u50": "Hombre, menos de 50",
+        "m_50": "Hombre, 50+",
+        "f_u50": "Mujer, menos de 50",
+        "f_50": "Mujer, 50+"
+      }
+    }
   },
   "zone": {
-    "green": { "t": "Tranquilo", "sub": "Nada apunta al médico por ahora. Si algo cambia, vuelva a esta puerta." },
-    "yellow": { "t": "Merece la pena ir", "sub": "Hay motivo para hablar con el médico de familia — sin prisa, pero sin dejarlo meses." },
-    "red": { "t": "No lo deje", "sub": "Merece la pena pedir cita esta semana." }
+    "green": {
+      "t": "Tranquilo",
+      "sub": "Nada apunta al médico por ahora. Si algo cambia, vuelva a esta puerta."
+    },
+    "yellow": {
+      "t": "Merece la pena ir",
+      "sub": "Hay motivo para hablar con el médico de familia — sin prisa, pero sin dejarlo meses."
+    },
+    "red": {
+      "t": "No lo deje",
+      "sub": "Merece la pena pedir cita esta semana."
+    }
   },
   "why": {
     "day.drive": "Dormirse conduciendo o en reuniones es la señal más fuerte de que el sueño no descansa.",
@@ -85,18 +105,27 @@
     "sns": {
       "t": "Por el SNS",
       "steps": {
-        "mgf": "Pedir cita con el médico de familia — en el centro de salud, en AppSESARAM o por la línea SNS 24.",
+        "mgf": "Pedir cita con el médico de familia — en el centro de salud o en AppSESARAM.",
         "ref": "Enséñele esta pantalla. Si está de acuerdo, le deriva al especialista.",
         "exam": "Si es apnea, suele pedir un estudio del sueño — muchas veces en casa, con un aparato."
       },
-      "links": { "sns24": "SNS 24", "app": "sns24.gov.pt" }
+      "links": {
+        "app": "AppSESARAM"
+      }
     },
     "private": {
       "t": "Privado en Madeira",
       "intro": "Consulta directa, sin derivación. Lugares y médicos verificados:",
-      "consult": { "apneia": "consulta de apnea del sueño" },
-      "spec": { "pneumo": "neumología" },
-      "exams": { "psg": "polisomnografía", "home": "estudio del sueño en casa" },
+      "consult": {
+        "apneia": "consulta de apnea del sueño"
+      },
+      "spec": {
+        "pneumo": "neumología"
+      },
+      "exams": {
+        "psg": "polisomnografía",
+        "home": "estudio del sueño en casa"
+      },
       "langs": "Idiomas",
       "price": "Precio y cobertura del seguro: preguntar al pedir cita.",
       "call": "Llamar"
@@ -114,11 +143,11 @@
     "hint": "Enséñele esta pantalla al médico — está en portugués. Debajo, la traducción para usted.",
     "mine": "Lo que ve el médico",
     "lead": {
-      "pneumo": "Vengo por sospecha de apnea del sueño.",
-      "mgf": "Vengo por dificultad para dormir."
+      "apneia": "Vengo por sospecha de apnea del sueño.",
+      "neutral": "Vengo por mi sueño."
     },
     "a": {
-      "sleep.snore": "Ronco fuerte y me dicen que dejo de respirar al dormir.",
+      "sleep.snore": "Ronco o me dicen que dejo de respirar al dormir.",
       "sleep.tired": "Me despierto cansado y tengo sueño durante el día.",
       "sleep.insomnia": "Me cuesta dormirme y me despierto durante la noche.",
       "sleep.short": "Duermo menos de 6 horas por noche.",
@@ -131,19 +160,28 @@
       "body.neither": "No tengo la tensión alta ni sobrepeso.",
       "body.unknown": "No sé mi tensión.",
       "who.m_u50": "Hombre, menos de 50 años.",
-      "who.m_50": "Hombre, más de 50 años.",
+      "who.m_50": "Hombre, 50 años o más.",
       "who.f_u50": "Mujer, menos de 50 años.",
-      "who.f_50": "Mujer, más de 50 años."
+      "who.f_50": "Mujer, 50 años o más."
     },
     "ask": {
       "pneumo": "Pido una valoración y, si lo considera necesario, derivación a consulta del sueño / neumología.",
       "mgf": "Pido una valoración y orientación sobre el siguiente paso."
     },
-    "note": "Hablo poco portugués — por favor, responda despacio o por escrito. Gracias."
+    "note": "Hablo poco portugués — por favor, hable despacio o escriba. Gracias."
   },
   "cal": {
-    "mgf": { "t": "Pedir cita — médico de familia", "d": "Porta do Sono: pedir cita y llevar la pantalla «Para el médico»." },
-    "repeat": { "t": "Repetir Porta do Sono", "d": "Han pasado 3 meses — volver a hacer los cuatro toques." },
+    "mgf": {
+      "t": "Pedir cita — médico de familia",
+      "d": "Porta do Sono: pedir cita y llevar la pantalla «Para el médico»."
+    },
+    "repeat": {
+      "t": "Repetir Porta do Sono",
+      "d": "Han pasado 3 meses — volver a hacer los cuatro toques."
+    },
     "done": "Calendario listo ✓"
+  },
+  "warn": {
+    "drive": "Mientras tenga tanto sueño, no se ponga al volante."
   }
 }

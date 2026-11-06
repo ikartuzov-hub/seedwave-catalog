@@ -20,7 +20,7 @@
   },
   "disclaimer": "This is not medical advice — talk to your doctor.",
   "orient": "Guidance, not a validated test.",
-  "emergencyLine": "Shortness of breath, chest pain or fainting right now — call 112 or SNS 24: 808 24 24 24.",
+  "emergencyLine": "Shortness of breath, chest pain or fainting right now — call 112.",
   "honest": "No diagnoses, no percentages, no promises. Only whether it's worth going, to whom, and what to say.",
   "themeLabel": "Day / night",
   "langLabel": "Language",
@@ -32,39 +32,59 @@
   "restart": "Start over",
   "emergency": "If you have symptoms right now — call 112",
   "emergencyText": "Shortness of breath, chest pain, fainting — this is not for a web page. Call now.",
-  "emergencySns": "Or the SNS 24 line: 808 24 24 24",
   "resultTitle": "Your traffic light",
   "q": {
-    "sleep": { "text": "What's going on with your sleep?", "o": {
-      "snore": "I snore / I'm told I stop breathing",
-      "tired": "I wake up tired, sleepy during the day",
-      "insomnia": "Hard to fall asleep / I wake at night",
-      "short": "I sleep little (under 6 h)",
-      "check": "Just checking",
-      "alarm": "🚨 Shortness of breath, chest pain or fainting — right now"
-    } },
-    "day": { "text": "And during the day?", "o": {
-      "drive": "I doze off driving / in meetings",
-      "often": "I often feel sleepy",
-      "ok": "Normal"
-    } },
-    "body": { "text": "Blood pressure and weight", "o": {
-      "bp": "High blood pressure or on pills",
-      "weight": "Noticeably overweight / wide neck",
-      "neither": "Neither",
-      "unknown": "Don't know"
-    } },
-    "who": { "text": "Age and sex", "o": {
-      "m_u50": "Man, under 50",
-      "m_50": "Man, 50+",
-      "f_u50": "Woman, under 50",
-      "f_50": "Woman, 50+"
-    } }
+    "sleep": {
+      "text": "What's going on with your sleep?",
+      "o": {
+        "snore": "I snore / I'm told I stop breathing",
+        "tired": "I wake up tired, sleepy during the day",
+        "insomnia": "Hard to fall asleep / I wake at night",
+        "short": "I sleep little (under 6 h)",
+        "check": "Just checking",
+        "alarm": "🚨 Shortness of breath, chest pain or fainting — right now"
+      }
+    },
+    "day": {
+      "text": "And during the day?",
+      "o": {
+        "drive": "I doze off driving / in meetings",
+        "often": "I often feel sleepy",
+        "ok": "Normal"
+      }
+    },
+    "body": {
+      "text": "Blood pressure and weight",
+      "o": {
+        "bp": "High blood pressure or on pills",
+        "weight": "Noticeably overweight / wide neck",
+        "neither": "Neither",
+        "unknown": "Don't know"
+      }
+    },
+    "who": {
+      "text": "Age and sex",
+      "o": {
+        "m_u50": "Man, under 50",
+        "m_50": "Man, 50+",
+        "f_u50": "Woman, under 50",
+        "f_50": "Woman, 50+"
+      }
+    }
   },
   "zone": {
-    "green": { "t": "Fine", "sub": "Nothing points to a doctor yet. If something changes, come back to this door." },
-    "yellow": { "t": "Worth a visit", "sub": "There is reason to talk to your family doctor — no rush, but don't put it off for months." },
-    "red": { "t": "Don't put it off", "sub": "Worth booking an appointment this week." }
+    "green": {
+      "t": "Fine",
+      "sub": "Nothing points to a doctor yet. If something changes, come back to this door."
+    },
+    "yellow": {
+      "t": "Worth a visit",
+      "sub": "There is reason to talk to your family doctor — no rush, but don't put it off for months."
+    },
+    "red": {
+      "t": "Don't put it off",
+      "sub": "Worth booking an appointment this week."
+    }
   },
   "why": {
     "day.drive": "Dozing off while driving or in meetings is the strongest sign that sleep isn't restoring you.",
@@ -85,18 +105,27 @@
     "sns": {
       "t": "Through the SNS",
       "steps": {
-        "mgf": "Book your family doctor — at the health centre, in AppSESARAM or via the SNS 24 line.",
+        "mgf": "Book your family doctor — at the health centre or in AppSESARAM.",
         "ref": "Show them this screen. If they agree, they refer you to the specialist.",
         "exam": "If it's apnoea, they usually order a sleep study — often at home, with a device."
       },
-      "links": { "sns24": "SNS 24", "app": "sns24.gov.pt" }
+      "links": {
+        "app": "AppSESARAM"
+      }
     },
     "private": {
       "t": "Private in Madeira",
       "intro": "Direct appointment, no referral. Verified places and doctors:",
-      "consult": { "apneia": "sleep apnoea consultation" },
-      "spec": { "pneumo": "pulmonology" },
-      "exams": { "psg": "polysomnography", "home": "home sleep study" },
+      "consult": {
+        "apneia": "sleep apnoea consultation"
+      },
+      "spec": {
+        "pneumo": "pulmonology"
+      },
+      "exams": {
+        "psg": "polysomnography",
+        "home": "home sleep study"
+      },
       "langs": "Languages",
       "price": "Price and insurance cover: ask when booking.",
       "call": "Call"
@@ -114,11 +143,11 @@
     "hint": "Show this screen to the doctor — it's in Portuguese. Below, the translation for you.",
     "mine": "What the doctor sees",
     "lead": {
-      "pneumo": "I'm here with suspected sleep apnoea.",
-      "mgf": "I'm here because of trouble sleeping."
+      "apneia": "I'm here with suspected sleep apnoea.",
+      "neutral": "I'm here because of my sleep."
     },
     "a": {
-      "sleep.snore": "I snore loudly and I'm told I stop breathing in my sleep.",
+      "sleep.snore": "I snore or I'm told I stop breathing in my sleep.",
       "sleep.tired": "I wake up tired and feel sleepy during the day.",
       "sleep.insomnia": "I have trouble falling asleep and wake up during the night.",
       "sleep.short": "I sleep less than 6 hours a night.",
@@ -131,19 +160,28 @@
       "body.neither": "No high blood pressure, not overweight.",
       "body.unknown": "I don't know my blood pressure.",
       "who.m_u50": "Man, under 50.",
-      "who.m_50": "Man, over 50.",
+      "who.m_50": "Man, 50 or over.",
       "who.f_u50": "Woman, under 50.",
-      "who.f_50": "Woman, over 50."
+      "who.f_50": "Woman, 50 or over."
     },
     "ask": {
       "pneumo": "I ask for an assessment and, if you see fit, a referral to a sleep / pulmonology consultation.",
       "mgf": "I ask for an assessment and advice on the next step."
     },
-    "note": "I speak little Portuguese — please answer slowly or in writing. Thank you."
+    "note": "I speak little Portuguese — please speak slowly or write. Thank you."
   },
   "cal": {
-    "mgf": { "t": "Book an appointment — family doctor", "d": "Porta do Sono: book and bring the «For the doctor» screen." },
-    "repeat": { "t": "Repeat Porta do Sono", "d": "3 months have passed — do the four taps again." },
+    "mgf": {
+      "t": "Book an appointment — family doctor",
+      "d": "Porta do Sono: book and bring the «For the doctor» screen."
+    },
+    "repeat": {
+      "t": "Repeat Porta do Sono",
+      "d": "3 months have passed — do the four taps again."
+    },
     "done": "Calendar ready ✓"
+  },
+  "warn": {
+    "drive": "While you're this sleepy, don't get behind the wheel."
   }
 }
