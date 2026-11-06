@@ -1,0 +1,27 @@
+{
+  "_": "Слой 3 — правила Porta do Sono (семейство Portas, nCp). Правится без движка. Движок не знает ни числа вопросов, ни их смысла, ни маршрутов: рендерит questions, окна дома считает по числу вопросов, маршруты берёт из routes. Тексты — только в ui.{lang}.json по тем же id.",
+  "updated": "2026-11-06",
+  "stage": 0,
+  "live": false,
+  "windows": 4,
+
+  "questions": [],
+  "_questions": "Этап 1: четыре вопроса (sleep / day / bpweight / agesex) + опция alarm → 112. Формулировки — в ui.*.json. Шкалы Epworth (ESS) и STOP-BANG в код НЕ вставлять до решения по лицензиям (ТЗ, граница 5).",
+
+  "scales": { "ess": "license-pending", "stopbang": "license-pending", "berlin": "free-candidate" },
+  "_scales": "Решение аудитора/Игоря до этапа 1: запросить лицензии (Murray Johns / UHN) или свободные инструменты с подписью «ориентир, не валидированный тест».",
+
+  "routes": [],
+  "_routes": "Этап 1: sns (médico de família → pneumologia/sono/neurologia), private (клиники сна Мадейры), red (112 / SNS 24). Каждая строка — с source и verified (дата). Нет источника — нет строки (ТЗ, граница 6).",
+
+  "emergency": { "tel": "112", "sns24": "808 24 24 24" },
+
+  "icsHook": null,
+  "_icsHook": "Этап 1: общий механизм iOS-календаря SeedWave (тот же хук Make, что у nCr и capsula).",
+  "botLive": false,
+  "bot": "https://t.me/SeedWaveBot?start=",
+  "botPayload": "porta_sono_{profile}_{lang}",
+  "hub": "https://seedwave.pt/hub/",
+  "author": "https://www.linkedin.com/in/igor-kartuzov/",
+  "url": "https://seedwave.pt/sono/"
+}

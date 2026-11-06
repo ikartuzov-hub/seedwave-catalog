@@ -1,0 +1,30 @@
+{
+  "id": "/sono/ru/",
+  "name": "Porta do Sono",
+  "short_name": "Sono",
+  "description": "Храпишь, просыпаешься разбитым, трудно заснуть? Четыре нажатия, ничего не печатать — и ты знаешь, стоит ли идти к врачу, к какому на Мадейре и что ему сказать. На 5 языках. Бесплатно, ничего не хранится.",
+  "lang": "ru",
+  "start_url": "/sono/ru/",
+  "scope": "/sono/",
+  "display": "standalone",
+  "background_color": "#0a0d2a",
+  "theme_color": "#0a0d2a",
+  "icons": [
+    {
+      "src": "/sono/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/sono/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/sono/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

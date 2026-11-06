@@ -1,0 +1,30 @@
+{
+  "id": "/sono/es/",
+  "name": "Porta do Sono",
+  "short_name": "Sono",
+  "description": "¿Ronca, se despierta cansado, le cuesta dormirse? Cuatro toques, sin escribir nada — y sabe si merece la pena ir al médico, a cuál en Madeira y qué decirle. En 5 idiomas. Gratis, no se guarda nada.",
+  "lang": "es",
+  "start_url": "/sono/es/",
+  "scope": "/sono/",
+  "display": "standalone",
+  "background_color": "#0a0d2a",
+  "theme_color": "#0a0d2a",
+  "icons": [
+    {
+      "src": "/sono/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/sono/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/sono/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

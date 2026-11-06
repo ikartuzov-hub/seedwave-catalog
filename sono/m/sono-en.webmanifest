@@ -1,0 +1,30 @@
+{
+  "id": "/sono/en/",
+  "name": "Porta do Sono",
+  "short_name": "Sono",
+  "description": "Snoring, waking up tired, trouble falling asleep? Four taps, nothing to type — and you know whether to see a doctor, which one in Madeira, and what to tell them. In 5 languages. Free, nothing is stored.",
+  "lang": "en",
+  "start_url": "/sono/en/",
+  "scope": "/sono/",
+  "display": "standalone",
+  "background_color": "#0a0d2a",
+  "theme_color": "#0a0d2a",
+  "icons": [
+    {
+      "src": "/sono/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/sono/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/sono/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

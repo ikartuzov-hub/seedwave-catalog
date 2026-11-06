@@ -1,0 +1,30 @@
+{
+  "id": "/sono/",
+  "name": "Porta do Sono",
+  "short_name": "Sono",
+  "description": "Ressona, acorda cansado, custa-lhe adormecer? Quatro toques, sem escrever nada — e fica a saber se vale a pena ir ao médico, a qual na Madeira e o que lhe dizer. Em 5 línguas. Grátis, nada é guardado.",
+  "lang": "pt",
+  "start_url": "/sono/",
+  "scope": "/sono/",
+  "display": "standalone",
+  "background_color": "#0a0d2a",
+  "theme_color": "#0a0d2a",
+  "icons": [
+    {
+      "src": "/sono/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/sono/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/sono/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
