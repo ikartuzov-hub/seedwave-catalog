@@ -148,7 +148,7 @@
     scrollTop();
   }
 
-  function restart() { step = 0; for (const k in A) delete A[k]; render(); scrollTop(); }
+  function restart() { step = 0; counted = false; for (const k in A) delete A[k]; render(); scrollTop(); }
 
   /* ---------- результат: светофор + одно «почему» + маршруты + кнопки ---------- */
   function renderResult() {
@@ -167,7 +167,14 @@
       <p class="disclaimer">${esc(T.disclaimer)}</p></div>
       <h2 class="rh">${esc(T.btn.where)}</h2>${routes}`;
     $('#showBtn').onclick = showDoctor; $('#calBtn').onclick = calendar; $('#shareBtn').onclick = share; $('#restartBtn').onclick = restart;
-    scrollTop();
+    scrollTop(); count(z);
+  }
+
+  /* ---------- счётчик без персоналий (этап 3): только зона и язык, один раз за проход; выключен, пока rules.counter пуст ---------- */
+  let counted = false;
+  function count(z) {
+    if (!R.counter || counted || isBot) return; counted = true;
+    try { fetch(R.counter, { method: 'POST', mode: 'no-cors', keepalive: true, headers: { 'Content-Type': 'text/plain' }, body: JSON.stringify({ door: 'sono', zone: z, lang: LANG }) }).catch(() => {}); } catch (e) {}
   }
 
   function routeHTML(r, sp) {
