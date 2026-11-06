@@ -14,6 +14,13 @@
   var BASE = SRC.replace(/sw\.js.*$/, '');
   var LANGS = ['pt', 'en', 'ru', 'es', 'de'];
 
+  // Аналитика: общий счётчик PostHog (без куки) — nav/ph.js. Отключение: <meta name="sw-ph" content="off">
+  if (!window.__swPh) {
+    var ph = document.createElement('script');
+    ph.defer = true; ph.src = BASE + 'ph.js';
+    (document.head || document.documentElement).appendChild(ph);
+  }
+
   var CSS = '\
 .sw-eco{--sw-fg:var(--ink,#1b2733);--sw-bg:var(--surface,var(--bg,#fff));--sw-line:var(--line,#dfe6ec);--sw-acc:var(--accent,#0e7c86);\
  box-sizing:border-box;max-width:980px;margin:40px auto 24px;padding:18px 16px 4px;border-top:1px solid var(--sw-line);\
