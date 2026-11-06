@@ -17,7 +17,7 @@ def png(svg, size):
 
 # значок белым на фоне акцента — для «На экран Домой» (стандарт запуска §3)
 for name, size in [("apple-touch-icon.png", 180), ("icon-192.png", 192), ("icon-512.png", 512)]:
-    png(mark.svg("home", "#ffffff", ACCENT, tile=False), size).convert("RGB").save(ROOT / name, optimize=True)
+    png(mark.svg("home", NIGHT, mark.NIGHT_BG, tile=False), size).convert("RGB").save(ROOT / name, optimize=True)
     print("ok", name)
 
 # OG 1200×630: ночь → рассвет (градиент индиго снизу вверх к тёплому), тайл, словомарка, слоган (PT — канонический)
@@ -34,14 +34,14 @@ for y in range(560, 630):
     d.line([(0, y), (1200, y)], fill=(int(58 + 120 * k), int(44 + 70 * k), int(78 + 20 * k)))
 tile = png((ROOT / "sono-icon.svg").read_text(encoding="utf-8"), 220)
 og.paste(tile, (90, 150), tile)
-F = "/usr/share/fonts/truetype/dejavu/"
-f1 = ImageFont.truetype(F + "DejaVuSerif-Bold.ttf", 92)
-f2 = ImageFont.truetype(F + "DejaVuSans.ttf", 40)
-f3 = ImageFont.truetype(F + "DejaVuSans.ttf", 26)
+FONTS = pathlib.Path(__file__).resolve().parent / "fonts"
+f1 = ImageFont.truetype(str(FONTS / "Manrope-ExtraBold.ttf"), 88)
+f2 = ImageFont.truetype(str(FONTS / "Manrope-SemiBold.ttf"), 38)
+f3 = ImageFont.truetype(str(FONTS / "Manrope-Regular.ttf"), 25)
 d.text((350, 150), T["brand"], font=f1, fill="#f3efe6")
 d.text((352, 285), T["slogan"], font=f2, fill=NIGHT)
-for i, line in enumerate(textwrap.wrap(T["heroSub"], 58)[:2]):
-    d.text((352, 360 + i * 36), line, font=f3, fill="#c9c3d6")
+for i, line in enumerate(textwrap.wrap(T["heroSub"], 62)[:3]):
+    d.text((352, 352 + i * 34), line, font=f3, fill="#c9c3d6")
 d.text((90, 520), "seedwave.pt/sono  ·  SeedWave · Igor Kartuzov", font=f3, fill="#b7aec4")
 og.save(ROOT / "og-image.png", optimize=True)
 print("ok og-image.png")

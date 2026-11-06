@@ -98,3 +98,30 @@ footer.sw a{display:inline-block;padding:8px 4px;text-decoration:underline;text-
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
 }
+
+/* ---------- этап 1: результат, маршруты, экран врача ---------- */
+.result .rt{display:flex;align-items:center;gap:10px}
+.result .dot{width:14px;height:14px;border-radius:50%;background:var(--ok);box-shadow:0 0 10px var(--ok);flex:none}
+.result.yellow .dot{background:var(--warn);box-shadow:0 0 10px var(--warn)}
+.result.red .dot{background:var(--bad);box-shadow:0 0 10px var(--bad)}
+.zsub{margin:4px 0 10px;font-size:16px}
+.why{color:var(--ink-soft);margin:0 0 6px;font-size:15px}
+.spec{font-weight:700;margin:0 0 4px}
+.orient{font-size:12px;color:var(--ink-soft);margin:0 0 10px;letter-spacing:.02em}
+.row.main .btn{flex:1 1 auto;justify-content:center}
+.rh{font:600 24px/1.2 var(--display);margin:24px 0 6px}
+.route h3{margin:0 0 8px;font-size:18px}
+.route ol{margin:0 0 8px;padding-left:20px;color:var(--ink-soft)}
+.route li{margin:6px 0}
+.pill{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:99px;padding:8px 14px;text-decoration:none;font-weight:700;font-size:14px;background:var(--chip)}
+.place{border-top:1px solid var(--line);padding:12px 0 4px;margin-top:8px}
+.place .addr{color:var(--ink-soft);font-size:14px}
+.place ul{margin:8px 0;padding-left:18px}
+.place li{margin:6px 0;font-size:15px}
+.place .langs{display:block;font-size:13px;color:var(--ink-soft)}
+.src{font-size:12px;color:var(--ink-soft);margin:10px 0 0}
+.src a{color:var(--ink-soft)}
+.doc .docbox{background:var(--bg);border:2px solid var(--accent);border-radius:14px;padding:16px;margin:8px 0 14px}
+.doc .big{font-size:20px;line-height:1.35;margin:0 0 10px;font-weight:600}
+.doc .docnote{font-size:15px;color:var(--ink-soft);margin:6px 0 0}
+.doc .mine p{margin:4px 0;color:var(--ink-soft);font-size:14px}

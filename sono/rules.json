@@ -1,26 +1,126 @@
 {
-  "_": "Слой 3 — правила Porta do Sono (семейство Portas, nCp). Правится без движка. Движок не знает ни числа вопросов, ни их смысла, ни маршрутов: рендерит questions, окна дома считает по числу вопросов, маршруты берёт из routes. Тексты — только в ui.{lang}.json по тем же id.",
+  "_": "Слой 3 — правила Porta do Sono (семейство Portas, nCp). Правится без движка. Движок не знает ни числа вопросов, ни их смысла, ни маршрутов: рендерит questions, окна дома считает по числу вопросов, зону считает по весам, маршруты берёт из routes. Тексты — только в ui.{lang}.json по тем же id. Вопросы — собственные ориентирующие (решение по лицензиям: вариант б, 06.11.2026), без ESS / STOP-BANG / Berlin.",
   "updated": "2026-11-06",
-  "stage": 0,
-  "live": false,
-  "windows": 4,
+  "stage": 1,
+  "live": true,
 
-  "questions": [],
-  "_questions": "Этап 1: четыре вопроса (sleep / day / bpweight / agesex) + опция alarm → 112. Формулировки — в ui.*.json. Шкалы Epworth (ESS) и STOP-BANG в код НЕ вставлять до решения по лицензиям (ТЗ, граница 5).",
+  "questions": [
+    { "id": "sleep", "options": [
+      { "id": "snore", "w": 2, "wide": true },
+      { "id": "tired", "w": 1 },
+      { "id": "insomnia", "w": 1 },
+      { "id": "short", "w": 1 },
+      { "id": "check", "w": 0 },
+      { "id": "alarm", "w": 0, "alarm": true, "wide": true }
+    ] },
+    { "id": "day", "options": [
+      { "id": "drive", "w": 2, "wide": true },
+      { "id": "often", "w": 1 },
+      { "id": "ok", "w": 0 }
+    ] },
+    { "id": "body", "options": [
+      { "id": "bp", "w": 1 },
+      { "id": "weight", "w": 1 },
+      { "id": "neither", "w": 0 },
+      { "id": "unknown", "w": 0 }
+    ] },
+    { "id": "who", "options": [
+      { "id": "m_u50", "w": 0 },
+      { "id": "m_50", "w": 1 },
+      { "id": "f_u50", "w": 0 },
+      { "id": "f_50", "w": 1 }
+    ] }
+  ],
 
-  "scales": { "ess": "license-pending", "stopbang": "license-pending", "berlin": "free-candidate" },
-  "_scales": "Решение аудитора/Игоря до этапа 1: запросить лицензии (Murray Johns / UHN) или свободные инструменты с подписью «ориентир, не валидированный тест».",
+  "zones": { "yellow": 2, "red": 4 },
+  "_zones": "сумма весов: < yellow → green (спокойно), ≥ yellow → yellow (стоит показаться), ≥ red → red (не откладывать). Ориентир, не валидированный тест — подпись на экране результата.",
 
-  "routes": [],
-  "_routes": "Этап 1: sns (médico de família → pneumologia/sono/neurologia), private (клиники сна Мадейры), red (112 / SNS 24). Каждая строка — с source и verified (дата). Нет источника — нет строки (ТЗ, граница 6).",
+  "whyOrder": ["day.drive", "sleep.snore", "day.often", "sleep.tired", "body.bp", "body.weight", "sleep.short", "sleep.insomnia", "sleep.check"],
+  "_whyOrder": "одно предложение «почему» — первый совпавший ответ по этому порядку; тексты в ui.why.*",
+
+  "specialty": { "default": "pneumo", "sleep.insomnia": "mgf" },
+  "_specialty": "к кому направляет médico de família: pneumo (apneia / sono) по умолчанию; при бессоннице без храпа — остаётся у MGF (sono / psicologia по его решению). Тексты в ui.spec.*",
+
+  "routes": [
+    {
+      "id": "sns",
+      "show": "always",
+      "steps": ["mgf", "ref", "exam"],
+      "links": [
+        { "id": "sns24", "tel": "808 24 24 24" },
+        { "id": "app", "url": "https://www.sns24.gov.pt/" }
+      ],
+      "source": "https://www.gov.pt/guias/a-minha-saude",
+      "sourceNote": "gov.pt «A minha saúde» (atualizado 09/10/2026): médico de família pede exames e encaminha para especialistas; marcação na app SNS 24, Área Pessoal ou centro de saúde. Madeira: AppSESARAM — pedido de consulta ao médico de família ou consulta de recurso (dnoticias.pt 29/12/2022).",
+      "verified": "2026-11-06"
+    },
+    {
+      "id": "private",
+      "show": ["yellow", "red"],
+      "places": [
+        {
+          "id": "cuf-madeira",
+          "name": "Hospital CUF Madeira",
+          "addr": "Av. Mário Soares 143, 9000-783 Funchal",
+          "tel": "291 003 300",
+          "langs": ["pt", "en"],
+          "doctors": [
+            { "name": "Samuel Pereira", "spec": "pneumo", "consult": "apneia", "langs": ["pt", "en"], "exams": ["psg", "home"],
+              "source": "https://www.grupohpa.com/en/staff/doctor/samuel-pereira", "verified": "2026-11-06" },
+            { "name": "Rudi Fernandes", "spec": "pneumo", "consult": "apneia", "langs": ["pt", "en", "it"], "exams": [],
+              "source": "https://www.grupohpa.com/en/staff/doctor/rudi-fernandes", "verified": "2026-11-06" }
+          ],
+          "source": "https://www.cuf.pt/hospitais-e-clinicas/hospital-cuf-madeira",
+          "verified": "2026-11-06"
+        },
+        {
+          "id": "cuf-funchal",
+          "name": "Clínica CUF Funchal",
+          "addr": "Funchal (centro)",
+          "tel": "291 003 300",
+          "langs": ["pt", "en"],
+          "doctors": [
+            { "name": "Samuel Pereira", "spec": "pneumo", "consult": "apneia", "langs": ["pt", "en"], "exams": ["psg", "home"],
+              "source": "https://www.grupohpa.com/en/staff/doctor/samuel-pereira", "verified": "2026-11-06" },
+            { "name": "Rudi Fernandes", "spec": "pneumo", "consult": "apneia", "langs": ["pt", "en", "it"], "exams": [],
+              "source": "https://www.grupohpa.com/en/staff/doctor/rudi-fernandes", "verified": "2026-11-06" }
+          ],
+          "source": "https://www.cuf.pt/hospitais-e-clinicas/clinica-cuf-funchal",
+          "verified": "2026-11-06"
+        }
+      ],
+      "prices": null,
+      "_prices": "Цен нет — источника с датой нет (граница 4 «честный счёт»). Показываем ui.route.private.price: «цену и покрытие страховки спросить при записи».",
+      "_omitted": "João Raposo (neurofisiologia, CUF Madeira) — на странице grupohpa сна нет → не включён. Madeira Saúde — источник не найден → не включена. Добавлять только со ссылкой и датой."
+    },
+    {
+      "id": "red",
+      "show": "alarm",
+      "tel": "112",
+      "sns24": "808 24 24 24",
+      "source": "https://www.sns.min-saude.pt/wp-content/uploads/2024/07/FAQs_Ligue-Antes-Salve-Vidas.pdf",
+      "sourceNote": "SNS «Ligue antes, salve vidas»: risco de vida → 112; restante → 808 24 24 24.",
+      "verified": "2026-11-06"
+    }
+  ],
+
+  "scales": { "ess": "license-pending", "stopbang": "license-pending", "berlin": "not-used" },
+  "_scales": "Решение аудитора 06.11.2026 (вариант б): свои вопросы, подпись «ориентир». Полная проверка (ESS/STOP-BANG) — заморожена до лицензий; отдельное решение Игоря.",
+
+  "calendar": {
+    "mgf": { "days": 3, "alarms": ["PT9H"] },
+    "repeat": { "days": 90, "alarms": ["PT9H", "P7DT9H"] }
+  },
+  "_calendar": "два события .ics: «записаться к médico de família» (через 3 дня) и «повторить дверь» (через 90 дней). Тексты — ui.cal.*",
 
   "emergency": { "tel": "112", "sns24": "808 24 24 24" },
 
-  "icsHook": null,
-  "_icsHook": "Этап 1: общий механизм iOS-календаря SeedWave (тот же хук Make, что у nCr и capsula).",
+  "icsHook": "https://hook.eu1.make.com/bjpax9l2ambbav2w32vpmkj7t4kl8yvo",
+  "_icsHook": "Общий механизм iOS-календаря SeedWave (тот же, что у nCr и capsula): POST d=ics → 303 → GET text/calendar.",
   "botLive": false,
   "bot": "https://t.me/SeedWaveBot?start=",
   "botPayload": "porta_sono_{profile}_{lang}",
+  "_botPayload": "{profile} = зона (green/yellow/red); в бот уходит только код зоны и язык, не ответы. Кнопка скрыта, пока botLive=false (этап 3).",
   "hub": "https://seedwave.pt/hub/",
   "author": "https://www.linkedin.com/in/igor-kartuzov/",
   "url": "https://seedwave.pt/sono/"
