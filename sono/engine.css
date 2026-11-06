@@ -126,3 +126,9 @@ footer.sw a{display:inline-block;padding:8px 4px;text-decoration:underline;text-
 .doc .docnote{font-size:15px;color:var(--ink-soft);margin:6px 0 0}
 .doc .mine p{margin:4px 0;color:var(--ink-soft);font-size:14px}
 .warnline{color:var(--bad);font-weight:700;margin:0 0 6px;font-size:15px}
+
+/* ---------- листовка mais/ ---------- */
+.flyer .card h2{font:600 22px/1.2 var(--display);margin:0 0 8px}
+.flyer .card ul,.flyer .card ol{margin:0;padding-left:20px}
+.flyer .card li{margin:6px 0}
+.flyer .hero .row{margin-top:16px}

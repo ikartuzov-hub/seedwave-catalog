@@ -183,5 +183,29 @@
   },
   "warn": {
     "drive": "Enquanto tiver sono assim, não se ponha ao volante."
+  },
+  "flyer": {
+    "title": "Porta do Sono — para quem é e como funciona",
+    "h1": "Dorme mal? Há uma porta para isso.",
+    "lead": "Porta do Sono é uma página gratuita, em cinco línguas, que em quatro toques diz se vale a pena ir ao médico por causa do sono, a qual na Madeira — e o que lhe dizer.",
+    "whoTitle": "Para quem é",
+    "who": [
+      "Para quem vive na Madeira e não fala português: a página fala com o médico por si.",
+      "Para quem ressona e «está tudo bem» — e para quem dorme ao lado e já não acredita nisso.",
+      "Para quem acorda cansado há meses e nunca perguntou porquê."
+    ],
+    "howTitle": "Como funciona",
+    "how": [
+      "Quatro perguntas por botões — sem escrever nada.",
+      "Um semáforo: tranquilo · vale a pena ir · não adiar — e uma frase porquê.",
+      "«Mostrar ao médico»: um ecrã em português com as suas respostas. Basta mostrar o telemóvel.",
+      "«Onde ir»: pelo SNS ou privado na Madeira — só locais verificados, com data."
+    ],
+    "wow": "Com cada resposta, acende-se uma janela na casa. À quarta, a porta abre-se — e amanhece.",
+    "privacy": "Nada é guardado. Sem registo, sem conta. As respostas ficam no seu telemóvel.",
+    "honest": "Não é uma consulta médica e não é um teste validado — é uma orientação para dar o primeiro passo.",
+    "cta": "Abrir a porta",
+    "shareBtn": "Enviar a quem dorme mal",
+    "family": "A primeira porta da família Portas. A seguir: dores de cabeça, memória."
   }
 }

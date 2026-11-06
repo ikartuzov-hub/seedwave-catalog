@@ -183,5 +183,29 @@
   },
   "warn": {
     "drive": "Solange Sie so schläfrig sind, setzen Sie sich nicht ans Steuer."
+  },
+  "flyer": {
+    "title": "Porta do Sono — für wen und wie es funktioniert",
+    "h1": "Schlafen Sie schlecht? Dafür gibt es eine Tür.",
+    "lead": "Porta do Sono ist eine kostenlose Seite in fünf Sprachen: viermal tippen — und Sie wissen, ob Sie wegen Ihres Schlafs zum Arzt sollten, zu welchem auf Madeira — und was Sie ihm sagen.",
+    "whoTitle": "Für wen",
+    "who": [
+      "Für alle, die auf Madeira leben und kein Portugiesisch sprechen: die Seite spricht für Sie mit dem Arzt.",
+      "Für die, die schnarchen und «alles in Ordnung» — und für die, die daneben schlafen und das nicht mehr glauben.",
+      "Für alle, die seit Monaten müde aufwachen und nie gefragt haben, warum."
+    ],
+    "howTitle": "So funktioniert es",
+    "how": [
+      "Vier Fragen per Knopfdruck — nichts schreiben.",
+      "Eine Ampel: entspannt · lohnt sich · nicht aufschieben — und ein Satz warum.",
+      "«Dem Arzt zeigen»: ein Bildschirm auf Portugiesisch mit Ihren Antworten. Einfach das Telefon zeigen.",
+      "«Wohin»: über den SNS oder privat auf Madeira — nur geprüfte Orte, mit Datum."
+    ],
+    "wow": "Mit jeder Antwort geht im Haus ein Fenster an. Bei der vierten öffnet sich die Tür — und es wird Morgen.",
+    "privacy": "Nichts wird gespeichert. Keine Anmeldung, kein Konto. Ihre Antworten bleiben auf Ihrem Telefon.",
+    "honest": "Keine ärztliche Beratung und kein validierter Test — eine Orientierung für den ersten Schritt.",
+    "cta": "Die Tür öffnen",
+    "shareBtn": "An jemanden senden, der schlecht schläft",
+    "family": "Die erste Tür der Familie Portas. Als Nächstes: Kopfschmerzen, Gedächtnis."
   }
 }

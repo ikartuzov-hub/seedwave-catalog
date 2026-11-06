@@ -279,6 +279,26 @@
         "es": "Tarjeta de residente, senderos y pistas — pantalla a pantalla",
         "de": "Residentenkarte, Wanderwege und Plätze — Schritt für Schritt"
       }
+    },
+    "sono": {
+      "url": "https://seedwave.pt/sono/",
+      "match": [
+        "seedwave.pt/sono/"
+      ],
+      "label": {
+        "pt": "Sono",
+        "en": "Sleep",
+        "ru": "Сон",
+        "es": "Sueño",
+        "de": "Schlaf"
+      },
+      "tagline": {
+        "pt": "Dorme mal? Quatro toques — e o médico certo na Madeira",
+        "en": "Sleeping badly? Four taps — and the right doctor in Madeira",
+        "ru": "Плохо спишь? Четыре нажатия — и нужный врач на Мадейре",
+        "es": "¿Duerme mal? Cuatro toques — y el médico adecuado en Madeira",
+        "de": "Schlecht geschlafen? Viermal tippen — und der richtige Arzt auf Madeira"
+      }
     }
   },
   "related": {
@@ -336,6 +356,11 @@
       "cesd",
       "voos",
       "nam"
+    ],
+    "seedwave.pt/sono/": [
+      "cesd",
+      "aima",
+      "voos"
     ]
   }
 }

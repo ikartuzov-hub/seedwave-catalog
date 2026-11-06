@@ -178,6 +178,24 @@
       "demoLink": "https://seedwave.pt/carro/lite/en/"
     },
     {
+      "id": "sono",
+      "icon": "<svg viewBox=\"0 0 64 64\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Porta do Sono\"><title>Porta do Sono</title><path d=\"M33.08 33.92H28.84V44.0H22.0V15.919999999999998H33.08Q36.44 15.919999999999998 38.76 17.08Q41.08 18.24 42.239999999999995 20.28Q43.4 22.32 43.4 24.96Q43.4 27.4 42.28 29.419999999999998Q41.16 31.439999999999998 38.839999999999996 32.68Q36.519999999999996 33.92 33.08 33.92ZM36.44 24.96Q36.44 23.28 35.48 22.36Q34.519999999999996 21.44 32.56 21.44H28.84V28.48H32.56Q34.519999999999996 28.48 35.48 27.560000000000002Q36.44 26.64 36.44 24.96Z\" fill=\"#8d9cff\"/><path d=\"M14 54c5-4 10-4 15 0s10 4 15 0 10-4 15 0\" fill=\"none\" stroke=\"#8d9cff\" stroke-width=\"3.2\" stroke-linecap=\"round\"/></svg>",
+      "category": "Citizen services",
+      "name": "Porta do Sono",
+      "hook": "Sleeping badly is not normal. Four taps, nothing to type — and you know whether to see a doctor, which one in Madeira, and what to tell them. In 5 languages.",
+      "description": "Four questions by buttons — snoring, daytime sleepiness, blood pressure and weight, age — and a traffic light: fine · worth a visit · don't put it off. «Show the doctor»: a screen in Portuguese with your answers and a ready phrase — just show your phone. «Where to go»: through the SNS or privately in Madeira, only verified places with a date. Calendar with reminders. Nothing is stored. First door of the Portas family.",
+      "sectors": [
+        "Health",
+        "Foreign residents",
+        "Civic Tech"
+      ],
+      "lookingFor": "Sleep doctors and clinics in Madeira · H-INNOVA partners",
+      "stage": "mvp",
+      "investment": "",
+      "demoLink": "https://seedwave.pt/sono/en/",
+      "moreLink": "https://seedwave.pt/sono/mais/en/"
+    },
+    {
       "id": "nrm",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#17998A\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nRm\"><title>nRm — Novo Reforço da Madeira</title><path d=\"M34 16 L34 72\"/><path d=\"M34 16 Q62 16 62 31 Q62 46 34 46\"/><path d=\"M42 46 Q52 56 58 72\"/><path d=\"M15 88 Q28 82 39 88 Q50 94 61 88 Q72 82 85 88\"/></svg>",
       "category": "Grants",

@@ -4,6 +4,7 @@
 Акцент — вариант mark.DEFAULT; при смене варианта поменять DEFAULT в mark.py и перегенерить (mark → icons → build)."""
 import io, json, pathlib, sys, textwrap
 import cairosvg
+FONTS = pathlib.Path(__file__).resolve().parent / "fonts"
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -21,35 +22,38 @@ for name, size in [("apple-touch-icon.png", 180), ("icon-192.png", 192), ("icon-
     print("ok", name)
 
 # OG 1200×630: ночь → рассвет (градиент индиго снизу вверх к тёплому), тайл, словомарка, слоган (PT — канонический)
-T = json.loads((ROOT / "ui.pt.json").read_text(encoding="utf-8"))
-og = Image.new("RGB", (1200, 630), mark.NIGHT_BG)
-d = ImageDraw.Draw(og)
-c0 = (10, 13, 42); c1 = (58, 44, 78)          # индиго → предрассветный лиловый у горизонта
-for y in range(630):
-    k = (y / 630) ** 1.6
-    d.line([(0, y), (1200, y)], fill=tuple(int(c0[i] + (c1[i] - c0[i]) * k) for i in range(3)))
-# полоска рассвета у нижнего края
-for y in range(560, 630):
-    k = (y - 560) / 70
-    d.line([(0, y), (1200, y)], fill=(int(58 + 120 * k), int(44 + 70 * k), int(78 + 20 * k)))
-tile = png((ROOT / "sono-icon.svg").read_text(encoding="utf-8"), 220)
-og.paste(tile, (90, 150), tile)
-FONTS = pathlib.Path(__file__).resolve().parent / "fonts"
-f1 = ImageFont.truetype(str(FONTS / "Manrope-ExtraBold.ttf"), 88)
-f2 = ImageFont.truetype(str(FONTS / "Manrope-SemiBold.ttf"), 38)
-f3 = ImageFont.truetype(str(FONTS / "Manrope-Regular.ttf"), 25)
-d.text((350, 150), T["brand"], font=f1, fill="#f3efe6")
-d.text((352, 285), T["slogan"], font=f2, fill=NIGHT)
-for i, line in enumerate(textwrap.wrap(T["heroSub"], 62)[:3]):
-    d.text((352, 352 + i * 34), line, font=f3, fill="#c9c3d6")
-d.text((90, 520), "seedwave.pt/sono  ·  SeedWave · Igor Kartuzov", font=f3, fill="#b7aec4")
-og.save(ROOT / "og-image.png", optimize=True)
-print("ok og-image.png")
+def og_for(lang):
+  T = json.loads((ROOT / f"ui.{lang}.json").read_text(encoding="utf-8"))
+  og = Image.new("RGB", (1200, 630), mark.NIGHT_BG)
+  d = ImageDraw.Draw(og)
+  c0 = (10, 13, 42); c1 = (58, 44, 78)          # индиго → предрассветный лиловый у горизонта
+  for y in range(630):
+      k = (y / 630) ** 1.6
+      d.line([(0, y), (1200, y)], fill=tuple(int(c0[i] + (c1[i] - c0[i]) * k) for i in range(3)))
+  # полоска рассвета у нижнего края
+  for y in range(560, 630):
+      k = (y - 560) / 70
+      d.line([(0, y), (1200, y)], fill=(int(58 + 120 * k), int(44 + 70 * k), int(78 + 20 * k)))
+  tile = png((ROOT / "sono-icon.svg").read_text(encoding="utf-8"), 220)
+  og.paste(tile, (90, 150), tile)
+  f1 = ImageFont.truetype(str(FONTS / "Manrope-ExtraBold.ttf"), 88)
+  f2 = ImageFont.truetype(str(FONTS / "Manrope-SemiBold.ttf"), 38)
+  f3 = ImageFont.truetype(str(FONTS / "Manrope-Regular.ttf"), 25)
+  d.text((350, 150), T["brand"], font=f1, fill="#f3efe6")
+  d.text((352, 285), T["slogan"], font=f2, fill=NIGHT)
+  for i, line in enumerate(textwrap.wrap(T["heroSub"], 62)[:3]):
+      d.text((352, 352 + i * 34), line, font=f3, fill="#c9c3d6")
+  d.text((90, 520), "seedwave.pt/sono  ·  SeedWave · Igor Kartuzov", font=f3, fill="#b7aec4")
+  og.save(ROOT / f"og-{lang}.png", optimize=True)
+  print("ok og", lang)
+for lang in ["pt","en","ru","es","de"]: og_for(lang)
+import shutil; shutil.copy(ROOT / "og-pt.png", ROOT / "og-image.png")
+
 
 # превью трёх вариантов цвета для выбора Игорем — в _src, в продакшен не идёт
 V = sorted((ROOT / "_src" / "variants").glob("sono-icon-*.svg"))
 pv = Image.new("RGB", (400 * len(V) + 40, 420), "#ffffff")
-dd = ImageDraw.Draw(pv)
+dd = ImageDraw.Draw(pv); f3 = ImageFont.truetype(str(FONTS / "Manrope-Regular.ttf"), 22)
 for i, p in enumerate(V):
     k = p.stem.split("-")[-1]
     name, day, night, bg = mark.VARIANTS[k]

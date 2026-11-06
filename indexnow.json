@@ -1,0 +1,17 @@
+{
+  "host": "seedwave.pt",
+  "urlList": [
+    "https://seedwave.pt/sono/",
+    "https://seedwave.pt/sono/en/",
+    "https://seedwave.pt/sono/ru/",
+    "https://seedwave.pt/sono/es/",
+    "https://seedwave.pt/sono/de/",
+    "https://seedwave.pt/sono/mais/",
+    "https://seedwave.pt/sono/mais/en/",
+    "https://seedwave.pt/sono/mais/ru/",
+    "https://seedwave.pt/sono/mais/es/",
+    "https://seedwave.pt/sono/mais/de/"
+  ],
+  "key": "3cd195d15377e831181771302e0f13e6",
+  "keyLocation": "https://seedwave.pt/3cd195d15377e831181771302e0f13e6.txt"
+}

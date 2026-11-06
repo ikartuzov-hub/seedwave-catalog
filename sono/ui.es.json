@@ -183,5 +183,29 @@
   },
   "warn": {
     "drive": "Mientras tenga tanto sueño, no se ponga al volante."
+  },
+  "flyer": {
+    "title": "Porta do Sono — para quién es y cómo funciona",
+    "h1": "¿Duerme mal? Hay una puerta para eso.",
+    "lead": "Porta do Sono es una página gratuita en cinco idiomas: cuatro toques y sabe si merece la pena ir al médico por su sueño, a cuál en Madeira — y qué decirle.",
+    "whoTitle": "Para quién es",
+    "who": [
+      "Para quien vive en Madeira y no habla portugués: la página habla con el médico por usted.",
+      "Para quien ronca y «está todo bien» — y para quien duerme al lado y ya no se lo cree.",
+      "Para quien lleva meses despertándose cansado y nunca preguntó por qué."
+    ],
+    "howTitle": "Cómo funciona",
+    "how": [
+      "Cuatro preguntas con botones — sin escribir nada.",
+      "Un semáforo: tranquilo · merece la pena ir · no lo deje — y una frase de por qué.",
+      "«Enseñar al médico»: una pantalla en portugués con sus respuestas. Solo tiene que enseñar el teléfono.",
+      "«Dónde ir»: por el SNS o por la vía privada en Madeira — solo lugares verificados, con fecha."
+    ],
+    "wow": "Con cada respuesta se enciende una ventana en la casa. A la cuarta, la puerta se abre — y amanece.",
+    "privacy": "No se guarda nada. Sin registro, sin cuenta. Sus respuestas se quedan en su teléfono.",
+    "honest": "No es una consulta médica ni un test validado — es una orientación para dar el primer paso.",
+    "cta": "Abrir la puerta",
+    "shareBtn": "Enviar a quien duerme mal",
+    "family": "La primera puerta de la familia Portas. Después: dolor de cabeza, memoria."
   }
 }
