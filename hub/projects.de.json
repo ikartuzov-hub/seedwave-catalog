@@ -569,7 +569,7 @@
       "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"CESD\"><title>CESD</title><rect width=\"100\" height=\"100\" rx=\"23\" fill=\"#EAF0FA\"/><g fill=\"none\" stroke=\"#1D4FA0\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M44 29 A21 21 0 1 0 44 61\"/><path d=\"M76 20 L76 70\"/><path d=\"M76 57 A12 12 0 1 1 52 57 A12 12 0 1 1 76 57\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></g></svg>",
       "category": "Bürgerdienste",
       "name": "CESD — Europäische Krankenversicherungskarte, wenn das Portal ablehnt",
-      "hook": "Die kostenlose Karte, mit der man in jedem EU-Land im öffentlichen Gesundheitswesen wie Einheimische behandelt wird. Wenn die Segurança Social Direta den Online-Antrag nicht zulässt — der ganze Weg: e-Clic, zwei Formulare und Unterschrift ohne Drucker.",
+      "hook": "Die kostenlose Karte, mit der du in jedem EU-Land im öffentlichen Gesundheitswesen wie ein Einheimischer behandelt wirst. Ergebnis: beide Karten ausgestellt — 39 Tage über e-Clic und 14 Tage, wenn man weiß, wie es geht. Grund der Online-Ablehnung gefunden: ein alter Aufenthaltstitel in der SS-Datenbank. Lite-Version — ein Bildschirm, zwei Klicks.",
       "description": "Eine Schritt-für-Schritt-Anleitung in fünf Sprachen für alle in Portugal, die „Atualmente não reúne condições para solicitar o CESD por esta via“ bekommen haben. Wofür die Karte da ist und was sie nicht abdeckt, wo sie für Drittstaatsangehörige nicht gilt, die e-Clic-Anfrage mit fertigem Text, erklärte Muster von GIT-53 und MG2, die Unterschrift per Chave Móvel Digital mit der genauen Stempelposition, die Kopie des Aufenthaltstitels, die Antwort mit Unterlagen — und unser Fall nach Datum.",
       "sectors": [
         "Civic Tech",
@@ -578,20 +578,22 @@
       ],
       "stage": "mvp",
       "investment": "",
-      "lookingFor": "Wer die CESD schon auf diesem Weg bekommen hat · Expat-Communitys · Jurist für Sozialversicherung",
-      "demoLink": "https://ajuda.seedwave.pt/cesd/de/",
+      "lookingFor": "Wer die CESD auf diesem Weg bekommen hat · Expat-Communities · Jurist für Sozialversicherung",
+      "demoLink": "https://ajuda.seedwave.pt/cesd/lite/de/",
+      "methodLink": "https://ajuda.seedwave.pt/cesd/de/",
       "page": {
         "how": [
           "Wir sind den Weg selbst gegangen: Online-Ablehnung, e-Clic-Anfrage, Rückfrage der Segurança Social, Unterschrift und Versand.",
           "Wiederholt bei einem zweiten Antrag — gleich mit vollem Paket, um zu sehen, ob sich die Rückfrage vermeiden lässt.",
           "Die Formulare zeigen erfundene Daten; die Erklärungen stehen als Text unter dem Bild, in jeder Sprache.",
-          "Fertige portugiesische Texte mit „Kopieren“-Knopf."
+          "Fertige portugiesische Texte mit „Kopieren“-Knopf.",
+          "Grund der Ablehnung gefunden: Das Portal prüft einen alten Aufenthaltstitel; nach Aktualisierung der Daten bei der SS bestellt man die Karte unter Ações mit zwei Klicks."
         ],
         "proofs": [
-          "Zwei echte Anträge bei der Segurança Social, Oktober 2026.",
-          "Die unauffällige Mechanik der CMD-Signatur gefunden: der Stempel landet im oberen Teil des Feldes — wir lagen zweimal daneben.",
-          "Einschränkungen für Drittstaatsangehörige mit Your Europe und dem Guia Prático CESD abgeglichen.",
-          "Fünf Sprachen vom ersten Tag an: PT · EN · RU · DE · ES."
+          "Zwei echte Anträge — beide Karten ausgestellt: 39 Tage (erster) und 14 Tage (zweiter), November 2026.",
+          "Grund der Online-Ablehnung gefunden: alter Aufenthaltstitel in der Datenbank der Segurança Social; Gültigkeit der Karte = Gültigkeit des Titels.",
+          "Die vorläufige Ersatzbescheinigung (CPS) lädt man unter Ações herunter, während die Karte per Post kommt.",
+          "Zwei Versionen: Lite — ein Bildschirm für Eilige — und die vollständige Anleitung mit Formularen."
         ]
       }
     },

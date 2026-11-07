@@ -569,7 +569,7 @@
       "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"CESD\"><title>CESD</title><rect width=\"100\" height=\"100\" rx=\"23\" fill=\"#EAF0FA\"/><g fill=\"none\" stroke=\"#1D4FA0\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M44 29 A21 21 0 1 0 44 61\"/><path d=\"M76 20 L76 70\"/><path d=\"M76 57 A12 12 0 1 1 52 57 A12 12 0 1 1 76 57\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></g></svg>",
       "category": "Serviços ao cidadão",
       "name": "CESD — Cartão Europeu de Seguro de Doença, quando o portal recusa",
-      "hook": "O cartão gratuito que dá acesso ao serviço público de saúde em qualquer país da UE como a um residente. Quando a Segurança Social Direta não deixa pedir online — o caminho completo: e-Clic, dois formulários e assinatura sem impressora.",
+      "hook": "O cartão gratuito que te garante tratamento no SNS de qualquer país da UE como um local. Resultado: os dois cartões emitidos — 39 dias pelo caminho do e-Clic e 14 dias quando já sabes o que fazer. Encontrámos a causa da recusa online: um título de residência antigo na base da SS. Versão Lite — um ecrã, dois cliques.",
       "description": "Guia passo a passo em cinco línguas para quem vive em Portugal e recebeu «Atualmente não reúne condições para solicitar o CESD por esta via». Para que serve o cartão e o que não cobre, onde não vale para nacionais de países terceiros, o pedido no e-Clic com texto pronto, modelos do GIT-53 e do MG2 explicados, a assinatura com a Chave Móvel Digital com a posição exata do selo, a cópia do título de residência, a resposta com os documentos — e o nosso caso por datas.",
       "sectors": [
         "Civic Tech",
@@ -579,19 +579,21 @@
       "stage": "mvp",
       "investment": "",
       "lookingFor": "Quem já recebeu o CESD por este caminho · Comunidades de imigrantes · Jurista de segurança social",
-      "demoLink": "https://ajuda.seedwave.pt/cesd/",
+      "demoLink": "https://ajuda.seedwave.pt/cesd/lite/",
+      "methodLink": "https://ajuda.seedwave.pt/cesd/",
       "page": {
         "how": [
           "Fizemos o caminho nós próprios: recusa online, pedido no e-Clic, pedido de informação da Segurança Social, assinatura e envio.",
           "Repetimos num segundo pedido — já com o pacote completo, para ver se se evita o pedido de informação.",
           "Os formulários aparecem com dados fictícios; as explicações estão em texto, por baixo da imagem, em cada língua.",
-          "Textos prontos em português, com botão «Copiar»."
+          "Textos prontos em português, com botão «Copiar».",
+          "Encontrámos a causa da recusa: o portal verifica o título de residência antigo; depois de atualizar os dados na SS, o cartão pede-se em Ações com dois cliques."
         ],
         "proofs": [
-          "Dois pedidos reais na Segurança Social, outubro de 2026.",
-          "Descoberta a mecânica pouco óbvia da assinatura CMD: o selo fica na parte de cima da posição — falhámos duas vezes.",
-          "As limitações para nacionais de países terceiros foram confirmadas no Your Europe e no Guia Prático do CESD.",
-          "Cinco línguas desde o primeiro dia: PT · EN · RU · DE · ES."
+          "Dois pedidos reais — os dois cartões emitidos: 39 dias (o primeiro) e 14 dias (o segundo), novembro de 2026.",
+          "Causa da recusa online encontrada: título de residência antigo na base da Segurança Social; a validade do cartão = validade do título.",
+          "O Certificado Provisório de Substituição (CPS) descarrega-se em Ações enquanto o cartão vem pelo correio.",
+          "Duas versões: Lite — um ecrã para quem tem pressa — e o guia completo com formulários."
         ]
       }
     },

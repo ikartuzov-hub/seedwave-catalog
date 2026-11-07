@@ -569,7 +569,7 @@
       "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"CESD\"><title>CESD</title><rect width=\"100\" height=\"100\" rx=\"23\" fill=\"#EAF0FA\"/><g fill=\"none\" stroke=\"#1D4FA0\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M44 29 A21 21 0 1 0 44 61\"/><path d=\"M76 20 L76 70\"/><path d=\"M76 57 A12 12 0 1 1 52 57 A12 12 0 1 1 76 57\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></g></svg>",
       "category": "Civic tech",
       "name": "CESD — European Health Insurance Card when the portal says no",
-      "hook": "The free card that gets you public healthcare in any EU country on local terms. When Segurança Social Direta will not let you apply online — the full route: e-Clic, two forms and signing without a printer.",
+      "hook": "The free card that gets you treated in public healthcare anywhere in the EU like a local. Result: both cards issued — 39 days via e-Clic and 14 days once you know the drill. We found why the portal refuses online: an old residence permit sitting in the SS database. Lite version — one screen, two clicks.",
       "description": "A step-by-step guide in five languages for people living in Portugal who got «Atualmente não reúne condições para solicitar o CESD por esta via». What the card is for and what it does not cover, where it is not valid for non-EU nationals, the e-Clic request with ready text, explained samples of GIT-53 and MG2, signing with Chave Móvel Digital with the exact stamp position, the residence permit copy, the reply with documents — and our case by date.",
       "sectors": [
         "Civic Tech",
@@ -578,20 +578,22 @@
       ],
       "stage": "mvp",
       "investment": "",
-      "lookingFor": "People who already got the CESD this way · Expat communities · Social security lawyer",
-      "demoLink": "https://ajuda.seedwave.pt/cesd/en/",
+      "lookingFor": "People who got their CESD this way · Expat communities · Social security lawyer",
+      "demoLink": "https://ajuda.seedwave.pt/cesd/lite/en/",
+      "methodLink": "https://ajuda.seedwave.pt/cesd/en/",
       "page": {
         "how": [
           "We walked the route ourselves: online refusal, e-Clic request, Segurança Social's request for documents, signing and sending.",
           "We repeated it on a second application — with the full package up front, to see whether the request for documents can be skipped.",
           "The forms are shown with made-up data; explanations are text under the image, in every language.",
-          "Ready Portuguese texts with a «Copy» button."
+          "Ready Portuguese texts with a «Copy» button.",
+          "We found the refusal cause: the portal checks an old residence permit; once your SS data is updated, you order the card under Ações in two clicks."
         ],
         "proofs": [
-          "Two live applications to Segurança Social, October 2026.",
-          "Found the non-obvious CMD signing mechanics: the stamp lands in the upper part of the cell — we missed twice.",
-          "Limits for non-EU nationals checked against Your Europe and the CESD Guia Prático.",
-          "Five languages from day one: PT · EN · RU · DE · ES."
+          "Two real applications — both cards issued: 39 days (first) and 14 days (second), November 2026.",
+          "Online refusal cause found: an old residence permit in the Segurança Social database; card validity = permit validity.",
+          "The provisional certificate (CPS) downloads under Ações while the card is in the post.",
+          "Two versions: Lite — one screen for the busy — and the full guide with forms."
         ]
       }
     },
