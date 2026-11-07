@@ -1,0 +1,30 @@
+{
+  "id": "/quem/de/",
+  "name": "Tenho quem!",
+  "short_name": "Tenho quem!",
+  "description": "Möbelaufbau, Waschmaschinen, Türen, kleine Reparaturen, Umzüge. Nur Handwerker, die jemand empfiehlt, der mit ihnen gearbeitet hat. Die Nachricht geht auf Portugiesisch raus. Kostenlos.",
+  "lang": "de",
+  "start_url": "/quem/de/",
+  "scope": "/quem/",
+  "display": "standalone",
+  "background_color": "#06141b",
+  "theme_color": "#06141b",
+  "icons": [
+    {
+      "src": "/quem/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/quem/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/quem/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "_readme": "Слой 3 (контент). Мастер появляется с кнопкой WhatsApp только при consent=true и заполненном phone (формат 351XXXXXXXXX). Без согласия — карточка показывается без контакта. status: free | busy (+ busyUntil YYYY-MM-DD).",
+  "masters": [
+    {
+      "id": "joao",
+      "name": "João",
+      "photo": null,
+      "phone": null,
+      "consent": false,
+      "area": "Funchal",
+      "langs": ["pt", "en"],
+      "tools": true,
+      "prices": { "half": 80, "day": 100, "dayHours": 8 },
+      "jobs": ["ikea", "appliances", "doors", "shelves", "repairs"],
+      "status": "free",
+      "busyUntil": null,
+      "recommendedBy": "Igor K.",
+      "since": "2026-11-06",
+      "review": {
+        "pt": "Num dia montou uma montanha de móveis IKEA, ligou a máquina de lavar, pendurou portas e varões. Ferramentas próprias. Acabou uma hora mais cedo — e ele próprio cobrou 90 € em vez de 100.",
+        "en": "In one day he assembled a mountain of IKEA furniture, connected the washing machine, hung doors and curtain rails. Own tools. Finished an hour early — and charged 90 € instead of 100 on his own.",
+        "ru": "За день собрал гору мебели IKEA, подключил стиралку, повесил двери и карнизы. Свой инструмент. Закончил на час раньше — и сам взял 90 € вместо 100.",
+        "es": "En un día montó una montaña de muebles IKEA, conectó la lavadora, colgó puertas y barras de cortina. Herramientas propias. Terminó una hora antes — y él mismo cobró 90 € en vez de 100.",
+        "de": "An einem Tag einen Berg IKEA-Möbel aufgebaut, die Waschmaschine angeschlossen, Türen und Gardinenstangen montiert. Eigenes Werkzeug. Eine Stunde früher fertig — und hat von sich aus 90 € statt 100 genommen."
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "/quem/",
+  "name": "Tenho quem!",
+  "short_name": "Tenho quem!",
+  "description": "Montagem de móveis, máquinas, portas, pequenas reparações, mudanças. Só profissionais recomendados por alguém que trabalhou com eles. A mensagem segue em português. Grátis.",
+  "lang": "pt",
+  "start_url": "/quem/",
+  "scope": "/quem/",
+  "display": "standalone",
+  "background_color": "#06141b",
+  "theme_color": "#06141b",
+  "icons": [
+    {
+      "src": "/quem/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/quem/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/quem/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

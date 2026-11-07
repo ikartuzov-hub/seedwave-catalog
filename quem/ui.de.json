@@ -1,0 +1,80 @@
+{
+ "title": "Tenho quem! — vertrauenswürdige Handwerker auf Madeira, mit Übersetzung",
+ "metaDesc": "Möbelaufbau, Waschmaschinen, Türen, kleine Reparaturen, Umzüge. Nur Handwerker, die jemand empfiehlt, der mit ihnen gearbeitet hat. Die Nachricht geht auf Portugiesisch raus. Kostenlos.",
+ "brand": "Tenho quem!",
+ "kicker": "Madeira · kostenlos · ohne Provision",
+ "heroTitle": "Jemand Zuverlässiges gesucht? Ich kenne jemanden!",
+ "heroSub": "Handwerker vor Ort, die schon jemand ausprobiert hat und empfiehlt. Arbeit wählen — die Nachricht geht auf Portugiesisch raus.",
+ "jobLabel": "Was ist zu tun?",
+ "jobs": {
+  "ikea": "Möbel aufbauen (IKEA)",
+  "appliances": "Waschmaschinen & Geräte",
+  "doors": "Türen & Schlösser",
+  "shelves": "Gardinenstangen, Regale, Bilder",
+  "repairs": "Kleine Reparaturen",
+  "electric": "Elektrik & Sanitär",
+  "moving": "Möbeltransport & Umzug"
+ },
+ "jobsMsg": {
+  "ikea": "Möbelaufbau (IKEA)",
+  "appliances": "Geräte anschließen",
+  "doors": "Türen und Schlösser",
+  "shelves": "Gardinenstangen, Regale und Bilder aufhängen",
+  "repairs": "kleine Reparaturen im Haus",
+  "electric": "Elektrik / Sanitär",
+  "moving": "Möbeltransport / Umzug"
+ },
+ "whenLabel": "Bis wann?",
+ "when": {
+  "asap": "So bald wie möglich",
+  "week": "Diese Woche",
+  "next": "Nächste Woche",
+  "nopress": "Keine Eile"
+ },
+ "whenMsg": {
+  "asap": "So bald wie möglich, wenn Sie können.",
+  "week": "Diese Woche, wenn möglich.",
+  "next": "Nächste Woche.",
+  "nopress": "Keine Eile."
+ },
+ "msgT": "Hallo {name}, ich habe Ihren Kontakt bei Tenho quem! (seedwave.pt/quem) gefunden. Ich brauche: {job}. {when} Wann können Sie? Danke!",
+ "mastersTitle": "Wen man empfiehlt",
+ "none": "Dafür haben wir noch niemanden.",
+ "noneCta": "Kennen Sie jemand Gutes? Empfehlen Sie ihn",
+ "half": "halber Tag",
+ "day": "Tag ({h} Std.)",
+ "tools": "Eigenes Werkzeug",
+ "speaks": "Spricht",
+ "langNames": {
+  "pt": "Portugiesisch",
+  "en": "Englisch",
+  "ru": "Russisch",
+  "es": "Spanisch",
+  "de": "Deutsch"
+ },
+ "recBy": "Empfohlen von {who}",
+ "free": "Verfügbar",
+ "busy": "Belegt bis {d}",
+ "write": "Per WhatsApp schreiben",
+ "msgLabel": "Die Nachricht geht auf Portugiesisch",
+ "msgMeaning": "Bedeutung",
+ "pending": "Der Kontakt erscheint, sobald der Handwerker zustimmt.",
+ "report": "Etwas schiefgelaufen? Sagen Sie es dem Empfehlenden",
+ "phrasesTitle": "Taschenübersetzer für den Besuch",
+ "phrasesSub": "Satz antippen — das Handy spricht ihn auf Portugiesisch und zeigt ihn groß.",
+ "voiceNote": "Keine portugiesische Stimme auf dem Handy? Zeigen Sie einfach den Bildschirm — der Satz steht groß da.",
+ "close": "Schließen",
+ "howTitle": "So funktioniert es",
+ "how": [
+  "🤝 Kein Verzeichnis: Für jeden Handwerker bürgt jemand, der mit ihm gearbeitet hat — mit Namen.",
+  "🌍 Sie schreiben in Ihrer Sprache — der Handwerker bekommt die Nachricht auf Portugiesisch per WhatsApp.",
+  "💶 Keine Provision, keine Anmeldung. Auch für den Handwerker kostenlos: nichts zu installieren."
+ ],
+ "honest": "Die Preise sind Angaben des Handwerkers; vor Arbeitsbeginn immer bestätigen. Wir sind keine Agentur und kein Vermittler.",
+ "gdpr": "Sie sind Handwerker und möchten von der Liste? Schreiben Sie uns — wir entfernen Sie am selben Tag.",
+ "recommendSubject": "Tenho quem! — ich empfehle einen Handwerker",
+ "recommendBody": "Name des Handwerkers:\nWas er gemacht hat:\nWas er verlangt hat:\nTelefon / WhatsApp:\nMein Name (wer empfiehlt):\n",
+ "langLabel": "Sprache",
+ "themeLabel": "Design",
+ "demo": "Vorschau"
+}

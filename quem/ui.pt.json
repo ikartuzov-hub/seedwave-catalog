@@ -1,0 +1,80 @@
+{
+ "title": "Tenho quem! — profissionais de confiança na Madeira, com tradução",
+ "metaDesc": "Montagem de móveis, máquinas, portas, pequenas reparações, mudanças. Só profissionais recomendados por alguém que trabalhou com eles. A mensagem segue em português. Grátis.",
+ "brand": "Tenho quem!",
+ "kicker": "Madeira · grátis · sem comissões",
+ "heroTitle": "Precisa de alguém de confiança? Tenho quem!",
+ "heroSub": "Profissionais locais que alguém já experimentou e recomenda. Escolha o trabalho — a mensagem segue em português.",
+ "jobLabel": "O que é preciso fazer?",
+ "jobs": {
+  "ikea": "Montar móveis (IKEA)",
+  "appliances": "Máquinas e eletrodomésticos",
+  "doors": "Portas e fechaduras",
+  "shelves": "Varões, prateleiras, quadros",
+  "repairs": "Pequenas reparações",
+  "electric": "Eletricidade e canalização",
+  "moving": "Transporte e mudanças"
+ },
+ "jobsMsg": {
+  "ikea": "montagem de móveis (IKEA)",
+  "appliances": "instalar máquinas / eletrodomésticos",
+  "doors": "portas e fechaduras",
+  "shelves": "pendurar varões, prateleiras e quadros",
+  "repairs": "pequenas reparações em casa",
+  "electric": "eletricidade / canalização",
+  "moving": "transporte de móveis / mudança"
+ },
+ "whenLabel": "Para quando?",
+ "when": {
+  "asap": "O mais rápido",
+  "week": "Esta semana",
+  "next": "Próxima semana",
+  "nopress": "Sem pressa"
+ },
+ "whenMsg": {
+  "asap": "O mais depressa possível, se puder.",
+  "week": "Esta semana, se possível.",
+  "next": "Na próxima semana.",
+  "nopress": "Sem pressa."
+ },
+ "msgT": "Olá {name}, encontrei o seu contacto no Tenho quem! (seedwave.pt/quem). Preciso de: {job}. {when} Quando pode? Obrigado!",
+ "mastersTitle": "Quem recomendam",
+ "none": "Ainda não temos ninguém de confiança para isto.",
+ "noneCta": "Conhece alguém bom? Recomende",
+ "half": "meio dia",
+ "day": "dia ({h} h)",
+ "tools": "Ferramentas próprias",
+ "speaks": "Fala",
+ "langNames": {
+  "pt": "português",
+  "en": "inglês",
+  "ru": "russo",
+  "es": "espanhol",
+  "de": "alemão"
+ },
+ "recBy": "Recomenda {who}",
+ "free": "Disponível",
+ "busy": "Ocupado até {d}",
+ "write": "Escrever no WhatsApp",
+ "msgLabel": "A mensagem vai em português",
+ "msgMeaning": "Significa",
+ "pending": "O contacto aparece assim que o profissional confirmar.",
+ "report": "Algo correu mal? Avise quem recomendou",
+ "phrasesTitle": "Tradutor de bolso para a visita",
+ "phrasesSub": "Toque numa frase — o telemóvel diz em português e mostra em letra grande.",
+ "voiceNote": "Sem voz portuguesa no telemóvel? Mostre o ecrã — a frase fica em letra grande.",
+ "close": "Fechar",
+ "howTitle": "Como funciona",
+ "how": [
+  "🤝 Não é um catálogo: cada profissional tem alguém que trabalhou com ele e dá o nome.",
+  "🌍 Escreve no seu idioma — o profissional recebe a mensagem em português no WhatsApp.",
+  "💶 Sem comissões, sem registo. Para o profissional também é grátis: não instala nada."
+ ],
+ "honest": "Os preços são os que o profissional nos disse; confirme sempre antes de começar. Não somos agência nem intermediário.",
+ "gdpr": "Profissional e quer sair da lista? Escreva-nos — tiramos no mesmo dia.",
+ "recommendSubject": "Tenho quem! — recomendo um profissional",
+ "recommendBody": "Nome do profissional:\nO que fez:\nQuanto cobrou:\nTelefone / WhatsApp:\nO meu nome (quem recomenda):\n",
+ "langLabel": "Idioma",
+ "themeLabel": "Tema",
+ "demo": "pré-visualização"
+}

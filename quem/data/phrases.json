@@ -1,0 +1,25 @@
+{
+  "_readme": "Слой 3. Карточка-переводчик: фраза произносится по-португальски (PT-PT) голосом телефона. Порядок = порядок встречи.",
+  "phrases": [
+    { "e": "👋", "pt": "Olá, bom dia! Obrigado por ter vindo.", "en": "Hello, good morning! Thanks for coming.", "ru": "Здравствуйте! Спасибо, что пришли.", "es": "¡Hola, buenos días! Gracias por venir.", "de": "Hallo, guten Morgen! Danke, dass Sie gekommen sind." },
+    { "e": "📱", "pt": "Não falo português. Uso o telemóvel para traduzir.", "en": "I don't speak Portuguese. I use my phone to translate.", "ru": "Я не говорю по-португальски. Перевожу телефоном.", "es": "No hablo portugués. Uso el móvil para traducir.", "de": "Ich spreche kein Portugiesisch. Ich übersetze mit dem Handy." },
+    { "e": "🐢", "pt": "Pode falar mais devagar, por favor?", "en": "Could you speak more slowly, please?", "ru": "Можно помедленнее, пожалуйста?", "es": "¿Puede hablar más despacio, por favor?", "de": "Können Sie bitte langsamer sprechen?" },
+    { "e": "👉", "pt": "É isto que precisa de ser feito.", "en": "This is what needs to be done.", "ru": "Вот что нужно сделать.", "es": "Esto es lo que hay que hacer.", "de": "Das muss gemacht werden." },
+    { "e": "📄", "pt": "Aqui estão as instruções de montagem.", "en": "Here are the assembly instructions.", "ru": "Вот инструкция по сборке.", "es": "Aquí están las instrucciones de montaje.", "de": "Hier ist die Montageanleitung." },
+    { "e": "📍", "pt": "Ponha aqui, por favor.", "en": "Put it here, please.", "ru": "Поставьте сюда, пожалуйста.", "es": "Póngalo aquí, por favor.", "de": "Bitte hier hinstellen." },
+    { "e": "⏱️", "pt": "Quanto tempo vai demorar?", "en": "How long will it take?", "ru": "Сколько времени это займёт?", "es": "¿Cuánto tiempo va a tardar?", "de": "Wie lange wird es dauern?" },
+    { "e": "💶", "pt": "Quanto custa no total?", "en": "How much is it in total?", "ru": "Сколько всего будет стоить?", "es": "¿Cuánto cuesta en total?", "de": "Was kostet es insgesamt?" },
+    { "e": "🔩", "pt": "O material está incluído?", "en": "Are the materials included?", "ru": "Материалы входят в цену?", "es": "¿El material está incluido?", "de": "Ist das Material inbegriffen?" },
+    { "e": "🛒", "pt": "Preciso de comprar alguma coisa?", "en": "Do I need to buy anything?", "ru": "Мне нужно что-то купить?", "es": "¿Tengo que comprar algo?", "de": "Muss ich etwas kaufen?" },
+    { "e": "🕘", "pt": "A que horas pode vir?", "en": "What time can you come?", "ru": "Во сколько вы можете прийти?", "es": "¿A qué hora puede venir?", "de": "Um wie viel Uhr können Sie kommen?" },
+    { "e": "📅", "pt": "Pode vir amanhã?", "en": "Can you come tomorrow?", "ru": "Можете прийти завтра?", "es": "¿Puede venir mañana?", "de": "Können Sie morgen kommen?" },
+    { "e": "🧱", "pt": "Cuidado com a parede e o chão, por favor.", "en": "Please be careful with the wall and the floor.", "ru": "Осторожнее со стеной и полом, пожалуйста.", "es": "Cuidado con la pared y el suelo, por favor.", "de": "Bitte vorsichtig mit Wand und Boden." },
+    { "e": "❓", "pt": "Há algum problema?", "en": "Is there a problem?", "ru": "Есть какая-то проблема?", "es": "¿Hay algún problema?", "de": "Gibt es ein Problem?" },
+    { "e": "👀", "pt": "Pode mostrar-me?", "en": "Can you show me?", "ru": "Можете показать?", "es": "¿Me lo puede enseñar?", "de": "Können Sie es mir zeigen?" },
+    { "e": "📦", "pt": "Pode levar as caixas e as embalagens?", "en": "Can you take the boxes and packaging away?", "ru": "Можете забрать коробки и упаковку?", "es": "¿Puede llevarse las cajas y los embalajes?", "de": "Können Sie die Kartons und die Verpackung mitnehmen?" },
+    { "e": "💳", "pt": "Posso pagar em dinheiro ou por MB WAY?", "en": "Can I pay in cash or by MB WAY?", "ru": "Можно заплатить наличными или через MB WAY?", "es": "¿Puedo pagar en efectivo o por MB WAY?", "de": "Kann ich bar oder mit MB WAY bezahlen?" },
+    { "e": "🧾", "pt": "Pode passar fatura com o meu NIF?", "en": "Can you issue an invoice with my tax number (NIF)?", "ru": "Можете выписать фатуру с моим NIF?", "es": "¿Puede hacer factura con mi NIF?", "de": "Können Sie eine Rechnung mit meiner Steuernummer (NIF) ausstellen?" },
+    { "e": "👍", "pt": "Está ótimo, muito obrigado!", "en": "It's great, thank you very much!", "ru": "Отлично, большое спасибо!", "es": "¡Está genial, muchas gracias!", "de": "Super, vielen Dank!" },
+    { "e": "🔁", "pt": "Posso voltar a contactá-lo para outros trabalhos?", "en": "Can I contact you again for other jobs?", "ru": "Можно обращаться к вам ещё?", "es": "¿Puedo volver a contactarle para otros trabajos?", "de": "Darf ich Sie für weitere Arbeiten wieder kontaktieren?" }
+  ]
+}

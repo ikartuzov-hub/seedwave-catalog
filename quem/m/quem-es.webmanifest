@@ -1,0 +1,30 @@
+{
+  "id": "/quem/es/",
+  "name": "Tenho quem!",
+  "short_name": "Tenho quem!",
+  "description": "Montaje de muebles, lavadoras, puertas, pequeñas reparaciones, mudanzas. Solo profesionales recomendados por alguien que trabajó con ellos. El mensaje sale en portugués. Gratis.",
+  "lang": "es",
+  "start_url": "/quem/es/",
+  "scope": "/quem/",
+  "display": "standalone",
+  "background_color": "#06141b",
+  "theme_color": "#06141b",
+  "icons": [
+    {
+      "src": "/quem/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/quem/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/quem/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

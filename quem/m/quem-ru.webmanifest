@@ -1,0 +1,30 @@
+{
+  "id": "/quem/ru/",
+  "name": "Tenho quem!",
+  "short_name": "Tenho quem!",
+  "description": "Сборка мебели, стиралки, двери, мелкий ремонт, перевозка. Только мастера, за которых поручился тот, кто с ними работал. Сообщение уходит мастеру по-португальски. Бесплатно.",
+  "lang": "ru",
+  "start_url": "/quem/ru/",
+  "scope": "/quem/",
+  "display": "standalone",
+  "background_color": "#06141b",
+  "theme_color": "#06141b",
+  "icons": [
+    {
+      "src": "/quem/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/quem/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/quem/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

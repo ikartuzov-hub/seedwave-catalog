@@ -1,0 +1,80 @@
+{
+ "title": "Tenho quem! — trusted local pros in Madeira, with translation",
+ "metaDesc": "Furniture assembly, appliances, doors, small repairs, moving. Only pros recommended by someone who worked with them. Your message goes out in Portuguese. Free.",
+ "brand": "Tenho quem!",
+ "kicker": "Madeira · free · no commissions",
+ "heroTitle": "Need someone you can trust? I've got someone!",
+ "heroSub": "Local pros that someone has already tried and recommends. Pick the job — your message goes out in Portuguese.",
+ "jobLabel": "What needs doing?",
+ "jobs": {
+  "ikea": "Furniture assembly (IKEA)",
+  "appliances": "Washing machines & appliances",
+  "doors": "Doors & locks",
+  "shelves": "Curtain rails, shelves, pictures",
+  "repairs": "Small repairs",
+  "electric": "Electrics & plumbing",
+  "moving": "Furniture transport & moving"
+ },
+ "jobsMsg": {
+  "ikea": "furniture assembly (IKEA)",
+  "appliances": "installing appliances",
+  "doors": "doors and locks",
+  "shelves": "hanging curtain rails, shelves and pictures",
+  "repairs": "small home repairs",
+  "electric": "electrics / plumbing",
+  "moving": "furniture transport / moving"
+ },
+ "whenLabel": "When?",
+ "when": {
+  "asap": "ASAP",
+  "week": "This week",
+  "next": "Next week",
+  "nopress": "No rush"
+ },
+ "whenMsg": {
+  "asap": "As soon as possible, if you can.",
+  "week": "This week, if possible.",
+  "next": "Next week.",
+  "nopress": "No rush."
+ },
+ "msgT": "Hello {name}, I found your contact on Tenho quem! (seedwave.pt/quem). I need: {job}. {when} When can you come? Thank you!",
+ "mastersTitle": "Who people recommend",
+ "none": "No trusted pro for this yet.",
+ "noneCta": "Know someone good? Recommend them",
+ "half": "half day",
+ "day": "day ({h} h)",
+ "tools": "Own tools",
+ "speaks": "Speaks",
+ "langNames": {
+  "pt": "Portuguese",
+  "en": "English",
+  "ru": "Russian",
+  "es": "Spanish",
+  "de": "German"
+ },
+ "recBy": "Recommended by {who}",
+ "free": "Available",
+ "busy": "Busy until {d}",
+ "write": "Message on WhatsApp",
+ "msgLabel": "The message goes in Portuguese",
+ "msgMeaning": "It means",
+ "pending": "The contact appears as soon as the pro confirms.",
+ "report": "Something went wrong? Tell the person who recommended",
+ "phrasesTitle": "Pocket translator for the visit",
+ "phrasesSub": "Tap a phrase — your phone says it in Portuguese and shows it in large print.",
+ "voiceNote": "No Portuguese voice on your phone? Just show the screen — the phrase is in large print.",
+ "close": "Close",
+ "howTitle": "How it works",
+ "how": [
+  "🤝 Not a directory: every pro has someone who worked with them and puts their name on it.",
+  "🌍 You write in your language — the pro gets the message in Portuguese on WhatsApp.",
+  "💶 No commissions, no sign-up. Free for the pro too: nothing to install."
+ ],
+ "honest": "Prices are what the pro told us; always confirm before work starts. We are not an agency or a middleman.",
+ "gdpr": "Are you a pro and want to be removed? Write to us — we remove you the same day.",
+ "recommendSubject": "Tenho quem! — I recommend a pro",
+ "recommendBody": "Pro's name:\nWhat they did:\nHow much they charged:\nPhone / WhatsApp:\nMy name (who recommends):\n",
+ "langLabel": "Language",
+ "themeLabel": "Theme",
+ "demo": "preview"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "/quem/en/",
+  "name": "Tenho quem!",
+  "short_name": "Tenho quem!",
+  "description": "Furniture assembly, appliances, doors, small repairs, moving. Only pros recommended by someone who worked with them. Your message goes out in Portuguese. Free.",
+  "lang": "en",
+  "start_url": "/quem/en/",
+  "scope": "/quem/",
+  "display": "standalone",
+  "background_color": "#06141b",
+  "theme_color": "#06141b",
+  "icons": [
+    {
+      "src": "/quem/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/quem/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/quem/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
