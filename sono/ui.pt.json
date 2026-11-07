@@ -8,7 +8,7 @@
   "heroTitle": "Dorme mal? Vamos ver a que porta deve bater.",
   "heroSub": "Quatro toques, sem escrever nada. Um semáforo claro, o médico certo na Madeira e uma frase pronta para lhe mostrar — na língua dele.",
   "introLabel": "A primeira porta da família Portas",
-  "introNote": "Nada é guardado: as respostas ficam no seu telemóvel.",
+  "introNote": "As respostas ficam no seu telemóvel. Só sai uma contagem anónima: a cor do semáforo e a língua.",
   "startBtn": "Começar",
   "soon": "Em construção — em breve",
   "aboutTitle": "O que a Porta do Sono faz",
@@ -16,7 +16,7 @@
     "door": "Porta: quatro perguntas por botões — ressonar, sono durante o dia, tensão e peso, idade — e um semáforo: tranquilo · vale a pena ir · não adiar.",
     "show": "Mostrar ao médico: um ecrã em português com as suas respostas e uma frase pronta. Basta mostrar o telemóvel — sem barreira de língua.",
     "routes": "Caminho: pelo SNS (médico de família → especialista) ou privado na Madeira — só locais verificados, com data de verificação.",
-    "private": "Privado: nada sai do seu telemóvel. Sem registo, sem conta, sem dados guardados."
+    "private": "Privado: as respostas não saem do seu telemóvel — só uma contagem anónima (cor do semáforo e língua). Sem registo, sem conta."
   },
   "disclaimer": "Isto não é uma consulta médica — fale com o seu médico.",
   "orient": "Orientação, não um teste validado.",
@@ -202,7 +202,7 @@
       "«Onde ir»: pelo SNS ou privado na Madeira — só locais verificados, com data."
     ],
     "wow": "Com cada resposta, acende-se uma janela na casa. À quarta, a porta abre-se — e amanhece.",
-    "privacy": "Nada é guardado. Sem registo, sem conta. As respostas ficam no seu telemóvel.",
+    "privacy": "As respostas ficam no seu telemóvel — só sai uma contagem anónima: a cor do semáforo e a língua. Sem registo, sem conta.",
     "honest": "Não é uma consulta médica e não é um teste validado — é uma orientação para dar o primeiro passo.",
     "cta": "Abrir a porta",
     "shareBtn": "Enviar a quem dorme mal",

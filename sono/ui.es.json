@@ -8,7 +8,7 @@
   "heroTitle": "¿Duerme mal? Veamos a qué puerta llamar.",
   "heroSub": "Cuatro toques, sin escribir nada. Un semáforo claro, el médico adecuado en Madeira y una frase lista para enseñársela — en su idioma.",
   "introLabel": "La primera puerta de la familia Portas",
-  "introNote": "No se guarda nada: sus respuestas se quedan en su teléfono.",
+  "introNote": "Sus respuestas se quedan en su teléfono. Solo sale un recuento anónimo: el color del semáforo y el idioma.",
   "startBtn": "Empezar",
   "soon": "En construcción — muy pronto",
   "aboutTitle": "Qué hace Porta do Sono",
@@ -16,7 +16,7 @@
     "door": "Puerta: cuatro preguntas con botones — ronquidos, sueño durante el día, tensión y peso, edad — y un semáforo: tranquilo · merece la pena ir · no lo deje.",
     "show": "Enseñar al médico: una pantalla en portugués con sus respuestas y una frase lista. Solo tiene que enseñar el teléfono — sin barrera de idioma.",
     "routes": "Camino: por el SNS (médico de familia → especialista) o por la vía privada en Madeira — solo lugares verificados, con fecha de verificación.",
-    "private": "Privado: nada sale de su teléfono. Sin registro, sin cuenta, sin datos guardados."
+    "private": "Privado: sus respuestas no salen de su teléfono — solo un recuento anónimo (color del semáforo e idioma). Sin registro, sin cuenta."
   },
   "disclaimer": "Esto no es una consulta médica — hable con su médico.",
   "orient": "Orientación, no un test validado.",
@@ -202,7 +202,7 @@
       "«Dónde ir»: por el SNS o por la vía privada en Madeira — solo lugares verificados, con fecha."
     ],
     "wow": "Con cada respuesta se enciende una ventana en la casa. A la cuarta, la puerta se abre — y amanece.",
-    "privacy": "No se guarda nada. Sin registro, sin cuenta. Sus respuestas se quedan en su teléfono.",
+    "privacy": "Sus respuestas se quedan en su teléfono — solo sale un recuento anónimo: el color del semáforo y el idioma. Sin registro, sin cuenta.",
     "honest": "No es una consulta médica ni un test validado — es una orientación para dar el primer paso.",
     "cta": "Abrir la puerta",
     "shareBtn": "Enviar a quien duerme mal",

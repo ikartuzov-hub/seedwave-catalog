@@ -271,7 +271,7 @@
   },
   "icsHook": "https://hook.eu1.make.com/bjpax9l2ambbav2w32vpmkj7t4kl8yvo",
   "_icsHook": "Общий механизм iOS-календаря SeedWave (тот же, что у nCr и capsula): POST d=ics → 303 → GET text/calendar.",
-  "botLive": false,
+  "botLive": true,
   "bot": "https://t.me/SeedWaveBot?start=",
   "botPayload": "porta_sono_{profile}_{lang}",
   "_botPayload": "{profile} = зона (green/yellow/red); в бот уходит только код зоны и язык, не ответы. Кнопка скрыта, пока botLive=false (этап 3).",
@@ -287,6 +287,6 @@
     "day.drive": "drive"
   },
   "_warnings": "строка-предупреждение на результате по совпавшему ответу; тексты ui.warn.*",
-  "counter": null,
-  "_counter": "Этап 3: анонимный пинг «дверь пройдена · зона · язык» → Make webhook → data store. Хранится только счёт, не ответы. Включается URL вебхука только после «да» Игоря (на странице обещано «ничего не уходит с телефона» — текст introNote/about.private тогда уточнить)."
+  "counter": "https://hook.eu1.make.com/dboi0l8lela71m5pu1q3b6o7fs7yolay",
+  "_counter": "Этап 3: анонимный пинг «дверь пройдена · зона · язык» → Make webhook 4060334 (сценарий 8437664) → Notion «🔢 Portas — счётчик». Хранится только счёт, не ответы. Включается URL вебхука только после «да» Игоря (на странице обещано «ничего не уходит с телефона» — текст introNote/about.private тогда уточнить)."
 }

@@ -174,7 +174,7 @@
   let counted = false;
   function count(z) {
     if (!R.counter || counted || isBot) return; counted = true;
-    try { fetch(R.counter, { method: 'POST', mode: 'no-cors', keepalive: true, headers: { 'Content-Type': 'text/plain' }, body: JSON.stringify({ door: 'sono', zone: z, lang: LANG }) }).catch(() => {}); } catch (e) {}
+    try { fetch(R.counter, { method: 'POST', mode: 'no-cors', keepalive: true, body: new URLSearchParams({ door: 'sono', zone: z, lang: LANG }) }).catch(() => {}); } catch (e) {}
   }
 
   function routeHTML(r, sp) {
