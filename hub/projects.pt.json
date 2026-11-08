@@ -655,6 +655,35 @@
           "Animação com o Zé que se entende sem palavras — PT, RU, EN, formatos 9:16 e 1:1."
         ]
       }
+    },
+    {
+      "id": "cmd",
+      "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Chave\"><title>Chave</title><rect width=\"100\" height=\"100\" rx=\"23\" fill=\"#E0F2EE\"/><g fill=\"none\" stroke=\"#0E6E63\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 45 A14 14 0 1 0 48 45 A14 14 0 1 0 20 45\"/><path d=\"M48 45 L80 45\"/><path d=\"M70 45 L70 56\"/><path d=\"M79 45 L79 53\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></g></svg>",
+      "category": "Serviços ao cidadão",
+      "name": "Chave — Onde está a minha Chave Móvel Digital?",
+      "hook": "As pessoas ativam a Chave Móvel Digital e depois procuram-na como se fosse um cartão. Não é: é o número de telemóvel mais o PIN. Uma página, três passos e a resposta para quem esqueceu o PIN.",
+      "description": "Guia em cinco línguas, com letra grande, para quem tem a CMD e não sabe onde ela «está»: a fórmula número + PIN, entrar em três passos com ecrãs desenhados, seis botões para o que corre mal (PIN esquecido, chave bloqueada, número novo, SMS que não chega, assinatura, validade) com a fonte oficial, um cartão-lembrete para imprimir e o desenho animado do Zé com a D. Rosa.",
+      "sectors": [
+        "Civic Tech",
+        "Seniores"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Lojas e Espaços do Cidadão · Juntas de freguesia e centros de dia · Quem ensina idosos a usar o telemóvel",
+      "demoLink": "https://ajuda.seedwave.pt/cmd/",
+      "page": {
+        "how": [
+          "Nasceu de uma conversa real: um vizinho ativou a chave e, dias depois, já não sabia onde ela estava nem qual era o PIN.",
+          "Primeiro conselho para o PIN esquecido: a folha de confirmação que se recebe no balcão — muita gente apontou lá o PIN.",
+          "Todas as respostas vêm das páginas oficiais gov.pt; os ecrãs são esquemas desenhados, não cópias.",
+          "Cinco línguas desde o primeiro dia: PT · EN · RU · DE · ES."
+        ],
+        "proofs": [
+          "Uma página, letra grande, sem nada para escrever: tocar e ler.",
+          "Cartão-lembrete para o frigorífico, imprime-se com um botão.",
+          "Desenho animado do Zé com a D. Rosa — PT, RU, EN, em 9:16 e 1:1."
+        ]
+      }
     }
   ]
 }

@@ -655,6 +655,35 @@
           "Zé-Zeichentrick ohne Worte verständlich — PT, RU, EN, 9:16 und 1:1."
         ]
       }
+    },
+    {
+      "id": "cmd",
+      "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Chave\"><title>Chave</title><rect width=\"100\" height=\"100\" rx=\"23\" fill=\"#E0F2EE\"/><g fill=\"none\" stroke=\"#0E6E63\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 45 A14 14 0 1 0 48 45 A14 14 0 1 0 20 45\"/><path d=\"M48 45 L80 45\"/><path d=\"M70 45 L70 56\"/><path d=\"M79 45 L79 53\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></g></svg>",
+      "category": "Bürgerdienste",
+      "name": "Chave — Wo ist meine Chave Móvel Digital?",
+      "hook": "Viele aktivieren die Chave Móvel Digital und suchen sie dann wie eine Karte. Sie ist keine: Sie ist die Handynummer plus PIN. Eine Seite, drei Schritte und die Antwort für alle, die die PIN vergessen haben.",
+      "description": "Ein Leitfaden in großer Schrift und fünf Sprachen für alle mit CMD, die nicht wissen, wo sie «ist»: die Formel Nummer + PIN, Anmelden in drei Schritten mit gezeichneten Bildschirmen, sechs Schaltflächen für Probleme (PIN vergessen, Schlüssel gesperrt, neue Nummer, SMS kommt nicht, Signatur, Gültigkeit) mit offizieller Quelle, eine Merkkarte zum Drucken und der Zeichentrick mit Zé und Dona Rosa.",
+      "sectors": [
+        "Civic Tech",
+        "Senioren"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Lojas und Espaços do Cidadão · Juntas de freguesia und Tagesstätten · Wer Senioren das Handy erklärt",
+      "demoLink": "https://ajuda.seedwave.pt/cmd/de/",
+      "page": {
+        "how": [
+          "Entstanden aus einem echten Chat: Ein Bekannter aktivierte den Schlüssel und wusste Tage später nicht mehr, wo er ist und wie die PIN lautet.",
+          "Erster Tipp bei vergessener PIN: das Bestätigungsblatt vom Schalter – viele haben die PIN dort notiert.",
+          "Alle Antworten stammen von offiziellen gov.pt-Seiten; die Bildschirme sind gezeichnete Schemata, keine Kopien.",
+          "Fünf Sprachen ab dem ersten Tag: PT · EN · RU · DE · ES."
+        ],
+        "proofs": [
+          "Eine Seite, große Schrift, nichts zu tippen: tippen und lesen.",
+          "Merkkarte für den Kühlschrank, mit einem Knopf gedruckt.",
+          "Zeichentrick mit Zé und Dona Rosa — PT, RU, EN, in 9:16 und 1:1."
+        ]
+      }
     }
   ]
 }

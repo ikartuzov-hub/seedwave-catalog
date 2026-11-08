@@ -655,6 +655,35 @@
           "Wordless Zé cartoon — PT, RU, EN, 9:16 and 1:1."
         ]
       }
+    },
+    {
+      "id": "cmd",
+      "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Chave\"><title>Chave</title><rect width=\"100\" height=\"100\" rx=\"23\" fill=\"#E0F2EE\"/><g fill=\"none\" stroke=\"#0E6E63\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 45 A14 14 0 1 0 48 45 A14 14 0 1 0 20 45\"/><path d=\"M48 45 L80 45\"/><path d=\"M70 45 L70 56\"/><path d=\"M79 45 L79 53\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></g></svg>",
+      "category": "Civic tech",
+      "name": "Chave — Where is my Chave Móvel Digital?",
+      "hook": "People activate Portugal's Digital Mobile Key and then look for it as if it were a card. It isn't: it's the phone number plus the PIN. One page, three steps, and the answer for those who forgot the PIN.",
+      "description": "A large-print guide in five languages for people who have a CMD and don't know where it «is»: the number + PIN formula, logging in in three steps with drawn screens, six buttons for what goes wrong (forgotten PIN, blocked key, new number, SMS not arriving, signing, validity) with the official source, a printable reminder card and the Zé and Dona Rosa cartoon.",
+      "sectors": [
+        "Civic Tech",
+        "Seniors"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Lojas and Espaços do Cidadão · Parish councils and day centres · People teaching seniors to use phones",
+      "demoLink": "https://ajuda.seedwave.pt/cmd/en/",
+      "page": {
+        "how": [
+          "Born from a real chat: a neighbour activated the key and a few days later no longer knew where it was or what the PIN was.",
+          "First tip for a forgotten PIN: the confirmation sheet handed out at the counter — many people wrote the PIN on it.",
+          "Every answer comes from official gov.pt pages; the screens are drawn diagrams, not copies.",
+          "Five languages from day one: PT · EN · RU · DE · ES."
+        ],
+        "proofs": [
+          "One page, large print, nothing to type: tap and read.",
+          "A reminder card for the fridge, printed with one button.",
+          "Zé and Dona Rosa cartoon — PT, RU, EN, in 9:16 and 1:1."
+        ]
+      }
     }
   ]
 }

@@ -319,13 +319,34 @@
         "es": "Bajar el alquiler puede rendir más",
         "de": "Niedrigere Miete, mehr Ertrag"
       }
+    },
+    "cmd": {
+      "url": "https://ajuda.seedwave.pt/cmd/",
+      "match": [
+        "ajuda.seedwave.pt/cmd/"
+      ],
+      "label": {
+        "pt": "Chave Móvel Digital",
+        "en": "Digital Mobile Key",
+        "ru": "Ключ CMD",
+        "es": "Chave Móvel Digital",
+        "de": "Chave Móvel Digital"
+      },
+      "tagline": {
+        "pt": "Número + PIN = a sua chave",
+        "en": "Number + PIN = your key",
+        "ru": "Номер + PIN = ваш ключ",
+        "es": "Número + PIN = tu llave",
+        "de": "Nummer + PIN = Ihr Schlüssel"
+      }
     }
   },
   "related": {
     "ajuda.seedwave.pt/cesd/": [
       "voos",
       "aima",
-      "prazos"
+      "prazos",
+      "cmd"
     ],
     "ajuda.seedwave.pt/subsidio/": [
       "cesd",
@@ -339,12 +360,14 @@
     ],
     "ajuda.seedwave.pt/aima/": [
       "cesd",
-      "voos"
+      "voos",
+      "cmd"
     ],
     "ajuda.seedwave.pt/": [
       "cesd",
       "voos",
-      "aima"
+      "aima",
+      "cmd"
     ],
     "prazos.seedwave.pt/": [
       "nam",
@@ -386,6 +409,11 @@
       "cesd",
       "prazos",
       "aima"
+    ],
+    "ajuda.seedwave.pt/cmd/": [
+      "cesd",
+      "aima",
+      "voos"
     ]
   }
 }
