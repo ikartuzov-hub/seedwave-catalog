@@ -1,6 +1,23 @@
 {
   "projects": [
     {
+      "id": "lis",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
+      "category": "KI / Technologie",
+      "name": "Lis — dein KI-Sekretär in zwei Sitzungen",
+      "hook": "E-Mail und Kalender von einem Agenten geführt, Tagesplan per Stimme, dein eigenes Claude-Projekt. Zwei Online-Sitzungen mit Igor, der selbst so auf Madeira lebt, plus eine Woche Begleitung. Du gehst nicht mit Ratschlägen, sondern mit einem arbeitenden Sekretär.",
+      "description": "Stufe 1 des Programms «Insel». Was der Sekretär tut: sortiert die Eingänge, hält offene Fragen an einem Ort, erinnert, bereitet Entwürfe vor, nimmt Sprache und Fotos an. Was du brauchst: bezahltes Claude, Smartphone, Computer und Lust anzufangen. Alles entsteht in deinem Claude und bleibt deins. Danach nach Wunsch: das Retreat «Autopilot auf Madeira» und Begleitung.",
+      "sectors": [
+        "AI",
+        "Technology"
+      ],
+      "stage": "first",
+      "investment": "",
+      "lookingFor": "Erste 3 Kunden",
+      "demoLink": "https://t.me/LisDemBot?start=hub",
+      "moreLink": "https://l.seedwave.pt/"
+    },
+    {
       "id": "dubai-madeira-cooperative",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#2A8FC0\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M34 20 L34 74\"/><path d=\"M34 20 C64 20 64 74 34 74\"/><path d=\"M18 88 Q28 82 38 88 Q48 94 58 88 Q68 82 78 88\"/></svg>",
       "category": "Immobilien",
@@ -212,23 +229,6 @@
       "lookingFor": "Unternehmen auf Madeira, die einstellen · Restaurants & Dienstleistungen",
       "demoLink": "https://contratar.seedwave.pt/",
       "moreLink": "https://contratar.seedwave.pt/flyer.html"
-    },
-    {
-      "id": "lis",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
-      "category": "KI / Technologie",
-      "name": "Lis — lebt deine Routine für dich",
-      "hook": "Persönlicher KI-Sekretär auf Cowork und Claude. Du verbindest einmal E-Mail, Kalender, Bank und Notizen — danach ordnet er den Fluss von selbst. Von dir: nur «Ja» oder «Nein».",
-      "description": "Kein Eingangs-Bot, den du füttern musst, sondern eine Schicht auf deinem Claude: die Quellen füllen Lis von selbst, er versteht jeden Punkt, erledigt Umkehrbares still und bringt dir nur das Ergebnis und eine Ja/Nein-Weiche. Willst du etwas nicht vergessen — schick ein Foto, den Rest macht er.",
-      "sectors": [
-        "AI",
-        "Technology"
-      ],
-      "stage": "mvp",
-      "investment": "",
-      "lookingFor": "Content-Creator · Vertrieb · Tester",
-      "demoLink": "https://l.seedwave.pt/onboarding.html",
-      "moreLink": "https://l.seedwave.pt/"
     },
     {
       "id": "ntm",

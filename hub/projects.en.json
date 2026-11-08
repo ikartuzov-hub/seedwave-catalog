@@ -1,6 +1,23 @@
 {
   "projects": [
     {
+      "id": "lis",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
+      "category": "AI / Technology",
+      "name": "Lis — your AI secretary in two sessions",
+      "hook": "Email and calendar run by an agent, a voice daily plan, your own Claude Project. Two online sessions with Igor, who lives this way on Madeira himself, plus a week of follow-up. You leave not with advice but with a working secretary.",
+      "description": "Step 1 of the “Island” programme. What the secretary does: sorts incoming mail, keeps open questions in one place, reminds, drafts replies, takes voice and photos. What you need: a paid Claude plan, a smartphone, a computer and the wish to start. Everything is built inside your Claude and stays yours. Next, if you want: the “Autopilot on Madeira” retreat and ongoing support.",
+      "sectors": [
+        "AI",
+        "Technology"
+      ],
+      "stage": "first",
+      "investment": "",
+      "lookingFor": "First 3 clients",
+      "demoLink": "https://t.me/LisDemBot?start=hub",
+      "moreLink": "https://l.seedwave.pt/"
+    },
+    {
       "id": "dubai-madeira-cooperative",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#2A8FC0\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M34 20 L34 74\"/><path d=\"M34 20 C64 20 64 74 34 74\"/><path d=\"M18 88 Q28 82 38 88 Q48 94 58 88 Q68 82 78 88\"/></svg>",
       "category": "Real Estate",
@@ -212,23 +229,6 @@
       "lookingFor": "Madeira businesses that hire · Restaurants & services",
       "demoLink": "https://contratar.seedwave.pt/",
       "moreLink": "https://contratar.seedwave.pt/flyer.html"
-    },
-    {
-      "id": "lis",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
-      "category": "AI / Technology",
-      "name": "Lis — lives your routine for you",
-      "hook": "A personal AI secretary on top of Cowork and Claude. Connect email, calendar, bank and notes once — then it sorts the flow itself. From you: just ‘Yes’ or ‘No’.",
-      "description": "Not an inbox bot you have to feed, but a layer on top of your Claude: your sources fill Lis themselves, it understands every item, handles the reversible silently, and brings you only the result and a Yes/No fork. Want to remember something — just drop a photo, it does the rest.",
-      "sectors": [
-        "AI",
-        "Technology"
-      ],
-      "stage": "mvp",
-      "investment": "",
-      "lookingFor": "Creator · Salesperson · Tester",
-      "demoLink": "https://l.seedwave.pt/onboarding.html",
-      "moreLink": "https://l.seedwave.pt/"
     },
     {
       "id": "ntm",
