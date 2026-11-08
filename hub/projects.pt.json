@@ -2,11 +2,11 @@
   "projects": [
     {
       "id": "lis",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#6D5DFC\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
       "category": "IA / Tecnologia",
-      "name": "Lis — o teu secretário de IA em duas sessões",
-      "hook": "Email e calendário geridos por um agente, plano do dia por voz, o teu próprio Projeto Claude. Duas sessões online com o Igor, que vive assim na Madeira, e uma semana de acompanhamento. Sais não com conselhos, mas com um secretário a funcionar.",
-      "description": "Etapa 1 do programa «Ilha». O que faz o secretário: trata do correio recebido, mantém as questões em aberto num só sítio, lembra, prepara rascunhos, recebe voz e fotos. O que precisas: Claude pago, smartphone, computador e vontade. Tudo é montado no teu Claude e fica teu. Depois, se quiseres: o retiro «Piloto automático na Madeira» e acompanhamento.",
+      "name": "Lis — secretário de IA sobre os teus dados",
+      "hook": "Daqui a um ano toda a gente terá um secretário de IA. O teu pode começar na terça-feira",
+      "description": "O Lis já trata do correio recebido, marca reuniões e responde por voz enquanto conduzes. Não é uma aplicação — é um agente sobre os teus dados, afinado para ti em duas sessões online. Depois trabalha sozinho, e tu reparas que o dia ficou mais longo. Feito na Madeira — onde há oceano que chegue para olhar em frente. Bot de demonstração: dois minutos, quatro botões, sem registo. Terça-feira serve.",
       "sectors": [
         "AI",
         "Technology"

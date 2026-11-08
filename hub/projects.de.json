@@ -2,11 +2,11 @@
   "projects": [
     {
       "id": "lis",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#6D5DFC\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
       "category": "KI / Technologie",
-      "name": "Lis — dein KI-Sekretär in zwei Sitzungen",
-      "hook": "E-Mail und Kalender von einem Agenten geführt, Tagesplan per Stimme, dein eigenes Claude-Projekt. Zwei Online-Sitzungen mit Igor, der selbst so auf Madeira lebt, plus eine Woche Begleitung. Du gehst nicht mit Ratschlägen, sondern mit einem arbeitenden Sekretär.",
-      "description": "Stufe 1 des Programms «Insel». Was der Sekretär tut: sortiert die Eingänge, hält offene Fragen an einem Ort, erinnert, bereitet Entwürfe vor, nimmt Sprache und Fotos an. Was du brauchst: bezahltes Claude, Smartphone, Computer und Lust anzufangen. Alles entsteht in deinem Claude und bleibt deins. Danach nach Wunsch: das Retreat «Autopilot auf Madeira» und Begleitung.",
+      "name": "Lis — ein KI-Sekretär auf deinen Daten",
+      "hook": "In einem Jahr hat jeder einen KI-Sekretär. Deiner kann am Dienstag anfangen",
+      "description": "Lis sortiert schon deine Eingänge, legt Termine an und antwortet per Stimme, während du fährst. Keine App — ein Agent auf deinen Daten, in zwei Online-Sitzungen auf dich eingestellt. Danach arbeitet er allein, und du merkst, dass der Tag länger geworden ist. Gemacht auf Madeira — wo genug Ozean ist, um nach vorn zu schauen. Demo-Bot: zwei Minuten, vier Buttons, keine Anmeldung. Dienstag passt.",
       "sectors": [
         "AI",
         "Technology"
