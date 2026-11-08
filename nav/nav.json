@@ -299,6 +299,26 @@
         "es": "¿Duerme mal? Cuatro toques — y el médico adecuado en Madeira",
         "de": "Schlecht geschlafen? Viermal tippen — und der richtige Arzt auf Madeira"
       }
+    },
+    "renda": {
+      "url": "https://ajuda.seedwave.pt/renda/",
+      "match": [
+        "ajuda.seedwave.pt/renda/"
+      ],
+      "label": {
+        "pt": "Renda 10 %",
+        "en": "Rent 10%",
+        "ru": "Аренда 10 %",
+        "es": "Alquiler 10 %",
+        "de": "Miete 10 %"
+      },
+      "tagline": {
+        "pt": "Baixar a renda pode render mais",
+        "en": "A lower rent can earn more",
+        "ru": "Цена ниже — доход выше",
+        "es": "Bajar el alquiler puede rendir más",
+        "de": "Niedrigere Miete, mehr Ertrag"
+      }
     }
   },
   "related": {
@@ -361,6 +381,11 @@
       "cesd",
       "aima",
       "voos"
+    ],
+    "ajuda.seedwave.pt/renda/": [
+      "cesd",
+      "prazos",
+      "aima"
     ]
   }
 }

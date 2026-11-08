@@ -626,6 +626,35 @@
           "Series A: the first page of a series about AIMA."
         ]
       }
+    },
+    {
+      "id": "renda",
+      "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Renda\"><title>Renda</title><rect width=\"100\" height=\"100\" rx=\"23\" fill=\"#FBE9DF\"/><g fill=\"none\" stroke=\"#A8461F\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M24 48 L50 24 L76 48\"/><path d=\"M32 43 L32 70 L68 70 L68 43\"/><path d=\"M45 70 L45 57 L55 57 L55 70\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></g></svg>",
+      "category": "Civic tech",
+      "name": "Renda — rent up to €2,300: 10% tax instead of 25%",
+      "hook": "Since 2026, Portuguese residential rents up to €2,300 a month are taxed at 10%, not 25%. The landlord of our former flat cut the rent from €2,500 to €2,300 — and now nets €2,340 more a year.",
+      "description": "A calculator for landlords and tenants in five languages: move the slider and see the net at your current rent and at €2,300. The golden zone €2,301–2,760 where lowering pays; the «€1 over — 25% on everything» trap; a «Send to my landlord» button for tenants; IRC, RSAA 0% and a cartoon with Zé.",
+      "sectors": [
+        "Civic Tech",
+        "Real Estate"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Contabilista to review · Estate agencies · Tenant communities",
+      "demoLink": "https://ajuda.seedwave.pt/renda/en/",
+      "page": {
+        "how": [
+          "Started from a real case: we paid €2,500 for two years; after us the flat was relisted at €2,300.",
+          "Checked against Decreto-Lei 97/2026 (art. 45-C EBF) via OCC and MCS analyses.",
+          "Worked out the break-even: 2,300 × 0.90 / 0.75 = €2,760.",
+          "Five languages from day one: PT · EN · RU · DE · ES."
+        ],
+        "proofs": [
+          "€22,500 vs €24,840 net per year — the same two-bedroom flat in Funchal.",
+          "Cap = 2.5× minimum wage, updated yearly; relief covers income 2026–2029.",
+          "Wordless Zé cartoon — PT, RU, EN, 9:16 and 1:1."
+        ]
+      }
     }
   ]
 }

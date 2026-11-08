@@ -626,6 +626,35 @@
           "Serie A: la primera página de una serie sobre la AIMA."
         ]
       }
+    },
+    {
+      "id": "renda",
+      "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Renda\"><title>Renda</title><rect width=\"100\" height=\"100\" rx=\"23\" fill=\"#FBE9DF\"/><g fill=\"none\" stroke=\"#A8461F\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M24 48 L50 24 L76 48\"/><path d=\"M32 43 L32 70 L68 70 L68 43\"/><path d=\"M45 70 L45 57 L55 57 L55 70\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></g></svg>",
+      "category": "Servicios al ciudadano",
+      "name": "Renda — alquiler hasta 2.300 €: 10 % de impuesto en vez de 25 %",
+      "hook": "Desde 2026, en Portugal los alquileres de vivienda de hasta 2.300 € al mes tributan al 10 % y no al 25 %. El propietario de nuestro antiguo piso bajó de 2.500 a 2.300 € — y ahora gana 2.340 € más al año.",
+      "description": "Calculadora para propietarios e inquilinos en cinco idiomas: mueva el control y vea el neto con el alquiler actual y con 2.300 €. Zona dorada 2.301–2.760 €, donde bajar compensa; la trampa «1 € de más — 25 % sobre todo»; botón «Enviar al propietario»; IRC, RSAA 0 % y una animación con Zé.",
+      "sectors": [
+        "Civic Tech",
+        "Inmobiliario"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Contabilista para revisar · Agencias inmobiliarias · Comunidades de inquilinos",
+      "demoLink": "https://ajuda.seedwave.pt/renda/es/",
+      "page": {
+        "how": [
+          "Partimos de un caso real: pagamos 2.500 € durante dos años; después, el piso volvió al mercado a 2.300 €.",
+          "Verificado con el Decreto-Lei 97/2026 (art. 45.º-C del EBF) según OCC y MCS.",
+          "Calculamos el punto de equilibrio: 2.300 × 0,90 / 0,75 = 2.760 €.",
+          "Cinco idiomas desde el primer día: PT · EN · RU · DE · ES."
+        ],
+        "proofs": [
+          "22.500 € frente a 24.840 € netos al año — el mismo T2 en Funchal.",
+          "Límite = 2,5 salarios mínimos, actualizado cada año; beneficio para ingresos de 2026 a 2029.",
+          "Animación con Zé que se entiende sin palabras — PT, RU, EN, 9:16 y 1:1."
+        ]
+      }
     }
   ]
 }
