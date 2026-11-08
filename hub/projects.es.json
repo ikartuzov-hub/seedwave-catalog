@@ -1,6 +1,23 @@
 {
   "projects": [
     {
+      "id": "lis",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
+      "category": "IA / Tecnología",
+      "name": "Lis — tu secretario de IA en dos sesiones",
+      "hook": "Correo y calendario gestionados por un agente, plan del día por voz, tu propio Proyecto Claude. Dos sesiones online con Igor, que vive así en Madeira, y una semana de seguimiento. Te vas no con consejos, sino con un secretario que funciona.",
+      "description": "Etapa 1 del programa «Isla». Qué hace el secretario: ordena el correo entrante, mantiene las cuestiones abiertas en un solo lugar, recuerda, prepara borradores, recibe voz y fotos. Qué necesitas: Claude de pago, smartphone, ordenador y ganas. Todo se monta en tu Claude y queda tuyo. Después, si quieres: el retiro «Piloto automático en Madeira» y acompañamiento.",
+      "sectors": [
+        "AI",
+        "Technology"
+      ],
+      "stage": "first",
+      "investment": "",
+      "lookingFor": "Primeros 3 clientes",
+      "demoLink": "https://t.me/LisDemBot?start=hub",
+      "moreLink": "https://l.seedwave.pt/"
+    },
+    {
       "id": "dubai-madeira-cooperative",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#2A8FC0\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M34 20 L34 74\"/><path d=\"M34 20 C64 20 64 74 34 74\"/><path d=\"M18 88 Q28 82 38 88 Q48 94 58 88 Q68 82 78 88\"/></svg>",
       "category": "Inmobiliario",
@@ -212,23 +229,6 @@
       "lookingFor": "Empresas de Madeira que contratan · Restaurantes y servicios",
       "demoLink": "https://contratar.seedwave.pt/",
       "moreLink": "https://contratar.seedwave.pt/flyer.html"
-    },
-    {
-      "id": "lis",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
-      "category": "IA / Tecnología",
-      "name": "Lis — vive tu rutina por ti",
-      "hook": "Secretario personal de IA sobre Cowork y Claude. Conectas una vez el correo, el calendario, el banco y las notas — después ordena el flujo solo. De ti: solo «Sí» o «No».",
-      "description": "No es un bot de entrada que hay que alimentar, sino una capa sobre tu Claude: las fuentes llenan a Lis solas, entiende cada punto, resuelve lo reversible en silencio y te trae solo el resultado y una bifurcación «Sí/No». Quieres no olvidar algo — envía una foto, él hace el resto.",
-      "sectors": [
-        "AI",
-        "Technology"
-      ],
-      "stage": "mvp",
-      "investment": "",
-      "lookingFor": "Creador de contenido · Comercial · Tester",
-      "demoLink": "https://l.seedwave.pt/onboarding.html",
-      "moreLink": "https://l.seedwave.pt/"
     },
     {
       "id": "ntm",

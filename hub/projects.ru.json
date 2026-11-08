@@ -1,6 +1,23 @@
 {
   "projects": [
     {
+      "id": "lis",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
+      "category": "AI / Технологии",
+      "name": "Лис — твой ИИ-секретарь за две сессии",
+      "hook": "Почта и календарь под агентом, план дня голосом, свой Проект Claude. Две онлайн-сессии с Игорем, который сам так живёт на Мадейре, и неделя переписки. Уезжаешь не с советами, а с работающим секретарём.",
+      "description": "Ступень 1 программы «Остров». Что делает секретарь: разбирает входящее, держит открытые вопросы в одном месте, напоминает, готовит черновики, принимает голос и фото. Что нужно от тебя: платный Claude, смартфон, компьютер и желание. Всё собирается в твоём Claude и остаётся твоим. Дальше по желанию: ретрит «Автопилот на Мадейре» и сопровождение.",
+      "sectors": [
+        "AI",
+        "Technology"
+      ],
+      "stage": "first",
+      "investment": "",
+      "lookingFor": "Первые 3 клиента",
+      "demoLink": "https://t.me/LisDemBot?start=hub",
+      "moreLink": "https://l.seedwave.pt/"
+    },
+    {
       "id": "dubai-madeira-cooperative",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#2A8FC0\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M34 20 L34 74\"/><path d=\"M34 20 C64 20 64 74 34 74\"/><path d=\"M18 88 Q28 82 38 88 Q48 94 58 88 Q68 82 78 88\"/></svg>",
       "category": "Недвижимость",
@@ -212,23 +229,6 @@
       "lookingFor": "Компании Мадейры, которые нанимают · Рестораны и сервис",
       "demoLink": "https://contratar.seedwave.pt/",
       "moreLink": "https://contratar.seedwave.pt/flyer.html"
-    },
-    {
-      "id": "lis",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
-      "category": "AI / Технологии",
-      "name": "Lis — живёт твою рутину за тебя",
-      "hook": "Личный ИИ-секретарь поверх Cowork и Claude. Подключаешь один раз почту, календарь, банк и заметки — дальше он сам разбирает поток. От тебя только «Да» или «Нет».",
-      "description": "Не входящий бот, которого надо кормить, а слой поверх твоего Claude: источники сами наполняют Lis, он понимает каждый пункт, обратимое решает молча, а к тебе поднимает только результат и развилку «Да/Нет». Хочешь что-то не забыть — просто кинь фото, остальное он сделает сам.",
-      "sectors": [
-        "AI",
-        "Technology"
-      ],
-      "stage": "mvp",
-      "investment": "",
-      "lookingFor": "Креатор · Продажник · Тестировщик",
-      "demoLink": "https://l.seedwave.pt/onboarding.html",
-      "moreLink": "https://l.seedwave.pt/"
     },
     {
       "id": "ntm",
