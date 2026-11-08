@@ -653,7 +653,13 @@
           "22.500 € frente a 24.840 € netos al año — el mismo T2 en Funchal.",
           "Límite = 2,5 salarios mínimos, actualizado cada año; beneficio para ingresos de 2026 a 2029.",
           "Animación con Zé que se entiende sin palabras — PT, RU, EN, 9:16 y 1:1."
-        ]
+        ],
+        "video": {
+          "title": "El dibujo animado de Zé",
+          "src": "https://ajuda.seedwave.pt/renda/video/ze_en.mp4",
+          "poster": "https://ajuda.seedwave.pt/renda/video/ze_en.jpg",
+          "caption": "20 segundos, se entiende sin palabras. Animación creada con IA."
+        }
       }
     },
     {
@@ -682,7 +688,13 @@
           "Una página, letra grande, nada que escribir: tocar y leer.",
           "Tarjeta-recordatorio para la nevera, se imprime con un botón.",
           "Dibujo animado de Zé con Doña Rosa — PT, RU, EN, en 9:16 y 1:1."
-        ]
+        ],
+        "video": {
+          "title": "El dibujo animado de Zé",
+          "src": "https://ajuda.seedwave.pt/cmd/video/ze_es.mp4",
+          "poster": "https://ajuda.seedwave.pt/cmd/video/ze_es.jpg",
+          "caption": "20 segundos, se entiende sin palabras. Animación creada con IA."
+        }
       }
     }
   ]

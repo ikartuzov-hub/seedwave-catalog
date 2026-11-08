@@ -653,7 +653,13 @@
           "22.500 € gegen 24.840 € netto pro Jahr — dieselbe T2 in Funchal.",
           "Grenze = 2,5 × Mindestlohn, jährlich angepasst; Vorteil für Einkünfte 2026–2029.",
           "Zé-Zeichentrick ohne Worte verständlich — PT, RU, EN, 9:16 und 1:1."
-        ]
+        ],
+        "video": {
+          "title": "Zés Zeichentrick",
+          "src": "https://ajuda.seedwave.pt/renda/video/ze_en.mp4",
+          "poster": "https://ajuda.seedwave.pt/renda/video/ze_en.jpg",
+          "caption": "20 Sekunden, ohne Worte verständlich. Animation mit KI erstellt."
+        }
       }
     },
     {
@@ -682,7 +688,13 @@
           "Eine Seite, große Schrift, nichts zu tippen: tippen und lesen.",
           "Merkkarte für den Kühlschrank, mit einem Knopf gedruckt.",
           "Zeichentrick mit Zé und Dona Rosa — PT, RU, EN, in 9:16 und 1:1."
-        ]
+        ],
+        "video": {
+          "title": "Zés Zeichentrick",
+          "src": "https://ajuda.seedwave.pt/cmd/video/ze_de.mp4",
+          "poster": "https://ajuda.seedwave.pt/cmd/video/ze_de.jpg",
+          "caption": "20 Sekunden, ohne Worte verständlich. Animation mit KI erstellt."
+        }
       }
     }
   ]

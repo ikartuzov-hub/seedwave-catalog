@@ -653,7 +653,13 @@
           "22 500 € contra 24 840 € líquidos por ano — o mesmo T2 no Funchal.",
           "Limite = 2,5 salários mínimos, atualizado todos os anos; benefício para rendimentos de 2026 a 2029.",
           "Animação com o Zé que se entende sem palavras — PT, RU, EN, formatos 9:16 e 1:1."
-        ]
+        ],
+        "video": {
+          "title": "O desenho animado do Zé",
+          "src": "https://ajuda.seedwave.pt/renda/video/ze_pt.mp4",
+          "poster": "https://ajuda.seedwave.pt/renda/video/ze_pt.jpg",
+          "caption": "20 segundos, percebe-se sem palavras. Animação criada com IA."
+        }
       }
     },
     {
@@ -682,7 +688,13 @@
           "Uma página, letra grande, sem nada para escrever: tocar e ler.",
           "Cartão-lembrete para o frigorífico, imprime-se com um botão.",
           "Desenho animado do Zé com a D. Rosa — PT, RU, EN, em 9:16 e 1:1."
-        ]
+        ],
+        "video": {
+          "title": "O desenho animado do Zé",
+          "src": "https://ajuda.seedwave.pt/cmd/video/ze_pt.mp4",
+          "poster": "https://ajuda.seedwave.pt/cmd/video/ze_pt.jpg",
+          "caption": "20 segundos, percebe-se sem palavras. Animação criada com IA."
+        }
       }
     }
   ]

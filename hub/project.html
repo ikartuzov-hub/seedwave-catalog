@@ -97,6 +97,9 @@
   }
   .step p{color:var(--ink);font-size:.97rem}
 
+  .zev{margin:0 0 6px}
+  .zev video{display:block;width:100%;max-width:520px;aspect-ratio:1/1;border-radius:18px;background:#FAF6F1;border:1px solid var(--line)}
+  .zev p{margin:10px 2px 0;font-size:.92rem;color:var(--muted,#8a97a6);max-width:520px}
   .proofs{display:grid;gap:10px}
   .proof{
     display:flex;gap:12px;align-items:flex-start;font-size:.96rem;color:var(--ink-soft);
@@ -288,6 +291,15 @@
         </div>
       </section>` : "";
 
+    // мультик с Зé — центральный герой платформы (page.video: {src, poster, caption})
+    const vid = page.video && page.video.src ? page.video : null;
+    const videoHtml = vid ? `
+      <section class="zev">
+        <h2 class="sec-t">${esc(vid.title || "Zé")}</h2>
+        <video controls playsinline muted loop preload="metadata" src="${esc(vid.src)}"${vid.poster?` poster="${esc(vid.poster)}"`:""}></video>
+        ${vid.caption?`<p>${esc(vid.caption)}</p>`:""}
+      </section>` : "";
+
     const rows = [];
     if(p.investment) rows.push(`<div class="row"><span class="k">${esc(t("labelInvestment"))}</span><span class="v">${esc(p.investment)}</span></div>`);
     if(p.lookingFor) rows.push(`<div class="row"><span class="k">${esc(t("labelLooking"))}</span><span class="v">${linkAuthor(p.lookingFor)}</span></div>`);
@@ -313,6 +325,7 @@
         </svg>
       </section>
 
+      ${videoHtml}
       ${howHtml}
       ${proofsHtml}
       ${visionHtml}
