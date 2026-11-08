@@ -2,11 +2,11 @@
   "projects": [
     {
       "id": "lis",
-      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#E8833C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#6D5DFC\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M35 18 L35 66 L60 66\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
       "category": "AI / Technology",
-      "name": "Lis — your AI secretary in two sessions",
-      "hook": "Email and calendar run by an agent, a voice daily plan, your own Claude Project. Two online sessions with Igor, who lives this way on Madeira himself, plus a week of follow-up. You leave not with advice but with a working secretary.",
-      "description": "Step 1 of the “Island” programme. What the secretary does: sorts incoming mail, keeps open questions in one place, reminds, drafts replies, takes voice and photos. What you need: a paid Claude plan, a smartphone, a computer and the wish to start. Everything is built inside your Claude and stays yours. Next, if you want: the “Autopilot on Madeira” retreat and ongoing support.",
+      "name": "Lis — an AI secretary on your own data",
+      "hook": "In a year everyone will have an AI secretary. Yours can start on Tuesday",
+      "description": "Lis already sorts your inbox, books meetings and answers by voice while you drive. Not an app — an agent on your own data, set up for you in two online sessions. Then it runs on its own, and you notice the day got longer. Made on Madeira, where there is enough ocean to look ahead. Demo bot: two minutes, four buttons, no sign-up. Tuesday works.",
       "sectors": [
         "AI",
         "Technology"
