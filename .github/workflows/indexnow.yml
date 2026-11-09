@@ -1,0 +1,33 @@
+name: IndexNow — сообщить поисковикам об изменениях
+# Раз в час смотрит коммиты во всех сайтах SeedWave (список — .github/indexnow/sites.txt)
+# и отправляет изменённые страницы в Bing по протоколу IndexNow.
+# Ручной запуск: Actions → этот workflow → Run workflow (можно указать один репозиторий).
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+    inputs:
+      only_repo:
+        description: "Только этот репозиторий (пусто — все)"
+        required: false
+      window_min:
+        description: "Окно в минутах"
+        required: false
+        default: "75"
+      force_root:
+        description: "Добавить главную страницу даже без изменений (1/0)"
+        required: false
+        default: "0"
+permissions:
+  contents: read
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 .github/indexnow/ping.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ONLY_REPO: ${{ github.event.inputs.only_repo }}
+          WINDOW_MIN: ${{ github.event.inputs.window_min || '75' }}
+          FORCE_ROOT: ${{ github.event.inputs.force_root || '0' }}
