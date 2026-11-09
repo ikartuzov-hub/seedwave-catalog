@@ -116,7 +116,21 @@
       .observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
   }
 
+  // «Madeira» в подвале (стандарт 09.11.2026): ссылка несёт язык читателя — текущий <html lang>, затем ?lang=
+  function madFix() {
+    var h = (document.documentElement.getAttribute('lang') || '').slice(0, 2).toLowerCase();
+    var L = LANGS.indexOf(h) >= 0 ? h : lang();
+    var a = document.querySelectorAll('a[href*="seedwave.pt/madeira/"][href*="utm_medium=footer"]');
+    for (var i = 0; i < a.length; i++) {
+      var u = a[i].getAttribute('href');
+      a[i].setAttribute('href', /[?&]lang=[a-z]{2}/.test(u) ? u.replace(/([?&]lang=)[a-z]{2}/, '$1' + L) : u.replace('/madeira/?', '/madeira/?lang=' + L + '&'));
+    }
+  }
+
   function go() {
+    madFix();
+    if (window.MutationObserver) new MutationObserver(madFix)
+      .observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
     fetch(BASE + 'nav.json', { cache: 'default' }).then(function (r) { return r.ok ? r.json() : null; })
       .then(function (d) { if (d) mount(d); }).catch(function () {});
   }
