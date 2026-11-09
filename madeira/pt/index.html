@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,700;1,500&family=Manrope:wght@400;600;800&display=swap&subset=cyrillic" rel="stylesheet">
-<link rel="stylesheet" href="/madeira/engine.css?v=202611091245">
+<link rel="stylesheet" href="/madeira/engine.css?v=202611091409">
 <script>try{var t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('madeira.theme')||'light';document.documentElement.dataset.theme=t}catch(e){}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Blog", "name": "A Madeira pelos meus olhos", "url": "https://seedwave.pt/madeira/pt/", "inLanguage": "pt", "description": "Igor Kartuzov, empresário no Funchal, escreve um romance de ficção científica sobre a Madeira. Diário: como corre o trabalho e que lugares da ilha entram nos capítulos. Duas vezes por semana.", "author": {"@type": "Person", "name": "Igor Kartuzov", "alternateName": "Игорь Картузов", "url": "https://www.linkedin.com/in/igor-kartuzov/"}, "publisher": {"@type": "Organization", "name": "SeedWave", "url": "https://seedwave.pt/"}, "blogPost": []}</script>
 </head>
@@ -71,6 +71,22 @@
 </article>
     </section>
 
+    <section class="write" id="write">
+      <h2>Escrever ao autor</h2>
+      <p class="note">Escreva na sua língua — leio a tradução e respondo para o seu e-mail, também na sua língua.</p>
+      <form id="fb" data-hook="https://hook.eu1.make.com/itssorkbu2g5de968qhwv6620tasscws" data-lang="pt" data-sent="Mensagem enviada ao autor ✓ A resposta chega ao seu e-mail." data-err="Não foi enviada. Verifique o e-mail e o texto e tente outra vez." novalidate>
+        <div class="chips" role="group" aria-label="Escrever ao autor"><button type="button" class="chip" data-topic="Pergunta sobre o livro">Pergunta sobre o livro</button><button type="button" class="chip" data-topic="Um lugar na ilha">Um lugar na ilha</button><button type="button" class="chip" data-topic="Só uma opinião">Só uma opinião</button></div>
+        <label>A sua mensagem<textarea name="text" rows="5" maxlength="2000" required></textarea></label>
+        <div class="two"><label>Nome<input name="name" maxlength="80" autocomplete="name"></label>
+        <label>E-mail para a resposta<input name="email" type="email" maxlength="120" autocomplete="email" required></label></div>
+        <label class="check"><input type="checkbox" name="consent" value="1"> Pode ser publicada no diário (sem o e-mail)</label>
+        <input name="hp" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+        <button class="btn" type="submit">Enviar</button>
+        <p class="note small">O e-mail serve apenas para a resposta do autor e não é usado para mais nada.</p>
+        <p class="fbmsg" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
     <section class="about">
       <h2>Sobre o livro</h2>
       <p>Ficção científica sobre o que resta de uma pessoa quando for possível guardar a sua vida por inteiro. A ação começa na Madeira — os lugares do livro são reais e podem ser encontrados no mapa.</p>
@@ -84,7 +100,7 @@
   <footer class="sw">© <span id="year">2026</span> <a id="hubLink" href="https://seedwave.pt/hub/?lang=pt">SeedWave</a> · <a href="/madeira/pt/" aria-current="page">Madeira</a> · <a href="https://www.linkedin.com/in/igor-kartuzov/" target="_blank" rel="noopener">Igor Kartuzov</a></footer>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script defer src="/madeira/engine.js?v=202611091245"></script>
+<script defer src="/madeira/engine.js?v=202611091409"></script>
 <script defer src="https://seedwave.pt/nav/sw.js"></script>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8a509477310442638b80e4b22319b89b"}'></script><!-- End Cloudflare Web Analytics -->
 </body>

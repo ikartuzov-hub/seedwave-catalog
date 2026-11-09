@@ -21,13 +21,54 @@
     "sign": "— Игорь Картузов",
     "bookTitle": "О книге",
     "book": "Фантастика о том, что останется от человека, когда его жизнь можно будет сохранить целиком. Действие начинается на Мадейре — места в книге настоящие, их можно найти на карте.",
-    "road": [["14 ноября 2026", "Первая запись дневника"], ["январь 2027", "Первые главы — по одной в неделю"], ["2027", "Черновик всей книги"]],
+    "road": [
+      [
+        "14 ноября 2026",
+        "Первая запись дневника"
+      ],
+      [
+        "январь 2027",
+        "Первые главы — по одной в неделю"
+      ],
+      [
+        "2027",
+        "Черновик всей книги"
+      ]
+    ],
     "authorTitle": "Автор",
     "author": "Игорь Картузов — предприниматель, основатель SeedWave, живёт в Фуншале.",
     "langLabel": "Язык",
     "themeLabel": "День / ночь",
-    "months": ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"],
-    "dateFmt": "{d} {m} {y}"
+    "months": [
+      "января",
+      "февраля",
+      "марта",
+      "апреля",
+      "мая",
+      "июня",
+      "июля",
+      "августа",
+      "сентября",
+      "октября",
+      "ноября",
+      "декабря"
+    ],
+    "dateFmt": "{d} {m} {y}",
+    "fbTitle": "Написать автору",
+    "fbLead": "Пишите на своём языке — я прочту в переводе и отвечу на вашу почту, тоже на вашем языке.",
+    "fbTopics": [
+      "Вопрос о книге",
+      "Место на острове",
+      "Просто отзыв"
+    ],
+    "fbName": "Имя",
+    "fbEmail": "Почта для ответа",
+    "fbText": "Ваше письмо",
+    "fbConsent": "Можно опубликовать в дневнике (без почты)",
+    "fbSend": "Отправить",
+    "fbSent": "Письмо ушло автору ✓ Ответ придёт на вашу почту.",
+    "fbErr": "Не отправилось. Проверьте почту и текст и попробуйте ещё раз.",
+    "fbPrivacy": "Почта нужна только для ответа автора и никуда больше не уходит."
   },
   "pt": {
     "title": "A Madeira pelos meus olhos — diário de um autor",
@@ -50,13 +91,54 @@
     "sign": "— Igor Kartuzov",
     "bookTitle": "Sobre o livro",
     "book": "Ficção científica sobre o que resta de uma pessoa quando for possível guardar a sua vida por inteiro. A ação começa na Madeira — os lugares do livro são reais e podem ser encontrados no mapa.",
-    "road": [["14 de novembro de 2026", "Primeira entrada do diário"], ["janeiro de 2027", "Primeiros capítulos — um por semana"], ["2027", "Rascunho do livro completo"]],
+    "road": [
+      [
+        "14 de novembro de 2026",
+        "Primeira entrada do diário"
+      ],
+      [
+        "janeiro de 2027",
+        "Primeiros capítulos — um por semana"
+      ],
+      [
+        "2027",
+        "Rascunho do livro completo"
+      ]
+    ],
     "authorTitle": "O autor",
     "author": "Igor Kartuzov — empresário, fundador da SeedWave, vive no Funchal.",
     "langLabel": "Idioma",
     "themeLabel": "Dia / noite",
-    "months": ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"],
-    "dateFmt": "{d} de {m} de {y}"
+    "months": [
+      "janeiro",
+      "fevereiro",
+      "março",
+      "abril",
+      "maio",
+      "junho",
+      "julho",
+      "agosto",
+      "setembro",
+      "outubro",
+      "novembro",
+      "dezembro"
+    ],
+    "dateFmt": "{d} de {m} de {y}",
+    "fbTitle": "Escrever ao autor",
+    "fbLead": "Escreva na sua língua — leio a tradução e respondo para o seu e-mail, também na sua língua.",
+    "fbTopics": [
+      "Pergunta sobre o livro",
+      "Um lugar na ilha",
+      "Só uma opinião"
+    ],
+    "fbName": "Nome",
+    "fbEmail": "E-mail para a resposta",
+    "fbText": "A sua mensagem",
+    "fbConsent": "Pode ser publicada no diário (sem o e-mail)",
+    "fbSend": "Enviar",
+    "fbSent": "Mensagem enviada ao autor ✓ A resposta chega ao seu e-mail.",
+    "fbErr": "Não foi enviada. Verifique o e-mail e o texto e tente outra vez.",
+    "fbPrivacy": "O e-mail serve apenas para a resposta do autor e não é usado para mais nada."
   },
   "en": {
     "title": "Madeira through my eyes — an author's diary",
@@ -79,13 +161,54 @@
     "sign": "— Igor Kartuzov",
     "bookTitle": "About the book",
     "book": "Science fiction about what remains of a person once a whole life can be preserved. The story begins on Madeira — the places in the book are real and you can find them on the map.",
-    "road": [["14 November 2026", "First diary entry"], ["January 2027", "First chapters — one a week"], ["2027", "Draft of the whole book"]],
+    "road": [
+      [
+        "14 November 2026",
+        "First diary entry"
+      ],
+      [
+        "January 2027",
+        "First chapters — one a week"
+      ],
+      [
+        "2027",
+        "Draft of the whole book"
+      ]
+    ],
     "authorTitle": "The author",
     "author": "Igor Kartuzov — entrepreneur, founder of SeedWave, lives in Funchal.",
     "langLabel": "Language",
     "themeLabel": "Day / night",
-    "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-    "dateFmt": "{d} {m} {y}"
+    "months": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "dateFmt": "{d} {m} {y}",
+    "fbTitle": "Write to the author",
+    "fbLead": "Write in your own language — I read the translation and reply to your email, in your language too.",
+    "fbTopics": [
+      "A question about the book",
+      "A place on the island",
+      "Just feedback"
+    ],
+    "fbName": "Name",
+    "fbEmail": "Email for the reply",
+    "fbText": "Your message",
+    "fbConsent": "May be published in the diary (without the email)",
+    "fbSend": "Send",
+    "fbSent": "Sent to the author ✓ The reply will come to your email.",
+    "fbErr": "Not sent. Check the email and the text and try again.",
+    "fbPrivacy": "Your email is used only for the author's reply and nothing else."
   },
   "es": {
     "title": "Madeira con mis propios ojos — diario de un autor",
@@ -108,13 +231,54 @@
     "sign": "— Igor Kartuzov",
     "bookTitle": "Sobre el libro",
     "book": "Ciencia ficción sobre lo que queda de una persona cuando sea posible conservar su vida entera. La acción empieza en Madeira — los lugares del libro son reales y se pueden encontrar en el mapa.",
-    "road": [["14 de noviembre de 2026", "Primera entrada del diario"], ["enero de 2027", "Primeros capítulos — uno por semana"], ["2027", "Borrador del libro completo"]],
+    "road": [
+      [
+        "14 de noviembre de 2026",
+        "Primera entrada del diario"
+      ],
+      [
+        "enero de 2027",
+        "Primeros capítulos — uno por semana"
+      ],
+      [
+        "2027",
+        "Borrador del libro completo"
+      ]
+    ],
     "authorTitle": "El autor",
     "author": "Igor Kartuzov — empresario, fundador de SeedWave, vive en Funchal.",
     "langLabel": "Idioma",
     "themeLabel": "Día / noche",
-    "months": ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
-    "dateFmt": "{d} de {m} de {y}"
+    "months": [
+      "enero",
+      "febrero",
+      "marzo",
+      "abril",
+      "mayo",
+      "junio",
+      "julio",
+      "agosto",
+      "septiembre",
+      "octubre",
+      "noviembre",
+      "diciembre"
+    ],
+    "dateFmt": "{d} de {m} de {y}",
+    "fbTitle": "Escribir al autor",
+    "fbLead": "Escribe en tu idioma — leo la traducción y respondo a tu correo, también en tu idioma.",
+    "fbTopics": [
+      "Una pregunta sobre el libro",
+      "Un lugar de la isla",
+      "Solo una opinión"
+    ],
+    "fbName": "Nombre",
+    "fbEmail": "Correo para la respuesta",
+    "fbText": "Tu mensaje",
+    "fbConsent": "Se puede publicar en el diario (sin el correo)",
+    "fbSend": "Enviar",
+    "fbSent": "Enviado al autor ✓ La respuesta llegará a tu correo.",
+    "fbErr": "No se ha enviado. Revisa el correo y el texto e inténtalo de nuevo.",
+    "fbPrivacy": "El correo solo se usa para la respuesta del autor y para nada más."
   },
   "de": {
     "title": "Madeira mit eigenen Augen — Tagebuch eines Autors",
@@ -137,12 +301,53 @@
     "sign": "— Igor Kartuzov",
     "bookTitle": "Über das Buch",
     "book": "Science-Fiction darüber, was von einem Menschen bleibt, wenn man sein ganzes Leben bewahren kann. Die Handlung beginnt auf Madeira — die Orte im Buch sind echt und auf der Karte zu finden.",
-    "road": [["14. November 2026", "Erster Tagebucheintrag"], ["Januar 2027", "Erste Kapitel — eines pro Woche"], ["2027", "Entwurf des ganzen Buches"]],
+    "road": [
+      [
+        "14. November 2026",
+        "Erster Tagebucheintrag"
+      ],
+      [
+        "Januar 2027",
+        "Erste Kapitel — eines pro Woche"
+      ],
+      [
+        "2027",
+        "Entwurf des ganzen Buches"
+      ]
+    ],
     "authorTitle": "Der Autor",
     "author": "Igor Kartuzov — Unternehmer, Gründer von SeedWave, lebt in Funchal.",
     "langLabel": "Sprache",
     "themeLabel": "Tag / Nacht",
-    "months": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
-    "dateFmt": "{d}. {m} {y}"
+    "months": [
+      "Januar",
+      "Februar",
+      "März",
+      "April",
+      "Mai",
+      "Juni",
+      "Juli",
+      "August",
+      "September",
+      "Oktober",
+      "November",
+      "Dezember"
+    ],
+    "dateFmt": "{d}. {m} {y}",
+    "fbTitle": "Dem Autor schreiben",
+    "fbLead": "Schreiben Sie in Ihrer Sprache — ich lese die Übersetzung und antworte an Ihre E-Mail, ebenfalls in Ihrer Sprache.",
+    "fbTopics": [
+      "Frage zum Buch",
+      "Ein Ort auf der Insel",
+      "Einfach Feedback"
+    ],
+    "fbName": "Name",
+    "fbEmail": "E-Mail für die Antwort",
+    "fbText": "Ihre Nachricht",
+    "fbConsent": "Darf im Tagebuch veröffentlicht werden (ohne E-Mail)",
+    "fbSend": "Senden",
+    "fbSent": "An den Autor gesendet ✓ Die Antwort kommt an Ihre E-Mail.",
+    "fbErr": "Nicht gesendet. Bitte E-Mail und Text prüfen und erneut versuchen.",
+    "fbPrivacy": "Die E-Mail dient nur der Antwort des Autors und wird für nichts anderes verwendet."
   }
 }

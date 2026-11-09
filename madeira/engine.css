@@ -65,6 +65,23 @@ h2{font:700 26px/1.2 var(--display);margin:36px 0 12px}
 .post.soon .lead{font:400 16px/1.5 var(--body);color:var(--ink-soft);font-style:normal}
 a.trace{text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}
 
+/* написать автору */
+.write form{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;display:flex;flex-direction:column;gap:12px}
+.write label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600;color:var(--ink-soft)}
+.write textarea,.write input:not([type=checkbox]){font:inherit;font-size:16px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px}
+.write textarea:focus,.write input:focus{outline:2px solid var(--accent);outline-offset:1px}
+.write .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:520px){.write .two{grid-template-columns:1fr}}
+.write .check{flex-direction:row;align-items:center;gap:10px;font-weight:400}
+.write .check input{width:20px;height:20px;accent-color:var(--accent)}
+.write .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:transparent;border-radius:99px;padding:8px 14px;font-size:14px;font-weight:600}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.note.small{font-size:13px;margin:0}
+.fbmsg{margin:0;font-weight:700;color:var(--accent)}
+.fbmsg.err{color:#c0392b}
+
 /* о книге */
 .about p{margin:0 0 12px}
 .about a{text-decoration-color:var(--accent);text-underline-offset:3px}

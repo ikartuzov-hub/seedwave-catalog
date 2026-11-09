@@ -17,6 +17,7 @@ url = lambda l: BASE if l == "ru" else f"{BASE}{l}/"
 path = lambda l: "/madeira/" if l == "ru" else f"/madeira/{l}/"
 TG = "https://t.me/madeira_svoimi_glazami"
 LI = "https://www.linkedin.com/in/igor-kartuzov/"
+HOOK = "https://hook.eu1.make.com/itssorkbu2g5de968qhwv6620tasscws"  # Make: Мадейра · письмо автору (сайт)
 CF = "<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{\"token\": \"8a509477310442638b80e4b22319b89b\"}'></script><!-- End Cloudflare Web Analytics -->"
 V = time.strftime("%Y%m%d%H%M")
 
@@ -151,6 +152,22 @@ for lang in LANGS:
     <section class="posts">
       <h2>{e("postsTitle")}</h2>
       {"".join(items)}
+    </section>
+
+    <section class="write" id="write">
+      <h2>{e("fbTitle")}</h2>
+      <p class="note">{e("fbLead")}</p>
+      <form id="fb" data-hook="{HOOK}" data-lang="{lang}" data-sent="{e("fbSent")}" data-err="{e("fbErr")}" novalidate>
+        <div class="chips" role="group" aria-label="{e("fbTitle")}">{"".join(f'<button type="button" class="chip" data-topic="{html.escape(t, quote=True)}">{html.escape(t)}</button>' for t in T["fbTopics"])}</div>
+        <label>{e("fbText")}<textarea name="text" rows="5" maxlength="2000" required></textarea></label>
+        <div class="two"><label>{e("fbName")}<input name="name" maxlength="80" autocomplete="name"></label>
+        <label>{e("fbEmail")}<input name="email" type="email" maxlength="120" autocomplete="email" required></label></div>
+        <label class="check"><input type="checkbox" name="consent" value="1"> {e("fbConsent")}</label>
+        <input name="hp" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+        <button class="btn" type="submit">{e("fbSend")}</button>
+        <p class="note small">{e("fbPrivacy")}</p>
+        <p class="fbmsg" role="status" aria-live="polite"></p>
+      </form>
     </section>
 
     <section class="about">

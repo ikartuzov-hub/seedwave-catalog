@@ -37,5 +37,34 @@
     else if (a.dataset.trace) track('madeira_trace', { to: a.hostname, post: (a.closest('article') || {}).id, lang: root.lang });
   }, true);
 
+  // «Написать автору»: тема кнопкой, письмо на своём языке → Make (перевод → бот автора)
+  var fb = $('fb');
+  if (fb) {
+    var topic = '';
+    fb.querySelectorAll('.chip').forEach(function (c) {
+      c.addEventListener('click', function () {
+        var on = c.getAttribute('aria-pressed') !== 'true';
+        fb.querySelectorAll('.chip').forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+        c.setAttribute('aria-pressed', on ? 'true' : 'false'); topic = on ? c.dataset.topic : '';
+        if (on) fb.elements.text.focus();
+      });
+    });
+    fb.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var msg = fb.querySelector('.fbmsg'), btn = fb.querySelector('button[type=submit]');
+      var text = fb.elements.text.value.trim(), email = fb.elements.email.value.trim();
+      if (text.length < 3 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { msg.className = 'fbmsg err'; msg.textContent = fb.dataset.err; return; }
+      var post = (document.querySelector('.post:not(.soon)') || {}).id || '';
+      var body = new URLSearchParams({ lang: fb.dataset.lang, topic: topic, text: text, name: fb.elements.name.value.trim(), email: email,
+        consent: fb.elements.consent.checked ? 'yes' : 'no', post: post, hp: fb.elements.hp.value, page: location.pathname });
+      btn.disabled = true;
+      fetch(fb.dataset.hook, { method: 'POST', mode: 'no-cors', body: body }).then(function () {
+        msg.className = 'fbmsg'; msg.textContent = fb.dataset.sent; fb.reset(); topic = '';
+        fb.querySelectorAll('.chip').forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+        track('madeira_letter', { lang: fb.dataset.lang });
+      }).catch(function () { msg.className = 'fbmsg err'; msg.textContent = fb.dataset.err; }).then(function () { btn.disabled = false; });
+    });
+  }
+
   $('year').textContent = new Date().getFullYear();
 })();
