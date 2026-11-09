@@ -1,14 +1,14 @@
 {
   "id": "/madeira/",
   "name": "Мадейра своими глазами",
-  "short_name": "Мадейра",
+  "short_name": "Madeira",
   "description": "Игорь Картузов, предприниматель из Фуншала, пишет фантастический роман о Мадейре. Дневник: как идёт работа и какие места острова попадают в главы. Два раза в неделю.",
   "lang": "ru",
   "start_url": "/madeira/",
   "scope": "/madeira/",
   "display": "standalone",
-  "background_color": "#0b1a2a",
-  "theme_color": "#0b1a2a",
+  "background_color": "#f4f9fd",
+  "theme_color": "#f4f9fd",
   "icons": [
     {
       "src": "/madeira/icon-192.png",

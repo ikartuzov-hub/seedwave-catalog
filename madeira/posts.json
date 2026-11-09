@@ -1,13 +1,40 @@
 {
-  "_note": "Слой 3 — записи дневника. Запись видна целиком, когда наступила её дата (Atlantic/Madeira); до даты — анонс. После правки: python3 madeira/_src/build.py. Текст — абзацы через пустую строку; ссылка-след: [текст](url). Семью не показываем, слово «помочь» не используем.",
+  "_note": "Слой 3 — записи дневника. RU — оригинал (пишет Игорь), PT/EN/ES/DE — перевод Claude. Запись видна целиком, когда наступила её дата (Atlantic/Madeira); до даты — анонс. После правки: python3 madeira/_src/build.py. Текст — абзацы через пустую строку; след к продукту: [текст](url), не больше одного на запись; {lang} в url подставится. Семью не показываем, слово «помочь» не используем.",
   "posts": [
     {
       "id": "uehal-pisat-knigu",
       "date": "2026-11-14",
-      "place": "Фуншал → Чехия",
-      "title": "Уехал на две недели писать книгу о Мадейре",
-      "lead": "Мне 56, я предприниматель, и сегодня я уехал на две недели писать книгу о Мадейре.",
-      "body": "Рабочие дела я научился отпускать: пока меня нет, почту разбирает и встречи ставит мой [ИИ-секретарь](https://l.seedwave.pt/?utm_source=madeira&utm_medium=blog&utm_campaign=diary-2026-11-14). Заодно проверю, справится ли он две недели без меня, — расскажу здесь честно.\n\nКнига — фантастика об острове, на котором я живу четвёртый год. О том, что останется от человека, когда его жизнь можно будет сохранить целиком. И о Мадейре, где эта история начинается.\n\nДневник — два раза в неделю. Первые главы — в январе."
+      "trace": "https://l.seedwave.pt/?lang={lang}&utm_source=madeira&utm_medium=blog&utm_campaign=diary-2026-11-14",
+      "ru": {
+        "place": "Фуншал → Чехия",
+        "title": "Уехал на две недели писать книгу о Мадейре",
+        "lead": "Мне 56, я предприниматель, и сегодня я уехал на две недели писать книгу о Мадейре.",
+        "body": "Рабочие дела я научился отпускать: пока меня нет, почту разбирает и встречи ставит мой [ИИ-секретарь]({trace}). Заодно проверю, справится ли он две недели без меня, — расскажу здесь честно.\n\nКнига — фантастика об острове, на котором я живу четвёртый год. О том, что останется от человека, когда его жизнь можно будет сохранить целиком. И о Мадейре, где эта история начинается.\n\nДневник — два раза в неделю. Первые главы — в январе."
+      },
+      "pt": {
+        "place": "Funchal → Chéquia",
+        "title": "Parti por duas semanas para escrever um livro sobre a Madeira",
+        "lead": "Tenho 56 anos, sou empresário, e hoje parti por duas semanas para escrever um livro sobre a Madeira.",
+        "body": "Aprendi a largar o trabalho: enquanto estou fora, quem trata do correio e marca as reuniões é o meu [secretário de IA]({trace}). Aproveito para ver se ele aguenta duas semanas sem mim — conto aqui com franqueza.\n\nO livro é ficção científica sobre a ilha onde vivo há quatro anos. Sobre o que resta de uma pessoa quando for possível guardar a sua vida por inteiro. E sobre a Madeira, onde esta história começa.\n\nO diário sai duas vezes por semana. Os primeiros capítulos chegam em janeiro."
+      },
+      "en": {
+        "place": "Funchal → Czechia",
+        "title": "Gone for two weeks to write a book about Madeira",
+        "lead": "I'm 56, I'm an entrepreneur, and today I left for two weeks to write a book about Madeira.",
+        "body": "I have learned to let work go: while I'm away, my [AI secretary]({trace}) sorts the mail and books the meetings. I'll also find out whether it can manage two weeks without me — and I'll report here honestly.\n\nThe book is science fiction about the island where I have lived for four years. About what remains of a person once a whole life can be preserved. And about Madeira, where this story begins.\n\nThe diary comes out twice a week. The first chapters arrive in January."
+      },
+      "es": {
+        "place": "Funchal → Chequia",
+        "title": "Me fui dos semanas a escribir un libro sobre Madeira",
+        "lead": "Tengo 56 años, soy empresario, y hoy me he ido dos semanas a escribir un libro sobre Madeira.",
+        "body": "He aprendido a soltar el trabajo: mientras estoy fuera, mi [secretario de IA]({trace}) ordena el correo y agenda las reuniones. De paso veré si aguanta dos semanas sin mí — lo contaré aquí con franqueza.\n\nEl libro es ciencia ficción sobre la isla donde vivo desde hace cuatro años. Sobre lo que queda de una persona cuando sea posible conservar su vida entera. Y sobre Madeira, donde empieza esta historia.\n\nEl diario sale dos veces por semana. Los primeros capítulos llegan en enero."
+      },
+      "de": {
+        "place": "Funchal → Tschechien",
+        "title": "Für zwei Wochen weg, um ein Buch über Madeira zu schreiben",
+        "lead": "Ich bin 56, Unternehmer, und heute bin ich für zwei Wochen weggefahren, um ein Buch über Madeira zu schreiben.",
+        "body": "Ich habe gelernt, die Arbeit loszulassen: Solange ich weg bin, sortiert mein [KI-Sekretär]({trace}) die Post und legt Termine an. Nebenbei finde ich heraus, ob er zwei Wochen ohne mich zurechtkommt — ich berichte hier ehrlich.\n\nDas Buch ist Science-Fiction über die Insel, auf der ich seit vier Jahren lebe. Darüber, was von einem Menschen bleibt, wenn man sein ganzes Leben bewahren kann. Und über Madeira, wo diese Geschichte beginnt.\n\nDas Tagebuch erscheint zweimal pro Woche. Die ersten Kapitel kommen im Januar."
+      }
     }
   ]
 }

@@ -2,6 +2,10 @@
   "host": "seedwave.pt",
   "urlList": [
     "https://seedwave.pt/madeira/",
+    "https://seedwave.pt/madeira/pt/",
+    "https://seedwave.pt/madeira/en/",
+    "https://seedwave.pt/madeira/es/",
+    "https://seedwave.pt/madeira/de/",
     "https://seedwave.pt/hub/"
   ],
   "key": "3cd195d15377e831181771302e0f13e6",

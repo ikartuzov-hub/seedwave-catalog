@@ -1,12 +1,13 @@
-/* Мадейра своими глазами — слой 1 (вид). Палитра «Океан ночью»: глубокий океан + свет маяка. */
+/* Мадейра своими глазами — слой 1 (вид). */
+/* Палитра «синий на светлом» (значок 7, 09.11.2026): светлый день по умолчанию, ночь — глубокий синий. */
 :root{
-  --bg:#0b1a2a;--surface:#11243a;--ink:#eef3f7;--ink-soft:#9fb3c4;--line:rgba(238,243,247,.13);
-  --accent:#ffb35c;--accent-ink:#0b1a2a;--wave:rgba(255,179,92,.55);--wave2:rgba(238,243,247,.18);
+  --bg:#f4f9fd;--surface:#ffffff;--ink:#0c2a3d;--ink-soft:#4d6a7e;--line:rgba(30,139,214,.18);
+  --accent:#1e8bd6;--accent-ink:#ffffff;--wave:rgba(30,139,214,.55);--wave2:rgba(30,139,214,.2);--chip-on:rgba(30,139,214,.12);
   --display:"Lora",Georgia,serif;--body:"Manrope",system-ui,sans-serif;--r:18px;
 }
-:root[data-theme="light"]{
-  --bg:#f3f6f9;--surface:#ffffff;--ink:#0b1a2a;--ink-soft:#4f6475;--line:rgba(11,26,42,.13);
-  --accent:#b8640f;--accent-ink:#ffffff;--wave:rgba(184,100,15,.5);--wave2:rgba(11,26,42,.15);
+:root[data-theme="dark"]{
+  --bg:#0b1f30;--surface:#12293d;--ink:#eaf4fb;--ink-soft:#9db6c8;--line:rgba(234,244,251,.13);
+  --accent:#5bb3ee;--accent-ink:#0b1f30;--wave:rgba(91,179,238,.55);--wave2:rgba(234,244,251,.18);--chip-on:rgba(234,244,251,.12);
 }
 *{box-sizing:border-box}
 html,body{margin:0}
@@ -19,12 +20,13 @@ button{font:inherit;color:inherit;cursor:pointer}
 .top{display:flex;align-items:center;justify-content:space-between;padding:14px 0 8px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 17px/1.2 var(--display)}
 .brand img{width:36px;height:36px;border-radius:10px}
-.tools{display:flex;gap:8px}
-.rb{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:transparent;font-size:15px;display:grid;place-items:center}
+.tools{display:flex;gap:8px;position:relative}
+.menu{position:absolute;right:48px;top:46px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:6px;display:none;z-index:20;box-shadow:0 10px 30px rgba(12,42,61,.18)}
+.menu.open{display:block}
+.menu a{display:block;padding:8px 16px;border-radius:9px;text-decoration:none;font-weight:700;font-size:14px}
+.menu a[aria-current]{background:var(--chip-on)}
+.rb{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:transparent;font-size:13px;font-weight:800;display:grid;place-items:center}
 
-/* строка PT / EN */
-.strip{margin:0;font-size:13px;line-height:1.45;color:var(--ink-soft);display:flex;flex-direction:column;gap:2px}
-.strip b{color:var(--accent);font-weight:800;margin-right:4px}
 
 /* вау: медленная волна под шапкой */
 .sea{display:block;width:100%;height:34px;margin:6px 0 0;overflow:hidden}
@@ -56,6 +58,9 @@ h2{font:700 26px/1.2 var(--display);margin:36px 0 12px}
 .post .lead{font:500 italic 19px/1.5 var(--display);margin:0 0 10px}
 .post p{margin:0 0 12px}
 .post .sign{color:var(--ink-soft);font-size:15px}
+.post .orig{color:var(--ink-soft);font-size:13px;font-style:italic;margin:0}
+.note.alt{margin-top:4px}
+.note a{text-decoration-color:var(--accent);text-underline-offset:3px}
 .post.soon{border-style:dashed}
 .post.soon .lead{font:400 16px/1.5 var(--body);color:var(--ink-soft);font-style:normal}
 a.trace{text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}

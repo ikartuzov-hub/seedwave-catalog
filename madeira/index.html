@@ -1,21 +1,26 @@
 <!doctype html>
-<html lang="ru" data-theme="dark">
+<html lang="ru" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<script>try{var q=new URLSearchParams(location.search),L=q.get('lang');if(L&&['pt','en','es','de'].indexOf(L)>-1){q.delete('lang');var s=q.toString();location.replace('/madeira/'+L+'/'+(s?'?'+s:'')+location.hash)}}catch(e){}</script>
 <title>Мадейра своими глазами — дневник автора книги</title>
 <meta name="description" content="Игорь Картузов, предприниматель из Фуншала, пишет фантастический роман о Мадейре. Дневник: как идёт работа и какие места острова попадают в главы. Два раза в неделю.">
-<meta name="author" content="Игорь Картузов">
+<meta name="author" content="Igor Kartuzov">
 <link rel="canonical" href="https://seedwave.pt/madeira/">
 <link rel="alternate" hreflang="ru" href="https://seedwave.pt/madeira/">
+<link rel="alternate" hreflang="pt" href="https://seedwave.pt/madeira/pt/">
+<link rel="alternate" hreflang="en" href="https://seedwave.pt/madeira/en/">
+<link rel="alternate" hreflang="es" href="https://seedwave.pt/madeira/es/">
+<link rel="alternate" hreflang="de" href="https://seedwave.pt/madeira/de/">
 <link rel="alternate" hreflang="x-default" href="https://seedwave.pt/madeira/">
-<link rel="alternate" type="application/rss+xml" title="Мадейра своими глазами" href="https://seedwave.pt/madeira/feed.xml">
+<link rel="alternate" type="application/rss+xml" title="Мадейра своими глазами" href="/madeira/feed.xml">
 <link rel="icon" type="image/svg+xml" href="/madeira/madeira-icon.svg">
 <link rel="apple-touch-icon" href="/madeira/apple-touch-icon.png">
 <link rel="manifest" href="/madeira/m/madeira-ru.webmanifest">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Мадейра">
-<meta name="theme-color" content="#0b1a2a">
+<meta name="apple-mobile-web-app-title" content="Madeira">
+<meta name="theme-color" content="#f4f9fd">
 <meta property="og:title" content="Мадейра своими глазами — дневник автора книги">
 <meta property="og:description" content="Игорь Картузов, предприниматель из Фуншала, пишет фантастический роман о Мадейре. Дневник: как идёт работа и какие места острова попадают в главы. Два раза в неделю.">
 <meta property="og:image" content="https://seedwave.pt/madeira/og-image.png">
@@ -29,17 +34,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,700;1,500&family=Manrope:wght@400;600;800&display=swap&subset=cyrillic" rel="stylesheet">
-<link rel="stylesheet" href="/madeira/engine.css?v=202611091211">
-<script>try{var t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('madeira.theme')||'dark';document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="/madeira/engine.css?v=202611091245">
+<script>try{var t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('madeira.theme')||'light';document.documentElement.dataset.theme=t}catch(e){}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Blog", "name": "Мадейра своими глазами", "url": "https://seedwave.pt/madeira/", "inLanguage": "ru", "description": "Игорь Картузов, предприниматель из Фуншала, пишет фантастический роман о Мадейре. Дневник: как идёт работа и какие места острова попадают в главы. Два раза в неделю.", "author": {"@type": "Person", "name": "Igor Kartuzov", "alternateName": "Игорь Картузов", "url": "https://www.linkedin.com/in/igor-kartuzov/"}, "publisher": {"@type": "Organization", "name": "SeedWave", "url": "https://seedwave.pt/"}, "blogPost": []}</script>
 </head>
 <body>
 <div class="wrap">
   <header class="top">
     <a class="brand" href="/madeira/"><img src="/madeira/madeira-icon.svg" alt="Мадейра своими глазами" width="36" height="36"><span>Мадейра своими глазами</span></a>
-    <div class="tools"><button class="rb" id="themeBtn" type="button" aria-label="День / ночь">☀</button></div>
+    <div class="tools">
+      <button class="rb" id="langBtn" type="button" aria-label="Язык">RU</button>
+      <button class="rb" id="themeBtn" type="button" aria-label="День / ночь">☾</button>
+      <nav class="menu" id="langMenu"><a href="/madeira/" hreflang="ru" aria-current="true">RU</a><a href="/madeira/pt/" hreflang="pt">PT</a><a href="/madeira/en/" hreflang="en">EN</a><a href="/madeira/es/" hreflang="es">ES</a><a href="/madeira/de/" hreflang="de">DE</a></nav>
+    </div>
   </header>
-  <p class="strip" lang="pt"><span><b>PT</b> Diário de um autor: escrevo um romance sobre a Madeira. Os textos são em russo.</span> <span><b>EN</b> An author&#x27;s diary: I am writing a novel about Madeira. Posts are in Russian.</span></p>
   <svg class="sea" viewBox="0 0 600 40" preserveAspectRatio="none" aria-hidden="true"><path class="w1" d="M0 22 Q 75 8 150 22 T 300 22 T 450 22 T 600 22 T 750 22 T 900 22"/><path class="w2" d="M0 28 Q 75 16 150 28 T 300 28 T 450 28 T 600 28 T 750 28 T 900 28"/></svg>
 
   <main>
@@ -48,10 +56,11 @@
       <h1>Мадейра своими глазами</h1>
       <p>Я живу на Мадейре четвёртый год и пишу о ней книгу. Здесь — как идёт работа: что получилось, что нет и какие места острова попадают в главы.</p>
       <div class="row">
-        <a class="btn" id="subBtn" href="https://t.me/madeira_svoimi_glazami" target="_blank" rel="noopener">Подписаться в Telegram</a>
-        <button class="btn ghost" id="shareBtn" type="button" data-text="Мадейра своими глазами — дневник автора, который пишет книгу об острове." data-copied="Ссылка скопирована ✓">Переслать другу</button>
+        <a class="btn" id="subBtn" href="https://t.me/madeira_svoimi_glazami" target="_blank" rel="noopener" data-sub="tg">Подписаться в Telegram</a>
+        <button class="btn ghost" id="shareBtn" type="button" data-url="https://seedwave.pt/madeira/" data-text="Мадейра своими глазами — дневник автора, который пишет книгу об острове." data-copied="Ссылка скопирована ✓">Переслать другу</button>
       </div>
       <p class="note">Канал «Мадейра своими глазами» — те же записи, два раза в неделю.</p>
+      
     </section>
 
     <section class="posts">
@@ -69,14 +78,14 @@
       <ol class="road"><li><b>14 ноября 2026</b><span>Первая запись дневника</span></li><li><b>январь 2027</b><span>Первые главы — по одной в неделю</span></li><li><b>2027</b><span>Черновик всей книги</span></li></ol>
       <h2>Автор</h2>
       <p>Игорь Картузов — предприниматель, основатель SeedWave, живёт в Фуншале. <a href="https://www.linkedin.com/in/igor-kartuzov/" target="_blank" rel="noopener">LinkedIn</a></p>
-      <div class="row"><a class="btn" href="https://t.me/madeira_svoimi_glazami" target="_blank" rel="noopener" data-sub="2">Подписаться в Telegram</a></div>
+      <div class="row"><a class="btn" href="https://t.me/madeira_svoimi_glazami" target="_blank" rel="noopener" data-sub="tg" data-pos="bottom">Подписаться в Telegram</a></div>
     </section>
   </main>
 
-  <footer class="sw">© <span id="year">2026</span> <a href="https://seedwave.pt/hub/?lang=ru">SeedWave</a> · <a href="/madeira/" aria-current="page">Madeira</a> · <a href="https://www.linkedin.com/in/igor-kartuzov/" target="_blank" rel="noopener">Igor Kartuzov</a></footer>
+  <footer class="sw">© <span id="year">2026</span> <a id="hubLink" href="https://seedwave.pt/hub/?lang=ru">SeedWave</a> · <a href="/madeira/" aria-current="page">Madeira</a> · <a href="https://www.linkedin.com/in/igor-kartuzov/" target="_blank" rel="noopener">Igor Kartuzov</a></footer>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script defer src="/madeira/engine.js?v=202611091211"></script>
+<script defer src="/madeira/engine.js?v=202611091245"></script>
 <script defer src="https://seedwave.pt/nav/sw.js"></script>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8a509477310442638b80e4b22319b89b"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
