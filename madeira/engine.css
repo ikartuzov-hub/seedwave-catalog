@@ -74,7 +74,7 @@ a.trace{text-decoration:underline;text-decoration-color:var(--accent);text-under
 @media(max-width:520px){.write .two{grid-template-columns:1fr}}
 .write .check{flex-direction:row;align-items:center;gap:10px;font-weight:400}
 .write .check input{width:20px;height:20px;accent-color:var(--accent)}
-.write .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.write .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;opacity:0}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{border:1px solid var(--line);background:transparent;border-radius:99px;padding:8px 14px;font-size:14px;font-weight:600}
 .chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}

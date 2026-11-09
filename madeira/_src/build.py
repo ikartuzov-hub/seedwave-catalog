@@ -163,7 +163,7 @@ for lang in LANGS:
         <div class="two"><label>{e("fbName")}<input name="name" maxlength="80" autocomplete="name"></label>
         <label>{e("fbEmail")}<input name="email" type="email" maxlength="120" autocomplete="email" required></label></div>
         <label class="check"><input type="checkbox" name="consent" value="1"> {e("fbConsent")}</label>
-        <input name="hp" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+        <div class="hp" aria-hidden="true"><input name="website2" type="text" tabindex="-1" autocomplete="one-time-code" value=""></div>
         <button class="btn" type="submit">{e("fbSend")}</button>
         <p class="note small">{e("fbPrivacy")}</p>
         <p class="fbmsg" role="status" aria-live="polite"></p>

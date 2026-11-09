@@ -56,7 +56,7 @@
       if (text.length < 3 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { msg.className = 'fbmsg err'; msg.textContent = fb.dataset.err; return; }
       var post = (document.querySelector('.post:not(.soon)') || {}).id || '';
       var body = new URLSearchParams({ lang: fb.dataset.lang, topic: topic, text: text, name: fb.elements.name.value.trim(), email: email,
-        consent: fb.elements.consent.checked ? 'yes' : 'no', post: post, hp: fb.elements.hp.value, page: location.pathname });
+        consent: fb.elements.consent.checked ? 'yes' : 'no', post: post, website2: fb.elements.website2.value, page: location.pathname });
       btn.disabled = true;
       fetch(fb.dataset.hook, { method: 'POST', mode: 'no-cors', body: body }).then(function () {
         msg.className = 'fbmsg'; msg.textContent = fb.dataset.sent; fb.reset(); topic = '';
