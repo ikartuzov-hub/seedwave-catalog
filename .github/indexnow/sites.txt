@@ -1,0 +1,21 @@
+# репозиторий            домен
+seedwave-catalog         seedwave.pt
+lis                      l.seedwave.pt
+ndm                      ajuda.seedwave.pt
+seedwave-guides          apoios.seedwave.pt
+painel                   painel.seedwave.pt
+prazos                   prazos.seedwave.pt
+lavagem                  lavagem.seedwave.pt
+asm1                     asm1.seedwave.pt
+treino                   t.seedwave.pt
+guide                    g.seedwave.pt
+card                     i.seedwave.pt
+dubai-madeira            d.seedwave.pt
+relic                    r.seedwave.pt
+nrm                      contratar.seedwave.pt
+nam                      nam.seedwave.pt
+ncm                      ncm.seedwave.pt
+nem                      nem.seedwave.pt
+ntm                      ntm.seedwave.pt
+ls                       ls.seedwave.pt
+o17                      o17.seedwave.pt
