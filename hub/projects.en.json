@@ -655,7 +655,6 @@
           "Wordless Zé cartoon — PT, RU, EN, 9:16 and 1:1."
         ],
         "video": {
-          "title": "Zé's cartoon",
           "src": "https://ajuda.seedwave.pt/renda/video/ze_en.mp4",
           "poster": "https://ajuda.seedwave.pt/renda/video/ze_en.jpg",
           "caption": "20 seconds, clear without words. Animation created with AI."
@@ -690,7 +689,6 @@
           "Zé and Dona Rosa cartoon — PT, RU, EN, in 9:16 and 1:1."
         ],
         "video": {
-          "title": "Zé's cartoon",
           "src": "https://ajuda.seedwave.pt/cmd/video/ze_en.mp4",
           "poster": "https://ajuda.seedwave.pt/cmd/video/ze_en.jpg",
           "caption": "20 seconds, clear without words. Animation created with AI."

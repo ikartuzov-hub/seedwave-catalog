@@ -28,7 +28,21 @@
     --display:"Spectral",Georgia,serif;
     --body:"Manrope",system-ui,sans-serif;
   }
-  *{box-sizing:border-box;margin:0;padding:0}
+:root[data-theme="light"]{
+    --ink:#0c2a33;
+    --ink-soft:#557079;
+    --abyss:#eef5f6;
+    --deep:#e2eef0;
+    --deep-2:#d6e6e9;
+    --teal:#0e8fa8;
+    --teal-bright:#0b7d94;
+    --coral:#e0623f;
+    --sand:#a8772a;
+    --line:rgba(14,90,110,.18);
+    --card:rgba(10,45,55,.045);
+    --card-hover:rgba(14,143,168,.09);
+  }
+    *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{
     font-family:var(--body);
@@ -50,18 +64,33 @@
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
+  :root[data-theme="light"] body::before{
+    background:
+      radial-gradient(1100px 620px at 78% -8%, rgba(14,143,168,.14), transparent 60%),
+      radial-gradient(900px 520px at 6% 4%, rgba(224,98,63,.08), transparent 55%),
+      linear-gradient(180deg,#f2f8f9 0%,#e6f1f3 48%,#f2f8f9 100%);
+  }
+  :root[data-theme="light"] body::after{opacity:.03}
+
   .wrap{max-width:860px;margin:0 auto;padding:0 24px}
 
   .top{display:flex;align-items:center;justify-content:space-between;padding:26px 0 8px}
-  .brand{font-family:var(--display);font-weight:700;font-size:1.45rem;letter-spacing:-.01em;display:flex;align-items:center;gap:.5rem;color:var(--ink);text-decoration:none}
+  .brand{font-family:var(--display);font-weight:700;font-size:1.45rem;letter-spacing:-.01em;display:flex;align-items:center;gap:.5rem}
   .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--teal-bright);box-shadow:0 0 16px var(--teal-bright)}
-  .langbtn{
-    display:inline-flex;align-items:center;gap:.45rem;cursor:pointer;
-    border:1px solid var(--line);background:var(--card);color:var(--ink);
-    padding:.5rem .8rem;border-radius:999px;font-size:.9rem;font-weight:600;
-    transition:border-color .2s, background .2s;
+  .brandmark{display:inline-flex;width:30px;height:30px;color:var(--teal-bright)}
+  .brandmark svg{width:100%;height:100%;display:block}
+  .brandlock{display:inline-flex;align-items:center;gap:.55rem;text-decoration:none}
+  .brandlock .bw{font-family:var(--display);font-weight:700;font-size:1.2rem;letter-spacing:-.01em;color:var(--ink)}
+  .topctrl{display:flex;align-items:center;gap:8px}
+  .cbtn{
+    width:40px;height:40px;border-radius:50%;
+    display:inline-flex;align-items:center;justify-content:center;
+    border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;
+    font-size:.8rem;font-weight:700;letter-spacing:.02em;line-height:1;
+    transition:border-color .2s, background .2s, transform .15s;
   }
-  .langbtn:hover{border-color:var(--teal);background:var(--card-hover)}
+  .cbtn:hover{border-color:var(--teal);background:var(--card-hover)}
+  .cbtn:active{transform:scale(.92)}
 
   /* hero */
   .hero{padding:46px 0 8px}
@@ -136,24 +165,21 @@
   .interest-wrap{display:inline-flex;flex-direction:column;gap:5px;align-items:flex-start}
   .interest-wrap .note{margin-top:0;max-width:200px;line-height:1.35}
 
-  footer{text-align:center;color:var(--ink-soft);font-size:.84rem;padding:24px 0 48px;border-top:1px solid var(--line);margin-top:26px}
-  .author-link{color:var(--teal-bright);text-decoration:none;border-bottom:1px solid rgba(95,224,207,.45);transition:border-color .2s}
-  .author-link:hover{border-color:var(--teal-bright)}
+  footer{text-align:center;color:var(--ink-soft);font-size:15px;padding:24px 0 64px;border-top:1px solid var(--line);margin-top:26px;line-height:1.9}
+  .author-link{display:inline-block;padding:8px 4px;color:var(--teal-bright);text-decoration:underline;text-decoration-color:var(--teal);text-underline-offset:4px}
+  .author-link:hover{text-decoration-color:var(--teal-bright)}
 
   /* language overlay */
-  .ov{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;
-    background:rgba(4,16,21,.72);backdrop-filter:blur(6px)}
-  .ov.open{display:flex}
-  .ov-box{background:var(--deep);border:1px solid var(--line);border-radius:20px;padding:28px;width:min(380px,90vw)}
-  .ov-box h4{font-family:var(--display);font-weight:600;font-size:1.3rem;margin-bottom:18px;text-align:center}
-  .lang-list{display:grid;gap:10px}
-  .lang-item{display:flex;align-items:center;gap:.7rem;padding:.7rem .9rem;border:1px solid var(--line);
-    border-radius:12px;cursor:pointer;font-weight:600;transition:border-color .2s,background .2s;color:var(--ink)}
-  .lang-item:hover{border-color:var(--teal);background:var(--card-hover)}
-  .lang-item.soon{opacity:.45;cursor:not-allowed}
-  .lang-item .fl{font-size:1.3rem}
-  .lang-item .soon-b{margin-left:auto;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft)}
-  .lang-item.active{border-color:var(--teal-bright);background:var(--card-hover)}
+  .langwrap{position:relative}
+  .langmenu{position:absolute;top:calc(100% + 8px);right:0;min-width:186px;background:var(--deep);border:1px solid var(--line);border-radius:14px;padding:6px;display:none;flex-direction:column;z-index:60}
+  .langmenu.open{display:flex}
+  .langmenu button{display:flex;align-items:center;gap:6px;background:transparent;border:none;color:var(--ink-soft);text-align:left;padding:9px 11px;border-radius:9px;font-family:inherit;font-size:.92rem;font-weight:600;cursor:pointer}
+  .langmenu button:hover{background:var(--card-hover);color:var(--ink)}
+  .langmenu button.on{color:var(--teal-bright)}
+  .langmenu button.soon{opacity:.45;cursor:not-allowed}
+  .langmenu .lc{display:inline-block;width:26px;font-weight:700;font-size:.75rem;color:var(--ink-soft)}
+  .langmenu button.on .lc{color:var(--teal-bright)}
+  .langmenu .soon-b{margin-left:auto;font-size:.66rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft)}
 
   @keyframes rise{to{opacity:1;transform:none}}
   .loading{padding:120px 0;text-align:center;color:var(--ink-soft);font-size:1rem}
@@ -163,17 +189,21 @@
 <body>
   <div class="wrap">
     <div class="top">
-      <a class="brand" id="brandLink" href="index.html"><span class="dot"></span><span id="brand">SeedWave</span></a>
-      <button class="langbtn" id="langBtn" aria-label="language">🌐 <span id="langFlag">🇷🇺</span></button>
+      <a class="brandlock" id="brandLink" href="index.html">
+        <span class="brandmark" aria-label="SeedWave">
+          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" role="img"><title>SeedWave</title><path d="M67 31 C67 20 45 18 38 27 C31 36 42 44 51 47 C62 51 69 55 66 65 C63 76 42 78 34 69"/><path d="M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86"/></svg>
+        </span>
+        <span class="bw" id="brandWord">SeedWave</span>
+      </a>
+      <div class="topctrl">
+        <div class="langwrap">
+          <button class="cbtn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="language"><span id="langCode">RU</span></button>
+          <div class="langmenu" id="langmenu"></div>
+        </div>
+        <button class="cbtn" id="themeBtn" aria-label="theme">☾</button>
+      </div>
     </div>
     <main id="app"><div class="loading" id="loading">…</div></main>
-  </div>
-
-  <div class="ov" id="ov">
-    <div class="ov-box">
-      <h4 id="ovTitle">Выбери язык</h4>
-      <div class="lang-list" id="langList"></div>
-    </div>
   </div>
 
 <script>
@@ -202,6 +232,16 @@
   const navLang = (()=>{ try{ return (navigator.language||"").slice(0,2).toLowerCase() }catch(e){ return null } })();
   let lang = params.get("lang") || saved || (liveCodes.includes(navLang)?navLang:null) || manifest.defaultLang;
   if(!liveCodes.includes(lang)) lang = manifest.defaultLang;
+
+  // ---- resolve theme: ?theme → localStorage → night (как в Хабе) ----
+  const savedTheme = (()=>{ try{return localStorage.getItem("sw_theme")}catch(e){return null} })();
+  let theme = params.get("theme") || savedTheme || "night";
+  if(theme!=="light" && theme!=="night") theme="night";
+  function applyTheme(t){
+    document.documentElement.setAttribute("data-theme", t==="light"?"light":"night");
+    const b=document.getElementById("themeBtn"); if(b) b.textContent = t==="light" ? "☀" : "☾";
+  }
+  applyTheme(theme);
 
   // ---- load ui + content ----
   const contentFile = c => manifest.content.replace("{lang}", c);
@@ -238,7 +278,7 @@
   // ---- find project by ?id ----
   const id = params.get("id");
   const p = (data.projects||[]).find(x=>x.id===id);
-  const hubHref = "index.html?lang="+lang;
+  const hubHref = "index.html?lang="+lang+"&theme="+theme;
   $("#brandLink").href = hubHref;
   if(!p){ location.replace(hubHref); return; }
 
@@ -248,12 +288,12 @@
   const botBase = manifest.botUrl;
   const safeId  = s => String(s).replace(/[^A-Za-z0-9_-]/g, "");
   const interestLink = `${botBase}?start=interest_${safeId(p.id)}_${lang}`;
-  const withLang = url => url ? url + (url.includes("?") ? "&" : "?") + "lang=" + lang : url;
+  const withLang = url => url ? url + (url.includes("?") ? "&" : "?") + "lang=" + lang + "&theme=" + theme : url;
 
   // ---- render ----
   function render(){
-    $("#brand").textContent = ui.brand || "SeedWave";
-    $("#langFlag").textContent = flagOf(lang);
+    $("#brandWord").textContent = ui.brand || "SeedWave";
+    $("#langCode").textContent = lang.toUpperCase();
 
     const stageLabel = (ui.stages && ui.stages[p.stage]) || p.stage || "";
     const stageClass = p.stage==="idea" ? "idea" : "";
@@ -291,11 +331,10 @@
         </div>
       </section>` : "";
 
-    // мультик с Зé — центральный герой платформы (page.video: {src, poster, caption})
+    // мультик с Зé (page.video: {src, poster, caption}). Без заголовка сверху — решение Игоря 09.11.2026
     const vid = page.video && page.video.src ? page.video : null;
     const videoHtml = vid ? `
       <section class="zev">
-        <h2 class="sec-t">${esc(vid.title || "Zé")}</h2>
         <video controls playsinline muted loop preload="metadata" src="${esc(vid.src)}"${vid.poster?` poster="${esc(vid.poster)}"`:""}></video>
         ${vid.caption?`<p>${esc(vid.caption)}</p>`:""}
       </section>` : "";
@@ -345,31 +384,38 @@
         </div>
       </section>
 
-      <footer>${linkAuthor(t("footer"))}</footer>`;
+      <footer>© ${new Date().getFullYear()} <a class="author-link" href="${esc(withLang(manifest.hubUrl || "https://seedwave.pt/hub/"))}">${esc(ui.brand || "SeedWave")}</a> · <a class="author-link" href="${esc(withLang("https://seedwave.pt/madeira/?utm_source=hub&utm_medium=footer"))}">Madeira</a> · <a class="author-link" href="${esc(manifest.authorUrl)}" target="_blank" rel="noopener">Igor Kartuzov</a></footer>`;
   }
 
-  // ---- language overlay (смена языка сохраняет id) ----
+  // ---- language menu (как в Хабе; смена языка сохраняет id и тему) ----
   function buildLangList(){
-    $("#ovTitle").textContent = t("langTitle");
-    $("#langList").innerHTML = manifest.languages.map(l=>{
-      const cls = l.live ? (l.code===lang?"lang-item active":"lang-item") : "lang-item soon";
+    $("#langmenu").innerHTML = manifest.languages.map(l=>{
+      const on = (l.live && l.code===lang) ? " on" : "";
+      const soon = l.live ? "" : " soon";
       const tail = l.live ? "" : `<span class="soon-b">${esc(t("langSoon"))}</span>`;
-      return `<div class="${cls}" data-code="${esc(l.code)}" data-live="${l.live?1:0}">
-        <span class="fl">${esc(l.flag)}</span><span>${esc(l.label)}</span>${tail}</div>`;
+      return `<button class="${(on+soon).trim()}" data-code="${esc(l.code)}" data-live="${l.live?1:0}"><span class="lc">${esc(l.code.toUpperCase())}</span>${esc(l.label)}${tail}</button>`;
     }).join("");
-    $("#langList").querySelectorAll(".lang-item").forEach(el=>{
+    $("#langmenu").querySelectorAll("button").forEach(el=>{
       el.addEventListener("click",()=>{
         if(el.dataset.live!=="1") return;
         const code = el.dataset.code;
-        if(code===lang){ $("#ov").classList.remove("open"); return; }
+        if(code===lang){ closeLang(); return; }
         try{ localStorage.setItem("sw_lang",code) }catch(e){}
-        const u = new URL(location.href); u.searchParams.set("lang",code);
+        const u = new URL(location.href); u.searchParams.set("lang",code); u.searchParams.set("theme",theme);
         location.href = u.toString();
       });
     });
   }
-  $("#langBtn").addEventListener("click",()=>{ buildLangList(); $("#ov").classList.add("open"); });
-  $("#ov").addEventListener("click",e=>{ if(e.target.id==="ov") $("#ov").classList.remove("open"); });
+  function closeLang(){ $("#langmenu").classList.remove("open"); $("#langBtn").setAttribute("aria-expanded","false"); }
+  $("#langBtn").addEventListener("click",(e)=>{ e.stopPropagation(); const m=$("#langmenu"); const open=m.classList.toggle("open"); $("#langBtn").setAttribute("aria-expanded",open?"true":"false"); if(open) buildLangList(); });
+  document.addEventListener("click",(e)=>{ if(!e.target.closest(".langwrap")) closeLang(); });
+  $("#themeBtn").addEventListener("click",()=>{
+    theme = (theme==="light") ? "night" : "light";
+    try{ localStorage.setItem("sw_theme", theme) }catch(e){}
+    applyTheme(theme);
+    const u=new URL(location.href); u.searchParams.set("theme",theme); history.replaceState(null,"",u.toString());
+    render();
+  });
 
   render();
 })();
