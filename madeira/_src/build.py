@@ -17,7 +17,8 @@ url = lambda l: BASE if l == "ru" else f"{BASE}{l}/"
 path = lambda l: "/madeira/" if l == "ru" else f"/madeira/{l}/"
 TG = "https://t.me/madeira_svoimi_glazami"
 LI = "https://www.linkedin.com/in/igor-kartuzov/"
-HOOK = "https://hook.eu1.make.com/itssorkbu2g5de968qhwv6620tasscws"  # Make: Мадейра · письмо автору (сайт)
+HOOK = "https://hook.eu1.make.com/itssorkbu2g5de968qhwv6620tasscws"  # Make 8468797: письмо автору / ссылка / удаление
+READ = "https://hook.eu1.make.com/pkm3tx3cdepiu53j0p0btup2wr37c57l"  # Make 8469844: чтение переписки по ключу
 CF = "<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{\"token\": \"8a509477310442638b80e4b22319b89b\"}'></script><!-- End Cloudflare Web Analytics -->"
 V = time.strftime("%Y%m%d%H%M")
 
@@ -44,7 +45,7 @@ def para(text, trace):
     return "\n".join(out)
 
 
-pages, feeds = {}, {}
+pages, feeds, letters = {}, {}, {}
 for lang in LANGS:
     T = UI[lang]
     e = lambda k: html.escape(T[k], quote=True)
@@ -168,6 +169,7 @@ for lang in LANGS:
         <p class="note small">{e("fbPrivacy")}</p>
         <p class="fbmsg" role="status" aria-live="polite"></p>
       </form>
+      <p class="note"><a class="mylink" href="{path(lang)}letters/">{e("myLink")}</a></p>
     </section>
 
     <section class="about">
@@ -206,12 +208,71 @@ for lang in LANGS:
     (ROOT / "m").mkdir(exist_ok=True)
     (ROOT / "m" / f"madeira-{lang}.webmanifest").write_text(json.dumps(man, ensure_ascii=False, indent=2), encoding="utf-8")
 
+    lp = f'''<!doctype html>
+<html lang="{lang}" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>{e("lt")} — {e("h1")}</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="sw-ph" content="off">
+<link rel="icon" type="image/svg+xml" href="/madeira/madeira-icon.svg">
+<link rel="apple-touch-icon" href="/madeira/apple-touch-icon.png">
+<meta name="theme-color" content="#f4f9fd">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,700;1,500&family=Manrope:wght@400;600;800&display=swap&subset=cyrillic" rel="stylesheet">
+<link rel="stylesheet" href="/madeira/engine.css?v={V}">
+<script>try{{var t=localStorage.getItem('madeira.theme')||'light';document.documentElement.dataset.theme=t}}catch(e){{}}</script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="{path(lang)}"><img src="/madeira/madeira-icon.svg" alt="{e("h1")}" width="36" height="36"><span>{e("h1")}</span></a>
+    <div class="tools">
+      <button class="rb" id="langBtn" type="button" aria-label="{e("langLabel")}">{lang.upper()}</button>
+      <button class="rb" id="themeBtn" type="button" aria-label="{e("themeLabel")}">☾</button>
+      <nav class="menu" id="langMenu">{"".join(f'<a href="{path(l)}letters/" data-keep="1">{l.upper()}</a>' for l in LANGS)}</nav>
+    </div>
+  </header>
+  <main class="letters" id="letters" data-read="{READ}" data-send="{HOOK}" data-lang="{lang}"
+    data-s='{html.escape(json.dumps({k: T[k] for k in ["lyou","lauthor","lwait","lempty","lsent","lblocked","ldeleted","linvalid","llostSent","ldelc","lerr","months"]}, ensure_ascii=False), quote=True)}'>
+    <p class="note"><a href="{path(lang)}">{e("lback")}</a></p>
+    <h1 class="lt">{e("lt")}</h1>
+    <p class="note">{e("lnote")}</p>
+    <div id="thread" class="thread" aria-live="polite"><p class="note">{e("lload")}</p></div>
+    <form id="cont" class="cardform" hidden novalidate>
+      <label>{e("lcont")}<textarea name="text" rows="4" maxlength="2000" required></textarea></label>
+      <label class="check"><input type="checkbox" name="consent" value="1"> {e("fbConsent")}</label>
+      <button class="btn" type="submit">{e("lsend")}</button>
+      <p class="fbmsg" role="status" aria-live="polite"></p>
+    </form>
+    <form id="lost" class="cardform" hidden novalidate>
+      <h2>{e("llostT")}</h2>
+      <p class="note">{e("llost")}</p>
+      <label>{e("fbEmail")}<input name="email" type="email" maxlength="120" autocomplete="email" required></label>
+      <button class="btn" type="submit">{e("llostSend")}</button>
+      <p class="fbmsg" role="status" aria-live="polite"></p>
+    </form>
+    <p class="del"><button type="button" id="delBtn" class="linkbtn" hidden>{e("ldel")}</button></p>
+  </main>
+  <footer class="sw">© <span id="year">{time.strftime("%Y")}</span> <a href="https://seedwave.pt/hub/?lang={lang}">SeedWave</a> · <a href="{path(lang)}">Madeira</a> · <a href="{LI}" target="_blank" rel="noopener">Igor Kartuzov</a></footer>
+</div>
+<script defer src="/madeira/engine.js?v={V}"></script>
+</body>
+</html>
+'''
+    letters[lang] = lp
+
 # пишем на диск одним разом, после того как собраны все языки
 for lang in LANGS:
     d = ROOT if lang == "ru" else ROOT / lang
     d.mkdir(exist_ok=True)
     (d / "index.html").write_text(pages[lang], encoding="utf-8")
     (d / "feed.xml").write_text(feeds[lang], encoding="utf-8")
+    (d / "letters").mkdir(exist_ok=True)
+    (d / "letters" / "index.html").write_text(letters[lang], encoding="utf-8")
 (ROOT / "m" / "madeira-ru.webmanifest").exists()
 
 # ---------- проверки пререндера ----------

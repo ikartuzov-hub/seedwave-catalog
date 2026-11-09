@@ -82,6 +82,25 @@ a.trace{text-decoration:underline;text-decoration-color:var(--accent);text-under
 .fbmsg{margin:0;font-weight:700;color:var(--accent)}
 .fbmsg.err{color:#c0392b}
 
+/* моя переписка */
+.letters h1.lt{font:700 clamp(28px,7vw,40px)/1.1 var(--display);margin:6px 0 8px}
+.thread{display:flex;flex-direction:column;gap:12px;margin:18px 0}
+.msg{border:1px solid var(--line);border-radius:16px;padding:12px 16px;max-width:92%}
+.msg.you{background:var(--surface);align-self:flex-end}
+.msg.author{background:var(--chip-on);align-self:flex-start}
+.msg .who{margin:0 0 4px;font-size:13px;font-weight:800;color:var(--ink-soft)}
+.msg .body{margin:0;white-space:pre-wrap}
+.note.wait{font-style:italic;margin:0}
+.note.err{color:#c0392b;font-weight:700}
+.cardform{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;display:flex;flex-direction:column;gap:12px;margin:12px 0}
+.cardform h2{margin:0;font-size:22px}
+.cardform label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600;color:var(--ink-soft)}
+.cardform textarea,.cardform input[type=email]{font:inherit;font-size:16px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px}
+.cardform .check{flex-direction:row;align-items:center;gap:10px;font-weight:400}
+.cardform .check input{width:20px;height:20px;accent-color:var(--accent)}
+.linkbtn{background:none;border:0;padding:8px 0;color:var(--ink-soft);text-decoration:underline;font-size:14px}
+.mylink{font-weight:700;text-decoration-color:var(--accent);text-underline-offset:3px}
+
 /* о книге */
 .about p{margin:0 0 12px}
 .about a{text-decoration-color:var(--accent);text-underline-offset:3px}
@@ -101,3 +120,4 @@ footer.sw a{display:inline-block;padding:8px 4px;text-decoration:underline;text-
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
 }
+.cardform[hidden],.linkbtn[hidden]{display:none}
