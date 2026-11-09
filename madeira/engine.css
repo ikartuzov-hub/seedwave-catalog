@@ -1,0 +1,81 @@
+/* Мадейра своими глазами — слой 1 (вид). Палитра «Океан ночью»: глубокий океан + свет маяка. */
+:root{
+  --bg:#0b1a2a;--surface:#11243a;--ink:#eef3f7;--ink-soft:#9fb3c4;--line:rgba(238,243,247,.13);
+  --accent:#ffb35c;--accent-ink:#0b1a2a;--wave:rgba(255,179,92,.55);--wave2:rgba(238,243,247,.18);
+  --display:"Lora",Georgia,serif;--body:"Manrope",system-ui,sans-serif;--r:18px;
+}
+:root[data-theme="light"]{
+  --bg:#f3f6f9;--surface:#ffffff;--ink:#0b1a2a;--ink-soft:#4f6475;--line:rgba(11,26,42,.13);
+  --accent:#b8640f;--accent-ink:#ffffff;--wave:rgba(184,100,15,.5);--wave2:rgba(11,26,42,.15);
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;min-height:100vh}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+.wrap{max-width:640px;margin:0 auto;padding:0 18px}
+
+/* шапка — стандарт серии */
+.top{display:flex;align-items:center;justify-content:space-between;padding:14px 0 8px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 17px/1.2 var(--display)}
+.brand img{width:36px;height:36px;border-radius:10px}
+.tools{display:flex;gap:8px}
+.rb{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:transparent;font-size:15px;display:grid;place-items:center}
+
+/* строка PT / EN */
+.strip{margin:0;font-size:13px;line-height:1.45;color:var(--ink-soft);display:flex;flex-direction:column;gap:2px}
+.strip b{color:var(--accent);font-weight:800;margin-right:4px}
+
+/* вау: медленная волна под шапкой */
+.sea{display:block;width:100%;height:34px;margin:6px 0 0;overflow:hidden}
+.sea path{fill:none;stroke-linecap:round}
+.sea .w1{stroke:var(--wave);stroke-width:2.2;animation:drift 14s linear infinite}
+.sea .w2{stroke:var(--wave2);stroke-width:1.6;animation:drift 22s linear infinite reverse}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(-300px)}}
+
+/* герой */
+.hero{padding:10px 0 4px}
+.eyebrow{margin:0 0 6px;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.hero h1{font:700 clamp(34px,8.5vw,48px)/1.06 var(--display);margin:0 0 12px;letter-spacing:-.01em}
+.hero>p{color:var(--ink-soft);margin:0}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:18px}
+.btn{border:0;border-radius:14px;padding:14px 20px;font-weight:800;font-size:16px;background:var(--accent);color:var(--accent-ink);min-height:50px;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.note{font-size:14px;color:var(--ink-soft);margin:10px 0 0}
+
+/* записи: дата — отметка на карте */
+h2{font:700 26px/1.2 var(--display);margin:36px 0 12px}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px 20px 16px;margin:0 0 16px}
+.meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:14px;color:var(--ink-soft)}
+.meta time{font-weight:800;color:var(--ink)}
+.pin{width:12px;height:12px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--accent);box-shadow:0 0 0 0 var(--wave);animation:ping 2.8s ease-out infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 var(--wave)}70%,100%{box-shadow:0 0 0 10px transparent}}
+.badge{margin-left:auto;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;border:1px solid var(--accent);color:var(--accent);border-radius:99px;padding:2px 10px}
+.post h3{font:700 23px/1.25 var(--display);margin:10px 0 8px}
+.post h3 a{text-decoration:none}
+.post .lead{font:500 italic 19px/1.5 var(--display);margin:0 0 10px}
+.post p{margin:0 0 12px}
+.post .sign{color:var(--ink-soft);font-size:15px}
+.post.soon{border-style:dashed}
+.post.soon .lead{font:400 16px/1.5 var(--body);color:var(--ink-soft);font-style:normal}
+a.trace{text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}
+
+/* о книге */
+.about p{margin:0 0 12px}
+.about a{text-decoration-color:var(--accent);text-underline-offset:3px}
+.road{list-style:none;margin:6px 0 4px;padding:0 0 0 18px;border-left:2px solid var(--line)}
+.road li{position:relative;padding:6px 0 10px}
+.road li::before{content:"";position:absolute;left:-25px;top:13px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.road b{display:block;font-size:15px}
+.road span{color:var(--ink-soft);font-size:15px}
+
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:99px;font-weight:700;opacity:0;transition:opacity .3s;pointer-events:none;z-index:50}
+.toast.on{opacity:1}
+
+/* футер — стандарт SeedWave */
+footer.sw{text-align:center;padding:28px 0 64px;font-size:15px;color:var(--ink-soft)}
+footer.sw a{display:inline-block;padding:8px 4px;text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:4px}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
