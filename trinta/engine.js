@@ -120,10 +120,12 @@
     const v = R.video; if (!v) return;
     const src = v[LANG] || v.en || v.pt; if (!src) return;
     const sec = $('#video');
-    sec.innerHTML = `<h2>${esc(T.videoTitle)}</h2><video controls playsinline preload="metadata" ${v.poster ? `poster="${esc(v.poster)}"` : ''} src="${esc(src)}"></video>`;
+    sec.innerHTML = `<video muted loop playsinline controls preload="metadata" ${v.poster ? `poster="${esc(v.poster)}"` : ''} src="${esc(src)}"></video><p class="vnote">${esc(T.videoNote)}</p>`;
     sec.hidden = false;
-    $('video', sec).addEventListener('play', () => track('trinta_video_play'), { once: true });
-    $('video', sec).addEventListener('ended', () => track('trinta_video_end'), { once: true });
+    const el = $('video', sec);
+    el.addEventListener('play', () => track('trinta_video_play'), { once: true });
+    let loops = 0; el.addEventListener('timeupdate', () => { if (!loops && el.currentTime > el.duration - 1) { loops = 1; track('trinta_video_end'); } });
+    if (!reduced && 'IntersectionObserver' in window) new IntersectionObserver(es => es.forEach(e => { e.isIntersecting ? el.play().catch(() => {}) : el.pause(); }), { threshold: 0.6 }).observe(el);
   }
 
   /* ---------- калькулятор ---------- */

@@ -49,8 +49,9 @@ button{font:inherit;color:inherit;cursor:pointer}
 
 /* ролик */
 .video{margin:22px 0 0}
-.video h2,.cond h2,.doors h2,.src h2{font:600 24px/1.2 var(--display);margin:0 0 10px}
-.video video{width:100%;border-radius:var(--r);border:1px solid var(--line);background:#000;display:block}
+.cond h2,.doors h2,.src h2{font:600 24px/1.2 var(--display);margin:0 0 10px}
+.vnote{font-size:12px;color:var(--ink-soft);margin:6px 2px 0;text-align:right}
+.video video{width:100%;aspect-ratio:1;border-radius:var(--r);border:1px solid var(--line);background:#000;display:block}
 
 /* калькулятор */
 .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px 18px;margin:22px 0 0}
