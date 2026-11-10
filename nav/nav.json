@@ -339,6 +339,26 @@
         "es": "Número + PIN = tu llave",
         "de": "Nummer + PIN = Ihr Schlüssel"
       }
+    },
+    "trinta": {
+      "url": "https://seedwave.pt/trinta/",
+      "match": [
+        "seedwave.pt/trinta/"
+      ],
+      "label": {
+        "pt": "Trinta",
+        "en": "Trinta",
+        "ru": "Trinta",
+        "es": "Trinta",
+        "de": "Trinta"
+      },
+      "tagline": {
+        "pt": "Até 30 % dos custos de 2025 de volta",
+        "en": "Up to 30% of 2025 costs back",
+        "ru": "До 30 % расходов 2025 можно вернуть",
+        "es": "Hasta el 30 % de los gastos de 2025",
+        "de": "Bis zu 30 % der Kosten 2025 zurück"
+      }
     }
   },
   "related": {
@@ -370,19 +390,23 @@
       "cmd"
     ],
     "prazos.seedwave.pt/": [
+      "trinta",
       "nam",
       "cesd",
       "contratar"
     ],
     "painel.seedwave.pt/": [
+      "trinta",
       "nam",
       "contratar"
     ],
     "apoios.seedwave.pt/": [
+      "trinta",
       "nam",
       "contratar"
     ],
     "nam.seedwave.pt/": [
+      "trinta",
       "contratar"
     ],
     "contratar.seedwave.pt/": [
@@ -414,6 +438,10 @@
       "cesd",
       "aima",
       "voos"
+    ],
+    "seedwave.pt/trinta/": [
+      "nam",
+      "contratar"
     ]
   }
 }

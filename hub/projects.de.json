@@ -160,6 +160,23 @@
       "moreLink": "https://painel.seedwave.pt/flyer.html"
     },
     {
+      "id": "trinta",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#5E8C00\" stroke-width=\"8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Trinta\"><title>Trinta</title><path d=\"M27 26 H67 M47 26 V66\"/><circle cx=\"76\" cy=\"60\" r=\"3\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
+      "category": "Förderungen",
+      "name": "Trinta — bis zu 30 % der Kosten zurück",
+      "hook": "Miete, Strom, Wasser, Sozialversicherung und Buchhaltung 2025: Madeira erstattet Firmen bis zu 30 %. Anträge bis 04.12.2026. Fünf Regler bewegen und den eigenen Betrag sehen.",
+      "description": "Rechner zum Programm Funcionamento 2030 (Aviso M2030-2026-38). Ähnlichstes Beispiel wählen, Regler anpassen, der Beleg druckt und rechnet: Minimum 7.500 €, Obergrenze 20.000 oder 25.000 €, 10 Punkte mehr auf Porto Santo. Darunter fünf Bedingungen, die in den Nachrichten fehlen. Die Zahlen der Firma bleiben auf dem Telefon. Fünf Sprachen.",
+      "sectors": [
+        "Staatliche Förderung",
+        "Kleinunternehmen",
+        "Civic Tech"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Steuerbüros · Firmeninhaber auf Madeira",
+      "demoLink": "https://seedwave.pt/trinta/de/"
+    },
+    {
       "id": "prazos",
       "icon": "<svg viewBox=\"0 0 64 64\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Prazos\"><title>Prazos</title><rect width=\"64\" height=\"64\" rx=\"16\" fill=\"#D9890B\"/><path d=\"M24 46V16h11a9.5 9.5 0 0 1 0 19H24\" fill=\"none\" stroke=\"#1B1200\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M12 53c6.5-4 13-4 19.5 0s13 4 19.5 0\" fill=\"none\" stroke=\"#1B1200\" stroke-width=\"3.5\" stroke-linecap=\"round\"/></svg>",
       "category": "Bürgerdienste",

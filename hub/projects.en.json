@@ -160,6 +160,23 @@
       "moreLink": "https://painel.seedwave.pt/flyer.html"
     },
     {
+      "id": "trinta",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#5E8C00\" stroke-width=\"8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Trinta\"><title>Trinta</title><path d=\"M27 26 H67 M47 26 V66\"/><circle cx=\"76\" cy=\"60\" r=\"3\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
+      "category": "Grants",
+      "name": "Trinta — up to 30% of costs back",
+      "hook": "Rent, electricity, water, Social Security and accounting for 2025: Madeira refunds companies up to 30%. Applications close 4 Dec 2026. Move five sliders and see your figure.",
+      "description": "A calculator for the Funcionamento 2030 programme (Aviso M2030-2026-38). Pick the closest example, adjust the sliders, and the receipt prints and adds up: €7,500 minimum, €20,000 or €25,000 ceiling, 10 extra points on Porto Santo. Below it, five conditions the news leaves out. Company numbers stay on the phone. Five languages.",
+      "sectors": [
+        "Public support",
+        "Small business",
+        "Civic Tech"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Accounting firms · Company owners in Madeira",
+      "demoLink": "https://seedwave.pt/trinta/en/"
+    },
+    {
       "id": "prazos",
       "icon": "<svg viewBox=\"0 0 64 64\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Prazos\"><title>Prazos</title><rect width=\"64\" height=\"64\" rx=\"16\" fill=\"#D9890B\"/><path d=\"M24 46V16h11a9.5 9.5 0 0 1 0 19H24\" fill=\"none\" stroke=\"#1B1200\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M12 53c6.5-4 13-4 19.5 0s13 4 19.5 0\" fill=\"none\" stroke=\"#1B1200\" stroke-width=\"3.5\" stroke-linecap=\"round\"/></svg>",
       "category": "Civic tech",

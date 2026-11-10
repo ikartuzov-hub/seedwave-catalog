@@ -160,6 +160,23 @@
       "moreLink": "https://painel.seedwave.pt/flyer.html"
     },
     {
+      "id": "trinta",
+      "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#5E8C00\" stroke-width=\"8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Trinta\"><title>Trinta</title><path d=\"M27 26 H67 M47 26 V66\"/><circle cx=\"76\" cy=\"60\" r=\"3\"/><path d=\"M14 84 Q26 78 38 84 Q50 90 62 84 Q74 78 86 84\"/></svg>",
+      "category": "Ayudas",
+      "name": "Trinta — hasta el 30 % de los gastos de vuelta",
+      "hook": "Alquiler, luz, agua, Seguridad Social y contabilidad de 2025: Madeira devuelve a las empresas hasta el 30 %. Solicitudes hasta el 04.12.2026. Mueva cinco controles y vea su cifra.",
+      "description": "Calculadora del programa Funcionamento 2030 (Aviso M2030-2026-38). Se elige el ejemplo más parecido, se ajustan los controles y el tique se imprime y suma: mínimo de 7 500 €, tope de 20 000 o 25 000 €, 10 puntos más en Porto Santo. Debajo, cinco condiciones que las noticias dejan fuera. Las cifras de la empresa se quedan en el teléfono. Cinco idiomas.",
+      "sectors": [
+        "Apoyo público",
+        "Pequeñas empresas",
+        "Civic Tech"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Despachos de contabilidad · Dueños de empresas en Madeira",
+      "demoLink": "https://seedwave.pt/trinta/es/"
+    },
+    {
       "id": "prazos",
       "icon": "<svg viewBox=\"0 0 64 64\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Prazos\"><title>Prazos</title><rect width=\"64\" height=\"64\" rx=\"16\" fill=\"#D9890B\"/><path d=\"M24 46V16h11a9.5 9.5 0 0 1 0 19H24\" fill=\"none\" stroke=\"#1B1200\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M12 53c6.5-4 13-4 19.5 0s13 4 19.5 0\" fill=\"none\" stroke=\"#1B1200\" stroke-width=\"3.5\" stroke-linecap=\"round\"/></svg>",
       "category": "Servicios al ciudadano",
