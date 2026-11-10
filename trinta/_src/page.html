@@ -73,18 +73,23 @@
     <section class="doors" data-sec="doors">
       <h2>{{doorsTitle}}</h2>
       <p class="sub">{{doorsSub}}</p>
-      <ul>
-        <li><a class="door" data-door="madeira" href="https://seedwave.pt/madeira/?lang={{lang}}&amp;utm_source=trinta&amp;utm_medium=door"><span class="ic" aria-hidden="true">🏝</span><span><b>{{doorMadeiraT}}</b><small>{{doorMadeiraS}}</small></span><span class="ar" aria-hidden="true">→</span></a></li>
-        <li><a class="door" data-door="linkedin" href="https://www.linkedin.com/in/igor-kartuzov/" target="_blank" rel="noopener"><span class="ic" aria-hidden="true">💼</span><span><b>{{doorLinkedinT}}</b><small>{{doorLinkedinS}}</small></span><span class="ar" aria-hidden="true">→</span></a></li>
-        <li><a class="door" data-door="hub" href="https://seedwave.pt/hub/?lang={{lang}}&amp;utm_source=trinta&amp;utm_medium=door"><span class="ic" aria-hidden="true">🧭</span><span><b>{{doorHubT}}</b><small>{{doorHubS}}</small></span><span class="ar" aria-hidden="true">→</span></a></li>
-        <li><a class="door" data-door="piloto" href="https://seedwave.pt/piloto/?lang={{lang}}&amp;utm_source=trinta&amp;utm_medium=door"><span class="ic" aria-hidden="true">🤖</span><span><b>{{doorPilotoT}}</b><small>{{doorPilotoS}}</small></span><span class="ar" aria-hidden="true">→</span></a></li>
-      </ul>
+      <a class="door" data-door="hub" href="https://seedwave.pt/hub/?lang={{lang}}&amp;utm_source=trinta&amp;utm_medium=door"><span class="ic"><img src="/hub/icon.svg" alt="" width="44" height="44" loading="lazy"></span><span><b>{{doorHubT}}</b><small>{{doorHubS}}</small></span><span class="ar" aria-hidden="true">→</span></a>
+      <details class="fold" id="who">
+        <summary>{{whoBtn}}</summary>
+        <ul>
+          <li><a class="door" data-door="piloto" href="https://seedwave.pt/piloto/?lang={{lang}}&amp;utm_source=trinta&amp;utm_medium=door"><span class="ic"><img src="/piloto/piloto-icon.svg" alt="" width="44" height="44" loading="lazy"></span><span><b>{{doorPilotoT}}</b><small>{{doorPilotoS}}</small></span><span class="ar" aria-hidden="true">→</span></a></li>
+          <li><a class="door" data-door="madeira" href="https://seedwave.pt/madeira/?lang={{lang}}&amp;utm_source=trinta&amp;utm_medium=door"><span class="ic"><img src="/madeira/madeira-icon.svg" alt="" width="44" height="44" loading="lazy"></span><span><b>{{doorMadeiraT}}</b><small>{{doorMadeiraS}}</small></span><span class="ar" aria-hidden="true">→</span></a></li>
+          <li><a class="door" data-door="linkedin" href="https://www.linkedin.com/in/igor-kartuzov/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#ECEEE6"/><g fill="none" stroke="#2A3320" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M67 31 C67 20 45 18 38 27 C31 36 42 44 51 47 C62 51 69 55 66 65 C63 76 42 78 34 69"/><path d="M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86"/></g></svg></span><span><b>{{doorLinkedinT}}</b><small>{{doorLinkedinS}}</small></span><span class="ar" aria-hidden="true">→</span></a></li>
+        </ul>
+      </details>
     </section>
 
     <section class="src" data-sec="src">
-      <h2>{{srcTitle}}</h2>
-      <p>{{src}}</p>
-      <p><a id="srcLink" href="{{source}}" target="_blank" rel="noopener">{{srcLink}}</a></p>
+      <details class="fold" id="srcFold">
+        <summary>{{srcTitle}}</summary>
+        <p>{{src}}</p>
+        <p><a id="srcLink" href="{{source}}" target="_blank" rel="noopener">{{srcLink}}</a></p>
+      </details>
       <p class="honest">{{honest}}</p>
     </section>
   </main>

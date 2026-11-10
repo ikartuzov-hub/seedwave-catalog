@@ -19,7 +19,7 @@ BG, ACC, PAPER = "#0a1410", "#b7e33b", "#F1F7E1"
 tpl = (ROOT / "_src" / "page.html").read_text(encoding="utf-8")
 R = json.loads((ROOT / "rules.json").read_text(encoding="utf-8"))
 STATIC = ["title", "metaDesc", "brand", "slogan", "kicker", "heroTitle", "heroSub", "cdLabel", "cdDate", "appTitle", "appHint",
-          "condTitle", "condSub", "cond1", "cond2", "cond3", "cond4", "cond5", "condMore", "doorsTitle", "doorsSub",
+          "condTitle", "condSub", "cond1", "cond2", "cond3", "cond4", "cond5", "condMore", "doorsTitle", "doorsSub", "whoBtn",
           "doorMadeiraT", "doorMadeiraS", "doorLinkedinT", "doorLinkedinS", "doorHubT", "doorHubS", "doorPilotoT", "doorPilotoS",
           "srcTitle", "src", "srcLink", "honest"]
 
@@ -118,6 +118,6 @@ for lang, out in built.items():
     assert f'<link rel="canonical" href="{url(lang)}">' in out, f"{lang}: canonical"
     assert f'<html lang="{lang}"' in out
     assert bool(CYR.search(text)) == (lang == "ru"), f"{lang}: язык текста не совпал с адресом"
-    assert not re.search(r'<img(?![^>]*alt="[^"]+")', out), f"{lang}: картинка без alt"
+    assert not re.search(r'<img(?![^>]*alt=")', out), f"{lang}: картинка без alt"
     assert ("noindex" in out) == PREVIEW
 print("ok", ", ".join(built), "| preview" if PREVIEW else "| боевой")

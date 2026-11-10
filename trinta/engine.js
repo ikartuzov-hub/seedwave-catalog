@@ -233,6 +233,7 @@
   function doors() {
     $$('.door').forEach(a => a.addEventListener('click', () => track('trinta_door', { to: a.dataset.door })));
     const src = $('#srcLink'); if (src) src.addEventListener('click', () => track('trinta_source'));
+    [['who', 'trinta_who_open'], ['srcFold', 'trinta_source_open']].forEach(([id, ev]) => { const d = $('#' + id); if (d) d.addEventListener('toggle', () => { if (d.open && !seen[ev]) { seen[ev] = 1; track(ev); } }); });
   }
 
   /* ---------- где задержался: секунды в поле зрения по разделам ---------- */

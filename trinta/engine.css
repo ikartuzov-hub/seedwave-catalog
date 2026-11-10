@@ -116,10 +116,19 @@ input[type=range]:focus-visible{outline:2px solid var(--accent);outline-offset:2
 
 /* двери */
 .doors{margin:34px 0 0}
-.doors ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.doors ul{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:10px}
+.fold{margin-top:10px}
+.fold summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:52px;padding:12px 16px;border:1px dashed var(--line);border-radius:16px;font-weight:700;color:var(--ink)}
+.fold summary::-webkit-details-marker{display:none}
+.fold summary::after{content:"+";color:var(--accent);font-size:22px;font-weight:800;line-height:1}
+.fold[open] summary::after{content:"–"}
+.fold[open] summary{border-style:solid;border-color:var(--accent)}
+.fold[open]>ul,.fold[open]>p{animation:rise .35s both}
+.src .fold p{margin:10px 2px 0}
 .door{display:grid;grid-template-columns:44px 1fr 18px;gap:12px;align-items:center;padding:14px;border:1px solid var(--line);border-radius:16px;background:var(--surface);text-decoration:none;min-height:72px;transition:border-color .15s,transform .15s}
 .door:hover,.door:focus-visible{border-color:var(--accent);transform:translateY(-1px);outline:none}
-.door .ic{width:44px;height:44px;border-radius:12px;background:var(--chip-on);display:grid;place-items:center;font-size:22px}
+.door .ic{width:44px;height:44px;border-radius:12px;overflow:hidden;display:block}
+.door .ic img,.door .ic svg{width:44px;height:44px;display:block;border-radius:12px}
 .door b{display:block;font-size:17px}
 .door small{display:block;color:var(--ink-soft);font-size:14px;line-height:1.35}
 .door .ar{color:var(--accent);font-weight:800}
