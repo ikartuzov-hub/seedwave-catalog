@@ -1,0 +1,30 @@
+{
+  "id": "/trinta/ru/",
+  "name": "Trinta",
+  "short_name": "Trinta",
+  "description": "Аренда, свет, вода, взносы в Segurança Social и бухгалтер за 2025 год: программа Madeira 2030 возвращает до 30 %. Подвигай пять ползунков — увидишь свою сумму. Приём заявок до 04.12.2026, 17:00.",
+  "lang": "ru",
+  "start_url": "/trinta/ru/",
+  "scope": "/trinta/",
+  "display": "standalone",
+  "background_color": "#0a1410",
+  "theme_color": "#0a1410",
+  "icons": [
+    {
+      "src": "/trinta/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/trinta/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/trinta/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

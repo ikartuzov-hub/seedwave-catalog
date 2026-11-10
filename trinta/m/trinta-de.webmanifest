@@ -1,0 +1,30 @@
+{
+  "id": "/trinta/de/",
+  "name": "Trinta",
+  "short_name": "Trinta",
+  "description": "Miete, Strom, Wasser, Sozialversicherung und Buchhaltung 2025: Madeira 2030 erstattet bis zu 30 %. Fünf Regler bewegen und den eigenen Betrag sehen. Anträge bis 04.12.2026, 17:00 Uhr.",
+  "lang": "de",
+  "start_url": "/trinta/de/",
+  "scope": "/trinta/",
+  "display": "standalone",
+  "background_color": "#0a1410",
+  "theme_color": "#0a1410",
+  "icons": [
+    {
+      "src": "/trinta/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/trinta/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/trinta/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

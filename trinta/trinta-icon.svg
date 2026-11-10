@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Trinta · значок серии: поле, буква T, волна снизу, точка-процент -->
+  <rect width="100" height="100" rx="22" fill="#F1F7E1"/>
+  <path d="M27 26 H67 M47 26 V66" fill="none" stroke="#5E8C00" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="76" cy="60" r="4.5" fill="#5E8C00"/>
+  <path d="M16 84 Q 33 75 50 84 T 84 84" fill="none" stroke="#5E8C00" stroke-width="6" stroke-linecap="round"/>
+</svg>

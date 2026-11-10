@@ -1,0 +1,32 @@
+{
+  "_": "Слой 3 — правила Trinta (Funcionamento 2030 – Outros custos, Aviso M2030-2026-38). Правится без движка. Источники: новость Madeira 2030 от 30.10.2026 (ставка, срок, виды расходов, кто может) и текст авизо PDF V1.4 (год расходов, пороги, потолки) — разбор 30.10–02.11.2026, сверка новости 10.11.2026.",
+  "updated": "2026-11-10",
+  "aviso": "M2030-2026-38",
+  "deadline": "2026-12-04T17:00:00Z",
+  "source": "https://madeira.portugal2030.pt/2026/10/30/madeira-2030-lanca-aviso-concurso-de-204-milhoes-de-euros-para-apoiar-os-custos-de-funcionamento-das-empresas/",
+  "rate": 0.30,
+  "ratePortoSanto": 0.40,
+  "capMicro": 20000,
+  "capOther": 25000,
+  "minCosts": 7500,
+  "rows": [
+    { "id": "renda", "emoji": "🏢", "max": 6000, "step": 50 },
+    { "id": "luz", "emoji": "💡", "max": 1500, "step": 10 },
+    { "id": "agua", "emoji": "💧", "max": 400, "step": 5 },
+    { "id": "ss", "emoji": "👥", "max": 12000, "step": 50 },
+    { "id": "contab", "emoji": "📒", "max": 600, "step": 10, "capYear": 2000 }
+  ],
+  "profiles": {
+    "solo": { "size": "micro", "renda": 600, "luz": 60, "agua": 20, "ss": 450, "contab": 150 },
+    "loja": { "size": "micro", "renda": 1500, "luz": 400, "agua": 80, "ss": 2200, "contab": 250 },
+    "equipa": { "size": "other", "renda": 2500, "luz": 500, "agua": 100, "ss": 6000, "contab": 400 }
+  },
+  "video": null,
+  "doors": {
+    "madeira": "https://seedwave.pt/madeira/",
+    "linkedin": "https://www.linkedin.com/in/igor-kartuzov/",
+    "hub": "https://seedwave.pt/hub/",
+    "piloto": "https://seedwave.pt/piloto/"
+  },
+  "url": "https://seedwave.pt/trinta/"
+}

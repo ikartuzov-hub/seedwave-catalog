@@ -44,6 +44,21 @@
   });
   window.posthog.register({ sw_product: product, sw_section: section, sw_lang: lang });
 
+  // Личная ссылка (?g=код): метка гостя живёт только в адресе — на устройство ничего не пишется.
+  // Событиям даёт свойство sw_guest и переходит по ссылкам внутри seedwave.pt, чтобы путь гостя не рвался между продуктами.
+  var guest = (location.search.match(/[?&]g=([a-z0-9]{3,12})(?:&|$)/) || [])[1];
+  if (guest) {
+    window.posthog.register({ sw_guest: guest });
+    document.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest && e.target.closest('a[href]');
+      if (!a) return;
+      try {
+        var u = new URL(a.href);
+        if (/(^|\.)seedwave\.pt$/.test(u.hostname) && !u.searchParams.get('g')) { u.searchParams.set('g', guest); a.href = u.toString(); }
+      } catch (err) {}
+    }, true);
+  }
+
   window.swTrack = function (name, props) {
     try { window.posthog.capture(name, props || {}); } catch (e) {}
   };

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="{{lang}}" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>{{title}}</title>
+<meta name="description" content="{{metaDesc}}">
+{{robots}}<link rel="canonical" href="{{url}}">
+{{hreflang}}
+<link rel="icon" type="image/svg+xml" href="/trinta/trinta-icon.svg">
+<link rel="apple-touch-icon" href="/trinta/apple-touch-icon.png">
+<link rel="manifest" href="/trinta/m/trinta-{{lang}}.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="{{brand}}">
+<meta name="theme-color" content="#0a1410">
+<meta property="og:title" content="{{brand}} — {{slogan}}">
+<meta property="og:description" content="{{metaDesc}}">
+<meta property="og:image" content="https://seedwave.pt/trinta/og-{{lang}}.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="{{url}}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="{{locale}}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Spectral:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/trinta/engine.css?v={{v}}">
+<script>try{var t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('trinta.theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.dataset.theme=t}catch(e){}</script>
+<script type="application/ld+json">{{jsonld}}</script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="{{url}}"><img src="/trinta/trinta-icon.svg" alt="{{brand}}" width="36" height="36"><span>{{brand}}</span></a>
+    <div class="tools">
+      <button class="rb" id="langBtn" type="button">{{LANG}}</button>
+      <button class="rb" id="themeBtn" type="button">☀</button>
+      <nav class="menu" id="langMenu">{{langMenu}}</nav>
+    </div>
+  </header>
+
+  <main>
+    <aside class="guest" id="guest" data-sec="guest"></aside>
+
+    <section class="hero" data-sec="hero">
+      <p class="kicker">{{kicker}}</p>
+      <h1>{{heroTitle}}</h1>
+      <p class="sub">{{heroSub}}</p>
+      <div class="cd" id="cd"><div class="l">{{cdLabel}}<b>{{cdDate}}</b></div></div>
+    </section>
+
+    <section class="video" id="video" data-sec="video" hidden></section>
+
+    <section class="card" id="app" data-sec="calc">
+      <h2>{{appTitle}}</h2>
+      <p class="hint">{{appHint}}</p>
+    </section>
+
+    <section class="cond" data-sec="cond">
+      <h2>{{condTitle}}</h2>
+      <p class="sub">{{condSub}}</p>
+      <ol>
+        <li>{{cond1}}</li>
+        <li>{{cond2}}</li>
+        <li>{{cond3}}</li>
+        <li>{{cond4}}</li>
+        <li>{{cond5}}</li>
+      </ol>
+      <p class="more">{{condMore}}</p>
+    </section>
+
+    <section class="doors" data-sec="doors">
+      <h2>{{doorsTitle}}</h2>
+      <p class="sub">{{doorsSub}}</p>
+      <ul>
+        <li><a class="door" data-door="madeira" href="https://seedwave.pt/madeira/?lang={{lang}}&amp;utm_source=trinta&amp;utm_medium=door"><span class="ic" aria-hidden="true">🏝</span><span><b>{{doorMadeiraT}}</b><small>{{doorMadeiraS}}</small></span><span class="ar" aria-hidden="true">→</span></a></li>
+        <li><a class="door" data-door="linkedin" href="https://www.linkedin.com/in/igor-kartuzov/" target="_blank" rel="noopener"><span class="ic" aria-hidden="true">💼</span><span><b>{{doorLinkedinT}}</b><small>{{doorLinkedinS}}</small></span><span class="ar" aria-hidden="true">→</span></a></li>
+        <li><a class="door" data-door="hub" href="https://seedwave.pt/hub/?lang={{lang}}&amp;utm_source=trinta&amp;utm_medium=door"><span class="ic" aria-hidden="true">🧭</span><span><b>{{doorHubT}}</b><small>{{doorHubS}}</small></span><span class="ar" aria-hidden="true">→</span></a></li>
+        <li><a class="door" data-door="piloto" href="https://seedwave.pt/piloto/?lang={{lang}}&amp;utm_source=trinta&amp;utm_medium=door"><span class="ic" aria-hidden="true">🤖</span><span><b>{{doorPilotoT}}</b><small>{{doorPilotoS}}</small></span><span class="ar" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+
+    <section class="src" data-sec="src">
+      <h2>{{srcTitle}}</h2>
+      <p>{{src}}</p>
+      <p><a id="srcLink" href="{{source}}" target="_blank" rel="noopener">{{srcLink}}</a></p>
+      <p class="honest">{{honest}}</p>
+    </section>
+  </main>
+
+  <footer class="sw">© <span id="year">2026</span> <a id="hubLink" href="https://seedwave.pt/hub/?lang={{lang}}">SeedWave</a> · <a data-mad href="https://seedwave.pt/madeira/?lang={{lang}}&amp;utm_source=trinta&amp;utm_medium=footer">Madeira</a> · <a href="https://www.linkedin.com/in/igor-kartuzov/" target="_blank" rel="noopener">Igor Kartuzov</a></footer>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script defer src="/trinta/engine.js?v={{v}}"></script>
+<script defer src="https://seedwave.pt/nav/sw.js"></script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8a509477310442638b80e4b22319b89b"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
