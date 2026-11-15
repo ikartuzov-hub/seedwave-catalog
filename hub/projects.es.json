@@ -212,6 +212,37 @@
       "demoLink": "https://seedwave.pt/carro/lite/es/"
     },
     {
+      "id": "acidente",
+      "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Acidente\"><title>Acidente</title><rect width=\"100\" height=\"100\" rx=\"23\" fill=\"#FBE6DA\"/><g fill=\"none\" stroke=\"#B4410F\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M50 16 L80 68 L20 68 Z\"/><path d=\"M50 34 L50 50\"/><path d=\"M50 59 L50 59\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></g></svg>",
+      "category": "Servicios al ciudadano",
+      "name": "Acidente — accidente de coche en Portugal sin hablar portugués",
+      "hook": "Parado en rojo, un golpe por detrás — y el otro conductor no habla inglés. La guía en el móvil: 8 pasos, frases a pantalla completa con voz y el parte amistoso casilla a casilla.",
+      "description": "Dos versiones en cinco idiomas. Lite para los más jóvenes: «me dieron / di yo», 8 pasos con el dedo (warning → chaleco → triángulo → fotos → documentos → parte → policía → seguro), la revisión «qué tiene que haber en el coche» y un ejemplo rellenado en A4 para la guantera. Completa: el parte en esquema con tres casos frecuentes, cuándo llamar a la policía, qué hacer con dinero en mano (declaración escrita en portugués), plazos legales del seguro, preguntas frecuentes, funciona sin conexión.",
+      "sectors": [
+        "Conductores",
+        "Movilidad",
+        "Civic Tech"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Aseguradoras y corredores · Autoescuelas y alquiler de coches · Comunidades de inmigrantes",
+      "demoLink": "https://ajuda.seedwave.pt/acidente/lite/es/",
+      "methodLink": "https://ajuda.seedwave.pt/acidente/es/",
+      "page": {
+        "how": [
+          "Nació de un caso real: Lisboa, noviembre de 2026, golpe por detrás en un semáforo, sin parte en el coche.",
+          "Normas comprobadas en las fuentes: DL 291/2007 (8 días, plazos del seguro, coche de sustitución), Código da Estrada art. 85, protocolos IDS/CIDS.",
+          "Frases en portugués europeo, a pantalla completa y con la voz del móvil.",
+          "Cinco idiomas desde el primer día: PT · EN · RU · DE · ES."
+        ],
+        "proofs": [
+          "8 días para dar parte al seguro; con el parte firmado, los plazos del seguro se reducen a la mitad.",
+          "Ejemplo rellenado en A4 — descargar, imprimir, guardar en la guantera.",
+          "Sin documentos encima — 5 días, multa de 60 a 300 € (art. 85)."
+        ]
+      }
+    },
+    {
       "id": "sono",
       "icon": "<svg viewBox=\"0 0 64 64\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Porta do Sono\"><title>Porta do Sono</title><path d=\"M33.08 33.92H28.84V44.0H22.0V15.919999999999998H33.08Q36.44 15.919999999999998 38.76 17.08Q41.08 18.24 42.239999999999995 20.28Q43.4 22.32 43.4 24.96Q43.4 27.4 42.28 29.419999999999998Q41.16 31.439999999999998 38.839999999999996 32.68Q36.519999999999996 33.92 33.08 33.92ZM36.44 24.96Q36.44 23.28 35.48 22.36Q34.519999999999996 21.44 32.56 21.44H28.84V28.48H32.56Q34.519999999999996 28.48 35.48 27.560000000000002Q36.44 26.64 36.44 24.96Z\" fill=\"#8d9cff\"/><path d=\"M14 54c5-4 10-4 15 0s10 4 15 0 10-4 15 0\" fill=\"none\" stroke=\"#8d9cff\" stroke-width=\"3.2\" stroke-linecap=\"round\"/></svg>",
       "category": "Servicios al ciudadano",

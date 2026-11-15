@@ -212,6 +212,37 @@
       "demoLink": "https://seedwave.pt/carro/lite/en/"
     },
     {
+      "id": "acidente",
+      "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Acidente\"><title>Acidente</title><rect width=\"100\" height=\"100\" rx=\"23\" fill=\"#FBE6DA\"/><g fill=\"none\" stroke=\"#B4410F\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M50 16 L80 68 L20 68 Z\"/><path d=\"M50 34 L50 50\"/><path d=\"M50 59 L50 59\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></g></svg>",
+      "category": "Civic tech",
+      "name": "Acidente — car accident in Portugal without Portuguese",
+      "hook": "Stopped at a red light, hit from behind — and the other driver speaks no English. A guide on your phone: 8 steps, full-screen phrases with voice and the accident form box by box.",
+      "description": "Two versions in five languages. Lite for younger drivers: «I got hit / I hit someone», 8 tap-through steps (hazards → vest → triangle → photos → documents → form → police → insurer), a «what must be in the car» check and a filled-in A4 sample for the glovebox. Full: the form as a diagram with three common cases, when to call the police, what to do with cash on the spot (written statement in Portuguese), legal insurer deadlines, FAQ, works offline.",
+      "sectors": [
+        "Drivers",
+        "Mobility",
+        "Civic Tech"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Insurers and brokers · Driving schools and car rental · Expat communities",
+      "demoLink": "https://ajuda.seedwave.pt/acidente/lite/en/",
+      "methodLink": "https://ajuda.seedwave.pt/acidente/en/",
+      "page": {
+        "how": [
+          "Born from a real case: Lisbon, November 2026, hit from behind at a red light, no form in the car.",
+          "Rules checked against the sources: DL 291/2007 (8 days, insurer deadlines, replacement car), Código da Estrada art. 85, IDS/CIDS protocols.",
+          "Phrases in European Portuguese, full screen and spoken by the phone.",
+          "Five languages from day one: PT · EN · RU · DE · ES."
+        ],
+        "proofs": [
+          "8 days to report to the insurer; with a signed form the insurer's deadlines are halved.",
+          "A filled-in A4 sample — download, print, keep in the glovebox.",
+          "No documents on you — 5 days, fine €60–300 (art. 85)."
+        ]
+      }
+    },
+    {
       "id": "sono",
       "icon": "<svg viewBox=\"0 0 64 64\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Porta do Sono\"><title>Porta do Sono</title><path d=\"M33.08 33.92H28.84V44.0H22.0V15.919999999999998H33.08Q36.44 15.919999999999998 38.76 17.08Q41.08 18.24 42.239999999999995 20.28Q43.4 22.32 43.4 24.96Q43.4 27.4 42.28 29.419999999999998Q41.16 31.439999999999998 38.839999999999996 32.68Q36.519999999999996 33.92 33.08 33.92ZM36.44 24.96Q36.44 23.28 35.48 22.36Q34.519999999999996 21.44 32.56 21.44H28.84V28.48H32.56Q34.519999999999996 28.48 35.48 27.560000000000002Q36.44 26.64 36.44 24.96Z\" fill=\"#8d9cff\"/><path d=\"M14 54c5-4 10-4 15 0s10 4 15 0 10-4 15 0\" fill=\"none\" stroke=\"#8d9cff\" stroke-width=\"3.2\" stroke-linecap=\"round\"/></svg>",
       "category": "Citizen services",

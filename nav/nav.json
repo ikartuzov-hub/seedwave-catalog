@@ -359,6 +359,26 @@
         "es": "Hasta el 30 % de los gastos de 2025",
         "de": "Bis zu 30 % der Kosten 2025 zurück"
       }
+    },
+    "acidente": {
+      "url": "https://ajuda.seedwave.pt/acidente/",
+      "match": [
+        "ajuda.seedwave.pt/acidente/"
+      ],
+      "label": {
+        "pt": "Acidente de carro",
+        "en": "Car accident",
+        "ru": "ДТП",
+        "es": "Accidente de coche",
+        "de": "Autounfall"
+      },
+      "tagline": {
+        "pt": "8 passos e frases para mostrar",
+        "en": "8 steps and phrases to show",
+        "ru": "8 шагов и фразы для португальца",
+        "es": "8 pasos y frases para enseñar",
+        "de": "8 Schritte und Sätze zum Zeigen"
+      }
     }
   },
   "related": {
@@ -387,7 +407,8 @@
       "cesd",
       "voos",
       "aima",
-      "cmd"
+      "cmd",
+      "acidente"
     ],
     "prazos.seedwave.pt/": [
       "trinta",
@@ -437,11 +458,17 @@
     "ajuda.seedwave.pt/cmd/": [
       "cesd",
       "aima",
-      "voos"
+      "voos",
+      "acidente"
     ],
     "seedwave.pt/trinta/": [
       "nam",
       "contratar"
+    ],
+    "ajuda.seedwave.pt/acidente/": [
+      "cmd",
+      "cesd",
+      "aima"
     ]
   }
 }
