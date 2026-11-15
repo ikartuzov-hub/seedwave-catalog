@@ -95,11 +95,12 @@ for lang in LANGS:
     raw = {"hreflang": hreflang, "langMenu": menu, "jsonld": jsonld}
     for k, v in raw.items():
         out = out.replace("{{" + k + "}}", v)
-    simple = {"lang": lang, "LANG": lang.upper(), "url": url(lang), "locale": LOCALE[lang], "v": V}
+    simple = {"lang": lang, "LANG": lang.upper(), "url": url(lang), "locale": LOCALE[lang], "v": V,
+              "acUrl": "https://ajuda.seedwave.pt/acidente/lite/" + ("" if lang == "pt" else lang + "/") + "?utm_source=carro&amp;utm_medium=bridge&amp;utm_campaign=acidente"}
     for k, v in simple.items():
         out = out.replace("{{" + k + "}}", v)
     for key in ["title", "metaDesc", "brand", "slogan", "heroTitle", "heroSub", "plateLabel", "plateNote",
-                "aboutTitle", "about.ipo", "about.iuc", "about.ins", "about.svc", "honest"]:
+                "aboutTitle", "about.ipo", "about.iuc", "about.ins", "about.svc", "honest", "bridge.t", "bridge.cta"]:
         out = out.replace("{{" + key + "}}", html.escape(get(T, key), quote=True))
     assert "{{" not in out, f"незаполненный ключ в {lang}: " + out[out.index("{{"):out.index("{{") + 30]
 
