@@ -20,7 +20,7 @@
     "origNote": "",
     "sign": "— Игорь Картузов",
     "bookTitle": "О книге",
-    "book": "Пятьсот лет назад рыцари Ордена Христа спрятали на Мадейре то, что никто не должен был найти. В моей книге это находят — и человек впервые получает шанс не уходить навсегда. Это фантастика, но места в ней настоящие: их можно найти на карте.",
+    "book": "Пятьсот лет назад рыцари Ордена Христа спрятали на Мадейре то, что никто не должен был найти. В моей книге это находят — и смерть тела впервые перестаёт быть концом: человек совершает «Переход» — «в Цифру». Это фантастика, но места в ней настоящие: их можно найти на карте.",
     "road": [
       [
         "14 ноября 2026",
@@ -57,9 +57,11 @@
     "fbTitle": "Написать автору",
     "fbLead": "Пишите на своём языке — я прочту в переводе и отвечу на вашу почту, тоже на вашем языке.",
     "fbTopics": [
+      "Моя мечта о будущем",
       "Вопрос о книге",
       "Место на острове",
-      "Просто отзыв"
+      "Просто отзыв",
+      "Слово в Словарь"
     ],
     "fbName": "Имя",
     "fbEmail": "Почта для ответа",
@@ -90,7 +92,19 @@
     "ldelc": "Нажмите ещё раз — переписка будет удалена",
     "lerr": "Не отправилось. Попробуйте ещё раз.",
     "lback": "← К дневнику",
-    "myLink": "Уже писали автору? Моя переписка →"
+    "myLink": "Уже писали автору? Моя переписка →",
+    "fbTopicKeys": [
+      "dream",
+      "t0",
+      "t1",
+      "t2",
+      "word"
+    ],
+    "dreamTitle": "Начни мечтать",
+    "dreamLead": "Как ты видишь будущее? Не про деньги — про технологии и жизнь. Опиши свою мечту: в мире книги каждая чистая мечта — начало волны. Совпадёт с мечтами других — волна вырастет.",
+    "dreamBtn": "Описать свою мечту",
+    "wavesLink": "Карта Волн",
+    "dictLink": "Словарь книги"
   },
   "pt": {
     "title": "A Madeira pelos meus olhos — diário de um autor",
@@ -112,7 +126,7 @@
     "origNote": "Tradução do original em russo.",
     "sign": "— Igor Kartuzov",
     "bookTitle": "Sobre o livro",
-    "book": "Há quinhentos anos, os cavaleiros da Ordem de Cristo esconderam na Madeira algo que ninguém devia encontrar. No meu livro, alguém encontra — e o ser humano tem, pela primeira vez, a hipótese de não partir para sempre. É ficção científica, mas os lugares são reais: pode encontrá-los no mapa.",
+    "book": "Há quinhentos anos, os cavaleiros da Ordem de Cristo esconderam na Madeira algo que ninguém devia encontrar. No meu livro, alguém encontra — e a morte do corpo deixa, pela primeira vez, de ser o fim: a pessoa faz a «Passagem» — «para o Digital». É ficção científica, mas os lugares são reais: pode encontrá-los no mapa.",
     "road": [
       [
         "14 de novembro de 2026",
@@ -149,9 +163,11 @@
     "fbTitle": "Escrever ao autor",
     "fbLead": "Escreva na sua língua — leio a tradução e respondo para o seu e-mail, também na sua língua.",
     "fbTopics": [
+      "O meu sonho para o futuro",
       "Pergunta sobre o livro",
       "Um lugar na ilha",
-      "Só uma opinião"
+      "Só uma opinião",
+      "Uma palavra para o Dicionário"
     ],
     "fbName": "Nome",
     "fbEmail": "E-mail para a resposta",
@@ -182,7 +198,19 @@
     "ldelc": "Toque outra vez — a conversa será apagada",
     "lerr": "Não foi enviado. Tente outra vez.",
     "lback": "← Voltar ao diário",
-    "myLink": "Já escreveu ao autor? A minha conversa →"
+    "myLink": "Já escreveu ao autor? A minha conversa →",
+    "fbTopicKeys": [
+      "dream",
+      "t0",
+      "t1",
+      "t2",
+      "word"
+    ],
+    "dreamTitle": "Comece a sonhar",
+    "dreamLead": "Como vê o futuro? Não falamos de dinheiro — falamos de tecnologia e de vida. Descreva o seu sonho: no mundo do livro, cada sonho puro é o início de uma onda. Se coincidir com o de outros, a onda cresce.",
+    "dreamBtn": "Descrever o meu sonho",
+    "wavesLink": "Mapa das Ondas",
+    "dictLink": "Dicionário do livro"
   },
   "en": {
     "title": "Madeira through my eyes — an author's diary",
@@ -204,7 +232,7 @@
     "origNote": "Translated from the Russian original.",
     "sign": "— Igor Kartuzov",
     "bookTitle": "About the book",
-    "book": "Five hundred years ago, the knights of the Order of Christ hid something on Madeira that no one was ever meant to find. In my book, someone finds it — and for the first time, a person has a chance not to leave forever. It is science fiction, but the places are real: you can find them on the map.",
+    "book": "Five hundred years ago, the knights of the Order of Christ hid something on Madeira that no one was ever meant to find. In my book, someone finds it — and for the first time the death of the body stops being the end: a person makes the “Crossing” — “into the Digital”. It is science fiction, but the places are real: you can find them on the map.",
     "road": [
       [
         "14 November 2026",
@@ -241,9 +269,11 @@
     "fbTitle": "Write to the author",
     "fbLead": "Write in your own language — I read the translation and reply to your email, in your language too.",
     "fbTopics": [
+      "My dream of the future",
       "A question about the book",
       "A place on the island",
-      "Just feedback"
+      "Just feedback",
+      "A word for the Dictionary"
     ],
     "fbName": "Name",
     "fbEmail": "Email for the reply",
@@ -274,7 +304,19 @@
     "ldelc": "Tap again — the conversation will be deleted",
     "lerr": "Not sent. Please try again.",
     "lback": "← Back to the diary",
-    "myLink": "Already wrote to the author? My conversation →"
+    "myLink": "Already wrote to the author? My conversation →",
+    "fbTopicKeys": [
+      "dream",
+      "t0",
+      "t1",
+      "t2",
+      "word"
+    ],
+    "dreamTitle": "Start dreaming",
+    "dreamLead": "How do you see the future? Not money — technology and life. Describe your dream: in the world of the book, every pure dream is the start of a wave. When it matches others, the wave grows.",
+    "dreamBtn": "Describe my dream",
+    "wavesLink": "Map of Waves",
+    "dictLink": "Book dictionary"
   },
   "es": {
     "title": "Madeira con mis propios ojos — diario de un autor",
@@ -296,7 +338,7 @@
     "origNote": "Traducción del original en ruso.",
     "sign": "— Igor Kartuzov",
     "bookTitle": "Sobre el libro",
-    "book": "Hace quinientos años, los caballeros de la Orden de Cristo escondieron en Madeira algo que nadie debía encontrar. En mi libro alguien lo encuentra, y el ser humano tiene por primera vez la oportunidad de no irse para siempre. Es ciencia ficción, pero los lugares son reales: se pueden encontrar en el mapa.",
+    "book": "Hace quinientos años, los caballeros de la Orden de Cristo escondieron en Madeira algo que nadie debía encontrar. En mi libro alguien lo encuentra, y la muerte del cuerpo deja, por primera vez, de ser el final: la persona hace el «Paso» — «a lo Digital». Es ciencia ficción, pero los lugares son reales: se pueden encontrar en el mapa.",
     "road": [
       [
         "14 de noviembre de 2026",
@@ -333,9 +375,11 @@
     "fbTitle": "Escribir al autor",
     "fbLead": "Escribe en tu idioma — leo la traducción y respondo a tu correo, también en tu idioma.",
     "fbTopics": [
+      "Mi sueño para el futuro",
       "Una pregunta sobre el libro",
       "Un lugar de la isla",
-      "Solo una opinión"
+      "Solo una opinión",
+      "Una palabra para el Diccionario"
     ],
     "fbName": "Nombre",
     "fbEmail": "Correo para la respuesta",
@@ -366,7 +410,19 @@
     "ldelc": "Pulsa otra vez: la conversación se eliminará",
     "lerr": "No se ha enviado. Inténtalo de nuevo.",
     "lback": "← Volver al diario",
-    "myLink": "¿Ya escribiste al autor? Mi conversación →"
+    "myLink": "¿Ya escribiste al autor? Mi conversación →",
+    "fbTopicKeys": [
+      "dream",
+      "t0",
+      "t1",
+      "t2",
+      "word"
+    ],
+    "dreamTitle": "Empieza a soñar",
+    "dreamLead": "¿Cómo ves el futuro? No hablamos de dinero, sino de tecnología y de vida. Describe tu sueño: en el mundo del libro, cada sueño puro es el comienzo de una ola. Si coincide con el de otros, la ola crece.",
+    "dreamBtn": "Describir mi sueño",
+    "wavesLink": "Mapa de Olas",
+    "dictLink": "Diccionario del libro"
   },
   "de": {
     "title": "Madeira mit eigenen Augen — Tagebuch eines Autors",
@@ -388,7 +444,7 @@
     "origNote": "Übersetzung aus dem russischen Original.",
     "sign": "— Igor Kartuzov",
     "bookTitle": "Über das Buch",
-    "book": "Vor fünfhundert Jahren versteckten die Ritter des Christusordens auf Madeira etwas, das niemand finden sollte. In meinem Buch findet es jemand — und der Mensch hat zum ersten Mal die Chance, nicht für immer zu gehen. Es ist Science-Fiction, aber die Orte sind echt: Man kann sie auf der Karte finden.",
+    "book": "Vor fünfhundert Jahren versteckten die Ritter des Christusordens auf Madeira etwas, das niemand finden sollte. In meinem Buch findet es jemand — und der Tod des Körpers ist zum ersten Mal nicht mehr das Ende: Der Mensch vollzieht den „Übergang“ – „ins Digitale“. Es ist Science-Fiction, aber die Orte sind echt: Man kann sie auf der Karte finden.",
     "road": [
       [
         "14. November 2026",
@@ -425,9 +481,11 @@
     "fbTitle": "Dem Autor schreiben",
     "fbLead": "Schreiben Sie in Ihrer Sprache — ich lese die Übersetzung und antworte an Ihre E-Mail, ebenfalls in Ihrer Sprache.",
     "fbTopics": [
+      "Mein Traum von der Zukunft",
       "Frage zum Buch",
       "Ein Ort auf der Insel",
-      "Einfach Feedback"
+      "Einfach Feedback",
+      "Ein Wort fürs Wörterbuch"
     ],
     "fbName": "Name",
     "fbEmail": "E-Mail für die Antwort",
@@ -458,6 +516,18 @@
     "ldelc": "Noch einmal tippen — das Gespräch wird gelöscht",
     "lerr": "Nicht gesendet. Bitte erneut versuchen.",
     "lback": "← Zurück zum Tagebuch",
-    "myLink": "Schon dem Autor geschrieben? Mein Gespräch →"
+    "myLink": "Schon dem Autor geschrieben? Mein Gespräch →",
+    "fbTopicKeys": [
+      "dream",
+      "t0",
+      "t1",
+      "t2",
+      "word"
+    ],
+    "dreamTitle": "Fang an zu träumen",
+    "dreamLead": "Wie siehst du die Zukunft? Nicht Geld — Technik und Leben. Beschreibe deinen Traum: In der Welt des Buches ist jeder reine Traum der Anfang einer Welle. Trifft er die Träume anderer, wächst die Welle.",
+    "dreamBtn": "Meinen Traum beschreiben",
+    "wavesLink": "Karte der Wellen",
+    "dictLink": "Wörterbuch des Buches"
   }
 }

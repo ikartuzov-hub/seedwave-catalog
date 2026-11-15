@@ -165,11 +165,18 @@ for lang in LANGS:
       {"".join(items)}
     </section>
 
+    <section class="dream" id="dream">
+      <h2>🌊 {e("dreamTitle")}</h2>
+      <p>{e("dreamLead")}</p>
+      <div class="row"><a class="btn" href="#mechta">{e("dreamBtn")}</a><a class="btn ghost" href="/madeira/volny/">{e("wavesLink")}</a></div>
+      <p class="note"><a href="/madeira/slovar/">{e("dictLink")}</a> · <a href="#slovo">{html.escape(T["fbTopics"][-1])}</a></p>
+    </section>
+
     <section class="write" id="write">
       <h2>{e("fbTitle")}</h2>
       <p class="note">{e("fbLead")}</p>
       <form id="fb" data-hook="{HOOK}" data-lang="{lang}" data-sent="{e("fbSent")}" data-err="{e("fbErr")}" novalidate>
-        <div class="chips" role="group" aria-label="{e("fbTitle")}">{"".join(f'<button type="button" class="chip" data-topic="{html.escape(t, quote=True)}">{html.escape(t)}</button>' for t in T["fbTopics"])}</div>
+        <div class="chips" role="group" aria-label="{e("fbTitle")}">{"".join(f'<button type="button" class="chip" data-k="{k}" data-topic="{html.escape(t, quote=True)}">{html.escape(t)}</button>' for t, k in zip(T["fbTopics"], T["fbTopicKeys"]))}</div>
         <label>{e("fbText")}<textarea name="text" rows="5" maxlength="2000" required></textarea></label>
         <div class="two"><label>{e("fbName")}<input name="name" maxlength="80" autocomplete="name"></label>
         <label>{e("fbEmail")}<input name="email" type="email" maxlength="120" autocomplete="email" required></label></div>
@@ -304,3 +311,6 @@ for f in ["madeira-icon.svg", "apple-touch-icon.png", "icon-192.png", "icon-512.
 if err:
     sys.exit("ОШИБКИ: " + "; ".join(err))
 print(f"ok 5 языков · записей видно {sum(1 for p in POSTS if datetime.date.fromisoformat(p['date']) <= today)} из {len(POSTS)} · сегодня {today}")
+
+import runpy  # Карта Волн (madeira/volny/) — из madeira/volny.json
+runpy.run_path(str(ROOT / "_src" / "volny.py"))

@@ -125,3 +125,16 @@
 
   $('year').textContent = new Date().getFullYear();
 })();
+
+/* 15.11.2026: #mechta / #slovo — сразу выбрать тему в окне «Написать автору». */
+(function () {
+  function pick() {
+    var k = location.hash === '#mechta' ? 'dream' : location.hash === '#slovo' ? 'word' : '';
+    if (!k) return;
+    var c = document.querySelector('#fb .chip[data-k="' + k + '"]');
+    if (c && c.getAttribute('aria-pressed') !== 'true') c.click();
+    var w = document.getElementById('write'); if (w) w.scrollIntoView({ behavior: 'smooth' });
+    var t = document.querySelector('#fb textarea'); if (t) setTimeout(function () { try { t.focus({ preventScroll: true }); } catch (e) {} }, 500);
+  }
+  pick(); window.addEventListener('hashchange', pick);
+})();

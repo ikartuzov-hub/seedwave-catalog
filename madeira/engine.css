@@ -126,3 +126,8 @@ footer.sw a{display:inline-block;padding:8px 4px;text-decoration:underline;text-
 .gal{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;margin:4px -4px 14px;padding:0 4px 4px}
 .gal img{flex:0 0 78%;max-width:78%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:14px;scroll-snap-align:start;background:var(--chip-on)}
 .gal.one img{flex-basis:100%;max-width:100%}
+
+/* «Начни мечтать» (15.11.2026) */
+.dream{background:linear-gradient(135deg,var(--chip-on),transparent);border:1px solid var(--line);border-radius:var(--r);padding:20px;margin:8px 0 24px}
+.dream h2{margin-top:0}
+.dream .row{margin-top:12px}
