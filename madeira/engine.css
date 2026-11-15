@@ -121,3 +121,8 @@ footer.sw a{display:inline-block;padding:8px 4px;text-decoration:underline;text-
   *,*::before,*::after{animation:none!important;transition:none!important}
 }
 .cardform[hidden],.linkbtn[hidden]{display:none}
+
+/* фото записи (15.11.2026): листаются пальцем, одно фото — на всю ширину */
+.gal{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;margin:4px -4px 14px;padding:0 4px 4px}
+.gal img{flex:0 0 78%;max-width:78%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:14px;scroll-snap-align:start;background:var(--chip-on)}
+.gal.one img{flex-basis:100%;max-width:100%}

@@ -45,6 +45,15 @@ def para(text, trace):
     return "\n".join(out)
 
 
+def gallery(p, lang):
+    """Фото записи: posts.json → "photos": [{"src": "img/…jpg", "alt": {"ru": …}}]. Файлы — madeira/img/, без EXIF."""
+    ph = p.get("photos") or []
+    if not ph:
+        return ""
+    figs = "".join(f'<img src="/madeira/{html.escape(x["src"])}" alt="{html.escape(x["alt"].get(lang) or x["alt"]["ru"], quote=True)}" loading="lazy" width="900" height="1200">' for x in ph)
+    return f'<div class="gal{" one" if len(ph) == 1 else ""}">{figs}</div>'
+
+
 pages, feeds, letters = {}, {}, {}
 for lang in LANGS:
     T = UI[lang]
@@ -62,6 +71,7 @@ for lang in LANGS:
   <div class="meta">{pin}</div>
   <h3><a href="#{p["id"]}">{html.escape(P["title"])}</a></h3>
   <p class="lead">{html.escape(P["lead"])}</p>
+  {gallery(p, lang)}
   {para(P["body"], trace)}
   <p class="sign">{e("sign")}</p>{note}
 </article>''')
