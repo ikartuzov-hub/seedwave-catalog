@@ -239,7 +239,12 @@
           "8 días para dar parte al seguro; con el parte firmado, los plazos del seguro se reducen a la mitad.",
           "Ejemplo rellenado en A4 — descargar, imprimir, guardar en la guantera.",
           "Sin documentos encima — 5 días, multa de 60 a 300 € (art. 85)."
-        ]
+        ],
+        "video": {
+          "src": "https://ajuda.seedwave.pt/acidente/video/ze_es.mp4",
+          "poster": "https://ajuda.seedwave.pt/acidente/video/ze_es.jpg",
+          "caption": "21 segundos, se entiende sin palabras. Animación creada con IA."
+        }
       }
     },
     {

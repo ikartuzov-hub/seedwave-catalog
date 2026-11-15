@@ -239,7 +239,12 @@
           "8 days to report to the insurer; with a signed form the insurer's deadlines are halved.",
           "A filled-in A4 sample — download, print, keep in the glovebox.",
           "No documents on you — 5 days, fine €60–300 (art. 85)."
-        ]
+        ],
+        "video": {
+          "src": "https://ajuda.seedwave.pt/acidente/video/ze_en.mp4",
+          "poster": "https://ajuda.seedwave.pt/acidente/video/ze_en.jpg",
+          "caption": "21 seconds, clear without words. Animation created with AI."
+        }
       }
     },
     {

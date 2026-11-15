@@ -239,7 +239,12 @@
           "8 dias para participar ao seguro; com a declaração assinada, os prazos do seguro ficam a metade.",
           "Exemplo preenchido em A4 — descarregar, imprimir, guardar no porta-luvas.",
           "Sem documentos consigo — 5 dias, coima de 60 a 300 € (art. 85.º)."
-        ]
+        ],
+        "video": {
+          "src": "https://ajuda.seedwave.pt/acidente/video/ze_pt.mp4",
+          "poster": "https://ajuda.seedwave.pt/acidente/video/ze_pt.jpg",
+          "caption": "21 segundos, percebe-se sem palavras. Animação criada com IA."
+        }
       }
     },
     {

@@ -239,7 +239,12 @@
           "8 Tage für die Schadenmeldung; mit unterschriebenem Formular halbieren sich die Fristen der Versicherung.",
           "Ausgefülltes A4-Muster — herunterladen, drucken, ins Handschuhfach.",
           "Keine Papiere dabei — 5 Tage, Bußgeld 60–300 € (Art. 85)."
-        ]
+        ],
+        "video": {
+          "src": "https://ajuda.seedwave.pt/acidente/video/ze_de.mp4",
+          "poster": "https://ajuda.seedwave.pt/acidente/video/ze_de.jpg",
+          "caption": "21 Sekunden, verständlich ohne Worte. Animation mit KI erstellt."
+        }
       }
     },
     {
