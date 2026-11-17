@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Trinta · стандарт значков SeedWave v2 (17.11.2026): буква + единая волна -->
+  <rect width="100" height="100" rx="22" fill="#0E1725"/>
+  <g transform="translate(-3.28 -2.93) scale(1.0345)"><path d="M27 26 H67 M47 26 V66" fill="none" stroke="#A3E635" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="76" cy="60" r="4.5" fill="#A3E635"/></g>
+  <path d="M20 80 Q30 74 40 80 Q50 86 60 80 Q70 74 80 80" fill="none" stroke="#A3E635" stroke-width="7" stroke-linecap="round"/>
+</svg>

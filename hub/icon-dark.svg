@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- SeedWave · Хаб · стандарт значков SeedWave v2 (17.11.2026): буква + единая волна -->
+  <rect width="100" height="100" rx="22" fill="#0E1725"/>
+  <g transform="translate(5.69 1.38) scale(0.8775)"><path d="M67 31 C67 20 45 18 38 27 C31 36 42 44 51 47 C62 51 69 55 66 65 C63 76 42 78 34 69" fill="none" stroke="#22D3EE" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <path d="M20 80 Q30 74 40 80 Q50 86 60 80 Q70 74 80 80" fill="none" stroke="#22D3EE" stroke-width="7" stroke-linecap="round"/>
+</svg>

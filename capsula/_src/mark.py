@@ -37,5 +37,6 @@ if __name__ == "__main__":
     for k, (name, day, night, bg) in VARIANTS.items():
         (ROOT / "_src" / "variants" / f"capsula-icon-{k}.svg").write_text(svg(name, day, bg), encoding="utf-8")
     name, day, night, bg = VARIANTS[DEFAULT]
-    (ROOT / "capsula-icon.svg").write_text(svg(name + " — по умолчанию", day, bg), encoding="utf-8")
+    # 17.11.2026: главный значок — стандарт v2 (_standards/icons/build.py)
+    pass  # (ROOT / "capsula-icon.svg").write_text(svg(name + " — по умолчанию", day, bg), encoding="utf-8")
     print("ok mark, default", DEFAULT, "C width", round(wC, 1), "á width", round(wA, 1))

@@ -46,5 +46,6 @@ if __name__ == "__main__":
     for k, (name, day, night, bg) in VARIANTS.items():
         (ROOT / "_src" / "variants" / f"sono-icon-{k}.svg").write_text(svg(name, day, bg), encoding="utf-8")
     name, day, night, bg = VARIANTS[DEFAULT]
-    (ROOT / "sono-icon.svg").write_text(svg(name + " — по умолчанию", day, bg), encoding="utf-8")
+    # 17.11.2026: главный значок — стандарт v2 (_standards/icons/build.py)
+    pass  # (ROOT / "sono-icon.svg").write_text(svg(name + " — по умолчанию", day, bg), encoding="utf-8")
     print("ok mark, default", DEFAULT, "P width", round(wP, 1))

@@ -23,6 +23,8 @@ def svg(field, ink, tile=True, note=""):
 
 
 if __name__ == "__main__":
-    (ROOT / "piloto-icon.svg").write_text(svg(WHITE, INK, note=" (день)"), encoding="utf-8")
-    (ROOT / "_src" / "piloto-icon-dark.svg").write_text(svg(INK, WHITE, note=" (ночь, инверсия)"), encoding="utf-8")
+    # 17.11.2026: главный значок — стандарт v2 (_standards/icons/build.py)
+    pass  # (ROOT / "piloto-icon.svg").write_text(svg(WHITE, INK, note=" (день)"), encoding="utf-8")
+    # 17.11.2026: главный значок — стандарт v2 (_standards/icons/build.py)
+    pass  # (ROOT / "_src" / "piloto-icon-dark.svg").write_text(svg(INK, WHITE, note=" (ночь, инверсия)"), encoding="utf-8")
     print("ok mark: piloto-icon.svg + _src/piloto-icon-dark.svg")

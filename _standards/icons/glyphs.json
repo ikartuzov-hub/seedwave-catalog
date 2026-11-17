@@ -1,0 +1,92 @@
+[
+ {
+  "id": "apoios",
+  "name": "Apoios Madeira",
+  "unit": 100,
+  "light": "#2F6FE0",
+  "light_bg": "#E8F0FE",
+  "dark": "#5A8FF7",
+  "now": null,
+  "letter": "<path d=\"M33.5 66.8 L50 20 L66.5 66.8\" fill=\"none\" stroke=\"C\" stroke-width=\"6.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M40.8 49.2 C44 46.4 47 48 49.5 50.4 C52 52.8 55.5 53 60 51\" fill=\"none\" stroke=\"C\" stroke-width=\"6\" stroke-linecap=\"round\"/>"
+ },
+ {
+  "id": "seedwave",
+  "name": "SeedWave · Хаб",
+  "unit": 100,
+  "light": "#0E8FA8",
+  "light_bg": "#E6F3F6",
+  "dark": "#22D3EE",
+  "now": "hub/icon.svg",
+  "letter": "<path d=\"M67 31 C67 20 45 18 38 27 C31 36 42 44 51 47 C62 51 69 55 66 65 C63 76 42 78 34 69\" fill=\"none\" stroke=\"C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>"
+ },
+ {
+  "id": "madeira",
+  "name": "Madeira",
+  "unit": 100,
+  "light": "#1E8BD6",
+  "light_bg": "#EAF4FB",
+  "dark": "#3BA8FF",
+  "now": "madeira/madeira-icon.svg",
+  "letter": "<path d=\"M26 64 V26 L50 50 L74 26 V64\" fill=\"none\" stroke=\"C\" stroke-width=\"8\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>"
+ },
+ {
+  "id": "carro",
+  "name": "Tenho carro!",
+  "unit": 64,
+  "light": "#e0623f",
+  "light_bg": "#fff4ef",
+  "dark": "#ff7a59",
+  "now": "carro/carro-icon.svg",
+  "letter": "<path d=\"M41.5 21.5a13 13 0 1 0 0 17\" fill=\"none\" stroke=\"C\" stroke-width=\"6\" stroke-linecap=\"round\"/><circle cx=\"48\" cy=\"18\" r=\"3\" fill=\"C\"/>"
+ },
+ {
+  "id": "sono",
+  "name": "Porta do Sono",
+  "unit": 64,
+  "light": "#3b4fd8",
+  "light_bg": "#e9ecff",
+  "dark": "#8d9cff",
+  "now": "sono/sono-icon.svg",
+  "letter": "<path d=\"M33.08 33.92H28.84V44.0H22.0V15.919999999999998H33.08Q36.44 15.919999999999998 38.76 17.08Q41.08 18.24 42.239999999999995 20.28Q43.4 22.32 43.4 24.96Q43.4 27.4 42.28 29.419999999999998Q41.16 31.439999999999998 38.839999999999996 32.68Q36.519999999999996 33.92 33.08 33.92ZM36.44 24.96Q36.44 23.28 35.48 22.36Q34.519999999999996 21.44 32.56 21.44H28.84V28.48H32.56Q34.519999999999996 28.48 35.48 27.560000000000002Q36.44 26.64 36.44 24.96Z\" fill=\"C\"/>"
+ },
+ {
+  "id": "capsula",
+  "name": "Cápsula",
+  "unit": 64,
+  "light": "#5b3fd6",
+  "light_bg": "#efeaff",
+  "dark": "#8f7bff",
+  "now": "capsula/capsula-icon.svg",
+  "letter": "<path d=\"M21.352 21.28Q25.352 21.28 28.200000000000003 23.392000000000003Q31.048000000000002 25.504 32.007999999999996 29.152H25.992Q25.32 27.744 24.088 27.008Q22.856 26.272 21.288 26.272Q18.759999999999998 26.272 17.192 28.032Q15.624 29.792 15.624 32.736000000000004Q15.624 35.68 17.192 37.44Q18.759999999999998 39.2 21.288 39.2Q22.856 39.2 24.088 38.464Q25.32 37.728 25.992 36.32H32.007999999999996Q31.048000000000002 39.968 28.200000000000003 42.064Q25.352 44.16 21.352 44.16Q18.088 44.16 15.512 42.70399999999999Q12.936 41.248 11.496 38.656Q10.056000000000001 36.064 10.056000000000001 32.736000000000004Q10.056000000000001 29.408 11.496 26.8Q12.936 24.192 15.512 22.736Q18.088 21.28 21.352 21.28Z\" fill=\"C\"/><path d=\"M42.652 25.887999999999998Q44.54 25.887999999999998 45.964 26.656Q47.388 27.424 48.156 28.671999999999997V26.144H53.628V44.0H48.156V41.472Q47.356 42.72 45.932 43.488Q44.508 44.256 42.620000000000005 44.256Q40.444 44.256 38.652 43.120000000000005Q36.86 41.984 35.82 39.888000000000005Q34.78 37.792 34.78 35.04Q34.78 32.288 35.82 30.208Q36.86 28.128 38.652 27.008Q40.444 25.887999999999998 42.652 25.887999999999998ZM44.252 30.656Q42.620000000000005 30.656 41.484 31.823999999999998Q40.348 32.992 40.348 35.04Q40.348 37.088 41.484 38.288Q42.620000000000005 39.488 44.252 39.488Q45.884 39.488 47.019999999999996 38.304Q48.156 37.12 48.156 35.072Q48.156 33.024 47.019999999999996 31.84Q45.884 30.656 44.252 30.656ZM48.572 21.695999999999998 40.86 24.928V21.152L48.572 17.439999999999998Z\" fill=\"C\"/>"
+ },
+ {
+  "id": "piloto",
+  "name": "Piloto",
+  "unit": 100,
+  "light": "#111111",
+  "light_bg": "#ffffff",
+  "dark": "#FFFFFF",
+  "now": "piloto/piloto-icon.svg",
+  "letter": "<path d=\"M28 14 h30 a17 17 0 0 1 0 34 h-18 v26 h-12 z M40 25 v12 h18 a6 6 0 0 0 0-12 z\" fill=\"C\" fill-rule=\"evenodd\"/>"
+ },
+ {
+  "id": "trinta",
+  "name": "Trinta",
+  "unit": 100,
+  "light": "#5E8C00",
+  "light_bg": "#F1F7E1",
+  "dark": "#A3E635",
+  "now": "trinta/trinta-icon.svg",
+  "letter": "<path d=\"M27 26 H67 M47 26 V66\" fill=\"none\" stroke=\"C\" stroke-width=\"9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"76\" cy=\"60\" r=\"4.5\" fill=\"C\"/>"
+ },
+ {
+  "id": "tonight",
+  "name": "Tonight",
+  "unit": 100,
+  "light": "#6C5CE7",
+  "light_bg": "#EEEBFB",
+  "dark": "#A9A1FF",
+  "now": "tonight-icon.svg",
+  "letter": "<path d=\"M30 68 L30 24 L62 66 L62 22\" fill=\"none\" stroke=\"C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>"
+ }
+]
