@@ -53,65 +53,75 @@
       "date": "2026-11-18",
       "photos": [
         {
-          "src": "img/2026-11-18-kolonada.jpg",
+          "src": "img/2026-11-18-1-kolonada.jpg",
           "alt": {
-            "ru": "Колоннада с золотым куполом и осенний лес, Марианские Лазне",
-            "pt": "Colunata com cúpula dourada e floresta de outono, Mariánské Lázně",
-            "en": "Colonnade with a golden dome and autumn forest, Mariánské Lázně",
-            "es": "Columnata con cúpula dorada y bosque otoñal, Mariánské Lázně",
-            "de": "Kolonnade mit goldener Kuppel und Herbstwald, Marienbad"
+            "ru": "Колоннада Марианских Лазней в пасмурный ноябрьский день",
+            "pt": "A colunata de Mariánské Lázně num dia nublado de novembro",
+            "en": "The Mariánské Lázně colonnade on a cloudy November day",
+            "es": "La columnata de Mariánské Lázně en un día nublado de noviembre",
+            "de": "Die Kolonnade von Marienbad an einem trüben Novembertag"
           }
         },
         {
-          "src": "img/2026-11-18-ulica.jpg",
+          "src": "img/2026-11-18-2-bassejn.jpg",
           "alt": {
-            "ru": "Улица со старыми курортными отелями",
-            "pt": "Rua com antigos hotéis termais",
-            "en": "A street of old spa hotels",
-            "es": "Calle con antiguos hoteles balnearios",
-            "de": "Straße mit alten Kurhotels"
+            "ru": "Старинный бассейн с колоннами и расписными сводами",
+            "pt": "Piscina antiga com colunas e abóbadas pintadas",
+            "en": "An old pool with columns and painted vaults",
+            "es": "Piscina antigua con columnas y bóvedas pintadas",
+            "de": "Altes Bad mit Säulen und bemalten Gewölben"
           }
         },
         {
-          "src": "img/2026-11-18-kafe.jpg",
+          "src": "img/2026-11-18-3-kafe.jpg",
           "alt": {
-            "ru": "Венское кафе отеля: высокие окна и полосатые диваны",
-            "pt": "Café vienense do hotel: janelas altas e sofás às riscas",
-            "en": "The hotel’s Viennese café: tall windows and striped sofas",
-            "es": "El café vienés del hotel: ventanales y sofás a rayas",
-            "de": "Das Wiener Café des Hotels: hohe Fenster, gestreifte Sofas"
+            "ru": "Автор в венском кафе: чай и штрудель",
+            "pt": "O autor num café vienense: chá e strudel",
+            "en": "The author in a Viennese café: tea and strudel",
+            "es": "El autor en un café vienés: té y strudel",
+            "de": "Der Autor im Wiener Café: Tee und Strudel"
+          }
+        },
+        {
+          "src": "img/2026-11-18-4-park.jpg",
+          "alt": {
+            "ru": "Осенний парк и белая скамейка",
+            "pt": "Parque de outono e um banco branco",
+            "en": "Autumn park and a white bench",
+            "es": "Parque otoñal y un banco blanco",
+            "de": "Herbstpark mit weißer Bank"
           }
         }
       ],
       "ru": {
         "place": "Марианские Лазне",
-        "title": "Мадейру лучше видно издалека",
-        "lead": "Я живу и пишу в старом курортном городе в Чехии — и вижу свой остров яснее, чем дома.",
-        "body": "Мой стол — в отеле [Nové Lázně](https://maps.app.goo.gl/Kv3Wb5skadMTGhwX7) в Марианских Лазнях. За окном колоннада с золотым куполом и рыжий лес на холме. Внизу — венское кафе: высокие окна, полосатые диваны, чашка кофе с десертом. Лучшее место, чтобы вернуться мыслями на остров.\n\nСтранно: на Мадейре я её не замечал, как не замечают воздух. А отсюда вижу ясно — и левады, и тоннели, и мосты. Пишется легко.\n\nФото мои, без обработки ИИ."
+        "title": "Мадейра издалека",
+        "lead": "Я пишу эти строки в Марианских Лазнях, бывшем Мариенбаде.",
+        "body": "Красивый, ухоженный город: парк с огромными деревьями, подстриженные аллеи, скамейки, целебная вода, которую пьют неспешно и с удовольствием. Здесь тихо восстанавливают старое, и всё дышит историей.\n\nМне здесь хорошо. Но уже в первые дни я понял: этот город живёт своим прошлым. Здесь отдыхают, успокаиваются, принимают жизнь такой, какая она есть. Молодёжи почти не видно, а о технологиях местные говорить не хотят.\n\nИ вдруг я остро почувствовал Мадейру. Остров с не менее древней историей, но эта история не убаюкивает, а толкает вперёд. На Мадейре хочется строить и создавать. Там я чувствую энергию будущего.\n\nПохоже, тамплиеры до Мариенбада так и не добрались…"
       },
       "pt": {
         "place": "Mariánské Lázně",
-        "title": "A Madeira vê-se melhor de longe",
-        "lead": "Vivo e escrevo numa velha estância termal na Chéquia — e vejo a minha ilha com mais clareza do que em casa.",
-        "body": "A minha mesa fica no hotel [Nové Lázně](https://maps.app.goo.gl/Kv3Wb5skadMTGhwX7), em Mariánské Lázně. Da janela, uma colunata com cúpula dourada e a floresta ruiva na colina. Lá em baixo, um café vienense: janelas altas, sofás às riscas, um café com sobremesa. O melhor sítio para voltar à ilha em pensamento.\n\nÉ estranho: na Madeira não reparava nela, como não se repara no ar. Daqui vejo tudo com nitidez — as levadas, os túneis, as pontes. Escreve-se bem.\n\nAs fotos são minhas, sem edição com IA."
+        "title": "A Madeira vista de longe",
+        "lead": "Escrevo estas linhas em Mariánské Lázně, a antiga Marienbad.",
+        "body": "Uma cidade bonita e cuidada: um parque com árvores enormes, alamedas aparadas, bancos, água medicinal que se bebe devagar e com prazer. Aqui restaura-se o antigo sem pressa, e tudo respira história.\n\nSinto-me bem aqui. Mas logo nos primeiros dias percebi: esta cidade vive do seu passado. Aqui descansa-se, acalma-se, aceita-se a vida tal como ela é. Quase não se veem jovens, e os moradores não querem falar de tecnologia.\n\nE de repente senti a Madeira com toda a força. Uma ilha com uma história não menos antiga — mas uma história que não embala, empurra para a frente. Na Madeira apetece construir e criar. Lá sinto a energia do futuro.\n\nPelos vistos, os Templários nunca chegaram a Marienbad…"
       },
       "en": {
         "place": "Mariánské Lázně",
-        "title": "Madeira looks clearer from afar",
-        "lead": "I am living and writing in an old spa town in Czechia — and I see my island more clearly than at home.",
-        "body": "My desk is at the [Nové Lázně](https://maps.app.goo.gl/Kv3Wb5skadMTGhwX7) hotel in Mariánské Lázně. Outside the window: a colonnade with a golden dome and a rust-red forest on the hill. Downstairs, a Viennese café — tall windows, striped sofas, coffee and dessert. The best place to return to the island in my mind.\n\nIt is strange: on Madeira I never noticed her, the way you never notice air. From here I see it all clearly — the levadas, the tunnels, the bridges. The writing comes easily.\n\nPhotos are mine, not edited with AI."
+        "title": "Madeira from afar",
+        "lead": "I'm writing these lines in Mariánské Lázně, the old Marienbad.",
+        "body": "A beautiful, well-kept town: a park with enormous trees, trimmed avenues, benches, healing water that people sip slowly and with pleasure. Old buildings are quietly restored here, and everything breathes history.\n\nI like it here. But within the first days I realised: this town lives off its past. People come here to rest, to calm down, to accept life as it is. You hardly see any young people, and the locals have no wish to talk about technology.\n\nAnd suddenly I felt Madeira sharply. An island with just as old a history — but a history that doesn't lull you to sleep, it pushes you forward. On Madeira you want to build and create. There I feel the energy of the future.\n\nLooks like the Templars never made it to Marienbad…"
       },
       "es": {
         "place": "Mariánské Lázně",
-        "title": "Madeira se ve mejor desde lejos",
-        "lead": "Vivo y escribo en un viejo balneario de Chequia, y veo mi isla con más claridad que en casa.",
-        "body": "Mi mesa está en el hotel [Nové Lázně](https://maps.app.goo.gl/Kv3Wb5skadMTGhwX7), en Mariánské Lázně. Por la ventana, una columnata con cúpula dorada y el bosque rojizo en la colina. Abajo, un café vienés: ventanales, sofás a rayas, un café con postre. El mejor lugar para volver a la isla con el pensamiento.\n\nEs curioso: en Madeira no me fijaba en ella, como no nos fijamos en el aire. Desde aquí lo veo todo con nitidez: las levadas, los túneles, los puentes. Se escribe bien.\n\nLas fotos son mías, sin edición con IA."
+        "title": "Madeira desde lejos",
+        "lead": "Escribo estas líneas en Mariánské Lázně, la antigua Marienbad.",
+        "body": "Una ciudad bonita y cuidada: un parque con árboles enormes, paseos bien recortados, bancos, agua medicinal que se bebe despacio y con gusto. Aquí se restaura lo antiguo sin prisa, y todo respira historia.\n\nAquí me siento bien. Pero ya en los primeros días comprendí: esta ciudad vive de su pasado. Aquí se descansa, uno se calma, se acepta la vida tal como es. Apenas se ven jóvenes, y a los vecinos no les interesa hablar de tecnología.\n\nY de pronto sentí Madeira con fuerza. Una isla con una historia no menos antigua, pero una historia que no adormece, sino que empuja hacia delante. En Madeira dan ganas de construir y crear. Allí siento la energía del futuro.\n\nParece que los templarios nunca llegaron a Marienbad…"
       },
       "de": {
         "place": "Marienbad",
-        "title": "Madeira sieht man aus der Ferne besser",
-        "lead": "Ich wohne und schreibe in einem alten Kurort in Tschechien — und sehe meine Insel klarer als zu Hause.",
-        "body": "Mein Schreibtisch steht im Hotel [Nové Lázně](https://maps.app.goo.gl/Kv3Wb5skadMTGhwX7) in Marienbad. Vor dem Fenster eine Kolonnade mit goldener Kuppel und rostroter Wald am Hang. Unten ein Wiener Café: hohe Fenster, gestreifte Sofas, Kaffee mit Dessert. Der beste Ort, um in Gedanken auf die Insel zurückzukehren.\n\nSeltsam: Auf Madeira habe ich sie kaum bemerkt, so wie man die Luft nicht bemerkt. Von hier sehe ich alles klar — die Levadas, die Tunnel, die Brücken. Das Schreiben fällt leicht.\n\nDie Fotos sind von mir, ohne KI-Bearbeitung."
+        "title": "Madeira aus der Ferne",
+        "lead": "Ich schreibe diese Zeilen in Mariánské Lázně, dem alten Marienbad.",
+        "body": "Eine schöne, gepflegte Stadt: ein Park mit riesigen Bäumen, gestutzte Alleen, Bänke, Heilwasser, das man langsam und mit Genuss trinkt. Hier wird das Alte in Ruhe restauriert, und alles atmet Geschichte.\n\nMir gefällt es hier. Doch schon in den ersten Tagen habe ich verstanden: Diese Stadt lebt von ihrer Vergangenheit. Man ruht sich aus, kommt zur Ruhe, nimmt das Leben, wie es ist. Junge Leute sieht man kaum, und über Technik möchten die Einheimischen nicht reden.\n\nUnd plötzlich habe ich Madeira ganz deutlich gespürt. Eine Insel mit nicht weniger alter Geschichte — aber diese Geschichte wiegt nicht in den Schlaf, sie treibt nach vorn. Auf Madeira möchte man bauen und erschaffen. Dort spüre ich die Energie der Zukunft.\n\nDie Templer haben es wohl nie bis Marienbad geschafft…"
       }
     }
   ]
