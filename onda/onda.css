@@ -1,0 +1,42 @@
+/* SeedWave · Onda (Волна) — страница-карточка участника. Палитра Хаба; пять обязательных переменных: --bg --ink --line --accent --surface */
+:root{--bg:#ffffff;--surface:#F2F9FB;--ink:#0d2a31;--ink-soft:#4d6a72;--line:rgba(13,42,49,.14);--accent:#0E8FA8;--accent-ink:#fff;--r:18px}
+:root[data-theme="dark"]{--bg:#0b1a1e;--surface:#12262c;--ink:#eef7f9;--ink-soft:#9bb7be;--line:rgba(255,255,255,.14);--accent:#3cc1d9;--accent-ink:#06262d}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}button{font:inherit;color:inherit;cursor:pointer}
+.wrap{max-width:640px;margin:0 auto;padding:0 16px}
+.top{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;text-decoration:none}
+.brand img{width:36px;height:36px;border-radius:10px}
+.tools{display:flex;gap:8px;position:relative}
+.rb{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:transparent;font-size:13px;font-weight:700;display:grid;place-items:center}
+.menu{position:absolute;right:48px;top:46px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:6px;display:none;z-index:5}
+.menu.open{display:block}.menu a{display:block;padding:8px 16px;border-radius:9px;font-weight:600;text-decoration:none}
+.menu a[aria-current]{background:var(--line)}
+.hero{padding:14px 0 4px}
+.eyebrow{margin:0 0 6px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+h1{font-size:clamp(30px,7.5vw,42px);line-height:1.08;font-weight:800;margin:0 0 10px;letter-spacing:-.02em}
+.l0{font-size:18px;margin:0}
+.wave{display:block;width:100%;height:34px;margin:14px 0 2px}
+.wave path{fill:none;stroke:var(--accent);stroke-width:4;stroke-linecap:round;stroke-dasharray:14 10}
+@media(prefers-reduced-motion:no-preference){.wave path{animation:fl 2.4s linear infinite}}
+@keyframes fl{to{stroke-dashoffset:-48}}
+h2{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:26px 0 10px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:6px 18px}
+.kv{display:grid;grid-template-columns:120px 1fr;gap:10px;padding:12px 0;border-top:1px solid var(--line)}
+.kv:first-child{border-top:0}.kv b{color:var(--accent);font-size:14px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);margin:10px 0;padding:0 18px}
+summary{list-style:none;cursor:pointer;padding:16px 0;font-weight:700;font-size:17px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:22px;color:var(--accent);font-weight:400}
+details[open] summary::after{content:"–"}
+details ul{margin:0;padding:0 0 14px 18px}details li{margin:8px 0}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.btn{border:1px solid var(--line);border-radius:14px;padding:12px 16px;font-weight:700;text-decoration:none;min-height:48px;display:inline-flex;align-items:center;background:transparent}
+.btn.p{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.note{font-size:14px;color:var(--ink-soft);margin:10px 0 0}
+.ag{margin-top:26px;padding:16px 18px;border:1px solid var(--line);border-radius:var(--r);font-size:15px;color:var(--ink-soft)}
+.ag b{color:var(--ink)}
+footer.sw{text-align:center;font-size:15px;padding:34px 0 56px;color:var(--ink-soft)}
+footer.sw a{display:inline-block;padding:8px 4px;text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:4px}
+@media(max-width:460px){.kv{grid-template-columns:1fr;gap:2px}}

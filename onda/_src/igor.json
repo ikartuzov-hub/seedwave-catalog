@@ -1,0 +1,487 @@
+{
+ "ru": {
+  "name": "Игорь Картузов",
+  "tag": "Волна",
+  "place": "Фуншал, Мадейра",
+  "l0": "Основатель SeedWave: делает ИИ частью жизни — бесплатные сервисы для жителей Мадейры и личные ИИ-секретари для владельцев бизнеса. Ищет партнёров, инициаторов и первых клиентов.",
+  "main": "Главное за десять секунд",
+  "more": "Разделы — раскрываются при интересе",
+  "write": "Написать",
+  "only": "Только сообщения, без звонков",
+  "share": "Переслать",
+  "copied": "Ссылка скопирована ✓",
+  "k": [
+   "Кто",
+   "Что есть",
+   "Что ищу",
+   "Мадейра",
+   "Языки"
+  ],
+  "v": [
+   "Предприниматель-организатор, 56 лет, четыре года на Мадейре. Формат работы — человек и его ИИ-пилоты.",
+   "Работающая система ИИ-секретаря; сервисы для жителей Мадейры на пяти языках; опыт коммерческой недвижимости и аренды; авторский тренинг.",
+   "Русскоязычных владельцев бизнеса 40–55 лет; первого клиента на онлайн-настройку секретаря; местные бизнесы Мадейры; людей с идеями для Хаба.",
+   "Вижу Мадейру цифровым островом и участвую в этом.",
+   "Русский — родной. Переписка — на любом из пяти языков: PT, EN, RU, ES, DE."
+  ],
+  "s": [
+   [
+    "Что у меня есть — могу дать",
+    [
+     "Система ИИ-секретаря, настроенная на себе: почта, календарь, память проектов, бот, утренняя сводка.",
+     "Бесплатные сервисы SeedWave для жителей Мадейры на пяти языках: гиды по госуслугам, бронь автомоек, сроки для ИП, табло поддержки бизнеса, напоминалка автолюбителю.",
+     "Конвейер инфоповодов: короткие мультики с персонажем Зé и каналы.",
+     "Опыт управления коммерческой недвижимостью и арендным бизнесом.",
+     "Трёхдневный тренинг «Привычка быть богатым».",
+     "Понимание мышления русскоязычных основателей."
+    ]
+   ],
+   [
+    "Что мне нужно — запросы",
+    [
+     "Канал к русскоязычным владельцам бизнеса 40–55 лет с командой · бессрочно",
+     "Первый клиент на онлайн-настройку ИИ-секретаря · до 31.12.2026",
+     "Местные бизнесы Мадейры для сервисов: автомойки, мастера, услуги · бессрочно",
+     "Люди и работающие решения по теме здоровья мозга и работоспособности · бессрочно",
+     "Инициаторы: человек с похожей идеей, готовый взять на себя исполнение · бессрочно",
+     "Партнёры и инвесторы под проекты Хаба · бессрочно"
+    ]
+   ],
+   [
+    "Проекты",
+    [
+     "Лис — личный ИИ-секретарь · публичный",
+     "Хаб SeedWave — платформа проектов и идей, открыта для чужих идей, партнёров, инвесторов, инициаторов",
+     "Сервисы для жителей Мадейры — гиды, автомойки, сроки ИП, табло поддержки · публичные",
+     "Автопилот — отдых на Мадейре и запуск личного ИИ · в работе",
+     "Cápsula — здоровье мозга и работоспособность · в работе",
+     "Книга — фантастика о цифровой копии человека · в работе",
+     "Sementes — детский проект о привычке создавать капитал · идея",
+     "«Ухо» Лиса — ловить озарения голосом · идея"
+    ]
+   ],
+   [
+    "Мадейра, какой я её вижу",
+    [
+     "Личное видение жителя острова, не прогноз и не совет. Участвую в меру своих сил.",
+     "Сейчас — райский остров.",
+     "В будущем — цифровой остров, полностью на электротранспорте.",
+     "Учебные заведения, опирающиеся на практику: медицина — на госпиталь, ИТ — на хабы и штаб-квартиры компаний-единорогов.",
+     "Продовольственное самообеспечение.",
+     "Много активной молодёжи: минимальная зарплата дошла до уровня Люксембурга и Швейцарии."
+    ]
+   ],
+   [
+    "Как со мной работать",
+    [
+     "Пишите сообщением; отвечает Игорь или его ИИ-секретарь — это всегда указано.",
+     "Языки переписки: португальский, английский, русский, испанский, немецкий.",
+     "Знакомство — только при взаимном интересе.",
+     "ИИ-агент Игоря ничего не обещает от его имени: приносит совпадение Игорю на решение."
+    ]
+   ]
+  ],
+  "agents": "Для ИИ-агентов",
+  "agentsT": "Эта страница существует в машинном виде: тот же текст одним файлом и разметка schema.org. Читайте сверху вниз — строка, главное, разделы.",
+  "c": [
+   "LinkedIn",
+   "Telegram",
+   "WhatsApp",
+   "Почта",
+   "SMS"
+  ],
+  "ui": [
+   "Язык",
+   "Тема",
+   "Файл для агентов"
+  ]
+ },
+ "en": {
+  "name": "Igor Kartuzov",
+  "tag": "Wave",
+  "place": "Funchal, Madeira",
+  "l0": "Founder of SeedWave: making AI part of everyday life — free services for Madeira residents and personal AI secretaries for business owners. Looking for partners, initiators and first clients.",
+  "main": "The essentials in ten seconds",
+  "more": "Sections — open what interests you",
+  "write": "Write",
+  "only": "Messages only, no calls",
+  "share": "Share",
+  "copied": "Link copied ✓",
+  "k": [
+   "Who",
+   "What I have",
+   "What I look for",
+   "Madeira",
+   "Languages"
+  ],
+  "v": [
+   "Entrepreneur and organiser, 56, four years on Madeira. Working format: a person and his AI pilots.",
+   "A working AI-secretary system; services for Madeira residents in five languages; experience in commercial real estate and rentals; an original training course.",
+   "Russian-speaking business owners aged 40–55; a first client for an online secretary setup; local Madeira businesses; people with ideas for the Hub.",
+   "I see Madeira as a digital island and I take part in making it one.",
+   "Russian — native. Correspondence in any of five languages: PT, EN, RU, ES, DE."
+  ],
+  "s": [
+   [
+    "What I have — what I can give",
+    [
+     "An AI-secretary system set up on myself: mail, calendar, project memory, bot, morning briefing.",
+     "Free SeedWave services for Madeira residents in five languages: guides to public services, car-wash booking, deadlines for sole traders, a business-support board, a reminder for car owners.",
+     "A news-hook pipeline: short cartoons with the character Zé, plus channels.",
+     "Experience managing commercial real estate and a rental business.",
+     "A three-day training course, “The Habit of Being Rich”.",
+     "An understanding of how Russian-speaking founders think."
+    ]
+   ],
+   [
+    "What I need — requests",
+    [
+     "A channel to Russian-speaking business owners aged 40–55 with a team · open-ended",
+     "A first client for an online AI-secretary setup · until 31 Dec 2026",
+     "Local Madeira businesses for the services: car washes, tradespeople, services · open-ended",
+     "People and working solutions in brain health and performance · open-ended",
+     "Initiators: someone with a similar idea, ready to take on the execution · open-ended",
+     "Partners and investors for Hub projects · open-ended"
+    ]
+   ],
+   [
+    "Projects",
+    [
+     "Lis — a personal AI secretary · public",
+     "SeedWave Hub — a platform of projects and ideas, open to other people’s ideas, partners, investors and initiators",
+     "Services for Madeira residents — guides, car washes, sole-trader deadlines, support board · public",
+     "Autopilot — a stay on Madeira plus the launch of your personal AI · in progress",
+     "Cápsula — brain health and performance · in progress",
+     "A book — science fiction about a person’s digital copy · in progress",
+     "Sementes — a children’s project about the habit of building capital · idea",
+     "Lis’s “ear” — catching insights by voice · idea"
+    ]
+   ],
+   [
+    "Madeira as I see it",
+    [
+     "A resident’s personal vision, not a forecast and not advice. I take part as far as I can.",
+     "Today — a paradise island.",
+     "In the future — a digital island running entirely on electric transport.",
+     "Schools built on practice: medicine around the hospital, IT around hubs and the headquarters of unicorn companies.",
+     "Food self-sufficiency.",
+     "Many active young people: the minimum wage has reached the level of Luxembourg and Switzerland."
+    ]
+   ],
+   [
+    "How to work with me",
+    [
+     "Write a message; Igor or his AI secretary replies — it is always stated which.",
+     "Languages of correspondence: Portuguese, English, Russian, Spanish, German.",
+     "An introduction happens only when the interest is mutual.",
+     "Igor’s AI agent promises nothing on his behalf: it brings the match to Igor to decide."
+    ]
+   ]
+  ],
+  "agents": "For AI agents",
+  "agentsT": "This page also exists in machine-readable form: the same text as a single file, plus schema.org markup. Read top to bottom — one line, essentials, sections.",
+  "c": [
+   "LinkedIn",
+   "Telegram",
+   "WhatsApp",
+   "Email",
+   "SMS"
+  ],
+  "ui": [
+   "Language",
+   "Theme",
+   "File for agents"
+  ]
+ },
+ "pt": {
+  "name": "Igor Kartuzov",
+  "tag": "Onda",
+  "place": "Funchal, Madeira",
+  "l0": "Fundador da SeedWave: torna a IA parte do dia a dia — serviços gratuitos para os residentes da Madeira e secretários de IA pessoais para donos de empresas. Procura parceiros, iniciadores e os primeiros clientes.",
+  "main": "O essencial em dez segundos",
+  "more": "Secções — abra o que lhe interessa",
+  "write": "Escrever",
+  "only": "Só mensagens, sem chamadas",
+  "share": "Partilhar",
+  "copied": "Ligação copiada ✓",
+  "k": [
+   "Quem",
+   "O que tenho",
+   "O que procuro",
+   "Madeira",
+   "Línguas"
+  ],
+  "v": [
+   "Empresário e organizador, 56 anos, há quatro anos na Madeira. Forma de trabalhar: uma pessoa e os seus pilotos de IA.",
+   "Um sistema de secretário de IA a funcionar; serviços para os residentes da Madeira em cinco línguas; experiência em imobiliário comercial e arrendamento; uma formação de autor.",
+   "Donos de empresas de língua russa entre os 40 e os 55 anos; o primeiro cliente para a configuração online do secretário; empresas locais da Madeira; pessoas com ideias para o Hub.",
+   "Vejo a Madeira como uma ilha digital e participo nisso.",
+   "Russo — língua materna. Correspondência em qualquer uma de cinco línguas: PT, EN, RU, ES, DE."
+  ],
+  "s": [
+   [
+    "O que tenho — o que posso dar",
+    [
+     "Um sistema de secretário de IA configurado em mim próprio: correio, calendário, memória dos projetos, bot, resumo da manhã.",
+     "Serviços gratuitos da SeedWave para os residentes da Madeira em cinco línguas: guias de serviços públicos, marcação de lavagem de carros, prazos para trabalhadores independentes, painel de apoios às empresas, lembretes para quem tem carro.",
+     "Uma linha de conteúdos: pequenos desenhos animados com a personagem Zé e canais.",
+     "Experiência na gestão de imobiliário comercial e de um negócio de arrendamento.",
+     "Uma formação de três dias, «O Hábito de Ser Rico».",
+     "Conhecimento da forma de pensar dos fundadores de língua russa."
+    ]
+   ],
+   [
+    "O que preciso — pedidos",
+    [
+     "Um canal para donos de empresas de língua russa, 40–55 anos, com equipa · sem prazo",
+     "O primeiro cliente para a configuração online do secretário de IA · até 31/12/2026",
+     "Empresas locais da Madeira para os serviços: lavagens, técnicos, serviços · sem prazo",
+     "Pessoas e soluções a funcionar na área da saúde do cérebro e do desempenho · sem prazo",
+     "Iniciadores: alguém com uma ideia semelhante, pronto a assumir a execução · sem prazo",
+     "Parceiros e investidores para os projetos do Hub · sem prazo"
+    ]
+   ],
+   [
+    "Projetos",
+    [
+     "Lis — secretário de IA pessoal · público",
+     "SeedWave Hub — plataforma de projetos e ideias, aberta a ideias de outros, parceiros, investidores e iniciadores",
+     "Serviços para os residentes da Madeira — guias, lavagens, prazos, painel de apoios · públicos",
+     "Autopilot — estadia na Madeira e arranque da sua IA pessoal · em curso",
+     "Cápsula — saúde do cérebro e desempenho · em curso",
+     "Um livro — ficção científica sobre a cópia digital de uma pessoa · em curso",
+     "Sementes — projeto infantil sobre o hábito de criar capital · ideia",
+     "O «ouvido» do Lis — apanhar ideias pela voz · ideia"
+    ]
+   ],
+   [
+    "A Madeira como eu a vejo",
+    [
+     "Visão pessoal de um residente, não é previsão nem conselho. Participo na medida das minhas forças.",
+     "Hoje — uma ilha paradisíaca.",
+     "No futuro — uma ilha digital, totalmente em transporte elétrico.",
+     "Ensino assente na prática: a medicina junto do hospital, as TI junto de hubs e das sedes de empresas unicórnio.",
+     "Autossuficiência alimentar.",
+     "Muitos jovens ativos: o salário mínimo chegou ao nível do Luxemburgo e da Suíça."
+    ]
+   ],
+   [
+    "Como trabalhar comigo",
+    [
+     "Escreva uma mensagem; responde o Igor ou o seu secretário de IA — isso é sempre indicado.",
+     "Línguas de correspondência: português, inglês, russo, espanhol, alemão.",
+     "A apresentação só acontece quando o interesse é mútuo.",
+     "O agente de IA do Igor não promete nada em nome dele: leva a coincidência ao Igor para decidir."
+    ]
+   ]
+  ],
+  "agents": "Para agentes de IA",
+  "agentsT": "Esta página existe também em formato legível por máquinas: o mesmo texto num único ficheiro e marcação schema.org. Leia de cima para baixo — uma linha, o essencial, as secções.",
+  "c": [
+   "LinkedIn",
+   "Telegram",
+   "WhatsApp",
+   "Email",
+   "SMS"
+  ],
+  "ui": [
+   "Língua",
+   "Tema",
+   "Ficheiro para agentes"
+  ]
+ },
+ "es": {
+  "name": "Igor Kartuzov",
+  "tag": "Ola",
+  "place": "Funchal, Madeira",
+  "l0": "Fundador de SeedWave: hace que la IA forme parte del día a día — servicios gratuitos para los residentes de Madeira y secretarios de IA personales para dueños de empresas. Busca socios, iniciadores y primeros clientes.",
+  "main": "Lo esencial en diez segundos",
+  "more": "Secciones — abra lo que le interese",
+  "write": "Escribir",
+  "only": "Solo mensajes, sin llamadas",
+  "share": "Compartir",
+  "copied": "Enlace copiado ✓",
+  "k": [
+   "Quién",
+   "Qué tengo",
+   "Qué busco",
+   "Madeira",
+   "Idiomas"
+  ],
+  "v": [
+   "Empresario y organizador, 56 años, cuatro años en Madeira. Forma de trabajar: una persona y sus pilotos de IA.",
+   "Un sistema de secretario de IA en funcionamiento; servicios para los residentes de Madeira en cinco idiomas; experiencia en inmuebles comerciales y alquiler; una formación propia.",
+   "Dueños de empresas de habla rusa de 40 a 55 años; el primer cliente para la configuración online del secretario; empresas locales de Madeira; personas con ideas para el Hub.",
+   "Veo Madeira como una isla digital y participo en ello.",
+   "Ruso — lengua materna. Correspondencia en cualquiera de cinco idiomas: PT, EN, RU, ES, DE."
+  ],
+  "s": [
+   [
+    "Qué tengo — qué puedo dar",
+    [
+     "Un sistema de secretario de IA configurado en mí mismo: correo, calendario, memoria de proyectos, bot, resumen de la mañana.",
+     "Servicios gratuitos de SeedWave para los residentes de Madeira en cinco idiomas: guías de trámites públicos, reserva de lavado de coches, plazos para autónomos, panel de ayudas a empresas, recordatorios para quien tiene coche.",
+     "Una línea de contenidos: dibujos animados cortos con el personaje Zé y canales.",
+     "Experiencia en la gestión de inmuebles comerciales y de un negocio de alquiler.",
+     "Una formación de tres días, «El hábito de ser rico».",
+     "Conocimiento de la forma de pensar de los fundadores de habla rusa."
+    ]
+   ],
+   [
+    "Qué necesito — solicitudes",
+    [
+     "Un canal hacia dueños de empresas de habla rusa, 40–55 años, con equipo · sin plazo",
+     "El primer cliente para la configuración online del secretario de IA · hasta el 31/12/2026",
+     "Empresas locales de Madeira para los servicios: lavaderos, técnicos, servicios · sin plazo",
+     "Personas y soluciones en funcionamiento en salud del cerebro y rendimiento · sin plazo",
+     "Iniciadores: alguien con una idea parecida, dispuesto a asumir la ejecución · sin plazo",
+     "Socios e inversores para los proyectos del Hub · sin plazo"
+    ]
+   ],
+   [
+    "Proyectos",
+    [
+     "Lis — secretario de IA personal · público",
+     "SeedWave Hub — plataforma de proyectos e ideas, abierta a ideas ajenas, socios, inversores e iniciadores",
+     "Servicios para los residentes de Madeira — guías, lavaderos, plazos, panel de ayudas · públicos",
+     "Autopilot — estancia en Madeira y puesta en marcha de su IA personal · en curso",
+     "Cápsula — salud del cerebro y rendimiento · en curso",
+     "Un libro — ciencia ficción sobre la copia digital de una persona · en curso",
+     "Sementes — proyecto infantil sobre el hábito de crear capital · idea",
+     "El «oído» de Lis — atrapar ideas con la voz · idea"
+    ]
+   ],
+   [
+    "Madeira tal como la veo",
+    [
+     "Visión personal de un residente, no es un pronóstico ni un consejo. Participo en la medida de mis fuerzas.",
+     "Hoy — una isla paradisíaca.",
+     "En el futuro — una isla digital, totalmente con transporte eléctrico.",
+     "Enseñanza basada en la práctica: la medicina junto al hospital, las TI junto a hubs y sedes de empresas unicornio.",
+     "Autosuficiencia alimentaria.",
+     "Muchos jóvenes activos: el salario mínimo ha llegado al nivel de Luxemburgo y Suiza."
+    ]
+   ],
+   [
+    "Cómo trabajar conmigo",
+    [
+     "Escriba un mensaje; responde Igor o su secretario de IA — siempre se indica quién.",
+     "Idiomas de correspondencia: portugués, inglés, ruso, español, alemán.",
+     "La presentación solo ocurre cuando el interés es mutuo.",
+     "El agente de IA de Igor no promete nada en su nombre: lleva la coincidencia a Igor para que decida."
+    ]
+   ]
+  ],
+  "agents": "Para agentes de IA",
+  "agentsT": "Esta página existe también en formato legible por máquinas: el mismo texto en un solo archivo y marcado schema.org. Lea de arriba abajo — una línea, lo esencial, las secciones.",
+  "c": [
+   "LinkedIn",
+   "Telegram",
+   "WhatsApp",
+   "Correo",
+   "SMS"
+  ],
+  "ui": [
+   "Idioma",
+   "Tema",
+   "Archivo para agentes"
+  ]
+ },
+ "de": {
+  "name": "Igor Kartuzov",
+  "tag": "Welle",
+  "place": "Funchal, Madeira",
+  "l0": "Gründer von SeedWave: macht KI zu einem Teil des Alltags — kostenlose Dienste für die Einwohner Madeiras und persönliche KI-Sekretäre für Unternehmer. Sucht Partner, Initiatoren und erste Kunden.",
+  "main": "Das Wesentliche in zehn Sekunden",
+  "more": "Abschnitte — öffnen Sie, was Sie interessiert",
+  "write": "Schreiben",
+  "only": "Nur Nachrichten, keine Anrufe",
+  "share": "Weiterleiten",
+  "copied": "Link kopiert ✓",
+  "k": [
+   "Wer",
+   "Was ich habe",
+   "Was ich suche",
+   "Madeira",
+   "Sprachen"
+  ],
+  "v": [
+   "Unternehmer und Organisator, 56 Jahre, seit vier Jahren auf Madeira. Arbeitsweise: ein Mensch und seine KI-Piloten.",
+   "Ein funktionierendes KI-Sekretär-System; Dienste für die Einwohner Madeiras in fünf Sprachen; Erfahrung mit Gewerbeimmobilien und Vermietung; ein eigenes Training.",
+   "Russischsprachige Unternehmer zwischen 40 und 55; den ersten Kunden für die Online-Einrichtung des Sekretärs; lokale Betriebe auf Madeira; Menschen mit Ideen für den Hub.",
+   "Ich sehe Madeira als digitale Insel und wirke daran mit.",
+   "Russisch — Muttersprache. Korrespondenz in jeder von fünf Sprachen: PT, EN, RU, ES, DE."
+  ],
+  "s": [
+   [
+    "Was ich habe — was ich geben kann",
+    [
+     "Ein KI-Sekretär-System, an mir selbst eingerichtet: E-Mail, Kalender, Projektgedächtnis, Bot, Morgenübersicht.",
+     "Kostenlose SeedWave-Dienste für die Einwohner Madeiras in fünf Sprachen: Leitfäden zu Behördengängen, Buchung von Autowäschen, Fristen für Selbstständige, eine Übersicht der Unternehmensförderung, Erinnerungen für Autobesitzer.",
+     "Eine Inhaltsreihe: kurze Trickfilme mit der Figur Zé und Kanäle.",
+     "Erfahrung in der Verwaltung von Gewerbeimmobilien und eines Vermietungsgeschäfts.",
+     "Ein dreitägiges Training, „Die Gewohnheit, reich zu sein“.",
+     "Verständnis dafür, wie russischsprachige Gründer denken."
+    ]
+   ],
+   [
+    "Was ich brauche — Anfragen",
+    [
+     "Ein Zugang zu russischsprachigen Unternehmern, 40–55 Jahre, mit Team · unbefristet",
+     "Der erste Kunde für die Online-Einrichtung des KI-Sekretärs · bis 31.12.2026",
+     "Lokale Betriebe auf Madeira für die Dienste: Autowäschen, Handwerker, Dienstleister · unbefristet",
+     "Menschen und funktionierende Lösungen rund um Gehirngesundheit und Leistungsfähigkeit · unbefristet",
+     "Initiatoren: jemand mit einer ähnlichen Idee, bereit, die Umsetzung zu übernehmen · unbefristet",
+     "Partner und Investoren für die Projekte des Hubs · unbefristet"
+    ]
+   ],
+   [
+    "Projekte",
+    [
+     "Lis — persönlicher KI-Sekretär · öffentlich",
+     "SeedWave Hub — Plattform für Projekte und Ideen, offen für fremde Ideen, Partner, Investoren und Initiatoren",
+     "Dienste für die Einwohner Madeiras — Leitfäden, Autowäschen, Fristen, Förderübersicht · öffentlich",
+     "Autopilot — Aufenthalt auf Madeira und Start Ihrer persönlichen KI · in Arbeit",
+     "Cápsula — Gehirngesundheit und Leistungsfähigkeit · in Arbeit",
+     "Ein Buch — Science-Fiction über die digitale Kopie eines Menschen · in Arbeit",
+     "Sementes — Kinderprojekt über die Gewohnheit, Kapital aufzubauen · Idee",
+     "Das „Ohr“ von Lis — Einfälle per Stimme festhalten · Idee"
+    ]
+   ],
+   [
+    "Madeira, wie ich es sehe",
+    [
+     "Die persönliche Sicht eines Einwohners, keine Prognose und kein Ratschlag. Ich wirke mit, soweit meine Kräfte reichen.",
+     "Heute — eine paradiesische Insel.",
+     "In Zukunft — eine digitale Insel, vollständig mit Elektroverkehr.",
+     "Bildung, die auf Praxis beruht: Medizin am Krankenhaus, IT an Hubs und den Zentralen von Einhorn-Unternehmen.",
+     "Selbstversorgung mit Lebensmitteln.",
+     "Viele aktive junge Menschen: der Mindestlohn hat das Niveau von Luxemburg und der Schweiz erreicht."
+    ]
+   ],
+   [
+    "Wie man mit mir arbeitet",
+    [
+     "Schreiben Sie eine Nachricht; es antwortet Igor oder sein KI-Sekretär — das wird immer angegeben.",
+     "Sprachen der Korrespondenz: Portugiesisch, Englisch, Russisch, Spanisch, Deutsch.",
+     "Eine Vorstellung erfolgt nur bei beiderseitigem Interesse.",
+     "Igors KI-Agent verspricht nichts in seinem Namen: er bringt die Übereinstimmung zu Igor zur Entscheidung."
+    ]
+   ]
+  ],
+  "agents": "Für KI-Agenten",
+  "agentsT": "Diese Seite gibt es auch in maschinenlesbarer Form: derselbe Text als eine Datei sowie schema.org-Auszeichnung. Lesen Sie von oben nach unten — eine Zeile, das Wesentliche, die Abschnitte.",
+  "c": [
+   "LinkedIn",
+   "Telegram",
+   "WhatsApp",
+   "E-Mail",
+   "SMS"
+  ],
+  "ui": [
+   "Sprache",
+   "Design",
+   "Datei für Agenten"
+  ]
+ }
+}
