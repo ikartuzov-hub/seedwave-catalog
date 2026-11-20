@@ -775,7 +775,12 @@
           "Living stack: tap a spine — the book slides out and shows its main idea.",
           "Your own shelf in a minute: a title, one sentence and the address seedwave.pt/biblioteca/name.",
           "Catalogue by section and search by title and author."
-        ]
+        ],
+        "video": {
+          "src": "https://seedwave.pt/biblioteca/video/ze_en.mp4",
+          "poster": "https://seedwave.pt/biblioteca/video/ze_en.jpg",
+          "caption": "25 seconds, clear without words. Animation created with AI."
+        }
       }
     }
   ]

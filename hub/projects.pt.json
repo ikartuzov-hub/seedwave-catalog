@@ -775,7 +775,12 @@
           "Pilha viva: toque numa lombada — o livro sai e mostra a ideia principal.",
           "A sua estante num minuto: um título, uma frase e o endereço seedwave.pt/biblioteca/nome.",
           "Catálogo por secções e pesquisa por título e autor."
-        ]
+        ],
+        "video": {
+          "src": "https://seedwave.pt/biblioteca/video/ze_pt.mp4",
+          "poster": "https://seedwave.pt/biblioteca/video/ze_pt.jpg",
+          "caption": "25 segundos, percebe-se sem palavras. Animação criada com IA."
+        }
       }
     }
   ]

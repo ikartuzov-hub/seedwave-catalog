@@ -240,6 +240,7 @@ footer a{display:inline-block;padding:8px 4px;text-decoration:underline;text-dec
 .draft{font-size:13px;color:var(--ink-soft);font-style:italic;margin:10px 0 0}
 .soft{margin:12px 0 0;padding:12px 14px;border-radius:12px;background:var(--chip-on);font-size:15px}
 .soft a{font-weight:800;color:var(--accent)}
+.zev{margin:22px 0 0}.zev video{width:100%;aspect-ratio:1;border-radius:var(--r);border:1px solid var(--line);background:#000;display:block}.vnote{font-size:12px;color:var(--ink-soft);margin:6px 2px 0;text-align:right}
 .ctabox{margin:22px 0 0;padding:18px;border-radius:var(--r);background:var(--surface);border:1px solid var(--line);text-align:center}
 .ctabox p{margin:10px 0 0;font-size:15px;color:var(--ink-soft)}
 .tabs3{display:flex;gap:8px;overflow-x:auto;margin:6px 0 8px;padding-bottom:4px}
@@ -314,6 +315,8 @@ footer a{display:inline-block;padding:8px 4px;text-decoration:underline;text-dec
     <p data-i="ctaSub">Ein Titel und ein Satz — und du hast deinen eigenen Link.</p>
   </div>
 
+  <section class="zev" id="zev"><video id="zeV" muted="" loop="" playsinline="" controls="" preload="metadata" poster="/biblioteca/video/ze_de.jpg" src="/biblioteca/video/ze_de.mp4"></video><p class="vnote" data-i="vnote">Animation mit KI erstellt.</p></section>
+
   <h2 data-i="moreH">Das ganze Regal</h2>
   <div class="tabs3" id="tabs3"><button class="ctab" data-tab="now" aria-selected="true">Jetzt<small>8</small></button><button class="ctab" data-tab="past" aria-selected="false">Gelesen und gesehen<small>14</small></button><button class="ctab" data-tab="next" aria-selected="false">Geplant<small>5</small></button></div>
   <div id="list"><button class="crow" data-row="starik" aria-expanded="false"><span><span class="ct">Krieg der Klone</span><span class="ca">John Scalzi</span><span class="rowk">Buch · <span class="seclink" data-sec="sf">Science-Fiction</span></span></span><span class="dot"></span></button><button class="crow" data-row="mogilko" aria-expanded="false"><span><span class="ct">Marina Mogilko — channel</span><span class="ca">Marina Mogilko</span><span class="rowk">YouTube · <span class="seclink" data-sec="yt">wer die Zukunft baut</span></span></span><span class="dot off"></span></button><button class="crow" data-row="neuro" aria-expanded="false"><span><span class="ct">Neiroprosveshchenie — channel</span><span class="ca">Neiroprosveshchenie</span><span class="rowk">YouTube · <span class="seclink" data-sec="yt">wer die Zukunft baut</span></span></span><span class="dot off"></span></button><button class="crow" data-row="futurepedia" aria-expanded="false"><span><span class="ct">Futurepedia — channel</span><span class="ca">Futurepedia</span><span class="rowk">YouTube · <span class="seclink" data-sec="yt">wer die Zukunft baut</span></span></span><span class="dot off"></span></button><button class="crow" data-row="doron" aria-expanded="false"><span><span class="ct">Episodes with Andrey Doronichev</span><span class="ca">Andrey Doronichev</span><span class="rowk">YouTube · <span class="seclink" data-sec="yt">wer die Zukunft baut</span></span></span><span class="dot off"></span></button><button class="crow" data-row="liberman" aria-expanded="false"><span><span class="ct">Episodes with the Liberman brothers</span><span class="ca">Liberman brothers</span><span class="rowk">YouTube · <span class="seclink" data-sec="yt">wer die Zukunft baut</span></span></span><span class="dot off"></span></button><button class="crow" data-row="sokolov" aria-expanded="false"><span><span class="ct">Interview with Artem Sokolov</span><span class="ca">Elizaveta Osetinskaya</span><span class="rowk">YouTube · <span class="seclink" data-sec="yt">wer die Zukunft baut</span></span></span><span class="dot off"></span></button><button class="crow" data-row="pttat" aria-expanded="false"><span><span class="ct">Portuguese with Tatiana</span><span class="ca">Tatiana Bogomazova</span><span class="rowk">YouTube · <span class="seclink" data-sec="learn">ich lerne</span></span></span><span class="dot off"></span></button></div>
@@ -353,6 +356,7 @@ ru:{proto:"Прототип 3 — виден только Игорю. Публи
  modeGuest:"Вид: гость",modeAuthor:"Вид: автор полки",
  eyebrow:"Полка · Igor",bioName:"Игорь Картузов",bio:"Живу на Мадейре, пишу книгу о будущем.",bioLink:"Дневник книги ↗",
  h1:"Что я читаю и смотрю — и что из этого взял",
+ vnote:"Анимация создана с ИИ.",
  lead:"Без оценок и пересказов. Из каждой книги и фильма — одна мысль, которая пошла в дело.",
  cnt:(n,r)=>`На полке ${n} · с моими словами ${r}. Нажми на корешок.`,
  cta:"Завести такую же полку",ctaSub:"Название и одна фраза — и у тебя своя ссылка.",
@@ -387,6 +391,7 @@ pt:{proto:"Protótipo 3 — visível apenas para o Igor. Publicação em seedwav
  modeGuest:"Vista: visitante",modeAuthor:"Vista: autor da estante",
  eyebrow:"Estante · Igor",bioName:"Igor Kartuzov",bio:"Vivo na Madeira e escrevo um livro sobre o futuro.",bioLink:"Diário do livro ↗",
  h1:"O que leio e vejo — e o que tirei daí",
+ vnote:"Animação criada com IA.",
  lead:"Sem notas nem resumos. De cada livro e de cada filme, uma ideia que passou à prática.",
  cnt:(n,r)=>`Na estante: ${n} · com as minhas palavras: ${r}. Toque numa lombada.`,
  cta:"Criar uma estante assim",ctaSub:"Um título e uma frase — e fica com o seu próprio link.",
@@ -421,6 +426,7 @@ en:{proto:"Prototype 3 — visible to Igor only. Goes live at seedwave.pt/biblio
  modeGuest:"View: guest",modeAuthor:"View: shelf author",
  eyebrow:"Shelf · Igor",bioName:"Igor Kartuzov",bio:"I live on Madeira and I’m writing a book about the future.",bioLink:"The book’s diary ↗",
  h1:"What I read and watch — and what I took from it",
+ vnote:"Animation created with AI.",
  lead:"No ratings, no retellings. From each book and film, one idea that I put to work.",
  cnt:(n,r)=>`On the shelf: ${n} · with my own words: ${r}. Tap a spine.`,
  cta:"Start a shelf like this",ctaSub:"A title and one sentence — and you have your own link.",
@@ -455,6 +461,7 @@ es:{proto:"Prototipo 3 — visible solo para Igor. Publicación en seedwave.pt/b
  modeGuest:"Vista: visitante",modeAuthor:"Vista: autor de la estantería",
  eyebrow:"Estantería · Igor",bioName:"Igor Kartuzov",bio:"Vivo en Madeira y escribo un libro sobre el futuro.",bioLink:"Diario del libro ↗",
  h1:"Lo que leo y veo — y lo que saqué de ello",
+ vnote:"Animación creada con IA.",
  lead:"Sin notas ni resúmenes. De cada libro y cada película, una idea que puse en práctica.",
  cnt:(n,r)=>`En la estantería: ${n} · con mis palabras: ${r}. Toca un lomo.`,
  cta:"Crear una estantería así",ctaSub:"Un título y una frase — y tienes tu propio enlace.",
@@ -489,6 +496,7 @@ de:{proto:"Prototyp 3 — nur für Igor sichtbar. Veröffentlichung auf seedwave
  modeGuest:"Ansicht: Gast",modeAuthor:"Ansicht: Regal-Autor",
  eyebrow:"Regal · Igor",bioName:"Igor Kartuzov",bio:"Ich lebe auf Madeira und schreibe ein Buch über die Zukunft.",bioLink:"Tagebuch zum Buch ↗",
  h1:"Was ich lese und sehe — und was ich daraus mitgenommen habe",
+ vnote:"Animation mit KI erstellt.",
  lead:"Keine Noten, keine Nacherzählung. Aus jedem Buch und Film ein Gedanke, den ich umgesetzt habe.",
  cnt:(n,r)=>`Im Regal: ${n} · mit meinen Worten: ${r}. Tipp auf einen Buchrücken.`,
  cta:"So ein Regal anlegen",ctaSub:"Ein Titel und ein Satz — und du hast deinen eigenen Link.",
@@ -702,7 +710,12 @@ function renderStatic(){
   $("#fType").innerHTML=Object.keys(T("ft")).map(k=>`<button class="chip" data-ft="${k}" aria-pressed="${fType===k}">${T("ft")[k]}</button>`).join("");
   $("#yr").textContent=new Date().getFullYear();
   $("#themeBtn").textContent=theme==="light"?"☾":"☀";
+  {const v=$("#zeV");if(v&&!v.getAttribute("src")){v.setAttribute("poster","/biblioteca/video/ze_"+lang+".jpg");v.setAttribute("src","/biblioteca/video/ze_"+lang+".mp4")}}
 }
+(function(){const v=document.getElementById("zeV");if(!v)return;
+  v.addEventListener("play",()=>trk("biblioteca_video_play",{}),{once:true});
+  const rd=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(!rd&&"IntersectionObserver" in window)new IntersectionObserver(es=>es.forEach(e=>{e.isIntersecting?v.play().catch(()=>{}):v.pause()}),{threshold:.6}).observe(v);})();
 function renderRevs(){const it=STACK0.concat(SHELF.map(b=>b.id).filter(i=>!STACK0.includes(i))).map(byId).filter(b=>b&&b.full&&(ED[b.id]||{}).full==="g");
   $("#revs").innerHTML=`<h2>${T("revsH")}</h2>`+it.map(b=>{const f=locF(b),w=b.why?(b.why[lang]||b.why.ru):"";
     const ro=lang!=="ru"&&T("ruOnly")?`<p class="draft">${T("ruOnly")}</p>`:"";

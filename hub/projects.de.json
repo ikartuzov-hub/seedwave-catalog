@@ -775,7 +775,12 @@
           "Lebendiger Stapel: Tipp auf einen Buchrücken — das Buch gleitet heraus und zeigt seinen Hauptgedanken.",
           "Dein eigenes Regal in einer Minute: ein Titel, ein Satz und die Adresse seedwave.pt/biblioteca/name.",
           "Katalog nach Rubriken und Suche nach Titel und Autor."
-        ]
+        ],
+        "video": {
+          "src": "https://seedwave.pt/biblioteca/video/ze_de.mp4",
+          "poster": "https://seedwave.pt/biblioteca/video/ze_de.jpg",
+          "caption": "25 Sekunden, verständlich ohne Worte. Animation mit KI erstellt."
+        }
       }
     }
   ]

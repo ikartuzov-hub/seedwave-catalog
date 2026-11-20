@@ -775,7 +775,12 @@
           "Pila viva: toca un lomo y el libro sale y muestra su idea principal.",
           "Tu estantería en un minuto: un título, una frase y la dirección seedwave.pt/biblioteca/nombre.",
           "Catálogo por secciones y búsqueda por título y autor."
-        ]
+        ],
+        "video": {
+          "src": "https://seedwave.pt/biblioteca/video/ze_es.mp4",
+          "poster": "https://seedwave.pt/biblioteca/video/ze_es.jpg",
+          "caption": "25 segundos, se entiende sin palabras. Animación creada con IA."
+        }
       }
     }
   ]
