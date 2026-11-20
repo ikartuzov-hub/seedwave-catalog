@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,700;1,500&family=Manrope:wght@400;600;800&display=swap&subset=cyrillic" rel="stylesheet">
-<link rel="stylesheet" href="/madeira/engine.css?v=202611201025">
+<link rel="stylesheet" href="/madeira/engine.css?v=202611202206">
 <script>try{var t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('madeira.theme')||'light';document.documentElement.dataset.theme=t}catch(e){}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Blog", "name": "Madeira mit eigenen Augen", "url": "https://seedwave.pt/madeira/de/", "inLanguage": "de", "description": "Igor Kartuzov, Unternehmer in Funchal, schreibt einen Science-Fiction-Roman über Madeira. Das Tagebuch: wie die Arbeit läuft und welche Orte der Insel in die Kapitel kommen. Zweimal pro Woche.", "author": {"@type": "Person", "name": "Igor Kartuzov", "alternateName": "Игорь Картузов", "url": "https://www.linkedin.com/in/igor-kartuzov/"}, "publisher": {"@type": "Organization", "name": "SeedWave", "url": "https://seedwave.pt/"}, "blogPost": [{"@type": "BlogPosting", "headline": "Die Bibliothek ist eröffnet", "datePublished": "2026-11-20", "url": "https://seedwave.pt/madeira/de/#otkryl-biblioteku", "inLanguage": "de", "author": {"@type": "Person", "name": "Igor Kartuzov", "url": "https://www.linkedin.com/in/igor-kartuzov/"}}, {"@type": "BlogPosting", "headline": "Madeira aus der Ferne", "datePublished": "2026-11-18", "url": "https://seedwave.pt/madeira/de/#madeiru-vidno-izdaleka", "inLanguage": "de", "author": {"@type": "Person", "name": "Igor Kartuzov", "url": "https://www.linkedin.com/in/igor-kartuzov/"}}, {"@type": "BlogPosting", "headline": "Für zwei Wochen weg, um ein Buch über Madeira zu schreiben", "datePublished": "2026-11-14", "url": "https://seedwave.pt/madeira/de/#uehal-pisat-knigu", "inLanguage": "de", "author": {"@type": "Person", "name": "Igor Kartuzov", "url": "https://www.linkedin.com/in/igor-kartuzov/"}}]}</script>
 </head>
@@ -60,6 +60,12 @@
       </div>
       <p class="note">Neue Einträge zweimal pro Woche.</p>
       <p class="note alt">Auch im Telegram-Kanal (auf Russisch) und im RSS-Feed. <a href="https://t.me/madeira_svoimi_glazami" target="_blank" rel="noopener" data-sub="tg">Telegram</a> · <a href="/madeira/de/feed.xml">RSS</a></p>
+      <form class="mailsub" id="mailSub" data-api="https://biblioteca-engine.seedwave.workers.dev/api/sub" data-lang="de" data-ok="Fertig ✓ Du stehst auf der Liste — ich schreibe einmal pro Woche." data-err="Bitte prüf die E-Mail — in der Adresse scheint ein Fehler zu sein.">
+        <input type="email" name="email" placeholder="E-Mail" aria-label="E-Mail" autocomplete="email" required>
+        <div class="hp" aria-hidden="true"><input name="website2" type="text" tabindex="-1" autocomplete="one-time-code" value=""></div>
+        <button class="btn" type="submit">Per E-Mail erhalten</button>
+      </form>
+      <p class="note" id="mailMsg">Einmal pro Woche — die Tagebucheinträge in einer E-Mail, auf Deutsch. Abmelden jederzeit möglich.</p>
     </section>
 
     <section class="posts">
@@ -134,7 +140,7 @@
   <footer class="sw">© <span id="year">2026</span> <a id="hubLink" href="https://seedwave.pt/hub/?lang=de">SeedWave</a> · <a href="/madeira/de/" aria-current="page">Madeira</a> · <a href="https://www.linkedin.com/in/igor-kartuzov/" target="_blank" rel="noopener">Igor Kartuzov</a></footer>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script defer src="/madeira/engine.js?v=202611201025"></script>
+<script defer src="/madeira/engine.js?v=202611202206"></script>
 <script defer src="https://seedwave.pt/nav/sw.js"></script>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8a509477310442638b80e4b22319b89b"}'></script><!-- End Cloudflare Web Analytics -->
 </body>

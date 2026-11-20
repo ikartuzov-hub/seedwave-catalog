@@ -158,6 +158,12 @@ for lang in LANGS:
       </div>
       <p class="note">{e("subNote")}</p>
       {alt}
+      <form class="mailsub" id="mailSub" data-api="https://biblioteca-engine.seedwave.workers.dev/api/sub" data-lang="{lang}" data-ok="{e("mailOk")}" data-err="{e("mailErr")}">
+        <input type="email" name="email" placeholder="{e("mailPh")}" aria-label="{e("mailPh")}" autocomplete="email" required>
+        <div class="hp" aria-hidden="true"><input name="website2" type="text" tabindex="-1" autocomplete="one-time-code" value=""></div>
+        <button class="btn" type="submit">{e("mailBtn")}</button>
+      </form>
+      <p class="note" id="mailMsg">{e("mailNote")}</p>
     </section>
 
     <section class="posts">

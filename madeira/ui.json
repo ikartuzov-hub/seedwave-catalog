@@ -104,7 +104,12 @@
     "dreamLead": "Как ты видишь будущее? Не про деньги — про технологии и жизнь. Опиши свою мечту: в мире книги каждая чистая мечта — начало волны. Совпадёт с мечтами других — волна вырастет.",
     "dreamBtn": "Описать свою мечту",
     "wavesLink": "Карта Волн",
-    "dictLink": "Словарь книги"
+    "dictLink": "Словарь книги",
+    "mailPh": "почта",
+    "mailBtn": "Получать на почту",
+    "mailNote": "Раз в неделю — записи дневника одним письмом. Отписаться можно в любой момент.",
+    "mailOk": "Готово ✓ Вы в списке — пишу раз в неделю.",
+    "mailErr": "Проверьте почту — похоже, в адресе ошибка."
   },
   "pt": {
     "title": "A Madeira pelos meus olhos — diário de um autor",
@@ -210,7 +215,12 @@
     "dreamLead": "Como vê o futuro? Não falamos de dinheiro — falamos de tecnologia e de vida. Descreva o seu sonho: no mundo do livro, cada sonho puro é o início de uma onda. Se coincidir com o de outros, a onda cresce.",
     "dreamBtn": "Descrever o meu sonho",
     "wavesLink": "Mapa das Ondas",
-    "dictLink": "Dicionário do livro"
+    "dictLink": "Dicionário do livro",
+    "mailPh": "e-mail",
+    "mailBtn": "Receber por e-mail",
+    "mailNote": "Uma vez por semana — as entradas do diário num só e-mail, em português. Pode cancelar a qualquer momento.",
+    "mailOk": "Feito ✓ Está na lista — escrevo uma vez por semana.",
+    "mailErr": "Verifique o e-mail — parece haver um erro no endereço."
   },
   "en": {
     "title": "Madeira through my eyes — an author's diary",
@@ -316,7 +326,12 @@
     "dreamLead": "How do you see the future? Not money — technology and life. Describe your dream: in the world of the book, every pure dream is the start of a wave. When it matches others, the wave grows.",
     "dreamBtn": "Describe my dream",
     "wavesLink": "Map of Waves",
-    "dictLink": "Book dictionary"
+    "dictLink": "Book dictionary",
+    "mailPh": "email",
+    "mailBtn": "Get it by email",
+    "mailNote": "Once a week — the diary entries in one email, in English. Unsubscribe at any time.",
+    "mailOk": "Done ✓ You are on the list — I write once a week.",
+    "mailErr": "Check the email — the address seems to have a typo."
   },
   "es": {
     "title": "Madeira con mis propios ojos — diario de un autor",
@@ -422,7 +437,12 @@
     "dreamLead": "¿Cómo ves el futuro? No hablamos de dinero, sino de tecnología y de vida. Describe tu sueño: en el mundo del libro, cada sueño puro es el comienzo de una ola. Si coincide con el de otros, la ola crece.",
     "dreamBtn": "Describir mi sueño",
     "wavesLink": "Mapa de Olas",
-    "dictLink": "Diccionario del libro"
+    "dictLink": "Diccionario del libro",
+    "mailPh": "correo",
+    "mailBtn": "Recibir por correo",
+    "mailNote": "Una vez por semana — las entradas del diario en un solo correo, en español. Puedes darte de baja cuando quieras.",
+    "mailOk": "Hecho ✓ Estás en la lista — escribo una vez por semana.",
+    "mailErr": "Revisa el correo — parece que la dirección tiene un error."
   },
   "de": {
     "title": "Madeira mit eigenen Augen — Tagebuch eines Autors",
@@ -528,6 +548,11 @@
     "dreamLead": "Wie siehst du die Zukunft? Nicht Geld — Technik und Leben. Beschreibe deinen Traum: In der Welt des Buches ist jeder reine Traum der Anfang einer Welle. Trifft er die Träume anderer, wächst die Welle.",
     "dreamBtn": "Meinen Traum beschreiben",
     "wavesLink": "Karte der Wellen",
-    "dictLink": "Wörterbuch des Buches"
+    "dictLink": "Wörterbuch des Buches",
+    "mailPh": "E-Mail",
+    "mailBtn": "Per E-Mail erhalten",
+    "mailNote": "Einmal pro Woche — die Tagebucheinträge in einer E-Mail, auf Deutsch. Abmelden jederzeit möglich.",
+    "mailOk": "Fertig ✓ Du stehst auf der Liste — ich schreibe einmal pro Woche.",
+    "mailErr": "Bitte prüf die E-Mail — in der Adresse scheint ein Fehler zu sein."
   }
 }

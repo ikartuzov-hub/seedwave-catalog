@@ -21,6 +21,19 @@
 
   // «Переслать другу»: navigator.share → копирование ссылки
   var toast = function (t) { var el = $('toast'); el.textContent = t; el.classList.add('on'); setTimeout(function () { el.classList.remove('on'); }, 2200); };
+  // подписка почтой: раз в неделю записи дневника на языке страницы (воркер biblioteca-engine, таблица subs)
+  var ms = $('mailSub');
+  if (ms) ms.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var msg = $('mailMsg'), btn = ms.querySelector('button'), email = ms.elements.email.value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { msg.className = 'note err'; msg.textContent = ms.dataset.err; return; }
+    btn.disabled = true;
+    fetch(ms.dataset.api, { method: 'POST', body: new URLSearchParams({ email: email, lang: ms.dataset.lang, src: 'madeira', website2: ms.elements.website2.value }) })
+      .then(function (r) { return r.json(); })
+      .then(function (j) { msg.className = j.ok ? 'note' : 'note err'; msg.textContent = j.ok ? ms.dataset.ok : ms.dataset.err; if (j.ok) { ms.reset(); track('madeira_mail_sub', { lang: ms.dataset.lang }); } })
+      .catch(function () { msg.className = 'note err'; msg.textContent = ms.dataset.err; })
+      .then(function () { btn.disabled = false; });
+  });
   var sb = $('shareBtn');
   if (sb) sb.addEventListener('click', function () {
     var url = sb.dataset.url, text = sb.dataset.text;

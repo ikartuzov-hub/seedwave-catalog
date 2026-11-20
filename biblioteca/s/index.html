@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Biblioteca</title>
+<meta property="og:title" content="Biblioteca — uma estante, um link">
+<meta property="og:image" content="https://seedwave.pt/biblioteca/og-image.png">
+<link rel="icon" href="/biblioteca/biblioteca-icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/biblioteca/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,700;1,500&family=Manrope:wght@400;600;800&display=swap&subset=cyrillic" rel="stylesheet">
+<style>
+:root{--bg:#fbf6f0;--surface:#fff;--ink:#2b1a14;--ink-soft:#7a5f54;--line:rgba(158,59,50,.18);--accent:#9e3b32;--accent-ink:#fff;--head:"Lora",Georgia,serif;--body:"Manrope",system-ui,sans-serif;--r:18px}
+@media (prefers-color-scheme:dark){:root{--bg:#1c1210;--surface:#2a1b17;--ink:#f6ece4;--ink-soft:#c4a99c;--line:rgba(246,236,228,.13);--accent:#e0806f;--accent-ink:#1c1210}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:560px;margin:0 auto;padding:14px 18px 40px}
+.top{display:flex;align-items:center;gap:10px;margin-bottom:22px}
+.top a{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font:800 17px/1 var(--body)}
+.top img{width:34px;height:34px;border-radius:9px}
+h1{font:700 30px/1.15 var(--head);margin:0 0 6px}
+.muted{color:var(--ink-soft);margin:0 0 16px}
+.flag{background:var(--accent);color:var(--accent-ink);border-radius:12px;padding:10px 14px;font:600 14px/1.45 var(--body);margin:0 0 18px}
+.stack{margin:18px 0 6px}
+.bk{display:block;width:100%;text-align:left;border:0;border-radius:6px;padding:13px 16px;margin:0 auto 4px;color:#fff;box-shadow:0 2px 0 rgba(0,0,0,.25),0 7px 12px rgba(0,0,0,.2);font:inherit;cursor:pointer}
+.bk b{display:block;font:700 17px/1.25 var(--head)}
+.bk small{display:block;margin-top:3px;font:700 11px/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;opacity:.85}
+.bk p{margin:8px 0 0;font:500 15px/1.5 var(--body);display:none}
+.bk.open p{display:block}
+.board{height:10px;border-radius:3px;background:#6b4a36;box-shadow:0 6px 10px rgba(0,0,0,.25);margin:0 -6px 24px}
+.btn{display:inline-block;border:0;border-radius:14px;background:var(--accent);color:var(--accent-ink);padding:13px 20px;font:800 16px/1.2 var(--body);text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
+.btn[disabled]{opacity:.5}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin:18px 0}
+.box h3{margin:0 0 10px;font:700 19px/1.25 var(--head)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.chip{border:1.5px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:7px 14px;font:600 14px/1 var(--body);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+input{width:100%;border:1px solid var(--line);border-radius:12px;padding:11px 13px;font:inherit;background:var(--bg);color:var(--ink);margin-bottom:10px}
+.note{font-size:14px;color:var(--ink-soft);margin:10px 0 0}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:14px 0}
+.link{background:none;border:0;padding:0;color:var(--ink-soft);font:600 14px/1.4 var(--body);text-decoration:underline;cursor:pointer}
+footer{margin-top:36px;padding-top:16px;border-top:1px solid var(--line);font-size:14px;color:var(--ink-soft);text-align:center}
+footer a{color:inherit}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top"><a id="home" href="/biblioteca/"><img src="/biblioteca/icon-192.png" alt="Biblioteca"><span>Biblioteca</span></a></header>
+  <main id="main"><p class="muted" id="load">…</p></main>
+  <footer>© <span id="yr"></span> <a id="fHub" href="https://seedwave.pt/hub/">SeedWave</a> · <a id="fMad" href="https://seedwave.pt/madeira/?utm_source=biblioteca&amp;utm_medium=footer">Madeira</a> · <a href="https://www.linkedin.com/in/igor-kartuzov/" target="_blank" rel="noopener">Igor Kartuzov</a></footer>
+</div>
+<script>
+const API="https://biblioteca-engine.seedwave.workers.dev";
+const LANGS=["pt","en","ru","es","de"];
+const S={
+ ru:{title:n=>"Полка "+n,sub:"Книги, фильмы и видео, которые оставили след.",pend:"Полка на проверке: пока её видишь только ты — по этой ссылке. Сохрани ссылку, она же ключ.",hid:"Полка скрыта. Видишь её только ты.",
+  types:{book:"книга",film:"фильм",yt:"YouTube",other:"другое"},cta:"Завести такую же полку",igor:"Полка Игоря →",none:"Такой полки пока нет",noneSub:"Возможно, она ещё на проверке — или адрес набран с ошибкой.",
+  addH:"Поставить ещё",t1:"Название",t2:"Одна фраза: что ты из этого взял",add:"Поставить на полку",full:"На полке шесть вещей — это предел. Самое важное уже здесь.",
+  copy:"Скопировать ссылку на полку",copied:"Скопировано ✓",del:"Удалить полку",del2:"Нажми ещё раз — полка удалится насовсем",gone:"Полка удалена.",errLink:"Ссылки в названии и в мысли не принимаются.",err:"Не получилось. Попробуй ещё раз чуть позже.",need:"Впиши название.",share:n=>"Моя полка: что читаю и смотрю"},
+ pt:{title:n=>"Estante de "+n,sub:"Livros, filmes e vídeos que deixaram marca.",pend:"A estante está em verificação: por agora só você a vê — por esta ligação. Guarde-a, é também a chave.",hid:"A estante está oculta. Só você a vê.",
+  types:{book:"livro",film:"filme",yt:"YouTube",other:"outro"},cta:"Criar uma estante assim",igor:"A estante do Igor →",none:"Esta estante ainda não existe",noneSub:"Talvez ainda esteja em verificação — ou o endereço tem um erro.",
+  addH:"Pôr mais uma obra",t1:"Título",t2:"Uma frase: o que tirou daí",add:"Pôr na estante",full:"A estante tem seis obras — é o limite. O mais importante já cá está.",
+  copy:"Copiar a ligação da estante",copied:"Copiado ✓",del:"Apagar a estante",del2:"Toque outra vez — a estante é apagada de vez",gone:"Estante apagada.",errLink:"Não aceitamos ligações no título nem na ideia.",err:"Não foi possível. Tente outra vez daqui a pouco.",need:"Escreva o título.",share:n=>"A minha estante: o que leio e vejo"},
+ en:{title:n=>n+"’s shelf",sub:"Books, films and videos that left a mark.",pend:"Your shelf is being reviewed: for now only you can see it — through this link. Keep the link, it is also your key.",hid:"The shelf is hidden. Only you can see it.",
+  types:{book:"book",film:"film",yt:"YouTube",other:"other"},cta:"Start a shelf like this",igor:"Igor’s shelf →",none:"This shelf does not exist yet",noneSub:"It may still be under review — or the address has a typo.",
+  addH:"Add one more",t1:"Title",t2:"One sentence: what you took from it",add:"Put it on the shelf",full:"The shelf holds six things — that is the limit. The most important ones are already here.",
+  copy:"Copy the shelf link",copied:"Copied ✓",del:"Delete the shelf",del2:"Tap again — the shelf will be deleted for good",gone:"Shelf deleted.",errLink:"Links are not accepted in the title or the thought.",err:"That did not work. Please try again in a moment.",need:"Enter a title.",share:n=>"My shelf: what I read and watch"},
+ es:{title:n=>"Estantería de "+n,sub:"Libros, películas y vídeos que dejaron huella.",pend:"La estantería está en revisión: por ahora solo la ves tú — con este enlace. Guárdalo, también es la llave.",hid:"La estantería está oculta. Solo la ves tú.",
+  types:{book:"libro",film:"película",yt:"YouTube",other:"otro"},cta:"Crear una estantería así",igor:"La estantería de Igor →",none:"Esta estantería aún no existe",noneSub:"Puede que siga en revisión — o que la dirección tenga un error.",
+  addH:"Poner una más",t1:"Título",t2:"Una frase: qué sacaste de ello",add:"Ponerlo en la estantería",full:"La estantería tiene seis obras — es el límite. Lo más importante ya está aquí.",
+  copy:"Copiar el enlace de la estantería",copied:"Copiado ✓",del:"Borrar la estantería",del2:"Toca otra vez — la estantería se borra del todo",gone:"Estantería borrada.",errLink:"No se aceptan enlaces en el título ni en la idea.",err:"No se pudo. Inténtalo de nuevo en un momento.",need:"Escribe el título.",share:n=>"Mi estantería: lo que leo y veo"},
+ de:{title:n=>"Regal von "+n,sub:"Bücher, Filme und Videos, die Spuren hinterlassen haben.",pend:"Dein Regal wird geprüft: Im Moment siehst nur du es — über diesen Link. Heb ihn auf, er ist auch dein Schlüssel.",hid:"Das Regal ist verborgen. Nur du siehst es.",
+  types:{book:"Buch",film:"Film",yt:"YouTube",other:"anderes"},cta:"So ein Regal anlegen",igor:"Igors Regal →",none:"Dieses Regal gibt es noch nicht",noneSub:"Vielleicht wird es noch geprüft — oder die Adresse enthält einen Tippfehler.",
+  addH:"Noch eines dazustellen",t1:"Titel",t2:"Ein Satz: was du daraus mitnimmst",add:"Ins Regal stellen",full:"Im Regal stehen sechs Werke — das ist die Grenze. Das Wichtigste ist schon hier.",
+  copy:"Link zum Regal kopieren",copied:"Kopiert ✓",del:"Regal löschen",del2:"Noch einmal tippen — das Regal wird endgültig gelöscht",gone:"Regal gelöscht.",errLink:"Links im Titel oder im Gedanken werden nicht angenommen.",err:"Das hat nicht geklappt. Bitte versuch es gleich noch einmal.",need:"Trag einen Titel ein.",share:n=>"Mein Regal: was ich lese und schaue"}
+};
+const P=new URLSearchParams(location.search),NAME=(P.get("n")||"").toLowerCase(),KEY=P.get("k")||"";
+let lang=P.get("lang");if(!LANGS.includes(lang)){const nl=(navigator.language||"pt").slice(0,2).toLowerCase();lang=LANGS.includes(nl)?nl:"pt"}
+let T=S[lang],shelf=null,ftype="book",delArm=false;
+const $=s=>document.querySelector(s),PATHL=l=>l==="pt"?"/biblioteca/":"/biblioteca/"+l+"/";
+const trk=(n,p)=>{try{window.swTrack&&window.swTrack(n,p||{})}catch(e){}};
+const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!==undefined)e.textContent=x;return e};
+const COL=["#7d2f28","#2f5d62","#5b4a7a","#8a6d3b","#3d5a40","#6b3f55"];
+const pubUrl=()=>"https://seedwave.pt/biblioteca/s/?n="+encodeURIComponent(NAME);
+function chrome(){document.documentElement.lang=lang;$("#home").href=PATHL(lang);$("#yr").textContent=new Date().getFullYear()}
+function none(msg){const m=$("#main");m.textContent="";m.append(el("h1","",msg||T.none),el("p","muted",msg?"":T.noneSub));
+  const a=el("a","btn",T.cta);a.href=PATHL(lang)+"#anketa";m.append(a)}
+function render(){
+  const m=$("#main");m.textContent="";document.title=T.title(shelf.name)+" · Biblioteca";
+  m.append(el("h1","",T.title(shelf.name)),el("p","muted",T.sub));
+  if(shelf.owner&&shelf.status!=="open")m.append(el("p","flag",shelf.status==="pending"?T.pend:T.hid));
+  const st=el("div","stack");
+  shelf.items.forEach((it,i)=>{const b=el("button","bk");b.style.background=COL[i%COL.length];b.style.width=(100-((i*7)%13))+"%";
+    b.append(el("b","",it.title),el("small","",T.types[it.type]||T.types.other));if(it.thought){b.append(el("p","",it.thought));if(i===0)b.classList.add("open")}
+    b.addEventListener("click",()=>b.classList.toggle("open"));st.append(b)});
+  m.append(st,el("div","board"));
+  if(shelf.owner){
+    const box=el("div","box");box.append(el("h3","",T.addH));
+    if(shelf.items.length>=6)box.append(el("p","note",T.full));
+    else{const ch=el("div","chips");Object.keys(T.types).forEach(k=>{const c=el("button","chip",T.types[k]);c.setAttribute("aria-pressed",ftype===k);c.addEventListener("click",()=>{ftype=k;ch.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===c))});ch.append(c)});
+      const t1=el("input"),t2=el("input"),msg=el("p","note",""),bt=el("button","btn",T.add);t1.placeholder=T.t1;t2.placeholder=T.t2;t1.maxLength=120;t2.maxLength=280;t1.autocomplete=t2.autocomplete="off";
+      bt.addEventListener("click",()=>{const title=t1.value.trim();if(!title){msg.textContent=T.need;t1.focus();return}bt.disabled=true;
+        fetch(API+"/api/item",{method:"POST",body:new URLSearchParams({n:NAME,k:KEY,type:ftype,title:title,thought:t2.value.trim()})}).then(r=>r.json())
+          .then(j=>{if(j.ok){shelf=j.shelf;trk("biblioteca_item_add",{type:ftype});render()}else{bt.disabled=false;msg.textContent=j.err==="link"?T.errLink:j.err==="full"?T.full:T.err}})
+          .catch(()=>{bt.disabled=false;msg.textContent=T.err})});
+      box.append(ch,t1,t2,bt,msg)}
+    m.append(box);
+    const row=el("div","row"),cp=el("button","btn ghost",T.copy),dl=el("button","link",T.del);
+    cp.addEventListener("click",()=>{try{navigator.clipboard.writeText(pubUrl()).catch(()=>{})}catch(_){}cp.textContent=T.copied;trk("biblioteca_shelf_copy",{})});
+    dl.addEventListener("click",()=>{if(!delArm){delArm=true;dl.textContent=T.del2;return}
+      fetch(API+"/api/delete",{method:"POST",body:new URLSearchParams({n:NAME,k:KEY})}).then(r=>r.json()).then(j=>{if(j.ok){try{localStorage.removeItem("biblioteca.mine")}catch(_){}none(T.gone)}}).catch(()=>{})});
+    if(shelf.status==="open")row.append(cp);row.append(dl);m.append(row);
+  }else{
+    const row=el("div","row"),a=el("a","btn",T.cta),b=el("a","link",T.igor);a.href=PATHL(lang)+"?utm_source=biblioteca&utm_medium=shelf#anketa";b.href=PATHL(lang);
+    a.addEventListener("click",()=>trk("biblioteca_shelf_cta",{}));row.append(a,b);m.append(row);
+  }
+}
+chrome();
+if(!/^[a-z0-9-]{3,20}$/.test(NAME))none();
+else fetch(API+"/api/shelf?n="+encodeURIComponent(NAME)+(KEY?"&k="+encodeURIComponent(KEY):"")).then(r=>r.json()).then(j=>{
+  if(!j.ok){none();return}shelf=j.shelf;
+  if(!P.get("lang")&&shelf.owner&&LANGS.includes(shelf.lang)){lang=shelf.lang;T=S[lang];chrome()}
+  trk("biblioteca_shelf_open",{owner:shelf.owner});render()}).catch(()=>none(T.err));
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8a509477310442638b80e4b22319b89b"}'></script>
+<script defer src="https://seedwave.pt/nav/sw.js"></script>
+</body>
+</html>
