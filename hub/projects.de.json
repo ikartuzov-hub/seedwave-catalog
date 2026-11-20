@@ -747,6 +747,36 @@
           "caption": "20 Sekunden, ohne Worte verständlich. Animation mit KI erstellt."
         }
       }
+    },
+    {
+      "id": "biblioteca",
+      "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Biblioteca\"><title>Biblioteca</title><rect width=\"100\" height=\"100\" rx=\"22\" fill=\"#FBF3EA\"/><g transform=\"translate(-4.59 -4.20) scale(1.0600)\"><path d=\"M34 24 V66 M34 24 H54 Q66 24 66 34.5 Q66 45 54 45 H34 M34 45 H56 Q69 45 69 55.5 Q69 66 56 66 H34\" fill=\"none\" stroke=\"#9E3B32\" stroke-width=\"8\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></g><path d=\"M20 80 Q30 74 40 80 Q50 86 60 80 Q70 74 80 80\" fill=\"none\" stroke=\"#9E3B32\" stroke-width=\"7\" stroke-linecap=\"round\"/></svg>",
+      "category": "Bildung / Bücher",
+      "name": "Biblioteca — ein Regal mit Büchern und Filmen unter einem Link",
+      "hook": "Jemand fragt, was er lesen oder schauen soll, und du suchst zum zehnten Mal die Titel zusammen. Hier ist ein Regal ein Link: Bücher, Filme und YouTube, und aus jedem eine Idee, die in die Tat umgesetzt wurde.",
+      "description": "Das Regal von Igor Kartuzov als lebendiges Beispiel: auf dem ersten Bildschirm ein Stapel der fünf wichtigsten Bücher und Filme, jeweils mit dem Grund, warum sie im Regal stehen, dem Hauptgedanken und dem, was daraus umgesetzt wurde. Ein Katalog nach Rubriken (Zukunfts-Science-Fiction, Kapital, das eigene Handwerk, wer die Zukunft baut) und Suche nach Titel. Jeder stellt sein eigenes Regal in einer Minute zusammen, per Knopfdruck. Fremde Rezensionen erscheinen in deiner Sprache, gekennzeichnet als „KI-Übersetzung“. Fünf Sprachen.",
+      "sectors": [
+        "Bücher und Filme",
+        "Persönliche Entwicklung",
+        "Community"
+      ],
+      "stage": "first",
+      "investment": "",
+      "lookingFor": "Leser und Zuschauer mit Lieblingsbüchern · Neue Autorinnen und Autoren · Buchhandlungen und Bibliotheken auf Madeira",
+      "demoLink": "https://seedwave.pt/biblioteca/de/",
+      "page": {
+        "how": [
+          "Entstanden aus einer einfachen Situation: Jemand bittet um einen Buchtipp, und der Titel fällt einem nicht ein.",
+          "Igor stellt das Regal per Stimme zusammen: Er erzählt, was er aus dem Buch mitgenommen hat, und die KI ordnet es in Ebenen — ohne Nacherzählung und Bewertung.",
+          "Igor liest und bestätigt jede Rezension selbst: Nur bestätigte kommen ins Regal.",
+          "Fünf Sprachen vom ersten Tag an: Originale auf Russisch, der Rest ist gekennzeichnete KI-Übersetzung."
+        ],
+        "proofs": [
+          "Lebendiger Stapel: Tipp auf einen Buchrücken — das Buch gleitet heraus und zeigt seinen Hauptgedanken.",
+          "Dein eigenes Regal in einer Minute: ein Titel, ein Satz und die Adresse seedwave.pt/biblioteca/name.",
+          "Katalog nach Rubriken und Suche nach Titel und Autor."
+        ]
+      }
     }
   ]
 }

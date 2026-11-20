@@ -1,0 +1,30 @@
+{
+  "id": "/biblioteca/de/",
+  "name": "Biblioteca",
+  "short_name": "Biblioteca",
+  "description": "Igors Regal: Bücher, Filme und YouTube-Kanäle über die Zukunft, Kapital und das eigene Handwerk — und aus jedem eine Idee, die in die Tat umgesetzt wurde. Stell dein eigenes Regal zusammen und teile es mit einem Link.",
+  "lang": "de",
+  "start_url": "/biblioteca/de/",
+  "scope": "/biblioteca/",
+  "display": "standalone",
+  "background_color": "#fbf6f0",
+  "theme_color": "#fbf6f0",
+  "icons": [
+    {
+      "src": "/biblioteca/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/biblioteca/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/biblioteca/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

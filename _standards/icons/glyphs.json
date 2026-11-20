@@ -88,5 +88,15 @@
   "dark": "#A9A1FF",
   "now": "tonight-icon.svg",
   "letter": "<path d=\"M30 68 L30 24 L62 66 L62 22\" fill=\"none\" stroke=\"C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>"
+ },
+ {
+  "id": "biblioteca",
+  "name": "Biblioteca",
+  "unit": 100,
+  "light": "#9E3B32",
+  "light_bg": "#FBF3EA",
+  "dark": "#E0806F",
+  "now": "biblioteca/biblioteca-icon.svg",
+  "letter": "<path d=\"M34 24 V66 M34 24 H54 Q66 24 66 34.5 Q66 45 54 45 H34 M34 45 H56 Q69 45 69 55.5 Q69 66 56 66 H34\" fill=\"none\" stroke=\"C\" stroke-width=\"8\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>"
  }
 ]

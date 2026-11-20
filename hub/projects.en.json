@@ -747,6 +747,36 @@
           "caption": "20 seconds, clear without words. Animation created with AI."
         }
       }
+    },
+    {
+      "id": "biblioteca",
+      "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Biblioteca\"><title>Biblioteca</title><rect width=\"100\" height=\"100\" rx=\"22\" fill=\"#FBF3EA\"/><g transform=\"translate(-4.59 -4.20) scale(1.0600)\"><path d=\"M34 24 V66 M34 24 H54 Q66 24 66 34.5 Q66 45 54 45 H34 M34 45 H56 Q69 45 69 55.5 Q69 66 56 66 H34\" fill=\"none\" stroke=\"#9E3B32\" stroke-width=\"8\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></g><path d=\"M20 80 Q30 74 40 80 Q50 86 60 80 Q70 74 80 80\" fill=\"none\" stroke=\"#9E3B32\" stroke-width=\"7\" stroke-linecap=\"round\"/></svg>",
+      "category": "Education / Books",
+      "name": "Biblioteca — a shelf of books and films in one link",
+      "hook": "Someone asks what to read or watch, and you hunt for the titles for the tenth time. Here one shelf is one link: books, films and YouTube, and from each one, an idea put into practice.",
+      "description": "Igor Kartuzov’s shelf as a living example: on the first screen, a stack of the five main books and films, each with why it is on the shelf, the main idea and what was put into practice. A catalogue by section (fiction about the future, capital, your own craft, who is building the future) and search by title. Anyone can build their own shelf in a minute, with buttons. Other people’s reviews appear in your language, marked “AI translation”. Five languages.",
+      "sectors": [
+        "Books and films",
+        "Personal growth",
+        "Community"
+      ],
+      "stage": "first",
+      "investment": "",
+      "lookingFor": "Readers and viewers with favourite books · First-time authors · Bookshops and libraries in Madeira",
+      "demoLink": "https://seedwave.pt/biblioteca/en/",
+      "page": {
+        "how": [
+          "Born of a simple situation: someone asks you to recommend a book and the title won’t come.",
+          "Igor builds the shelf by voice: he says what he took from the book, and AI sorts it into layers — no retelling, no ratings.",
+          "Igor proofreads and approves every review himself: only approved ones go on the shelf.",
+          "Five languages from day one: originals in Russian, the rest is AI translation, clearly marked."
+        ],
+        "proofs": [
+          "Living stack: tap a spine — the book slides out and shows its main idea.",
+          "Your own shelf in a minute: a title, one sentence and the address seedwave.pt/biblioteca/name.",
+          "Catalogue by section and search by title and author."
+        ]
+      }
     }
   ]
 }
