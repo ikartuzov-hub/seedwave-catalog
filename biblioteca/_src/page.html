@@ -643,7 +643,7 @@ function renderCat(keepFocus){
   const head=catSec&&!catQ?`<div class="genh"><b>${T("secAll")} ${T("sec")[catSec]}</b><button class="genx" data-secx aria-label="×">×</button></div>`:"";
   const list=it.length?it.map(b=>rowHTML(b,catOpen,"c")).join(""):`<p class="muted">${T("catNone")}</p>`;
   if(keepFocus){$("#catList").innerHTML=head+list;return}
-  $("#cat").innerHTML=`<a class="back" href="#" data-home>${T("catBack")}</a><h2>${T("catH")}</h2><p class="muted" style="margin-top:0">${T("catLead")}</p>
+  $("#cat").innerHTML=`<a class="back" href="#" data-home>${T("catBack")}</a><h2>${T("catH")}</h2><p class="muted" style="margin-top:0">${T("catLead")}</p><p style="margin:0 0 12px"><a href="/biblioteca/k/${lang==="pt"?"":lang+"/"}?utm_source=biblioteca&utm_medium=cat" style="font-weight:800">${({pt:"Catálogo completo: estantes de quem constrói o futuro →",en:"Full catalogue: shelves of people building the future →",ru:"Весь каталог: полки тех, кто строит будущее →",es:"Catálogo completo: estanterías de quienes construyen el futuro →",de:"Ganzer Katalog: Regale von Menschen, die die Zukunft bauen →"})[lang]}</a></p>
     <input class="csearch" id="catQ" placeholder="${T("catSearch")}" value="${esc(catQ)}">
     <div class="ctabs">${CATS.filter(c=>cnt(c[1])).map(c=>`<button class="ctab" data-ctab="${c[0]}" aria-selected="${!catSec&&catTab===c[0]}">${T(c[2])}<small>${cnt(c[1])}</small></button>`).join("")}</div><div class="secrow">${[...new Set(SHELF.map(secOf))].filter(k=>T("sec")[k]).map(k=>`<button class="chip" data-sec="${k}" aria-pressed="${catSec===k}">${T("sec")[k]}</button>`).join("")}</div>
     <div id="catList">${head+list}</div>`;

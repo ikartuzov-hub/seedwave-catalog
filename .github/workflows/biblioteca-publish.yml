@@ -22,9 +22,11 @@ jobs:
           python3 -m pip install --quiet pillow
       - name: Собрать страницы полок
         run: python3 biblioteca/_src/publish.py
+      - name: Каталог и страницы книг (с открытыми полками участников)
+        run: python3 biblioteca/_src/sources.py --api https://biblioteca-engine.seedwave.workers.dev/api/open
       - name: Коммит, если есть изменения
         run: |
-          git add -A biblioteca
+          git add -A biblioteca sitemap.xml
           if git diff --cached --quiet; then echo "без изменений"; exit 0; fi
           git config user.name "seedwave-publisher"
           git config user.email "publisher@seedwave.pt"

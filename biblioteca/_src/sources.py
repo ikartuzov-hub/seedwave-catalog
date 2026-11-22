@@ -260,6 +260,11 @@ def main():
             d = OUT / s["id"] / sub
             d.mkdir(parents=True, exist_ok=True)
             (d / "index.html").write_text(source_page(s, l, a.preview), encoding="utf-8")
+    sm = BIB.parent / "sitemap.xml"
+    lines = [x for x in sm.read_text(encoding="utf-8").splitlines() if "/biblioteca/k/" not in x]
+    add = [f"  <url><loc>{url(p, l)}</loc></url>" for p in [""] + [s["id"] + "/" for s in src.values()] for l in LANGS]
+    i = max(n for n, x in enumerate(lines) if "/biblioteca/" in x) + 1
+    sm.write_text("\n".join(lines[:i] + add + lines[i:]) + "\n", encoding="utf-8")
     many = sum(1 for s in src.values() if len(s["on"]) > 1)
     print(f"источников: {len(src)} · на нескольких полках: {many} · страниц: {len(src) * 5 + 5}")
 
