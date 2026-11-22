@@ -452,6 +452,36 @@
       }
     },
     {
+      "id": "guide-nuremberg",
+      "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Nürnberg\"><title>Nürnberg</title> <rect width=\"100\" height=\"100\" rx=\"22\" fill=\"#F5ECE6\"/> <g transform=\"translate(6.72 5.08) scale(0.8833)\"><path d=\"M20 70 L20 17 L46 70 L46 17\" fill=\"none\" stroke=\"#A2412C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M57 40 L57 59 Q57 70 67.5 70 Q78 70 78 59 L78 40 L78 70\" fill=\"none\" stroke=\"#A2412C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g> <path d=\"M20 80 Q30 74 40 80 Q50 86 60 80 Q70 74 80 80\" fill=\"none\" stroke=\"#A2412C\" stroke-width=\"7\" stroke-linecap=\"round\"/> </svg>",
+      "category": "Viagens / Guia",
+      "name": "Guia «Nuremberga: verão e Natal»",
+      "hook": "Duas viagens à mesma cidade — o rio de agosto com as pontes cobertas e as luzes de novembro com vinho quente. 10 lugares e três percursos a pé prontos.",
+      "description": "Guia pessoal de Nuremberga no motor «O Meu Guia»: lugares da cidade velha testados, percursos «Noite de Natal», «Dia de verão junto ao Pegnitz» e «Salsichas — para a próxima». Cada percurso abre no Google Maps com um toque. 5 línguas, instala-se no telemóvel, gratuito.",
+      "sectors": [
+        "Travel",
+        "Consumer"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Quem vai a Nuremberga · Opiniões",
+      "demoLink": "",
+      "moreLink": "https://g.seedwave.pt/nuremberg/",
+      "page": {
+        "how": [
+          "Abres o guia — a cidade velha no mapa: a Torre Branca, a Praça Principal, as pontes do Pegnitz, a Casa de Dürer.",
+          "Cada lugar tem uma nota pessoal, horário e a avaliação Google.",
+          "Três percursos para o momento: noite de Advento, dia de verão junto ao rio, salsichas e salas de vinho.",
+          "Cada percurso tem três botões: Google Maps (a pé), mostrar no mapa, partilhar."
+        ],
+        "proofs": [
+          "Percorrido a pé: 3 de agosto de 2024 e 21 de novembro de 2026.",
+          "10 lugares, 3 percursos, 5 línguas.",
+          "O mesmo motor dos guias da Madeira e de Paris: um guia novo é um novo conjunto de pontos."
+        ]
+      }
+    },
+    {
       "id": "tonight",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#6C5CE7\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Tonight\"><title>Tonight</title><path d=\"M30 68 L30 24 L62 66 L62 22\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></svg>",
       "category": "Tecnologia / Eventos",

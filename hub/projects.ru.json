@@ -461,6 +461,36 @@
       }
     },
     {
+      "id": "guide-nuremberg",
+      "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Nürnberg\"><title>Nürnberg</title> <rect width=\"100\" height=\"100\" rx=\"22\" fill=\"#F5ECE6\"/> <g transform=\"translate(6.72 5.08) scale(0.8833)\"><path d=\"M20 70 L20 17 L46 70 L46 17\" fill=\"none\" stroke=\"#A2412C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M57 40 L57 59 Q57 70 67.5 70 Q78 70 78 59 L78 40 L78 70\" fill=\"none\" stroke=\"#A2412C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g> <path d=\"M20 80 Q30 74 40 80 Q50 86 60 80 Q70 74 80 80\" fill=\"none\" stroke=\"#A2412C\" stroke-width=\"7\" stroke-linecap=\"round\"/> </svg>",
+      "category": "Путешествия / Гид",
+      "name": "Гид «Нюрнберг: лето и Рождество»",
+      "hook": "Две поездки в один город — августовская река с крытыми мостами и ноябрьские огни с глинтвейном. 10 мест и три готовых маршрута пешком.",
+      "description": "Личный гид по Нюрнбергу на движке «Мой Гид»: проверенные места старого города, маршруты «Рождественский вечер», «Летний день у Пегница» и «Колбаски — на следующий раз». Каждый маршрут открывается в Google Картах одной кнопкой. 5 языков, ставится на экран телефона, бесплатно.",
+      "sectors": [
+        "Travel",
+        "Consumer"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Гости, едущие в Нюрнберг · Обратная связь",
+      "demoLink": "",
+      "moreLink": "https://g.seedwave.pt/nuremberg/",
+      "page": {
+        "how": [
+          "Открываешь гид — старый город на карте: Белая башня, Главная площадь, Пегниц с мостами, Дом Дюрера.",
+          "У каждого места — личная заметка, часы работы и рейтинг Google.",
+          "Три маршрута под ситуацию: вечер в сезон Адвента, летний день у реки, колбаски и винные комнаты.",
+          "Маршрут — три кнопки: Google Карты (пешком), показать на карте, поделиться."
+        ],
+        "proofs": [
+          "Проверено ногами: 3 августа 2024 и 21 ноября 2026.",
+          "10 мест, 3 маршрута, 5 языков.",
+          "Тот же движок, что у гидов по Мадейре и Парижу: новый гид — новый набор точек."
+        ]
+      }
+    },
+    {
       "id": "tonight",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#6C5CE7\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Tonight\"><title>Tonight</title><path d=\"M30 68 L30 24 L62 66 L62 22\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></svg>",
       "category": "Технологии / События",
