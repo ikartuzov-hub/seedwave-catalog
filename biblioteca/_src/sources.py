@@ -20,39 +20,39 @@ SKIP = {"xmas"}
 STACK, USERS = [], []  # снято с полки решением Игоря 19.11
 
 L = {
- "pt": {"author": "Estante do autor", "authorOpen": "Abrir a estante do Igor →", "newSh": "Estantes novas", "ph": "Procurar por título ou autor", "none": "Nada encontrado — ponha-o na sua estante", "cat": "Biblioteca de todos", "catSub": "Livros, filmes e canais — e em que estantes estão.",
+ "pt": {"nowH": "🌊 Nas estantes agora", "libH": "📚 Nas bibliotecas", "wave": "onda", "waveH": "🌊 Na onda agora", "baseH": "📚 A base — está em muitas bibliotecas", "nowS": "agora", "libS": "bibl.", "author": "Estante do autor", "authorOpen": "Abrir a estante do Igor →", "newSh": "Estantes novas", "ph": "Procurar por título ou autor", "none": "Nada encontrado — ponha-o na sua estante", "cat": "Biblioteca de todos", "catSub": "Livros, filmes e canais — e em que estantes estão.",
         "on": "Está nas estantes", "many": "Está em muitas estantes", "builders": "Estantes de quem constrói o futuro",
         "buildersSub": "Montadas a partir de entrevistas e textos públicos — cada livro com a fonte onde a pessoa o nomeou.",
         "src": "fonte", "igor": "Estante do Igor", "plan": "nos planos", "add": "Pôr na minha estante",
-        "back": "← Biblioteca de todos", "shelves": "estantes", "shelf1": "estante", "byInt": "estante segundo entrevistas públicas",
+        "back": "← Biblioteca de todos", "shelves": "estantes", "shelf1": "estante", "byInt": "biblioteca segundo entrevistas públicas",
         "yours": "E na sua?", "yoursSub": "Crie a sua estante e veja com quem coincide.", "home": "Biblioteca",
         "type": {"book": "livro", "film": "filme", "series": "série", "yt": "YouTube", "other": "outro"}},
- "en": {"author": "The author’s shelf", "authorOpen": "Open Igor’s shelf →", "newSh": "New shelves", "ph": "Search by title or author", "none": "Nothing found — put it on your shelf", "cat": "Everyone’s Library", "catSub": "Books, films and channels — and whose shelves they are on.",
+ "en": {"nowH": "🌊 On shelves right now", "libH": "📚 In libraries", "wave": "wave", "waveH": "🌊 On the wave now", "baseH": "📚 The core — in many libraries", "nowS": "now", "libS": "libr.", "author": "The author’s shelf", "authorOpen": "Open Igor’s shelf →", "newSh": "New shelves", "ph": "Search by title or author", "none": "Nothing found — put it on your shelf", "cat": "Everyone’s Library", "catSub": "Books, films and channels — and whose shelves they are on.",
         "on": "On the shelves of", "many": "On many shelves", "builders": "Shelves of people building the future",
         "buildersSub": "Put together from public interviews and writing — each book with the source where the person named it.",
         "src": "source", "igor": "Igor’s shelf", "plan": "planned", "add": "Put it on my shelf",
-        "back": "← Everyone’s Library", "shelves": "shelves", "shelf1": "shelf", "byInt": "shelf from public interviews",
+        "back": "← Everyone’s Library", "shelves": "shelves", "shelf1": "shelf", "byInt": "library from public interviews",
         "yours": "And on yours?", "yoursSub": "Build your shelf and see who you match with.", "home": "Biblioteca",
         "type": {"book": "book", "film": "film", "series": "series", "yt": "YouTube", "other": "other"}},
- "ru": {"author": "Полка автора", "authorOpen": "Открыть полку Игоря →", "newSh": "Новые полки", "ph": "Поиск по названию или автору", "none": "Не нашлось — поставь на свою полку", "cat": "Общая Библиотека", "catSub": "Книги, фильмы и каналы — и на чьих полках они стоят.",
+ "ru": {"nowH": "🌊 На полках сейчас", "libH": "📚 В библиотеках", "wave": "волна", "waveH": "🌊 На волне сейчас", "baseH": "📚 Основа — есть во многих библиотеках", "nowS": "сейчас", "libS": "в библ.", "author": "Полка автора", "authorOpen": "Открыть полку Игоря →", "newSh": "Новые полки", "ph": "Поиск по названию или автору", "none": "Не нашлось — поставь на свою полку", "cat": "Общая Библиотека", "catSub": "Книги, фильмы и каналы — и на чьих полках они стоят.",
         "on": "Стоит на полках", "many": "Стоит на многих полках", "builders": "Полки тех, кто строит будущее",
         "buildersSub": "Собраны по открытым интервью и текстам — у каждой книги ссылка, где человек сам её назвал.",
         "src": "источник", "igor": "Полка Игоря", "plan": "в планах", "add": "Поставить на свою полку",
-        "back": "← Общая Библиотека", "shelves": "полки", "shelf1": "полка", "byInt": "полка по открытым интервью",
+        "back": "← Общая Библиотека", "shelves": "полки", "shelf1": "полка", "byInt": "библиотека по открытым интервью",
         "yours": "А на твоей?", "yoursSub": "Заведи свою полку и посмотри, с кем совпадаешь.", "home": "Библиотека",
         "type": {"book": "книга", "film": "фильм", "series": "сериал", "yt": "YouTube", "other": "другое"}},
- "es": {"author": "La estantería del autor", "authorOpen": "Abrir la estantería de Igor →", "newSh": "Estanterías nuevas", "ph": "Buscar por título o autor", "none": "No se encontró nada — ponlo en tu estantería", "cat": "Biblioteca de todos", "catSub": "Libros, películas y canales — y en qué estanterías están.",
+ "es": {"nowH": "🌊 En las estanterías ahora", "libH": "📚 En las bibliotecas", "wave": "ola", "waveH": "🌊 En la ola ahora", "baseH": "📚 La base — está en muchas bibliotecas", "nowS": "ahora", "libS": "bibl.", "author": "La estantería del autor", "authorOpen": "Abrir la estantería de Igor →", "newSh": "Estanterías nuevas", "ph": "Buscar por título o autor", "none": "No se encontró nada — ponlo en tu estantería", "cat": "Biblioteca de todos", "catSub": "Libros, películas y canales — y en qué estanterías están.",
         "on": "Está en las estanterías de", "many": "Está en muchas estanterías", "builders": "Estanterías de quienes construyen el futuro",
         "buildersSub": "Montadas a partir de entrevistas y textos públicos — cada libro con la fuente donde la persona lo nombró.",
         "src": "fuente", "igor": "Estantería de Igor", "plan": "en planes", "add": "Ponerlo en mi estantería",
-        "back": "← Biblioteca de todos", "shelves": "estanterías", "shelf1": "estantería", "byInt": "estantería según entrevistas públicas",
+        "back": "← Biblioteca de todos", "shelves": "estanterías", "shelf1": "estantería", "byInt": "biblioteca según entrevistas públicas",
         "yours": "¿Y en la tuya?", "yoursSub": "Crea tu estantería y mira con quién coincides.", "home": "Biblioteca",
         "type": {"book": "libro", "film": "película", "series": "serie", "yt": "YouTube", "other": "otro"}},
- "de": {"author": "Das Regal des Autors", "authorOpen": "Igors Regal öffnen →", "newSh": "Neue Regale", "ph": "Nach Titel oder Autor suchen", "none": "Nichts gefunden — stell es in dein Regal", "cat": "Bibliothek für alle", "catSub": "Bücher, Filme und Kanäle — und in wessen Regalen sie stehen.",
+ "de": {"nowH": "🌊 Jetzt in den Regalen", "libH": "📚 In den Bibliotheken", "wave": "Welle", "waveH": "🌊 Jetzt auf der Welle", "baseH": "📚 Die Basis — in vielen Bibliotheken", "nowS": "jetzt", "libS": "Bibl.", "author": "Das Regal des Autors", "authorOpen": "Igors Regal öffnen →", "newSh": "Neue Regale", "ph": "Nach Titel oder Autor suchen", "none": "Nichts gefunden — stell es in dein Regal", "cat": "Bibliothek für alle", "catSub": "Bücher, Filme und Kanäle — und in wessen Regalen sie stehen.",
         "on": "Steht in den Regalen von", "many": "Steht in vielen Regalen", "builders": "Regale von Menschen, die die Zukunft bauen",
         "buildersSub": "Zusammengestellt aus öffentlichen Interviews und Texten — jedes Buch mit der Quelle, in der die Person es genannt hat.",
         "src": "Quelle", "igor": "Igors Regal", "plan": "geplant", "add": "In mein Regal stellen",
-        "back": "← Bibliothek für alle", "shelves": "Regale", "shelf1": "Regal", "byInt": "Regal nach öffentlichen Interviews",
+        "back": "← Bibliothek für alle", "shelves": "Regale", "shelf1": "Regal", "byInt": "Bibliothek nach öffentlichen Interviews",
         "yours": "Und in deinem?", "yoursSub": "Stell dein Regal zusammen und sieh, mit wem du übereinstimmst.", "home": "Biblioteca",
         "type": {"book": "Buch", "film": "Film", "series": "Serie", "yt": "YouTube", "other": "anderes"}},
 }
@@ -77,6 +77,7 @@ def load():
     shelf = json.loads(re.search(r"^const SHELF=(\[.*\]);$", page, re.M).group(1))
     global STACK
     ids = json.loads(re.search(r"^const STACK0=(\[.*?\]);", page, re.M).group(1))
+    stack_ids = set(ids)
     STACK = [x for i in ids for x in shelf if x["id"] == i]
     for it in shelf:
         if it["id"] in SKIP or not it.get("orig"):
@@ -85,10 +86,10 @@ def load():
         if k not in src:
             a = (it.get("a") or "").split(" · ")
             src[k] = {"id": k, "type": it["type"], "orig": it["orig"], "a": a[-1], "a_ru": a[0], "t": dict(it.get("t", {})), "on": []}
-        src[k]["on"].append({"kind": "igor", "plan": it.get("shelf") == "plan", "why": it.get("why", {})})
+        src[k]["on"].append({"kind": "igor", "now": it["id"] in stack_ids, "plan": it.get("shelf") == "plan", "why": it.get("why", {})})
     for sh in cat["shelves"]:
         for it in sh["items"]:
-            src[it["id"]]["on"].append({"kind": "auth", "shelf": sh, "url": it["src"]})
+            src[it["id"]]["on"].append({"kind": "auth", "now": False, "shelf": sh, "url": it["src"]})
     return src, cat["shelves"]
 
 
@@ -107,7 +108,7 @@ def add_participants(src, api):
         for it in sh.get("items", []):
             k = keys.get(norm(it.get("title")))
             if k:
-                src[k]["on"].append({"kind": "user", "name": sh["name"]})
+                src[k]["on"].append({"kind": "user", "now": True, "name": sh["name"]})
 
 
 def title(s, l):
@@ -154,7 +155,7 @@ h1{font:700 30px/1.15 Lora,Georgia,serif;margin:6px 0 4px}h2{font:700 21px/1.2 L
 .btn{display:inline-block;background:var(--acc);color:#fff;text-decoration:none;font-weight:800;padding:13px 18px;border-radius:12px;margin:8px 0}
 ul.list{list-style:none;padding:0;margin:0}ul.list li{padding:10px 0;border-bottom:1px solid var(--line)}
 ul.list li a{font-weight:800;text-decoration:none}.cnt{float:right;color:var(--mut);font-size:13px}
-.who{color:var(--mut);font-size:14px}.chips a{display:inline-block;margin:4px 6px 0 0;padding:6px 10px;border-radius:999px;background:var(--chip);text-decoration:none;font-size:14px;color:var(--ink)}
+.who{color:var(--mut);font-size:14px}.wv{background:var(--acc);color:#fff;border-radius:999px;padding:1px 8px;text-transform:none;letter-spacing:0}.chips a{display:inline-block;margin:4px 6px 0 0;padding:6px 10px;border-radius:999px;background:var(--chip);text-decoration:none;font-size:14px;color:var(--ink)}
 .q{width:100%;font:inherit;font-size:17px;padding:13px 14px;border:2px solid var(--acc);border-radius:12px;background:var(--card);color:var(--ink);margin:4px 0 6px}
 #none{display:none}
 .stk{margin:10px 0 0}.sp{margin:0 auto 4px;border-radius:6px;padding:11px 14px;color:#fff;box-shadow:0 2px 0 rgba(0,0,0,.25),0 7px 12px rgba(0,0,0,.18);animation:drop .5s cubic-bezier(.2,.9,.3,1.25) both}
@@ -220,8 +221,9 @@ def person(sh, l):
 def source_page(s, l, preview):
     T = L[l]
     on = s["on"]
-    rows = []
+    nrows, lrows = [], []
     for o in on:
+        rows = nrows if o["now"] else lrows
         if o["kind"] == "igor":
             why = o["why"].get(l) or (o["why"].get("ru") if l == "ru" else "")
             rows.append(f'<div class="card"><b><a href="{igor(l)}">{e(T["igor"])}</a></b>'
@@ -232,13 +234,20 @@ def source_page(s, l, preview):
             rows.append(f'<div class="card"><b>{e(person(sh, l))}</b> <span class="who">· {e(sh["who"][l])}</span><br>'
                         f'<small>{e(T["byInt"])} · <a href="{e(o["url"])}" rel="nofollow noopener" target="_blank">{e(T["src"])} ↗</a></small></div>')
         else:
-            rows.append(f'<div class="card"><b><a href="/biblioteca/{e(o["name"])}/">{e(o["name"])}</a></b></div>')
+            nm = " ".join(w.capitalize() for w in o["name"].split("-"))
+            rows.append(f'<div class="card"><b><a href="/biblioteca/{e(o["name"])}/">{e(nm)}</a></b></div>')
+    blocks = ""
+    if nrows:
+        wave = f' · <span class="wv">{e(T["wave"])}</span>' if len(nrows) > 1 else ""
+        blocks += f'<span class="tag">{e(T["nowH"])} · {len(nrows)}{wave}</span>{"".join(nrows)}'
+    if lrows:
+        blocks += f'<span class="tag" style="margin-top:14px">{e(T["libH"])} · {len(lrows)}</span>{"".join(lrows)}'
     t, a = title(s, l), author(s, l)
     sub = f'{a} · {T["type"].get(s["type"], s["type"])}' + (f' · <i>{e(s["orig"])}</i>' if s["orig"] != t else "")
     add = f'{igor(l)}?add={urllib.parse.quote(t)}&amp;type={s["type"]}&amp;utm_source=biblioteca&amp;utm_medium=source#anketa'
     body = (f'<a href="{link("", l)}">{e(T["back"])}</a>'
             f'<h1>{e(t)}</h1><p class="sub">{sub}</p>'
-            f'<span class="tag">{e(T["on"])} · {len(on)}</span>{"".join(rows)}'
+            f'{blocks}'
             f'<h2>{e(T["yours"])}</h2><p class="sub">{e(T["yoursSub"])}</p><a class="btn" href="{add}">{e(T["add"])} →</a>')
     names = ", ".join(person(o["shelf"], l) for o in on if o["kind"] == "auth")
     desc = f'{t} — {a}. ' + (f'{T["on"]}: {names}.' if names else T["catSub"])
@@ -273,11 +282,15 @@ def stack(items, l):
 
 def catalog_page(src, shelves, l, preview, mine5=(), users=()):
     T = L[l]
-    items = sorted(src.values(), key=lambda s: (-len(s["on"]), title(s, l).lower()))
+    nn = lambda s: sum(1 for o in s["on"] if o["now"])
+    nl = lambda s: sum(1 for o in s["on"] if not o["now"])
+    items = sorted(src.values(), key=lambda s: (-nn(s), -nl(s), title(s, l).lower()))
     hay = lambda s: e(norm(" ".join([s["orig"], s.get("a", ""), s.get("a_ru", ""), *s["t"].values(), *[w for o in s["on"] if o["kind"] == "auth" for w in (o["shelf"]["person"], o["shelf"]["person_ru"])], *["igor игорь" for o in s["on"] if o["kind"] == "igor"]])))
-    li = lambda s: (f'<li data-k="{hay(s)}"><span class="cnt">{len(s["on"])} {e(T["shelves"] if len(s["on"]) > 1 else T["shelf1"])}</span>'
+    cnt = lambda s: " · ".join(x for x in [f'🌊{nn(s)}' if nn(s) else "", f'📚{nl(s)}' if nl(s) else ""] if x)
+    li = lambda s: (f'<li data-k="{hay(s)}"><span class="cnt">{cnt(s)}</span>'
                     f'<a href="{link(s["id"] + "/", l)}">{e(title(s, l))}</a><br><small class="who">{e(author(s, l))} · {e(T["type"].get(s["type"], ""))}</small></li>')
-    many = [s for s in items if len(s["on"]) > 1]
+    wave = [s for s in items if nn(s)][:10]
+    many = sorted([s for s in src.values() if nl(s) > 1], key=lambda s: (-nl(s), title(s, l).lower()))
     blocks = "".join(
         f'<div class="card"><b>{e(person(sh, l))}</b> <span class="who">· {e(sh["who"][l])}</span><div class="chips">'
         + "".join(f'<a href="{link(it["id"] + "/", l)}">{e(title(src[it["id"]], l))}</a>' for it in sh["items"])
@@ -290,7 +303,8 @@ def catalog_page(src, shelves, l, preview, mine5=(), users=()):
     users_blk = (f'<h2>{e(T["newSh"])}</h2><div class="chips">'
                  + "".join(f'<a href="/biblioteca/{e(u)}/">{e(" ".join(w.capitalize() for w in u.split("-")))}</a>' for u in users) + '</div>') if users else ""
     body = (f'<div id="all"><h1>{e(T["cat"])}</h1><p class="sub">{e(T["catSub"])}</p>{author_blk}'
-            + (f'<h2>{e(T["many"])}</h2><ul class="list">{"".join(li(s) for s in many)}</ul>' if many else "")
+            + (f'<h2>{e(T["waveH"])}</h2><ul class="list">{"".join(li(s) for s in wave)}</ul>' if wave else "")
+            + (f'<h2>{e(T["baseH"])}</h2><ul class="list">{"".join(li(s) for s in many)}</ul>' if many else "")
             + users_blk + f'<h2>{e(T["builders"])}</h2><p class="sub">{e(T["buildersSub"])}</p>{blocks}'
             + f'<h2>{e(T["home"])} · A–Z</h2><ul class="list">{"".join(li(s) for s in sorted(items, key=lambda s: title(s, l).lower()))}</ul>'
             + f'<h2>{e(T["yours"])}</h2><p class="sub">{e(T["yoursSub"])}</p><a class="btn" href="{igor(l)}?utm_source=biblioteca&amp;utm_medium=catalog#anketa">{e(T["add"])} →</a></div>' + JS)
@@ -326,6 +340,7 @@ def main():
     i = max(n for n, x in enumerate(lines) if "/biblioteca/" in x) + 1
     sm.write_text("\n".join(lines[:i] + add + lines[i:]) + "\n", encoding="utf-8")
     many = sum(1 for s in src.values() if len(s["on"]) > 1)
+    assert all("now" in o for s in src.values() for o in s["on"])
     print(f"источников: {len(src)} · на нескольких полках: {many} · страниц: {len(src) * 5 + 5}")
 
 
