@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>SeedWave</title>
+<script>
+// Короткий адрес полки Библиотеки: /biblioteca/имя → /biblioteca/s/?n=имя
+(function(){
+  var m=location.pathname.match(/^\/biblioteca\/([a-z0-9-]{3,20})\/?$/i);
+  if(m){location.replace("/biblioteca/s/?n="+encodeURIComponent(m[1].toLowerCase())+(location.search?"&"+location.search.slice(1):""));}
+})();
+</script>
+<style>
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#fbf6f0;color:#2b1a14;font:400 17px/1.6 system-ui,sans-serif;text-align:center;padding:24px}
+@media (prefers-color-scheme:dark){body{background:#1c1210;color:#f6ece4}}
+a{color:#9e3b32;font-weight:700}
+@media (prefers-color-scheme:dark){a{color:#e0806f}}
+h1{font-size:26px;margin:0 0 8px}
+</style>
+</head>
+<body>
+<main>
+<h1 id="t">Página não encontrada</h1>
+<p><a id="l" href="https://seedwave.pt/hub/">SeedWave →</a></p>
+</main>
+<script>
+var T={ru:"Страница не найдена",en:"Page not found",es:"Página no encontrada",de:"Seite nicht gefunden"};
+var l=(navigator.language||"pt").slice(0,2).toLowerCase();if(T[l]){document.getElementById("t").textContent=T[l];document.documentElement.lang=l}
+</script>
+</body>
+</html>

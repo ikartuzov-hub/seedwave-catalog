@@ -96,7 +96,7 @@ function render(){
   if(shelf.owner&&shelf.status!=="open")m.append(el("p","flag",shelf.status==="pending"?T.pend:T.hid));
   const st=el("div","stack");
   shelf.items.forEach((it,i)=>{const b=el("button","bk");b.style.background=COL[i%COL.length];b.style.width=(100-((i*7)%13))+"%";
-    b.append(el("b","",it.title),el("small","",T.types[it.type]||T.types.other));if(it.thought){b.append(el("p","",it.thought));if(i===0)b.classList.add("open")}
+    b.append(el("b","",it.title),el("small","",T.types[it.type]||T.types.other));if(it.thought){b.append(el("p","",it.thought));b.classList.add("open")}
     b.addEventListener("click",()=>b.classList.toggle("open"));st.append(b)});
   m.append(st,el("div","board"));
   if(shelf.owner){
