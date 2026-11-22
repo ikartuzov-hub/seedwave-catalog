@@ -61,7 +61,11 @@ def og_image(shelf, path):
     d.text((70, 96), fit(d, title.format(n=shelf["name"]), font(64), W - 140), font=font(64), fill="#2b1a14")
     d.text((70, 178), fit(d, sub, font(28, True), W - 140), font=font(28, True), fill="#7a5f54")
     items = shelf["items"][:5]
-    y, h, gap = 236, 56, 10
+    n = max(len(items), 1)
+    h = 56 if n >= 4 else 72
+    gap = 10
+    top, bottom = 236, H - 90
+    y = top + max(0, (bottom - top - (n * (h + gap) + 18)) // 2)
     for i, it in enumerate(items):
         w = int((W - 160) * (1 - ((i * 7) % 13) / 100))
         x = 80 + (i % 2) * 14
@@ -70,8 +74,8 @@ def og_image(shelf, path):
         lab = types.get(it.get("type"), types["other"]).upper()
         f2 = font(18, True)
         lw = d.textlength(lab, font=f2)
-        d.text((x + w - lw - 22, y + 19), lab, font=f2, fill="#f3e6dc")
-        d.text((x + 22, y + 12), fit(d, it.get("title", ""), font(28), w - lw - 70), font=font(28), fill="#ffffff")
+        d.text((x + w - lw - 22, y + (h - 18) // 2), lab, font=f2, fill="#f3e6dc")
+        d.text((x + 22, y + (h - 34) // 2), fit(d, it.get("title", ""), font(28 if h < 70 else 32), w - lw - 70), font=font(28 if h < 70 else 32), fill="#ffffff")
         y += h + gap
     d.rounded_rectangle([60, y + 4, W - 60, y + 18], 4, fill="#6b4a36")
     d.text((70, H - 58), "seedwave.pt/biblioteca/" + shelf["name"], font=font(28, True), fill="#9e3b32")
