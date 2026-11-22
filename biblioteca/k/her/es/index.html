@@ -19,13 +19,18 @@
 <link rel="icon" href="/biblioteca/biblioteca-icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Manrope:wght@400;800&display=swap&subset=cyrillic" rel="stylesheet">
-<style>:root{--bg:#fbf6f0;--ink:#2b1a14;--mut:#7a5f54;--acc:#9E3B32;--card:#fff;--line:#eadfd5}
+<script>(()=>{let t=new URLSearchParams(location.search).get("theme");try{if(t==="dark"||t==="light")localStorage.setItem("biblioteca.theme",t);else t=localStorage.getItem("biblioteca.theme")}catch(e){}document.documentElement.dataset.theme=t==="dark"?"dark":"light"})()</script>
+<style>:root{--bg:#fbf6f0;--ink:#2b1a14;--mut:#7a5f54;--acc:#9e3b32;--card:#fff;--line:rgba(158,59,50,.18);--chip:#f3e6dc;--chip-on:rgba(158,59,50,.12)}
+:root[data-theme="dark"]{--bg:#1c1210;--ink:#f6ece4;--mut:#c4a99c;--acc:#e0806f;--card:#2a1b17;--line:rgba(246,236,228,.13);--chip:#3a2621;--chip-on:rgba(246,236,228,.1)}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Manrope,system-ui,sans-serif}
 main{max-width:720px;margin:0 auto;padding:18px 16px 40px}a{color:var(--acc)}
-.top{display:flex;align-items:center;gap:10px;justify-content:space-between;margin-bottom:18px}
-.top a.brand{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;color:var(--ink)}
-.top img{width:30px;height:30px;border-radius:7px}.langs a{margin-left:8px;font-size:13px;text-decoration:none;color:var(--mut)}
-.langs a.on{color:var(--acc);font-weight:800}
+.top{display:flex;align-items:center;justify-content:space-between;padding:0 0 10px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 18px/1.2 Lora,Georgia,serif;color:var(--ink)}
+.brand img{width:36px;height:36px;border-radius:10px}
+.tools{display:flex;gap:8px;position:relative}
+.rb{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--ink);font:800 13px Manrope,sans-serif;display:grid;place-items:center;cursor:pointer}
+.menu{position:absolute;right:48px;top:46px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px;display:none;z-index:20;box-shadow:0 10px 30px rgba(43,26,20,.18)}
+.menu.open{display:block}.menu a{display:block;text-decoration:none;padding:8px 16px;border-radius:9px;font-weight:700;font-size:14px;color:var(--ink)}.menu a[aria-current]{background:var(--chip-on)}
 h1{font:700 30px/1.15 Lora,Georgia,serif;margin:6px 0 4px}h2{font:700 21px/1.2 Lora,Georgia,serif;margin:28px 0 10px}
 .sub{color:var(--mut);margin:0 0 14px}.tag{display:inline-block;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--acc)}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:10px 0}
@@ -33,15 +38,20 @@ h1{font:700 30px/1.15 Lora,Georgia,serif;margin:6px 0 4px}h2{font:700 21px/1.2 L
 .btn{display:inline-block;background:var(--acc);color:#fff;text-decoration:none;font-weight:800;padding:13px 18px;border-radius:12px;margin:8px 0}
 ul.list{list-style:none;padding:0;margin:0}ul.list li{padding:10px 0;border-bottom:1px solid var(--line)}
 ul.list li a{font-weight:800;text-decoration:none}.cnt{float:right;color:var(--mut);font-size:13px}
-.who{color:var(--mut);font-size:14px}.chips a{display:inline-block;margin:4px 6px 0 0;padding:6px 10px;border-radius:999px;background:#f3e6dc;text-decoration:none;font-size:14px;color:var(--ink)}
-.q{width:100%;font:inherit;font-size:17px;padding:13px 14px;border:2px solid var(--acc);border-radius:12px;background:#fff;margin:4px 0 6px}
+.who{color:var(--mut);font-size:14px}.chips a{display:inline-block;margin:4px 6px 0 0;padding:6px 10px;border-radius:999px;background:var(--chip);text-decoration:none;font-size:14px;color:var(--ink)}
+.q{width:100%;font:inherit;font-size:17px;padding:13px 14px;border:2px solid var(--acc);border-radius:12px;background:var(--card);color:var(--ink);margin:4px 0 6px}
 #none{display:none}
 footer{text-align:center;color:var(--mut);font-size:13px;margin:36px 0 10px}footer a{color:var(--mut)}</style>
 <script defer src="https://seedwave.pt/nav/sw.js"></script>
 </head>
 <body><main>
-<div class="top"><a class="brand" href="/biblioteca/es/"><img src="/biblioteca/icon-192.png" alt="">Biblioteca</a><span class="langs"><a href="/biblioteca/k/her/">PT</a><a href="/biblioteca/k/her/en/">EN</a><a href="/biblioteca/k/her/ru/">RU</a><a href="/biblioteca/k/her/es/" class=on>ES</a><a href="/biblioteca/k/her/de/">DE</a></span></div>
+<header class="top"><a class="brand" href="/biblioteca/es/"><img src="/biblioteca/biblioteca-icon.svg" width="36" height="36" alt="Biblioteca"><span>Biblioteca</span></a>
+<div class="tools"><button class="rb" id="langBtn" aria-haspopup="true" aria-expanded="false">ES</button><div class="menu" id="langMenu" role="menu"><a href="/biblioteca/k/her/" hreflang="pt">PT</a><a href="/biblioteca/k/her/en/" hreflang="en">EN</a><a href="/biblioteca/k/her/ru/" hreflang="ru">RU</a><a href="/biblioteca/k/her/es/" hreflang="es" aria-current=true>ES</a><a href="/biblioteca/k/her/de/" hreflang="de">DE</a></div><button class="rb" id="themeBtn" aria-label="theme">☾</button></div></header>
 <form action="/biblioteca/k/es/" role="search"><input class="q" name="q" type="search" placeholder="🔍 Buscar por título o autor" aria-label="Buscar por título o autor"></form>
 <a href="/biblioteca/k/es/">← Catálogo</a><h1>Her</h1><p class="sub">Spike Jonze · película</p><span class="tag">Está en las estanterías de · 1</span><div class="card"><b><a href="/biblioteca/es/">Estantería de Igor</a></b><p class=why>La vi porque esta película trata de lo que ya siento hoy: la IA convirtiéndose en interlocutor. Se rodó hace más de diez años, y el futuro que muestra empieza a cumplirse. Encontré en ella lo sencillo que es empezar el contacto con un programa, cómo se vuelve amigo y apoyo — y adónde lleva al final a la persona.</p></div><h2>¿Y en la tuya?</h2><p class="sub">Crea tu estantería y mira con quién coincides.</p><a class="btn" href="/biblioteca/es/?add=Her&amp;type=film&amp;utm_source=biblioteca&amp;utm_medium=source#anketa">Ponerlo en mi estantería →</a>
+<script>(()=>{const d=document.documentElement,tb=document.getElementById("themeBtn"),lb=document.getElementById("langBtn"),m=document.getElementById("langMenu");
+const st=()=>{tb.textContent=d.dataset.theme==="dark"?"☀":"☾";m.querySelectorAll("a").forEach(a=>{a.href=a.href.split("?")[0]+(d.dataset.theme==="dark"?"?theme=dark":"")})};st();
+tb.onclick=()=>{d.dataset.theme=d.dataset.theme==="dark"?"light":"dark";try{localStorage.setItem("biblioteca.theme",d.dataset.theme)}catch(e){}st()};
+lb.onclick=ev=>{ev.stopPropagation();m.classList.toggle("open");lb.setAttribute("aria-expanded",m.classList.contains("open"))};document.addEventListener("click",()=>m.classList.remove("open"))})()</script>
 <footer>© 2026 <a href="https://seedwave.pt/hub/?lang=es&amp;utm_source=biblioteca&amp;utm_medium=footer">SeedWave</a> · <a href="https://seedwave.pt/madeira/?lang=es&amp;utm_source=biblioteca&amp;utm_medium=footer">Madeira</a> · <a href="https://www.linkedin.com/in/igor-kartuzov/">Igor Kartuzov</a></footer>
 </main></body></html>
