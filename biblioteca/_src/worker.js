@@ -1,10 +1,10 @@
 // biblioteca-engine — хранение полок Библиотеки и подписки дневника (Cloudflare Worker + D1 «biblioteca»).
 // Развёртывание: Cloudflare API (PUT workers/scripts/biblioteca-engine), адрес https://biblioteca-engine.seedwave.workers.dev. Секрет ADMIN создан при первом развёртывании и нигде не записан — при обновлении кода сохранять привязки (keep_bindings).
 // Привязки: DB (D1; таблицы shelves, items, subs, gifts — коды подарочных имён), ADMIN (секрет ссылок модерации), HOOK (вебхук Make «Написать автору»).
-// Статусы полки: pending (на проверке, видна хозяину по ключу) · open (видна всем) · hidden · blocked.
+// Статусы полки: open (видна всем; с 22.11.2026 полка открывается сразу) · hidden · blocked · pending (старые полки).
 const RESERVED = ["igor","olga","max","anton","anastasia","griselda","tetiana","elena","luidmila","liudmila","ludmila","ze",
   "admin","seedwave","biblioteca","catalogo","hub","madeira","lis","piloto","capsula","pt","en","ru","es","de",
-  "s","m","video","api","src","_src","index","www","null","undefined"];
+  "s","m","k","video","api","src","_src","index","www","null","undefined"];
 const TYPES = ["book","film","yt","other"];
 const GIVES = ["energy","brave","dream","calm","laugh","know","dir"];
 const LANGS = ["pt","en","ru","es","de"];
