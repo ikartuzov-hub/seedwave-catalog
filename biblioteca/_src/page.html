@@ -705,6 +705,8 @@ function renderRevs(){const it=STACK0.concat(SHELF.map(b=>b.id).filter(i=>!STACK
     const ro=lang!=="ru"&&T("ruOnly")?`<p class="draft">${T("ruOnly")}</p>`:"";
     return `<details class="rv" id="r-${b.id}"><summary><b>${esc(title(b))}</b><span>${esc(author(b))} · ${T("types")[b.type]}</span></summary>${ro}${w?`<p class="why">${esc(w)}</p>`:""}<p class="mainq">${esc(f.main)}</p>${f.take.split("\n").filter(Boolean).map(x=>`<p>${esc(x)}</p>`).join("")}${f.review?`<p class="lbl">${T("plotL")}</p><p>${esc(f.review)}</p>`:""}</details>`}).join("")}
 function renderAll(){renderStatic();renderStack();renderList();renderResult();renderRevs();if(view==="cat")renderCat();showName()}
+// один каталог на всю Библиотеку — Общий (/biblioteca/k/): все полки, поиск, страница у каждой книги
+function goKat(){location.href="/biblioteca/k/"+(lang==="pt"?"":lang+"/")+(theme==="dark"?"?theme=dark":"")}
 function setView(v){view=v;$("#home").hidden=v!=="home";$("#cat").hidden=v!=="cat";if(v==="cat")renderCat();
   try{history.replaceState(null,"",v==="cat"?"#catalogo":location.pathname+location.search)}catch(e){}
   window.scrollTo(0,0)}
@@ -732,7 +734,7 @@ document.addEventListener("click",e=>{
   if(x=q("[data-row]")){const id=x.dataset.row;if(x.closest("#cat")){catOpen=catOpen===id?null:id;renderCat(true)}else{openRow=openRow===id?null:id;renderList()}return}
   if(x=q("[data-ctab]")){catTab=x.dataset.ctab;catSec=null;catQ="";catOpen=null;renderCat();return}
   if(q("[data-home]")){e.preventDefault();setView("home");return}
-  if(x=q('a[href="#catalogo"]')){e.preventDefault();catSec=null;catQ="";setView("cat");return}
+  if(x=q('a[href="#catalogo"]')){e.preventDefault();goKat();return}
   if(x=q("[data-ft]")){fType=x.dataset.ft;renderStatic();return}
   if(x=q("[data-name]")){$("#fName").value=x.dataset.name;showName();return}
   if(x=q("[data-g]")){const g=x.dataset.g,i=made.gives.indexOf(g);if(i>=0)made.gives.splice(i,1);else if(made.gives.length<2)made.gives.push(g);x.setAttribute("aria-pressed",made.gives.includes(g));return}
@@ -778,8 +780,8 @@ if(GIFT)setTimeout(()=>{checkRemote();if(location.hash==="#anketa")$("#anketa").
 // со страницы книги в каталоге: ?add=название&type=book — анкета открывается с готовым названием
 const ADD=(()=>{try{const q=new URLSearchParams(location.search),t=(q.get("add")||"").trim().slice(0,120);return t?{id:"k",t:{ru:t},orig:t,type:q.get("type")||"book"}:null}catch(e){return null}})();
 if(ADD&&!GIFT)setTimeout(()=>toForm(ADD),400);
-if(location.hash==="#catalogo")setView("cat");
-window.addEventListener("hashchange",()=>{if(location.hash==="#catalogo"&&view!=="cat")setView("cat")});
+if(location.hash==="#catalogo")goKat();
+window.addEventListener("hashchange",()=>{if(location.hash==="#catalogo")goKat()});
 </script>
 </body>
 </html>
