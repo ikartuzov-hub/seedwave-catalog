@@ -9,7 +9,7 @@ ap=base64.b64encode(open(H/'apoios-whatsapp-etalon.png','rb').read()).decode()
 rows=''
 for g in G:
     i=g['id']
-    now=f'<img src="data:image/png;base64,{ap}" width="72" height="72" style="border-radius:16px">' if i=='apoios' else inl(open(R+g['now']).read(),72)
+    now=f'<img src="data:image/png;base64,{ap}" width="72" height="72" style="border-radius:16px">' if i=='apoios' else inl(open(R+g['now'] if g.get('now') else str(O/(i+'-icon.svg'))).read(),72)
     rows+=f'''<tr><td class="n"><b>{g["name"]}</b><br><span>{g["light"]} · {g["dark"]}</span></td><td>{now}</td>
 <td>{inl(open(O/f"{i}-icon.svg").read(),72)}</td><td class="dk">{inl(open(O/f"{i}-icon-dark.svg").read(),72)}</td>
 <td class="dk">{inl(open(O/f"{i}-icon-dark.svg").read(),60,True)}</td></tr>'''

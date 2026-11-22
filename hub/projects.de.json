@@ -482,6 +482,36 @@
       }
     },
     {
+      "id": "guide-malaga",
+      "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Málaga\"><title>Málaga</title><rect width=\"100\" height=\"100\" rx=\"23\" fill=\"#F6F2EA\"/><g fill=\"none\" stroke=\"#B4501E\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M72 36 A26 26 0 1 0 72 64 L72 50 L54 50\"/><path d=\"M20 84 Q30 78 40 84 Q50 90 60 84 Q70 78 80 84\"/></g></svg>",
+      "category": "Reisen / Guide",
+      "name": "Guide „Málaga an einem Tag“",
+      "hook": "Unsere Route vom 3. Oktober — vom Kreuzfahrtschiff zum Römischen Theater, die Kathedrale, der Blick vom Gibralfaro und ein langes Mittagessen. Dazu Tapas-Bars und ein Regenplan.",
+      "description": "Ein persönlicher Málaga-Guide auf der Engine „Mein Guide“: 20 Orte und 5 Routen — „Ein Tag in Málaga“, „Vom Schiff zum Würfel“, „Samstag ohne Eile“, „Tapas in der Altstadt“, „Falls es regnet“. Jede Route öffnet sich mit einem Tipp in Google Maps. 5 Sprachen, aufs Handy installierbar, kostenlos.",
+      "sectors": [
+        "Travel",
+        "Consumer"
+      ],
+      "stage": "mvp",
+      "investment": "",
+      "lookingFor": "Tagesgäste in Málaga, auch von Kreuzfahrtschiffen · Feedback",
+      "demoLink": "",
+      "moreLink": "https://g.seedwave.pt/malaga/",
+      "page": {
+        "how": [
+          "Guide öffnen — Málagas Altstadt auf der Karte: Hafen, Alcazaba, Kathedrale, Gibralfaro, Tapas-Bars.",
+          "Jeder Ort mit persönlicher Notiz, Öffnungszeiten und Google-Bewertung.",
+          "Fünf Routen für den Moment: ein Tag vom Schiff, Treffpunkt am Würfel, Samstag ohne Eile, Tapas, Regen.",
+          "Jede Route mit drei Knöpfen: Google Maps (zu Fuß), auf der Karte zeigen, teilen."
+        ],
+        "proofs": [
+          "Selbst gelaufen: 3. Oktober 2026, ~7 km zu Fuß.",
+          "20 Orte, 5 Routen, 5 Sprachen.",
+          "Dieselbe Engine wie die Guides zu Madeira, Paris und Nürnberg."
+        ]
+      }
+    },
+    {
       "id": "tonight",
       "icon": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"#6C5CE7\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Tonight\"><title>Tonight</title><path d=\"M30 68 L30 24 L62 66 L62 22\"/><path d=\"M20 86 Q30 80 40 86 Q50 92 60 86 Q70 80 80 86\"/></svg>",
       "category": "Technologie / Events",
