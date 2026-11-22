@@ -58,9 +58,9 @@ def og_image(shelf, path):
     d = ImageDraw.Draw(im)
     d.rectangle([0, 0, W, 10], fill="#9e3b32")
     d.text((70, 52), "Biblioteca · SeedWave", font=font(30, True), fill="#9e3b32")
-    d.text((70, 96), fit(d, title.format(n=shelf["name"]), font(64), W - 140), font=font(64), fill="#2b1a14")
+    d.text((70, 96), fit(d, title.format(n=nice(shelf)), font(64), W - 140), font=font(64), fill="#2b1a14")
     d.text((70, 178), fit(d, sub, font(28, True), W - 140), font=font(28, True), fill="#7a5f54")
-    items = shelf["items"][:5]
+    items = on_shelf(shelf)
     n = max(len(items), 1)
     h = 56 if n >= 4 else 72
     gap = 10
@@ -82,12 +82,23 @@ def og_image(shelf, path):
     im.save(path, "PNG", optimize=True)
 
 
+def nice(shelf):
+    """Подпись полки: имя, которое человек дал сам (dn), иначе адрес с большой буквы."""
+    return (shelf.get("dn") or "").strip() or " ".join(w.capitalize() for w in shelf["name"].split("-"))
+
+
+def on_shelf(shelf):
+    """Полка = места 1–5; старый ответ движка без pos — первые 5."""
+    its = shelf.get("items", [])
+    return [i for i in its if i.get("pos")][:5] if any("pos" in i for i in its) else its[:5]
+
+
 def page(shelf):
     lang = shelf["lang"] if shelf["lang"] in T else "pt"
     title, sub, cta, _ = T[lang]
     n = shelf["name"]
-    t = html.escape(title.format(n=n) + " · Biblioteca")
-    names = " · ".join(i.get("title", "") for i in shelf["items"][:4])
+    t = html.escape(title.format(n=nice(shelf)) + " · Biblioteca")
+    names = " · ".join(i.get("title", "") for i in on_shelf(shelf)[:4])
     desc = html.escape((names + " — " if names else "") + sub)
     url = f"https://seedwave.pt/biblioteca/{n}/"
     to = f"/biblioteca/s/?n={n}"
@@ -112,7 +123,7 @@ def page(shelf):
 <script>location.replace("{to}"+(location.search?"&"+location.search.slice(1):""));</script>
 </head>
 <body style="font-family:Georgia,serif;background:#fbf6f0;color:#2b1a14;text-align:center;padding:40px 18px">
-<h1>{html.escape(title.format(n=n))}</h1>
+<h1>{html.escape(title.format(n=nice(shelf)))}</h1>
 <p>{html.escape(sub)}</p>
 <p><a href="{to}" style="color:#9e3b32;font-weight:bold">{html.escape(cta)}</a></p>
 </body>
@@ -141,7 +152,7 @@ def main():
         if os.path.exists(d) and not os.path.exists(os.path.join(d, MARK)):
             print("пропуск, папка занята сайтом:", s["name"])
             continue
-        state = json.dumps({k: s.get(k) for k in ("name", "lang", "items")}, ensure_ascii=False, sort_keys=True)
+        state = json.dumps({k: s.get(k) for k in ("name", "dn", "lang", "items")}, ensure_ascii=False, sort_keys=True)
         old = open(os.path.join(d, MARK), encoding="utf-8").read() if os.path.exists(os.path.join(d, MARK)) else None
         if old == state:
             continue

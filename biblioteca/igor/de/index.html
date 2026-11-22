@@ -339,6 +339,8 @@ footer a{display:inline-block;padding:8px 4px;text-decoration:underline;text-dec
     <div class="step" data-i="f3">Adresse des Regals</div>
     <div class="addr"><span>seedwave.pt/biblioteca/</span><input id="fName" data-ph="f3ph" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="dein-name"></div>
     <div class="nmsg " id="nmsg"></div>
+    <div class="step" data-i="f4">Wie dein Regal unterschrieben wird</div>
+    <input id="fDn" data-ph="f4ph" maxlength="40" autocomplete="name" placeholder="Zum Beispiel: Olga">
     <div style="margin-top:12px"><button class="btn big" id="fSend" data-i="send">Weiter</button></div>
     <p class="note" data-i="formNote">Das Regal ist sofort für alle sichtbar. Du kannst es jederzeit löschen.</p>
   </div>
@@ -379,7 +381,7 @@ ru:{proto:"Прототип 3 — виден только Игорю. Публи
  allLib:"Вся Библиотека →",
  formH:"Заведи свою полку за минуту",formLead:"Одна вещь, которая оставила след. Остальное добавишь потом.",
  ft:{book:"книга",film:"фильм",yt:"YouTube",other:"другое"},
- f1ph:"Название",f2ph:"Одна фраза: что ты из этого взял",f3:"Адрес полки",f3ph:"твоё-имя",
+ f1ph:"Название",f2ph:"Одна фраза: что ты из этого взял",f3:"Адрес полки",f3ph:"твоё-имя",f4:"Как тебя подписать на полке",f4ph:"Например: Ольга",
  nameFree:"Свободно",nameBusy:"Занято. Свободны:",nameBad:"Латиница, цифры, дефис — от 3 до 20 знаков",
  send:"Получить ссылку",needTitle:"Впиши название — этого хватит, чтобы начать.",needName:"Выбери адрес полки.",
  formNote:"Полку можно удалить в любой момент.",
@@ -414,7 +416,7 @@ pt:{proto:"Protótipo 3 — visível apenas para o Igor. Publicação em seedwav
  allLib:"Toda a Biblioteca →",
  formH:"Crie a sua estante num minuto",formLead:"Uma obra que deixou marca. O resto acrescenta depois.",
  ft:{book:"livro",film:"filme",yt:"YouTube",other:"outro"},
- f1ph:"Título",f2ph:"Uma frase: o que tirou daí",f3:"Endereço da estante",f3ph:"o-seu-nome",
+ f1ph:"Título",f2ph:"Uma frase: o que tirou daí",f3:"Endereço da estante",f3ph:"o-seu-nome",f4:"Como assinar a estante",f4ph:"Por exemplo: Olga",
  nameFree:"Livre",nameBusy:"Ocupado. Livres:",nameBad:"Letras latinas, algarismos, hífen — de 3 a 20 caracteres",
  send:"Receber o link",needTitle:"Escreva o título — chega para começar.",needName:"Escolha o endereço da estante.",
  formNote:"Pode apagar a estante a qualquer momento.",
@@ -449,7 +451,7 @@ en:{proto:"Prototype 3 — visible to Igor only. Goes live at seedwave.pt/biblio
  allLib:"The whole Library →",
  formH:"Start your shelf in a minute",formLead:"One thing that left a mark. Add the rest later.",
  ft:{book:"book",film:"film",yt:"YouTube",other:"other"},
- f1ph:"Title",f2ph:"One sentence: what you took from it",f3:"Shelf address",f3ph:"your-name",
+ f1ph:"Title",f2ph:"One sentence: what you took from it",f3:"Shelf address",f3ph:"your-name",f4:"How to sign your shelf",f4ph:"For example: Olga",
  nameFree:"Available",nameBusy:"Taken. Available:",nameBad:"Latin letters, digits, hyphen — 3 to 20 characters",
  send:"Get my link",needTitle:"Type a title — that’s enough to start.",needName:"Pick a shelf address.",
  formNote:"You can delete the shelf at any time.",
@@ -484,7 +486,7 @@ es:{proto:"Prototipo 3 — visible solo para Igor. Publicación en seedwave.pt/b
  allLib:"Toda la Biblioteca →",
  formH:"Crea tu estantería en un minuto",formLead:"Una obra que dejó huella. El resto lo añades después.",
  ft:{book:"libro",film:"película",yt:"YouTube",other:"otro"},
- f1ph:"Título",f2ph:"Una frase: qué sacaste de ello",f3:"Dirección de la estantería",f3ph:"tu-nombre",
+ f1ph:"Título",f2ph:"Una frase: qué sacaste de ello",f3:"Dirección de la estantería",f3ph:"tu-nombre",f4:"Cómo firmar tu estantería",f4ph:"Por ejemplo: Olga",
  nameFree:"Libre",nameBusy:"Ocupado. Libres:",nameBad:"Letras latinas, cifras, guion — de 3 a 20 caracteres",
  send:"Recibir el enlace",needTitle:"Escribe el título — basta para empezar.",needName:"Elige la dirección de la estantería.",
  formNote:"Puedes borrar la estantería en cualquier momento.",
@@ -519,7 +521,7 @@ de:{proto:"Prototyp 3 — nur für Igor sichtbar. Veröffentlichung auf seedwave
  allLib:"Die ganze Bibliothek →",
  formH:"Leg dein Regal in einer Minute an",formLead:"Ein Werk, das Spuren hinterlassen hat. Den Rest ergänzt du später.",
  ft:{book:"Buch",film:"Film",yt:"YouTube",other:"anderes"},
- f1ph:"Titel",f2ph:"Ein Satz: was du daraus mitgenommen hast",f3:"Adresse des Regals",f3ph:"dein-name",
+ f1ph:"Titel",f2ph:"Ein Satz: was du daraus mitgenommen hast",f3:"Adresse des Regals",f3ph:"dein-name",f4:"Wie dein Regal unterschrieben wird",f4ph:"Zum Beispiel: Olga",
  nameFree:"Frei",nameBusy:"Vergeben. Frei sind:",nameBad:"Lateinische Buchstaben, Ziffern, Bindestrich — 3 bis 20 Zeichen",
  send:"Link bekommen",needTitle:"Trag den Titel ein — das reicht für den Anfang.",needName:"Wähl die Adresse des Regals.",
  formNote:"Du kannst das Regal jederzeit löschen.",
@@ -689,6 +691,9 @@ function nameState(v){
   }
   return ["ok","✓ "+T("nameFree")];
 }
+// имя на полке: подарочные — по-русски, остальные — адрес с большой буквы (ivan-petrov → Ivan Petrov)
+const GIFT_DN={olga:"Ольга",elena:"Елена",liudmila:"Людмила",ludmila:"Людмила"};let dnTouched=false;
+const niceName=n=>GIFT_DN[n]||String(n||"").split("-").filter(Boolean).map(w=>w.charAt(0).toUpperCase()+w.slice(1)).join(" ");
 let nmT;function checkRemote(){clearTimeout(nmT);const v=$("#fName").value.trim().toLowerCase();if(!/^[a-z0-9-]{3,20}$/.test(v)||TAKEN[v]!==undefined)return;
   nmT=setTimeout(()=>{fetch(API+"/api/name?n="+encodeURIComponent(v)+(GIFT&&GIFT.n===v?"&gift="+encodeURIComponent(GIFT.c):"")).then(r=>r.json()).then(j=>{TAKEN[v]=!j.free&&j.why!=="bad"&&!(j.why==="reserved"&&RESERVED.includes(v));if(TAKEN[v]&&$("#fName").value.trim().toLowerCase()===v)showName()}).catch(()=>{})},350)}
 function showName(){const [c,m]=nameState($("#fName").value);const e=$("#nmsg");e.className="nmsg "+c;e.innerHTML=m;return c}
@@ -775,14 +780,14 @@ document.addEventListener("click",e=>{
     if(!t){m.className="nmsg bad";m.textContent=T("needTitle");$("#fTitle").focus();return}
     if(!n){m.className="nmsg bad";m.textContent=T("needName");$("#fName").focus();return}
     if(showName()!=="ok")return;
-    made={title:t,thought:$("#fThought").value.trim(),name:n,type:fType,gives:[]};
+    made={title:t,thought:$("#fThought").value.trim(),name:n,dn:($("#fDn").value.trim()||niceName(n)).slice(0,40),type:fType,gives:[]};
     trk("biblioteca_form_done",{type:fType});renderResult();renderStack();renderList();$("#result").scrollIntoView({behavior:"smooth",block:"start"});return}
   if(q("#mSend")){const em=$("#mEmail").value.trim(),m=$("#mMsg"),bt=$("#mSend");
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){m.textContent=T("mailErr");$("#mEmail").focus();return}
-    const txt=["📚 Biblioteca — новая полка на проверку","Адрес: seedwave.pt/biblioteca/"+made.name,"Тип: "+made.type,"Название: "+made.title,"Мысль: "+(made.thought||"—"),"Что дало: "+(made.gives.join(", ")||"—"),"Язык страницы: "+lang].join("\n");
+    const txt=["📚 Biblioteca — новая полка на проверку","Адрес: seedwave.pt/biblioteca/"+made.name,"Подпись: "+made.dn,"Тип: "+made.type,"Название: "+made.title,"Мысль: "+(made.thought||"—"),"Что дало: "+(made.gives.join(", ")||"—"),"Язык страницы: "+lang].join("\n");
     bt.disabled=true;
     const legacy=()=>fetch(HOOK,{method:"POST",mode:"no-cors",body:new URLSearchParams({k:"",lang:lang,topic:"biblioteca",text:txt,name:made.name,email:em,consent:"no",post:"biblioteca",website2:$("#mHp").value,page:location.pathname})});
-    fetch(API+"/api/shelf",{method:"POST",body:new URLSearchParams({name:made.name,email:em,lang:lang,type:made.type,title:made.title,thought:made.thought,gives:made.gives.join(","),website2:$("#mHp").value,gift:GIFT&&GIFT.n===made.name?GIFT.c:""})})
+    fetch(API+"/api/shelf",{method:"POST",body:new URLSearchParams({name:made.name,email:em,lang:lang,type:made.type,title:made.title,thought:made.thought,gives:made.gives.join(","),dn:made.dn,website2:$("#mHp").value,gift:GIFT&&GIFT.n===made.name?GIFT.c:""})})
       .then(r=>r.json()).then(j=>{
         if(j.ok){try{localStorage.setItem("biblioteca.mine",JSON.stringify({n:j.name,k:j.k}))}catch(_){}
           const u="/biblioteca/s/?n="+encodeURIComponent(j.name)+"&k="+encodeURIComponent(j.k)+"&lang="+lang;
@@ -803,10 +808,11 @@ document.addEventListener("click",e=>{
 });
 document.addEventListener("input",e=>{
   if(e.target.id==="catQ"){catQ=e.target.value;catOpen=null;renderCat(true)}
-  if(e.target.id==="fName"){showName();checkRemote()}
+  if(e.target.id==="fName"){showName();checkRemote();if(!dnTouched)$("#fDn").value=niceName($("#fName").value.trim().toLowerCase())}
 });
 document.documentElement.dataset.theme=theme;
-if(GIFT)$("#fName").value=GIFT.n;
+if(GIFT){$("#fName").value=GIFT.n;$("#fDn").value=niceName(GIFT.n)}
+$("#fDn").addEventListener("input",()=>{dnTouched=!!$("#fDn").value.trim()});
 renderAll();
 if(GIFT)setTimeout(()=>{checkRemote();if(location.hash==="#anketa")$("#anketa").scrollIntoView({block:"start"})},300);
 // со страницы книги в каталоге: ?add=название&type=book — анкета открывается с готовым названием

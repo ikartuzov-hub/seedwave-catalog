@@ -108,7 +108,8 @@ def add_participants(src, api):
         for it in sh.get("items", []):
             k = keys.get(norm(it.get("title")))
             if k:
-                src[k]["on"].append({"kind": "user", "now": True, "name": sh["name"]})
+                # полка участника (места 1–5) = «сейчас», его библиотека = «в библиотеках»; старый ответ без pos — всё «сейчас»
+                src[k]["on"].append({"kind": "user", "now": bool(it.get("pos")) if "pos" in it else True, "name": sh["name"], "dn": sh.get("dn") or ""})
 
 
 def title(s, l):
@@ -234,7 +235,7 @@ def source_page(s, l, preview):
             rows.append(f'<div class="card"><b>{e(person(sh, l))}</b> <span class="who">· {e(sh["who"][l])}</span><br>'
                         f'<small>{e(T["byInt"])} · <a href="{e(o["url"])}" rel="nofollow noopener" target="_blank">{e(T["src"])} ↗</a></small></div>')
         else:
-            nm = " ".join(w.capitalize() for w in o["name"].split("-"))
+            nm = o.get("dn") or " ".join(w.capitalize() for w in o["name"].split("-"))
             rows.append(f'<div class="card"><b><a href="/biblioteca/{e(o["name"])}/">{e(nm)}</a></b></div>')
     blocks = ""
     if nrows:
