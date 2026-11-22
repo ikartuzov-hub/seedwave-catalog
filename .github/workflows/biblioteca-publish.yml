@@ -1,0 +1,32 @@
+name: Biblioteca — публикатор полок
+# Каждые 15 минут берёт открытые полки из движка Библиотеки и кладёт
+# страницу seedwave.pt/biblioteca/<имя>/ с картинкой для мессенджеров.
+# Коммит — только если что-то изменилось. Ручной запуск: Actions → Run workflow.
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: biblioteca-publish
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Шрифт и Pillow
+        run: |
+          test -f /usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf || (sudo apt-get update -qq && sudo apt-get install -y -qq fonts-dejavu-core)
+          python3 -m pip install --quiet pillow
+      - name: Собрать страницы полок
+        run: python3 biblioteca/_src/publish.py
+      - name: Коммит, если есть изменения
+        run: |
+          git add -A biblioteca
+          if git diff --cached --quiet; then echo "без изменений"; exit 0; fi
+          git config user.name "seedwave-publisher"
+          git config user.email "publisher@seedwave.pt"
+          git commit -m "Biblioteca: обновлены страницы открытых полок"
+          git push
