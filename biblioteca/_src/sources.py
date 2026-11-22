@@ -19,35 +19,35 @@ BASE = "https://seedwave.pt/biblioteca/k/"
 SKIP = {"xmas"}  # снято с полки решением Игоря 19.11
 
 L = {
- "pt": {"cat": "Catálogo da Biblioteca", "catSub": "Livros, filmes e canais — e em que estantes estão.",
+ "pt": {"ph": "Procurar por título ou autor", "none": "Nada encontrado — ponha-o na sua estante", "cat": "Catálogo da Biblioteca", "catSub": "Livros, filmes e canais — e em que estantes estão.",
         "on": "Está nas estantes", "many": "Está em muitas estantes", "builders": "Estantes de quem constrói o futuro",
         "buildersSub": "Montadas a partir de entrevistas e textos públicos — cada livro com a fonte onde a pessoa o nomeou.",
         "src": "fonte", "igor": "Estante do Igor", "plan": "nos planos", "add": "Pôr na minha estante",
         "back": "← Catálogo", "shelves": "estantes", "shelf1": "estante", "byInt": "estante segundo entrevistas públicas",
         "yours": "E na sua?", "yoursSub": "Crie a sua estante e veja com quem coincide.", "home": "Biblioteca",
         "type": {"book": "livro", "film": "filme", "series": "série", "yt": "YouTube", "other": "outro"}},
- "en": {"cat": "Biblioteca catalogue", "catSub": "Books, films and channels — and whose shelves they are on.",
+ "en": {"ph": "Search by title or author", "none": "Nothing found — put it on your shelf", "cat": "Biblioteca catalogue", "catSub": "Books, films and channels — and whose shelves they are on.",
         "on": "On the shelves of", "many": "On many shelves", "builders": "Shelves of people building the future",
         "buildersSub": "Put together from public interviews and writing — each book with the source where the person named it.",
         "src": "source", "igor": "Igor’s shelf", "plan": "planned", "add": "Put it on my shelf",
         "back": "← Catalogue", "shelves": "shelves", "shelf1": "shelf", "byInt": "shelf from public interviews",
         "yours": "And on yours?", "yoursSub": "Build your shelf and see who you match with.", "home": "Biblioteca",
         "type": {"book": "book", "film": "film", "series": "series", "yt": "YouTube", "other": "other"}},
- "ru": {"cat": "Каталог Библиотеки", "catSub": "Книги, фильмы и каналы — и на чьих полках они стоят.",
+ "ru": {"ph": "Поиск по названию или автору", "none": "Не нашлось — поставь на свою полку", "cat": "Каталог Библиотеки", "catSub": "Книги, фильмы и каналы — и на чьих полках они стоят.",
         "on": "Стоит на полках", "many": "Стоит на многих полках", "builders": "Полки тех, кто строит будущее",
         "buildersSub": "Собраны по открытым интервью и текстам — у каждой книги ссылка, где человек сам её назвал.",
         "src": "источник", "igor": "Полка Игоря", "plan": "в планах", "add": "Поставить на свою полку",
         "back": "← Каталог", "shelves": "полки", "shelf1": "полка", "byInt": "полка по открытым интервью",
         "yours": "А на твоей?", "yoursSub": "Заведи свою полку и посмотри, с кем совпадаешь.", "home": "Библиотека",
         "type": {"book": "книга", "film": "фильм", "series": "сериал", "yt": "YouTube", "other": "другое"}},
- "es": {"cat": "Catálogo de la Biblioteca", "catSub": "Libros, películas y canales — y en qué estanterías están.",
+ "es": {"ph": "Buscar por título o autor", "none": "No se encontró nada — ponlo en tu estantería", "cat": "Catálogo de la Biblioteca", "catSub": "Libros, películas y canales — y en qué estanterías están.",
         "on": "Está en las estanterías de", "many": "Está en muchas estanterías", "builders": "Estanterías de quienes construyen el futuro",
         "buildersSub": "Montadas a partir de entrevistas y textos públicos — cada libro con la fuente donde la persona lo nombró.",
         "src": "fuente", "igor": "Estantería de Igor", "plan": "en planes", "add": "Ponerlo en mi estantería",
         "back": "← Catálogo", "shelves": "estanterías", "shelf1": "estantería", "byInt": "estantería según entrevistas públicas",
         "yours": "¿Y en la tuya?", "yoursSub": "Crea tu estantería y mira con quién coincides.", "home": "Biblioteca",
         "type": {"book": "libro", "film": "película", "series": "serie", "yt": "YouTube", "other": "otro"}},
- "de": {"cat": "Katalog der Biblioteca", "catSub": "Bücher, Filme und Kanäle — und in wessen Regalen sie stehen.",
+ "de": {"ph": "Nach Titel oder Autor suchen", "none": "Nichts gefunden — stell es in dein Regal", "cat": "Katalog der Biblioteca", "catSub": "Bücher, Filme und Kanäle — und in wessen Regalen sie stehen.",
         "on": "Steht in den Regalen von", "many": "Steht in vielen Regalen", "builders": "Regale von Menschen, die die Zukunft bauen",
         "buildersSub": "Zusammengestellt aus öffentlichen Interviews und Texten — jedes Buch mit der Quelle, in der die Person es genannt hat.",
         "src": "Quelle", "igor": "Igors Regal", "plan": "geplant", "add": "In mein Regal stellen",
@@ -65,7 +65,7 @@ def slug(s):
 
 
 def norm(s):
-    s = unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode().lower()
+    s = "".join(c for c in unicodedata.normalize("NFKD", s or "") if not unicodedata.combining(c)).lower().replace("ё", "е")
     return re.sub(r"[^a-z0-9а-я]+", " ", s).strip()
 
 
@@ -139,10 +139,20 @@ h1{font:700 30px/1.15 Lora,Georgia,serif;margin:6px 0 4px}h2{font:700 21px/1.2 L
 ul.list{list-style:none;padding:0;margin:0}ul.list li{padding:10px 0;border-bottom:1px solid var(--line)}
 ul.list li a{font-weight:800;text-decoration:none}.cnt{float:right;color:var(--mut);font-size:13px}
 .who{color:var(--mut);font-size:14px}.chips a{display:inline-block;margin:4px 6px 0 0;padding:6px 10px;border-radius:999px;background:#f3e6dc;text-decoration:none;font-size:14px;color:var(--ink)}
+.q{width:100%;font:inherit;font-size:17px;padding:13px 14px;border:2px solid var(--acc);border-radius:12px;background:#fff;margin:4px 0 6px}
+#none{display:none}
 footer{text-align:center;color:var(--mut);font-size:13px;margin:36px 0 10px}footer a{color:var(--mut)}"""
 
 
-def doc(l, path, ttl, desc, body, preview):
+JS = """<script>(()=>{const q=document.getElementById("q"),all=document.getElementById("all"),hits=document.getElementById("hits"),none=document.getElementById("none");
+const rows=[...new Map([...document.querySelectorAll("li[data-k]")].map(li=>[li.querySelector("a").href,li])).values()];
+const n=s=>s.normalize("NFKD").replace(/[\\u0300-\\u036f]/g,"").toLowerCase().replace(/ё/g,"е").replace(/[^a-z0-9а-я]+/g," ").trim();
+function go(){const w=n(q.value).split(" ").filter(Boolean);hits.innerHTML="";if(!w.length){all.hidden=false;none.style.display="none";return}
+all.hidden=true;const f=rows.filter(li=>w.every(x=>li.dataset.k.includes(x)));f.forEach(li=>hits.appendChild(li.cloneNode(true)));none.style.display=f.length?"none":"block"}
+q.addEventListener("input",go);const p=new URLSearchParams(location.search).get("q");if(p){q.value=p;go()}})();</script>"""
+
+
+def doc(l, path, ttl, desc, body, preview, search=""):
     alt = "\n".join(f'<link rel="alternate" hreflang="{x}" href="{url(path, x)}">' for x in LANGS)
     langs = "".join(f'<a href="{link(path, x)}"{" class=on" if x == l else ""}>{x.upper()}</a>' for x in LANGS)
     utm = f"?lang={l}&amp;utm_source=biblioteca&amp;utm_medium=footer"
@@ -168,6 +178,7 @@ def doc(l, path, ttl, desc, body, preview):
 </head>
 <body><main>
 <div class="top"><a class="brand" href="{home(l)}"><img src="/biblioteca/icon-192.png" alt="">{e(L[l]['home'])}</a><span class="langs">{langs}</span></div>
+{search}
 {body}
 <footer>© 2026 <a href="https://seedwave.pt/hub/{utm}">SeedWave</a> · <a href="https://seedwave.pt/madeira/{utm}">Madeira</a> · <a href="https://www.linkedin.com/in/igor-kartuzov/">Igor Kartuzov</a></footer>
 </main></body></html>
@@ -203,25 +214,31 @@ def source_page(s, l, preview):
             f'<h2>{e(T["yours"])}</h2><p class="sub">{e(T["yoursSub"])}</p><a class="btn" href="{add}">{e(T["add"])} →</a>')
     names = ", ".join(person(o["shelf"], l) for o in on if o["kind"] == "auth")
     desc = f'{t} — {a}. ' + (f'{T["on"]}: {names}.' if names else T["catSub"])
-    return doc(l, s["id"] + "/", f"{t} · {a} — Biblioteca", desc, body, preview)
+    search = (f'<form action="{link("", l)}" role="search"><input class="q" name="q" type="search" '
+              f'placeholder="🔍 {e(T["ph"])}" aria-label="{e(T["ph"])}"></form>')
+    return doc(l, s["id"] + "/", f"{t} · {a} — Biblioteca", desc, body, preview, search)
 
 
 def catalog_page(src, shelves, l, preview):
     T = L[l]
     items = sorted(src.values(), key=lambda s: (-len(s["on"]), title(s, l).lower()))
-    li = lambda s: (f'<li><span class="cnt">{len(s["on"])} {e(T["shelves"] if len(s["on"]) > 1 else T["shelf1"])}</span>'
+    hay = lambda s: e(norm(" ".join([s["orig"], s.get("a", ""), s.get("a_ru", ""), *s["t"].values(), *[w for o in s["on"] if o["kind"] == "auth" for w in (o["shelf"]["person"], o["shelf"]["person_ru"])], *["igor игорь" for o in s["on"] if o["kind"] == "igor"]])))
+    li = lambda s: (f'<li data-k="{hay(s)}"><span class="cnt">{len(s["on"])} {e(T["shelves"] if len(s["on"]) > 1 else T["shelf1"])}</span>'
                     f'<a href="{link(s["id"] + "/", l)}">{e(title(s, l))}</a><br><small class="who">{e(author(s, l))} · {e(T["type"].get(s["type"], ""))}</small></li>')
     many = [s for s in items if len(s["on"]) > 1]
     blocks = "".join(
         f'<div class="card"><b>{e(person(sh, l))}</b> <span class="who">· {e(sh["who"][l])}</span><div class="chips">'
         + "".join(f'<a href="{link(it["id"] + "/", l)}">{e(title(src[it["id"]], l))}</a>' for it in sh["items"])
         + "</div></div>" for sh in shelves)
-    body = (f'<h1>{e(T["cat"])}</h1><p class="sub">{e(T["catSub"])}</p>'
+    search = (f'<input class="q" id="q" type="search" autofocus placeholder="🔍 {e(T["ph"])}" aria-label="{e(T["ph"])}">'
+              f'<p id="none" class="sub">{e(T["none"])} → <a href="{home(l)}?utm_source=biblioteca&amp;utm_medium=search#anketa">{e(T["add"])}</a></p>'
+              f'<ul class="list" id="hits"></ul>')
+    body = (f'<div id="all"><h1>{e(T["cat"])}</h1><p class="sub">{e(T["catSub"])}</p>'
             + (f'<h2>{e(T["many"])}</h2><ul class="list">{"".join(li(s) for s in many)}</ul>' if many else "")
             + f'<h2>{e(T["builders"])}</h2><p class="sub">{e(T["buildersSub"])}</p>{blocks}'
             + f'<h2>{e(T["home"])} · A–Z</h2><ul class="list">{"".join(li(s) for s in sorted(items, key=lambda s: title(s, l).lower()))}</ul>'
-            + f'<h2>{e(T["yours"])}</h2><p class="sub">{e(T["yoursSub"])}</p><a class="btn" href="{home(l)}?utm_source=biblioteca&amp;utm_medium=catalog#anketa">{e(T["add"])} →</a>')
-    return doc(l, "", T["cat"] + " — Biblioteca", T["catSub"], body, preview)
+            + f'<h2>{e(T["yours"])}</h2><p class="sub">{e(T["yoursSub"])}</p><a class="btn" href="{home(l)}?utm_source=biblioteca&amp;utm_medium=catalog#anketa">{e(T["add"])} →</a></div>' + JS)
+    return doc(l, "", T["cat"] + " — Biblioteca", T["catSub"], body, preview, search)
 
 
 def main():
