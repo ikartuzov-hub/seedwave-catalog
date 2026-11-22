@@ -87,7 +87,7 @@ export default {
         const iph = (await hmac(env.ADMIN, "ip:" + (req.headers.get("CF-Connecting-IP") || ""))).slice(0, 16);
         const day = await env.DB.prepare("SELECT COUNT(*) c FROM shelves WHERE iph=? AND created>?").bind(iph, new Date(Date.now() - 864e5).toISOString()).first();
         if (day && day.c >= 5) return json({ok: false, err: "limit"}, 429);
-        const s = {name, lang, email, status: "pending", k: rnd(12), gives, created: now()};
+        const s = {name, lang, email, status: "open", k: rnd(12), gives, created: now()};  // решение Игоря 22.11: полка открыта сразу, Игорь может скрыть или заблокировать
         await env.DB.batch([
           env.DB.prepare("INSERT INTO shelves(name,lang,email,status,k,gives,gift,iph,created) VALUES(?,?,?,?,?,?,?,?,?)").bind(name, lang, email, s.status, s.k, gives, gift, iph, s.created),
           env.DB.prepare("INSERT INTO items(shelf,type,title,thought,lang,created) VALUES(?,?,?,?,?,?)").bind(name, type, title, thought, lang, s.created)]);

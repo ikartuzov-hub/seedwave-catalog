@@ -1,0 +1,20 @@
+/* Biblioteca — живые корешки (как стопка на полке Игоря, page.html). Общий файл для Общей Библиотеки и полок участников. */
+.lstack{padding:22px 8px 0}
+.lstack .bk{width:var(--w);margin:0 auto 3px;transform:translateX(var(--x)) rotate(var(--r));position:relative;animation:ldrop .6s cubic-bezier(.2,.9,.3,1.25) both}
+@keyframes ldrop{from{opacity:0;transform:translate(var(--x),-70px) rotate(calc(var(--r) * 5))}to{opacity:1;transform:translateX(var(--x)) rotate(var(--r))}}
+.lstack .spine{width:100%;min-height:var(--h);display:flex;align-items:center;gap:10px;padding:9px 34px;border:0;border-radius:5px 8px 8px 5px;
+  background:linear-gradient(180deg,rgba(255,255,255,.26),rgba(255,255,255,0) 28%,rgba(0,0,0,.05) 70%,rgba(0,0,0,.3)),var(--bg);
+  color:var(--bink);box-shadow:0 2px 0 rgba(0,0,0,.25),0 7px 12px rgba(0,0,0,.22);text-align:left;position:relative;overflow:hidden;text-decoration:none}
+.lstack .spine::before,.lstack .spine::after{content:"";position:absolute;top:0;bottom:0;width:9px;border-left:2px solid var(--band);border-right:2px solid var(--band);opacity:.9}
+.lstack .spine::before{left:11px}.lstack .spine::after{right:11px}
+.lstack .bk.d1 .spine::after{width:3px;border-right:0}
+.lstack .bk.d2 .spine::before{width:16px;background:var(--band);border:0;opacity:.85}
+.lstack .bk.film .spine{border-radius:4px}
+.lstack .bk.film .spine::before,.lstack .bk.film .spine::after{width:10px;border:0;background:repeating-linear-gradient(180deg,var(--band) 0 5px,transparent 5px 10px)}
+.lstack .txt{flex:1;min-width:0}
+.lstack .bt{display:block;font:700 16.5px/1.25 Lora,Georgia,serif}
+.lstack .ba{display:block;margin-top:3px;font:700 11px/1.3 Manrope,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;opacity:.85}
+.lstack .bk.top::after{content:attr(data-now);position:absolute;right:14px;top:-12px;background:#9e3b32;color:#fff;font:800 11px/1 Manrope,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:5px 9px 6px;border-radius:3px 3px 3px 0;transform:rotate(3deg);box-shadow:0 3px 6px rgba(0,0,0,.25)}
+.lstack .th{width:var(--w);margin:-1px auto 10px;transform:translateX(var(--x));padding:8px 14px 10px;font:500 15px/1.45 Manrope,system-ui,sans-serif;color:var(--ink,#2b1a14);background:var(--surface,var(--card,#fff));border:1px solid var(--line,rgba(158,59,50,.18));border-top:0;border-radius:0 0 10px 10px;animation:ldrop .6s cubic-bezier(.2,.9,.3,1.25) both}
+.lstack .th a{font-weight:800;white-space:nowrap}
+.lboard{height:12px;border-radius:3px;background:linear-gradient(#8a6246,#5e3f2b);box-shadow:0 6px 10px rgba(0,0,0,.25);margin:2px 0 18px}

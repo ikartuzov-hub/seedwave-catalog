@@ -12,9 +12,9 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 REPO = ROOT.parent
 LANGS = ["pt", "en", "ru", "es", "de"]
 LOCALE = {"pt": "pt_PT", "en": "en_GB", "ru": "ru_RU", "es": "es_ES", "de": "de_DE"}
-BASE = "https://seedwave.pt/biblioteca/"
+BASE = "https://seedwave.pt/biblioteca/igor/"  # с 22.11 — Моя Библиотека Игоря; /biblioteca/ = Общая (sources.py)
 url = lambda l: BASE if l == "pt" else f"{BASE}{l}/"
-path = lambda l: "/biblioteca/" if l == "pt" else f"/biblioteca/{l}/"
+path = lambda l: "/biblioteca/igor/" if l == "pt" else f"/biblioteca/igor/{l}/"
 PREVIEW = "--preview" in sys.argv
 BG, ACC, PAPER, INK = "#fbf6f0", "#9E3B32", "#FBF3EA", "#2b1a14"
 HOOK = "https://hook.eu1.make.com/itssorkbu2g5de968qhwv6620tasscws"  # Make 8468797 «Написать автору»: заявка полки, topic=biblioteca
@@ -142,12 +142,12 @@ for lang in LANGS:
     out = out.replace("</body>", f"{CF}\n{SW}\n</body>")
     if not out.lstrip().lower().startswith("<!doctype"):
         out = "<!DOCTYPE html>\n" + out
-    dest = ROOT / ("index.html" if lang == "pt" else f"{lang}/index.html")
+    dest = ROOT / "igor" / ("index.html" if lang == "pt" else f"{lang}/index.html")
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(out, encoding="utf-8")
     built[lang] = out
     man = {"id": path(lang), "name": "Biblioteca", "short_name": "Biblioteca", "description": META[lang]["desc"], "lang": lang,
-           "start_url": path(lang), "scope": "/biblioteca/", "display": "standalone", "background_color": BG, "theme_color": BG,
+           "start_url": "/biblioteca/" if lang == "pt" else f"/biblioteca/{lang}/", "scope": "/biblioteca/", "display": "standalone", "background_color": BG, "theme_color": BG,
            "icons": [{"src": "/biblioteca/icon-192.png", "sizes": "192x192", "type": "image/png"},
                      {"src": "/biblioteca/icon-512.png", "sizes": "512x512", "type": "image/png"},
                      {"src": "/biblioteca/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}]}
