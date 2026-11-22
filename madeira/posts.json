@@ -1,204 +1,280 @@
 {
-  "_note": "Слой 3 — записи дневника. RU — оригинал (пишет Игорь), PT/EN/ES/DE — перевод Claude. Запись видна целиком, когда наступила её дата (Atlantic/Madeira); до даты — анонс. После правки: python3 madeira/_src/build.py. Текст — абзацы через пустую строку; след к продукту: [текст](url), не больше одного на запись; {lang} в url подставится. Семью не показываем, слово «помочь» не используем.",
-  "posts": [
+ "_note": "Слой 3 — записи дневника. RU — оригинал (пишет Игорь), PT/EN/ES/DE — перевод Claude. Запись видна целиком, когда наступила её дата (Atlantic/Madeira); до даты — анонс. После правки: python3 madeira/_src/build.py. Текст — абзацы через пустую строку; след к продукту: [текст](url), не больше одного на запись; {lang} в url подставится. Семью не показываем, слово «помочь» не используем.",
+ "posts": [
+  {
+   "id": "uehal-pisat-knigu",
+   "date": "2026-11-14",
+   "trace": "https://l.seedwave.pt/?lang={lang}&utm_source=madeira&utm_medium=blog&utm_campaign=diary-2026-11-14",
+   "ru": {
+    "place": "Фуншал → Чехия",
+    "title": "Уехал на две недели писать книгу о Мадейре",
+    "lead": "Мне 56, я предприниматель, и сегодня я уехал на две недели писать книгу о Мадейре.",
+    "body": "Улетая, увидел в иллюминатор мост 25 Апреля над Тежу — он есть в моей книге.\n\nРабочие дела я научился отпускать: пока меня нет, почту разбирает и встречи ставит мой [ИИ-секретарь]({trace}). Заодно проверю, справится ли он две недели без меня, — расскажу здесь честно.\n\nКнига — фантастика об острове, на котором я живу четвёртый год. Пятьсот лет назад рыцари Ордена Христа спрятали здесь то, что никто не должен был найти. В моей книге это находят — и смерть тела впервые перестаёт быть концом: человек совершает [«Переход»](https://seedwave.pt/madeira/slovar/#perehod) — [«в Цифру»](https://seedwave.pt/madeira/slovar/#cifra).\n\nДневник — два раза в неделю. Первые главы — в январе."
+   },
+   "pt": {
+    "place": "Funchal → Chéquia",
+    "title": "Parti por duas semanas para escrever um livro sobre a Madeira",
+    "lead": "Tenho 56 anos, sou empresário, e hoje parti por duas semanas para escrever um livro sobre a Madeira.",
+    "body": "Ao partir, vi pela janela a Ponte 25 de Abril sobre o Tejo — ela está no meu livro.\n\nAprendi a largar o trabalho: enquanto estou fora, quem trata do correio e marca as reuniões é o meu [secretário de IA]({trace}). Aproveito para ver se ele aguenta duas semanas sem mim — conto aqui com franqueza.\n\nO livro é ficção científica sobre a ilha onde vivo há quatro anos. Há quinhentos anos, os cavaleiros da Ordem de Cristo esconderam aqui algo que ninguém devia encontrar. No meu livro, alguém encontra — e a morte do corpo deixa, pela primeira vez, de ser o fim: a pessoa faz a [«Passagem»](https://seedwave.pt/madeira/slovar/#perehod) — [«para o Digital»](https://seedwave.pt/madeira/slovar/#cifra).\n\nO diário sai duas vezes por semana. Os primeiros capítulos chegam em janeiro."
+   },
+   "en": {
+    "place": "Funchal → Czechia",
+    "title": "Gone for two weeks to write a book about Madeira",
+    "lead": "I'm 56, I'm an entrepreneur, and today I left for two weeks to write a book about Madeira.",
+    "body": "As we took off, I saw the 25 de Abril Bridge over the Tagus from the window — it is in my book.\n\nI have learned to let work go: while I'm away, my [AI secretary]({trace}) sorts the mail and books the meetings. I'll also find out whether it can manage two weeks without me — and I'll report here honestly.\n\nThe book is science fiction about the island where I have lived for four years. Five hundred years ago, the knights of the Order of Christ hid something here that no one was ever meant to find. In my book, someone finds it — and for the first time the death of the body stops being the end: a person makes the [“Crossing”](https://seedwave.pt/madeira/slovar/#perehod) — [“into the Digital”](https://seedwave.pt/madeira/slovar/#cifra).\n\nThe diary comes out twice a week. The first chapters arrive in January."
+   },
+   "es": {
+    "place": "Funchal → Chequia",
+    "title": "Me fui dos semanas a escribir un libro sobre Madeira",
+    "lead": "Tengo 56 años, soy empresario, y hoy me he ido dos semanas a escribir un libro sobre Madeira.",
+    "body": "Al despegar, vi por la ventanilla el Puente 25 de Abril sobre el Tajo: está en mi libro.\n\nHe aprendido a soltar el trabajo: mientras estoy fuera, mi [secretario de IA]({trace}) ordena el correo y agenda las reuniones. De paso veré si aguanta dos semanas sin mí — lo contaré aquí con franqueza.\n\nEl libro es ciencia ficción sobre la isla donde vivo desde hace cuatro años. Hace quinientos años, los caballeros de la Orden de Cristo escondieron aquí algo que nadie debía encontrar. En mi libro alguien lo encuentra, y la muerte del cuerpo deja, por primera vez, de ser el final: la persona hace el [«Paso»](https://seedwave.pt/madeira/slovar/#perehod) — [«a lo Digital»](https://seedwave.pt/madeira/slovar/#cifra).\n\nEl diario sale dos veces por semana. Los primeros capítulos llegan en enero."
+   },
+   "de": {
+    "place": "Funchal → Tschechien",
+    "title": "Für zwei Wochen weg, um ein Buch über Madeira zu schreiben",
+    "lead": "Ich bin 56, Unternehmer, und heute bin ich für zwei Wochen weggefahren, um ein Buch über Madeira zu schreiben.",
+    "body": "Beim Abflug sah ich aus dem Fenster die Brücke des 25. April über dem Tejo — sie kommt in meinem Buch vor.\n\nIch habe gelernt, die Arbeit loszulassen: Solange ich weg bin, sortiert mein [KI-Sekretär]({trace}) die Post und legt Termine an. Nebenbei finde ich heraus, ob er zwei Wochen ohne mich zurechtkommt — ich berichte hier ehrlich.\n\nDas Buch ist Science-Fiction über die Insel, auf der ich seit vier Jahren lebe. Vor fünfhundert Jahren versteckten die Ritter des Christusordens hier etwas, das niemand finden sollte. In meinem Buch findet es jemand — und der Tod des Körpers ist zum ersten Mal nicht mehr das Ende: Der Mensch vollzieht den [„Übergang“](https://seedwave.pt/madeira/slovar/#perehod) — [„ins Digitale“](https://seedwave.pt/madeira/slovar/#cifra).\n\nDas Tagebuch erscheint zweimal pro Woche. Die ersten Kapitel kommen im Januar."
+   },
+   "photos": [
     {
-      "id": "uehal-pisat-knigu",
-      "date": "2026-11-14",
-      "trace": "https://l.seedwave.pt/?lang={lang}&utm_source=madeira&utm_medium=blog&utm_campaign=diary-2026-11-14",
-      "ru": {
-        "place": "Фуншал → Чехия",
-        "title": "Уехал на две недели писать книгу о Мадейре",
-        "lead": "Мне 56, я предприниматель, и сегодня я уехал на две недели писать книгу о Мадейре.",
-        "body": "Улетая, увидел в иллюминатор мост 25 Апреля над Тежу — он есть в моей книге.\n\nРабочие дела я научился отпускать: пока меня нет, почту разбирает и встречи ставит мой [ИИ-секретарь]({trace}). Заодно проверю, справится ли он две недели без меня, — расскажу здесь честно.\n\nКнига — фантастика об острове, на котором я живу четвёртый год. Пятьсот лет назад рыцари Ордена Христа спрятали здесь то, что никто не должен был найти. В моей книге это находят — и смерть тела впервые перестаёт быть концом: человек совершает [«Переход»](https://seedwave.pt/madeira/slovar/#perehod) — [«в Цифру»](https://seedwave.pt/madeira/slovar/#cifra).\n\nДневник — два раза в неделю. Первые главы — в январе."
-      },
-      "pt": {
-        "place": "Funchal → Chéquia",
-        "title": "Parti por duas semanas para escrever um livro sobre a Madeira",
-        "lead": "Tenho 56 anos, sou empresário, e hoje parti por duas semanas para escrever um livro sobre a Madeira.",
-        "body": "Ao partir, vi pela janela a Ponte 25 de Abril sobre o Tejo — ela está no meu livro.\n\nAprendi a largar o trabalho: enquanto estou fora, quem trata do correio e marca as reuniões é o meu [secretário de IA]({trace}). Aproveito para ver se ele aguenta duas semanas sem mim — conto aqui com franqueza.\n\nO livro é ficção científica sobre a ilha onde vivo há quatro anos. Há quinhentos anos, os cavaleiros da Ordem de Cristo esconderam aqui algo que ninguém devia encontrar. No meu livro, alguém encontra — e a morte do corpo deixa, pela primeira vez, de ser o fim: a pessoa faz a [«Passagem»](https://seedwave.pt/madeira/slovar/#perehod) — [«para o Digital»](https://seedwave.pt/madeira/slovar/#cifra).\n\nO diário sai duas vezes por semana. Os primeiros capítulos chegam em janeiro."
-      },
-      "en": {
-        "place": "Funchal → Czechia",
-        "title": "Gone for two weeks to write a book about Madeira",
-        "lead": "I'm 56, I'm an entrepreneur, and today I left for two weeks to write a book about Madeira.",
-        "body": "As we took off, I saw the 25 de Abril Bridge over the Tagus from the window — it is in my book.\n\nI have learned to let work go: while I'm away, my [AI secretary]({trace}) sorts the mail and books the meetings. I'll also find out whether it can manage two weeks without me — and I'll report here honestly.\n\nThe book is science fiction about the island where I have lived for four years. Five hundred years ago, the knights of the Order of Christ hid something here that no one was ever meant to find. In my book, someone finds it — and for the first time the death of the body stops being the end: a person makes the [“Crossing”](https://seedwave.pt/madeira/slovar/#perehod) — [“into the Digital”](https://seedwave.pt/madeira/slovar/#cifra).\n\nThe diary comes out twice a week. The first chapters arrive in January."
-      },
-      "es": {
-        "place": "Funchal → Chequia",
-        "title": "Me fui dos semanas a escribir un libro sobre Madeira",
-        "lead": "Tengo 56 años, soy empresario, y hoy me he ido dos semanas a escribir un libro sobre Madeira.",
-        "body": "Al despegar, vi por la ventanilla el Puente 25 de Abril sobre el Tajo: está en mi libro.\n\nHe aprendido a soltar el trabajo: mientras estoy fuera, mi [secretario de IA]({trace}) ordena el correo y agenda las reuniones. De paso veré si aguanta dos semanas sin mí — lo contaré aquí con franqueza.\n\nEl libro es ciencia ficción sobre la isla donde vivo desde hace cuatro años. Hace quinientos años, los caballeros de la Orden de Cristo escondieron aquí algo que nadie debía encontrar. En mi libro alguien lo encuentra, y la muerte del cuerpo deja, por primera vez, de ser el final: la persona hace el [«Paso»](https://seedwave.pt/madeira/slovar/#perehod) — [«a lo Digital»](https://seedwave.pt/madeira/slovar/#cifra).\n\nEl diario sale dos veces por semana. Los primeros capítulos llegan en enero."
-      },
-      "de": {
-        "place": "Funchal → Tschechien",
-        "title": "Für zwei Wochen weg, um ein Buch über Madeira zu schreiben",
-        "lead": "Ich bin 56, Unternehmer, und heute bin ich für zwei Wochen weggefahren, um ein Buch über Madeira zu schreiben.",
-        "body": "Beim Abflug sah ich aus dem Fenster die Brücke des 25. April über dem Tejo — sie kommt in meinem Buch vor.\n\nIch habe gelernt, die Arbeit loszulassen: Solange ich weg bin, sortiert mein [KI-Sekretär]({trace}) die Post und legt Termine an. Nebenbei finde ich heraus, ob er zwei Wochen ohne mich zurechtkommt — ich berichte hier ehrlich.\n\nDas Buch ist Science-Fiction über die Insel, auf der ich seit vier Jahren lebe. Vor fünfhundert Jahren versteckten die Ritter des Christusordens hier etwas, das niemand finden sollte. In meinem Buch findet es jemand — und der Tod des Körpers ist zum ersten Mal nicht mehr das Ende: Der Mensch vollzieht den [„Übergang“](https://seedwave.pt/madeira/slovar/#perehod) — [„ins Digitale“](https://seedwave.pt/madeira/slovar/#cifra).\n\nDas Tagebuch erscheint zweimal pro Woche. Die ersten Kapitel kommen im Januar."
-      },
-      "photos": [
-        {
-          "src": "img/2026-11-14-lisboa.jpg",
-          "alt": {
-            "ru": "Лиссабон и мост 25 Апреля из иллюминатора на закате",
-            "pt": "Lisboa e a Ponte 25 de Abril vistas do avião ao pôr do sol",
-            "en": "Lisbon and the 25 de Abril Bridge from the plane at sunset",
-            "es": "Lisboa y el Puente 25 de Abril desde el avión al atardecer",
-            "de": "Lissabon und die Brücke des 25. April aus dem Flugzeug bei Sonnenuntergang"
-          }
-        }
-      ]
-    },
-    {
-      "id": "madeiru-vidno-izdaleka",
-      "date": "2026-11-18",
-      "photos": [
-        {
-          "src": "img/2026-11-18-1-kolonada.jpg",
-          "alt": {
-            "ru": "Колоннада Марианских Лазней в пасмурный ноябрьский день",
-            "pt": "A colunata de Mariánské Lázně num dia nublado de novembro",
-            "en": "The Mariánské Lázně colonnade on a cloudy November day",
-            "es": "La columnata de Mariánské Lázně en un día nublado de noviembre",
-            "de": "Die Kolonnade von Marienbad an einem trüben Novembertag"
-          }
-        },
-        {
-          "src": "img/2026-11-18-2-bassejn.jpg",
-          "alt": {
-            "ru": "Старинный бассейн с колоннами и расписными сводами",
-            "pt": "Piscina antiga com colunas e abóbadas pintadas",
-            "en": "An old pool with columns and painted vaults",
-            "es": "Piscina antigua con columnas y bóvedas pintadas",
-            "de": "Altes Bad mit Säulen und bemalten Gewölben"
-          }
-        },
-        {
-          "src": "img/2026-11-18-3-kafe.jpg",
-          "alt": {
-            "ru": "Автор в венском кафе: чай и штрудель",
-            "pt": "O autor num café vienense: chá e strudel",
-            "en": "The author in a Viennese café: tea and strudel",
-            "es": "El autor en un café vienés: té y strudel",
-            "de": "Der Autor im Wiener Café: Tee und Strudel"
-          }
-        },
-        {
-          "src": "img/2026-11-18-4-park.jpg",
-          "alt": {
-            "ru": "Осенний парк и белая скамейка",
-            "pt": "Parque de outono e um banco branco",
-            "en": "Autumn park and a white bench",
-            "es": "Parque otoñal y un banco blanco",
-            "de": "Herbstpark mit weißer Bank"
-          }
-        }
-      ],
-      "ru": {
-        "place": "Марианские Лазне",
-        "title": "Мадейра издалека",
-        "lead": "Я пишу эти строки в Марианских Лазнях, бывшем Мариенбаде.",
-        "body": "Красивый, ухоженный город: парк с огромными деревьями, подстриженные аллеи, скамейки, целебная вода, которую пьют неспешно и с удовольствием. Здесь тихо восстанавливают старое, и всё дышит историей.\n\nМне здесь хорошо. Но уже в первые дни я понял: этот город живёт своим прошлым. Здесь отдыхают, успокаиваются, принимают жизнь такой, какая она есть. Молодёжи почти не видно, а о технологиях местные говорить не хотят.\n\nИ вдруг я остро почувствовал Мадейру. Остров с не менее древней историей, но эта история не убаюкивает, а толкает вперёд. На Мадейре хочется строить и создавать. Там я чувствую энергию будущего.\n\nПохоже, тамплиеры до Мариенбада так и не добрались…"
-      },
-      "pt": {
-        "place": "Mariánské Lázně",
-        "title": "A Madeira vista de longe",
-        "lead": "Escrevo estas linhas em Mariánské Lázně, a antiga Marienbad.",
-        "body": "Uma cidade bonita e cuidada: um parque com árvores enormes, alamedas aparadas, bancos, água medicinal que se bebe devagar e com prazer. Aqui restaura-se o antigo sem pressa, e tudo respira história.\n\nSinto-me bem aqui. Mas logo nos primeiros dias percebi: esta cidade vive do seu passado. Aqui descansa-se, acalma-se, aceita-se a vida tal como ela é. Quase não se veem jovens, e os moradores não querem falar de tecnologia.\n\nE de repente senti a Madeira com toda a força. Uma ilha com uma história não menos antiga — mas uma história que não embala, empurra para a frente. Na Madeira apetece construir e criar. Lá sinto a energia do futuro.\n\nPelos vistos, os Templários nunca chegaram a Marienbad…"
-      },
-      "en": {
-        "place": "Mariánské Lázně",
-        "title": "Madeira from afar",
-        "lead": "I'm writing these lines in Mariánské Lázně, the old Marienbad.",
-        "body": "A beautiful, well-kept town: a park with enormous trees, trimmed avenues, benches, healing water that people sip slowly and with pleasure. Old buildings are quietly restored here, and everything breathes history.\n\nI like it here. But within the first days I realised: this town lives off its past. People come here to rest, to calm down, to accept life as it is. You hardly see any young people, and the locals have no wish to talk about technology.\n\nAnd suddenly I felt Madeira sharply. An island with just as old a history — but a history that doesn't lull you to sleep, it pushes you forward. On Madeira you want to build and create. There I feel the energy of the future.\n\nLooks like the Templars never made it to Marienbad…"
-      },
-      "es": {
-        "place": "Mariánské Lázně",
-        "title": "Madeira desde lejos",
-        "lead": "Escribo estas líneas en Mariánské Lázně, la antigua Marienbad.",
-        "body": "Una ciudad bonita y cuidada: un parque con árboles enormes, paseos bien recortados, bancos, agua medicinal que se bebe despacio y con gusto. Aquí se restaura lo antiguo sin prisa, y todo respira historia.\n\nAquí me siento bien. Pero ya en los primeros días comprendí: esta ciudad vive de su pasado. Aquí se descansa, uno se calma, se acepta la vida tal como es. Apenas se ven jóvenes, y a los vecinos no les interesa hablar de tecnología.\n\nY de pronto sentí Madeira con fuerza. Una isla con una historia no menos antigua, pero una historia que no adormece, sino que empuja hacia delante. En Madeira dan ganas de construir y crear. Allí siento la energía del futuro.\n\nParece que los templarios nunca llegaron a Marienbad…"
-      },
-      "de": {
-        "place": "Marienbad",
-        "title": "Madeira aus der Ferne",
-        "lead": "Ich schreibe diese Zeilen in Mariánské Lázně, dem alten Marienbad.",
-        "body": "Eine schöne, gepflegte Stadt: ein Park mit riesigen Bäumen, gestutzte Alleen, Bänke, Heilwasser, das man langsam und mit Genuss trinkt. Hier wird das Alte in Ruhe restauriert, und alles atmet Geschichte.\n\nMir gefällt es hier. Doch schon in den ersten Tagen habe ich verstanden: Diese Stadt lebt von ihrer Vergangenheit. Man ruht sich aus, kommt zur Ruhe, nimmt das Leben, wie es ist. Junge Leute sieht man kaum, und über Technik möchten die Einheimischen nicht reden.\n\nUnd plötzlich habe ich Madeira ganz deutlich gespürt. Eine Insel mit nicht weniger alter Geschichte — aber diese Geschichte wiegt nicht in den Schlaf, sie treibt nach vorn. Auf Madeira möchte man bauen und erschaffen. Dort spüre ich die Energie der Zukunft.\n\nDie Templer haben es wohl nie bis Marienbad geschafft…"
-      }
-    },
-    {
-      "id": "otkryl-biblioteku",
-      "date": "2026-11-20",
-      "photos": [
-        {
-          "src": "img/2026-11-20-1-kolonada-noch.jpg",
-          "alt": {
-            "ru": "Колоннада Марианских Лазней ночью, огни отражаются в мокрой брусчатке",
-            "pt": "A colunata de Mariánské Lázně à noite, as luzes refletidas na calçada molhada",
-            "en": "The Mariánské Lázně colonnade at night, lights reflected in the wet paving",
-            "es": "La columnata de Mariánské Lázně de noche, las luces reflejadas en el empedrado mojado",
-            "de": "Die Kolonnade von Marienbad bei Nacht, Lichter spiegeln sich im nassen Pflaster"
-          }
-        },
-        {
-          "src": "img/2026-11-20-2-fontan.jpg",
-          "alt": {
-            "ru": "Фонтан в огнях на пустой площади под дождём",
-            "pt": "Fonte iluminada numa praça vazia, à chuva",
-            "en": "A fountain in lights on an empty square in the rain",
-            "es": "Fuente iluminada en una plaza vacía bajo la lluvia",
-            "de": "Beleuchteter Brunnen auf einem leeren Platz im Regen"
-          }
-        },
-        {
-          "src": "img/2026-11-20-3-koridor.jpg",
-          "alt": {
-            "ru": "Тихий коридор старого курортного дома: красные кожаные диваны",
-            "pt": "Corredor silencioso de uma antiga casa termal: sofás de couro vermelho",
-            "en": "A quiet corridor in an old spa house: red leather sofas",
-            "es": "Pasillo silencioso de un antiguo balneario: sofás de cuero rojo",
-            "de": "Stiller Flur in einem alten Kurhaus: rote Ledersofas"
-          }
-        },
-        {
-          "src": "img/2026-11-20-4-podezd.jpg",
-          "alt": {
-            "ru": "Подъезд старого дома под фонарём, мокрая улица уходит вниз",
-            "pt": "Entrada de um prédio antigo sob um candeeiro, a rua molhada a descer",
-            "en": "The doorway of an old house under a street lamp, the wet street running downhill",
-            "es": "Portal de un edificio antiguo bajo una farola, la calle mojada cuesta abajo",
-            "de": "Eingang eines alten Hauses unter einer Laterne, die nasse Straße führt bergab"
-          }
-        }
-      ],
-      "ru": {
-        "place": "Марианские Лазне",
-        "title": "Открыл Библиотеку",
-        "lead": "В Марианских Лазнях дождь.",
-        "body": "К вечеру город пустеет — остаются фонари, мокрая брусчатка и время на книги. Лучших условий не придумать.\n\nВчера запустил Библиотеку — первый прототип. Это моя полка: что читаю и смотрю, пока пишу книгу, и что из этого взял. Сверху сейчас лежат «Война старика» Скальци, «Землянин» Злотникова, «Линия грёз» Лукьяненко, фильм «Она» и «Самый богатый человек в Вавилоне». К каждой вещи — мои строки: почему она на полке и какую мысль я унёс.\n\nПолка живая: по мере работы над книгой она пополняется, а стопка перекладывается. [Заглянуть на полку](https://seedwave.pt/biblioteca/ru/?utm_source=madeira&utm_medium=blog&utm_campaign=diary-2026-11-20)\n\nНа выходные — в Германию: Нюрнберг и окрестности. Тамплиеры свои книги спрятали так, что их ищут до сих пор. Свои я решил положить на видное место. А свежие идеи поищу в старых стенах нюрнбергской крепости — под нюрнбергские сосиски и копчёное пиво монахов. Метод не научный, но проверен веками."
-      },
-      "pt": {
-        "place": "Mariánské Lázně",
-        "title": "Abri a Biblioteca",
-        "lead": "Em Mariánské Lázně chove.",
-        "body": "Ao fim da tarde a cidade esvazia-se — ficam os candeeiros, a calçada molhada e tempo para os livros. Não há melhores condições.\n\nOntem lancei a Biblioteca — um primeiro protótipo. É a minha estante: o que leio e vejo enquanto escrevo o livro, e o que tirei daí. No topo estão agora «Old Man’s War», de John Scalzi, «Zemlyanin (O Terráqueo)», de Roman Zlotnikov, «A Linha dos Sonhos», de Sergei Lukyanenko, o filme «Her» e «O Homem Mais Rico da Babilónia». Em cada obra — umas linhas minhas: porque está na estante e que ideia levei comigo.\n\nA estante está viva: à medida que o livro avança, vai-se enchendo, e a pilha muda de ordem. [Espreitar a estante](https://seedwave.pt/biblioteca/?utm_source=madeira&utm_medium=blog&utm_campaign=diary-2026-11-20)\n\nNo fim de semana — Alemanha: Nuremberga e arredores. Os Templários esconderam os seus livros tão bem que ainda hoje andam à procura deles. Os meus, decidi pô-los à vista. E as ideias frescas vou procurá-las nas velhas muralhas do castelo de Nuremberga — com salsichas de Nuremberga e a cerveja fumada dos monges. O método não é científico, mas está testado há séculos."
-      },
-      "en": {
-        "place": "Mariánské Lázně",
-        "title": "I opened the Library",
-        "lead": "It is raining in Mariánské Lázně.",
-        "body": "By evening the town empties — what remains is street lamps, wet paving and time for books. You could not ask for better conditions.\n\nYesterday I launched the Library — a first prototype. It is my shelf: what I read and watch while writing the book, and what I took from it. On top right now are “Old Man’s War” by John Scalzi, “Zemlyanin (The Earthling)” by Roman Zlotnikov, “Line of Dreams” by Sergei Lukyanenko, the film “Her” and “The Richest Man in Babylon”. Each one comes with a few lines of mine: why it is on the shelf and which thought I carried away.\n\nThe shelf is alive: as the book moves on, it fills up and the stack gets reshuffled. [Take a look at the shelf](https://seedwave.pt/biblioteca/en/?utm_source=madeira&utm_medium=blog&utm_campaign=diary-2026-11-20)\n\nThis weekend — Germany: Nuremberg and around. The Templars hid their books so well that people are still looking for them. I decided to put mine where everyone can see them. As for fresh ideas, I will look for them in the old walls of Nuremberg Castle — over Nuremberg sausages and the monks’ smoked beer. The method is not scientific, but it has been tested for centuries."
-      },
-      "es": {
-        "place": "Mariánské Lázně",
-        "title": "He abierto la Biblioteca",
-        "lead": "En Mariánské Lázně llueve.",
-        "body": "Al caer la tarde la ciudad se vacía: quedan las farolas, el empedrado mojado y tiempo para los libros. No se pueden pedir mejores condiciones.\n\nAyer puse en marcha la Biblioteca, un primer prototipo. Es mi estante: lo que leo y veo mientras escribo el libro, y lo que saqué de ello. Arriba están ahora «La vieja guardia», de John Scalzi, «Zemlyanin (El terrícola)», de Roman Zlotnikov, «La línea de los sueños», de Sergei Lukyanenko, la película «Her» y «El hombre más rico de Babilonia». En cada obra, unas líneas mías: por qué está en el estante y qué idea me llevé.\n\nEl estante está vivo: a medida que avanza el libro se va llenando, y la pila cambia de orden. [Asomarse al estante](https://seedwave.pt/biblioteca/es/?utm_source=madeira&utm_medium=blog&utm_campaign=diary-2026-11-20)\n\nEl fin de semana, Alemania: Núremberg y alrededores. Los templarios escondieron sus libros tan bien que todavía los siguen buscando. Los míos he decidido dejarlos a la vista. Y las ideas frescas las buscaré entre los viejos muros del castillo de Núremberg, con salchichas de Núremberg y la cerveza ahumada de los monjes. El método no es científico, pero lleva siglos probado."
-      },
-      "de": {
-        "place": "Marienbad",
-        "title": "Die Bibliothek ist eröffnet",
-        "lead": "In Marienbad regnet es.",
-        "body": "Gegen Abend leert sich die Stadt — es bleiben Laternen, nasses Pflaster und Zeit für Bücher. Bessere Bedingungen gibt es nicht.\n\nGestern habe ich die Bibliothek gestartet — ein erster Prototyp. Es ist mein Regal: was ich lese und schaue, während ich das Buch schreibe, und was ich daraus mitnehme. Ganz oben liegen jetzt „Krieg der Klone“ von John Scalzi, „Zemljanin (Der Erdling)“ von Roman Zlotnikov, „Die Linie der Träume“ von Sergei Lukyanenko, der Film „Her“ und „Der reichste Mann von Babylon“. Zu jedem Werk ein paar Zeilen von mir: warum es im Regal steht und welchen Gedanken ich mitgenommen habe.\n\nDas Regal lebt: Mit der Arbeit am Buch füllt es sich, und der Stapel wird umgeschichtet. [Einen Blick ins Regal werfen](https://seedwave.pt/biblioteca/de/?utm_source=madeira&utm_medium=blog&utm_campaign=diary-2026-11-20)\n\nAm Wochenende geht es nach Deutschland: Nürnberg und Umgebung. Die Templer haben ihre Bücher so gut versteckt, dass man sie bis heute sucht. Meine lege ich lieber offen hin. Und frische Ideen suche ich in den alten Mauern der Nürnberger Burg — bei Nürnberger Bratwürsten und dem Rauchbier der Mönche. Die Methode ist nicht wissenschaftlich, aber seit Jahrhunderten erprobt."
-      }
+     "src": "img/2026-11-14-lisboa.jpg",
+     "alt": {
+      "ru": "Лиссабон и мост 25 Апреля из иллюминатора на закате",
+      "pt": "Lisboa e a Ponte 25 de Abril vistas do avião ao pôr do sol",
+      "en": "Lisbon and the 25 de Abril Bridge from the plane at sunset",
+      "es": "Lisboa y el Puente 25 de Abril desde el avión al atardecer",
+      "de": "Lissabon und die Brücke des 25. April aus dem Flugzeug bei Sonnenuntergang"
+     }
     }
-  ]
+   ]
+  },
+  {
+   "id": "madeiru-vidno-izdaleka",
+   "date": "2026-11-18",
+   "photos": [
+    {
+     "src": "img/2026-11-18-1-kolonada.jpg",
+     "alt": {
+      "ru": "Колоннада Марианских Лазней в пасмурный ноябрьский день",
+      "pt": "A colunata de Mariánské Lázně num dia nublado de novembro",
+      "en": "The Mariánské Lázně colonnade on a cloudy November day",
+      "es": "La columnata de Mariánské Lázně en un día nublado de noviembre",
+      "de": "Die Kolonnade von Marienbad an einem trüben Novembertag"
+     }
+    },
+    {
+     "src": "img/2026-11-18-2-bassejn.jpg",
+     "alt": {
+      "ru": "Старинный бассейн с колоннами и расписными сводами",
+      "pt": "Piscina antiga com colunas e abóbadas pintadas",
+      "en": "An old pool with columns and painted vaults",
+      "es": "Piscina antigua con columnas y bóvedas pintadas",
+      "de": "Altes Bad mit Säulen und bemalten Gewölben"
+     }
+    },
+    {
+     "src": "img/2026-11-18-3-kafe.jpg",
+     "alt": {
+      "ru": "Автор в венском кафе: чай и штрудель",
+      "pt": "O autor num café vienense: chá e strudel",
+      "en": "The author in a Viennese café: tea and strudel",
+      "es": "El autor en un café vienés: té y strudel",
+      "de": "Der Autor im Wiener Café: Tee und Strudel"
+     }
+    },
+    {
+     "src": "img/2026-11-18-4-park.jpg",
+     "alt": {
+      "ru": "Осенний парк и белая скамейка",
+      "pt": "Parque de outono e um banco branco",
+      "en": "Autumn park and a white bench",
+      "es": "Parque otoñal y un banco blanco",
+      "de": "Herbstpark mit weißer Bank"
+     }
+    }
+   ],
+   "ru": {
+    "place": "Марианские Лазне",
+    "title": "Мадейра издалека",
+    "lead": "Я пишу эти строки в Марианских Лазнях, бывшем Мариенбаде.",
+    "body": "Красивый, ухоженный город: парк с огромными деревьями, подстриженные аллеи, скамейки, целебная вода, которую пьют неспешно и с удовольствием. Здесь тихо восстанавливают старое, и всё дышит историей.\n\nМне здесь хорошо. Но уже в первые дни я понял: этот город живёт своим прошлым. Здесь отдыхают, успокаиваются, принимают жизнь такой, какая она есть. Молодёжи почти не видно, а о технологиях местные говорить не хотят.\n\nИ вдруг я остро почувствовал Мадейру. Остров с не менее древней историей, но эта история не убаюкивает, а толкает вперёд. На Мадейре хочется строить и создавать. Там я чувствую энергию будущего.\n\nПохоже, тамплиеры до Мариенбада так и не добрались…"
+   },
+   "pt": {
+    "place": "Mariánské Lázně",
+    "title": "A Madeira vista de longe",
+    "lead": "Escrevo estas linhas em Mariánské Lázně, a antiga Marienbad.",
+    "body": "Uma cidade bonita e cuidada: um parque com árvores enormes, alamedas aparadas, bancos, água medicinal que se bebe devagar e com prazer. Aqui restaura-se o antigo sem pressa, e tudo respira história.\n\nSinto-me bem aqui. Mas logo nos primeiros dias percebi: esta cidade vive do seu passado. Aqui descansa-se, acalma-se, aceita-se a vida tal como ela é. Quase não se veem jovens, e os moradores não querem falar de tecnologia.\n\nE de repente senti a Madeira com toda a força. Uma ilha com uma história não menos antiga — mas uma história que não embala, empurra para a frente. Na Madeira apetece construir e criar. Lá sinto a energia do futuro.\n\nPelos vistos, os Templários nunca chegaram a Marienbad…"
+   },
+   "en": {
+    "place": "Mariánské Lázně",
+    "title": "Madeira from afar",
+    "lead": "I'm writing these lines in Mariánské Lázně, the old Marienbad.",
+    "body": "A beautiful, well-kept town: a park with enormous trees, trimmed avenues, benches, healing water that people sip slowly and with pleasure. Old buildings are quietly restored here, and everything breathes history.\n\nI like it here. But within the first days I realised: this town lives off its past. People come here to rest, to calm down, to accept life as it is. You hardly see any young people, and the locals have no wish to talk about technology.\n\nAnd suddenly I felt Madeira sharply. An island with just as old a history — but a history that doesn't lull you to sleep, it pushes you forward. On Madeira you want to build and create. There I feel the energy of the future.\n\nLooks like the Templars never made it to Marienbad…"
+   },
+   "es": {
+    "place": "Mariánské Lázně",
+    "title": "Madeira desde lejos",
+    "lead": "Escribo estas líneas en Mariánské Lázně, la antigua Marienbad.",
+    "body": "Una ciudad bonita y cuidada: un parque con árboles enormes, paseos bien recortados, bancos, agua medicinal que se bebe despacio y con gusto. Aquí se restaura lo antiguo sin prisa, y todo respira historia.\n\nAquí me siento bien. Pero ya en los primeros días comprendí: esta ciudad vive de su pasado. Aquí se descansa, uno se calma, se acepta la vida tal como es. Apenas se ven jóvenes, y a los vecinos no les interesa hablar de tecnología.\n\nY de pronto sentí Madeira con fuerza. Una isla con una historia no menos antigua, pero una historia que no adormece, sino que empuja hacia delante. En Madeira dan ganas de construir y crear. Allí siento la energía del futuro.\n\nParece que los templarios nunca llegaron a Marienbad…"
+   },
+   "de": {
+    "place": "Marienbad",
+    "title": "Madeira aus der Ferne",
+    "lead": "Ich schreibe diese Zeilen in Mariánské Lázně, dem alten Marienbad.",
+    "body": "Eine schöne, gepflegte Stadt: ein Park mit riesigen Bäumen, gestutzte Alleen, Bänke, Heilwasser, das man langsam und mit Genuss trinkt. Hier wird das Alte in Ruhe restauriert, und alles atmet Geschichte.\n\nMir gefällt es hier. Doch schon in den ersten Tagen habe ich verstanden: Diese Stadt lebt von ihrer Vergangenheit. Man ruht sich aus, kommt zur Ruhe, nimmt das Leben, wie es ist. Junge Leute sieht man kaum, und über Technik möchten die Einheimischen nicht reden.\n\nUnd plötzlich habe ich Madeira ganz deutlich gespürt. Eine Insel mit nicht weniger alter Geschichte — aber diese Geschichte wiegt nicht in den Schlaf, sie treibt nach vorn. Auf Madeira möchte man bauen und erschaffen. Dort spüre ich die Energie der Zukunft.\n\nDie Templer haben es wohl nie bis Marienbad geschafft…"
+   }
+  },
+  {
+   "id": "otkryl-biblioteku",
+   "date": "2026-11-20",
+   "photos": [
+    {
+     "src": "img/2026-11-20-1-kolonada-noch.jpg",
+     "alt": {
+      "ru": "Колоннада Марианских Лазней ночью, огни отражаются в мокрой брусчатке",
+      "pt": "A colunata de Mariánské Lázně à noite, as luzes refletidas na calçada molhada",
+      "en": "The Mariánské Lázně colonnade at night, lights reflected in the wet paving",
+      "es": "La columnata de Mariánské Lázně de noche, las luces reflejadas en el empedrado mojado",
+      "de": "Die Kolonnade von Marienbad bei Nacht, Lichter spiegeln sich im nassen Pflaster"
+     }
+    },
+    {
+     "src": "img/2026-11-20-2-fontan.jpg",
+     "alt": {
+      "ru": "Фонтан в огнях на пустой площади под дождём",
+      "pt": "Fonte iluminada numa praça vazia, à chuva",
+      "en": "A fountain in lights on an empty square in the rain",
+      "es": "Fuente iluminada en una plaza vacía bajo la lluvia",
+      "de": "Beleuchteter Brunnen auf einem leeren Platz im Regen"
+     }
+    },
+    {
+     "src": "img/2026-11-20-3-koridor.jpg",
+     "alt": {
+      "ru": "Тихий коридор старого курортного дома: красные кожаные диваны",
+      "pt": "Corredor silencioso de uma antiga casa termal: sofás de couro vermelho",
+      "en": "A quiet corridor in an old spa house: red leather sofas",
+      "es": "Pasillo silencioso de un antiguo balneario: sofás de cuero rojo",
+      "de": "Stiller Flur in einem alten Kurhaus: rote Ledersofas"
+     }
+    },
+    {
+     "src": "img/2026-11-20-4-podezd.jpg",
+     "alt": {
+      "ru": "Подъезд старого дома под фонарём, мокрая улица уходит вниз",
+      "pt": "Entrada de um prédio antigo sob um candeeiro, a rua molhada a descer",
+      "en": "The doorway of an old house under a street lamp, the wet street running downhill",
+      "es": "Portal de un edificio antiguo bajo una farola, la calle mojada cuesta abajo",
+      "de": "Eingang eines alten Hauses unter einer Laterne, die nasse Straße führt bergab"
+     }
+    }
+   ],
+   "ru": {
+    "place": "Марианские Лазне",
+    "title": "Открыл Библиотеку",
+    "lead": "В Марианских Лазнях дождь.",
+    "body": "К вечеру город пустеет — остаются фонари, мокрая брусчатка и время на книги. Лучших условий не придумать.\n\nВчера запустил Библиотеку — первый прототип. Это моя полка: что читаю и смотрю, пока пишу книгу, и что из этого взял. Сверху сейчас лежат «Война старика» Скальци, «Землянин» Злотникова, «Линия грёз» Лукьяненко, фильм «Она» и «Самый богатый человек в Вавилоне». К каждой вещи — мои строки: почему она на полке и какую мысль я унёс.\n\nПолка живая: по мере работы над книгой она пополняется, а стопка перекладывается. [Заглянуть на полку](https://seedwave.pt/biblioteca/ru/?utm_source=madeira&utm_medium=blog&utm_campaign=diary-2026-11-20)\n\nНа выходные — в Германию: Нюрнберг и окрестности. Тамплиеры свои книги спрятали так, что их ищут до сих пор. Свои я решил положить на видное место. А свежие идеи поищу в старых стенах нюрнбергской крепости — под нюрнбергские сосиски и копчёное пиво монахов. Метод не научный, но проверен веками."
+   },
+   "pt": {
+    "place": "Mariánské Lázně",
+    "title": "Abri a Biblioteca",
+    "lead": "Em Mariánské Lázně chove.",
+    "body": "Ao fim da tarde a cidade esvazia-se — ficam os candeeiros, a calçada molhada e tempo para os livros. Não há melhores condições.\n\nOntem lancei a Biblioteca — um primeiro protótipo. É a minha estante: o que leio e vejo enquanto escrevo o livro, e o que tirei daí. No topo estão agora «Old Man’s War», de John Scalzi, «Zemlyanin (O Terráqueo)», de Roman Zlotnikov, «A Linha dos Sonhos», de Sergei Lukyanenko, o filme «Her» e «O Homem Mais Rico da Babilónia». Em cada obra — umas linhas minhas: porque está na estante e que ideia levei comigo.\n\nA estante está viva: à medida que o livro avança, vai-se enchendo, e a pilha muda de ordem. [Espreitar a estante](https://seedwave.pt/biblioteca/?utm_source=madeira&utm_medium=blog&utm_campaign=diary-2026-11-20)\n\nNo fim de semana — Alemanha: Nuremberga e arredores. Os Templários esconderam os seus livros tão bem que ainda hoje andam à procura deles. Os meus, decidi pô-los à vista. E as ideias frescas vou procurá-las nas velhas muralhas do castelo de Nuremberga — com salsichas de Nuremberga e a cerveja fumada dos monges. O método não é científico, mas está testado há séculos."
+   },
+   "en": {
+    "place": "Mariánské Lázně",
+    "title": "I opened the Library",
+    "lead": "It is raining in Mariánské Lázně.",
+    "body": "By evening the town empties — what remains is street lamps, wet paving and time for books. You could not ask for better conditions.\n\nYesterday I launched the Library — a first prototype. It is my shelf: what I read and watch while writing the book, and what I took from it. On top right now are “Old Man’s War” by John Scalzi, “Zemlyanin (The Earthling)” by Roman Zlotnikov, “Line of Dreams” by Sergei Lukyanenko, the film “Her” and “The Richest Man in Babylon”. Each one comes with a few lines of mine: why it is on the shelf and which thought I carried away.\n\nThe shelf is alive: as the book moves on, it fills up and the stack gets reshuffled. [Take a look at the shelf](https://seedwave.pt/biblioteca/en/?utm_source=madeira&utm_medium=blog&utm_campaign=diary-2026-11-20)\n\nThis weekend — Germany: Nuremberg and around. The Templars hid their books so well that people are still looking for them. I decided to put mine where everyone can see them. As for fresh ideas, I will look for them in the old walls of Nuremberg Castle — over Nuremberg sausages and the monks’ smoked beer. The method is not scientific, but it has been tested for centuries."
+   },
+   "es": {
+    "place": "Mariánské Lázně",
+    "title": "He abierto la Biblioteca",
+    "lead": "En Mariánské Lázně llueve.",
+    "body": "Al caer la tarde la ciudad se vacía: quedan las farolas, el empedrado mojado y tiempo para los libros. No se pueden pedir mejores condiciones.\n\nAyer puse en marcha la Biblioteca, un primer prototipo. Es mi estante: lo que leo y veo mientras escribo el libro, y lo que saqué de ello. Arriba están ahora «La vieja guardia», de John Scalzi, «Zemlyanin (El terrícola)», de Roman Zlotnikov, «La línea de los sueños», de Sergei Lukyanenko, la película «Her» y «El hombre más rico de Babilonia». En cada obra, unas líneas mías: por qué está en el estante y qué idea me llevé.\n\nEl estante está vivo: a medida que avanza el libro se va llenando, y la pila cambia de orden. [Asomarse al estante](https://seedwave.pt/biblioteca/es/?utm_source=madeira&utm_medium=blog&utm_campaign=diary-2026-11-20)\n\nEl fin de semana, Alemania: Núremberg y alrededores. Los templarios escondieron sus libros tan bien que todavía los siguen buscando. Los míos he decidido dejarlos a la vista. Y las ideas frescas las buscaré entre los viejos muros del castillo de Núremberg, con salchichas de Núremberg y la cerveza ahumada de los monjes. El método no es científico, pero lleva siglos probado."
+   },
+   "de": {
+    "place": "Marienbad",
+    "title": "Die Bibliothek ist eröffnet",
+    "lead": "In Marienbad regnet es.",
+    "body": "Gegen Abend leert sich die Stadt — es bleiben Laternen, nasses Pflaster und Zeit für Bücher. Bessere Bedingungen gibt es nicht.\n\nGestern habe ich die Bibliothek gestartet — ein erster Prototyp. Es ist mein Regal: was ich lese und schaue, während ich das Buch schreibe, und was ich daraus mitnehme. Ganz oben liegen jetzt „Krieg der Klone“ von John Scalzi, „Zemljanin (Der Erdling)“ von Roman Zlotnikov, „Die Linie der Träume“ von Sergei Lukyanenko, der Film „Her“ und „Der reichste Mann von Babylon“. Zu jedem Werk ein paar Zeilen von mir: warum es im Regal steht und welchen Gedanken ich mitgenommen habe.\n\nDas Regal lebt: Mit der Arbeit am Buch füllt es sich, und der Stapel wird umgeschichtet. [Einen Blick ins Regal werfen](https://seedwave.pt/biblioteca/de/?utm_source=madeira&utm_medium=blog&utm_campaign=diary-2026-11-20)\n\nAm Wochenende geht es nach Deutschland: Nürnberg und Umgebung. Die Templer haben ihre Bücher so gut versteckt, dass man sie bis heute sucht. Meine lege ich lieber offen hin. Und frische Ideen suche ich in den alten Mauern der Nürnberger Burg — bei Nürnberger Bratwürsten und dem Rauchbier der Mönche. Die Methode ist nicht wissenschaftlich, aber seit Jahrhunderten erprobt."
+   }
+  },
+  {
+   "id": "otchet-nyurnberg",
+   "date": "2026-11-22",
+   "ru": {
+    "place": "Нюрнберг",
+    "title": "Отчёт об эксперименте",
+    "lead": "В прошлой записи я обещал искать свежие идеи в Нюрнберге — под сосиски и пиво. Отчитываюсь.",
+    "body": "Метод сработал, но не сразу. Нюрнбергские сосиски маленькие, с мизинец, поэтому меньше шести на тарелку не кладут. Потом пришла утка с кнедлем и красной капустой, потом — пиво. Идеи, честно скажу, пришли не первыми. Первым пришёл сон.\n\nДо крепости я так и не дошёл. Она стоит почти тысячу лет — подождёт и меня.\n\nЗато город сам вышел навстречу. Госпиталь Святого Духа стоит прямо в реке, на арках. Над площадью — Белая башня, а за ней крутится колесо обозрения. Готика и аттракцион рядом, и никто не спорит.\n\nНад торговой улицей уже висит золотой ангел и надпись Christkindlesmarkt — город готовится к Рождеству. В Мариенбаде прошлое дремлет, а здесь оно работает: кормит, торгует, катает на колесе. Для моей Мадейры это хорошая подсказка: история — не музей, а двигатель.\n\nТамплиеров я не нашёл и здесь. Но после такой утки я бы тоже никуда не пошёл."
+   },
+   "pt": {
+    "place": "Nuremberga",
+    "title": "Relatório de uma experiência",
+    "lead": "No último registo prometi procurar ideias novas em Nuremberga — com salsichas e cerveja. Aqui fica o relatório.",
+    "body": "O método resultou, mas não logo. As salsichas de Nuremberga são pequenas, do tamanho de um dedo mindinho, por isso nunca vêm menos de seis no prato. Depois chegou o pato com knödel e couve roxa, depois a cerveja. As ideias, confesso, não foram as primeiras a chegar. Primeiro chegou o sono.\n\nAo castelo não cheguei. Está de pé há quase mil anos — pode esperar por mim.\n\nEm compensação, a cidade veio ao meu encontro. O Hospital do Espírito Santo assenta diretamente no rio, sobre arcos. Sobre a praça ergue-se a Torre Branca, e atrás dela gira uma roda-gigante. O gótico e a feira lado a lado, sem discussões.\n\nPor cima da rua comercial já está pendurado um anjo dourado com a palavra Christkindlesmarkt — a cidade prepara-se para o Natal. Em Marienbad o passado dormita; aqui trabalha: alimenta, vende, dá voltas na roda. Para a minha Madeira é uma boa pista: a história não é um museu, é um motor.\n\nTemplários, também aqui não encontrei. Mas depois de um pato assim, eu também não ia a lado nenhum."
+   },
+   "en": {
+    "place": "Nuremberg",
+    "title": "Report on an experiment",
+    "lead": "In my last entry I promised to look for fresh ideas in Nuremberg — over sausages and beer. Here is my report.",
+    "body": "The method worked, though not straight away. Nuremberg sausages are small, about the size of a little finger, so they never serve fewer than six. Then came duck with a dumpling and red cabbage, then beer. The ideas, I admit, were not the first to arrive. Sleep got there first.\n\nI never made it to the castle. It has stood for almost a thousand years — it can wait for me too.\n\nThe city came to meet me instead. The Holy Spirit Hospital stands right in the river, on arches. The White Tower rises over the square, and behind it a Ferris wheel turns. Gothic and fairground side by side, and nobody argues.\n\nA golden angel and the word Christkindlesmarkt already hang over the shopping street — the city is getting ready for Christmas. In Marienbad the past dozes; here it works: it feeds you, sells to you, gives you a ride on the wheel. For my Madeira that is a good hint: history is not a museum, it is an engine.\n\nNo Templars here either. But after a duck like that, I wouldn't have gone anywhere either."
+   },
+   "es": {
+    "place": "Núremberg",
+    "title": "Informe de un experimento",
+    "lead": "En la última entrada prometí buscar ideas frescas en Núremberg, entre salchichas y cerveza. Aquí va el informe.",
+    "body": "El método funcionó, aunque no a la primera. Las salchichas de Núremberg son pequeñas, del tamaño de un meñique, así que nunca sirven menos de seis. Luego llegó el pato con knödel y lombarda, luego la cerveza. Las ideas, lo confieso, no fueron las primeras en llegar. Primero llegó el sueño.\n\nAl castillo no llegué. Lleva en pie casi mil años: también puede esperarme a mí.\n\nA cambio, la ciudad salió a mi encuentro. El Hospital del Espíritu Santo se alza directamente sobre el río, sobre arcos. Sobre la plaza, la Torre Blanca, y detrás gira una noria. El gótico y la feria juntos, sin discutir.\n\nSobre la calle comercial ya cuelga un ángel dorado y la palabra Christkindlesmarkt: la ciudad se prepara para la Navidad. En Marienbad el pasado dormita; aquí trabaja: da de comer, vende, te sube a la noria. Para mi Madeira es una buena pista: la historia no es un museo, es un motor.\n\nTemplarios tampoco encontré aquí. Pero después de un pato así, yo tampoco me habría ido a ningún sitio."
+   },
+   "de": {
+    "place": "Nürnberg",
+    "title": "Bericht über ein Experiment",
+    "lead": "Im letzten Eintrag habe ich versprochen, in Nürnberg nach frischen Ideen zu suchen — bei Bratwurst und Bier. Hier mein Bericht.",
+    "body": "Die Methode hat funktioniert, nur nicht sofort. Nürnberger Rostbratwürste sind klein wie ein kleiner Finger, deshalb kommen nie weniger als sechs auf den Teller. Danach kam Ente mit Kloß und Blaukraut, danach das Bier. Die Ideen kamen, ehrlich gesagt, nicht als Erste. Zuerst kam die Müdigkeit.\n\nBis zur Burg habe ich es nicht geschafft. Sie steht seit fast tausend Jahren — sie kann auch auf mich warten.\n\nDafür kam mir die Stadt selbst entgegen. Das Heilig-Geist-Spital steht direkt im Fluss, auf Bögen. Über dem Platz der Weiße Turm, dahinter dreht sich ein Riesenrad. Gotik und Rummel nebeneinander, und keiner streitet.\n\nÜber der Einkaufsstraße hängen schon ein goldener Engel und das Wort Christkindlesmarkt — die Stadt bereitet sich auf Weihnachten vor. In Marienbad döst die Vergangenheit; hier arbeitet sie: Sie macht satt, verkauft, lässt einen Riesenrad fahren. Für mein Madeira ist das ein guter Hinweis: Geschichte ist kein Museum, sondern ein Motor.\n\nTempelritter habe ich auch hier nicht gefunden. Aber nach so einer Ente wäre ich auch nirgendwo mehr hingegangen."
+   },
+   "photos": [
+    {
+     "src": "img/2026-11-22-1-belaya-bashnya.jpg",
+     "alt": {
+      "ru": "Белая башня Нюрнберга на закате, за ней колесо обозрения",
+      "pt": "A Torre Branca de Nuremberga ao pôr do sol, com uma roda-gigante atrás",
+      "en": "Nuremberg's White Tower at sunset, a Ferris wheel behind it",
+      "es": "La Torre Blanca de Núremberg al atardecer, con una noria detrás",
+      "de": "Der Weiße Turm in Nürnberg bei Sonnenuntergang, dahinter ein Riesenrad"
+     }
+    },
+    {
+     "src": "img/2026-11-22-2-reka-pegnic.jpg",
+     "alt": {
+      "ru": "Река Пегниц и госпиталь Святого Духа на арках",
+      "pt": "O rio Pegnitz e o Hospital do Espírito Santo sobre arcos",
+      "en": "The Pegnitz river and the Holy Spirit Hospital on its arches",
+      "es": "El río Pegnitz y el Hospital del Espíritu Santo sobre arcos",
+      "de": "Die Pegnitz und das Heilig-Geist-Spital auf seinen Bögen"
+     }
+    },
+    {
+     "src": "img/2026-11-22-3-utka.jpg",
+     "alt": {
+      "ru": "Утка с кнедлем в соусе на белой тарелке",
+      "pt": "Pato com knödel em molho num prato branco",
+      "en": "Duck with a dumpling in gravy on a white plate",
+      "es": "Pato con knödel en salsa en un plato blanco",
+      "de": "Ente mit Kloß und Soße auf einem weißen Teller"
+     }
+    },
+    {
+     "src": "img/2026-11-22-4-fontan.jpg",
+     "alt": {
+      "ru": "Золотой Прекрасный фонтан и Фрауэнкирхе под облаками",
+      "pt": "A dourada Fonte Bonita e a Frauenkirche sob as nuvens",
+      "en": "The golden Beautiful Fountain and the Frauenkirche under the clouds",
+      "es": "La dorada Fuente Bonita y la Frauenkirche bajo las nubes",
+      "de": "Der goldene Schöne Brunnen und die Frauenkirche unter Wolken"
+     }
+    }
+   ]
+  }
+ ]
 }
