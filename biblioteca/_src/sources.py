@@ -288,7 +288,7 @@ def catalog_page(src, shelves, l, preview, mine5=(), users=()):
     author_blk = (f'<span class="tag">{e(T["author"])} · Igor Kartuzov</span>{stack(mine5, l)}'
                   f'<p><a href="{igor(l)}" style="font-weight:800">{e(T["authorOpen"])}</a></p>') if mine5 else ""
     users_blk = (f'<h2>{e(T["newSh"])}</h2><div class="chips">'
-                 + "".join(f'<a href="/biblioteca/{e(u)}/">{e(u)}</a>' for u in users) + '</div>') if users else ""
+                 + "".join(f'<a href="/biblioteca/{e(u)}/">{e(" ".join(w.capitalize() for w in u.split("-")))}</a>' for u in users) + '</div>') if users else ""
     body = (f'<div id="all"><h1>{e(T["cat"])}</h1><p class="sub">{e(T["catSub"])}</p>{author_blk}'
             + (f'<h2>{e(T["many"])}</h2><ul class="list">{"".join(li(s) for s in many)}</ul>' if many else "")
             + users_blk + f'<h2>{e(T["builders"])}</h2><p class="sub">{e(T["buildersSub"])}</p>{blocks}'
