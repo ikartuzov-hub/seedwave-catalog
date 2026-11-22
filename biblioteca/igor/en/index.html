@@ -275,6 +275,7 @@ footer a{display:inline-block;padding:8px 4px;text-decoration:underline;text-dec
 @media(max-width:420px){.who .ava{width:52px;height:52px;font-size:22px}}
 </style>
 <script defer="" src="/biblioteca/tabs.js"></script>
+<script defer="" src="/biblioteca/share.js"></script>
 </head>
 <body>
 <div class="wrap">
@@ -797,7 +798,7 @@ document.addEventListener("click",e=>{
   if(q("#cpy")){const b=$("#cpy");try{navigator.clipboard.writeText("https://seedwave.pt/biblioteca/"+made.name).catch(()=>{})}catch(_){}b.textContent=T("copied");return}
   if(q("#deepBtn")){const d=$("#deep"),o=!d.classList.contains("open");d.classList.toggle("open",o);$("#deepBtn").setAttribute("aria-expanded",o);return}
   if(q("#shareBtn")){const u="https://seedwave.pt"+PATHL(lang)+"?utm_source=biblioteca&utm_medium=share";trk("biblioteca_share",{});
-    if(navigator.share){navigator.share({title:"Biblioteca",text:T("shareText"),url:u}).catch(()=>{});return}
+    if(window.bibShare){window.bibShare({title:"Biblioteca",text:T("shareText"),url:u});return}
     try{navigator.clipboard.writeText(T("shareText")+" "+u).catch(()=>{})}catch(_){}$("#shareOk").textContent=T("shareOk");setTimeout(()=>$("#shareOk").textContent="",2500);return}
 });
 document.addEventListener("input",e=>{

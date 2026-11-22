@@ -10,6 +10,7 @@
 <link rel="icon" href="/biblioteca/biblioteca-icon.svg" type="image/svg+xml">
 <script>(()=>{let t=new URLSearchParams(location.search).get("theme");try{if(t==="dark"||t==="light")localStorage.setItem("biblioteca.theme",t);else t=localStorage.getItem("biblioteca.theme")}catch(e){}document.documentElement.dataset.theme=t==="dark"?"dark":"light"})()</script>
 <script defer src="/biblioteca/tabs.js"></script>
+<script defer src="/biblioteca/share.js"></script>
 <link rel="stylesheet" href="/biblioteca/spines.css">
 <link rel="apple-touch-icon" href="/biblioteca/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -111,7 +112,7 @@ function render(){
   if(shelf.owner&&shelf.status!=="open")m.append(el("p","flag",shelf.status==="pending"?T.pend:T.hid));
   if(shelf.owner&&shelf.status==="open"){const sb=el("button","btn big",T.shareBtn),ok=el("p","note","");
     sb.addEventListener("click",()=>{const u=pubUrl()+"?utm_source=biblioteca&utm_medium=share";trk("biblioteca_share",{own:1});
-      if(navigator.share){navigator.share({title:T.title(nice(shelf)),text:T.share(nice(shelf)),url:u}).catch(()=>{});return}
+      if(window.bibShare){window.bibShare({title:T.title(nice(shelf)),text:T.share(nice(shelf)),url:u});return}
       try{navigator.clipboard.writeText(u)}catch(_){}ok.textContent=T.shareOk});m.append(sb,ok)}
   const st=el("div","lstack");
   shelf.items.forEach((it,i)=>{const h=hsh(it.title+i),film=it.type!=="book",p=film?["#171717","#f2f2f2","#e0806f"]:PAL[h%PAL.length];
