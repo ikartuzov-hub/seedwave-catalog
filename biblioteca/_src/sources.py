@@ -178,7 +178,7 @@ def doc(l, path, ttl, desc, body, preview, search="", tab=""):
     langs = "".join(f'<a href="{link(path, x)}" hreflang="{x}"{" aria-current=true" if x == l else ""}>{x.upper()}</a>' for x in LANGS)
     utm = f"?lang={l}&amp;utm_source=biblioteca&amp;utm_medium=footer"
     return f"""<!DOCTYPE html>
-<html lang="{l}" data-tab="{tab}">
+<html lang="{l}" data-lib="{tab}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">

@@ -105,7 +105,7 @@ function none(msg){const m=$("#main");m.textContent="";m.append(el("h1","",msg||
   const a=el("a","btn",T.cta);a.href=FORM(lang)+"#anketa";m.append(a)}
 function render(){
   const m=$("#main");m.textContent="";document.title=T.title(nice(shelf))+" · Biblioteca";
-  if(shelf.owner){document.documentElement.dataset.tab="mine";const t=document.querySelector(".libtabs a:nth-child(2)");if(t)t.setAttribute("aria-current","page")}
+  if(shelf.owner){document.documentElement.dataset.lib="mine";const t=document.querySelector(".libtabs a:nth-child(2)");if(t)t.setAttribute("aria-current","page")}
   if(shelf.owner)m.append(el("h1","",T.title(nice(shelf))),el("p","muted",T.sub));
   else m.append(el("p","rec",T.rec(nice(shelf))),el("h1","",T.recH),el("p","muted",T.recSub));
   if(shelf.owner&&shelf.status!=="open")m.append(el("p","flag",shelf.status==="pending"?T.pend:T.hid));

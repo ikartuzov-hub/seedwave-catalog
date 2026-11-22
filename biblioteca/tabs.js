@@ -1,7 +1,7 @@
 /* Biblioteca — переключатель «Общая / Моя» под шапкой стандарта.
    Общая = главная /biblioteca/ (все книги и полки). Моя = своя полка:
    ключ из этого браузера (biblioteca.mine) → своя полка; хозяин-автор (biblioteca.me) → /biblioteca/<имя>/;
-   иначе → анкета «Заведи свою полку». Активная вкладка: <html data-tab="all|mine">. */
+   иначе → анкета «Заведи свою полку». Активная вкладка: <html data-lib="all|mine">. */
 (function () {
   var L = { pt: ["Todos", "A minha"], en: ["Everyone", "Mine"], ru: ["Общая", "Моя"], es: ["Todos", "La mía"], de: ["Alle", "Meine"] };
   var d = document.documentElement, lang = (d.lang || "pt").slice(0, 2);
@@ -30,7 +30,7 @@
   a1.textContent = L[lang][0]; a2.textContent = L[lang][1];
   a1.href = withQ("/biblioteca/" + sub);
   a2.href = mineUrl();
-  var tab = d.dataset.tab;
+  var tab = d.dataset.lib;
   if (tab === "all") a1.setAttribute("aria-current", "page");
   if (tab === "mine" || (tab === "owner" && me && location.pathname.indexOf("/biblioteca/" + me + "/") === 0)) a2.setAttribute("aria-current", "page");
   a2.addEventListener("click", function () { a2.href = mineUrl(); try { window.swTrack && window.swTrack("biblioteca_tab_mine", { has: !!(mine || me) }); } catch (e) {} });
