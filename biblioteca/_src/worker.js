@@ -41,11 +41,11 @@ async function shelfOut(env, s, owner) {
 function notify(env, ctx, s, item, origin) {
   if (!env.HOOK) return;
   const mod = `${origin}/api/mod?n=${s.name}&t=${env.ADMIN}`;
-  const txt = ["📚 Biblioteca — новая полка на проверку", "Адрес: seedwave.pt/biblioteca/" + s.name,
+  const txt = ["📚 Biblioteca — новая полка (уже открыта всем)", "Адрес: seedwave.pt/biblioteca/" + s.name,
     "Тип: " + item.type, "Название: " + item.title, "Мысль: " + (item.thought || "—"),
     "Что дало: " + (s.gives || "—"), "Язык страницы: " + s.lang,
     "Посмотреть: https://seedwave.pt/biblioteca/s/?n=" + s.name + "&k=" + s.k,
-    "Решить (открыть / скрыть / блок): " + mod].join("\n");
+    "Скрыть или заблокировать: " + mod].join("\n");
   ctx.waitUntil(fetch(env.HOOK, {method: "POST", body: new URLSearchParams({k: "", lang: s.lang, topic: "biblioteca", text: txt,
     name: s.name, email: s.email, consent: "no", post: "biblioteca", website2: "", page: "/biblioteca/"})}).catch(() => {}));
 }
