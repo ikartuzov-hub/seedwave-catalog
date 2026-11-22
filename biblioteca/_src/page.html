@@ -775,6 +775,9 @@ document.documentElement.dataset.theme=theme;
 if(GIFT)$("#fName").value=GIFT.n;
 renderAll();
 if(GIFT)setTimeout(()=>{checkRemote();if(location.hash==="#anketa")$("#anketa").scrollIntoView({block:"start"})},300);
+// со страницы книги в каталоге: ?add=название&type=book — анкета открывается с готовым названием
+const ADD=(()=>{try{const q=new URLSearchParams(location.search),t=(q.get("add")||"").trim().slice(0,120);return t?{id:"k",t:{ru:t},orig:t,type:q.get("type")||"book"}:null}catch(e){return null}})();
+if(ADD&&!GIFT)setTimeout(()=>toForm(ADD),400);
 if(location.hash==="#catalogo")setView("cat");
 window.addEventListener("hashchange",()=>{if(location.hash==="#catalogo"&&view!=="cat")setView("cat")});
 </script>

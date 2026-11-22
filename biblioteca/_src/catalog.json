@@ -1,0 +1,72 @@
+{
+  "_note": "Общая библиотека: источники и полки авторитетов. Полка Игоря берётся из page.html (SHELF). Позиция на полке авторитета — только со ссылкой на открытый источник, где человек сам назвал книгу. Нет источника — позицию не ставим. Сверено поиском 22.11.2026.",
+  "sources": {
+    "foundation": {"type": "book", "orig": "Foundation", "a": "Isaac Asimov", "a_ru": "Айзек Азимов",
+      "t": {"ru": "Основание", "pt": "Fundação", "es": "Fundación", "de": "Foundation"}},
+    "culture": {"type": "book", "orig": "The Culture series", "a": "Iain M. Banks", "a_ru": "Иэн М. Бэнкс",
+      "t": {"ru": "Культура (цикл)", "pt": "A série Cultura", "en": "The Culture series", "es": "La serie de la Cultura", "de": "Der Kultur-Zyklus"}},
+    "hitchhiker": {"type": "book", "orig": "The Hitchhiker's Guide to the Galaxy", "a": "Douglas Adams", "a_ru": "Дуглас Адамс",
+      "t": {"ru": "Автостопом по галактике", "pt": "À Boleia pela Galáxia", "es": "Guía del autoestopista galáctico", "de": "Per Anhalter durch die Galaxis"}},
+    "moon-harsh-mistress": {"type": "book", "orig": "The Moon Is a Harsh Mistress", "a": "Robert A. Heinlein", "a_ru": "Роберт Хайнлайн",
+      "t": {"ru": "Луна — суровая хозяйка"}},
+    "lord-of-the-rings": {"type": "book", "orig": "The Lord of the Rings", "a": "J. R. R. Tolkien", "a_ru": "Дж. Р. Р. Толкин",
+      "t": {"ru": "Властелин колец", "pt": "O Senhor dos Anéis", "es": "El Señor de los Anillos", "de": "Der Herr der Ringe"}},
+    "enders-game": {"type": "book", "orig": "Ender's Game", "a": "Orson Scott Card", "a_ru": "Орсон Скотт Кард",
+      "t": {"ru": "Игра Эндера", "es": "El juego de Ender"}},
+    "goedel-escher-bach": {"type": "book", "orig": "Gödel, Escher, Bach", "a": "Douglas Hofstadter", "a_ru": "Дуглас Хофштадтер",
+      "t": {"ru": "Гёдель, Эшер, Бах"}},
+    "superintelligence": {"type": "book", "orig": "Superintelligence", "a": "Nick Bostrom", "a_ru": "Ник Бостром",
+      "t": {"ru": "Искусственный интеллект. Этапы. Угрозы. Стратегии", "pt": "Superinteligência", "es": "Superinteligencia", "de": "Superintelligenz"}},
+    "master-algorithm": {"type": "book", "orig": "The Master Algorithm", "a": "Pedro Domingos", "a_ru": "Педру Домингуш",
+      "t": {"ru": "Верховный алгоритм", "pt": "A Revolução do Algoritmo-Mestre"}},
+    "coming-wave": {"type": "book", "orig": "The Coming Wave", "a": "Mustafa Suleyman", "a_ru": "Мустафа Сулейман",
+      "t": {"ru": "Грядущая волна"}},
+    "klara-and-the-sun": {"type": "book", "orig": "Klara and the Sun", "a": "Kazuo Ishiguro", "a_ru": "Кадзуо Исигуро",
+      "t": {"ru": "Клара и Солнце", "pt": "Klara e o Sol", "es": "Klara y el Sol", "de": "Klara und die Sonne"}},
+    "thousand-brains": {"type": "book", "orig": "A Thousand Brains", "a": "Jeff Hawkins", "a_ru": "Джефф Хокинс",
+      "t": {"ru": "Тысяча мозгов"}},
+    "life-3-0": {"type": "book", "orig": "Life 3.0", "a": "Max Tegmark", "a_ru": "Макс Тегмарк",
+      "t": {"ru": "Жизнь 3.0", "pt": "Vida 3.0", "es": "Vida 3.0", "de": "Leben 3.0"}},
+    "i-robot": {"type": "book", "orig": "I, Robot", "a": "Isaac Asimov", "a_ru": "Айзек Азимов",
+      "t": {"ru": "Я, робот", "es": "Yo, robot", "de": "Ich, der Roboter"}},
+    "2001-space-odyssey": {"type": "book", "orig": "2001: A Space Odyssey", "a": "Arthur C. Clarke", "a_ru": "Артур Кларк",
+      "t": {"ru": "2001: Космическая одиссея", "pt": "2001: Odisseia no Espaço", "es": "2001: Una odisea espacial", "de": "2001: Odyssee im Weltraum"}}
+  },
+  "shelves": [
+    {"name": "musk", "person": "Elon Musk", "person_ru": "Илон Маск",
+      "who": {"ru": "основатель SpaceX и Tesla", "pt": "fundador da SpaceX e da Tesla", "en": "founder of SpaceX and Tesla", "es": "fundador de SpaceX y Tesla", "de": "Gründer von SpaceX und Tesla"},
+      "items": [
+        {"id": "foundation", "src": "https://fs.blog/2014/11/elon-musk-book-recommendations/"},
+        {"id": "culture", "src": "https://radicalreads.com/elon-musk-favorite-books"},
+        {"id": "hitchhiker", "src": "https://www.businessinsider.in/11-books-elon-musk-thinks-everyone-should-read/amp_articleshow/63738615.cms"},
+        {"id": "moon-harsh-mistress", "src": "https://fortune.com/2023/09/14/books-that-inspired-elon-musk-openai-spacex/"},
+        {"id": "lord-of-the-rings", "src": "https://fs.blog/elon-musk-book-recommendations"}
+      ]},
+    {"name": "hassabis", "person": "Demis Hassabis", "person_ru": "Демис Хассабис",
+      "who": {"ru": "основатель Google DeepMind, нобелевский лауреат", "pt": "fundador da Google DeepMind, Prémio Nobel", "en": "founder of Google DeepMind, Nobel laureate", "es": "fundador de Google DeepMind, premio Nobel", "de": "Gründer von Google DeepMind, Nobelpreisträger"},
+      "items": [
+        {"id": "culture", "src": "https://patkane.substack.com/p/omnipedia-23-demis-hassabis-loves"},
+        {"id": "enders-game", "src": "https://unherd.com/2026/04/demis-hassabis-renaissance-man/"},
+        {"id": "foundation", "src": "https://mostrecommendedbooks.com/people/demis-hassabis-recommended-books"},
+        {"id": "goedel-escher-bach", "src": "https://www.mostrecommendedbooks.com/demis-hassabis-books"}
+      ]},
+    {"name": "gates", "person": "Bill Gates", "person_ru": "Билл Гейтс",
+      "who": {"ru": "основатель Microsoft, пишет рецензии на книги", "pt": "fundador da Microsoft, escreve críticas de livros", "en": "founder of Microsoft, writes book reviews", "es": "fundador de Microsoft, escribe reseñas de libros", "de": "Gründer von Microsoft, schreibt Buchkritiken"},
+      "items": [
+        {"id": "superintelligence", "src": "https://www.weforum.org/stories/2016/06/bill-gates-these-are-the-2-books-we-should-all-read-to-understand-ai/"},
+        {"id": "master-algorithm", "src": "https://www.weforum.org/stories/2016/06/bill-gates-these-are-the-2-books-we-should-all-read-to-understand-ai/"},
+        {"id": "coming-wave", "src": "https://fortune.com/2024/12/04/bill-gates-christmas-holiday-book-reading-list/"},
+        {"id": "klara-and-the-sun", "src": "https://lithub.com/here-are-the-books-bill-gates-thinks-you-should-be-reading-this-holiday-season"},
+        {"id": "thousand-brains", "src": "https://lithub.com/here-are-the-books-bill-gates-thinks-you-should-be-reading-this-holiday-season"}
+      ]},
+    {"name": "fridman", "person": "Lex Fridman", "person_ru": "Лекс Фридман",
+      "who": {"ru": "исследователь ИИ, ведущий подкаста о будущем", "pt": "investigador de IA, apresentador de podcast sobre o futuro", "en": "AI researcher, podcast host on the future", "es": "investigador de IA, presentador de un pódcast sobre el futuro", "de": "KI-Forscher, Podcaster über die Zukunft"},
+      "items": [
+        {"id": "foundation", "src": "https://mostrecommendedbooks.com/people/lex-fridman-recommended-books"},
+        {"id": "culture", "src": "https://www.mostrecommendedbooks.com/lex-fridman-books"},
+        {"id": "life-3-0", "src": "https://www.mostrecommendedbooks.com/lex-fridman-books"},
+        {"id": "i-robot", "src": "https://www.mostrecommendedbooks.com/lex-fridman-books"},
+        {"id": "2001-space-odyssey", "src": "https://www.mostrecommendedbooks.com/lex-fridman-books"}
+      ]}
+  ]
+}
