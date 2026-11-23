@@ -276,6 +276,7 @@ footer a{display:inline-block;padding:8px 4px;text-decoration:underline;text-dec
 </style>
 <script defer="" src="/biblioteca/tabs.js"></script>
 <script defer="" src="/biblioteca/share.js"></script>
+<script defer="" src="/biblioteca/match.js"></script>
 </head>
 <body>
 <div class="wrap">
@@ -712,6 +713,7 @@ function renderResult(){
     <div class="pv"><div class="mini"><i></i><i></i><i></i><u></u></div><div><b>${T("prevT")(esc(made.name))}</b><span>${T("prevS")}</span><small>seedwave.pt/biblioteca/${esc(made.name)}</small></div></div>
     <p class="lbl" style="margin-top:18px">${T("givesH")}</p><div class="chips" id="rGives">${GIVES.map(g=>`<button class="chip" data-g="${g}" aria-pressed="${made.gives.includes(g)}">${T("gives")[g]}</button>`).join("")}</div>
     <p class="lbl">${T("mailH")}</p><div class="form" style="border:0;padding:0;margin:0"><div class="mail"><input type="email" id="mEmail" autocomplete="email" placeholder="${T("mailPh")}"><input type="text" id="mHp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px"><button class="btn" id="mSend">${T("mailBtn")}</button></div></div><p class="note" id="mMsg">${T("mailNote")}</p>
+    <div id="rMatch" style="margin-top:18px"></div>
     <hr class="sep"><h3>${T("nearH")}</h3>${near.map(b=>`<button class="crow" data-go="${b.id}"><span><span class="ct">${esc(title(b))}</span><span class="ca">${esc(author(b))}</span></span><span class="dot"></span></button>`).join("")}
     <p class="note">${T("nearNote")}</p>
     ${un?`<p class="soft">${T("unlocked")} <a href="#" data-go="${un.id}">«${esc(title(un))}» →</a></p>`:""}
@@ -719,6 +721,7 @@ function renderResult(){
     <button class="deepbtn" id="deepBtn" aria-expanded="false">${T("deepBtn")}</button>
     <div class="deep" id="deep"><p>${T("deep1")}</p><p>${T("deep2")}</p><p class="sign">${T("sign")}</p></div>
     <h3>${T("nextH")}</h3><div class="bridges">${[["diary","brDiary"],["waves","brWaves"]].map(([k,i])=>`<a class="br" href="${utm(LINKS[k],"bridge")}" target="_blank" rel="noopener"><b>${T(i)[0]}</b><span>${T(i)[1]}</span></a>`).join("")}</div>`;
+  if(window.bibMatch&&$("#rMatch"))bibMatch.render($("#rMatch"),{items:[{title:made.title,pos:1}],self:made.name,dn:made.dn,own:true});
 }
 function renderStatic(){
   document.documentElement.lang=lang;

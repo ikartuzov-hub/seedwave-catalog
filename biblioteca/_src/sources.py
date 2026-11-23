@@ -112,6 +112,23 @@ def add_participants(src, api):
                 src[k]["on"].append({"kind": "user", "now": bool(it.get("pos")) if "pos" in it else True, "name": sh["name"], "dn": sh.get("dn") or ""})
 
 
+def write_match(src, shelves):
+    """match.json для «Совпало» (match.js): ключи названий на всех языках → id, названия, полка Игоря и полки авторитетов.
+    Полки участников сюда не входят — match.js берёт их живьём из /api/open."""
+    keys, t = {}, {}
+    for k, s in src.items():
+        for x in [s["orig"], *s["t"].values()]:
+            if norm(x):
+                keys.setdefault(norm(x), k)
+        t[k] = dict(s["t"], orig=s["orig"])
+    igor = {k: (1 if o["now"] else 0) for k, s in src.items() for o in s["on"] if o["kind"] == "igor" and not o.get("plan")}
+    people = [{"k": "igor", "n": {"ru": "Игорь", "*": "Igor"}, "url": "/biblioteca/igor/", "items": igor}]
+    people += [{"k": sh["name"], "n": {"ru": sh["person_ru"], "*": sh["person"]}, "url": "/biblioteca/#" + sh["name"],
+                "items": {it["id"]: 0 for it in sh["items"]}} for sh in shelves]
+    (BIB / "match.json").write_text(json.dumps({"_note": "Собирает sources.py для match.js («Совпало»). Руками не править.",
+                                                "keys": keys, "t": t, "people": people}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+
+
 def title(s, l):
     return s["t"].get(l) or (s["t"].get("ru") if l == "ru" else None) or s["orig"]
 
@@ -319,6 +336,7 @@ def main():
     ap.add_argument("--preview", action="store_true")
     a = ap.parse_args()
     src, shelves = load()
+    write_match(src, shelves)
     if a.api:
         add_participants(src, a.api)
     if OUT.exists():

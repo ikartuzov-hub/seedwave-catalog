@@ -11,6 +11,7 @@
 <script>(()=>{let t=new URLSearchParams(location.search).get("theme");try{if(t==="dark"||t==="light")localStorage.setItem("biblioteca.theme",t);else t=localStorage.getItem("biblioteca.theme")}catch(e){}document.documentElement.dataset.theme=t==="dark"?"dark":"light"})()</script>
 <script defer src="/biblioteca/tabs.js"></script>
 <script defer src="/biblioteca/share.js"></script>
+<script defer src="/biblioteca/match.js"></script>
 <link rel="stylesheet" href="/biblioteca/spines.css">
 <link rel="apple-touch-icon" href="/biblioteca/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -150,6 +151,9 @@ function render(){
     if(lib.length){const ul=el("ul","lib");lib.forEach(it=>{const li=el("li");li.append(el("span","lt",it.title),el("span","la",T.types[it.type]||T.types.other));
       if(it.thought)li.append(el("p","lth",it.thought));if(shelf.owner&&it.id)li.append(mover(it,mmsg));ul.append(li)});lb.append(ul)}
     m.append(lb)}
+  // «Совпало»: с кем эта полка на одной волне (полка Игоря, авторитеты, участники)
+  const mb=el("div","box");m.append(mb);
+  if(window.bibMatch)bibMatch.render(mb,{items:shelf.items,self:shelf.name,dn:nice(shelf),own:!!shelf.owner});else mb.remove();
   if(shelf.owner){
     const box=el("div","box");box.append(el("h3","",T.addH));
     if(shelf.items.length>=100)box.append(el("p","note",T.full));
