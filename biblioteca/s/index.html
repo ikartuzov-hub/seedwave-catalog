@@ -12,6 +12,7 @@
 <script defer src="/biblioteca/tabs.js"></script>
 <script defer src="/biblioteca/share.js"></script>
 <script defer src="/biblioteca/match.js"></script>
+<script defer src="/biblioteca/suggest.js"></script>
 <link rel="stylesheet" href="/biblioteca/spines.css">
 <link rel="apple-touch-icon" href="/biblioteca/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -165,7 +166,8 @@ function render(){
         fetch(API+"/api/item",{method:"POST",body:new URLSearchParams({n:NAME,k:KEY,type:ftype,title:title,thought:t2.value.trim(),pos:wh.value})}).then(r=>r.json())
           .then(j=>{if(j.ok){shelf=j.shelf;trk("biblioteca_item_add",{type:ftype,pos:wh.value});render()}else{bt.disabled=false;msg.textContent=j.err==="link"?T.errLink:j.err==="full"?T.full:j.err==="dup"?T.dup:T.err}})
           .catch(()=>{bt.disabled=false;msg.textContent=T.err})});
-      box.append(ch,t1,t2,el("p","note",T.where),wh,bt,msg)}
+      box.append(ch,t1,t2,el("p","note",T.where),wh,bt,msg);
+      if(window.bibSuggest)bibSuggest.attach(t1,{type:()=>ftype})}
     m.append(box);
     const db=el("div","box"),di=el("input"),dm=el("p","note",""),ds=el("button","btn ghost",T.dnSave);
     di.maxLength=40;di.placeholder=T.dnPh;di.value=nice(shelf);di.autocomplete="name";

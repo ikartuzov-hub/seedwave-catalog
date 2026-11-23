@@ -257,6 +257,7 @@ footer a{display:inline-block;padding:8px 4px;text-decoration:underline;text-dec
 <script defer src="/biblioteca/tabs.js"></script>
 <script defer src="/biblioteca/share.js"></script>
 <script defer src="/biblioteca/match.js"></script>
+<script defer src="/biblioteca/suggest.js"></script>
 </head>
 <body>
 <div class="wrap">
@@ -786,6 +787,8 @@ document.addEventListener("input",e=>{
 document.documentElement.dataset.theme=theme;
 if(GIFT){$("#fName").value=GIFT.n;$("#fDn").value=niceName(GIFT.n)}
 $("#fDn").addEventListener("input",()=>{dnTouched=!!$("#fDn").value.trim()});
+// подсказки названий: Общая библиотека → Open Library (книги) / Википедия (фильмы)
+addEventListener("DOMContentLoaded",()=>{if(window.bibSuggest)bibSuggest.attach($("#fTitle"),{type:()=>fType})});
 renderAll();
 if(GIFT)setTimeout(()=>{checkRemote();if(location.hash==="#anketa")$("#anketa").scrollIntoView({block:"start"})},300);
 // со страницы книги в каталоге: ?add=название&type=book — анкета открывается с готовым названием
