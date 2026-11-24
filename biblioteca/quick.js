@@ -5,11 +5,12 @@
       выбор кнопками из Общей библиотеки (match.json), поиск — по желанию (bibSuggest).
    3) bibQuick.nudge() — после «Поделиться» чужой полкой: «А у тебя какие 5? Собери свою — 30 секунд».
    24.11.2026 (8 пунктов Игоря): ✕ «Не моё», «Ответить своей полкой» (ref → отправитель видит ответ), шаг «Что дала» кнопками, почта по желанию, «Ничего не знакомо?» → популярное.
+   25.11.2026 (схема «Хочу»): «＋ Хочу» → /api/want с пометкой «от кого» (from); своей полки нет — очередь biblioteca.wantq до создания полки.
    Сервер — тот же biblioteca-engine: /api/name, /api/shelf (первая вещь), /api/item (остальные; «Хочу» — в библиотеку). */
 (function () {
   var API = "https://biblioteca-engine.seedwave.workers.dev";
   var L = {
-    ru: {nope: "✕ Не моё", reply: "Ответить своей полкой →", replyTo: function (w) { return "Ответ полкой · " + w; }, doneReply: function (w) { return w + " увидит твой ответ — и вы сравните полки."; },
+    ru: {wOk: function (t) { return "✓ «" + t + "» — в твоём «Хочу»"; }, wDup: function (t) { return "«" + t + "» уже есть у тебя"; }, wOpen: "Открыть →", nope: "✕ Не моё", reply: "Ответить своей полкой →", replyTo: function (w) { return "Ответ полкой · " + w; }, doneReply: function (w) { return w + " увидит твой ответ — и вы сравните полки."; },
       zeroH: "Ничего не знакомо?", zeroGo: "Выбрать из того, что читают другие →",
       gH: "Что тебе это дало?", gSub: "По одному нажатию на каждую — или пропусти.", gives: {view: "перевернула взгляд", energy: "дала энергию", act: "подтолкнула к действию", close: "близка эмоционально", joy: "просто кайф"},
       mOpt: "Почта — по желанию", mOptSub: "Чтобы не потерять полку и узнать, кто ответил своей полкой. Писем без согласия не шлём.",
@@ -25,7 +26,7 @@
       have: "У тебя уже есть полка в этом браузере.", haveGo: "Открыть мою полку →", haveNew: "Завести ещё одну",
       errMail: "Проверь почту — кажется, в ней опечатка.", errUsed: "На эту почту полка уже заведена.", errLink: "Ссылки в названиях нельзя.", errLimit: "Сегодня с этого адреса уже много новых полок — попробуй завтра.", errNet: "Нет связи с сервером — попробуй ещё раз.",
       nudgeH: "А у тебя какие 5?", nudgeSub: "Собери свою полку — 30 секунд, без печати.", nudgeGo: "Собрать →", types: {book: "книга", film: "фильм", series: "сериал", doc: "документальный", yt: "YouTube", other: "другое"}},
-    pt: {nope: "✕ Não é para mim", reply: "Responder com a minha estante →", replyTo: function (w) { return "Resposta em estante · " + w; }, doneReply: function (w) { return w + " vai ver a sua resposta — e podem comparar estantes."; },
+    pt: {wOk: function (t) { return "✓ «" + t + "» — no seu «Quero»"; }, wDup: function (t) { return "«" + t + "» já está consigo"; }, wOpen: "Abrir →", nope: "✕ Não é para mim", reply: "Responder com a minha estante →", replyTo: function (w) { return "Resposta em estante · " + w; }, doneReply: function (w) { return w + " vai ver a sua resposta — e podem comparar estantes."; },
       zeroH: "Nada lhe diz nada?", zeroGo: "Escolher do que os outros leem →",
       gH: "O que lhe deu?", gSub: "Um toque em cada — ou salte.", gives: {view: "mudou o meu olhar", energy: "deu-me energia", act: "levou-me a agir", close: "toca-me por dentro", joy: "puro prazer"},
       mOpt: "E-mail — se quiser", mOptSub: "Para não perder a estante e saber quem lhe respondeu. Não enviamos mensagens sem o seu consentimento.",
@@ -41,7 +42,7 @@
       have: "Já tem uma estante neste navegador.", haveGo: "Abrir a minha estante →", haveNew: "Criar outra",
       errMail: "Verifique o e-mail — parece ter um erro.", errUsed: "Este e-mail já tem uma estante.", errLink: "Não são permitidos links nos títulos.", errLimit: "Hoje já foram criadas muitas estantes a partir deste endereço — tente amanhã.", errNet: "Sem ligação ao servidor — tente de novo.",
       nudgeH: "E os seus 5?", nudgeSub: "Monte a sua estante — 30 segundos, sem escrever.", nudgeGo: "Montar →", types: {book: "livro", film: "filme", series: "série", doc: "documentário", yt: "YouTube", other: "outro"}},
-    en: {nope: "✕ Not for me", reply: "Reply with my own shelf →", replyTo: function (w) { return "Shelf reply · " + w; }, doneReply: function (w) { return w + " will see your reply — and you can compare shelves."; },
+    en: {wOk: function (t) { return "✓ “" + t + "” — in your “Want” list"; }, wDup: function (t) { return "“" + t + "” is already yours"; }, wOpen: "Open →", nope: "✕ Not for me", reply: "Reply with my own shelf →", replyTo: function (w) { return "Shelf reply · " + w; }, doneReply: function (w) { return w + " will see your reply — and you can compare shelves."; },
       zeroH: "Nothing rings a bell?", zeroGo: "Pick from what others read →",
       gH: "What did it give you?", gSub: "One tap for each — or skip.", gives: {view: "changed how I see", energy: "gave me energy", act: "pushed me to act", close: "close to my heart", joy: "pure joy"},
       mOpt: "Email — optional", mOptSub: "So you don't lose your shelf and see who replied with theirs. No emails without your consent.",
@@ -57,7 +58,7 @@
       have: "You already have a shelf in this browser.", haveGo: "Open my shelf →", haveNew: "Make another one",
       errMail: "Check the email — looks like a typo.", errUsed: "This email already has a shelf.", errLink: "No links in titles, please.", errLimit: "Many shelves were created from this address today — try tomorrow.", errNet: "No connection to the server — try again.",
       nudgeH: "What are your 5?", nudgeSub: "Build your own shelf — 30 seconds, no typing.", nudgeGo: "Build →", types: {book: "book", film: "film", series: "series", doc: "documentary", yt: "YouTube", other: "other"}},
-    es: {nope: "✕ No es lo mío", reply: "Responder con mi estantería →", replyTo: function (w) { return "Respuesta en estantería · " + w; }, doneReply: function (w) { return w + " verá tu respuesta — y podréis comparar estanterías."; },
+    es: {wOk: function (t) { return "✓ «" + t + "» — en tu «Quiero»"; }, wDup: function (t) { return "«" + t + "» ya lo tienes"; }, wOpen: "Abrir →", nope: "✕ No es lo mío", reply: "Responder con mi estantería →", replyTo: function (w) { return "Respuesta en estantería · " + w; }, doneReply: function (w) { return w + " verá tu respuesta — y podréis comparar estanterías."; },
       zeroH: "¿Nada te suena?", zeroGo: "Elegir de lo que leen otros →",
       gH: "¿Qué te dio?", gSub: "Un toque en cada una — o sáltalo.", gives: {view: "cambió mi mirada", energy: "me dio energía", act: "me empujó a actuar", close: "me toca de cerca", joy: "puro placer"},
       mOpt: "Correo — si quieres", mOptSub: "Para no perder tu estantería y saber quién te respondió. No enviamos correos sin tu permiso.",
@@ -73,7 +74,7 @@
       have: "Ya tienes una estantería en este navegador.", haveGo: "Abrir mi estantería →", haveNew: "Crear otra",
       errMail: "Revisa el correo — parece que hay un error.", errUsed: "Este correo ya tiene una estantería.", errLink: "No se permiten enlaces en los títulos.", errLimit: "Hoy ya se crearon muchas estanterías desde esta dirección — prueba mañana.", errNet: "Sin conexión con el servidor — inténtalo de nuevo.",
       nudgeH: "¿Y tus 5?", nudgeSub: "Monta tu estantería — 30 segundos, sin escribir.", nudgeGo: "Montar →", types: {book: "libro", film: "película", series: "serie", doc: "documental", yt: "YouTube", other: "otro"}},
-    de: {nope: "✕ Nicht meins", reply: "Mit meinem Regal antworten →", replyTo: function (w) { return "Antwort mit Regal · " + w; }, doneReply: function (w) { return w + " sieht deine Antwort — und ihr könnt eure Regale vergleichen."; },
+    de: {wOk: function (t) { return "✓ „" + t + "“ — in deinem „Will ich“"; }, wDup: function (t) { return "„" + t + "“ hast du schon"; }, wOpen: "Öffnen →", nope: "✕ Nicht meins", reply: "Mit meinem Regal antworten →", replyTo: function (w) { return "Antwort mit Regal · " + w; }, doneReply: function (w) { return w + " sieht deine Antwort — und ihr könnt eure Regale vergleichen."; },
       zeroH: "Nichts dabei, was du kennst?", zeroGo: "Aus dem wählen, was andere lesen →",
       gH: "Was hat es dir gegeben?", gSub: "Ein Tipp pro Werk — oder überspringen.", gives: {view: "hat meinen Blick verändert", energy: "gab mir Energie", act: "brachte mich zum Handeln", close: "geht mir nah", joy: "einfach Freude"},
       mOpt: "E-Mail — freiwillig", mOptSub: "Damit du dein Regal nicht verlierst und siehst, wer dir geantwortet hat. Keine Mails ohne deine Zustimmung.",
@@ -197,7 +198,7 @@
   function addPick(p, quiet) {
     var n = norm(p.title);
     for (var i = 0; i < S.picks.length; i++) if (norm(S.picks[i].title) === n || (p.k && S.picks[i].k === p.k)) return false;
-    S.picks.push({k: p.k || "", title: String(p.title).slice(0, 120), type: ["film", "series", "yt", "doc", "other"].indexOf(p.type) >= 0 ? p.type : "book", want: !!p.want, gives: []});
+    S.picks.push({k: p.k || "", title: String(p.title).slice(0, 120), type: ["film", "series", "yt", "doc", "other"].indexOf(p.type) >= 0 ? p.type : "book", want: !!p.want, from: p.from || "", gives: []});
     if (!quiet) track("biblioteca_quick_pick", {type: p.type, own: p.k ? 0 : 1});
     return true;
   }
@@ -368,13 +369,14 @@
         var chain = Promise.resolve();
         rest.forEach(function (p) {
           chain = chain.then(function () {
+            if (p.want) { unqueue(p.title); return postWant(m, {title: p.title, type: p.type, from: p.from || (S && S.ref) || ""}).catch(function () {}); }
             var pos = p.want || shelfN >= 5 ? "lib" : "";
             if (pos !== "lib") shelfN++;
             var body = {n: m.n, k: m.k, type: apiType(p.type), title: p.title, thought: "", igives: (p.gives || []).join(",")}; if (pos) body.pos = pos;
             return fetch(API + "/api/item", {method: "POST", body: new URLSearchParams(body)}).catch(function () {});
           });
         });
-        chain.then(function () {
+        chain.then(function () { return flush(m); }).then(function () {
           track("biblioteca_quick_done", {from: S && S.from, picks: picks.length, want: picks.filter(function (p) { return p.want; }).length, ref: S && S.ref ? 1 : 0, mail: email ? 1 : 0,
             gives: picks.filter(function (p) { return p.gives && p.gives.length; }).length});
           track("biblioteca_sent", {type: first.type, via: "quick"});
@@ -401,6 +403,45 @@
     var n = el("button", "bqb ln", t.haveNew); n.addEventListener("click", function () { var p = S.picks.slice(), f = S.from; close(); open({picks: p, from: f, force: true}); }); S.box.appendChild(n);
   }
 
+  /* ---------- «＋ Хочу»: в «Хочу» своей библиотеки с пометкой «от кого» ---------- */
+  var QK = "biblioteca.wantq";
+  function queue() { var q = store(QK); return Array.isArray(q) ? q : []; }
+  function enqueue(it) { var q = queue(); if (!q.some(function (x) { return norm(x.title) === norm(it.title); })) { q.push(it); store(QK, q.slice(-50)); } }
+  function unqueue(title) { store(QK, queue().filter(function (x) { return norm(x.title) !== norm(title); })); }
+  function postWant(m, it) {
+    var b = {n: m.n, k: m.k, title: it.title || "", type: apiType(it.type), from: it.from || ""}; if (it.url) b.url = it.url;
+    return fetch(API + "/api/want", {method: "POST", body: new URLSearchParams(b)}).then(function (r) { return r.json(); });
+  }
+  // отправить отложенное «Хочу», когда полка появилась
+  function flush(m) {
+    var chain = Promise.resolve();
+    queue().forEach(function (it) { chain = chain.then(function () { return postWant(m, it).then(function (j) { if (j && j.ok) unqueue(it.title); }).catch(function () {}); }); });
+    return chain;
+  }
+  function toast(txt, href) {
+    css(); var old = document.getElementById("bqToast"); if (old) old.remove();
+    var n = el("div", "bqn"); n.id = "bqToast"; var d = el("div"); d.appendChild(el("b", "", txt)); n.appendChild(d);
+    if (href) { var a = el("a", "bqb", T().wOpen); a.href = href; n.appendChild(a); }
+    document.body.appendChild(n); setTimeout(function () { if (n.parentNode) n.remove(); }, 6000);
+  }
+  // it: {title, type, from, url}; opt.quiet — без мастера (отметка в knowBox)
+  function want(it, opt) {
+    opt = opt || {}; if (!it || !(it.title || it.url)) return Promise.resolve(null);
+    var m = mine(), t = T();
+    track("biblioteca_want", {type: it.type || "", from: it.from || "", own: m ? 1 : 0, via: opt.via || ""});
+    if (!m) {
+      enqueue(it);
+      if (!opt.quiet) open({picks: [{title: it.title, type: it.type, want: true, from: it.from}], from: "want"});
+      return Promise.resolve({queued: true});
+    }
+    return postWant(m, it).then(function (j) {
+      if (j && j.ok) { unqueue(it.title); toast(j.dup ? t.wDup(it.title) : t.wOk(it.title), mineUrl(m) + "#want"); }
+      else enqueue(it);
+      return j;
+    }).catch(function () { enqueue(it); return null; });
+  }
+  function unwant(title) { unqueue(title); }
+
   /* ---------- 1) «Совпало» прямо под чужой полкой ---------- */
   function knowBox(host, o) {
     if (!host || !o || !o.items || !o.items.length) return;
@@ -414,14 +455,16 @@
       var rd = el("button", "bqm", it.type === "book" || it.type === "other" ? t.read : t.seen), wn = el("button", "bqm", t.want), np = el("button", "bqm bqno", t.nope);
       np.setAttribute("aria-label", t.nope);
       function paint() { rd.setAttribute("aria-pressed", marks[id] === "r" ? "true" : "false"); wn.setAttribute("aria-pressed", marks[id] === "w" ? "true" : "false"); np.setAttribute("aria-pressed", marks[id] === "x" ? "true" : "false"); }
-      function set(v) { marks[id] = marks[id] === v ? "" : v; store(key, marks); paint(); result(); track("biblioteca_mark", {v: marks[id] || "none", shelf: o.key || "", pos: i + 1}); }
+      function set(v) { marks[id] = marks[id] === v ? "" : v; store(key, marks); paint(); result(); track("biblioteca_mark", {v: marks[id] || "none", shelf: o.key || "", pos: i + 1});
+        // «＋ Хочу» — сразу в «Хочу» своей библиотеки (своей полки нет — в очередь до создания)
+        if (marks[id] === "w") want({title: it.title, type: it.type, from: o.key || ""}, {quiet: true, via: "know"}); else unwant(it.title); }
       rd.addEventListener("click", function () { set("r"); }); wn.addEventListener("click", function () { set("w"); }); np.addEventListener("click", function () { set("x"); });
       var bs = el("div", "bqbtns"); bs.appendChild(rd); bs.appendChild(wn); bs.appendChild(np);
       paint(); row.appendChild(tt); row.appendChild(bs); box.appendChild(row);
     });
     function picked() {
       return items.filter(function (it) { var v = marks[it.k || norm(it.title)]; return v === "r" || v === "w"; })
-        .map(function (it) { return {k: it.k || "", title: it.title, type: it.type, want: marks[it.k || norm(it.title)] === "w"}; });
+        .map(function (it) { return {k: it.k || "", title: it.title, type: it.type, want: marks[it.k || norm(it.title)] === "w", from: o.key || ""}; });
     }
     function result() {
       res.innerHTML = ""; var p = picked();
@@ -472,5 +515,7 @@
   }
 
   function givesLabel(g) { return (T().gives || {})[g] || ""; }
-  window.bibQuick = {open: open, close: close, knowBox: knowBox, nudge: nudge, mine: mine, givesLabel: givesLabel};
+  // своя полка есть, а в очереди что-то осталось (пропала сеть) — дослать при следующем заходе
+  try { var m0 = mine(); if (m0 && queue().length) setTimeout(function () { flush(m0); }, 1500); } catch (e) {}
+  window.bibQuick = {open: open, close: close, knowBox: knowBox, nudge: nudge, mine: mine, givesLabel: givesLabel, want: want};
 })();

@@ -171,6 +171,7 @@ h1{font:700 30px/1.15 Lora,Georgia,serif;margin:6px 0 4px}h2{font:700 21px/1.2 L
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:10px 0}
 .card b{font-weight:800}.card small{color:var(--mut)}.why{margin:8px 0 0;font-style:italic}
 .btn{display:inline-block;background:var(--acc);color:#fff;text-decoration:none;font-weight:800;padding:13px 18px;border-radius:12px;margin:8px 0}
+.btn.ghost{background:transparent;color:var(--acc);border:1.5px solid var(--acc)}
 ul.list{list-style:none;padding:0;margin:0}ul.list li{padding:10px 0;border-bottom:1px solid var(--line)}
 ul.list li a{font-weight:800;text-decoration:none}.cnt{float:right;color:var(--mut);font-size:13px}
 .who{color:var(--mut);font-size:14px}.wv{background:var(--acc);color:#fff;border-radius:999px;padding:1px 8px;text-transform:none;letter-spacing:0}.chips a{display:inline-block;margin:4px 6px 0 0;padding:6px 10px;border-radius:999px;background:var(--chip);text-decoration:none;font-size:14px;color:var(--ink)}
@@ -241,6 +242,10 @@ def person(sh, l):
     return sh["person_ru"] if l == "ru" else sh["person"]
 
 
+WANT_L = {"ru": ("Хочу прочитать", "Хочу посмотреть"), "pt": ("Quero ler", "Quero ver"), "en": ("Want to read", "Want to watch"),
+          "es": ("Quiero leer", "Quiero ver"), "de": ("Will ich lesen", "Will ich sehen")}
+
+
 def source_page(s, l, preview):
     T = L[l]
     on = s["on"]
@@ -268,10 +273,15 @@ def source_page(s, l, preview):
     t, a = title(s, l), author(s, l)
     sub = f'{a} · {T["type"].get(s["type"], s["type"])}' + (f' · <i>{e(s["orig"])}</i>' if s["orig"] != t else "")
     add = f'{igor(l)}?add={urllib.parse.quote(t)}&amp;type={s["type"]}&amp;utm_source=biblioteca&amp;utm_medium=source#anketa'
+    # «＋ Хочу» (25.11.2026): в «Хочу» своей библиотеки; «от Игоря», если вещь на его полке
+    frm = "&amp;from=igor" if any(o["kind"] == "igor" for o in on) else ""
+    want = f'{igor(l)}?want={urllib.parse.quote(t)}&amp;type={s["type"]}{frm}&amp;utm_source=biblioteca&amp;utm_medium=source_want'
+    wlab = WANT_L[l][0 if s["type"] == "book" else 1]
     body = (f'<a href="{link("", l)}">{e(T["back"])}</a>'
             f'<h1>{e(t)}</h1><p class="sub">{sub}</p>'
             f'{blocks}'
-            f'<h2>{e(T["yours"])}</h2><p class="sub">{e(T["yoursSub"])}</p><a class="btn" href="{add}">{e(T["add"])} →</a>')
+            f'<h2>{e(T["yours"])}</h2><p class="sub">{e(T["yoursSub"])}</p><a class="btn" href="{add}">{e(T["add"])} →</a> '
+            f'<a class="btn ghost" href="{want}">＋ {e(wlab)}</a>')
     names = ", ".join(person(o["shelf"], l) for o in on if o["kind"] == "auth")
     desc = f'{t} — {a}. ' + (f'{T["on"]}: {names}.' if names else T["catSub"])
     search = (f'<form action="{link("", l)}" role="search"><input class="q" name="q" type="search" '

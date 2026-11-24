@@ -4,7 +4,9 @@
 Берёт открытые полки из движка (/api/open) и для каждой кладёт
 biblioteca/<имя>/index.html (превью для мессенджеров + переход на живую полку)
 и biblioteca/<имя>/og.png (картинка: имя полки и корешки её вещей).
-Полки, которые закрыли, скрыли или удалили, убирает. Трогает только папки
+Полки, которые закрыли, скрыли или удалили, убирает.
+С 25.11.2026: «Хочу» Игоря из D1 (igor_want в /api/open) кладёт в biblioteca/igor/want.json —
+его читает статичная полка Игоря (раздел «Хочу прочитать/посмотреть»); Notion не трогает. Трогает только папки
 со своей меткой .shelf — чужие папки (ru, en, video …) не трогает никогда.
 
 Запуск: python3 biblioteca/_src/publish.py [--api URL] [--dry]
@@ -169,6 +171,17 @@ def main():
             changed.append("-" + e)
             if not a.dry:
                 shutil.rmtree(d)
+    # «Хочу» Игоря — только если движок отдал поле (старый движок без igor_want файл не трогает)
+    if "igor_want" in data:
+        keep = ("id", "type", "title", "from_name", "from_dn", "url", "created")
+        items = [{k: w.get(k) for k in keep} for w in data.get("igor_want") or [] if w.get("title")]
+        wp = os.path.join(BIB, "igor", "want.json")
+        new = json.dumps({"items": items}, ensure_ascii=False, indent=1) + "\n"
+        old = open(wp, encoding="utf-8").read() if os.path.exists(wp) else None
+        if old != new:
+            changed.append("igor/want.json")
+            if not a.dry:
+                open(wp, "w", encoding="utf-8").write(new)
     print("открытых полок:", len(shelves), "| изменения:", ", ".join(changed) or "нет")
 
 

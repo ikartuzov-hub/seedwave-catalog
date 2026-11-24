@@ -63,6 +63,10 @@ footer a{color:inherit}
 .lib{list-style:none;margin:0;padding:0}.lib li{border-top:1px solid var(--line);padding:10px 0}.lib li:first-child{border-top:0}
 .lib .lt{font-weight:700}.lib .la{font-size:13px;color:var(--ink-soft);margin-left:6px}.lib .lth{font-size:14px;color:var(--ink-soft);margin:2px 0 0}
 .lib .mv{margin:6px 0 0}
+.libs{margin:8px 0 2px;font:700 14px/1.3 var(--body);color:var(--ink-soft)}
+.fr{font-size:13px;color:var(--ink-soft);margin-left:6px}.fr a{color:inherit}
+.wact{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0}.wact .chip{padding:8px 12px}
+.wgv{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
 select.where{width:100%;border:1px solid var(--line);border-radius:12px;padding:11px 13px;font:inherit;background:var(--bg);color:var(--ink);margin-bottom:10px}
 </style>
 </head>
@@ -97,6 +101,14 @@ const S={
   addH:"Noch eines dazustellen",t1:"Titel",t2:"Ein Satz: was du daraus mitnimmst",add:"Ins Regal stellen",full:"Die Bibliothek fasst hundert Werke — das ist die Grenze.",
   copy:"Link zum Regal kopieren",copied:"Kopiert ✓",del:"Regal löschen",del2:"Noch einmal tippen — das Regal wird endgültig gelöscht",gone:"Regal gelöscht.",errLink:"Links im Titel oder im Gedanken werden nicht angenommen.",err:"Das hat nicht geklappt. Bitte versuch es gleich noch einmal.",need:"Trag einen Titel ein.",share:n=>"Mein Regal: was ich lese und schaue"}
 };
+// схема «Хочу» (25.11.2026): в каждом разделе — «Хочу» и «Было»; из «Хочу» — «Начал» (на полку на место своего типа) / «Готово» (+ что дала)
+const WS={
+ ru:{want:{book:"Хочу прочитать",film:"Хочу посмотреть",yt:"Хочу посмотреть",other:"Хочу"},was:{book:"Прочитано",film:"Посмотрено",yt:"Посмотрено",other:"Было"},from:n=>"с полки · "+n,start:"▶ Начал(а)",done:"✓ Готово",gq:"Что тебе это дало? — одно-два нажатия",gok:"Сохранить",url:"Ссылка на YouTube — название подставится само",urlBad:"Не похоже на ссылку YouTube."},
+ pt:{want:{book:"Quero ler",film:"Quero ver",yt:"Quero ver",other:"Quero"},was:{book:"Lido",film:"Visto",yt:"Visto",other:"Feito"},from:n=>"da estante · "+n,start:"▶ Comecei",done:"✓ Concluído",gq:"O que lhe deu? — um ou dois toques",gok:"Guardar",url:"Link do YouTube — o título aparece sozinho",urlBad:"Não parece um link do YouTube."},
+ en:{want:{book:"Want to read",film:"Want to watch",yt:"Want to watch",other:"Want"},was:{book:"Read",film:"Watched",yt:"Watched",other:"Done"},from:n=>"from the shelf · "+n,start:"▶ Started",done:"✓ Done",gq:"What did it give you? — one or two taps",gok:"Save",url:"YouTube link — the title fills in by itself",urlBad:"That doesn’t look like a YouTube link."},
+ es:{want:{book:"Quiero leer",film:"Quiero ver",yt:"Quiero ver",other:"Quiero"},was:{book:"Leído",film:"Visto",yt:"Visto",other:"Hecho"},from:n=>"de la estantería · "+n,start:"▶ Empecé",done:"✓ Hecho",gq:"¿Qué te dio? — uno o dos toques",gok:"Guardar",url:"Enlace de YouTube — el título aparece solo",urlBad:"No parece un enlace de YouTube."},
+ de:{want:{book:"Will ich lesen",film:"Will ich sehen",yt:"Will ich sehen",other:"Will ich"},was:{book:"Gelesen",film:"Gesehen",yt:"Gesehen",other:"Erledigt"},from:n=>"aus dem Regal · "+n,start:"▶ Angefangen",done:"✓ Fertig",gq:"Was hat es dir gegeben? — ein, zwei Tipps",gok:"Speichern",url:"YouTube-Link — der Titel kommt von selbst",urlBad:"Das sieht nicht nach einem YouTube-Link aus."}};
+const WG=["view","energy","act","close","joy"];
 const P=new URLSearchParams(location.search),NAME=(P.get("n")||"").toLowerCase(),KEY=P.get("k")||"";
 let lang=P.get("lang");if(!LANGS.includes(lang)){const nl=(navigator.language||"pt").slice(0,2).toLowerCase();lang=LANGS.includes(nl)?nl:"pt"}
 let T=S[lang],shelf=null,ftype="book",delArm=false;
@@ -158,14 +170,30 @@ function render(){
   if(!shelf.owner&&stk.length){const kb=el("div");m.append(kb);const kn=()=>bibQuick.knowBox(kb,{owner:nice(shelf),key:NAME,items:stk.map(it=>({k:"",title:it.title,type:it.type}))});
     if(window.bibQuick)kn();else addEventListener("load",()=>{if(window.bibQuick)kn()})}
   // «Вся моя библиотека» — всё, что ушло с полки или ждёт своего места
-  const lib=inLib();
-  if(lib.length||shelf.owner){const lb=el("details","box fold");const sm=el("summary","",(shelf.owner?T.libMe:T.libOf(nice(shelf)))+(lib.length?" · "+lib.length:""));lb.append(sm,el("p","muted",lib.length?T.libSub:T.libEmpty));
+  const lib=inLib(),wl=shelf.want||[],W=WS[lang],all=lib.length+wl.length;
+  if(all||shelf.owner){const lb=el("details","box fold");lb.id="want";if(location.hash==="#want")lb.open=true;const sm=el("summary","",(shelf.owner?T.libMe:T.libOf(nice(shelf)))+(all?" · "+all:""));lb.append(sm,el("p","muted",all?T.libSub:T.libEmpty));
     // библиотека — по разделам, как у Игоря: Книги · Фильмы · YouTube · Другое (24.11.2026)
-    if(lib.length){const TG={ru:{book:"Книги",film:"Фильмы",yt:"YouTube",other:"Другое"},pt:{book:"Livros",film:"Filmes",yt:"YouTube",other:"Outros"},en:{book:"Books",film:"Films",yt:"YouTube",other:"Other"},es:{book:"Libros",film:"Películas",yt:"YouTube",other:"Otros"},de:{book:"Bücher",film:"Filme",yt:"YouTube",other:"Anderes"}}[lang];
+    if(all){const TG={ru:{book:"Книги",film:"Фильмы",yt:"YouTube",other:"Другое"},pt:{book:"Livros",film:"Filmes",yt:"YouTube",other:"Outros"},en:{book:"Books",film:"Films",yt:"YouTube",other:"Other"},es:{book:"Libros",film:"Películas",yt:"YouTube",other:"Otros"},de:{book:"Bücher",film:"Filme",yt:"YouTube",other:"Anderes"}}[lang];
       const gk=it=>["book","film","yt"].includes(it.type)?it.type:it.type==="series"||it.type==="doc"?"film":"other";
-      ["book","film","yt","other"].forEach(g=>{const part=lib.filter(it=>gk(it)===g);if(!part.length)return;lb.append(el("p","libg",TG[g]+" · "+part.length));
-        const ul=el("ul","lib");part.forEach(it=>{const li=el("li");li.append(el("span","lt",it.title));
-        if(it.thought)li.append(el("p","lth",it.thought));if(shelf.owner&&it.id)li.append(mover(it,mmsg));ul.append(li)});lb.append(ul)})}
+      const from=it=>{if(!it.from_name)return null;const f=el("span","fr"),a=el("a","",W.from(it.from_dn||nice({name:it.from_name})));a.href=it.from_name==="igor"?"/biblioteca/igor/":"/biblioteca/"+encodeURIComponent(it.from_name)+"/";f.append(a);return f};
+      const gvs=it=>{const gv=(it.gives||"").split(",").filter(Boolean).map(g=>window.bibQuick?bibQuick.givesLabel(g):"").filter(Boolean);return gv.length?el("span","gv","💫 "+gv.join(" · ")):null};
+      // «Хочу»: хозяину — «Начал» / «Готово» (+ 5 чипов «что дала»)
+      const wantLi=it=>{const li=el("li");li.append(el("span","lt",it.title));const f=from(it);if(f)li.append(f);
+        if(it.url){const a=el("a","fr","↗");a.href=it.url;a.target="_blank";a.rel="noopener";li.append(a)}
+        if(shelf.owner&&it.id){const ac=el("div","wact"),bs=el("button","chip",W.start),bd=el("button","chip",W.done);
+          bs.addEventListener("click",()=>{trk("biblioteca_want_start",{type:it.type});post("/api/state",{id:it.id,a:"start"},mmsg)});
+          bd.addEventListener("click",()=>{if(li.querySelector(".wgv"))return;const pick=[],box=el("div","wgv"),ok=el("button","btn ghost",W.gok);
+            WG.forEach(g=>{const c=el("button","chip",window.bibQuick?bibQuick.givesLabel(g):g);c.setAttribute("aria-pressed","false");
+              c.addEventListener("click",()=>{const i=pick.indexOf(g);if(i>=0)pick.splice(i,1);else{if(pick.length>=2)pick.shift();pick.push(g)}box.querySelectorAll(".chip").forEach((x,j)=>x.setAttribute("aria-pressed",pick.includes(WG[j])))});box.append(c)});
+            ok.addEventListener("click",()=>{trk("biblioteca_want_done",{type:it.type,gives:pick.length});post("/api/state",{id:it.id,a:"done",igives:pick.join(",")},mmsg)});
+            li.append(el("p","libs",W.gq),box,ok)});
+          ac.append(bs,bd);li.append(ac)}
+        return li};
+      const wasLi=it=>{const li=el("li");li.append(el("span","lt",it.title));const f=from(it);if(f)li.append(f);
+        if(it.thought)li.append(el("p","lth",it.thought));const g=gvs(it);if(g)li.append(g);if(shelf.owner&&it.id)li.append(mover(it,mmsg));return li};
+      ["book","film","yt","other"].forEach(g=>{const pw=wl.filter(it=>gk(it)===g),pd=lib.filter(it=>gk(it)===g);if(!pw.length&&!pd.length)return;
+        lb.append(el("p","libg",TG[g]+" · "+(pw.length+pd.length)));
+        [[pw,W.want[g],wantLi],[pd,W.was[g],wasLi]].forEach(([part,h,fn])=>{if(!part.length)return;lb.append(el("p","libs",h+" · "+part.length));const ul=el("ul","lib");part.forEach(it=>ul.append(fn(it)));lb.append(ul)})})}
     m.append(lb)}
   // «Совпало»: с кем эта полка на одной волне (полка Игоря, авторитеты, участники)
   const mb=el("div","box");m.append(mb);
@@ -182,14 +210,18 @@ function render(){
     const box=el("details","box fold");box.append(el("summary","",T.addH));
     if(shelf.items.length>=100)box.append(el("p","note",T.full));
     else{const ch=el("div","chips");Object.keys(T.types).forEach(k=>{const c=el("button","chip",T.types[k]);c.setAttribute("aria-pressed",ftype===k);c.addEventListener("click",()=>{ftype=k;ch.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===c))});ch.append(c)});
-      const t1=el("input"),t2=el("input"),msg=el("p","note",""),bt=el("button","btn",T.add),wh=el("select","where"),n0=onShelf().length;
+      const t1=el("input"),t2=el("input"),msg=el("p","note",""),bt=el("button","btn",T.add),wh=el("select","where"),n0=onShelf().length,tu=el("input");
+      // YouTube по ссылке: сервер берёт название и канал через oEmbed
+      tu.type="url";tu.placeholder=WS[lang].url;tu.autocomplete="off";tu.hidden=ftype!=="yt";
+      tu.addEventListener("change",()=>{const v=tu.value.trim();if(!v)return;fetch(API+"/api/yt?u="+encodeURIComponent(v)).then(r=>r.json()).then(j=>{if(j.ok){if(!t1.value.trim())t1.value=j.title;msg.textContent=""}else msg.textContent=WS[lang].urlBad}).catch(()=>{})});
+      ch.addEventListener("click",()=>{tu.hidden=ftype!=="yt"});
       wh.setAttribute("aria-label",T.where);for(let i=1;i<=Math.min(5,n0+1);i++){const o=el("option","",T.place(i));o.value=i;wh.append(o)}
       const ol=el("option","",T.toLib);ol.value="lib";wh.append(ol);wh.value=n0<5?String(n0+1):"1";t1.placeholder=T.t1;t2.placeholder=T.t2;t1.maxLength=120;t2.maxLength=280;t1.autocomplete=t2.autocomplete="off";
-      bt.addEventListener("click",()=>{const title=t1.value.trim();if(!title){msg.textContent=T.need;t1.focus();return}bt.disabled=true;
-        fetch(API+"/api/item",{method:"POST",body:new URLSearchParams({n:NAME,k:KEY,type:ftype,title:title,thought:t2.value.trim(),pos:wh.value})}).then(r=>r.json())
-          .then(j=>{if(j.ok){shelf=j.shelf;trk("biblioteca_item_add",{type:ftype,pos:wh.value});render()}else{bt.disabled=false;msg.textContent=j.err==="link"?T.errLink:j.err==="full"?T.full:j.err==="dup"?T.dup:T.err}})
+      bt.addEventListener("click",()=>{const title=t1.value.trim();if(!title&&!(ftype==="yt"&&tu.value.trim())){msg.textContent=T.need;t1.focus();return}bt.disabled=true;
+        fetch(API+"/api/item",{method:"POST",body:new URLSearchParams(Object.assign({n:NAME,k:KEY,type:ftype,title:title,thought:t2.value.trim(),pos:wh.value},ftype==="yt"&&tu.value.trim()?{url:tu.value.trim()}:{}))}).then(r=>r.json())
+          .then(j=>{if(j.ok){shelf=j.shelf;trk("biblioteca_item_add",{type:ftype,pos:wh.value,url:tu.value.trim()?1:0});render()}else{bt.disabled=false;msg.textContent=j.err==="link"?T.errLink:j.err==="full"?T.full:j.err==="dup"?T.dup:j.err==="url"?WS[lang].urlBad:T.err}})
           .catch(()=>{bt.disabled=false;msg.textContent=T.err})});
-      box.append(ch,t1,t2,el("p","note",T.where),wh,bt,msg);
+      box.append(ch,tu,t1,t2,el("p","note",T.where),wh,bt,msg);
       if(window.bibSuggest)bibSuggest.attach(t1,{type:()=>ftype})}
     m.append(box);
     const db=el("details","box fold"),di=el("input"),dm=el("p","note",""),ds=el("button","btn ghost",T.dnSave);
@@ -212,7 +244,7 @@ if(!/^[a-z0-9-]{3,20}$/.test(NAME))none();
 else fetch(API+"/api/shelf?n="+encodeURIComponent(NAME)+(KEY?"&k="+encodeURIComponent(KEY):"")).then(r=>r.json()).then(j=>{
   if(!j.ok){none();return}shelf=j.shelf;
   if(!P.get("lang")&&shelf.owner&&LANGS.includes(shelf.lang)){lang=shelf.lang;T=S[lang];chrome()}
-  trk("biblioteca_shelf_open",{owner:shelf.owner});render()}).catch(()=>none(T.err));
+  trk("biblioteca_shelf_open",{owner:shelf.owner});render();if(location.hash==="#want"){const w=document.getElementById("want");if(w)setTimeout(()=>w.scrollIntoView({block:"start"}),80)}}).catch(()=>none(T.err));
 </script>
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8a509477310442638b80e4b22319b89b"}'></script>
 <script defer src="https://seedwave.pt/nav/sw.js"></script>

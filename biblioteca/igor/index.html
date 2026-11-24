@@ -621,6 +621,14 @@ const KTW={ru:{book:["Читаю","Прочитано","Хочу прочита�
  en:{book:["Reading","Read","Want to read"],film:["Watching","Watched","Want to watch"],yt:["Watching","Watched","Want to watch"],other:["Now","Done","Want"]},
  es:{book:["Leyendo","Leído","Quiero leer"],film:["Viendo","Visto","Quiero ver"],yt:["Viendo","Visto","Quiero ver"],other:["Ahora","Hecho","Quiero"]},
  de:{book:["Lese ich","Gelesen","Will ich lesen"],film:["Schaue ich","Gesehen","Will ich sehen"],yt:["Schaue ich","Gesehen","Will ich sehen"],other:["Jetzt","Erledigt","Will ich"]}};
+// схема «Хочу» (25.11.2026): «＋ Хочу» у каждой вещи → в «Хочу» своей библиотеки с пометкой «от Игоря»
+const WTXT={ru:["Хочу прочитать","Хочу посмотреть"],pt:["Quero ler","Quero ver"],en:["Want to read","Want to watch"],es:["Quiero leer","Quiero ver"],de:["Will ich lesen","Will ich sehen"]};
+// «Хочу» Игоря из D1: каждые 15 мин publish.py кладёт want.json; здесь — в раздел «Хочу прочитать/посмотреть» с пометкой «от …»
+function loadWant(){fetch("/biblioteca/igor/want.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(j=>{if(!j||!Array.isArray(j.items))return;let add=0;
+  j.items.forEach(w=>{const t=String(w.title||"").trim();if(!t)return;const nt=t.toLowerCase();if(SHELF.some(b=>[b.t.ru,b.orig,...Object.values(b.t)].some(x=>String(x||"").toLowerCase()===nt)))return;
+    const ty=["book","film","yt","other"].includes(w.type)?w.type:"other";
+    SHELF.push({id:"w"+w.id,shelf:"plan",sec:"sf",type:ty,t:{ru:t},orig:t,a:w.from_dn?"↩ "+w.from_dn:"",dw:1,url:w.url||""});add++});
+  if(add){try{renderList()}catch(e){}}}).catch(()=>{})}
 const kindOf=b=>b.type==="learn"?"learn":b.type==="yt"?"yt":["film","series","doc"].includes(b.type)?"film":b.type==="book"?"book":"other";
 
 let lang=document.documentElement.lang||"pt",theme=(()=>{const q=new URLSearchParams(location.search).get("theme");if(q==="dark"||q==="light")return q;try{return localStorage.getItem("biblioteca.theme")||"light"}catch(e){return "light"}})(),mode="guest",order=STACK0.slice(),openBook=null,openRow=null,fresh=true,
@@ -675,7 +683,7 @@ function bodyHTML(b,ctx){
   const [u,l]=findLink(b);
   h+=`<div class="acts"><a class="btn ghost sm" href="${u}" target="_blank" rel="noopener">${l}</a>
     <button class="lk" data-like="${b.id}" aria-pressed="${!!LIKED[b.id]}">♥ ${T("like")}</button>
-    <button class="chip" data-add="${b.id}">＋ ${T("addMine")}</button></div>`;
+    <button class="chip" data-add="${b.id}">＋ ${T("addMine")}</button>${b.dw?"":`<button class="chip" data-want="${b.id}">＋ ${(WTXT[lang]||WTXT.ru)[kindOf(b)==="book"?0:1]}</button>`}</div>`;
   return h;
 }
 function spineHTML(b,i,n,custom){
@@ -819,6 +827,7 @@ document.addEventListener("click",e=>{
   if(x=q("[data-mv]")){const i=order.indexOf(x.dataset.id),j=i+(x.dataset.mv==="up"?-1:1);if(j>=0&&j<order.length){[order[i],order[j]]=[order[j],order[i]];renderStack()}return}
   if(x=q("[data-toform]")){e.preventDefault();toForm();return}
   if(x=q("[data-add]")){toForm(byId(x.dataset.add));return}
+  if(x=q("[data-want]")){const b=byId(x.dataset.want);if(b&&window.bibQuick){bibQuick.want({title:title(b),type:["series","doc"].includes(b.type)?"film":b.type,from:"igor"},{via:"igor",refName:lang==="ru"?"Игорь":"Igor"});x.setAttribute("aria-pressed","true")}return}
   if(x=q("[data-go]")){e.preventDefault();goBook(x.dataset.go);return}
   if(x=q("[data-like]")){LIKED[x.dataset.like]=!LIKED[x.dataset.like];x.setAttribute("aria-pressed",LIKED[x.dataset.like]);return}
   if(x=q("[data-full]")){const k=x.dataset.full;FULL[k]=!FULL[k];x.setAttribute("aria-expanded",FULL[k]);x.textContent=FULL[k]?T("fullHide"):T("fullBtn");x.nextElementSibling.classList.toggle("open",FULL[k]);return}
@@ -880,6 +889,10 @@ if(GIFT)setTimeout(()=>{checkRemote();if(location.hash==="#anketa"){$("#fForm").
 // со страницы книги в каталоге: ?add=название&type=book — анкета открывается с готовым названием
 const ADD=(()=>{try{const q=new URLSearchParams(location.search),t=(q.get("add")||"").trim().slice(0,120);return t?{id:"k",t:{ru:t},orig:t,type:q.get("type")||"book"}:null}catch(e){return null}})();
 if(ADD&&!GIFT){const go=()=>toForm(ADD);document.readyState==="complete"?setTimeout(go,300):addEventListener("load",()=>setTimeout(go,300))}
+// со страницы книги /k/: ?want=название&type=book&from=igor — сразу в «Хочу» (своей полки нет — мастер с этой вещью)
+const WANT=(()=>{try{const q=new URLSearchParams(location.search),t=(q.get("want")||"").trim().slice(0,120);return t?{title:t,type:q.get("type")==="series"?"film":(q.get("type")||"book"),from:(q.get("from")||"").toLowerCase()}:null}catch(e){return null}})();
+if(WANT&&!ADD&&!GIFT){const go=()=>{if(window.bibQuick)bibQuick.want(WANT,{via:"k"})};document.readyState==="complete"?setTimeout(go,300):addEventListener("load",()=>setTimeout(go,300))}
+loadWant();
 if(location.hash==="#catalogo")goKat();
 window.addEventListener("hashchange",()=>{if(location.hash==="#catalogo")goKat();openLearnHash()});
 setTimeout(openLearnHash,350);

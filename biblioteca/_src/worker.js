@@ -2,6 +2,9 @@
 // Развёртывание: Cloudflare API (PUT workers/scripts/biblioteca-engine), адрес https://biblioteca-engine.seedwave.workers.dev. Секрет ADMIN создан при первом развёртывании и нигде не записан — при обновлении кода сохранять привязки (keep_bindings).
 // Привязки: DB (D1; таблицы shelves, items, subs, gifts — коды подарочных имён), ADMIN (секрет ссылок модерации), HOOK (вебхук Make «Написать автору»).
 // Полка и библиотека (решение Игоря 22.11.2026): items.pos 1–5 = «Моя полка» (актуальные 5), pos NULL = «Моя библиотека»; новая вещь на место N сдвигает нижние, шестая уходит в библиотеку. shelves.dn — имя-подпись («Ольга»), адрес остаётся латиницей.
+// Схема «Хочу» (решение Игоря 24.11.2026): items.st — now (на полке) · want («Хочу») · done («Было»); from_name — чья полка дала вещь; url — ссылка (YouTube через oEmbed).
+//   /api/want — вещь в «Хочу» (дубль не ставится), /api/state — «Начал» (на полку на место своего типа) / «Готово» (в «Было» + что дала).
+//   Весточка хозяину: Игорю — сразу в бот (HOOK), остальным — копится в wants_notify для рассылки. Полка Игоря в D1 — «igor» (скрытая, только его «Хочу»).
 // Статусы полки: open (видна всем; с 22.11.2026 полка открывается сразу) · hidden · blocked · pending (старые полки).
 const RESERVED = ["igor","olga","max","anton","anastasia","griselda","tetiana","elena","luidmila","liudmila","ludmila","ze",
   "admin","seedwave","biblioteca","catalogo","hub","madeira","lis","piloto","capsula","pt","en","ru","es","de",
@@ -39,9 +42,12 @@ async function body(req) {
 }
 
 async function shelfOut(env, s, owner) {
-  const it = await env.DB.prepare("SELECT id,type,title,thought,lang,pos,gives FROM items WHERE shelf=? ORDER BY pos IS NULL, pos, id DESC").bind(s.name).all();
+  const it = await env.DB.prepare("SELECT i.id,i.type,i.title,i.thought,i.lang,i.pos,i.gives,i.st,i.from_name,i.url,f.dn from_dn FROM items i LEFT JOIN shelves f ON f.name=i.from_name WHERE i.shelf=? ORDER BY i.pos IS NULL, i.pos, i.id DESC").bind(s.name).all();
+  const rows = it.results.map(i => ({...i, st: stOf(i), from_dn: i.from_dn || (i.from_name === "igor" ? (s.lang === "ru" ? "Игорь" : "Igor") : "")}));
+  const have = rows.filter(i => i.st !== "want");
+  // items — только то, что прочитано/смотрю (для «Совпало»); «Хочу» — отдельным списком want
   const out = {name: s.name, dn: s.dn || "", lang: s.lang, status: s.status, gives: s.gives ? s.gives.split(",") : [], created: s.created, owner: !!owner,
-    shelf: it.results.filter(i => i.pos), library: it.results.filter(i => !i.pos), items: it.results};
+    shelf: have.filter(i => i.pos), library: have.filter(i => !i.pos), want: rows.filter(i => i.st === "want"), items: have};
   if (owner) {
     // хозяину: есть ли почта (без почты полку легко потерять) и кто ответил своей полкой на его полку
     out.hasMail = !!s.email;
@@ -49,6 +55,58 @@ async function shelfOut(env, s, owner) {
     out.replies = rp.results.map(r => ({name: r.name, dn: r.dn || ""}));
   }
   return out;
+}
+
+// дубль по названию без учёта регистра — в воркере (lower() в SQLite не понимает кириллицу)
+const dupOf = async (env, n, title) => {
+  const t = title.toLowerCase(), r = await env.DB.prepare("SELECT id,title FROM items WHERE shelf=?").bind(n).all();
+  return r.results.find(i => String(i.title).toLowerCase() === t) || null;
+};
+const stOf = i => i.pos ? "now" : (i.st === "want" ? "want" : "done");
+const grp = t => t === "book" ? "book" : t === "yt" ? "yt" : t === "film" ? "film" : "other";
+const owned = async (env, b) => {
+  const n = String(b.n || "").toLowerCase();
+  const s = await env.DB.prepare("SELECT * FROM shelves WHERE name=?").bind(n).first();
+  return s && b.k && b.k === s.k && s.status !== "blocked" ? s : null;
+};
+// YouTube по ссылке: название и канал через oEmbed (без ключа)
+const ytUrl = u => { try { const x = new URL(String(u || "").trim()); return /(^|\.)(youtube\.com|youtu\.be)$/.test(x.hostname) ? x.toString() : ""; } catch (e) { return ""; } };
+async function ytMeta(u) {
+  const url = ytUrl(u); if (!url) return null;
+  try {
+    const r = await fetch("https://www.youtube.com/oembed?format=json&url=" + encodeURIComponent(url), {cf: {cacheTtl: 86400}});
+    if (!r.ok) return null;
+    const j = await r.json();
+    return {url, title: clean(j.title, 120), author: clean(j.author_name, 60)};
+  } catch (e) { return null; }
+}
+const ytTitle = m => clean(m.author && !m.title.toLowerCase().includes(m.author.toLowerCase()) ? m.title + " · " + m.author : m.title, 120);
+// «Начал»: вещь встаёт на полку на место своего типа — перед первой вещью того же типа (как у Игоря: новая книга наверх книг);
+// полка полна → уходит последняя вещь того же типа (в «Было»); такого типа на полке нет → первое свободное место, иначе место 5
+async function startStmts(env, n, it) {
+  const rows = (await env.DB.prepare("SELECT id,type,pos FROM items WHERE shelf=? AND pos IS NOT NULL AND id<>? ORDER BY pos").bind(n, it.id).all()).results;
+  let order = rows.map(r => r.id), out = [];
+  const same = rows.filter(r => grp(r.type) === grp(it.type));
+  if (same.length) {
+    order.splice(order.indexOf(same[0].id), 0, it.id);
+    if (order.length > SHELF) { const last = same[same.length - 1].id; order = order.filter(x => x !== last); out.push(last); }
+  } else if (order.length < SHELF) order.push(it.id);
+  else { out.push(order[SHELF - 1]); order[SHELF - 1] = it.id; }
+  return [env.DB.prepare("UPDATE items SET pos=NULL WHERE shelf=? AND pos IS NOT NULL").bind(n),
+    ...order.map((id, i) => env.DB.prepare("UPDATE items SET pos=?, st='now' WHERE id=?").bind(i + 1, id)),
+    ...out.map(id => env.DB.prepare("UPDATE items SET st='done' WHERE id=?").bind(id))];
+}
+// весточка хозяину полки: одна на пару кто–что; Игорю — сразу в бот, остальным — копим для рассылки
+async function wantNotify(env, ctx, s, from, title, type) {
+  if (!from || from === s.name) return;
+  const tkey = title.toLowerCase(), who = s.dn || s.name;
+  const r = await env.DB.prepare("INSERT OR IGNORE INTO wants_notify(owner,who,who_dn,tkey,title,type,created,sent) VALUES(?,?,?,?,?,?,?,?)")
+    .bind(from, s.name, s.dn || null, tkey, title, type, now(), from === "igor" ? now() : null).run();
+  if (!r.meta.changes || from !== "igor" || !env.HOOK) return;
+  const txt = ["↩ " + who + " — в планы с твоей полки: «" + title + "»", "Тип: " + type,
+    "Полка: https://seedwave.pt/biblioteca/" + s.name + "/"].join("\n");
+  ctx.waitUntil(fetch(env.HOOK, {method: "POST", body: new URLSearchParams({k: "", lang: s.lang, topic: "biblioteca", text: txt,
+    name: s.name, email: "", consent: "no", post: "biblioteca", website2: "", page: "/biblioteca/"})}).catch(() => {}));
 }
 
 // поставить вещь на место N (1–5): нижние сдвигаются, вышедшая за 5 уходит в библиотеку; N без «дыр» — не дальше первого свободного места
@@ -114,11 +172,11 @@ export default {
         const iph = (await hmac(env.ADMIN, "ip:" + (req.headers.get("CF-Connecting-IP") || ""))).slice(0, 16);
         const day = await env.DB.prepare("SELECT COUNT(*) c FROM shelves WHERE iph=? AND created>?").bind(iph, new Date(Date.now() - 864e5).toISOString()).first();
         if (day && day.c >= 5) return json({ok: false, err: "limit"}, 429);
-        const s = {name, dn, lang, email: email || null, status: "open", k: rnd(12), gives, ref, mt, created: now()};  // решение Игоря 22.11: полка открыта сразу, Игорь может скрыть или заблокировать
+        const s = {name, dn, lang, email: email || null, status: name === "igor" ? "hidden" : "open", k: rnd(12), gives, ref, mt, created: now()};  // решение Игоря 22.11: полка открыта сразу, Игорь может скрыть или заблокировать
         await env.DB.batch([
           env.DB.prepare("INSERT INTO shelves(name,dn,lang,email,status,k,gives,gift,iph,created,ref) VALUES(?,?,?,?,?,?,?,?,?,?,?)").bind(name, dn || null, lang, s.email, s.status, s.k, gives, gift, iph, s.created, ref || null),
-          env.DB.prepare("INSERT INTO items(shelf,type,title,thought,lang,pos,created,gives) VALUES(?,?,?,?,?,1,?,?)").bind(name, type, title, thought, lang, s.created, ig || null)]);
-        notify(env, ctx, s, {type, title, thought}, u.origin);
+          env.DB.prepare("INSERT INTO items(shelf,type,title,thought,lang,pos,created,gives,st) VALUES(?,?,?,?,?,1,?,?,'now')").bind(name, type, title, thought, lang, s.created, ig || null)]);
+        if (name !== "igor") notify(env, ctx, s, {type, title, thought}, u.origin);   // полка «igor» в D1 — скрытая, только «Хочу» Игоря
         return json({ok: true, name, k: s.k, status: s.status});
       }
       // прочитать полку: открытую — всем, остальные — хозяину по ключу
@@ -135,19 +193,20 @@ export default {
         const b = await body(req), n = String(b.n || "").toLowerCase();
         const s = await env.DB.prepare("SELECT * FROM shelves WHERE name=?").bind(n).first();
         if (!s || !b.k || b.k !== s.k || s.status === "blocked") return json({ok: false, err: "none"}, 404);
-        const title = clean(b.title, 120), thought = clean(b.thought, 280), type = TYPES.includes(b.type) ? b.type : "other";
-        if (!title) return json({ok: false, err: "title"}, 400);
+        let title = clean(b.title, 120), thought = clean(b.thought, 280), type = TYPES.includes(b.type) ? b.type : "other", url = null;
         if (hasLink(title) || hasLink(thought)) return json({ok: false, err: "link"}, 400);
+        if (b.url) { const m = await ytMeta(b.url); if (!m) return json({ok: false, err: "url"}, 400); url = m.url; type = "yt"; if (!title) title = ytTitle(m); }
+        if (!title) return json({ok: false, err: "title"}, 400);
         const c = await env.DB.prepare("SELECT COUNT(*) c FROM items WHERE shelf=?").bind(n).first();
         if (c.c >= MAX_LIB) return json({ok: false, err: "full"}, 409);
-        if (await env.DB.prepare("SELECT 1 x FROM items WHERE shelf=? AND lower(title)=lower(?)").bind(n, title).first()) return json({ok: false, err: "dup"}, 409);
+        if (await dupOf(env, n, title)) return json({ok: false, err: "dup"}, 409);
         const on = await onShelfCount(env, n);
         let pos = wantPos(b.pos);
         if (pos === null) pos = on < SHELF ? on + 1 : 0;
         if (pos) pos = Math.min(pos, on + 1);
         await env.DB.batch([
           ...(pos ? placeStmts(env, n, pos) : []),
-          env.DB.prepare("INSERT INTO items(shelf,type,title,thought,lang,pos,created,gives) VALUES(?,?,?,?,?,?,?,?)").bind(n, type, title, thought, s.lang, pos || null, now(), cleanGives(b.igives) || null),
+          env.DB.prepare("INSERT INTO items(shelf,type,title,thought,lang,pos,created,gives,st,url) VALUES(?,?,?,?,?,?,?,?,?,?)").bind(n, type, title, thought, s.lang, pos || null, now(), cleanGives(b.igives) || null, pos ? "now" : "done", url),
           env.DB.prepare("UPDATE shelves SET updated=? WHERE name=?").bind(now(), n)]);
         return json({ok: true, shelf: await shelfOut(env, s, true)});
       }
@@ -156,7 +215,7 @@ export default {
         const b = await body(req), n = String(b.n || "").toLowerCase(), id = parseInt(b.id, 10);
         const s = await env.DB.prepare("SELECT * FROM shelves WHERE name=?").bind(n).first();
         if (!s || !b.k || b.k !== s.k || s.status === "blocked") return json({ok: false, err: "none"}, 404);
-        const it = await env.DB.prepare("SELECT id,pos FROM items WHERE shelf=? AND id=?").bind(n, id || 0).first();
+        const it = await env.DB.prepare("SELECT id,pos,st FROM items WHERE shelf=? AND id=?").bind(n, id || 0).first();
         if (!it) return json({ok: false, err: "item"}, 404);
         const out = it.pos ? [env.DB.prepare("UPDATE items SET pos=pos-1 WHERE shelf=? AND pos>?").bind(n, it.pos)] : [];
         const touch = env.DB.prepare("UPDATE shelves SET updated=? WHERE name=?").bind(now(), n);
@@ -167,10 +226,53 @@ export default {
           let pos = wantPos(b.pos);
           if (pos === null) return json({ok: false, err: "pos"}, 400);
           if (pos) pos = Math.min(pos, (await onShelfCount(env, n, it.id)) + 1);
-          await env.DB.batch([env.DB.prepare("UPDATE items SET pos=NULL WHERE id=?").bind(it.id), ...out,
-            ...(pos ? [...placeStmts(env, n, pos), env.DB.prepare("UPDATE items SET pos=? WHERE id=?").bind(pos, it.id)] : []), touch]);
+          // в библиотеку: «Хочу» остаётся «Хочу», остальное — «Было»; на полку — «сейчас»
+          const st = pos ? "now" : (it.st === "want" ? "want" : "done");
+          await env.DB.batch([env.DB.prepare("UPDATE items SET pos=NULL, st=? WHERE id=?").bind(st, it.id), ...out,
+            ...(pos ? [...placeStmts(env, n, pos), env.DB.prepare("UPDATE items SET pos=? WHERE id=?").bind(pos, it.id),
+              env.DB.prepare("UPDATE items SET st='done' WHERE shelf=? AND pos IS NULL AND st='now'").bind(n)] : []), touch]);
         }
         return json({ok: true, shelf: await shelfOut(env, s, true)});
+      }
+      // «＋ Хочу»: вещь с чужой полки, из Общей или со страницы /k/ — в «Хочу» нужного раздела; дубль не ставится; хозяину той полки — весточка
+      if (p === "/api/want" && req.method === "POST") {
+        const b = await body(req), s = await owned(env, b);
+        if (!s) return json({ok: false, err: "none"}, 404);
+        const n = s.name;
+        let title = clean(b.title, 120), type = TYPES.includes(b.type) ? b.type : (b.type === "series" || b.type === "doc" ? "film" : "other"), url = null;
+        if (hasLink(title)) return json({ok: false, err: "link"}, 400);
+        if (b.url) { const m = await ytMeta(b.url); if (m) { url = m.url; type = "yt"; if (!title) title = ytTitle(m); } }
+        if (!title) return json({ok: false, err: "title"}, 400);
+        let from = String(b.from || "").toLowerCase();
+        if (!okName(from) || from === n || !(from === "igor" || await env.DB.prepare("SELECT 1 x FROM shelves WHERE name=? AND status='open'").bind(from).first())) from = "";
+        const dup = await dupOf(env, n, title);
+        if (dup) return json({ok: true, dup: true, shelf: await shelfOut(env, s, true)});
+        const c = await env.DB.prepare("SELECT COUNT(*) c FROM items WHERE shelf=?").bind(n).first();
+        if (c.c >= MAX_LIB) return json({ok: false, err: "full"}, 409);
+        await env.DB.batch([
+          env.DB.prepare("INSERT INTO items(shelf,type,title,thought,lang,pos,created,st,from_name,url) VALUES(?,?,?,'',?,NULL,?,'want',?,?)").bind(n, type, title, s.lang, now(), from || null, url),
+          env.DB.prepare("UPDATE shelves SET updated=? WHERE name=?").bind(now(), n)]);
+        if (from) await wantNotify(env, ctx, s, from, title, type);
+        return json({ok: true, shelf: await shelfOut(env, s, true)});
+      }
+      // из «Хочу»: a=start «Начал» → на полку на место своего типа; a=done «Готово» → в «Было» + что дала (до 2 чипов)
+      if (p === "/api/state" && req.method === "POST") {
+        const b = await body(req), s = await owned(env, b);
+        if (!s) return json({ok: false, err: "none"}, 404);
+        const n = s.name, it = await env.DB.prepare("SELECT id,type,pos,st FROM items WHERE shelf=? AND id=?").bind(n, parseInt(b.id, 10) || 0).first();
+        if (!it) return json({ok: false, err: "item"}, 404);
+        const touch = env.DB.prepare("UPDATE shelves SET updated=? WHERE name=?").bind(now(), n);
+        if (b.a === "start") await env.DB.batch([...(await startStmts(env, n, it)), touch]);
+        else if (b.a === "done") await env.DB.batch([
+          ...(it.pos ? [env.DB.prepare("UPDATE items SET pos=pos-1 WHERE shelf=? AND pos>?").bind(n, it.pos)] : []),
+          env.DB.prepare("UPDATE items SET pos=NULL, st='done', gives=COALESCE(?, gives) WHERE id=?").bind(cleanGives(b.igives) || null, it.id), touch]);
+        else return json({ok: false, err: "a"}, 400);
+        return json({ok: true, shelf: await shelfOut(env, s, true)});
+      }
+      // предпросмотр YouTube по ссылке (для поля «ссылка» в «Поставить ещё»)
+      if (p === "/api/yt") {
+        const m = await ytMeta(q.get("u"));
+        return m ? json({ok: true, url: m.url, title: ytTitle(m), name: m.title, author: m.author}) : json({ok: false, err: "url"}, 400);
       }
       // хозяин меняет подпись полки (имя на полке; адрес не меняется)
       if (p === "/api/dn" && req.method === "POST") {
@@ -223,9 +325,13 @@ export default {
       }
       // список открытых полок (для публикации страниц и совпадений)
       if (p === "/api/open") {
-        const sh = await env.DB.prepare("SELECT name,dn,lang,gives,created,updated FROM shelves WHERE status='open' ORDER BY created").all();
-        const it = await env.DB.prepare("SELECT i.shelf,i.type,i.title,i.thought,i.pos,i.gives FROM items i JOIN shelves s ON s.name=i.shelf WHERE s.status='open' ORDER BY i.pos IS NULL, i.pos, i.id DESC").all();
-        return json({ok: true, shelves: sh.results.map(s => ({...s, dn: s.dn || "", items: it.results.filter(i => i.shelf === s.name).map(({shelf, ...r}) => ({...r, now: r.pos ? 1 : 0}))}))});
+        const sh = await env.DB.prepare("SELECT name,dn,lang,gives,created,updated FROM shelves WHERE status='open' AND name<>'igor' ORDER BY created").all();
+        // «Хочу» в счётчики и «Совпало» не идёт — только то, что на полке или в «Было»
+        const it = await env.DB.prepare("SELECT i.shelf,i.type,i.title,i.thought,i.pos,i.gives,i.st,i.from_name,i.url FROM items i JOIN shelves s ON s.name=i.shelf WHERE s.status='open' AND s.name<>'igor' AND COALESCE(i.st,'')<>'want' ORDER BY i.pos IS NULL, i.pos, i.id DESC").all();
+        // «Хочу» Игоря — для его статичной полки (publish.py кладёт в biblioteca/igor/want.json)
+        const iw = await env.DB.prepare("SELECT i.id,i.type,i.title,i.from_name,i.url,i.created,f.dn from_dn FROM items i LEFT JOIN shelves f ON f.name=i.from_name WHERE i.shelf='igor' AND i.st='want' ORDER BY i.id DESC LIMIT 100").all();
+        return json({ok: true, shelves: sh.results.map(s => ({...s, dn: s.dn || "", items: it.results.filter(i => i.shelf === s.name).map(({shelf, ...r}) => ({...r, st: stOf(r), now: r.pos ? 1 : 0}))})),
+          igor_want: iw.results.map(i => ({...i, from_dn: i.from_dn || ""}))});
       }
       // подписка на дневник почтой
       if (p === "/api/sub" && req.method === "POST") {
