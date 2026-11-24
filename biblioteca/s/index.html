@@ -140,11 +140,11 @@ function render(){
       try{navigator.clipboard.writeText(u)}catch(_){}ok.textContent=T.shareOk});m.append(sb,ok)}
   const st=el("div","lstack");
   const stk=onShelf(),mmsg=el("p","note","");
-  stk.forEach((it,i)=>{const h=hsh(it.title+i),film=it.type!=="book",p=film?["#171717","#f2f2f2","#e0806f"]:PAL[h%PAL.length];
+  stk.forEach((it,i)=>{const h=hsh(it.title+i),yt=it.type==="yt",film=it.type!=="book"&&!yt,p=yt?["#C4302B","#ffffff","#ffffff"]:film?["#171717","#f2f2f2","#e0806f"]:PAL[h%PAL.length];
     const w=85+(h%14),x=((h>>9)%13)-6,r=((((h>>6)%9)-4)*0.32).toFixed(2),ht=48+((h>>3)%5)*7;
-    const bk=el("div","bk d"+(h%3)+(film?" film":"")+(i===0?" top":""));bk.dataset.now=T.now;bk.style.cssText=`--w:${w}%;--x:${x}px;--r:${r}deg;animation-delay:${i*.13}s`;
+    const bk=el("div","bk d"+(h%3)+(film?" film":"")+(yt?" ytbk":"")+(i===0?" top":""));bk.dataset.now=T.now;bk.style.cssText=`--w:${w}%;--x:${x}px;--r:${r}deg;animation-delay:${i*.13}s`;
     const sp=el("div","spine");sp.style.cssText=`--h:${ht}px;--bg:${p[0]};--bink:${p[1]};--band:${p[2]}`;
-    const tx=el("span","txt");tx.append(el("span","bt",it.title),el("span","ba",T.types[it.type]||T.types.other));sp.append(tx);bk.append(sp);st.append(bk);
+    const tx=el("span","txt");tx.append(el("span","bt",it.title));sp.append(tx,el("span","kind",T.types[it.type]||T.types.other));bk.append(sp);st.append(bk);
     if(it.thought||it.gives||!shelf.owner){const th=el("div","th");th.style.cssText=`--w:${w}%;--x:${x}px;animation-delay:${i*.13+.08}s`;
       if(it.thought)th.append(document.createTextNode(it.thought+" "));
       const gv=(it.gives||"").split(",").filter(Boolean).map(g=>window.bibQuick?bibQuick.givesLabel(g):"").filter(Boolean);
@@ -160,8 +160,12 @@ function render(){
   // «Вся моя библиотека» — всё, что ушло с полки или ждёт своего места
   const lib=inLib();
   if(lib.length||shelf.owner){const lb=el("details","box fold");const sm=el("summary","",(shelf.owner?T.libMe:T.libOf(nice(shelf)))+(lib.length?" · "+lib.length:""));lb.append(sm,el("p","muted",lib.length?T.libSub:T.libEmpty));
-    if(lib.length){const ul=el("ul","lib");lib.forEach(it=>{const li=el("li");li.append(el("span","lt",it.title),el("span","la",T.types[it.type]||T.types.other));
-      if(it.thought)li.append(el("p","lth",it.thought));if(shelf.owner&&it.id)li.append(mover(it,mmsg));ul.append(li)});lb.append(ul)}
+    // библиотека — по разделам, как у Игоря: Книги · Фильмы · YouTube · Другое (24.11.2026)
+    if(lib.length){const TG={ru:{book:"Книги",film:"Фильмы",yt:"YouTube",other:"Другое"},pt:{book:"Livros",film:"Filmes",yt:"YouTube",other:"Outros"},en:{book:"Books",film:"Films",yt:"YouTube",other:"Other"},es:{book:"Libros",film:"Películas",yt:"YouTube",other:"Otros"},de:{book:"Bücher",film:"Filme",yt:"YouTube",other:"Anderes"}}[lang];
+      const gk=it=>["book","film","yt"].includes(it.type)?it.type:it.type==="series"||it.type==="doc"?"film":"other";
+      ["book","film","yt","other"].forEach(g=>{const part=lib.filter(it=>gk(it)===g);if(!part.length)return;lb.append(el("p","libg",TG[g]+" · "+part.length));
+        const ul=el("ul","lib");part.forEach(it=>{const li=el("li");li.append(el("span","lt",it.title));
+        if(it.thought)li.append(el("p","lth",it.thought));if(shelf.owner&&it.id)li.append(mover(it,mmsg));ul.append(li)});lb.append(ul)})}
     m.append(lb)}
   // «Совпало»: с кем эта полка на одной волне (полка Игоря, авторитеты, участники)
   const mb=el("div","box");m.append(mb);

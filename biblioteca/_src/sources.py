@@ -176,6 +176,8 @@ ul.list li a{font-weight:800;text-decoration:none}.cnt{float:right;color:var(--m
 .who{color:var(--mut);font-size:14px}.wv{background:var(--acc);color:#fff;border-radius:999px;padding:1px 8px;text-transform:none;letter-spacing:0}.chips a{display:inline-block;margin:4px 6px 0 0;padding:6px 10px;border-radius:999px;background:var(--chip);text-decoration:none;font-size:14px;color:var(--ink)}
 .q{width:100%;font:inherit;font-size:17px;padding:13px 14px;border:2px solid var(--acc);border-radius:12px;background:var(--card);color:var(--ink);margin:4px 0 6px}
 #none{display:none}
+.tys{display:flex;gap:8px;overflow-x:auto;margin:18px 0 4px;padding-bottom:4px}.ty{flex:none;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:9px 14px;font:800 14px Manrope,sans-serif;cursor:pointer}
+.ty small{margin-left:6px;opacity:.7}.ty[aria-selected=true]{background:var(--acc);color:#fff;border-color:var(--acc)}
 .stk{margin:10px 0 0}.sp{margin:0 auto 4px;border-radius:6px;padding:11px 14px;color:#fff;box-shadow:0 2px 0 rgba(0,0,0,.25),0 7px 12px rgba(0,0,0,.18);animation:drop .5s cubic-bezier(.2,.9,.3,1.25) both}
 .sp b{display:block;font:700 16px/1.25 Lora,Georgia,serif}.sp small{display:block;margin-top:2px;font-size:12px;opacity:.85}
 .brd{height:9px;border-radius:3px;background:#6b4a36;margin:0 -6px 6px}
@@ -188,6 +190,9 @@ const rows=[...new Map([...document.querySelectorAll("li[data-k]")].map(li=>[li.
 const n=s=>s.normalize("NFKD").replace(/[\\u0300-\\u036f]/g,"").toLowerCase().replace(/ё/g,"е").replace(/[^a-z0-9а-я]+/g," ").trim();
 function go(){const w=n(q.value).split(" ").filter(Boolean);hits.innerHTML="";if(!w.length){all.hidden=false;none.style.display="none";return}
 all.hidden=true;const f=rows.filter(li=>w.every(x=>li.dataset.k.includes(x)));f.forEach(li=>hits.appendChild(li.cloneNode(true)));none.style.display=f.length?"none":"block"}
+document.querySelectorAll(".ty").forEach(b=>b.addEventListener("click",()=>{const k=b.dataset.ty;document.querySelectorAll(".ty").forEach(x=>x.setAttribute("aria-selected",x===b));
+all.querySelectorAll("ul.list").forEach(ul=>{let v=0;ul.querySelectorAll("li[data-ty]").forEach(li=>{const on=k==="all"||li.dataset.ty===k;li.hidden=!on;if(on)v++});const h=ul.previousElementSibling;if(h&&h.tagName==="H2")h.hidden=!v;ul.hidden=!v});
+try{window.swTrack&&window.swTrack("biblioteca_cat_type",{k})}catch(e){}}));
 q.addEventListener("input",go);const p=new URLSearchParams(location.search).get("q");if(p){q.value=p;go()}})();</script>"""
 
 
@@ -281,6 +286,18 @@ PAL = [["#7a2e2a", "#f6e7cf", "#d9a441"], ["#1f3a5f", "#eef3f8", "#c9a24a"], ["#
        ["#33302f", "#f0e6dc", "#c9584b"], ["#1d5c63", "#e9f6f5", "#e0b96a"], ["#e7d9bd", "#3a2418", "#9e3b32"], ["#4a2c4f", "#f3e8f5", "#d1a85a"]]
 
 
+KIND = {"pt": {"book": "Livro", "film": "Filme", "yt": "YouTube", "other": "Outro"}, "en": {"book": "Book", "film": "Film", "yt": "YouTube", "other": "Other"},
+        "ru": {"book": "Книга", "film": "Фильм", "yt": "YouTube", "other": "Другое"}, "es": {"book": "Libro", "film": "Película", "yt": "YouTube", "other": "Otro"},
+        "de": {"book": "Buch", "film": "Film", "yt": "YouTube", "other": "Anderes"}}
+KSEC = {"pt": {"all": "Tudo", "book": "Livros", "film": "Filmes", "yt": "YouTube", "other": "Outros"}, "en": {"all": "All", "book": "Books", "film": "Films", "yt": "YouTube", "other": "Other"},
+        "ru": {"all": "Всё", "book": "Книги", "film": "Фильмы", "yt": "YouTube", "other": "Другое"}, "es": {"all": "Todo", "book": "Libros", "film": "Películas", "yt": "YouTube", "other": "Otros"},
+        "de": {"all": "Alles", "book": "Bücher", "film": "Filme", "yt": "YouTube", "other": "Anderes"}}
+
+
+def kind(typ):
+    return typ if typ in ("book", "film", "yt") else "film" if typ in ("series", "doc") else "other"
+
+
 def stack(items, l):
     now = {"pt": "agora", "en": "now", "ru": "сейчас", "es": "ahora", "de": "jetzt"}[l]
     out = []
@@ -288,13 +305,14 @@ def stack(items, l):
         h = 7
         for c in t + str(i):
             h = (h * 31 + ord(c)) & 0xFFFFFFFF
-        film = typ != "book"
-        p = ["#171717", "#f2f2f2", "#e0806f"] if film else PAL[h % len(PAL)]
+        yt = typ == "yt"
+        film = typ != "book" and not yt
+        p = ["#C4302B", "#ffffff", "#ffffff"] if yt else ["#171717", "#f2f2f2", "#e0806f"] if film else PAL[h % len(PAL)]
         w, x, r, ht = 85 + h % 14, ((h >> 9) % 13) - 6, round((((h >> 6) % 9) - 4) * 0.32, 2), 48 + ((h >> 3) % 5) * 7
-        cls = f'bk d{h % 3}' + (" film" if film else "") + (" top" if i == 0 else "")
+        cls = f'bk d{h % 3}' + (" film" if film else "") + (" ytbk" if yt else "") + (" top" if i == 0 else "")
         out.append(f'<div class="{cls}" data-now="{now}" style="--w:{w}%;--x:{x}px;--r:{r}deg;animation-delay:{i * .12:.2f}s">'
                    f'<div class="spine" style="--h:{ht}px;--bg:{p[0]};--bink:{p[1]};--band:{p[2]}"><span class="txt"><span class="bt">{e(t)}</span>'
-                   f'<span class="ba">{e(a)}</span></span></div></div>')
+                   f'<span class="ba">{e(a)}</span></span><span class="kind">{e(KIND[l][kind(typ)])}</span></div></div>')
     return '<div class="lstack">' + "".join(out) + '</div><div class="lboard"></div>'
 
 
@@ -305,7 +323,7 @@ def catalog_page(src, shelves, l, preview, mine5=(), users=()):
     items = sorted(src.values(), key=lambda s: (-nn(s), -nl(s), title(s, l).lower()))
     hay = lambda s: e(norm(" ".join([s["orig"], s.get("a", ""), s.get("a_ru", ""), *s["t"].values(), *[w for o in s["on"] if o["kind"] == "auth" for w in (o["shelf"]["person"], o["shelf"]["person_ru"])], *["igor игорь" for o in s["on"] if o["kind"] == "igor"]])))
     cnt = lambda s: " · ".join(x for x in [f'🌊{nn(s)}' if nn(s) else "", f'📚{nl(s)}' if nl(s) else ""] if x)
-    li = lambda s: (f'<li data-k="{hay(s)}"><span class="cnt">{cnt(s)}</span>'
+    li = lambda s: (f'<li data-k="{hay(s)}" data-ty="{kind(s["type"])}"><span class="cnt">{cnt(s)}</span>'
                     f'<a href="{link(s["id"] + "/", l)}">{e(title(s, l))}</a><br><small class="who">{e(author(s, l))} · {e(T["type"].get(s["type"], ""))}</small></li>')
     wave = [s for s in items if nn(s)][:10]
     many = sorted([s for s in src.values() if nl(s) > 1], key=lambda s: (-nl(s), title(s, l).lower()))
@@ -320,7 +338,11 @@ def catalog_page(src, shelves, l, preview, mine5=(), users=()):
                   f'<p><a href="{igor(l)}" style="font-weight:800">{e(T["authorOpen"])}</a></p>') if mine5 else ""
     users_blk = (f'<h2>{e(T["newSh"])}</h2><div class="chips">'
                  + "".join(f'<a href="/biblioteca/{e(u)}/">{e(" ".join(w.capitalize() for w in u.split("-")))}</a>' for u in users) + '</div>') if users else ""
-    body = (f'<div id="all"><h1>{e(T["cat"])}</h1><p class="sub">{e(T["catSub"])}</p>{author_blk}'
+    have = [k for k in ("book", "film", "yt", "other") if any(kind(s["type"]) == k for s in src.values())]
+    tabs = ('<div class="tys" role="tablist">' + "".join(
+        f'<button class="ty" data-ty="{k}" aria-selected="{str(k == "all").lower()}">{e(KSEC[l][k])}'
+        f'<small>{len(src) if k == "all" else sum(1 for s in src.values() if kind(s["type"]) == k)}</small></button>' for k in ["all", *have]) + '</div>')
+    body = (f'<div id="all"><h1>{e(T["cat"])}</h1><p class="sub">{e(T["catSub"])}</p>{author_blk}{tabs}'
             + (f'<h2>{e(T["waveH"])}</h2><ul class="list">{"".join(li(s) for s in wave)}</ul>' if wave else "")
             + (f'<h2>{e(T["baseH"])}</h2><ul class="list">{"".join(li(s) for s in many)}</ul>' if many else "")
             + users_blk + f'<h2>{e(T["builders"])}</h2><p class="sub">{e(T["buildersSub"])}</p>{blocks}'
