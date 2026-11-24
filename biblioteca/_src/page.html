@@ -220,7 +220,10 @@ footer a{display:inline-block;padding:8px 4px;text-decoration:underline;text-dec
 .draft{font-size:13px;color:var(--ink-soft);font-style:italic;margin:10px 0 0}
 .soft{margin:12px 0 0;padding:12px 14px;border-radius:12px;background:var(--chip-on);font-size:15px}
 .soft a{font-weight:800;color:var(--accent)}
-.zev{margin:22px 0 0}.zev video{width:100%;aspect-ratio:1;border-radius:var(--r);border:1px solid var(--line);background:#000;display:block}.vnote{font-size:12px;color:var(--ink-soft);margin:6px 2px 0;text-align:right}
+.fold{margin:14px 0 0;border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+.fold>summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:15px 16px;font:700 18px/1.3 var(--display);color:var(--ink)}
+.fold>summary::-webkit-details-marker{display:none}.fold>summary::after{content:"＋";font:800 18px/1 var(--body);color:var(--accent)}.fold[open]>summary::after{content:"－"}
+.fold>.fin{padding:0 16px 16px}.fold .revs h2{display:none}.fold #anketa{border:0;padding:0;margin:0;background:transparent}
 .ctabox{margin:22px 0 0;padding:18px;border-radius:var(--r);background:var(--surface);border:1px solid var(--line);text-align:center}
 .ctabox p{margin:10px 0 0;font-size:15px;color:var(--ink-soft)}
 .tabs3{display:flex;gap:8px;overflow-x:auto;margin:6px 0 8px;padding-bottom:4px}
@@ -295,17 +298,17 @@ footer a{display:inline-block;padding:8px 4px;text-decoration:underline;text-dec
     <p data-i="ctaSub"></p>
   </div>
 
-  <section class="zev" id="zev"><video id="zeV" muted loop playsinline controls preload="metadata"></video><p class="vnote" data-i="vnote"></p></section>
-
-  <h2 data-i="moreH"></h2>
+  <!-- 24.11.2026, решение Игоря: мультик со страницы полки убран (он в Медиатеке и в постах); разделы — свёрнуты кнопками, открываются по нажатию -->
+  <details class="fold" id="fShelf"><summary data-i="moreH"></summary><div class="fin">
   <div class="tabs3" id="tabs3"></div>
   <div id="list"></div>
   <p style="margin:16px 0 0"><a class="btn ghost" href="#catalogo" data-i="allLib"></a></p>
+  </div></details>
 
-  <section class="revs" id="revs"></section>
+  <details class="fold" id="fRevs"><summary data-i="revsH"></summary><div class="fin"><section class="revs" id="revs"></section></div></details>
 
+  <details class="fold" id="fForm"><summary data-i="formMan"></summary><div class="fin">
   <div class="form" id="anketa">
-    <h2 style="margin-top:0" data-i="formH"></h2>
     <p class="muted" data-i="formLead" style="margin:0 0 12px"></p>
     <div class="chips" id="fType"></div>
     <input id="fTitle" data-ph="f1ph" autocomplete="off">
@@ -318,17 +321,19 @@ footer a{display:inline-block;padding:8px 4px;text-decoration:underline;text-dec
     <div style="margin-top:12px"><button class="btn big" id="fSend" data-i="send"></button></div>
     <p class="note" data-i="formNote"></p>
   </div>
+  </div></details>
   <div class="res" id="result" hidden></div>
 </div>
 
 <section id="cat" hidden></section>
 
-  <div class="form" id="subBox" style="border-width:1px">
-    <h3 style="margin:0 0 4px" data-i="subH"></h3>
+  <details class="fold" id="fSub"><summary data-i="subH"></summary><div class="fin">
+  <div class="form" id="subBox" style="border:0;padding:0;margin:0">
     <p class="muted" data-i="subLead" style="margin:0 0 10px"></p>
     <div class="mail"><input type="email" id="sEmail" autocomplete="email" data-ph="mailPh"><input type="text" id="sHp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px"><button class="btn" id="sSend" data-i="subBtn"></button></div>
     <p class="note" id="sMsg" data-i="subNote"></p>
   </div>
+  </div></details>
 
   <footer>© <span id="yr"></span> <a id="fHub" href="https://seedwave.pt/hub/">SeedWave</a> · <a id="fMad" data-mad href="https://seedwave.pt/madeira/?utm_source=biblioteca&amp;utm_medium=footer">Madeira</a> · <a href="https://www.linkedin.com/in/igor-kartuzov/">Igor Kartuzov</a></footer>
 </div>
@@ -344,7 +349,7 @@ ru:{proto:"Прототип 3 — виден только Игорю. Публи
  vnote:"Анимация создана с ИИ.",
  lead:"Без оценок и пересказов. Из каждой книги и фильма — одна мысль, которая пошла в дело.",
  cnt:(n,r)=>`На полке ${n} · с моими словами ${r}. Нажми на корешок.`,
- cta:"Завести такую же полку",ctaSub:"Название и одна фраза — и у тебя своя ссылка.",
+ cta:"Ответь своей полкой",ctaSub:"4 нажатия — печатать не нужно. Игорь увидит твой ответ.",
  whyL:"Почему на полке",mainL:"Главная мысль",takeL:"Что я взял",revL:"Рецензия хозяина полки",didL:"Что сделал",plotL:"О чём",inBook:"В моей книге:",
  fullBtn:"Рецензия целиком · есть сюжет",fullHide:"Свернуть",
  gated:"Эта рецензия откроется, когда заведёшь свою полку.",gatedGo:"Завести",
@@ -353,7 +358,7 @@ ru:{proto:"Прототип 3 — виден только Игорю. Публи
  moreH:"Вся полка",tw:{now:"Сейчас",past:"Прочитано и посмотрено",next:"В планах"},
  sec:{sf:"фантастика",self:"своё дело",eco:"капитал",yt:"кто строит будущее",other:"",learn:"учусь"},
  allLib:"Вся Библиотека →",
- formH:"Заведи свою полку за минуту",formLead:"Одна вещь, которая оставила след. Остальное добавишь потом.",
+ formH:"Заведи свою полку за минуту",formMan:"Заполнить полку вручную",formLead:"Одна вещь, которая оставила след. Остальное добавишь потом.",
  ft:{book:"книга",film:"фильм",yt:"YouTube",other:"другое"},
  f1ph:"Название",f2ph:"Одна фраза: что ты из этого взял",f3:"Адрес полки",f3ph:"твоё-имя",f4:"Как тебя подписать на полке",f4ph:"Например: Ольга",
  nameFree:"Свободно",nameBusy:"Занято. Свободны:",nameBad:"Латиница, цифры, дефис — от 3 до 20 знаков",
@@ -379,7 +384,7 @@ pt:{proto:"Protótipo 3 — visível apenas para o Igor. Publicação em seedwav
  vnote:"Animação criada com IA.",
  lead:"Sem notas nem resumos. De cada livro e de cada filme, uma ideia que passou à prática.",
  cnt:(n,r)=>`Na estante: ${n} · com as minhas palavras: ${r}. Toque numa lombada.`,
- cta:"Criar uma estante assim",ctaSub:"Um título e uma frase — e fica com o seu próprio link.",
+ cta:"Responda com a sua estante",ctaSub:"4 toques — sem escrever. O Igor vai ver a sua resposta.",
  whyL:"Porque está na estante",mainL:"Ideia principal",takeL:"O que tirei",revL:"Recensão do dono da estante",didL:"O que fiz",plotL:"De que trata",inBook:"No meu livro:",
  fullBtn:"Recensão completa · revela o enredo",fullHide:"Fechar",
  gated:"Esta recensão abre-se quando criar a sua estante.",gatedGo:"Criar",
@@ -388,7 +393,7 @@ pt:{proto:"Protótipo 3 — visível apenas para o Igor. Publicação em seedwav
  moreH:"Toda a estante",tw:{now:"Agora",past:"Lido e visto",next:"Nos planos"},
  sec:{sf:"ficção científica",self:"o próprio ofício",eco:"capital",yt:"quem constrói o futuro",other:"",learn:"a aprender"},
  allLib:"Toda a Biblioteca →",
- formH:"Crie a sua estante num minuto",formLead:"Uma obra que deixou marca. O resto acrescenta depois.",
+ formH:"Crie a sua estante num minuto",formMan:"Preencher a estante à mão",formLead:"Uma obra que deixou marca. O resto acrescenta depois.",
  ft:{book:"livro",film:"filme",yt:"YouTube",other:"outro"},
  f1ph:"Título",f2ph:"Uma frase: o que tirou daí",f3:"Endereço da estante",f3ph:"o-seu-nome",f4:"Como assinar a estante",f4ph:"Por exemplo: Olga",
  nameFree:"Livre",nameBusy:"Ocupado. Livres:",nameBad:"Letras latinas, algarismos, hífen — de 3 a 20 caracteres",
@@ -414,7 +419,7 @@ en:{proto:"Prototype 3 — visible to Igor only. Goes live at seedwave.pt/biblio
  vnote:"Animation created with AI.",
  lead:"No ratings, no retellings. From each book and film, one idea that I put to work.",
  cnt:(n,r)=>`On the shelf: ${n} · with my own words: ${r}. Tap a spine.`,
- cta:"Start a shelf like this",ctaSub:"A title and one sentence — and you have your own link.",
+ cta:"Reply with your own shelf",ctaSub:"4 taps — no typing. Igor will see your reply.",
  whyL:"Why it’s on the shelf",mainL:"Main idea",takeL:"What I took",revL:"Shelf owner’s review",didL:"What I did",plotL:"What it’s about",inBook:"In my book:",
  fullBtn:"Full review · plot inside",fullHide:"Close",
  gated:"This review opens once you start your own shelf.",gatedGo:"Start one",
@@ -423,7 +428,7 @@ en:{proto:"Prototype 3 — visible to Igor only. Goes live at seedwave.pt/biblio
  moreH:"The whole shelf",tw:{now:"Now",past:"Read and watched",next:"Planned"},
  sec:{sf:"science fiction",self:"your own craft",eco:"capital",yt:"people building the future",other:"",learn:"learning"},
  allLib:"The whole Library →",
- formH:"Start your shelf in a minute",formLead:"One thing that left a mark. Add the rest later.",
+ formH:"Start your shelf in a minute",formMan:"Fill in a shelf by hand",formLead:"One thing that left a mark. Add the rest later.",
  ft:{book:"book",film:"film",yt:"YouTube",other:"other"},
  f1ph:"Title",f2ph:"One sentence: what you took from it",f3:"Shelf address",f3ph:"your-name",f4:"How to sign your shelf",f4ph:"For example: Olga",
  nameFree:"Available",nameBusy:"Taken. Available:",nameBad:"Latin letters, digits, hyphen — 3 to 20 characters",
@@ -449,7 +454,7 @@ es:{proto:"Prototipo 3 — visible solo para Igor. Publicación en seedwave.pt/b
  vnote:"Animación creada con IA.",
  lead:"Sin notas ni resúmenes. De cada libro y cada película, una idea que puse en práctica.",
  cnt:(n,r)=>`En la estantería: ${n} · con mis palabras: ${r}. Toca un lomo.`,
- cta:"Crear una estantería así",ctaSub:"Un título y una frase — y tienes tu propio enlace.",
+ cta:"Responde con tu estantería",ctaSub:"4 toques — sin escribir. Igor verá tu respuesta.",
  whyL:"Por qué está en la estantería",mainL:"Idea principal",takeL:"Lo que saqué",revL:"Reseña del dueño de la estantería",didL:"Lo que hice",plotL:"De qué trata",inBook:"En mi libro:",
  fullBtn:"Reseña completa · revela la trama",fullHide:"Cerrar",
  gated:"Esta reseña se abre cuando crees tu estantería.",gatedGo:"Crear",
@@ -458,7 +463,7 @@ es:{proto:"Prototipo 3 — visible solo para Igor. Publicación en seedwave.pt/b
  moreH:"Toda la estantería",tw:{now:"Ahora",past:"Leído y visto",next:"En planes"},
  sec:{sf:"ciencia ficción",self:"el oficio propio",eco:"capital",yt:"quién construye el futuro",other:"",learn:"aprendiendo"},
  allLib:"Toda la Biblioteca →",
- formH:"Crea tu estantería en un minuto",formLead:"Una obra que dejó huella. El resto lo añades después.",
+ formH:"Crea tu estantería en un minuto",formMan:"Rellenar la estantería a mano",formLead:"Una obra que dejó huella. El resto lo añades después.",
  ft:{book:"libro",film:"película",yt:"YouTube",other:"otro"},
  f1ph:"Título",f2ph:"Una frase: qué sacaste de ello",f3:"Dirección de la estantería",f3ph:"tu-nombre",f4:"Cómo firmar tu estantería",f4ph:"Por ejemplo: Olga",
  nameFree:"Libre",nameBusy:"Ocupado. Libres:",nameBad:"Letras latinas, cifras, guion — de 3 a 20 caracteres",
@@ -484,7 +489,7 @@ de:{proto:"Prototyp 3 — nur für Igor sichtbar. Veröffentlichung auf seedwave
  vnote:"Animation mit KI erstellt.",
  lead:"Keine Noten, keine Nacherzählung. Aus jedem Buch und Film ein Gedanke, den ich umgesetzt habe.",
  cnt:(n,r)=>`Im Regal: ${n} · mit meinen Worten: ${r}. Tipp auf einen Buchrücken.`,
- cta:"So ein Regal anlegen",ctaSub:"Ein Titel und ein Satz — und du hast deinen eigenen Link.",
+ cta:"Antworte mit deinem Regal",ctaSub:"4 Tipps — ohne Tippen. Igor sieht deine Antwort.",
  whyL:"Warum es im Regal steht",mainL:"Hauptgedanke",takeL:"Was ich mitgenommen habe",revL:"Rezension des Regalbesitzers",didL:"Was ich getan habe",plotL:"Worum es geht",inBook:"In meinem Buch:",
  fullBtn:"Ganze Rezension · verrät die Handlung",fullHide:"Schließen",
  gated:"Diese Rezension öffnet sich, sobald du dein eigenes Regal anlegst.",gatedGo:"Anlegen",
@@ -493,7 +498,7 @@ de:{proto:"Prototyp 3 — nur für Igor sichtbar. Veröffentlichung auf seedwave
  moreH:"Das ganze Regal",tw:{now:"Jetzt",past:"Gelesen und gesehen",next:"Geplant"},
  sec:{sf:"Science-Fiction",self:"das eigene Handwerk",eco:"Kapital",yt:"wer die Zukunft baut",other:"",learn:"ich lerne"},
  allLib:"Die ganze Bibliothek →",
- formH:"Leg dein Regal in einer Minute an",formLead:"Ein Werk, das Spuren hinterlassen hat. Den Rest ergänzt du später.",
+ formH:"Leg dein Regal in einer Minute an",formMan:"Regal von Hand ausfüllen",formLead:"Ein Werk, das Spuren hinterlassen hat. Den Rest ergänzt du später.",
  ft:{book:"Buch",film:"Film",yt:"YouTube",other:"anderes"},
  f1ph:"Titel",f2ph:"Ein Satz: was du daraus mitgenommen hast",f3:"Adresse des Regals",f3ph:"dein-name",f4:"Wie dein Regal unterschrieben wird",f4ph:"Zum Beispiel: Olga",
  nameFree:"Frei",nameBusy:"Vergeben. Frei sind:",nameBad:"Lateinische Buchstaben, Ziffern, Bindestrich — 3 bis 20 Zeichen",
@@ -672,8 +677,8 @@ let nmT;function checkRemote(){clearTimeout(nmT);const v=$("#fName").value.trim(
   nmT=setTimeout(()=>{fetch(API+"/api/name?n="+encodeURIComponent(v)+(GIFT&&GIFT.n===v?"&gift="+encodeURIComponent(GIFT.c):"")).then(r=>r.json()).then(j=>{TAKEN[v]=!j.free&&j.why!=="bad"&&!(j.why==="reserved"&&RESERVED.includes(v));if(TAKEN[v]&&$("#fName").value.trim().toLowerCase()===v)showName()}).catch(()=>{})},350)}
 function showName(){const [c,m]=nameState($("#fName").value);const e=$("#nmsg");e.className="nmsg "+c;e.innerHTML=m;return c}
 function renderResult(){
-  if(!made){$("#result").hidden=true;$("#anketa").hidden=false;return}
-  $("#anketa").hidden=true;const r=$("#result");r.hidden=false;
+  if(!made){$("#result").hidden=true;$("#anketa").hidden=false;$("#fForm").hidden=false;return}
+  $("#anketa").hidden=true;$("#fForm").hidden=true;const r=$("#result");r.hidden=false;
   const mine={id:"my-"+made.title,type:made.type,t:{ru:made.title},a:made.name};
   const near=SHELF.filter(b=>b.why&&!GATED.includes(b.id)).sort((a,b)=>(b.type===made.type)-(a.type===made.type)).slice(0,3);
   const un=GATED.length?byId(GATED[0]):null;
@@ -707,17 +712,12 @@ function renderStatic(){
   $("#fType").innerHTML=Object.keys(T("ft")).map(k=>`<button class="chip" data-ft="${k}" aria-pressed="${fType===k}">${T("ft")[k]}</button>`).join("");
   $("#yr").textContent=new Date().getFullYear();
   $("#themeBtn").textContent=theme==="light"?"☾":"☀";
-  {const v=$("#zeV");if(v&&!v.getAttribute("src")){v.setAttribute("poster","/biblioteca/video/ze_"+lang+".jpg");v.setAttribute("src","/biblioteca/video/ze_"+lang+".mp4")}}
 }
-(function(){const v=document.getElementById("zeV");if(!v)return;
-  v.addEventListener("play",()=>trk("biblioteca_video_play",{}),{once:true});
-  const rd=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if(!rd&&"IntersectionObserver" in window)new IntersectionObserver(es=>es.forEach(e=>{e.isIntersecting?v.play().catch(()=>{}):v.pause()}),{threshold:.6}).observe(v);})();
 function renderRevs(){const it=STACK0.concat(SHELF.map(b=>b.id).filter(i=>!STACK0.includes(i))).map(byId).filter(b=>b&&b.full&&(ED[b.id]||{}).full==="g");
-  $("#revs").innerHTML=`<h2>${T("revsH")}</h2>`+it.map(b=>{const f=locF(b),w=b.why?(b.why[lang]||b.why.ru):"";
+  $("#fRevs").hidden=!it.length;$("#revs").innerHTML=it.map(b=>{const f=locF(b),w=b.why?(b.why[lang]||b.why.ru):"";
     const ro=lang!=="ru"&&T("ruOnly")?`<p class="draft">${T("ruOnly")}</p>`:"";
     return `<details class="rv" id="r-${b.id}"><summary><b>${esc(title(b))}</b><span>${esc(author(b))} · ${T("types")[b.type]}</span></summary>${ro}${w?`<p class="why">${esc(w)}</p>`:""}<p class="mainq">${esc(f.main)}</p>${f.take.split("\n").filter(Boolean).map(x=>`<p>${esc(x)}</p>`).join("")}${f.review?`<p class="lbl">${T("plotL")}</p><p>${esc(f.review)}</p>`:""}</details>`}).join("")}
-function renderKnow(){if(mode==="author"||!window.bibQuick||!$("#knowbox"))return;bibQuick.knowBox($("#knowbox"),{owner:lang==="ru"?"Игорь":"Igor",key:"igor",items:NOW.map(byId).filter(Boolean).map(b=>({k:"",title:title(b),type:b.type==="series"?"series":b.type==="book"?"book":"film"}))})}
+function renderKnow(){if(mode==="author"||!window.bibQuick||!$("#knowbox"))return;$("#ctabox").hidden=true;bibQuick.knowBox($("#knowbox"),{owner:lang==="ru"?"Игорь":"Igor",key:"igor",items:NOW.map(byId).filter(Boolean).map(b=>({k:"",title:title(b),type:b.type==="series"?"series":b.type==="book"?"book":"film"}))})}
 function renderAll(){renderStatic();renderStack();renderKnow();renderList();renderResult();renderRevs();if(view==="cat")renderCat();showName()}
 // один каталог на всю Библиотеку — Общий (/biblioteca/k/): все полки, поиск, страница у каждой книги
 function goKat(){location.href="/biblioteca/"+(lang==="pt"?"":lang+"/")+(theme==="dark"?"?theme=dark":"")}
@@ -726,10 +726,10 @@ function setView(v){view=v;$("#home").hidden=v!=="home";$("#cat").hidden=v!=="ca
   window.scrollTo(0,0)}
 function toForm(prefill){if(window.bibQuick&&!made){trk("biblioteca_form_start",{from:prefill?prefill.id:"cta",via:"quick"});bibQuick.open({from:prefill?"catalog":"cta",picks:prefill?[{title:(lang==="ru"&&prefill.t.ru)?prefill.t.ru:(prefill.t[lang]||prefill.orig||prefill.t.ru),type:prefill.type==="series"?"series":prefill.type==="book"?"book":"film"}]:[]});return}
   trk("biblioteca_form_start",{from:prefill?prefill.id:"cta"});setView("home");if(prefill){$("#fTitle").value=prefill.t.ru&&lang==="ru"?prefill.t.ru:(prefill.orig||prefill.t.ru);fType=["book","film","yt"].includes(prefill.type)?prefill.type:(prefill.type==="series"?"film":"other");renderStatic()}
-  const t=made?$("#result"):$("#anketa");t.scrollIntoView({behavior:"smooth",block:"start"});if(!made)setTimeout(()=>$(prefill?"#fThought":"#fTitle").focus({preventScroll:true}),450)}
+  if(!made)$("#fForm").open=true;const t=made?$("#result"):$("#anketa");t.scrollIntoView({behavior:"smooth",block:"start"});if(!made)setTimeout(()=>$(prefill?"#fThought":"#fTitle").focus({preventScroll:true}),450)}
 function goBook(id){setView("home");const b=byId(id);
   if(order.includes(id)){openBook=id;renderStack();const e=document.querySelector(`[data-book="${id}"]`);e&&e.scrollIntoView({behavior:"smooth",block:"center"})}
-  else{tab=when(b);openRow=id;renderList();const e=document.querySelector(`#list [data-row="${id}"]`);e&&e.scrollIntoView({behavior:"smooth",block:"center"})}}
+  else{tab=when(b);openRow=id;$("#fShelf").open=true;renderList();const e=document.querySelector(`#list [data-row="${id}"]`);e&&e.scrollIntoView({behavior:"smooth",block:"center"})}}
 
 document.addEventListener("click",e=>{
   const q=s=>e.target.closest(s);let x;
@@ -794,7 +794,7 @@ $("#fDn").addEventListener("input",()=>{dnTouched=!!$("#fDn").value.trim()});
 // подсказки названий: Общая библиотека → Open Library (книги) / Википедия (фильмы)
 addEventListener("DOMContentLoaded",()=>{renderKnow();if(window.bibSuggest)bibSuggest.attach($("#fTitle"),{type:()=>fType})});
 renderAll();
-if(GIFT)setTimeout(()=>{checkRemote();if(location.hash==="#anketa")$("#anketa").scrollIntoView({block:"start"})},300);
+if(GIFT)setTimeout(()=>{checkRemote();if(location.hash==="#anketa"){$("#fForm").open=true;}if(location.hash==="#anketa")$("#anketa").scrollIntoView({block:"start"})},300);
 // со страницы книги в каталоге: ?add=название&type=book — анкета открывается с готовым названием
 const ADD=(()=>{try{const q=new URLSearchParams(location.search),t=(q.get("add")||"").trim().slice(0,120);return t?{id:"k",t:{ru:t},orig:t,type:q.get("type")||"book"}:null}catch(e){return null}})();
 if(ADD&&!GIFT){const go=()=>toForm(ADD);document.readyState==="complete"?setTimeout(go,300):addEventListener("load",()=>setTimeout(go,300))}

@@ -4,11 +4,16 @@
    2) bibQuick.open({picks}) — мастер «Своя полка в 4 нажатия»: книги → фильмы → имя → почта. Печатать почти не нужно:
       выбор кнопками из Общей библиотеки (match.json), поиск — по желанию (bibSuggest).
    3) bibQuick.nudge() — после «Поделиться» чужой полкой: «А у тебя какие 5? Собери свою — 30 секунд».
+   24.11.2026 (8 пунктов Игоря): ✕ «Не моё», «Ответить своей полкой» (ref → отправитель видит ответ), шаг «Что дала» кнопками, почта по желанию, «Ничего не знакомо?» → популярное.
    Сервер — тот же biblioteca-engine: /api/name, /api/shelf (первая вещь), /api/item (остальные; «Хочу» — в библиотеку). */
 (function () {
   var API = "https://biblioteca-engine.seedwave.workers.dev";
   var L = {
-    ru: {read: "✓ Читал(а)", seen: "✓ Смотрел(а)", want: "＋ Хочу", knowH: "Что из этого ты знаешь?", knowSub: "Отметь — увидишь, насколько вы на одной волне.",
+    ru: {nope: "✕ Не моё", reply: "Ответить своей полкой →", replyTo: function (w) { return "Ответ полкой · " + w; }, doneReply: function (w) { return w + " увидит твой ответ — и вы сравните полки."; },
+      zeroH: "Ничего не знакомо?", zeroGo: "Выбрать из того, что читают другие →",
+      gH: "Что тебе это дало?", gSub: "По одному нажатию на каждую — или пропусти.", gives: {view: "перевернула взгляд", energy: "дала энергию", act: "подтолкнула к действию", close: "близка эмоционально", joy: "просто кайф"},
+      mOpt: "Почта — по желанию", mOptSub: "Чтобы не потерять полку и узнать, кто ответил своей полкой. Писем без согласия не шлём.",
+      read: "✓ Читал(а)", seen: "✓ Смотрел(а)", want: "＋ Хочу", knowH: "Что из этого ты знаешь?", knowSub: "Отметь — увидишь, насколько вы на одной волне.",
       match: function (who, n, all) { return "Ты и " + who + ": совпало " + n + " из " + all + " 💫"; }, wantN: function (n) { return "Хочу прочитать / посмотреть: " + n; },
       save: "Сохранить как свою полку →", step: function (i) { return "Шаг " + i + " из 4"; }, close: "Закрыть", back: "← Назад", next: "Дальше →", skip: "Пропустить",
       bH: "Какие книги оставили в тебе след?", bSub: "Нажми 1–3 — печатать не нужно.", fH: "А фильмы или сериалы?", fSub: "Один-два, которые до сих пор вспоминаешь.",
@@ -20,7 +25,11 @@
       have: "У тебя уже есть полка в этом браузере.", haveGo: "Открыть мою полку →", haveNew: "Завести ещё одну",
       errMail: "Проверь почту — кажется, в ней опечатка.", errUsed: "На эту почту полка уже заведена.", errLink: "Ссылки в названиях нельзя.", errLimit: "Сегодня с этого адреса уже много новых полок — попробуй завтра.", errNet: "Нет связи с сервером — попробуй ещё раз.",
       nudgeH: "А у тебя какие 5?", nudgeSub: "Собери свою полку — 30 секунд, без печати.", nudgeGo: "Собрать →", types: {book: "книга", film: "фильм", series: "сериал", doc: "документальный", yt: "YouTube", other: "другое"}},
-    pt: {read: "✓ Já li", seen: "✓ Já vi", want: "＋ Quero", knowH: "Qual destes já conhece?", knowSub: "Marque — vai ver se estão na mesma onda.",
+    pt: {nope: "✕ Não é para mim", reply: "Responder com a minha estante →", replyTo: function (w) { return "Resposta em estante · " + w; }, doneReply: function (w) { return w + " vai ver a sua resposta — e podem comparar estantes."; },
+      zeroH: "Nada lhe diz nada?", zeroGo: "Escolher do que os outros leem →",
+      gH: "O que lhe deu?", gSub: "Um toque em cada — ou salte.", gives: {view: "mudou o meu olhar", energy: "deu-me energia", act: "levou-me a agir", close: "toca-me por dentro", joy: "puro prazer"},
+      mOpt: "E-mail — se quiser", mOptSub: "Para não perder a estante e saber quem lhe respondeu. Não enviamos mensagens sem o seu consentimento.",
+      read: "✓ Já li", seen: "✓ Já vi", want: "＋ Quero", knowH: "Qual destes já conhece?", knowSub: "Marque — vai ver se estão na mesma onda.",
       match: function (who, n, all) { return "Você e " + who + ": " + n + " de " + all + " em comum 💫"; }, wantN: function (n) { return "Quero ler / ver: " + n; },
       save: "Guardar como a minha estante →", step: function (i) { return "Passo " + i + " de 4"; }, close: "Fechar", back: "← Voltar", next: "Seguinte →", skip: "Saltar",
       bH: "Que livros deixaram marca em si?", bSub: "Toque em 1–3 — não precisa de escrever.", fH: "E filmes ou séries?", fSub: "Um ou dois de que ainda se lembra.",
@@ -32,7 +41,11 @@
       have: "Já tem uma estante neste navegador.", haveGo: "Abrir a minha estante →", haveNew: "Criar outra",
       errMail: "Verifique o e-mail — parece ter um erro.", errUsed: "Este e-mail já tem uma estante.", errLink: "Não são permitidos links nos títulos.", errLimit: "Hoje já foram criadas muitas estantes a partir deste endereço — tente amanhã.", errNet: "Sem ligação ao servidor — tente de novo.",
       nudgeH: "E os seus 5?", nudgeSub: "Monte a sua estante — 30 segundos, sem escrever.", nudgeGo: "Montar →", types: {book: "livro", film: "filme", series: "série", doc: "documentário", yt: "YouTube", other: "outro"}},
-    en: {read: "✓ Read it", seen: "✓ Seen it", want: "＋ Want", knowH: "Which of these do you know?", knowSub: "Tap — and see how much you're on the same wave.",
+    en: {nope: "✕ Not for me", reply: "Reply with my own shelf →", replyTo: function (w) { return "Shelf reply · " + w; }, doneReply: function (w) { return w + " will see your reply — and you can compare shelves."; },
+      zeroH: "Nothing rings a bell?", zeroGo: "Pick from what others read →",
+      gH: "What did it give you?", gSub: "One tap for each — or skip.", gives: {view: "changed how I see", energy: "gave me energy", act: "pushed me to act", close: "close to my heart", joy: "pure joy"},
+      mOpt: "Email — optional", mOptSub: "So you don't lose your shelf and see who replied with theirs. No emails without your consent.",
+      read: "✓ Read it", seen: "✓ Seen it", want: "＋ Want", knowH: "Which of these do you know?", knowSub: "Tap — and see how much you're on the same wave.",
       match: function (who, n, all) { return "You and " + who + ": " + n + " of " + all + " in common 💫"; }, wantN: function (n) { return "Want to read / watch: " + n; },
       save: "Save as my shelf →", step: function (i) { return "Step " + i + " of 4"; }, close: "Close", back: "← Back", next: "Next →", skip: "Skip",
       bH: "Which books left a mark on you?", bSub: "Tap 1–3 — no typing needed.", fH: "And films or series?", fSub: "One or two you still think about.",
@@ -44,7 +57,11 @@
       have: "You already have a shelf in this browser.", haveGo: "Open my shelf →", haveNew: "Make another one",
       errMail: "Check the email — looks like a typo.", errUsed: "This email already has a shelf.", errLink: "No links in titles, please.", errLimit: "Many shelves were created from this address today — try tomorrow.", errNet: "No connection to the server — try again.",
       nudgeH: "What are your 5?", nudgeSub: "Build your own shelf — 30 seconds, no typing.", nudgeGo: "Build →", types: {book: "book", film: "film", series: "series", doc: "documentary", yt: "YouTube", other: "other"}},
-    es: {read: "✓ Lo leí", seen: "✓ La vi", want: "＋ Quiero", knowH: "¿Cuáles conoces?", knowSub: "Marca — y verás si estáis en la misma onda.",
+    es: {nope: "✕ No es lo mío", reply: "Responder con mi estantería →", replyTo: function (w) { return "Respuesta en estantería · " + w; }, doneReply: function (w) { return w + " verá tu respuesta — y podréis comparar estanterías."; },
+      zeroH: "¿Nada te suena?", zeroGo: "Elegir de lo que leen otros →",
+      gH: "¿Qué te dio?", gSub: "Un toque en cada una — o sáltalo.", gives: {view: "cambió mi mirada", energy: "me dio energía", act: "me empujó a actuar", close: "me toca de cerca", joy: "puro placer"},
+      mOpt: "Correo — si quieres", mOptSub: "Para no perder tu estantería y saber quién te respondió. No enviamos correos sin tu permiso.",
+      read: "✓ Lo leí", seen: "✓ La vi", want: "＋ Quiero", knowH: "¿Cuáles conoces?", knowSub: "Marca — y verás si estáis en la misma onda.",
       match: function (who, n, all) { return "Tú y " + who + ": " + n + " de " + all + " en común 💫"; }, wantN: function (n) { return "Quiero leer / ver: " + n; },
       save: "Guardar como mi estantería →", step: function (i) { return "Paso " + i + " de 4"; }, close: "Cerrar", back: "← Atrás", next: "Siguiente →", skip: "Saltar",
       bH: "¿Qué libros te dejaron huella?", bSub: "Toca 1–3 — no hace falta escribir.", fH: "¿Y películas o series?", fSub: "Una o dos que todavía recuerdas.",
@@ -56,7 +73,11 @@
       have: "Ya tienes una estantería en este navegador.", haveGo: "Abrir mi estantería →", haveNew: "Crear otra",
       errMail: "Revisa el correo — parece que hay un error.", errUsed: "Este correo ya tiene una estantería.", errLink: "No se permiten enlaces en los títulos.", errLimit: "Hoy ya se crearon muchas estanterías desde esta dirección — prueba mañana.", errNet: "Sin conexión con el servidor — inténtalo de nuevo.",
       nudgeH: "¿Y tus 5?", nudgeSub: "Monta tu estantería — 30 segundos, sin escribir.", nudgeGo: "Montar →", types: {book: "libro", film: "película", series: "serie", doc: "documental", yt: "YouTube", other: "otro"}},
-    de: {read: "✓ Gelesen", seen: "✓ Gesehen", want: "＋ Will ich", knowH: "Was davon kennst du?", knowSub: "Tippe an — und sieh, wie sehr ihr auf einer Welle seid.",
+    de: {nope: "✕ Nicht meins", reply: "Mit meinem Regal antworten →", replyTo: function (w) { return "Antwort mit Regal · " + w; }, doneReply: function (w) { return w + " sieht deine Antwort — und ihr könnt eure Regale vergleichen."; },
+      zeroH: "Nichts dabei, was du kennst?", zeroGo: "Aus dem wählen, was andere lesen →",
+      gH: "Was hat es dir gegeben?", gSub: "Ein Tipp pro Werk — oder überspringen.", gives: {view: "hat meinen Blick verändert", energy: "gab mir Energie", act: "brachte mich zum Handeln", close: "geht mir nah", joy: "einfach Freude"},
+      mOpt: "E-Mail — freiwillig", mOptSub: "Damit du dein Regal nicht verlierst und siehst, wer dir geantwortet hat. Keine Mails ohne deine Zustimmung.",
+      read: "✓ Gelesen", seen: "✓ Gesehen", want: "＋ Will ich", knowH: "Was davon kennst du?", knowSub: "Tippe an — und sieh, wie sehr ihr auf einer Welle seid.",
       match: function (who, n, all) { return "Du und " + who + ": " + n + " von " + all + " gemeinsam 💫"; }, wantN: function (n) { return "Will ich lesen / sehen: " + n; },
       save: "Als mein Regal speichern →", step: function (i) { return "Schritt " + i + " von 4"; }, close: "Schließen", back: "← Zurück", next: "Weiter →", skip: "Überspringen",
       bH: "Welche Bücher haben Spuren hinterlassen?", bSub: "Tippe 1–3 an — kein Tippen nötig.", fH: "Und Filme oder Serien?", fSub: "Ein, zwei, an die du noch denkst.",
@@ -117,6 +138,9 @@
     ".bqk .bqi{display:flex;align-items:center;gap:8px;padding:9px 0;border-top:1px solid var(--line,rgba(158,59,50,.18))}.bqk .bqi:first-of-type{border-top:0}" +
     ".bqk .bqt{flex:1;min-width:0;font:700 15px/1.3 var(--body,sans-serif)}.bqk .bqt small{display:block;font-weight:500;font-size:12px;color:var(--ink-soft,#7a5f54)}" +
     ".bqk .bqm{border:1.5px solid var(--line,rgba(158,59,50,.18));background:transparent;color:var(--ink,#2b1a14);border-radius:999px;padding:7px 10px;font:700 13px/1 var(--body,sans-serif);cursor:pointer;white-space:nowrap;touch-action:manipulation}" +
+    ".bqk .bqbtns{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}.bqk .bqno{color:var(--ink-soft,#7a5f54)}.bqk .bqno[aria-pressed=true]{background:var(--ink-soft,#7a5f54)!important;border-color:var(--ink-soft,#7a5f54)!important}" +
+    ".bqk .bqmore{display:block;margin:10px auto 0;border:0;background:transparent;color:var(--accent,#9e3b32);font:700 14px/1.3 var(--body,sans-serif);cursor:pointer;text-align:center}" +
+    "@media(max-width:420px){.bqk .bqi{flex-wrap:wrap}.bqk .bqt{flex-basis:100%}.bqk .bqbtns{justify-content:flex-start}}" +
     ".bqk .bqm[aria-pressed=true]{background:var(--accent,#9e3b32);border-color:var(--accent,#9e3b32);color:var(--accent-ink,#fff)}" +
     ".bqk .bqres{margin:12px 0 0;text-align:center}.bqk .bqres b{display:block;font:800 17px/1.3 var(--body,sans-serif);margin:0 0 4px}.bqk .bqres p{margin:0 0 10px;font-size:14px;color:var(--ink-soft,#7a5f54)}" +
     ".bqk .bqb{border:0;border-radius:14px;background:var(--accent,#9e3b32);color:var(--accent-ink,#fff);padding:13px 18px;font:800 16px/1.2 var(--body,sans-serif);cursor:pointer;width:100%;touch-action:manipulation}" +
@@ -152,7 +176,7 @@
   function open(o) {
     o = o || {}; css();
     if (S) close();
-    S = {step: 1, picks: [], dn: "", name: "", nameOk: false, nameTouched: false, email: "", from: o.from || "cta"};
+    S = {step: 1, picks: [], dn: "", name: "", nameOk: false, nameTouched: false, email: "", from: o.from || "cta", ref: o.ref || "", refName: o.refName || "", mt: o.mt || 0};
     (o.picks || []).forEach(function (p) { if (p && p.title) addPick(p, true); });
     var ov = el("div", "bq-ov"), box = el("div", "bq");
     box.setAttribute("role", "dialog"); box.setAttribute("aria-modal", "true");
@@ -173,14 +197,14 @@
   function addPick(p, quiet) {
     var n = norm(p.title);
     for (var i = 0; i < S.picks.length; i++) if (norm(S.picks[i].title) === n || (p.k && S.picks[i].k === p.k)) return false;
-    S.picks.push({k: p.k || "", title: String(p.title).slice(0, 120), type: ["film", "series", "yt", "doc", "other"].indexOf(p.type) >= 0 ? p.type : "book", want: !!p.want});
+    S.picks.push({k: p.k || "", title: String(p.title).slice(0, 120), type: ["film", "series", "yt", "doc", "other"].indexOf(p.type) >= 0 ? p.type : "book", want: !!p.want, gives: []});
     if (!quiet) track("biblioteca_quick_pick", {type: p.type, own: p.k ? 0 : 1});
     return true;
   }
   function dropPick(p) { S.picks = S.picks.filter(function (x) { return !(x.k && x.k === p.k) && norm(x.title) !== norm(p.title); }); }
   function has(p) { return S.picks.some(function (x) { return (p.k && x.k === p.k) || norm(x.title) === norm(p.title); }); }
   function head(i) {
-    var t = T(), top = el("div", "bqtop"), st = el("span", "bqst", t.step(i)), x = el("button", "bqx", "×");
+    var t = T(), top = el("div", "bqtop"), st = el("span", "bqst", t.step(i) + (S.refName ? " · " + t.replyTo(S.refName) : "")), x = el("button", "bqx", "×");
     x.setAttribute("aria-label", t.close); x.addEventListener("click", close);
     top.appendChild(st); top.appendChild(x);
     var bar = el("div", "bqbar"), f = el("i"); f.style.width = (i * 25) + "%"; bar.appendChild(f);
@@ -201,8 +225,8 @@
     S.box.innerHTML = "";
     if (S.step === 1) pickStep(["book"], "bH", "bSub", "book");
     else if (S.step === 2) pickStep(["film", "series"], "fH", "fSub", "film");
-    else if (S.step === 3) nameStep();
-    else if (S.step === 4) mailStep();
+    else if (S.step === 3) givesStep();
+    else if (S.step === 4) nameStep();
     track("biblioteca_quick_step", {step: S.step});
   }
   function pickStep(types, h, sub, ty) {
@@ -261,16 +285,50 @@
     }
     count();
   }
+  /* шаг 3: «что тебе это дало?» — одно нажатие на вещь вместо рецензии (до 2 на вещь), только прочитанное/просмотренное */
+  function givesStep() {
+    var t = T(); head(3);
+    var list = S.picks.filter(function (p) { return !p.want; });
+    if (!list.length) { S.step = 4; render(); return; }
+    S.box.appendChild(el("h3", "", t.gH)); S.box.appendChild(el("p", "bqsub", t.gSub));
+    list.slice(0, 5).forEach(function (p) {
+      S.box.appendChild(el("p", "bqlbl", p.title));
+      var row = el("div", "bqchips");
+      Object.keys(t.gives).forEach(function (g) {
+        var c = el("button", "bqc", t.gives[g]); c.type = "button"; c.setAttribute("aria-pressed", p.gives.indexOf(g) >= 0 ? "true" : "false");
+        c.addEventListener("click", function () {
+          var i = p.gives.indexOf(g);
+          if (i >= 0) p.gives.splice(i, 1); else { if (p.gives.length >= 2) p.gives.shift(); p.gives.push(g); }
+          Array.prototype.forEach.call(row.children, function (b, j) { b.setAttribute("aria-pressed", p.gives.indexOf(Object.keys(t.gives)[j]) >= 0 ? "true" : "false"); });
+          track("biblioteca_quick_give", {g: g});
+        });
+        row.appendChild(c);
+      });
+      S.box.appendChild(row);
+    });
+    nav({back: function () { S.step = 2; render(); }, skip: function () { S.step = 4; render(); }, next: function () { S.step = 4; render(); }});
+  }
   var nameTimer = null;
   function nameStep() {
-    var t = T(); head(3);
+    var t = T(); head(4);
     S.box.appendChild(el("h3", "", t.nH));
     var dn = el("input"); dn.maxLength = 40; dn.placeholder = t.dnPh; dn.autocomplete = "given-name"; dn.value = S.dn; S.box.appendChild(dn);
     S.box.appendChild(el("p", "bqlbl", t.addr));
     var ad = el("div", "bqaddr"), nm = el("input"); ad.appendChild(el("span", "", "seedwave.pt/biblioteca/"));
     nm.maxLength = 20; nm.autocomplete = "off"; nm.setAttribute("autocapitalize", "off"); nm.spellcheck = false; nm.value = S.name; ad.appendChild(nm); S.box.appendChild(ad);
     var msg = el("p", "bqmsg", ""); S.box.appendChild(msg);
-    var go = nav({back: function () { S.step = 2; render(); }, next: function () { if (S.nameOk && dn.value.trim()) { S.step = 4; render(); } else (dn.value.trim() ? nm : dn).focus(); }, disabled: !S.nameOk});
+    // почта — по желанию (24.11.2026): полка живёт по ключу в этом браузере; почту можно добавить потом на своей полке
+    S.box.appendChild(el("p", "bqlbl", t.mOpt));
+    var em = el("input"); em.type = "email"; em.autocomplete = "email"; em.placeholder = t.mPh; em.value = S.email; S.box.appendChild(em);
+    S.box.appendChild(el("p", "bqsub", t.mOptSub));
+    var hp = el("input"); hp.tabIndex = -1; hp.setAttribute("aria-hidden", "true"); hp.autocomplete = "off"; hp.style.cssText = "position:absolute;left:-9999px;width:1px"; S.box.appendChild(hp);
+    var emsg = el("p", "bqmsg bad", ""); S.box.appendChild(emsg);
+    var go = nav({back: function () { S.step = 3; render(); }, label: t.go, next: function () {
+      if (!(S.nameOk && dn.value.trim())) { (dn.value.trim() ? nm : dn).focus(); return; }
+      var e = em.value.trim(); S.email = e;
+      if (e && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)) { emsg.textContent = t.errMail; em.focus(); return; }
+      go.disabled = true; emsg.className = "bqmsg"; emsg.textContent = t.wait; create(e, hp.value, emsg, go);
+    }, disabled: !S.nameOk});
     function check() {
       var n = nm.value.trim().toLowerCase(); S.name = n; S.nameOk = false; go.disabled = true;
       if (!/^[a-z0-9-]{3,20}$/.test(n) || /^-|-$/.test(n)) { msg.className = "bqmsg bad"; msg.textContent = n ? t.nBad : ""; return; }
@@ -293,30 +351,16 @@
     if (S.name) check();
     setTimeout(function () { try { (S.dn ? nm : dn).focus(); } catch (e) {} }, 60);
   }
-  function mailStep() {
-    var t = T(); head(4);
-    S.box.appendChild(el("h3", "", t.mH)); S.box.appendChild(el("p", "bqsub", t.mSub));
-    var em = el("input"); em.type = "email"; em.autocomplete = "email"; em.placeholder = t.mPh; em.value = S.email; S.box.appendChild(em);
-    var hp = el("input"); hp.tabIndex = -1; hp.setAttribute("aria-hidden", "true"); hp.autocomplete = "off"; hp.style.cssText = "position:absolute;left:-9999px;width:1px"; S.box.appendChild(hp);
-    var msg = el("p", "bqmsg bad", ""); S.box.appendChild(msg);
-    var go = nav({back: function () { S.step = 3; render(); }, label: t.go, next: function () {
-      var e = em.value.trim(); S.email = e;
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)) { msg.textContent = t.errMail; em.focus(); return; }
-      go.disabled = true; msg.className = "bqmsg"; msg.textContent = t.wait; create(e, hp.value, msg, go);
-    }});
-    em.addEventListener("keydown", function (e) { if (e.key === "Enter") go.click(); });
-    setTimeout(function () { try { em.focus(); } catch (e) {} }, 60);
-  }
   function create(email, hp, msg, go) {
     var t = T(), l = lang();
     // на полку — сначала прочитанное, «Хочу» — в библиотеку
     var picks = S.picks.slice().sort(function (a, b) { return (a.want ? 1 : 0) - (b.want ? 1 : 0); });
     var first = picks[0], rest = picks.slice(1), name = S.name, dn = S.dn.trim();
-    fetch(API + "/api/shelf", {method: "POST", body: new URLSearchParams({name: name, email: email, lang: l, type: apiType(first.type), title: first.title, thought: "", gives: "", dn: dn, website2: hp || "", gift: ""})})
+    fetch(API + "/api/shelf", {method: "POST", body: new URLSearchParams({name: name, email: email || "", lang: l, type: apiType(first.type), title: first.title, thought: "", gives: "", igives: (first.gives || []).join(","), dn: dn, website2: hp || "", gift: "", ref: S.ref || "", mt: String(S.mt || 0)})})
       .then(function (r) { return r.json(); }).then(function (j) {
         if (!j.ok) {
           go.disabled = false; msg.className = "bqmsg bad";
-          if (j.err === "busy") { S.nameOk = false; S.step = 3; render(); return; }
+          if (j.err === "busy") { S.nameOk = false; S.step = 4; render(); return; }
           msg.textContent = {email: t.errMail, email_used: t.errUsed, link: t.errLink, limit: t.errLimit}[j.err] || t.errNet; return;
         }
         var m = {n: j.name, k: j.k}; store("biblioteca.mine", m);
@@ -326,12 +370,13 @@
           chain = chain.then(function () {
             var pos = p.want || shelfN >= 5 ? "lib" : "";
             if (pos !== "lib") shelfN++;
-            var body = {n: m.n, k: m.k, type: apiType(p.type), title: p.title, thought: ""}; if (pos) body.pos = pos;
+            var body = {n: m.n, k: m.k, type: apiType(p.type), title: p.title, thought: "", igives: (p.gives || []).join(",")}; if (pos) body.pos = pos;
             return fetch(API + "/api/item", {method: "POST", body: new URLSearchParams(body)}).catch(function () {});
           });
         });
         chain.then(function () {
-          track("biblioteca_quick_done", {from: S && S.from, picks: picks.length, want: picks.filter(function (p) { return p.want; }).length});
+          track("biblioteca_quick_done", {from: S && S.from, picks: picks.length, want: picks.filter(function (p) { return p.want; }).length, ref: S && S.ref ? 1 : 0, mail: email ? 1 : 0,
+            gives: picks.filter(function (p) { return p.gives && p.gives.length; }).length});
           track("biblioteca_sent", {type: first.type, via: "quick"});
           done(m, dn || name);
         });
@@ -340,7 +385,7 @@
   function done(m, dn) {
     if (!S) return; var t = T(); S.step = 5; S.box.innerHTML = "";
     var top = el("div", "bqtop"); top.appendChild(el("span", "bqst", "✓")); var x = el("button", "bqx", "×"); x.addEventListener("click", close); top.appendChild(x); S.box.appendChild(top);
-    S.box.appendChild(el("h3", "", t.doneH)); S.box.appendChild(el("p", "bqsub", t.doneSub));
+    S.box.appendChild(el("h3", "", t.doneH)); S.box.appendChild(el("p", "bqsub", S.refName ? t.doneReply(S.refName) + " " + t.doneSub : t.doneSub));
     var pub = "https://seedwave.pt/biblioteca/" + m.n + "/";
     var a = el("a", "bqlink", "seedwave.pt/biblioteca/" + m.n); a.href = mineUrl(m); S.box.appendChild(a);
     var sh = el("button", "bqb bqfull", t.share);
@@ -366,31 +411,47 @@
     items.forEach(function (it, i) {
       var id = it.k || norm(it.title), row = el("div", "bqi"), tt = el("div", "bqt");
       tt.appendChild(document.createTextNode(it.title)); tt.appendChild(el("small", "", t.types[it.type] || t.types.book));
-      var rd = el("button", "bqm", it.type === "book" || it.type === "other" ? t.read : t.seen), wn = el("button", "bqm", t.want);
-      function paint() { rd.setAttribute("aria-pressed", marks[id] === "r" ? "true" : "false"); wn.setAttribute("aria-pressed", marks[id] === "w" ? "true" : "false"); }
+      var rd = el("button", "bqm", it.type === "book" || it.type === "other" ? t.read : t.seen), wn = el("button", "bqm", t.want), np = el("button", "bqm bqno", t.nope);
+      np.setAttribute("aria-label", t.nope);
+      function paint() { rd.setAttribute("aria-pressed", marks[id] === "r" ? "true" : "false"); wn.setAttribute("aria-pressed", marks[id] === "w" ? "true" : "false"); np.setAttribute("aria-pressed", marks[id] === "x" ? "true" : "false"); }
       function set(v) { marks[id] = marks[id] === v ? "" : v; store(key, marks); paint(); result(); track("biblioteca_mark", {v: marks[id] || "none", shelf: o.key || "", pos: i + 1}); }
-      rd.addEventListener("click", function () { set("r"); }); wn.addEventListener("click", function () { set("w"); });
-      paint(); row.appendChild(tt); row.appendChild(rd); row.appendChild(wn); box.appendChild(row);
+      rd.addEventListener("click", function () { set("r"); }); wn.addEventListener("click", function () { set("w"); }); np.addEventListener("click", function () { set("x"); });
+      var bs = el("div", "bqbtns"); bs.appendChild(rd); bs.appendChild(wn); bs.appendChild(np);
+      paint(); row.appendChild(tt); row.appendChild(bs); box.appendChild(row);
     });
     function picked() {
       return items.filter(function (it) { var v = marks[it.k || norm(it.title)]; return v === "r" || v === "w"; })
         .map(function (it) { return {k: it.k || "", title: it.title, type: it.type, want: marks[it.k || norm(it.title)] === "w"}; });
     }
     function result() {
-      res.innerHTML = ""; var p = picked(); if (!p.length) return;
+      res.innerHTML = ""; var p = picked();
+      var marked = items.filter(function (it) { return marks[it.k || norm(it.title)]; }).length;
+      if (!p.length) {
+        // всё отмечено «Не моё» (или половина и больше) — сразу популярное из Общей библиотеки
+        if (marked && (marked >= items.length || marked >= 3)) {
+          res.appendChild(el("b", "", t.zeroH));
+          var z = el("button", "bqb", t.zeroGo);
+          z.addEventListener("click", function () { track("biblioteca_mark_zero", {shelf: o.key || ""}); open({picks: [], from: "zero", ref: o.key || "", refName: o.owner || ""}); });
+          res.appendChild(z);
+        }
+        return;
+      }
       var r = p.filter(function (x) { return !x.want; }).length, w = p.length - r;
       res.appendChild(el("b", "", r ? t.match(o.owner, r, items.length) : t.wantN(w)));
       if (r && w) res.appendChild(el("p", "", t.wantN(w)));
       var m = mine();
-      var go = el("button", "bqb", m ? t.haveGo : t.save);
+      var go = el("button", "bqb", m ? t.haveGo : t.reply);
       go.addEventListener("click", function () {
         track("biblioteca_mark_save", {r: r, w: w, shelf: o.key || ""});
         if (m) { location.href = mineUrl(m); return; }
-        open({picks: p, from: "match"});
+        open({picks: p, from: "match", ref: o.key || "", refName: o.owner || "", mt: r});
       });
       res.appendChild(go);
     }
     box.appendChild(res); result();
+    var zl = el("button", "bqmore", t.zeroH + " " + t.zeroGo);
+    zl.addEventListener("click", function () { track("biblioteca_mark_zero", {shelf: o.key || "", via: "link"}); open({picks: picked(), from: "zero", ref: o.key || "", refName: o.owner || ""}); });
+    box.appendChild(zl);
     host.innerHTML = ""; host.appendChild(box);
   }
 
@@ -410,5 +471,6 @@
     setTimeout(rm, 20000);
   }
 
-  window.bibQuick = {open: open, close: close, knowBox: knowBox, nudge: nudge, mine: mine};
+  function givesLabel(g) { return (T().gives || {})[g] || ""; }
+  window.bibQuick = {open: open, close: close, knowBox: knowBox, nudge: nudge, mine: mine, givesLabel: givesLabel};
 })();
