@@ -258,6 +258,7 @@ footer a{display:inline-block;padding:8px 4px;text-decoration:underline;text-dec
 <script defer src="/biblioteca/share.js"></script>
 <script defer src="/biblioteca/match.js"></script>
 <script defer src="/biblioteca/suggest.js"></script>
+<script defer src="/biblioteca/quick.js"></script>
 </head>
 <body>
 <div class="wrap">
@@ -287,6 +288,7 @@ footer a{display:inline-block;padding:8px 4px;text-decoration:underline;text-dec
     <button class="btn big" id="shareBtn" data-i="shareBtn"></button>
     <span class="muted" id="shareOk"></span>
   </div>
+  <div id="knowbox"></div>
 
   <div class="ctabox" id="ctabox">
     <a class="btn big" href="#" data-toform data-i="cta"></a>
@@ -715,13 +717,15 @@ function renderRevs(){const it=STACK0.concat(SHELF.map(b=>b.id).filter(i=>!STACK
   $("#revs").innerHTML=`<h2>${T("revsH")}</h2>`+it.map(b=>{const f=locF(b),w=b.why?(b.why[lang]||b.why.ru):"";
     const ro=lang!=="ru"&&T("ruOnly")?`<p class="draft">${T("ruOnly")}</p>`:"";
     return `<details class="rv" id="r-${b.id}"><summary><b>${esc(title(b))}</b><span>${esc(author(b))} · ${T("types")[b.type]}</span></summary>${ro}${w?`<p class="why">${esc(w)}</p>`:""}<p class="mainq">${esc(f.main)}</p>${f.take.split("\n").filter(Boolean).map(x=>`<p>${esc(x)}</p>`).join("")}${f.review?`<p class="lbl">${T("plotL")}</p><p>${esc(f.review)}</p>`:""}</details>`}).join("")}
-function renderAll(){renderStatic();renderStack();renderList();renderResult();renderRevs();if(view==="cat")renderCat();showName()}
+function renderKnow(){if(mode==="author"||!window.bibQuick||!$("#knowbox"))return;bibQuick.knowBox($("#knowbox"),{owner:lang==="ru"?"Игорь":"Igor",key:"igor",items:NOW.map(byId).filter(Boolean).map(b=>({k:"",title:title(b),type:b.type==="series"?"series":b.type==="book"?"book":"film"}))})}
+function renderAll(){renderStatic();renderStack();renderKnow();renderList();renderResult();renderRevs();if(view==="cat")renderCat();showName()}
 // один каталог на всю Библиотеку — Общий (/biblioteca/k/): все полки, поиск, страница у каждой книги
 function goKat(){location.href="/biblioteca/"+(lang==="pt"?"":lang+"/")+(theme==="dark"?"?theme=dark":"")}
 function setView(v){view=v;$("#home").hidden=v!=="home";$("#cat").hidden=v!=="cat";if(v==="cat")renderCat();
   try{history.replaceState(null,"",v==="cat"?"#catalogo":location.pathname+location.search)}catch(e){}
   window.scrollTo(0,0)}
-function toForm(prefill){trk("biblioteca_form_start",{from:prefill?prefill.id:"cta"});setView("home");if(prefill){$("#fTitle").value=prefill.t.ru&&lang==="ru"?prefill.t.ru:(prefill.orig||prefill.t.ru);fType=["book","film","yt"].includes(prefill.type)?prefill.type:(prefill.type==="series"?"film":"other");renderStatic()}
+function toForm(prefill){if(window.bibQuick&&!made){trk("biblioteca_form_start",{from:prefill?prefill.id:"cta",via:"quick"});bibQuick.open({from:prefill?"catalog":"cta",picks:prefill?[{title:(lang==="ru"&&prefill.t.ru)?prefill.t.ru:(prefill.t[lang]||prefill.orig||prefill.t.ru),type:prefill.type==="series"?"series":prefill.type==="book"?"book":"film"}]:[]});return}
+  trk("biblioteca_form_start",{from:prefill?prefill.id:"cta"});setView("home");if(prefill){$("#fTitle").value=prefill.t.ru&&lang==="ru"?prefill.t.ru:(prefill.orig||prefill.t.ru);fType=["book","film","yt"].includes(prefill.type)?prefill.type:(prefill.type==="series"?"film":"other");renderStatic()}
   const t=made?$("#result"):$("#anketa");t.scrollIntoView({behavior:"smooth",block:"start"});if(!made)setTimeout(()=>$(prefill?"#fThought":"#fTitle").focus({preventScroll:true}),450)}
 function goBook(id){setView("home");const b=byId(id);
   if(order.includes(id)){openBook=id;renderStack();const e=document.querySelector(`[data-book="${id}"]`);e&&e.scrollIntoView({behavior:"smooth",block:"center"})}
@@ -777,7 +781,7 @@ document.addEventListener("click",e=>{
   if(q("#cpy")){const b=$("#cpy");try{navigator.clipboard.writeText("https://seedwave.pt/biblioteca/"+made.name).catch(()=>{})}catch(_){}b.textContent=T("copied");return}
   if(q("#deepBtn")){const d=$("#deep"),o=!d.classList.contains("open");d.classList.toggle("open",o);$("#deepBtn").setAttribute("aria-expanded",o);return}
   if(q("#shareBtn")){const u="https://seedwave.pt"+PATHL(lang)+"?utm_source=biblioteca&utm_medium=share";trk("biblioteca_share",{});
-    if(window.bibShare){window.bibShare({title:"Biblioteca",text:T("shareText"),url:u});return}
+    if(window.bibShare){window.bibShare({title:"Biblioteca",text:T("shareText"),url:u,btn:$("#shareBtn")});return}
     try{navigator.clipboard.writeText(T("shareText")+" "+u).catch(()=>{})}catch(_){}$("#shareOk").textContent=T("shareOk");setTimeout(()=>$("#shareOk").textContent="",2500);return}
 });
 document.addEventListener("input",e=>{
@@ -788,12 +792,12 @@ document.documentElement.dataset.theme=theme;
 if(GIFT){$("#fName").value=GIFT.n;$("#fDn").value=niceName(GIFT.n)}
 $("#fDn").addEventListener("input",()=>{dnTouched=!!$("#fDn").value.trim()});
 // подсказки названий: Общая библиотека → Open Library (книги) / Википедия (фильмы)
-addEventListener("DOMContentLoaded",()=>{if(window.bibSuggest)bibSuggest.attach($("#fTitle"),{type:()=>fType})});
+addEventListener("DOMContentLoaded",()=>{renderKnow();if(window.bibSuggest)bibSuggest.attach($("#fTitle"),{type:()=>fType})});
 renderAll();
 if(GIFT)setTimeout(()=>{checkRemote();if(location.hash==="#anketa")$("#anketa").scrollIntoView({block:"start"})},300);
 // со страницы книги в каталоге: ?add=название&type=book — анкета открывается с готовым названием
 const ADD=(()=>{try{const q=new URLSearchParams(location.search),t=(q.get("add")||"").trim().slice(0,120);return t?{id:"k",t:{ru:t},orig:t,type:q.get("type")||"book"}:null}catch(e){return null}})();
-if(ADD&&!GIFT)setTimeout(()=>toForm(ADD),400);
+if(ADD&&!GIFT){const go=()=>toForm(ADD);document.readyState==="complete"?setTimeout(go,300):addEventListener("load",()=>setTimeout(go,300))}
 if(location.hash==="#catalogo")goKat();
 window.addEventListener("hashchange",()=>{if(location.hash==="#catalogo")goKat()});
 </script>

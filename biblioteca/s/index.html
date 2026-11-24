@@ -13,6 +13,7 @@
 <script defer src="/biblioteca/share.js"></script>
 <script defer src="/biblioteca/match.js"></script>
 <script defer src="/biblioteca/suggest.js"></script>
+<script defer src="/biblioteca/quick.js"></script>
 <link rel="stylesheet" href="/biblioteca/spines.css">
 <link rel="apple-touch-icon" href="/biblioteca/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -130,7 +131,7 @@ function render(){
   if(shelf.owner&&shelf.status!=="open")m.append(el("p","flag",shelf.status==="pending"?T.pend:T.hid));
   if(shelf.owner&&shelf.status==="open"){const sb=el("button","btn big",T.shareBtn),ok=el("p","note","");
     sb.addEventListener("click",()=>{const u=pubUrl()+"?utm_source=biblioteca&utm_medium=share";trk("biblioteca_share",{own:1});
-      if(window.bibShare){window.bibShare({title:T.title(nice(shelf)),text:T.share(nice(shelf)),url:u});return}
+      if(window.bibShare){window.bibShare({title:T.title(nice(shelf)),text:T.share(nice(shelf)),url:u,btn:sb,nudge:false});return}
       try{navigator.clipboard.writeText(u)}catch(_){}ok.textContent=T.shareOk});m.append(sb,ok)}
   const st=el("div","lstack");
   const stk=onShelf(),mmsg=el("p","note","");
@@ -146,6 +147,9 @@ function render(){
       st.append(th)}
     if(shelf.owner&&it.id)st.append(mover(it,mmsg))});
   m.append(st,el("div","lboard"),mmsg);
+  // «Что из этого ты знаешь?» — гость отмечает вещи чужой полки и сохраняет их как свою (quick.js)
+  if(!shelf.owner&&stk.length){const kb=el("div");m.append(kb);const kn=()=>bibQuick.knowBox(kb,{owner:nice(shelf),key:NAME,items:stk.map(it=>({k:"",title:it.title,type:it.type}))});
+    if(window.bibQuick)kn();else addEventListener("load",()=>{if(window.bibQuick)kn()})}
   // «Вся моя библиотека» — всё, что ушло с полки или ждёт своего места
   const lib=inLib();
   if(lib.length||shelf.owner){const lb=el("div","box");lb.append(el("h3","",shelf.owner?T.libMe:T.libOf(nice(shelf))),el("p","muted",lib.length?T.libSub:T.libEmpty));
@@ -181,7 +185,7 @@ function render(){
   }else{
     const box=el("div","box invite"),a=el("a","btn big",T.cta),b=el("a","link",T.more);
     box.append(el("h3","",T.inviteH),el("p","muted",T.inviteSub),a);a.href=FORM(lang)+"?utm_source=biblioteca&utm_medium=shelf#anketa";b.href=PATHL(lang);
-    a.addEventListener("click",()=>trk("biblioteca_shelf_cta",{}));const row=el("div","row");row.append(b);m.append(box,row);
+    a.addEventListener("click",e=>{trk("biblioteca_shelf_cta",{});if(window.bibQuick){e.preventDefault();bibQuick.open({from:"shelf"})}});const row=el("div","row");row.append(b);m.append(box,row);
   }
 }
 chrome();

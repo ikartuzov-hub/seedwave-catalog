@@ -40,22 +40,59 @@
     });
     var cp = document.createElement("button"); cp.innerHTML = '<i style="background:#6b4a36">⧉</i>'; cp.appendChild(document.createTextNode(T[1]));
     cp.addEventListener("click", function () {
-      try { navigator.clipboard.writeText(msg); } catch (e) {}
+      copy(msg);
       cp.lastChild.textContent = T[2]; track("biblioteca_share_app", { app: "copy" });
     });
     g.appendChild(cp); box.appendChild(g);
     var x = document.createElement("button"); x.className = "x"; x.textContent = T[3]; x.addEventListener("click", close); box.appendChild(x);
     wrap.appendChild(box); wrap.addEventListener("click", function (e) { if (e.target === wrap) close(); });
     document.body.appendChild(wrap);
-    function close() { if (wrap.parentNode) wrap.parentNode.removeChild(wrap); }
+    function close() { if (wrap.parentNode) { wrap.parentNode.removeChild(wrap); if (o.onClose) o.onClose(); } }
   }
+  /* 24.11.2026 — по данным PostHog (серия яростных нажатий на телефоне): мгновенный отклик на кнопке, защита от повторных нажатий,
+     во встроенных браузерах (Facebook, Instagram, Telegram и т. п.) — сразу своя панель, при любом сбое — ссылка копируется
+     и всплывает «Ссылка скопирована ✓». После отправки чужой полки — подсказка «А у тебя какие 5?» (bibQuick.nudge). */
+  var busy = false;
+  function inApp() { return /FBAN|FBAV|FB_IAB|Instagram|Line\/|Telegram|MicroMessenger|GSA\/|; wv\)/i.test(navigator.userAgent || ""); }
+  function copy(t) {
+    try { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(t).catch(function () { legacy(t); }); return; } } catch (e) {}
+    legacy(t);
+  }
+  function legacy(t) { try { var a = document.createElement("textarea"); a.value = t; a.setAttribute("readonly", ""); a.style.cssText = "position:fixed;top:-99px;opacity:0"; document.body.appendChild(a); a.select(); document.execCommand("copy"); document.body.removeChild(a); } catch (e) {} }
+  function toast(t) {
+    var d = document.getElementById("bshareToast");
+    if (!d) { d = document.createElement("div"); d.id = "bshareToast"; d.style.cssText = "pointer-events:none;position:fixed;left:50%;top:18px;transform:translateX(-50%);z-index:100;background:#2b1a14;color:#fff;padding:11px 18px;border-radius:999px;font:700 14px/1.2 Manrope,system-ui,sans-serif;box-shadow:0 6px 20px rgba(0,0,0,.3);transition:opacity .3s"; document.body.appendChild(d); }
+    d.textContent = t; d.style.opacity = "1"; clearTimeout(d._t); d._t = setTimeout(function () { d.style.opacity = "0"; }, 2200);
+  }
+  function press(btn, on) {
+    if (!btn) return;
+    if (on) { btn.dataset.bsTxt = btn.dataset.bsTxt || btn.textContent; btn.style.opacity = ".6"; btn.setAttribute("aria-busy", "true"); }
+    else { btn.style.opacity = ""; btn.removeAttribute("aria-busy"); }
+  }
+  function after(o) { if (o.nudge !== false && window.bibQuick) setTimeout(function () { try { window.bibQuick.nudge(); } catch (e) {} }, 300); }
   window.bibShare = function (o) {
-    var mobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.maxTouchPoints > 1 && /Mac/.test(navigator.platform || ""));
-    if (navigator.share && mobile) {
-      navigator.share({ title: o.title, text: o.text, url: o.url }).then(function () { track("biblioteca_share_app", { app: "system" }); })
-        .catch(function (e) { if (e && e.name !== "AbortError") panel(o); });
+    var T = L[lang()], msg = o.text + " " + o.url, btn = o.btn || (document.activeElement && document.activeElement.tagName === "BUTTON" ? document.activeElement : null);
+    if (busy) {  // повторное нажатие, пока системное окно не открылось: не ждём — копируем и показываем свою панель
+      track("biblioteca_share_retry", {}); copy(msg); toast(T[2]);
+      if (!document.querySelector(".bshare")) panel(Object.assign({}, o, {onClose: function () { after(o); }}));
       return;
     }
-    panel(o);
+    var mobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.maxTouchPoints > 1 && /Mac/.test(navigator.platform || ""));
+    if (navigator.share && mobile && !inApp()) {
+      busy = true; press(btn, true);
+      var release = function () { busy = false; press(btn, false); };
+      var guard = setTimeout(release, 4000);
+      try {
+        navigator.share({title: o.title, text: o.text, url: o.url}).then(function () { clearTimeout(guard); release(); track("biblioteca_share_app", {app: "system"}); after(o); })
+          .catch(function (e) {
+            clearTimeout(guard); release();
+            if (e && e.name === "AbortError") { after(o); return; }
+            track("biblioteca_share_fail", {err: e && e.name || "?"}); copy(msg); toast(T[2]); panel(Object.assign({}, o, {onClose: function () { after(o); }}));
+          });
+      } catch (e) { clearTimeout(guard); release(); copy(msg); toast(T[2]); panel(Object.assign({}, o, {onClose: function () { after(o); }})); }
+      return;
+    }
+    if (inApp()) { copy(msg); toast(T[2]); }
+    panel(Object.assign({}, o, {onClose: function () { after(o); }}));
   };
 })();

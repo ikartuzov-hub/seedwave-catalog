@@ -120,7 +120,7 @@ def write_match(src, shelves):
         for x in [s["orig"], *s["t"].values()]:
             if norm(x):
                 keys.setdefault(norm(x), k)
-        t[k] = dict(s["t"], orig=s["orig"])
+        t[k] = dict(s["t"], orig=s["orig"], ty=s["type"])  # ty — для кнопок мастера «Своя полка» (quick.js)
     igor = {k: (1 if o["now"] else 0) for k, s in src.items() for o in s["on"] if o["kind"] == "igor" and not o.get("plan")}
     people = [{"k": "igor", "n": {"ru": "Игорь", "*": "Igor"}, "url": "/biblioteca/igor/", "items": igor}]
     people += [{"k": sh["name"], "n": {"ru": sh["person_ru"], "*": sh["person"]}, "url": "/biblioteca/#" + sh["name"],
