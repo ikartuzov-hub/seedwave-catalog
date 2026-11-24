@@ -178,6 +178,7 @@ footer a{display:inline-block;padding:8px 4px;text-decoration:underline;text-dec
 .bk.d1 .spine::after{width:3px;border-right:0}
 .bk.d2 .spine::before{width:16px;background:var(--band);border:0;opacity:.85}
 .bk.film .spine{border-radius:4px}
+.bk.learnbk .spine{--bg:#1E5B8C!important;--bink:#F4F8FB!important;--band:#E8B04B!important}
 .bk.film .spine::before{width:10px;border:0;background:repeating-linear-gradient(180deg,var(--band) 0 5px,transparent 5px 10px)}
 .bk.film .spine::after{width:10px;border:0;background:repeating-linear-gradient(180deg,var(--band) 0 5px,transparent 5px 10px)}
 .txt{flex:1;min-width:0}
@@ -562,9 +563,9 @@ for(const id in TRL){const b=byId(id);if(!b)continue;b.fullL=b.fullL||{};
 for(const id in TTL)Object.assign(byId(id).t,TTL[id]);
 ["bm","intime","mogilko","sokolov","tinkov"].forEach(id=>{const b=byId(id);if(b)delete b.why});
 const locF=b=>b.full?Object.assign({},b.full,(b.fullL||{})[lang]||{}):null;
-const STACK0=["starik","zemlyanin","liniya","her","vavilon"];
+const STACK0=["starik","zemlyanin","liniya","her"];  // места 1–3 книги (новая — наверх, третья уходит в библиотеку), 4 — фильм; место 5 — текущий семинар из «Обучения» (learnNow), решение Игоря 24.11
 const GATED=[];
-const NOW=["starik","zemlyanin","liniya","her","vavilon"];  // первая страница — книги и фильмы стопки (решение Игоря 23.11); YouTube — только в своём разделе: Соколов, Дороничев, Могилко, Futurepedia, Нейропросвещение
+const NOW=["starik","zemlyanin","liniya","her"];  // первая страница — книги и фильмы стопки (решение Игоря 23.11); YouTube — только в своём разделе: Соколов, Дороничев, Могилко, Futurepedia, Нейропросвещение
 const ED={starik:{top:"g",full:"g"},zemlyanin:{top:"g",full:"g"},liniya:{top:"g",full:"g"},her:{top:"g",full:"g"},vavilon:{top:"g",full:"g"},papa:{top:"g",full:"g"},kvadrant:{top:"g",full:"g"},walle:{top:"g",full:"g"},goodyear:{top:"g",full:"g"},bm:{top:"r"},intime:{top:"r"},mogilko:{top:"r"},sokolov:{top:"r"},tinkov:{top:"r"}};
 const RESERVED=["igor","olga","max","anton","anastasia","griselda","tetiana","elena","luidmila","liudmila","ludmila","ze","admin","seedwave","biblioteca","catalogo","hub","madeira","lis","piloto","capsula","pt","en","ru","es","de"];
 const GIVES=["energy","brave","dream","calm","laugh","know","dir"];
@@ -635,9 +636,13 @@ function spineHTML(b,i,n,custom){
     <span class="txt"><span class="bt">${esc(custom?b.t.ru:title(b))}</span><span class="ba">${esc(custom?b.a:author(b))}</span></span></button>${mv}</div>`
     +(openBook===b.id&&!custom?`<div class="bkcard">${bodyHTML(b,"s")}</div>`:"");
 }
+// место 5 полки — самый свежий семинар из «Обучения» (по дате карточки); нажатие открывает его карточку
+function learnNow(){const all=[];LEARN.groups.forEach(g=>g.cards.forEach(c=>all.push(c)));if(!all.length)return null;
+  const k=c=>c.date.split(".").reverse().join("");all.sort((a,b)=>k(b).localeCompare(k(a)));const c=all[0],L=LEARN.lbl[lang]||LEARN.lbl.ru;
+  return {id:"learn",lid:c.id,type:"learn",t:{ru:c.t[lang]||c.t.ru},a:L.h+" · "+c.who}}
 function renderStack(){
-  const it=order.map(byId);
-  $("#stack").innerHTML=`<div class="sec open${fresh?" fresh":""}"><div class="stack">${it.map((b,i)=>spineHTML(b,i,it.length)).join("")}<div class="board"></div></div></div>`
+  const it=order.map(byId),ln=mode==="author"?null:learnNow();
+  $("#stack").innerHTML=`<div class="sec open${fresh?" fresh":""}"><div class="stack">${it.map((b,i)=>spineHTML(b,i,it.length)).join("")}${ln?spineHTML(ln,it.length,it.length+1,true).replace('data-book="learn"','data-book="learn" data-learn="'+ln.lid+'"').replace('class="bk ','class="bk learnbk '):""}<div class="board"></div></div></div>`
     +(mode==="author"?`<p class="muted" style="margin:10px 2px 0">${T("authorNote")}</p>`:"");
   fresh=false;
   $("#cnt").textContent=T("cnt")(SHELF.length,SHELF.filter(hasText).length);
@@ -762,6 +767,7 @@ document.addEventListener("click",e=>{
   if(x=q("[data-full]")){const k=x.dataset.full;FULL[k]=!FULL[k];x.setAttribute("aria-expanded",FULL[k]);x.textContent=FULL[k]?T("fullHide"):T("fullBtn");x.nextElementSibling.classList.toggle("open",FULL[k]);return}
   if(x=q("[data-sec]")){catSec=x.dataset.sec;catQ="";catOpen=null;setView("cat");return}
   if(q("[data-secx]")){catSec=null;renderCat();return}
+  if(x=q("[data-learn]")){trk("biblioteca_learn_spine",{id:x.dataset.learn});if(location.hash==="#l-"+x.dataset.learn)openLearnHash();else location.hash="l-"+x.dataset.learn;return}
   if(x=q("[data-book]")){if(x.closest("#result"))return;if(openBook!==x.dataset.book)trk("biblioteca_book",{id:x.dataset.book});openBook=openBook===x.dataset.book?null:x.dataset.book;renderStack();return}
   if(x=q("[data-tab]")){tab=x.dataset.tab;openRow=null;renderList();return}
   if(x=q("[data-row]")){const id=x.dataset.row;if(x.closest("#cat")){catOpen=catOpen===id?null:id;renderCat(true)}else{openRow=openRow===id?null:id;renderList()}return}
