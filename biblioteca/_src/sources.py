@@ -197,6 +197,9 @@ try{window.swTrack&&window.swTrack("biblioteca_cat_type",{k})}catch(e){}}));
 q.addEventListener("input",go);const p=new URLSearchParams(location.search).get("q");if(p){q.value=p;go()}})();</script>"""
 
 
+LANGREDIR = (pathlib.Path(__file__).resolve().parent / "langredir.js").read_text(encoding="utf-8").strip()  # 25.11.2026: язык по браузеру
+
+
 def doc(l, path, ttl, desc, body, preview, search="", tab=""):
     alt = "\n".join(f'<link rel="alternate" hreflang="{x}" href="{url(path, x)}">' for x in LANGS)
     langs = "".join(f'<a href="{link(path, x)}" hreflang="{x}"{" aria-current=true" if x == l else ""}>{x.upper()}</a>' for x in LANGS)
@@ -206,6 +209,7 @@ def doc(l, path, ttl, desc, body, preview, search="", tab=""):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+{"<script>" + LANGREDIR + "</script>" if l == "pt" else ""}
 <title>{e(ttl)}</title>
 <meta name="description" content="{e(desc)}">
 {'<meta name="robots" content="noindex">' if preview else ''}

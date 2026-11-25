@@ -33,6 +33,7 @@ META = {
  "de": {"title": "Biblioteca — was ich lese und schaue, und was ich daraus mitnehme", "slogan": "Ein Regal, ein Link",
         "desc": "Igors Regal: Bücher, Filme und YouTube-Kanäle über die Zukunft, Kapital und das eigene Handwerk — und aus jedem eine Idee, die in die Tat umgesetzt wurde. Stell dein eigenes Regal zusammen und teile es mit einem Link."},
 }
+LANGREDIR = (ROOT / "_src" / "langredir.js").read_text(encoding="utf-8").strip()  # 25.11.2026: язык по браузеру, только PT-страница
 ICON = (ROOT / "biblioteca-icon.svg").read_text(encoding="utf-8")
 GLYPH = re.search(r"<path d=\"M34[^>]*/>", ICON).group(0)
 WAVE = '<path d="M20 80 Q30 74 40 80 Q50 86 60 80 Q70 74 80 80" fill="none" stroke="C" stroke-width="7" stroke-linecap="round"/>'
@@ -96,7 +97,8 @@ def head(lang):
         "description": M["desc"], "isPartOf": {"@type": "WebSite", "name": "SeedWave", "url": "https://seedwave.pt/"},
         "author": {"@type": "Person", "name": "Igor Kartuzov", "url": "https://www.linkedin.com/in/igor-kartuzov/"},
     }, ensure_ascii=False)
-    return f'''<title>{e(M["title"])}</title>
+    redir = f"<script>{LANGREDIR}</script>\n" if lang == "pt" else ""
+    return redir + f'''<title>{e(M["title"])}</title>
 <meta name="description" content="{e(M["desc"])}">
 {'<meta name="robots" content="noindex">' if PREVIEW else ''}
 <link rel="canonical" href="{url(lang)}">

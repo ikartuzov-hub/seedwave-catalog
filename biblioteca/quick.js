@@ -18,7 +18,7 @@
       match: function (who, n, all) { return "Ты и " + who + ": совпало " + n + " из " + all + " 💫"; }, wantN: function (n) { return "Хочу прочитать / посмотреть: " + n; },
       save: "Сохранить как свою полку →", step: function (i) { return "Шаг " + i + " из 4"; }, close: "Закрыть", back: "← Назад", next: "Дальше →", skip: "Пропустить",
       bH: "Какие книги оставили в тебе след?", bSub: "Нажми 1–3 — печатать не нужно.", fH: "А фильмы или сериалы?", fSub: "Один-два, которые до сих пор вспоминаешь.",
-      more: "Показать ещё", own: "Нет в списке? Начни вводить название", add: "Добавить", picked: function (n) { return "Выбрано: " + n; }, needOne: "Выбери хотя бы одну книгу или фильм.",
+      more: "Показать ещё", own: "Нет в списке? Начни вводить название", add: "Добавить", picked: function (n) { return "Выбрано: " + n; }, retry: "Список не загрузился — ещё раз ↻", needOne: "Выбери хотя бы одну книгу или фильм.",
       nH: "Как подписать полку?", dnPh: "Твоё имя, например: Мария", addr: "Адрес полки", nFree: "✓ свободно", nBusy: "занято — попробуй ", nBad: "латиница, цифры, дефис · 3–20 знаков", nRes: "это имя в резерве",
       mH: "Последний шаг — почта", mSub: "Одна почта — одна полка: так полку не займёт никто другой. Писем без твоего согласия не шлём.", mPh: "твоя@почта", go: "Создать полку 🎉",
       wait: "Ставлю книги на полку…", doneH: "Полка готова!", doneSub: "Вот твоя ссылка — отправь её тому, кто спросит «что почитать?».", openMine: "Открыть мою полку", share: "Поделиться ↗",
@@ -34,7 +34,7 @@
       match: function (who, n, all) { return "Você e " + who + ": " + n + " de " + all + " em comum 💫"; }, wantN: function (n) { return "Quero ler / ver: " + n; },
       save: "Guardar como a minha estante →", step: function (i) { return "Passo " + i + " de 4"; }, close: "Fechar", back: "← Voltar", next: "Seguinte →", skip: "Saltar",
       bH: "Que livros deixaram marca em si?", bSub: "Toque em 1–3 — não precisa de escrever.", fH: "E filmes ou séries?", fSub: "Um ou dois de que ainda se lembra.",
-      more: "Mostrar mais", own: "Não está na lista? Comece a escrever o título", add: "Adicionar", picked: function (n) { return "Escolhidos: " + n; }, needOne: "Escolha pelo menos um livro ou filme.",
+      more: "Mostrar mais", own: "Não está na lista? Comece a escrever o título", add: "Adicionar", picked: function (n) { return "Escolhidos: " + n; }, retry: "A lista não carregou — tentar de novo ↻", needOne: "Escolha pelo menos um livro ou filme.",
       nH: "Como assinamos a estante?", dnPh: "O seu nome, por exemplo: Maria", addr: "Endereço da estante", nFree: "✓ livre", nBusy: "ocupado — experimente ", nBad: "letras latinas, números, hífen · 3–20", nRes: "este nome está reservado",
       mH: "Último passo — o e-mail", mSub: "Um e-mail, uma estante: assim ninguém fica com a sua. Não enviamos mensagens sem o seu consentimento.", mPh: "o.seu@email", go: "Criar a estante 🎉",
       wait: "A pôr os livros na estante…", doneH: "A estante está pronta!", doneSub: "Aqui está o seu link — envie-o a quem lhe perguntar «o que hei de ler?».", openMine: "Abrir a minha estante", share: "Partilhar ↗",
@@ -50,7 +50,7 @@
       match: function (who, n, all) { return "You and " + who + ": " + n + " of " + all + " in common 💫"; }, wantN: function (n) { return "Want to read / watch: " + n; },
       save: "Save as my shelf →", step: function (i) { return "Step " + i + " of 4"; }, close: "Close", back: "← Back", next: "Next →", skip: "Skip",
       bH: "Which books left a mark on you?", bSub: "Tap 1–3 — no typing needed.", fH: "And films or series?", fSub: "One or two you still think about.",
-      more: "Show more", own: "Not on the list? Start typing the title", add: "Add", picked: function (n) { return "Picked: " + n; }, needOne: "Pick at least one book or film.",
+      more: "Show more", own: "Not on the list? Start typing the title", add: "Add", picked: function (n) { return "Picked: " + n; }, retry: "The list didn't load — try again ↻", needOne: "Pick at least one book or film.",
       nH: "How should we sign the shelf?", dnPh: "Your name, e.g. Maria", addr: "Shelf address", nFree: "✓ free", nBusy: "taken — try ", nBad: "latin letters, digits, hyphen · 3–20", nRes: "this name is reserved",
       mH: "Last step — email", mSub: "One email, one shelf: so nobody else can take yours. No emails without your consent.", mPh: "you@email", go: "Create my shelf 🎉",
       wait: "Putting the books on the shelf…", doneH: "Your shelf is ready!", doneSub: "Here's your link — send it to whoever asks “what should I read?”.", openMine: "Open my shelf", share: "Share ↗",
@@ -66,7 +66,7 @@
       match: function (who, n, all) { return "Tú y " + who + ": " + n + " de " + all + " en común 💫"; }, wantN: function (n) { return "Quiero leer / ver: " + n; },
       save: "Guardar como mi estantería →", step: function (i) { return "Paso " + i + " de 4"; }, close: "Cerrar", back: "← Atrás", next: "Siguiente →", skip: "Saltar",
       bH: "¿Qué libros te dejaron huella?", bSub: "Toca 1–3 — no hace falta escribir.", fH: "¿Y películas o series?", fSub: "Una o dos que todavía recuerdas.",
-      more: "Ver más", own: "¿No está en la lista? Empieza a escribir el título", add: "Añadir", picked: function (n) { return "Elegidos: " + n; }, needOne: "Elige al menos un libro o una película.",
+      more: "Ver más", own: "¿No está en la lista? Empieza a escribir el título", add: "Añadir", picked: function (n) { return "Elegidos: " + n; }, retry: "La lista no cargó — reintentar ↻", needOne: "Elige al menos un libro o una película.",
       nH: "¿Cómo firmamos la estantería?", dnPh: "Tu nombre, por ejemplo: María", addr: "Dirección de la estantería", nFree: "✓ libre", nBusy: "ocupado — prueba ", nBad: "letras latinas, números, guion · 3–20", nRes: "este nombre está reservado",
       mH: "Último paso — el correo", mSub: "Un correo, una estantería: así nadie se queda con la tuya. No enviamos correos sin tu permiso.", mPh: "tu@correo", go: "Crear mi estantería 🎉",
       wait: "Poniendo los libros en la estantería…", doneH: "¡Tu estantería está lista!", doneSub: "Aquí tienes tu enlace — envíaselo a quien te pregunte «¿qué leo?».", openMine: "Abrir mi estantería", share: "Compartir ↗",
@@ -82,7 +82,7 @@
       match: function (who, n, all) { return "Du und " + who + ": " + n + " von " + all + " gemeinsam 💫"; }, wantN: function (n) { return "Will ich lesen / sehen: " + n; },
       save: "Als mein Regal speichern →", step: function (i) { return "Schritt " + i + " von 4"; }, close: "Schließen", back: "← Zurück", next: "Weiter →", skip: "Überspringen",
       bH: "Welche Bücher haben Spuren hinterlassen?", bSub: "Tippe 1–3 an — kein Tippen nötig.", fH: "Und Filme oder Serien?", fSub: "Ein, zwei, an die du noch denkst.",
-      more: "Mehr zeigen", own: "Nicht in der Liste? Titel eintippen", add: "Hinzufügen", picked: function (n) { return "Ausgewählt: " + n; }, needOne: "Wähle mindestens ein Buch oder einen Film.",
+      more: "Mehr zeigen", own: "Nicht in der Liste? Titel eintippen", add: "Hinzufügen", picked: function (n) { return "Ausgewählt: " + n; }, retry: "Liste nicht geladen — nochmal ↻", needOne: "Wähle mindestens ein Buch oder einen Film.",
       nH: "Wie unterschreiben wir das Regal?", dnPh: "Dein Name, z. B. Maria", addr: "Adresse des Regals", nFree: "✓ frei", nBusy: "vergeben — versuch ", nBad: "lateinische Buchstaben, Ziffern, Bindestrich · 3–20", nRes: "dieser Name ist reserviert",
       mH: "Letzter Schritt — E-Mail", mSub: "Eine E-Mail, ein Regal: so kann niemand deins übernehmen. Keine Mails ohne deine Zustimmung.", mPh: "du@email", go: "Regal erstellen 🎉",
       wait: "Stelle die Bücher ins Regal…", doneH: "Dein Regal ist fertig!", doneSub: "Hier ist dein Link — schick ihn allen, die fragen: „Was soll ich lesen?“", openMine: "Mein Regal öffnen", share: "Teilen ↗",
@@ -121,6 +121,8 @@
     ".bq .bqc{border:1.5px solid var(--line,rgba(158,59,50,.18));background:transparent;color:var(--ink,#2b1a14);border-radius:14px;padding:9px 12px;font:600 14px/1.25 var(--body,sans-serif);cursor:pointer;text-align:left;touch-action:manipulation}" +
     ".bq .bqc small{display:block;font-weight:500;font-size:12px;color:var(--ink-soft,#7a5f54);margin-top:2px}" +
     ".bq .bqc[aria-pressed=true]{background:var(--accent,#9e3b32);border-color:var(--accent,#9e3b32);color:var(--accent-ink,#fff)}.bq .bqc[aria-pressed=true] small{color:inherit;opacity:.85}" +
+    ".bq .bqsk{display:inline-block;width:96px;height:44px;border-radius:14px;background:var(--line,rgba(158,59,50,.18));opacity:.55;animation:bqpulse 1.2s ease-in-out infinite}.bq .bqsk:nth-child(3n){width:132px}.bq .bqsk:nth-child(4n){width:74px}" +
+    "@keyframes bqpulse{50%{opacity:.25}}" +
     ".bq .bqmore{border:0;background:transparent;color:var(--accent,#9e3b32);font:700 14px/1 var(--body,sans-serif);padding:6px 0;cursor:pointer}" +
     ".bq input{width:100%;box-sizing:border-box;border:1.5px solid var(--line,rgba(158,59,50,.18));background:var(--bg,#fbf6f0);color:var(--ink,#2b1a14);border-radius:12px;padding:12px 13px;font:500 16px/1.3 var(--body,sans-serif);margin:0 0 8px}" +
     ".bq .bqrow{display:flex;gap:8px;align-items:flex-start}.bq .bqrow .bsg{flex:1;min-width:0}.bq .bqrow input{flex:1;margin:0}" +
@@ -168,7 +170,7 @@
       });
       out.sort(function (a, b) { return b.pop - a.pop; });
       return out;
-    }).catch(function () { return []; });
+    }).catch(function () { base = null; return []; });
     return base;
   }
 
@@ -236,7 +238,8 @@
     var chips = el("div", "bqchips"); S.box.appendChild(chips);
     var moreB = el("button", "bqmore", t.more); moreB.hidden = true; S.box.appendChild(moreB);
     var cnt = null, all = false;
-    function count() { var c = S.picks.length; if (cnt) cnt.textContent = c ? t.picked(c) : ""; }
+    // счётчик — только то, что видно на этом шаге (раньше считал и фильмы, и «Хочу» с других шагов)
+    function count() { var c = S.picks.filter(function (p) { return types.indexOf(p.type) >= 0; }).length; if (cnt) cnt.textContent = c ? t.picked(c) : ""; }
     function chip(p) {
       var c = el("button", "bqc"); c.type = "button"; c.appendChild(document.createTextNode(p.title));
       if (p.sub) c.appendChild(el("small", "", p.sub));
@@ -256,14 +259,26 @@
       list.slice(0, lim).forEach(function (p) { chips.appendChild(chip(p)); });
       moreB.hidden = all || list.length <= lim;
     }
-    var LIST = [];
-    loadBase().then(function (b) {
-      if (!S) return;
-      LIST = b.filter(function (x) { return types.indexOf(x.type) >= 0; });
-      // уже выбранные из каталога — вперёд
-      LIST.sort(function (a, c) { return (has(c) ? 1 : 0) - (has(a) ? 1 : 0); });
-      draw(LIST);
-    });
+    var LIST = [], box0 = S.box;
+    // пока список грузится — серые «чипы», чтобы не было пустого места под «печатать не нужно»
+    function skeleton() { chips.innerHTML = ""; S.picks.filter(function (p) { return types.indexOf(p.type) >= 0; }).forEach(function (p) { chips.appendChild(chip(p)); }); for (var i = 0; i < 6; i++) chips.appendChild(el("span", "bqsk")); }
+    function load() {
+      skeleton();
+      loadBase().then(function (b) {
+        if (!S || S.box !== box0 || !chips.isConnected) return;
+        LIST = b.filter(function (x) { return types.indexOf(x.type) >= 0; });
+        if (!LIST.length) {
+          draw(LIST);
+          var rt = el("button", "bqmore", t.retry); rt.type = "button";
+          rt.addEventListener("click", function () { track("biblioteca_quick_retry", {step: S.step}); load(); });
+          chips.appendChild(rt); return;
+        }
+        // уже выбранные из каталога — вперёд
+        LIST.sort(function (a, c) { return (has(c) ? 1 : 0) - (has(a) ? 1 : 0); });
+        draw(LIST);
+      });
+    }
+    load();
     moreB.addEventListener("click", function () { all = true; draw(LIST); track("biblioteca_quick_more", {step: S.step}); });
     S.box.appendChild(el("p", "bqlbl", t.own));
     var row = el("div", "bqrow"), inp = el("input"), addB = el("button", "bqb gh", t.add);
@@ -389,7 +404,8 @@
     var top = el("div", "bqtop"); top.appendChild(el("span", "bqst", "✓")); var x = el("button", "bqx", "×"); x.addEventListener("click", close); top.appendChild(x); S.box.appendChild(top);
     S.box.appendChild(el("h3", "", t.doneH)); S.box.appendChild(el("p", "bqsub", S.refName ? t.doneReply(S.refName) + " " + t.doneSub : t.doneSub));
     var pub = "https://seedwave.pt/biblioteca/" + m.n + "/";
-    var a = el("a", "bqlink", "seedwave.pt/biblioteca/" + m.n); a.href = mineUrl(m); S.box.appendChild(a);
+    // видимая ссылка — публичная, без ключа: её раздают; ключ — только в кнопке «Открыть мою полку»
+    var a = el("a", "bqlink", "seedwave.pt/biblioteca/" + m.n); a.href = pub; a.target = "_blank"; a.rel = "noopener"; S.box.appendChild(a);
     var sh = el("button", "bqb bqfull", t.share);
     sh.addEventListener("click", function () { track("biblioteca_share", {own: 1, from: "quick"}); if (window.bibShare) window.bibShare({title: "Biblioteca", text: t.shareTxt(dn), url: pub + "?utm_source=biblioteca&utm_medium=share", nudge: false, btn: sh}); });
     var op = el("a", "bqb gh bqfull", t.openMine); op.href = mineUrl(m);
@@ -517,5 +533,7 @@
   function givesLabel(g) { return (T().gives || {})[g] || ""; }
   // своя полка есть, а в очереди что-то осталось (пропала сеть) — дослать при следующем заходе
   try { var m0 = mine(); if (m0 && queue().length) setTimeout(function () { flush(m0); }, 1500); } catch (e) {}
+  // список для шага 1 — заранее, пока гость смотрит полку (12 КБ): мастер открывается уже с чипами
+  try { if (!mine()) setTimeout(function () { loadBase(); }, 1500); } catch (e) {}
   window.bibQuick = {open: open, close: close, knowBox: knowBox, nudge: nudge, mine: mine, givesLabel: givesLabel, want: want};
 })();

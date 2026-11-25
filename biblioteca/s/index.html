@@ -109,7 +109,9 @@ const WS={
  es:{want:{book:"Quiero leer",film:"Quiero ver",yt:"Quiero ver",other:"Quiero"},was:{book:"Leído",film:"Visto",yt:"Visto",other:"Hecho"},from:n=>"de la estantería · "+n,start:"▶ Empecé",done:"✓ Hecho",gq:"¿Qué te dio? — uno o dos toques",gok:"Guardar",url:"Enlace de YouTube — el título aparece solo",urlBad:"No parece un enlace de YouTube."},
  de:{want:{book:"Will ich lesen",film:"Will ich sehen",yt:"Will ich sehen",other:"Will ich"},was:{book:"Gelesen",film:"Gesehen",yt:"Gesehen",other:"Erledigt"},from:n=>"aus dem Regal · "+n,start:"▶ Angefangen",done:"✓ Fertig",gq:"Was hat es dir gegeben? — ein, zwei Tipps",gok:"Speichern",url:"YouTube-Link — der Titel kommt von selbst",urlBad:"Das sieht nicht nach einem YouTube-Link aus."}};
 const WG=["view","energy","act","close","joy"];
-const P=new URLSearchParams(location.search),NAME=(P.get("n")||"").toLowerCase(),KEY=P.get("k")||"";
+const P=new URLSearchParams(location.search),NAME=(P.get("n")||"").toLowerCase(),KEY=P.get("k")||(()=>{try{const m=JSON.parse(localStorage.getItem("biblioteca.mine")||"null");return m&&m.n===NAME&&m.k?m.k:""}catch(_){return""}})();
+// ключ не держим в адресной строке, если он есть в этом браузере: так его не скопируют вместе со ссылкой
+try{const m=JSON.parse(localStorage.getItem("biblioteca.mine")||"null");if(P.get("k")&&m&&m.n===NAME&&m.k===P.get("k")){P.delete("k");history.replaceState(null,"",location.pathname+"?"+P.toString()+location.hash)}}catch(_){}
 let lang=P.get("lang");if(!LANGS.includes(lang)){const nl=(navigator.language||"pt").slice(0,2).toLowerCase();lang=LANGS.includes(nl)?nl:"pt"}
 let T=S[lang],shelf=null,ftype="book",delArm=false;
 const $=s=>document.querySelector(s),PATHL=l=>l==="pt"?"/biblioteca/":"/biblioteca/"+l+"/",FORM=l=>"/biblioteca/igor/"+(l==="pt"?"":l+"/");

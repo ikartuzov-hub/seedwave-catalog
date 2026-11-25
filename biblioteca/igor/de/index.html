@@ -330,11 +330,12 @@ footer a{display:inline-block;padding:8px 4px;text-decoration:underline;text-dec
     <button class="spine" data-book="learn" data-learn="gemini-notebook" aria-expanded="false" style="--h:76px;--bg:#1d5c63;--bink:#e9f6f5;--band:#e0b96a">
     <span class="txt"><span class="bt">Gemini Notebook — die KI, die nur aus deinen eigenen Dokumenten antwortet</span><span class="ba">Pedro Caramez</span></span><span class="kind">Lernen</span></button></div><div class="board"></div></div></div></div>
   <p class="cnt" id="cnt">Im Regal: 27 · mit meinen Worten: 9. Tipp auf einen Buchrücken.</p>
+  <!-- 25.11.2026, разбор глазами гостя: сначала игра «Что из этого ты знаешь?», потом «Поделиться» (гость сперва сравнивает, потом зовёт других) -->
+  <div id="knowbox"></div>
   <div class="share sharetop">
     <button class="btn big" id="shareBtn" data-i="shareBtn">Regal teilen ↗</button>
     <span class="muted" id="shareOk"></span>
   </div>
-  <div id="knowbox"></div>
 
   <div class="ctabox" id="ctabox">
     <a class="btn big" href="#" data-toform="" data-i="cta">Antworte mit deinem Regal</a>
@@ -892,6 +893,8 @@ if(ADD&&!GIFT){const go=()=>toForm(ADD);document.readyState==="complete"?setTime
 // со страницы книги /k/: ?want=название&type=book&from=igor — сразу в «Хочу» (своей полки нет — мастер с этой вещью)
 const WANT=(()=>{try{const q=new URLSearchParams(location.search),t=(q.get("want")||"").trim().slice(0,120);return t?{title:t,type:q.get("type")==="series"?"film":(q.get("type")||"book"),from:(q.get("from")||"").toLowerCase()}:null}catch(e){return null}})();
 if(WANT&&!ADD&&!GIFT){const go=()=>{if(window.bibQuick)bibQuick.want(WANT,{via:"k"})};document.readyState==="complete"?setTimeout(go,300):addEventListener("load",()=>setTimeout(go,300))}
+// 25.11.2026: «Моя» / «Поставить на свою полку» без своей полки → #anketa → сразу мастер в 4 нажатия (ручная анкета — внизу, для тех, кто хочет печатать)
+if(location.hash==="#anketa"&&!ADD&&!WANT&&!GIFT&&mode!=="author"){const go=()=>{if(window.bibQuick&&!bibQuick.mine())toForm(null)};document.readyState==="complete"?setTimeout(go,300):addEventListener("load",()=>setTimeout(go,300))}
 loadWant();
 if(location.hash==="#catalogo")goKat();
 window.addEventListener("hashchange",()=>{if(location.hash==="#catalogo")goKat();openLearnHash()});

@@ -8,6 +8,8 @@
   if (!L[lang]) lang = "pt";
   var sub = lang === "pt" ? "" : lang + "/";
   var q = new URLSearchParams(location.search), mine = null, me = null;
+  // 25.11.2026: язык, на котором человек ходит по Библиотеке, — его выбор; по нему открываются ссылки без языка (_src/langredir.js)
+  try { if ((document.referrer || "").indexOf(location.host + "/biblioteca") >= 0) localStorage.setItem("biblioteca.lang", lang); } catch (e) {}
   try {
     if (q.get("me")) localStorage.setItem("biblioteca.me", q.get("me"));
     mine = JSON.parse(localStorage.getItem("biblioteca.mine") || "null");
@@ -33,7 +35,11 @@
   var tab = d.dataset.lib;
   if (tab === "all") a1.setAttribute("aria-current", "page");
   if (tab === "mine" || (tab === "owner" && me && location.pathname.indexOf("/biblioteca/" + me + "/") === 0)) a2.setAttribute("aria-current", "page");
-  a2.addEventListener("click", function () { a2.href = mineUrl(); try { window.swTrack && window.swTrack("biblioteca_tab_mine", { has: !!(mine || me) }); } catch (e) {} });
+  a2.addEventListener("click", function (ev) {
+    a2.href = mineUrl(); try { window.swTrack && window.swTrack("biblioteca_tab_mine", { has: !!(mine || me) }); } catch (e) {}
+    // 25.11.2026: своей полки нет, а мастер на странице есть — открываем его здесь, без перезагрузки и ручной анкеты
+    if (!(mine && mine.n && mine.k) && !me && window.bibQuick && window.bibQuick.open) { ev.preventDefault(); window.bibQuick.open({ from: "tab" }); }
+  });
   nav.append(a1, a2);
   var h = document.querySelector("header.top");
   if (h && h.parentNode) h.parentNode.insertBefore(nav, h.nextSibling);
