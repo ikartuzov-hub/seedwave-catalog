@@ -9,5 +9,8 @@ Personal and public bookshelves: books, films, YouTube and learning — and from
 
 - [Everyone’s Library](https://seedwave.pt/biblioteca/en/): all titles and whose shelves they are on
 - [Igor Kartuzov’s shelf](https://seedwave.pt/biblioteca/igor/en/): what he reads and watches, with his own takeaways and workshop notes
+- [What Elon Musk reads — books with sources](https://seedwave.pt/biblioteca/p/elon-musk/en/): each book with the source where he named it
 - [What Demis Hassabis reads — books with sources](https://seedwave.pt/biblioteca/p/demis-hassabis/en/): each book with the source where he named it
+- [What Bill Gates reads — books with sources](https://seedwave.pt/biblioteca/p/bill-gates/en/): each book with the source where he named it
+- [What Lex Fridman reads — books with sources](https://seedwave.pt/biblioteca/p/lex-fridman/en/): each book with the source where he named it
 <!-- biblioteca:end -->
