@@ -21,7 +21,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Manrope:wght@400;800&display=swap&subset=cyrillic" rel="stylesheet">
 <script>(()=>{let t=new URLSearchParams(location.search).get("theme");try{if(t==="dark"||t==="light")localStorage.setItem("biblioteca.theme",t);else t=localStorage.getItem("biblioteca.theme")}catch(e){}document.documentElement.dataset.theme=t==="dark"?"dark":"light"})()</script>
-<style>:root{--bg:#fbf6f0;--ink:#2b1a14;--mut:#7a5f54;--acc:#9e3b32;--card:#fff;--line:rgba(158,59,50,.18);--chip:#f3e6dc;--chip-on:rgba(158,59,50,.12)}
+<style>:root{--surface:var(--card);--ink-soft:var(--mut);--accent:var(--acc)}
+:root{--bg:#fbf6f0;--ink:#2b1a14;--mut:#7a5f54;--acc:#9e3b32;--card:#fff;--line:rgba(158,59,50,.18);--chip:#f3e6dc;--chip-on:rgba(158,59,50,.12)}
 :root[data-theme="dark"]{--bg:#1c1210;--ink:#f6ece4;--mut:#c4a99c;--acc:#e0806f;--card:#2a1b17;--line:rgba(246,236,228,.13);--chip:#3a2621;--chip-on:rgba(246,236,228,.1)}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Manrope,system-ui,sans-serif}
 main{max-width:720px;margin:0 auto;padding:18px 16px 40px}a{color:var(--acc)}
