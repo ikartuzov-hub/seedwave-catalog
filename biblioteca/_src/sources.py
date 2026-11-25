@@ -123,7 +123,7 @@ def write_match(src, shelves):
         t[k] = dict(s["t"], orig=s["orig"], ty=s["type"])  # ty — для кнопок мастера «Своя полка» (quick.js)
     igor = {k: (1 if o["now"] else 0) for k, s in src.items() for o in s["on"] if o["kind"] == "igor" and not o.get("plan")}
     people = [{"k": "igor", "n": {"ru": "Игорь", "*": "Igor"}, "url": "/biblioteca/igor/", "items": igor}]
-    people += [{"k": sh["name"], "n": {"ru": sh["person_ru"], "*": sh["person"]}, "url": "/biblioteca/#" + sh["name"],
+    people += [{"k": sh["name"], "n": {"ru": sh["person_ru"], "*": sh["person"]}, "url": (plink(sh, "pt") if sh.get("slug") else "/biblioteca/#" + sh["name"]),
                 "items": {it["id"]: 0 for it in sh["items"]}} for sh in shelves]
     (BIB / "match.json").write_text(json.dumps({"_note": "Собирает sources.py для match.js («Совпало»). Руками не править.",
                                                 "keys": keys, "t": t, "people": people}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
@@ -138,12 +138,12 @@ def author(s, l):
 
 
 def url(path, l):
-    base = BASE if path else "https://seedwave.pt/biblioteca/"
+    base = BASE if path and not path.startswith("p/") else "https://seedwave.pt/biblioteca/"
     return f"{base}{path}" if l == "pt" else f"{base}{path}{l}/"
 
 
 def link(path, l):
-    base = "/biblioteca/k/" if path else "/biblioteca/"
+    base = "/biblioteca/k/" if path and not path.startswith("p/") else "/biblioteca/"
     return f"{base}{path}" if l == "pt" else f"{base}{path}{l}/"
 
 
@@ -155,7 +155,8 @@ def home(l):
     return "/biblioteca/" if l == "pt" else f"/biblioteca/{l}/"
 
 
-CSS = """:root{--bg:#fbf6f0;--ink:#2b1a14;--mut:#7a5f54;--acc:#9e3b32;--card:#fff;--line:rgba(158,59,50,.18);--chip:#f3e6dc;--chip-on:rgba(158,59,50,.12)}
+CSS = """:root{--surface:var(--card);--ink-soft:var(--mut);--accent:var(--acc)}
+:root{--bg:#fbf6f0;--ink:#2b1a14;--mut:#7a5f54;--acc:#9e3b32;--card:#fff;--line:rgba(158,59,50,.18);--chip:#f3e6dc;--chip-on:rgba(158,59,50,.12)}
 :root[data-theme="dark"]{--bg:#1c1210;--ink:#f6ece4;--mut:#c4a99c;--acc:#e0806f;--card:#2a1b17;--line:rgba(246,236,228,.13);--chip:#3a2621;--chip-on:rgba(246,236,228,.1)}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Manrope,system-ui,sans-serif}
 main{max-width:720px;margin:0 auto;padding:18px 16px 40px}a{color:var(--acc)}
@@ -200,7 +201,7 @@ q.addEventListener("input",go);const p=new URLSearchParams(location.search).get(
 LANGREDIR = (pathlib.Path(__file__).resolve().parent / "langredir.js").read_text(encoding="utf-8").strip()  # 25.11.2026: язык по браузеру
 
 
-def doc(l, path, ttl, desc, body, preview, search="", tab=""):
+def doc(l, path, ttl, desc, body, preview, search="", tab="", ld="", js=""):
     alt = "\n".join(f'<link rel="alternate" hreflang="{x}" href="{url(path, x)}">' for x in LANGS)
     langs = "".join(f'<a href="{link(path, x)}" hreflang="{x}"{" aria-current=true" if x == l else ""}>{x.upper()}</a>' for x in LANGS)
     utm = f"?lang={l}&amp;utm_source=biblioteca&amp;utm_medium=footer"
@@ -224,8 +225,8 @@ def doc(l, path, ttl, desc, body, preview, search="", tab=""):
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Manrope:wght@400;800&display=swap&subset=cyrillic" rel="stylesheet">
 <script>(()=>{{let t=new URLSearchParams(location.search).get("theme");try{{if(t==="dark"||t==="light")localStorage.setItem("biblioteca.theme",t);else t=localStorage.getItem("biblioteca.theme")}}catch(e){{}}document.documentElement.dataset.theme=t==="dark"?"dark":"light"}})()</script>
 <style>{CSS}</style>
-<script defer src="/biblioteca/tabs.js"></script>
-<link rel="stylesheet" href="/biblioteca/spines.css">
+<script defer src="/biblioteca/tabs.js"></script>{js}
+<link rel="stylesheet" href="/biblioteca/spines.css">{('<script type="application/ld+json">' + ld + '</script>') if ld else ""}
 <script defer src="https://seedwave.pt/nav/sw.js"></script>
 </head>
 <body><main>
@@ -342,10 +343,10 @@ def catalog_page(src, shelves, l, preview, mine5=(), users=()):
     wave = [s for s in items if nn(s)][:10]
     many = sorted([s for s in src.values() if nl(s) > 1], key=lambda s: (-nl(s), title(s, l).lower()))
     blocks = "".join(
-        f'<div class="card"><b>{e(person(sh, l))}</b> <span class="who">· {e(sh["who"][l])}</span><div class="chips">'
+        f'<div class="card"><b>{pname(sh, l)}</b> <span class="who">· {e(sh["who"][l])}</span><div class="chips">'
         + "".join(f'<a href="{link(it["id"] + "/", l)}">{e(title(src[it["id"]], l))}</a>' for it in sh["items"])
         + "</div></div>" for sh in shelves)
-    search = (f'<input class="q" id="q" type="search" autofocus placeholder="🔍 {e(T["ph"])}" aria-label="{e(T["ph"])}">'
+    search = (f'<input class="q" id="q" type="search" placeholder="🔍 {e(T["ph"])}" aria-label="{e(T["ph"])}">'
               f'<p id="none" class="sub">{e(T["none"])} → <a href="{igor(l)}?utm_source=biblioteca&amp;utm_medium=search#anketa">{e(T["add"])}</a></p>'
               f'<ul class="list" id="hits"></ul>')
     author_blk = (f'<span class="tag">{e(T["author"])} · Igor Kartuzov</span>{stack(mine5, l)}'
@@ -362,7 +363,154 @@ def catalog_page(src, shelves, l, preview, mine5=(), users=()):
             + users_blk + f'<h2>{e(T["builders"])}</h2><p class="sub">{e(T["buildersSub"])}</p>{blocks}'
             + f'<h2>{e(T["home"])} · A–Z</h2><ul class="list">{"".join(li(s) for s in sorted(items, key=lambda s: title(s, l).lower()))}</ul>'
             + f'<h2>{e(T["yours"])}</h2><p class="sub">{e(T["yoursSub"])}</p><a class="btn" href="{igor(l)}?utm_source=biblioteca&amp;utm_medium=catalog#anketa">{e(T["add"])} →</a></div>' + JS)
-    return doc(l, "", T["cat"] + " — Biblioteca", T["catSub"], body, preview, search, "all")
+    return doc(l, "", T["cat"] + " — Biblioteca", T["catSub"], body, preview, search, "all", ld=home_ld(shelves, l))
+
+
+# ---------- страницы основателей «Что читает … — с источниками» (25.11.2026, GEO: страница, на которую может сослаться ИИ) ----------
+POUT = BIB / "p"
+MONTHS = {"ru": ["январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"],
+          "pt": ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"],
+          "en": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+          "es": ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
+          "de": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"]}
+FL = {
+ "ru": {"h1": "Что читает {p} — книги с источниками", "lead": "Собрано по открытым интервью и текстам: у каждой книги — где {p} сам её назвал.",
+        "checked": "Проверено: {m} · Игорь Картузов", "where": "Где сказал", "src": "источник ↗", "via": "найдено через ↗",
+        "faqH": "Вопросы и ответы", "others": "Полки других, кто строит будущее",
+        "q1": "Какие книги советует {p}?", "a1": "{p} называл: {list}. У каждой книги на этой странице — ссылка на место, где он сам её назвал.",
+        "q2": "Где {p} говорил об этих книгах?", "a2": "{list}.",
+        "q3": "Как узнать, совпадают ли мои книги с книгами {pg}?", "a3": "Отметьте выше, что из этого вы читали, — сразу увидите, сколько совпало. Свою полку можно завести за 4 нажатия, без пароля и регистрации.",
+        "desc": "{p} ({who}) называл книги: {list} — у каждой ссылка на источник. Проверено: {m}."},
+ "pt": {"h1": "O que lê {p} — livros com fontes", "lead": "Reunido a partir de entrevistas e textos públicos: em cada livro, onde {p} o nomeou.",
+        "checked": "Verificado: {m} · Igor Kartuzov", "where": "Onde disse", "src": "fonte ↗", "via": "encontrado via ↗",
+        "faqH": "Perguntas e respostas", "others": "Estantes de outros que constroem o futuro",
+        "q1": "Que livros recomenda {p}?", "a1": "{p} nomeou: {list}. Cada livro nesta página tem a ligação para o sítio onde ele próprio o nomeou.",
+        "q2": "Onde falou {p} destes livros?", "a2": "{list}.",
+        "q3": "Como sei se os meus livros coincidem com os de {p}?", "a3": "Marque acima o que já leu — vê logo quantos coincidem. A sua estante cria-se em 4 toques, sem palavra-passe nem registo.",
+        "desc": "{p} ({who}) nomeou os livros: {list} — cada um com a fonte. Verificado: {m}."},
+ "en": {"h1": "What {p} reads — books with sources", "lead": "Collected from public interviews and writing: for each book, where {p} named it himself.",
+        "checked": "Checked: {m} · Igor Kartuzov", "where": "Where he said it", "src": "source ↗", "via": "found via ↗",
+        "faqH": "Questions and answers", "others": "Shelves of others building the future",
+        "q1": "What books does {p} recommend?", "a1": "{p} has named: {list}. Each book on this page links to where he named it himself.",
+        "q2": "Where did {p} talk about these books?", "a2": "{list}.",
+        "q3": "How do I know if my books match {p}'s?", "a3": "Mark above what you have read — you will see right away how many match. Your own shelf takes 4 taps, no password or sign-up.",
+        "desc": "{p} ({who}) has named these books: {list} — each with its source. Checked: {m}."},
+ "es": {"h1": "Qué lee {p} — libros con fuentes", "lead": "Reunido a partir de entrevistas y textos públicos: en cada libro, dónde {p} lo nombró.",
+        "checked": "Verificado: {m} · Igor Kartuzov", "where": "Dónde lo dijo", "src": "fuente ↗", "via": "encontrado vía ↗",
+        "faqH": "Preguntas y respuestas", "others": "Estanterías de otros que construyen el futuro",
+        "q1": "¿Qué libros recomienda {p}?", "a1": "{p} ha nombrado: {list}. Cada libro en esta página enlaza al sitio donde él mismo lo nombró.",
+        "q2": "¿Dónde habló {p} de estos libros?", "a2": "{list}.",
+        "q3": "¿Cómo sé si mis libros coinciden con los de {p}?", "a3": "Marca arriba lo que has leído — verás enseguida cuántos coinciden. Tu estantería se crea en 4 toques, sin contraseña ni registro.",
+        "desc": "{p} ({who}) ha nombrado estos libros: {list} — cada uno con su fuente. Verificado: {m}."},
+ "de": {"h1": "Was {p} liest — Bücher mit Quellen", "lead": "Aus öffentlichen Interviews und Texten zusammengestellt: zu jedem Buch, wo {p} es selbst genannt hat.",
+        "checked": "Geprüft: {m} · Igor Kartuzov", "where": "Wo er es sagte", "src": "Quelle ↗", "via": "gefunden über ↗",
+        "faqH": "Fragen und Antworten", "others": "Regale anderer, die die Zukunft bauen",
+        "q1": "Welche Bücher empfiehlt {p}?", "a1": "{p} hat genannt: {list}. Jedes Buch auf dieser Seite verlinkt die Stelle, an der er es selbst genannt hat.",
+        "q2": "Wo hat {p} über diese Bücher gesprochen?", "a2": "{list}.",
+        "q3": "Wie erfahre ich, ob meine Bücher zu denen von {p} passen?", "a3": "Markiere oben, was du gelesen hast — du siehst sofort, wie viele übereinstimmen. Dein eigenes Regal: 4 Tipps, ohne Passwort und Anmeldung.",
+        "desc": "{p} ({who}) hat diese Bücher genannt: {list} — jedes mit Quelle. Geprüft: {m}."},
+}
+IGOR_LD = {"@type": "Person", "name": "Igor Kartuzov", "url": "https://www.linkedin.com/in/igor-kartuzov/", "sameAs": ["https://www.linkedin.com/in/igor-kartuzov/"]}
+
+
+def plink(sh, l):
+    return link("p/" + sh["slug"] + "/", l)
+
+
+def pname(sh, l):
+    return f'<a href="{plink(sh, l)}">{e(person(sh, l))}</a>' if sh.get("slug") else e(person(sh, l))
+
+
+def month(d, l):
+    y, m = d.split("-")[:2]
+    return f"{MONTHS[l][int(m) - 1]} {y}"
+
+
+def founder_page(sh, src, shelves, l, preview):
+    F, P = FL[l], person(sh, l)
+    path = "p/" + sh["slug"] + "/"
+    m = month(sh["checked"], l)
+    books = [(it, src[it["id"]]) for it in sh["items"]]
+    names = ", ".join(f"«{title(s, l)}» ({author(s, l)})" if l in ("ru", "pt", "es", "de") else f"{title(s, l)} ({author(s, l)})" for it, s in books)
+    wheres = "; ".join((f"«{title(s, l)}»" if l != "en" else title(s, l)) + " — " + it.get("where", {}).get(l, F["src"].rstrip(" ↗")) for it, s in books)
+    faq = [(F["q1"].format(p=P), F["a1"].format(p=P, list=names)), (F["q2"].format(p=P), F["a2"].format(list=wheres)), (F["q3"].format(p=P, pg=(sh.get("person_ru_gen") or P) if l == "ru" else P), F["a3"])]
+    cards = ""
+    for it, s in books:
+        via = f' · <a href="{e(it["via"])}" rel="nofollow noopener" target="_blank">{e(F["via"])}</a>' if it.get("via") else ""
+        cards += (f'<div class="card"><b><a href="{link(s["id"] + "/", l)}">{e(title(s, l))}</a></b> <span class="who">· {e(author(s, l))}</span>'
+                  + (f'<p class="why">{e(it["why"][l])}</p>' if it.get("why", {}).get(l) else "")
+                  + f'<small>{e(F["where"])}: {e(it.get("where", {}).get(l, ""))} · <a href="{e(it["src"])}" rel="nofollow noopener" target="_blank">{e(F["src"])}</a>{via}</small></div>')
+    others = "".join(f'<a href="{plink(o, l) if o.get("slug") else link("", l) + "#" + o["name"]}">{e(person(o, l))}</a>' for o in shelves if o is not sh)
+    faq_html = "".join(f'<div class="card"><b>{e(q)}</b><p style="margin:6px 0 0">{e(a)}</p></div>' for q, a in faq)
+    T = L[l]
+    body = (f'<a href="{link("", l)}">{e(T["back"])}</a>'
+            f'<h1>{e(F["h1"].format(p=P))}</h1><p class="sub">{e(sh["who"][l])}. {e(F["lead"].format(p=P))}</p>'
+            f'<p class="sub"><small>{e(F["checked"].format(m=m)).replace("Igor Kartuzov", "<a href=\"https://www.linkedin.com/in/igor-kartuzov/\">Igor Kartuzov</a>").replace("Игорь Картузов", "<a href=\"https://www.linkedin.com/in/igor-kartuzov/\">Игорь Картузов</a>")}</small></p>'
+            f'{cards}<div id="knowbox"></div>'
+            f'<h2>{e(F["faqH"])}</h2>{faq_html}'
+            f'<h2>{e(F["others"])}</h2><div class="chips">{others}</div>'
+            f'<h2>{e(T["yours"])}</h2><p class="sub">{e(T["yoursSub"])}</p><a class="btn" href="{igor(l)}?utm_source=biblioteca&amp;utm_medium=founder#anketa">{e(T["add"])} →</a>')
+    items_js = json.dumps([{"k": "", "title": title(s, l), "type": "book" if s["type"] == "book" else "film"} for it, s in books], ensure_ascii=False)
+    js = ('\n<script defer src="/biblioteca/share.js"></script><script defer src="/biblioteca/suggest.js"></script><script defer src="/biblioteca/quick.js"></script>'
+          f'\n<script>addEventListener("DOMContentLoaded",()=>{{if(window.bibQuick)bibQuick.knowBox(document.getElementById("knowbox"),{{owner:{json.dumps(P, ensure_ascii=False)},key:{json.dumps("@" + sh["name"])},items:{items_js}}})}})</script>')
+    u = url(path, l)
+    ld = json.dumps({"@context": "https://schema.org", "@graph": [
+        {"@type": "WebPage", "@id": u, "url": u, "name": F["h1"].format(p=P), "inLanguage": l, "dateModified": sh["checked"], "author": IGOR_LD,
+         "about": {"@type": "Person", "name": sh["person"], "description": sh["who"]["en"], "sameAs": [sh["wiki"]] if sh.get("wiki") else []},
+         "isPartOf": {"@type": "WebSite", "name": "Biblioteca · SeedWave", "url": "https://seedwave.pt/biblioteca/"}},
+        {"@type": "ItemList", "name": F["h1"].format(p=P), "itemListElement": [
+            {"@type": "ListItem", "position": i + 1, "item": {"@type": "Book", "name": title(s, l), "author": {"@type": "Person", "name": s.get("a", "")}, "url": url(s["id"] + "/", l)}}
+            for i, (it, s) in enumerate(books)]},
+        {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]}]},
+        ensure_ascii=False).replace("</", "<\\/")
+    ttl = F["h1"].format(p=P) + " — Biblioteca"
+    desc = F["desc"].format(p=P, who=sh["who"][l], list=", ".join(title(s, l) for it, s in books), m=m)
+    return doc(l, path, ttl, desc, body, preview, "", "", ld=ld, js=js)
+
+
+def home_ld(shelves, l):
+    u = url("", l)
+    return json.dumps({"@context": "https://schema.org", "@graph": [
+        {"@type": "CollectionPage", "@id": u, "url": u, "name": L[l]["cat"], "description": L[l]["catSub"], "inLanguage": l, "author": IGOR_LD,
+         "isPartOf": {"@type": "WebSite", "name": "SeedWave", "url": "https://seedwave.pt/"}},
+        {"@type": "ItemList", "name": L[l]["builders"], "itemListElement": [
+            {"@type": "ListItem", "position": i + 1, "url": url("p/" + sh["slug"] + "/", l), "name": FL[l]["h1"].format(p=person(sh, l))}
+            for i, sh in enumerate(x for x in shelves if x.get("slug"))]}]}, ensure_ascii=False).replace("</", "<\\/")
+
+
+def write_sitemap(src, shelves):
+    """Адреса Библиотеки в общем sitemap.xml — с языковыми альтернативами (xhtml:link), остальные сайты не трогаем."""
+    sm = BIB.parent / "sitemap.xml"
+    lines = [x for x in sm.read_text(encoding="utf-8").splitlines() if "/biblioteca/" not in x]
+    lines = [x.replace('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+                       '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">') for x in lines]
+    full = lambda p, l: "https://seedwave.pt" + p(l)
+    groups = [lambda l: link("", l), igor] + [(lambda pp: (lambda l: link(pp, l)))("p/" + sh["slug"] + "/") for sh in shelves if sh.get("slug")] \
+        + [(lambda pp: (lambda l: link(pp, l)))(s["id"] + "/") for s in src.values()]
+    add = []
+    for g in groups:
+        alts = "".join(f'<xhtml:link rel="alternate" hreflang="{x}" href="{full(g, x)}"/>' for x in LANGS) + f'<xhtml:link rel="alternate" hreflang="x-default" href="{full(g, "pt")}"/>'
+        add += [f"  <url><loc>{full(g, l)}</loc>{alts}</url>" for l in LANGS]
+    i = next(n for n, x in enumerate(lines) if "</urlset>" in x)
+    sm.write_text("\n".join(lines[:i] + add + lines[i:]) + "\n", encoding="utf-8")
+
+
+def write_llms(src, shelves):
+    """Блок Библиотеки в /llms.txt (между метками) — короткая карта для ИИ-роботов."""
+    f = BIB.parent / "llms.txt"
+    A, B = "<!-- biblioteca:start -->", "<!-- biblioteca:end -->"
+    blk = [A, "## Biblioteca", "",
+           "Personal and public bookshelves: books, films, YouTube and learning — and from each, one idea put into practice. 5 languages (pt, en, ru, es, de).", "",
+           "- [Everyone’s Library](https://seedwave.pt/biblioteca/en/): all titles and whose shelves they are on",
+           "- [Igor Kartuzov’s shelf](https://seedwave.pt/biblioteca/igor/en/): what he reads and watches, with his own takeaways and workshop notes"]
+    blk += [f"- [{FL['en']['h1'].format(p=sh['person'])}](https://seedwave.pt/biblioteca/p/{sh['slug']}/en/): each book with the source where he named it" for sh in shelves if sh.get("slug")]
+    blk += [B]
+    old = f.read_text(encoding="utf-8") if f.exists() else "# SeedWave\n\n> SeedWave — a studio in Madeira, Portugal: a person and their AI pilots building free guides and tools. Hub: https://seedwave.pt/hub/\n"
+    if A in old:
+        new = old[:old.index(A)] + "\n".join(blk) + old[old.index(B) + len(B):]
+    else:
+        new = old.rstrip("\n") + "\n\n" + "\n".join(blk) + "\n"
+    f.write_text(new, encoding="utf-8")
 
 
 def main():
@@ -388,12 +536,17 @@ def main():
             d = OUT / s["id"] / sub
             d.mkdir(parents=True, exist_ok=True)
             (d / "index.html").write_text(source_page(s, l, a.preview), encoding="utf-8")
-    sm = BIB.parent / "sitemap.xml"
-    lines = [x for x in sm.read_text(encoding="utf-8").splitlines() if "/biblioteca/k/" not in x and "/biblioteca/igor/" not in x]
-    add = ([f"  <url><loc>https://seedwave.pt{igor(l)}</loc></url>" for l in LANGS]
-           + [f"  <url><loc>{url(p, l)}</loc></url>" for p in [s["id"] + "/" for s in src.values()] for l in LANGS])
-    i = max(n for n, x in enumerate(lines) if "/biblioteca/" in x) + 1
-    sm.write_text("\n".join(lines[:i] + add + lines[i:]) + "\n", encoding="utf-8")
+    if POUT.exists():
+        shutil.rmtree(POUT)
+    for sh in shelves:
+        if not sh.get("slug"):
+            continue
+        for l in LANGS:
+            d = POUT / sh["slug"] / ("" if l == "pt" else l + "/")
+            d.mkdir(parents=True, exist_ok=True)
+            (d / "index.html").write_text(founder_page(sh, src, shelves, l, a.preview), encoding="utf-8")
+    write_sitemap(src, shelves)
+    write_llms(src, shelves)
     many = sum(1 for s in src.values() if len(s["on"]) > 1)
     assert all("now" in o for s in src.values() for o in s["on"])
     print(f"источников: {len(src)} · на нескольких полках: {many} · страниц: {len(src) * 5 + 5}")

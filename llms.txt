@@ -1,0 +1,13 @@
+# SeedWave
+
+> SeedWave — a studio in Madeira, Portugal: a person and their AI pilots building free guides and tools. Hub: https://seedwave.pt/hub/
+
+<!-- biblioteca:start -->
+## Biblioteca
+
+Personal and public bookshelves: books, films, YouTube and learning — and from each, one idea put into practice. 5 languages (pt, en, ru, es, de).
+
+- [Everyone’s Library](https://seedwave.pt/biblioteca/en/): all titles and whose shelves they are on
+- [Igor Kartuzov’s shelf](https://seedwave.pt/biblioteca/igor/en/): what he reads and watches, with his own takeaways and workshop notes
+- [What Demis Hassabis reads — books with sources](https://seedwave.pt/biblioteca/p/demis-hassabis/en/): each book with the source where he named it
+<!-- biblioteca:end -->
