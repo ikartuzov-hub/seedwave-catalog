@@ -108,5 +108,15 @@
   "dark": "#E8876D",
   "now": null,
   "letter": "<path d=\"M20 70 L20 17 L46 70 L46 17\" fill=\"none\" stroke=\"C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M57 40 L57 59 Q57 70 67.5 70 Q78 70 78 59 L78 40 L78 70\" fill=\"none\" stroke=\"C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>"
+ },
+ {
+  "id": "dialogo",
+  "name": "Diálogo",
+  "unit": 100,
+  "light": "#0C7F5C",
+  "light_bg": "#E5F4EE",
+  "dark": "#34D399",
+  "now": null,
+  "letter": "<path d=\"M50 20.5 L75 66.5 L25 66.5 Z\" fill=\"none\" stroke=\"C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>"
  }
 ]
