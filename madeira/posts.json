@@ -275,6 +275,82 @@
      }
     }
    ]
+  },
+  {
+   "id": "rozhdestvo-ranshe-kalendarya",
+   "date": "2026-11-26",
+   "ru": {
+    "place": "Нюрнберг → Марианские Лазни",
+    "title": "Рождество приходит раньше календаря",
+    "lead": "В Нюрнберге праздник уже вовсю: домики светятся, на прилавках пряничные сердца, над площадью горит колесо обозрения, а на старой башне раскинул крылья ангел из огоньков.",
+    "body": "В Марианских Лазнях он только стучится в дверь: в холлах отеля появились ёлки, под аркой висит венок.\n\nА Мадейра молчит до 1 декабря, тогда Фуншал зажжёт все огни разом. Говорят, у старых рыцарей тоже была привычка долго хранить секреты.\n\nЗавтра — введение в книгу."
+   },
+   "pt": {
+    "place": "Nuremberga → Mariánské Lázně",
+    "title": "O Natal chega antes do calendário",
+    "lead": "Em Nuremberga a festa já vai alta: as barraquinhas brilham, há corações de gengibre nos balcões, a roda-gigante ilumina a praça e, na velha torre, um anjo de luzes abre as asas.",
+    "body": "Em Mariánské Lázně a festa ainda só bate à porta: nos átrios do hotel surgiram árvores de Natal e, debaixo do arco, pende uma coroa.\n\nA Madeira, essa, guarda silêncio até 1 de dezembro, quando o Funchal acende todas as luzes de uma vez. Dizem que os velhos cavaleiros também tinham o hábito de guardar segredos durante muito tempo.\n\nAmanhã — a introdução ao livro."
+   },
+   "en": {
+    "place": "Nuremberg → Mariánské Lázně",
+    "title": "Christmas arrives ahead of the calendar",
+    "lead": "In Nuremberg the season is in full swing: the stalls glow, gingerbread hearts hang over the counters, the Ferris wheel lights up the square, and on the old tower an angel made of lights spreads its wings.",
+    "body": "In Mariánské Lázně it is only knocking at the door: Christmas trees have appeared in the hotel halls, and a wreath hangs beneath the arch.\n\nMadeira keeps quiet until 1 December, when Funchal switches on all its lights at once. They say the old knights also had a habit of keeping secrets for a long time.\n\nTomorrow: the introduction to the book."
+   },
+   "es": {
+    "place": "Núremberg → Mariánské Lázně",
+    "title": "La Navidad llega antes que el calendario",
+    "lead": "En Núremberg la fiesta ya está en marcha: los puestos brillan, hay corazones de jengibre en los mostradores, la noria ilumina la plaza y, en la vieja torre, un ángel de luces despliega sus alas.",
+    "body": "En Mariánské Lázně todavía solo llama a la puerta: en los vestíbulos del hotel han aparecido árboles de Navidad y bajo el arco cuelga una corona.\n\nMadeira, en cambio, guarda silencio hasta el 1 de diciembre, cuando Funchal enciende todas sus luces a la vez. Dicen que los viejos caballeros también tenían la costumbre de guardar secretos durante mucho tiempo.\n\nMañana: la introducción al libro."
+   },
+   "de": {
+    "place": "Nürnberg → Marienbad",
+    "title": "Weihnachten kommt vor dem Kalender",
+    "lead": "In Nürnberg ist das Fest schon in vollem Gang: Die Buden leuchten, an den Ständen hängen Lebkuchenherzen, das Riesenrad erhellt den Platz, und am alten Turm breitet ein Engel aus Lichtern seine Flügel aus.",
+    "body": "In Marienbad klopft es erst an die Tür: In den Hallen des Hotels stehen Weihnachtsbäume, unter dem Bogen hängt ein Kranz.\n\nMadeira schweigt bis zum 1. Dezember, dann zündet Funchal alle Lichter auf einmal an. Man sagt, die alten Ritter hatten auch die Gewohnheit, Geheimnisse lange zu bewahren.\n\nMorgen: die Einführung in das Buch."
+   },
+   "photos": [
+    {
+     "src": "img/2026-11-26-1-yarmarka.jpg",
+     "alt": {
+      "ru": "Рождественская ярмарка в Нюрнберге: домик с пряничными сердцами и щелкунчиком",
+      "pt": "Mercado de Natal em Nuremberga: barraca com corações de gengibre e um quebra-nozes",
+      "en": "Christmas market in Nuremberg: a stall with gingerbread hearts and a nutcracker",
+      "es": "Mercado navideño de Núremberg: un puesto con corazones de jengibre y un cascanueces",
+      "de": "Christkindlesmarkt in Nürnberg: Bude mit Lebkuchenherzen und Nussknacker"
+     }
+    },
+    {
+     "src": "img/2026-11-26-2-venok-yolka.jpg",
+     "alt": {
+      "ru": "Венок под аркой, за дверью — ёлка в огнях",
+      "pt": "Coroa debaixo do arco e, além da porta, uma árvore iluminada",
+      "en": "A wreath beneath the arch, a lit tree beyond the door",
+      "es": "Una corona bajo el arco y, tras la puerta, un árbol iluminado",
+      "de": "Ein Kranz unter dem Bogen, hinter der Tür ein leuchtender Baum"
+     }
+    },
+    {
+     "src": "img/2026-11-26-3-yolka-holl.jpg",
+     "alt": {
+      "ru": "Ёлка в бело-золотых шарах в холле отеля",
+      "pt": "Árvore com bolas brancas e douradas no átrio do hotel",
+      "en": "A tree in white and gold baubles in the hotel hall",
+      "es": "Un árbol con bolas blancas y doradas en el vestíbulo del hotel",
+      "de": "Ein Baum mit weißen und goldenen Kugeln in der Hotelhalle"
+     }
+    },
+    {
+     "src": "img/2026-11-26-4-yolka-okno.jpg",
+     "alt": {
+      "ru": "Ёлка у большого окна с видом на курортный парк",
+      "pt": "Árvore junto a uma grande janela com vista para o parque termal",
+      "en": "A tree by a tall window overlooking the spa park",
+      "es": "Un árbol junto a un gran ventanal con vista al parque del balneario",
+      "de": "Ein Baum am großen Fenster mit Blick auf den Kurpark"
+     }
+    }
+   ]
   }
  ]
 }
