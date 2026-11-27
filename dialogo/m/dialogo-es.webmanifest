@@ -1,0 +1,30 @@
+{
+  "id": "/dialogo/es/",
+  "name": "Diálogo",
+  "short_name": "Diálogo",
+  "description": "¿Te interesa un seminario online en un idioma que aún no hablas? Diálogo graba la sesión, la traduce y deja las conclusiones en tu estantería. En desarrollo: estamos estudiando la demanda.",
+  "lang": "es",
+  "start_url": "/dialogo/es/",
+  "scope": "/dialogo/",
+  "display": "standalone",
+  "background_color": "#F4F7F8",
+  "theme_color": "#0C7F5C",
+  "icons": [
+    {
+      "src": "/dialogo/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/dialogo/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/dialogo/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

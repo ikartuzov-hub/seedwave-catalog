@@ -1,0 +1,106 @@
+{
+  "title": "Diálogo — un seminario online en otro idioma, donde participas",
+  "metaDesc": "¿Te interesa un seminario online en un idioma que aún no hablas? Diálogo graba la sesión, la traduce y deja las conclusiones en tu estantería. En desarrollo: estamos estudiando la demanda.",
+  "brand": "Diálogo",
+  "slogan": "Un seminario online en otro idioma, donde participas",
+  "langLabel": "Idioma",
+  "themeLabel": "Cambiar el tema",
+  "status": {
+    "b": "En desarrollo · estudiando la demanda.",
+    "t": "Por ahora Diálogo funciona en mis seminarios. Los resultados están en mi estantería y puedes dejar tu interés más abajo."
+  },
+  "h1": "Un seminario online en otro idioma, donde participas y no solo escuchas",
+  "lead": "Te interesa un seminario online, pero es en portugués, inglés o alemán, y todavía no hablas ese idioma. Diálogo graba la sesión, la traduce y te deja las conclusiones. Y tú participas en ella. Esa es la idea, y así transcurren ya mis seminarios.",
+  "live": {
+    "aria": "Cómo se ve durante la sesión",
+    "top": "En directo · el ponente habla en portugués",
+    "hear": "Oigo",
+    "read": "Leo",
+    "me": "Yo en el chat:",
+    "caption": "Ejemplo ilustrativo. La velocidad de la animación es orientativa.",
+    "frames": [
+      {"src": "Hoje não falamos de seguidores, falamos de interesse.", "tr": "Hoy no hablamos de seguidores, hablamos de interés.", "chat": "Como transformar visitas ao perfil em contactos?"},
+      {"src": "Temos uma pergunta no chat.", "tr": "Tenemos una pregunta en el chat.", "chat": "Como transformar visitas ao perfil em contactos?"},
+      {"src": "Boa pergunta. A bio deve ser um convite.", "tr": "Buena pregunta. La bio debe ser una invitación.", "chat": "Obrigado! Vou mudar a bio hoje."}
+    ]
+  },
+  "tabs": {"lite": "Lite", "full": "Completa · con explicaciones"},
+  "lite": {
+    "h2a": "Las diapositivas las encuentras tú. Hace falta otra cosa",
+    "needs": [
+      {"h": "Las conclusiones de una ponencia en directo", "p": "Un resumen breve en tu idioma: qué dijo el ponente y qué merece la pena llevar a la práctica. Queda como una ficha en tu estantería."},
+      {"h": "Estás en la sesión", "p": "Tu nombre en la lista de participantes. Cuando es posible, una pregunta al ponente en el idioma del seminario y un agradecimiento al final."}
+    ],
+    "h2b": "Mira lo que sale",
+    "seeP": "Mis seminarios online en portugués están en la estantería: las conclusiones con mis palabras y lo que pasó a la práctica. Después de cada nueva sesión aparece una ficha.",
+    "seeBtn": "Abrir la estantería",
+    "h2c": "¿Quieres lo mismo? Deja tu interés",
+    "wantP": "Un toque, sin escribir nada. Cuando Diálogo se abra para todos, serás de los primeros en saberlo.",
+    "langQ": "¿En qué idioma son tus seminarios?",
+    "other": "Otro",
+    "btnInterest": "Dejar interés en Telegram",
+    "btnShare": "Enviar a un amigo",
+    "moreHint": "¿Quieres saber cómo funciona por dentro?",
+    "moreLink": "Versión completa"
+  },
+  "full": {
+    "storyH": "Cómo empezó",
+    "storyP": "Vivo en Madeira y todavía no hablo portugués lo bastante bien. En los primeros cinco días asistí a cinco seminarios online en portugués: hice preguntas sobre mi trabajo, los ponentes respondieron, y las ideas de cada sesión están ahora en fichas en mi estantería. Así trabaja el tándem «una persona y sus pilotos de IA».",
+    "facts": [
+      {"b": "5", "s": "primeros seminarios en cinco días"},
+      {"b": "3", "s": "veces el ponente respondió a mi pregunta en directo"},
+      {"b": "30 min → minutos", "s": "de las palabras del ponente a mi respuesta"}
+    ],
+    "levelsH": "Tres niveles de participación",
+    "levels": [
+      {"h": "1. Estantería", "st": "funciona", "cls": "ok", "main": true, "p": "El seminario se graba, se transcribe y se analiza. Cinco ideas con tus palabras y la línea «qué apliqué» quedan en una ficha en tu estantería «Aprendizaje». Un mes después no recuerdas «algún webinar», sino qué te llevaste a tu trabajo."},
+      {"h": "2. Voz en la sesión", "st": "probado en directo", "cls": "ok", "p": "Una o dos preguntas sobre lo esencial del tema y de tu trabajo, en el idioma del seminario. El ponente responde a una pregunta que interesa a todo el grupo, y eso resulta útil tanto para los organizadores como para los participantes."},
+      {"h": "3. Apuntador", "st": "en construcción", "cls": "test", "p": "La traducción sigue al ponente línea a línea y la pregunta nace mientras él sigue en el tema. El objetivo: reaccionar tan rápido como quienes tienen el idioma como lengua materna y conocer al ponente y lo que dice al mismo nivel que ellos."}
+    ],
+    "pathH": "Cómo cambió la velocidad",
+    "path": [
+      {"b": "~30 minutos", "s": "Primeras sesiones. Grabación en partes de veinte minutos, transcripción, traducción, pregunta. Para entonces el ponente ya estaba en otro tema."},
+      {"b": "minutos", "s": "En la quinta sesión el organizador activó los subtítulos y la velocidad aumentó: el piloto los lee en pantalla y traduce al momento. Si no hay subtítulos, se pueden pedir con antelación."},
+      {"b": "segundos", "s": "El siguiente paso. El apuntador: traducción línea a línea y pregunta con un botón. Lo estamos construyendo y midiendo en sesiones reales."}
+    ],
+    "stagesH": "Seis etapas de un seminario",
+    "stages": [
+      {"h": "1. La víspera", "li": ["Inscripción confirmada, correo del organizador localizado, evento en el calendario.", "Una página sobre el ponente: cargo, empresa, publicaciones recientes, web, libros.", "Dos o tres preguntas en el idioma del seminario, con traducción. Cada una ligada a un punto del programa y a tu trabajo.", "Glosario del tema: 15–30 términos que seguro aparecerán.", "Si la sesión no tiene subtítulos, se pueden pedir al organizador con antelación."]},
+      {"h": "2. Grabación", "li": ["La grabación dura toda la sesión y se queda en el archivo personal. De ella sale después la estantería.", "Diez segundos después de empezar, una comprobación: está grabando, el archivo crece.", "Recibes un mensaje en cualquier caso: está grabando o no."]},
+      {"h": "3. Comprensión en directo", "li": ["Los subtítulos de la sesión y su traducción a medida que se habla.", "Una captura de cada nueva diapositiva y su texto.", "El chat del seminario: lo importante se traduce al momento.", "Un resumen breve en tu idioma: de qué se habla y qué te concierne."]},
+      {"h": "4. Participación", "li": ["La primera mitad, escuchamos.", "Desde la mitad, una o dos preguntas sobre lo dicho, desde el lado práctico de tu trabajo.", "Al chat solo va aquello a lo que dijiste «sí».", "Tras la respuesta del ponente, una línea: gracias y la conclusión.", "Al final, un agradecimiento al ponente, al moderador y al organizador en un solo mensaje."]},
+      {"h": "5. Personas", "li": ["Quién dirige la serie, quién interviene, qué se pregunta en el chat.", "Personas cuyas preguntas y temas están cerca de tu trabajo: merece la pena conocerlas en persona.", "Escribimos a cada persona por separado y con un motivo. Nada de envíos masivos a la lista de participantes.", "Los ponentes de una misma serie se conocen. Con cada uno hablamos con palabras propias."]},
+      {"h": "6. Estantería y contacto", "li": ["Análisis en tu idioma: 10–12 ideas y qué nos llevamos al trabajo.", "Ficha en la estantería: cinco ideas con tus palabras, tu pregunta, la respuesta del ponente y «qué estoy aplicando».", "LinkedIn del ponente: seguirle y comentar su publicación sobre el seminario.", "Encuesta del organizador: valoraciones honestas y un detalle concreto de la sesión.", "Si el ponente no responde, no insistimos."]}
+    ],
+    "toolsH": "Con qué grabamos y traducimos",
+    "toolsHead": ["Método", "Qué aporta", "Hasta el sentido", "Estado"],
+    "tools": [
+      ["Grabación en el ordenador y transcripción por partes", "El texto completo de la sesión para la estantería", "Unos 30 minutos", "funciona", "ok"],
+      ["Subtítulos activados por el organizador", "El texto sigue al ponente, el piloto traduce", "Minutos", "funciona", "ok"],
+      ["Subtítulos con traducción en el navegador", "Traducción en pantalla, gratis", "Segundos, por medir", "en pruebas", "test"],
+      ["Aplicación de traducción que escucha el sonido del ordenador", "Traducción sin pedir nada al organizador", "Segundos, por medir", "en pruebas", "test"],
+      ["Nuestro apuntador", "Traducción y pregunta lista, teniendo en cuenta al ponente y tu trabajo", "Segundos, por medir", "en construcción", "test"],
+      ["Grabador en la nube", "Grabación cuando no estás en la sesión", "Después de la sesión", "con conocimiento del organizador", "wait"]
+    ],
+    "whoH": "Quién hace qué",
+    "who": [
+      {"h": "Pilotos de IA", "li": ["Página sobre el ponente y preguntas", "Grabación y su comprobación", "Traducción y resúmenes", "Traducción del chat", "Análisis y borrador de la ficha"]},
+      {"h": "La persona", "li": ["Entrada en la sesión y códigos de acceso", "«Sí» a cada texto", "Envío al chat y a LinkedIn", "Sus palabras en la ficha", "La decisión de a quién conocer"]}
+    ],
+    "rulesH": "Reglas que no rompemos",
+    "rulesSum": "Honestidad y datos ajenos",
+    "rules": ["La grabación y la transcripción se quedan en el archivo personal. En la estantería, solo las ideas propias y el enlace a la fuente.", "Los subtítulos se piden al organizador abiertamente y con antelación.", "El grabador en la nube es visible para todos los participantes. Solo lo usamos con conocimiento del organizador.", "La traducción puede fallar; por eso al chat solo va texto revisado por una persona."],
+    "btnLite": "Versión corta"
+  },
+  "goal": {
+    "h": "El objetivo: tu estantería «Aprendizaje»",
+    "p": "Un seminario que no llegó a la estantería está olvidado al cabo de un mes. Crea tu estantería en la Biblioteca SeedWave y pon una ficha después de cada sesión. Las mías están en la sección «Aprendizaje» y, con cada seminario, son más.",
+    "btnOwn": "Crear mi estantería",
+    "btnMine": "Ver la mía"
+  },
+  "share": {
+    "text": "Diálogo: cómo participar en un seminario online en otro idioma y guardar las conclusiones en tu estantería.",
+    "copied": "Enlace copiado ✓",
+    "fail": "No se pudo copiar"
+  }
+}

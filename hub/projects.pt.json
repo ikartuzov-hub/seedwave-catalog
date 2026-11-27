@@ -842,6 +842,23 @@
           "caption": "25 segundos, percebe-se sem palavras. Animação criada com IA."
         }
       }
+    },
+    {
+      "id": "dialogo",
+      "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Diálogo\"><title>Diálogo</title><rect width=\"100\" height=\"100\" rx=\"22\" fill=\"#E5F4EE\"/><path d=\"M50 20.5 L75 66.5 L25 66.5 Z\" fill=\"none\" stroke=\"#0C7F5C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M20 80 Q30 74 40 80 Q50 86 60 80 Q70 74 80 80\" fill=\"none\" stroke=\"#0C7F5C\" stroke-width=\"7\" stroke-linecap=\"round\"/></svg>",
+      "category": "Educação / Línguas",
+      "name": "Diálogo — um seminário online noutra língua, onde participa",
+      "hook": "Há um seminário online que lhe interessa, mas é numa língua que ainda não fala. O Diálogo grava a sessão, traduz e deixa as conclusões num cartão na sua estante.",
+      "description": "Projeto em desenvolvimento: estamos a estudar a procura. Por agora, o Diálogo funciona nos seminários do autor, e os resultados estão na estante dele na Biblioteca, secção «Aprendizagem». A página tem duas versões: Lite — o que o participante recebe — e Completa — como funciona: seis etapas de um seminário, com que se grava e traduz, o que faz a pessoa e o que fazem os seus pilotos de IA. Pode deixar o seu interesse com um toque. Cinco línguas.",
+      "sectors": [
+        "Educação",
+        "Línguas",
+        "Pilotos de IA"
+      ],
+      "stage": "demand",
+      "investment": "",
+      "lookingFor": "Quem aprende em seminários online noutra língua · Organizadores de seminários online",
+      "demoLink": "https://seedwave.pt/dialogo/"
     }
   ]
 }

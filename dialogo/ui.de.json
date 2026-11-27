@@ -1,0 +1,106 @@
+{
+  "title": "Diálogo — ein Online-Seminar in einer anderen Sprache, bei dem du mitmachst",
+  "metaDesc": "Dich interessiert ein Online-Seminar in einer Sprache, die du noch nicht sprichst? Diálogo zeichnet die Sitzung auf, übersetzt sie und legt die Erkenntnisse in dein Regal. In Entwicklung: Wir prüfen die Nachfrage.",
+  "brand": "Diálogo",
+  "slogan": "Ein Online-Seminar in einer anderen Sprache, bei dem du mitmachst",
+  "langLabel": "Sprache",
+  "themeLabel": "Design wechseln",
+  "status": {
+    "b": "In Entwicklung · Nachfrage wird geprüft.",
+    "t": "Vorerst läuft Diálogo in meinen eigenen Seminaren. Die Ergebnisse stehen in meinem Regal, und dein Interesse kannst du weiter unten hinterlassen."
+  },
+  "h1": "Ein Online-Seminar in einer anderen Sprache, bei dem du teilnimmst statt nur zuzuhören",
+  "lead": "Dich interessiert ein Online-Seminar, aber es findet auf Portugiesisch, Englisch oder Spanisch statt, und du sprichst diese Sprache noch nicht. Diálogo zeichnet die Sitzung auf, übersetzt sie und hinterlässt dir die Erkenntnisse. Und du bist dabei Teilnehmer. So ist es gedacht, und so laufen meine eigenen Seminare bereits.",
+  "live": {
+    "aria": "So sieht es während der Sitzung aus",
+    "top": "Live · der Referent spricht Portugiesisch",
+    "hear": "Ich höre",
+    "read": "Ich lese",
+    "me": "Ich im Chat:",
+    "caption": "Ein Beispiel zur Veranschaulichung. Das Tempo der Animation ist keine Messung.",
+    "frames": [
+      {"src": "Hoje não falamos de seguidores, falamos de interesse.", "tr": "Heute sprechen wir nicht über Follower, sondern über Interesse.", "chat": "Como transformar visitas ao perfil em contactos?"},
+      {"src": "Temos uma pergunta no chat.", "tr": "Wir haben eine Frage im Chat.", "chat": "Como transformar visitas ao perfil em contactos?"},
+      {"src": "Boa pergunta. A bio deve ser um convite.", "tr": "Gute Frage. Die Bio sollte eine Einladung sein.", "chat": "Obrigado! Vou mudar a bio hoje."}
+    ]
+  },
+  "tabs": {"lite": "Lite", "full": "Ausführlich · mit Erklärungen"},
+  "lite": {
+    "h2a": "Die Folien findest du selbst. Du brauchst etwas anderes",
+    "needs": [
+      {"h": "Erkenntnisse aus dem Live-Vortrag", "p": "Eine kurze Zusammenfassung in deiner Sprache: was der Referent gesagt hat und was sich davon umzusetzen lohnt. Sie landet als Karte in deinem Regal."},
+      {"h": "Du bist in der Sitzung", "p": "Dein Name in der Teilnehmerliste. Wenn möglich eine Frage an den Referenten in der Sprache des Seminars und ein Dank am Ende."}
+    ],
+    "h2b": "Sieh dir an, was dabei herauskommt",
+    "seeP": "Meine Online-Seminare auf Portugiesisch stehen im Regal: Erkenntnisse in eigenen Worten und was davon in die Praxis ging. Nach jeder neuen Sitzung kommt eine Karte dazu.",
+    "seeBtn": "Regal öffnen",
+    "h2c": "Möchtest du das auch? Hinterlasse dein Interesse",
+    "wantP": "Ein Tippen, nichts zu schreiben. Wenn Diálogo für alle öffnet, erfährst du es als Erste oder Erster.",
+    "langQ": "In welcher Sprache sind deine Seminare?",
+    "other": "Andere",
+    "btnInterest": "Interesse auf Telegram hinterlassen",
+    "btnShare": "An einen Freund senden",
+    "moreHint": "Möchtest du wissen, wie es im Inneren funktioniert?",
+    "moreLink": "Ausführliche Version"
+  },
+  "full": {
+    "storyH": "Wie es begann",
+    "storyP": "Ich lebe auf Madeira und spreche noch nicht gut genug Portugiesisch. In den ersten fünf Tagen habe ich an fünf Online-Seminaren auf Portugiesisch teilgenommen: Ich habe Fragen zu meiner eigenen Arbeit gestellt, die Referenten haben geantwortet, und die Ideen jeder Sitzung stehen jetzt als Karten in meinem Regal. So arbeitet das Gespann „ein Mensch und seine KI-Piloten“.",
+    "facts": [
+      {"b": "5", "s": "erste Seminare in fünf Tagen"},
+      {"b": "3", "s": "Mal hat ein Referent meine Frage live beantwortet"},
+      {"b": "30 Min. → Minuten", "s": "von den Worten des Referenten bis zu meiner Antwort"}
+    ],
+    "levelsH": "Drei Stufen der Teilnahme",
+    "levels": [
+      {"h": "1. Regal", "st": "funktioniert", "cls": "ok", "main": true, "p": "Das Seminar ist aufgezeichnet, transkribiert und ausgewertet. Fünf Ideen in deinen eigenen Worten und die Zeile „Was ich umgesetzt habe“ stehen als Karte in deinem Regal „Lernen“. Einen Monat später erinnerst du dich nicht an „irgendein Webinar“, sondern daran, was du in deine Arbeit mitgenommen hast."},
+      {"h": "2. Stimme in der Sitzung", "st": "live erprobt", "cls": "ok", "p": "Ein oder zwei Fragen zum Kern des Themas und deiner Arbeit, in der Sprache des Seminars. Der Referent beantwortet eine Frage, die für die ganze Gruppe interessant ist, und davon haben Veranstalter wie Teilnehmende etwas."},
+      {"h": "3. Souffleur", "st": "im Aufbau", "cls": "test", "p": "Die Übersetzung folgt dem Referenten Zeile für Zeile, und die Frage entsteht, solange er noch beim Thema ist. Das Ziel: so schnell reagieren wie Muttersprachler und über den Referenten und das, was er sagt, gleich gut im Bild sein wie sie."}
+    ],
+    "pathH": "Wie sich das Tempo verändert hat",
+    "path": [
+      {"b": "~30 Minuten", "s": "Die ersten Sitzungen. Aufzeichnung in Teilen von zwanzig Minuten, Transkription, Übersetzung, Frage. Bis dahin war der Referent schon bei einem anderen Thema."},
+      {"b": "Minuten", "s": "In der fünften Sitzung schaltete der Veranstalter Untertitel ein, und das Tempo stieg: Der Pilot liest sie vom Bildschirm und übersetzt sofort. Gibt es keine Untertitel, kann man vorab darum bitten."},
+      {"b": "Sekunden", "s": "Der nächste Schritt. Der Souffleur: Übersetzung Zeile für Zeile und eine Frage per Knopfdruck. Wir bauen ihn und messen in echten Sitzungen."}
+    ],
+    "stagesH": "Sechs Etappen eines Seminars",
+    "stages": [
+      {"h": "1. Am Vortag", "li": ["Anmeldung bestätigt, E-Mail des Veranstalters gefunden, Termin im Kalender.", "Eine Seite über den Referenten: Rolle, Unternehmen, aktuelle Beiträge, Website, Bücher.", "Zwei oder drei Fragen in der Sprache des Seminars, mit Übersetzung. Jede knüpft an einen Programmpunkt und an deine Arbeit an.", "Glossar zum Thema: 15–30 Begriffe, die sicher fallen werden.", "Hat die Sitzung keine Untertitel, kann man den Veranstalter vorab darum bitten."]},
+      {"h": "2. Aufzeichnung", "li": ["Die Aufzeichnung läuft die ganze Sitzung und bleibt im persönlichen Archiv. Daraus entsteht später das Regal.", "Zehn Sekunden nach dem Start eine Prüfung: Die Aufnahme läuft, die Datei wächst.", "Du bekommst in jedem Fall eine Nachricht: Aufnahme läuft oder läuft nicht."]},
+      {"h": "3. Verstehen in Echtzeit", "li": ["Die Untertitel der Sitzung und ihre Übersetzung, während gesprochen wird.", "Ein Bild jeder neuen Folie und ihr Text.", "Der Seminar-Chat: Wichtiges wird sofort übersetzt.", "Eine kurze Zusammenfassung in deiner Sprache: worum es geht und was davon dich betrifft."]},
+      {"h": "4. Teilnahme", "li": ["In der ersten Hälfte hören wir zu.", "Ab der Mitte ein oder zwei Fragen zum Gesagten, von der praktischen Seite deiner Arbeit her.", "In den Chat geht nur, wozu du „Ja“ gesagt hast.", "Nach der Antwort des Referenten eine Zeile: Dank und Fazit.", "Am Ende ein Dank an Referent, Moderation und Veranstalter in einer Nachricht."]},
+      {"h": "5. Menschen", "li": ["Wer die Reihe leitet, wer spricht, was im Chat gefragt wird.", "Wessen Fragen und Themen deiner Arbeit nahe sind: Diese Menschen lohnt es sich persönlich kennenzulernen.", "Wir schreiben einzeln und mit Anlass. Keine Rundmails an die Teilnehmerliste.", "Referenten einer Reihe kennen einander. Mit jedem sprechen wir in eigenen Worten."]},
+      {"h": "6. Regal und Kontakt", "li": ["Auswertung in deiner Sprache: 10–12 Gedanken und was wir davon in die Arbeit mitnehmen.", "Karte im Regal: fünf Ideen in eigenen Worten, deine Frage, die Antwort des Referenten und „Was ich umsetze“.", "LinkedIn des Referenten: folgen und seinen Beitrag zum Seminar kommentieren.", "Feedback-Bogen des Veranstalters: ehrliche Bewertungen und ein konkretes Detail der Sitzung.", "Bleibt der Referent still, haken wir nicht nach."]}
+    ],
+    "toolsH": "Womit wir aufzeichnen und übersetzen",
+    "toolsHead": ["Methode", "Was sie bringt", "Bis zum Sinn", "Stand"],
+    "tools": [
+      ["Aufzeichnung am Computer und Transkription in Teilen", "Der vollständige Text der Sitzung für das Regal", "Etwa 30 Minuten", "funktioniert", "ok"],
+      ["Untertitel, die der Veranstalter einschaltet", "Text folgt dem Referenten, der Pilot übersetzt", "Minuten", "funktioniert", "ok"],
+      ["Untertitel mit Übersetzung im Browser", "Übersetzung auf dem Bildschirm, kostenlos", "Sekunden, wird gemessen", "im Test", "test"],
+      ["Übersetzer-App, die den Ton des Computers mithört", "Übersetzung ohne Bitten an den Veranstalter", "Sekunden, wird gemessen", "im Test", "test"],
+      ["Unser eigener Souffleur", "Übersetzung und fertige Frage, abgestimmt auf den Referenten und deine Arbeit", "Sekunden, wird gemessen", "im Aufbau", "test"],
+      ["Aufzeichner in der Cloud", "Aufzeichnung, wenn du nicht in der Sitzung bist", "Nach der Sitzung", "mit Wissen des Veranstalters", "wait"]
+    ],
+    "whoH": "Wer macht was",
+    "who": [
+      {"h": "KI-Piloten", "li": ["Seite über den Referenten und Fragen", "Aufzeichnung und ihre Prüfung", "Übersetzung und Zusammenfassungen", "Übersetzung des Chats", "Auswertung und Kartenentwurf"]},
+      {"h": "Der Mensch", "li": ["Einwahl in die Sitzung und Zugangscodes", "Ein „Ja“ zu jedem Text", "Absenden im Chat und auf LinkedIn", "Eigene Worte auf der Karte", "Die Entscheidung, wen man kennenlernt"]}
+    ],
+    "rulesH": "Regeln, die wir nicht brechen",
+    "rulesSum": "Ehrlichkeit und fremde Daten",
+    "rules": ["Aufzeichnung und Transkript bleiben im persönlichen Archiv. Im Regal stehen nur eigene Gedanken und der Link zur Quelle.", "Um Untertitel bitten wir den Veranstalter offen und vorab.", "Ein Aufzeichner in der Cloud ist für alle Teilnehmenden sichtbar. Wir nutzen ihn nur mit Wissen des Veranstalters.", "Übersetzung kann sich irren; deshalb geht nur von einem Menschen geprüfter Text in den Chat."],
+    "btnLite": "Kurzfassung"
+  },
+  "goal": {
+    "h": "Das Ziel: dein eigenes Regal „Lernen“",
+    "p": "Ein Seminar, das nicht im Regal gelandet ist, ist nach einem Monat vergessen. Leg dein Regal in der SeedWave-Biblioteca an und stell nach jeder Sitzung eine Karte hinein. Meine stehen im Bereich „Lernen“, und nach jedem Seminar werden es mehr.",
+    "btnOwn": "Mein Regal anlegen",
+    "btnMine": "Meines ansehen"
+  },
+  "share": {
+    "text": "Diálogo: wie du an einem Online-Seminar in einer anderen Sprache teilnimmst und die Erkenntnisse in deinem Regal behältst.",
+    "copied": "Link kopiert ✓",
+    "fail": "Kopieren nicht möglich"
+  }
+}

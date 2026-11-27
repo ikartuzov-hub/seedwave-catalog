@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Diálogo · стандарт значков SeedWave v2 (17.11.2026): буква + единая волна -->
+  <rect width="100" height="100" rx="22" fill="#E5F4EE"/>
+  <g transform="translate(0.00 0.00) scale(1.0000)"><path d="M50 20.5 L75 66.5 L25 66.5 Z" fill="none" stroke="#0C7F5C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <path d="M20 80 Q30 74 40 80 Q50 86 60 80 Q70 74 80 80" fill="none" stroke="#0C7F5C" stroke-width="7" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="{{lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{metaDesc}}">
+<link rel="canonical" href="{{url}}">
+{{hreflang}}
+<link rel="icon" type="image/svg+xml" href="/dialogo/dialogo-icon.svg">
+<link rel="apple-touch-icon" href="/dialogo/apple-touch-icon.png">
+<link rel="manifest" href="/dialogo/m/dialogo-{{lang}}.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="{{brand}}">
+<meta name="theme-color" content="#0C7F5C">
+<meta property="og:title" content="{{brand}} — {{slogan}}">
+<meta property="og:description" content="{{metaDesc}}">
+<meta property="og:image" content="https://seedwave.pt/dialogo/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="{{url}}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="{{locale}}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;family=Onest:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/dialogo/engine.css?v={{v}}">
+<script>try{var t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('dialogo.theme');if(t)document.documentElement.dataset.theme=(t==='night'||t==='dark')?'dark':'light'}catch(e){}</script>
+<script type="application/ld+json">{{jsonld}}</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="brand" href="{{url}}"><img src="/dialogo/dialogo-icon.svg" alt="{{brand}}" width="40" height="40"><span>{{brand}}</span></a>
+  <div class="tools">
+    <button class="round" id="langBtn" type="button" aria-label="{{langLabel}}" aria-expanded="false">{{LANG}}</button>
+    <button class="round" id="themeBtn" type="button" aria-label="{{themeLabel}}">☾</button>
+    <nav class="menu" id="langMenu">{{langMenu}}</nav>
+  </div>
+</header>
+
+<main>
+<div class="status"><span class="dot"></span><b>{{status.b}}</b> {{status.t}}</div>
+
+<h1>{{h1}}</h1>
+<p class="lead">{{lead}}</p>
+
+<section class="live" aria-label="{{live.aria}}">
+  <div class="live-top"><span><span class="dot"></span>{{live.top}}</span><span class="timer" id="timer">00:00</span></div>
+  <div class="line src"><small>{{live.hear}}</small><span id="lsrc">{{live.f0src}}</span></div>
+  <div class="line tr"><small>{{live.read}}</small><span id="ltr">{{live.f0tr}}</span></div>
+  <div class="chat"><b>{{live.me}}</b> <span id="lchat">{{live.f0chat}}</span></div>
+</section>
+<p class="caption">{{live.caption}}</p>
+
+<div class="tabs" role="tablist">
+  <button class="tab" role="tab" id="t-lite" aria-controls="lite" aria-selected="true" type="button">{{tabs.lite}}</button>
+  <button class="tab" role="tab" id="t-full" aria-controls="full" aria-selected="false" type="button">{{tabs.full}}</button>
+</div>
+
+<section class="panel" id="lite" role="tabpanel" aria-labelledby="t-lite">
+  <h2>{{lite.h2a}}</h2>
+  <div class="levels">{{liteNeeds}}</div>
+
+  <h2>{{lite.h2b}}</h2>
+  <p>{{lite.seeP}}</p>
+  <div class="row"><a class="btn" data-ev="dialogo_shelf" href="{{shelfMine}}" target="_blank" rel="noopener">{{lite.seeBtn}}</a></div>
+
+  <h2>{{lite.h2c}}</h2>
+  <p>{{lite.wantP}}</p>
+  <div class="card">
+    <h3>{{lite.langQ}}</h3>
+    <div class="who" id="langs"><button class="chip me" type="button" data-l="pt">Português</button><button class="chip" type="button" data-l="en">English</button><button class="chip" type="button" data-l="de">Deutsch</button><button class="chip" type="button" data-l="es">Español</button><button class="chip" type="button" data-l="other">{{lite.other}}</button></div>
+    <div class="row last"><a class="btn" id="go" href="{{interest}}" target="_blank" rel="noopener">{{lite.btnInterest}}</a><button class="btn ghost share" type="button">{{lite.btnShare}}</button></div>
+  </div>
+  <p class="caption">{{lite.moreHint}} <a href="#full">{{lite.moreLink}}</a>.</p>
+</section>
+
+<section class="panel" id="full" role="tabpanel" aria-labelledby="t-full" hidden>
+  <h2>{{full.storyH}}</h2>
+  <p>{{full.storyP}}</p>
+  <div class="facts">{{facts}}</div>
+
+  <h2>{{full.levelsH}}</h2>
+  <div class="levels">{{levels}}</div>
+
+  <h2>{{full.pathH}}</h2>
+  <div class="path">{{path}}</div>
+
+  <h2>{{full.stagesH}}</h2>
+  {{stages}}
+
+  <h2>{{full.toolsH}}</h2>
+  <div class="tbl"><table>{{tools}}</table></div>
+
+  <h2>{{full.whoH}}</h2>
+  <div class="two">{{who}}</div>
+
+  <h2>{{full.rulesH}}</h2>
+  {{rules}}
+  <div class="row">
+    <a class="btn" href="#lite">{{full.btnLite}}</a>
+    <button class="btn ghost share" type="button">{{lite.btnShare}}</button>
+  </div>
+</section>
+
+<div class="more">
+  <h2>{{goal.h}}</h2>
+  <p>{{goal.p}}</p>
+  <div class="row last">
+    <a class="btn" data-ev="dialogo_own_shelf" href="{{shelfOwn}}" target="_blank" rel="noopener">{{goal.btnOwn}}</a>
+    <a class="btn ghost" data-ev="dialogo_shelf" href="{{shelfMine}}" target="_blank" rel="noopener">{{goal.btnMine}}</a>
+  </div>
+</div>
+</main>
+
+<footer class="sw">© <span id="year">2026</span> <a href="https://seedwave.pt/hub/?lang={{lang}}">SeedWave</a> · <a data-mad href="https://seedwave.pt/madeira/?lang={{lang}}&amp;utm_source=dialogo&amp;utm_medium=footer">Madeira</a> · <a href="https://www.linkedin.com/in/igor-kartuzov/" target="_blank" rel="noopener">Igor Kartuzov</a></footer>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script id="dg" type="application/json">{{dgjson}}</script>
+<script defer src="/dialogo/engine.js?v={{v}}"></script>
+<script defer src="https://seedwave.pt/nav/sw.js"></script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8a509477310442638b80e4b22319b89b"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

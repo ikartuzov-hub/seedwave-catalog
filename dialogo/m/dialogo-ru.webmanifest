@@ -1,0 +1,30 @@
+{
+  "id": "/dialogo/ru/",
+  "name": "Diálogo",
+  "short_name": "Diálogo",
+  "description": "Интересный онлайн-семинар идёт на языке, которого ты ещё не знаешь? Diálogo записывает эфир, переводит и оставляет выводы на твоей полке. В разработке: изучаем спрос.",
+  "lang": "ru",
+  "start_url": "/dialogo/ru/",
+  "scope": "/dialogo/",
+  "display": "standalone",
+  "background_color": "#F4F7F8",
+  "theme_color": "#0C7F5C",
+  "icons": [
+    {
+      "src": "/dialogo/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/dialogo/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/dialogo/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -14,3 +14,9 @@ Personal and public bookshelves: books, films, YouTube and learning — and from
 - [What Bill Gates reads — books with sources](https://seedwave.pt/biblioteca/p/bill-gates/en/): each book with the source where he named it
 - [What Lex Fridman reads — books with sources](https://seedwave.pt/biblioteca/p/lex-fridman/en/): each book with the source where he named it
 <!-- biblioteca:end -->
+
+## Diálogo
+
+Taking part in an online seminar held in a language you don't speak yet: recording, translation, takeaways on your own shelf. In development — gauging demand. 5 languages (pt, en, ru, es, de).
+
+- [Diálogo](https://seedwave.pt/dialogo/en/): what a participant gets, how one seminar runs in six stages, and how to leave your interest

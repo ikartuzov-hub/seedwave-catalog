@@ -842,6 +842,23 @@
           "caption": "25 seconds, clear without words. Animation created with AI."
         }
       }
+    },
+    {
+      "id": "dialogo",
+      "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Diálogo\"><title>Diálogo</title><rect width=\"100\" height=\"100\" rx=\"22\" fill=\"#E5F4EE\"/><path d=\"M50 20.5 L75 66.5 L25 66.5 Z\" fill=\"none\" stroke=\"#0C7F5C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M20 80 Q30 74 40 80 Q50 86 60 80 Q70 74 80 80\" fill=\"none\" stroke=\"#0C7F5C\" stroke-width=\"7\" stroke-linecap=\"round\"/></svg>",
+      "category": "Education / Languages",
+      "name": "Diálogo — an online seminar in another language, where you take part",
+      "hook": "There is an online seminar you want to attend, but it is in a language you don't speak yet. Diálogo records the session, translates it and leaves the takeaways as a card on your shelf.",
+      "description": "A project in development: we are gauging demand. For now Diálogo runs on the author's own seminars, and the results are on his shelf in the Biblioteca, in the “Learning” section. The page has two versions: Lite — what a participant gets — and Full — how it works: six stages of a seminar, what we record and translate with, what the person does and what their AI pilots do. You can leave your interest in one tap. Five languages.",
+      "sectors": [
+        "Education",
+        "Languages",
+        "AI pilots"
+      ],
+      "stage": "demand",
+      "investment": "",
+      "lookingFor": "People who learn at online seminars in another language · Organisers of online seminars",
+      "demoLink": "https://seedwave.pt/dialogo/en/"
     }
   ]
 }

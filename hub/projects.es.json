@@ -842,6 +842,23 @@
           "caption": "25 segundos, se entiende sin palabras. Animación creada con IA."
         }
       }
+    },
+    {
+      "id": "dialogo",
+      "icon": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Diálogo\"><title>Diálogo</title><rect width=\"100\" height=\"100\" rx=\"22\" fill=\"#E5F4EE\"/><path d=\"M50 20.5 L75 66.5 L25 66.5 Z\" fill=\"none\" stroke=\"#0C7F5C\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M20 80 Q30 74 40 80 Q50 86 60 80 Q70 74 80 80\" fill=\"none\" stroke=\"#0C7F5C\" stroke-width=\"7\" stroke-linecap=\"round\"/></svg>",
+      "category": "Educación / Idiomas",
+      "name": "Diálogo — un seminario online en otro idioma, donde participas",
+      "hook": "Te interesa un seminario online, pero es en un idioma que todavía no hablas. Diálogo graba la sesión, la traduce y deja las conclusiones en una ficha en tu estantería.",
+      "description": "Proyecto en desarrollo: estamos estudiando la demanda. Por ahora Diálogo funciona en los seminarios del autor, y los resultados están en su estantería de la Biblioteca, sección «Aprendizaje». La página tiene dos versiones: Lite — qué recibe el participante — y Completa — cómo funciona: seis etapas de un seminario, con qué se graba y se traduce, qué hace la persona y qué hacen sus pilotos de IA. Puedes dejar tu interés con un toque. Cinco idiomas.",
+      "sectors": [
+        "Educación",
+        "Idiomas",
+        "Pilotos de IA"
+      ],
+      "stage": "demand",
+      "investment": "",
+      "lookingFor": "Quienes aprenden en seminarios online en otro idioma · Organizadores de seminarios online",
+      "demoLink": "https://seedwave.pt/dialogo/es/"
     }
   ]
 }

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Diálogo — um seminário online noutra língua, onde participa</title>
+<meta name="description" content="Há um seminário online que lhe interessa, mas numa língua que ainda não domina? O Diálogo grava a sessão, traduz e deixa as conclusões na sua estante. Em desenvolvimento: estamos a estudar a procura.">
+<link rel="canonical" href="https://seedwave.pt/dialogo/">
+<link rel="alternate" hreflang="pt" href="https://seedwave.pt/dialogo/">
+<link rel="alternate" hreflang="en" href="https://seedwave.pt/dialogo/en/">
+<link rel="alternate" hreflang="ru" href="https://seedwave.pt/dialogo/ru/">
+<link rel="alternate" hreflang="es" href="https://seedwave.pt/dialogo/es/">
+<link rel="alternate" hreflang="de" href="https://seedwave.pt/dialogo/de/">
+<link rel="alternate" hreflang="x-default" href="https://seedwave.pt/dialogo/">
+<link rel="icon" type="image/svg+xml" href="/dialogo/dialogo-icon.svg">
+<link rel="apple-touch-icon" href="/dialogo/apple-touch-icon.png">
+<link rel="manifest" href="/dialogo/m/dialogo-pt.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Diálogo">
+<meta name="theme-color" content="#0C7F5C">
+<meta property="og:title" content="Diálogo — Um seminário online noutra língua, onde participa">
+<meta property="og:description" content="Há um seminário online que lhe interessa, mas numa língua que ainda não domina? O Diálogo grava a sessão, traduz e deixa as conclusões na sua estante. Em desenvolvimento: estamos a estudar a procura.">
+<meta property="og:image" content="https://seedwave.pt/dialogo/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://seedwave.pt/dialogo/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_PT">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;family=Onest:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/dialogo/engine.css?v=202611272031">
+<script>try{var t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('dialogo.theme');if(t)document.documentElement.dataset.theme=(t==='night'||t==='dark')?'dark':'light'}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Diálogo — um seminário online noutra língua, onde participa", "url": "https://seedwave.pt/dialogo/", "inLanguage": "pt", "description": "Há um seminário online que lhe interessa, mas numa língua que ainda não domina? O Diálogo grava a sessão, traduz e deixa as conclusões na sua estante. Em desenvolvimento: estamos a estudar a procura.", "author": {"@type": "Person", "name": "Igor Kartuzov", "url": "https://www.linkedin.com/in/igor-kartuzov/"}, "publisher": {"@type": "Organization", "name": "SeedWave", "url": "https://seedwave.pt/"}}</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="brand" href="https://seedwave.pt/dialogo/"><img src="/dialogo/dialogo-icon.svg" alt="Diálogo" width="40" height="40"><span>Diálogo</span></a>
+  <div class="tools">
+    <button class="round" id="langBtn" type="button" aria-label="Idioma" aria-expanded="false">PT</button>
+    <button class="round" id="themeBtn" type="button" aria-label="Mudar o tema">☾</button>
+    <nav class="menu" id="langMenu"><a href="/dialogo/" hreflang="pt" aria-current="true">PT</a><a href="/dialogo/en/" hreflang="en">EN</a><a href="/dialogo/ru/" hreflang="ru">RU</a><a href="/dialogo/es/" hreflang="es">ES</a><a href="/dialogo/de/" hreflang="de">DE</a></nav>
+  </div>
+</header>
+
+<main>
+<div class="status"><span class="dot"></span><b>Em desenvolvimento · a estudar a procura.</b> Por agora, o Diálogo funciona nos meus seminários. Os resultados estão na minha estante e pode deixar o seu interesse mais abaixo.</div>
+
+<h1>Um seminário online noutra língua, onde é participante e não apenas ouvinte</h1>
+<p class="lead">Há um seminário online que lhe interessa, mas é em inglês, alemão ou espanhol, e ainda não fala essa língua. O Diálogo grava a sessão, traduz e deixa-lhe as conclusões. E o participante é você. É esta a ideia, e é assim que já decorrem os meus seminários.</p>
+
+<section class="live" aria-label="Como é durante a sessão">
+  <div class="live-top"><span><span class="dot"></span>Em direto · o orador fala em inglês</span><span class="timer" id="timer">00:00</span></div>
+  <div class="line src"><small>Ouço</small><span id="lsrc">Today we are not talking about followers, we are talking about interest.</span></div>
+  <div class="line tr"><small>Leio</small><span id="ltr">Hoje não falamos de seguidores, falamos de interesse.</span></div>
+  <div class="chat"><b>Eu no chat:</b> <span id="lchat">How do you turn profile visits into contacts?</span></div>
+</section>
+<p class="caption">Exemplo ilustrativo. A velocidade da animação é meramente indicativa.</p>
+
+<div class="tabs" role="tablist">
+  <button class="tab" role="tab" id="t-lite" aria-controls="lite" aria-selected="true" type="button">Lite</button>
+  <button class="tab" role="tab" id="t-full" aria-controls="full" aria-selected="false" type="button">Completa · com explicações</button>
+</div>
+
+<section class="panel" id="lite" role="tabpanel" aria-labelledby="t-lite">
+  <h2>Os slides encontra sozinho. O que faz falta é outra coisa</h2>
+  <div class="levels"><div class="level"><h3>As conclusões de uma intervenção ao vivo</h3><p>Um resumo curto na sua língua: o que disse o orador e o que vale a pena pôr em prática. Fica como um cartão na sua estante.</p></div><div class="level"><h3>Está na sessão</h3><p>O seu nome na lista de participantes. Sempre que possível, uma pergunta ao orador na língua do seminário e um agradecimento no fim.</p></div></div>
+
+  <h2>Veja o resultado</h2>
+  <p>Os meus seminários online em português estão na estante: as conclusões pelas minhas palavras e o que delas passou à prática. Depois de cada nova sessão aparece lá um cartão.</p>
+  <div class="row"><a class="btn" data-ev="dialogo_shelf" href="https://seedwave.pt/biblioteca/igor/#fLearn" target="_blank" rel="noopener">Abrir a estante</a></div>
+
+  <h2>Quer o mesmo? Deixe o seu interesse</h2>
+  <p>Um toque, sem escrever nada. Quando o Diálogo abrir para todos, será dos primeiros a saber.</p>
+  <div class="card">
+    <h3>Em que língua são os seus seminários?</h3>
+    <div class="who" id="langs"><button class="chip me" type="button" data-l="pt">Português</button><button class="chip" type="button" data-l="en">English</button><button class="chip" type="button" data-l="de">Deutsch</button><button class="chip" type="button" data-l="es">Español</button><button class="chip" type="button" data-l="other">Outra</button></div>
+    <div class="row last"><a class="btn" id="go" href="https://t.me/SeedWaveBot?start=interest_dialogo_pt" target="_blank" rel="noopener">Deixar interesse no Telegram</a><button class="btn ghost share" type="button">Enviar a um amigo</button></div>
+  </div>
+  <p class="caption">Quer saber como funciona por dentro? <a href="#full">Versão completa</a>.</p>
+</section>
+
+<section class="panel" id="full" role="tabpanel" aria-labelledby="t-full" hidden>
+  <h2>Como começou</h2>
+  <p>Vivo na Madeira e ainda não falo português suficientemente bem. Nos primeiros cinco dias participei em cinco seminários online em português: fiz perguntas ligadas ao meu trabalho, os oradores responderam, e as ideias de cada sessão estão agora em cartões na minha estante. É assim que trabalha a dupla «uma pessoa e os seus pilotos de IA».</p>
+  <div class="facts"><div class="fact"><b>5</b><span>primeiros seminários em cinco dias</span></div><div class="fact"><b>3</b><span>vezes o orador respondeu à minha pergunta em direto</span></div><div class="fact"><b>30 min → minutos</b><span>das palavras do orador à minha resposta</span></div></div>
+
+  <h2>Três níveis de participação</h2>
+  <div class="levels"><div class="level main"><div class="level-top"><h3>1. Estante</h3><span class="st ok">funciona</span></div><p>O seminário é gravado, transcrito e analisado. Cinco ideias pelas suas palavras e a linha «o que apliquei» ficam num cartão na sua estante «Aprendizagem». Um mês depois, não se lembra de «um webinar qualquer», mas do que levou para o seu trabalho.</p></div><div class="level"><div class="level-top"><h3>2. Voz na sessão</h3><span class="st ok">testado em direto</span></div><p>Uma ou duas perguntas sobre o essencial do tema e do seu trabalho, na língua do seminário. O orador responde a uma pergunta que interessa a todo o grupo, e isso é útil tanto para os organizadores como para os participantes.</p></div><div class="level"><div class="level-top"><h3>3. Ponto</h3><span class="st test">em construção</span></div><p>A tradução acompanha o orador linha a linha e a pergunta nasce enquanto ele ainda está no tema. O objetivo: reagir tão depressa como quem tem a língua como materna e conhecer o orador e o que ele diz ao mesmo nível.</p></div></div>
+
+  <h2>Como evoluiu a velocidade</h2>
+  <div class="path"><div class="hop"><b>~30 minutos</b><span>Primeiras sessões. Gravação em partes de vinte minutos, transcrição, tradução, pergunta. Nessa altura o orador já estava noutro tema.</span></div><div class="hop"><b>minutos</b><span>Na quinta sessão o organizador ativou as legendas e a velocidade aumentou: o piloto lê-as no ecrã e traduz de imediato. Se não houver legendas, é possível pedi-las com antecedência.</span></div><div class="hop"><b>segundos</b><span>O passo seguinte. O ponto: tradução linha a linha e pergunta com um botão. Estamos a construir e a medir em sessões reais.</span></div></div>
+
+  <h2>Seis etapas de um seminário</h2>
+  <details open><summary>1. Na véspera</summary><ul><li>Inscrição confirmada, e-mail do organizador encontrado, evento no calendário.</li><li>Uma página sobre o orador: função, empresa, publicações recentes, site, livros.</li><li>Duas ou três perguntas na língua do seminário, com tradução. Cada uma ligada a um ponto do programa e ao seu trabalho.</li><li>Glossário do tema: 15–30 termos que vão certamente surgir.</li><li>Se a sessão não tiver legendas, é possível pedi-las ao organizador com antecedência.</li></ul></details><details><summary>2. Gravação</summary><ul><li>A gravação decorre durante toda a sessão e fica no arquivo pessoal. É dela que nasce a estante.</li><li>Dez segundos depois de começar, uma verificação: está a gravar, o ficheiro cresce.</li><li>Recebe sempre uma mensagem: está a gravar ou não está.</li></ul></details><details><summary>3. Compreensão em direto</summary><ul><li>As legendas da sessão e a sua tradução à medida que se fala.</li><li>Uma captura de cada novo slide e o seu texto.</li><li>O chat do seminário: o importante é traduzido de imediato.</li><li>Um resumo curto na sua língua: de que se fala e o que lhe diz respeito.</li></ul></details><details><summary>4. Participação</summary><ul><li>Na primeira metade, ouvimos.</li><li>A partir do meio, uma ou duas perguntas sobre o que foi dito, do lado prático do seu trabalho.</li><li>Só vai para o chat aquilo a que disse «sim».</li><li>Depois da resposta do orador, uma linha: obrigado e a conclusão.</li><li>No fim, um agradecimento ao orador, ao moderador e ao organizador numa só mensagem.</li></ul></details><details><summary>5. Pessoas</summary><ul><li>Quem conduz a série, quem intervém, o que se pergunta no chat.</li><li>Pessoas cujas perguntas e temas estão próximos do seu trabalho: vale a pena conhecê-las pessoalmente.</li><li>Escrevemos a cada pessoa individualmente e com um motivo concreto. Nada de envios em massa à lista de participantes.</li><li>Os oradores de uma mesma série conhecem-se. Com cada um falamos por palavras próprias.</li></ul></details><details><summary>6. Estante e contacto</summary><ul><li>Análise na sua língua: 10–12 ideias e o que levamos para o trabalho.</li><li>Cartão na estante: cinco ideias pelas suas palavras, a sua pergunta, a resposta do orador e «o que estou a aplicar».</li><li>LinkedIn do orador: seguir e comentar a publicação dele sobre o seminário.</li><li>Questionário do organizador: avaliações honestas e um pormenor concreto da sessão.</li><li>Se o orador não responder, não insistimos.</li></ul></details>
+
+  <h2>Com que gravamos e traduzimos</h2>
+  <div class="tbl"><table><thead><tr><th>Método</th><th>O que dá</th><th>Até ao sentido</th><th>Estado</th></tr></thead><tbody><tr><td>Gravação no computador e transcrição por partes</td><td>O texto completo da sessão para a estante</td><td>Cerca de 30 minutos</td><td><span class="st ok">funciona</span></td></tr><tr><td>Legendas ativadas pelo organizador</td><td>O texto acompanha o orador, o piloto traduz</td><td>Minutos</td><td><span class="st ok">funciona</span></td></tr><tr><td>Legendas com tradução no navegador</td><td>Tradução no ecrã, gratuita</td><td>Segundos, vamos medir</td><td><span class="st test">em teste</span></td></tr><tr><td>Aplicação de tradução que ouve o som do computador</td><td>Tradução sem pedidos ao organizador</td><td>Segundos, vamos medir</td><td><span class="st test">em teste</span></td></tr><tr><td>O nosso ponto</td><td>Tradução e pergunta pronta, tendo em conta o orador e o seu trabalho</td><td>Segundos, vamos medir</td><td><span class="st test">em construção</span></td></tr><tr><td>Gravador na nuvem</td><td>Gravação quando não está na sessão</td><td>Depois da sessão</td><td><span class="st wait">com conhecimento do organizador</span></td></tr></tbody></table></div>
+
+  <h2>Quem faz o quê</h2>
+  <div class="two"><div class="card"><h3>Pilotos de IA</h3><ul><li>Página sobre o orador e perguntas</li><li>Gravação e a sua verificação</li><li>Tradução e resumos</li><li>Tradução do chat</li><li>Análise e rascunho do cartão</li></ul></div><div class="card"><h3>A pessoa</h3><ul><li>Entrada na sessão e códigos de acesso</li><li>«Sim» a cada texto</li><li>Envio para o chat e para o LinkedIn</li><li>As suas palavras no cartão</li><li>A decisão de quem conhecer</li></ul></div></div>
+
+  <h2>Regras que não quebramos</h2>
+  <details open><summary>Honestidade e dados de terceiros</summary><ul><li>A gravação e a transcrição ficam no arquivo pessoal. Na estante, apenas as próprias ideias e a ligação à fonte.</li><li>As legendas pedem-se ao organizador de forma aberta e com antecedência.</li><li>O gravador na nuvem é visível para todos os participantes. Só o usamos com conhecimento do organizador.</li><li>A tradução pode errar; por isso, só vai para o chat texto verificado por uma pessoa.</li></ul></details>
+  <div class="row">
+    <a class="btn" href="#lite">Versão curta</a>
+    <button class="btn ghost share" type="button">Enviar a um amigo</button>
+  </div>
+</section>
+
+<div class="more">
+  <h2>O objetivo: a sua estante «Aprendizagem»</h2>
+  <p>Um seminário que não foi para a estante está esquecido passado um mês. Crie a sua estante na Biblioteca SeedWave e ponha lá um cartão depois de cada sessão. Os meus estão na secção «Aprendizagem» e, a cada seminário, são mais.</p>
+  <div class="row last">
+    <a class="btn" data-ev="dialogo_own_shelf" href="https://seedwave.pt/biblioteca/" target="_blank" rel="noopener">Criar a minha estante</a>
+    <a class="btn ghost" data-ev="dialogo_shelf" href="https://seedwave.pt/biblioteca/igor/#fLearn" target="_blank" rel="noopener">Ver a minha</a>
+  </div>
+</div>
+</main>
+
+<footer class="sw">© <span id="year">2026</span> <a href="https://seedwave.pt/hub/?lang=pt">SeedWave</a> · <a data-mad href="https://seedwave.pt/madeira/?lang=pt&amp;utm_source=dialogo&amp;utm_medium=footer">Madeira</a> · <a href="https://www.linkedin.com/in/igor-kartuzov/" target="_blank" rel="noopener">Igor Kartuzov</a></footer>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script id="dg" type="application/json">{"lang": "pt", "url": "https://seedwave.pt/dialogo/", "shareText": "Diálogo: como participar num seminário online noutra língua e guardar as conclusões na sua estante.", "copied": "Ligação copiada ✓", "fail": "Não foi possível copiar", "frames": [{"src": "Today we are not talking about followers, we are talking about interest.", "tr": "Hoje não falamos de seguidores, falamos de interesse.", "chat": "How do you turn profile visits into contacts?"}, {"src": "We have a question in the chat.", "tr": "Temos uma pergunta no chat.", "chat": "How do you turn profile visits into contacts?"}, {"src": "Good question. Your bio should be an invitation.", "tr": "Boa pergunta. A bio deve ser um convite.", "chat": "Thank you! I will change my bio today."}]}</script>
+<script defer src="/dialogo/engine.js?v=202611272031"></script>
+<script defer src="https://seedwave.pt/nav/sw.js"></script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8a509477310442638b80e4b22319b89b"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

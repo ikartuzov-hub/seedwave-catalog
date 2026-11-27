@@ -1,0 +1,106 @@
+{
+  "title": "Diálogo — an online seminar in another language, where you take part",
+  "metaDesc": "Interested in an online seminar held in a language you don't speak yet? Diálogo records the session, translates it and leaves the takeaways on your shelf. In development: we are gauging demand.",
+  "brand": "Diálogo",
+  "slogan": "An online seminar in another language, where you take part",
+  "langLabel": "Language",
+  "themeLabel": "Switch theme",
+  "status": {
+    "b": "In development · gauging demand.",
+    "t": "For now Diálogo runs on my own seminars. The results are on my shelf, and you can leave your interest below."
+  },
+  "h1": "An online seminar in another language, where you take part instead of just listening",
+  "lead": "There is an online seminar you want to attend, but it is in Portuguese, German or Spanish and you don't speak that language yet. Diálogo records the session, translates it and leaves you the takeaways. And you are a participant in it. That is the idea, and it is how my own seminars already go.",
+  "live": {
+    "aria": "What it looks like during a session",
+    "top": "Live · the speaker talks in Portuguese",
+    "hear": "I hear",
+    "read": "I read",
+    "me": "Me in the chat:",
+    "caption": "An illustrative example. The speed of the animation is not a measurement.",
+    "frames": [
+      {"src": "Hoje não falamos de seguidores, falamos de interesse.", "tr": "Today we are not talking about followers, we are talking about interest.", "chat": "Como transformar visitas ao perfil em contactos?"},
+      {"src": "Temos uma pergunta no chat.", "tr": "We have a question in the chat.", "chat": "Como transformar visitas ao perfil em contactos?"},
+      {"src": "Boa pergunta. A bio deve ser um convite.", "tr": "Good question. Your bio should be an invitation.", "chat": "Obrigado! Vou mudar a bio hoje."}
+    ]
+  },
+  "tabs": {"lite": "Lite", "full": "Full · with explanations"},
+  "lite": {
+    "h2a": "You can find the slides yourself. You need something else",
+    "needs": [
+      {"h": "Takeaways from the live talk", "p": "A short digest in your language: what the speaker said and what is worth putting to work. It lands as a card on your shelf."},
+      {"h": "You are in the session", "p": "Your name in the list of participants. Where possible, a question to the speaker in the seminar's language and a thank-you at the end."}
+    ],
+    "h2b": "See what comes out of it",
+    "seeP": "My online seminars in Portuguese are on the shelf: takeaways in my own words and what went into practice. A new card appears after each session.",
+    "seeBtn": "Open the shelf",
+    "h2c": "Want the same? Leave your interest",
+    "wantP": "One tap, nothing to type. When Diálogo opens to everyone, you will be among the first to know.",
+    "langQ": "What language are your seminars in?",
+    "other": "Other",
+    "btnInterest": "Leave interest on Telegram",
+    "btnShare": "Send to a friend",
+    "moreHint": "Want to know how it works inside?",
+    "moreLink": "Full version"
+  },
+  "full": {
+    "storyH": "How it started",
+    "storyP": "I live in Madeira and my Portuguese is not good enough yet. In the first five days I attended five online seminars in Portuguese: I asked questions about my own work, the speakers answered, and the ideas from each session now sit as cards on my shelf. This is how the pairing of “a person and their AI pilots” works.",
+    "facts": [
+      {"b": "5", "s": "first seminars in five days"},
+      {"b": "3", "s": "times a speaker answered my question live"},
+      {"b": "30 min → minutes", "s": "from the speaker's words to my reply"}
+    ],
+    "levelsH": "Three levels of taking part",
+    "levels": [
+      {"h": "1. Shelf", "st": "works", "cls": "ok", "main": true, "p": "The seminar is recorded, transcribed and digested. Five ideas in your own words and a line on “what I applied” sit as a card on your “Learning” shelf. A month later you remember not “some webinar” but exactly what you took into your work."},
+      {"h": "2. A voice in the session", "st": "tested live", "cls": "ok", "p": "One or two questions on the substance of the topic and of your own work, in the seminar's language. The speaker answers a question that matters to the whole group, and that is useful to organisers and participants alike."},
+      {"h": "3. Prompter", "st": "being built", "cls": "test", "p": "The translation follows the speaker line by line, and the question takes shape while they are still on the topic. The aim: to react as fast as native speakers and to know the speaker and what they say on a par with them."}
+    ],
+    "pathH": "How the speed changed",
+    "path": [
+      {"b": "~30 minutes", "s": "The first sessions. Recording in twenty-minute parts, transcription, translation, question. By then the speaker had moved on to another topic."},
+      {"b": "minutes", "s": "At the fifth session the organiser turned on captions and the speed went up: the pilot reads them off the screen and translates at once. If there are no captions, you can ask for them in advance."},
+      {"b": "seconds", "s": "The next step. The prompter: line-by-line translation and a question at the press of a button. We are building it and measuring on live sessions."}
+    ],
+    "stagesH": "Six stages of one seminar",
+    "stages": [
+      {"h": "1. The day before", "li": ["Registration confirmed, the organiser's email found, the event in the calendar.", "A one-page brief on the speaker: role, company, recent posts, website, books.", "Two or three questions in the seminar's language, with translation. Each tied to an agenda item and to your work.", "A glossary of the topic: 15–30 terms that are sure to come up.", "If the session has no captions, you can ask the organiser for them in advance."]},
+      {"h": "2. Recording", "li": ["The recording runs for the whole session and stays in a personal archive. The shelf is built from it afterwards.", "Ten seconds after the start, a check: it is recording and the file is growing.", "You get a message either way: recording or not recording."]},
+      {"h": "3. Live understanding", "li": ["The session's captions and their translation as the talk goes on.", "A snapshot of every new slide and its text.", "The seminar chat: what matters is translated straight away.", "A short summary in your language: what is being discussed and what concerns you."]},
+      {"h": "4. Taking part", "li": ["We listen through the first half.", "From the middle, one or two questions on what was said, from the practical side of your work.", "Only what you said “yes” to goes into the chat.", "After the speaker's answer, one line: thanks and the takeaway.", "At the end, a thank-you to the speaker, the moderator and the organiser in one message."]},
+      {"h": "5. People", "li": ["Who runs the series, who speaks, what is asked in the chat.", "Whose questions and topics are close to your work: these are people worth meeting in person.", "We write to people one at a time and for a reason. No mailings to the participant list.", "Speakers in one series know each other. We speak to each in our own words."]},
+      {"h": "6. Shelf and contact", "li": ["A digest in your language: 10–12 thoughts and what we take into work.", "A card on the shelf: five ideas in your own words, your question, the speaker's answer and “what I am applying”.", "The speaker's LinkedIn: a follow and a comment under their post about the seminar.", "The organiser's feedback form: honest ratings and one specific detail of the session.", "If the speaker stays silent, we do not push."]}
+    ],
+    "toolsH": "What we record and translate with",
+    "toolsHead": ["Method", "What it gives", "Time to meaning", "Status"],
+    "tools": [
+      ["Recording on the computer and transcription in parts", "The full text of the session for the shelf", "About 30 minutes", "works", "ok"],
+      ["Captions turned on by the organiser", "Text following the speaker, the pilot translates", "Minutes", "works", "ok"],
+      ["Captions with translation in the browser", "Translation on screen, free", "Seconds, to be measured", "testing", "test"],
+      ["A translator app that listens to the computer's sound", "Translation without asking the organiser for anything", "Seconds, to be measured", "testing", "test"],
+      ["Our own prompter", "Translation and a ready question that takes the speaker and your work into account", "Seconds, to be measured", "being built", "test"],
+      ["Cloud recorder", "A recording when you are not in the session", "After the session", "with the organiser's knowledge", "wait"]
+    ],
+    "whoH": "Who does what",
+    "who": [
+      {"h": "AI pilots", "li": ["Speaker brief and questions", "Recording and checking it", "Translation and summaries", "Chat translation", "Digest and draft card"]},
+      {"h": "The person", "li": ["Joining the session and access codes", "A “yes” to every text", "Sending to the chat and to LinkedIn", "Their own words in the card", "Deciding whom to meet"]}
+    ],
+    "rulesH": "Rules we do not break",
+    "rulesSum": "Honesty and other people's data",
+    "rules": ["The recording and the transcript stay in a personal archive. The shelf holds only your own thoughts and a link to the source.", "We ask the organiser for captions openly and in advance.", "A cloud recorder is visible to all participants. We use it only with the organiser's knowledge.", "Translation can be wrong, so only text checked by a person goes into the chat."],
+    "btnLite": "Short version"
+  },
+  "goal": {
+    "h": "The goal: your own “Learning” shelf",
+    "p": "A seminar that did not make it to the shelf is forgotten within a month. Start your shelf in the SeedWave Biblioteca and add a card after every session. Mine are in the “Learning” section, and there are more after each seminar.",
+    "btnOwn": "Start my shelf",
+    "btnMine": "See mine"
+  },
+  "share": {
+    "text": "Diálogo: how to take part in an online seminar in another language and keep the takeaways on your shelf.",
+    "copied": "Link copied ✓",
+    "fail": "Could not copy"
+  }
+}

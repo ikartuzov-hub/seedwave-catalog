@@ -1,0 +1,106 @@
+{
+  "title": "Diálogo — um seminário online noutra língua, onde participa",
+  "metaDesc": "Há um seminário online que lhe interessa, mas numa língua que ainda não domina? O Diálogo grava a sessão, traduz e deixa as conclusões na sua estante. Em desenvolvimento: estamos a estudar a procura.",
+  "brand": "Diálogo",
+  "slogan": "Um seminário online noutra língua, onde participa",
+  "langLabel": "Idioma",
+  "themeLabel": "Mudar o tema",
+  "status": {
+    "b": "Em desenvolvimento · a estudar a procura.",
+    "t": "Por agora, o Diálogo funciona nos meus seminários. Os resultados estão na minha estante e pode deixar o seu interesse mais abaixo."
+  },
+  "h1": "Um seminário online noutra língua, onde é participante e não apenas ouvinte",
+  "lead": "Há um seminário online que lhe interessa, mas é em inglês, alemão ou espanhol, e ainda não fala essa língua. O Diálogo grava a sessão, traduz e deixa-lhe as conclusões. E o participante é você. É esta a ideia, e é assim que já decorrem os meus seminários.",
+  "live": {
+    "aria": "Como é durante a sessão",
+    "top": "Em direto · o orador fala em inglês",
+    "hear": "Ouço",
+    "read": "Leio",
+    "me": "Eu no chat:",
+    "caption": "Exemplo ilustrativo. A velocidade da animação é meramente indicativa.",
+    "frames": [
+      {"src": "Today we are not talking about followers, we are talking about interest.", "tr": "Hoje não falamos de seguidores, falamos de interesse.", "chat": "How do you turn profile visits into contacts?"},
+      {"src": "We have a question in the chat.", "tr": "Temos uma pergunta no chat.", "chat": "How do you turn profile visits into contacts?"},
+      {"src": "Good question. Your bio should be an invitation.", "tr": "Boa pergunta. A bio deve ser um convite.", "chat": "Thank you! I will change my bio today."}
+    ]
+  },
+  "tabs": {"lite": "Lite", "full": "Completa · com explicações"},
+  "lite": {
+    "h2a": "Os slides encontra sozinho. O que faz falta é outra coisa",
+    "needs": [
+      {"h": "As conclusões de uma intervenção ao vivo", "p": "Um resumo curto na sua língua: o que disse o orador e o que vale a pena pôr em prática. Fica como um cartão na sua estante."},
+      {"h": "Está na sessão", "p": "O seu nome na lista de participantes. Sempre que possível, uma pergunta ao orador na língua do seminário e um agradecimento no fim."}
+    ],
+    "h2b": "Veja o resultado",
+    "seeP": "Os meus seminários online em português estão na estante: as conclusões pelas minhas palavras e o que delas passou à prática. Depois de cada nova sessão aparece lá um cartão.",
+    "seeBtn": "Abrir a estante",
+    "h2c": "Quer o mesmo? Deixe o seu interesse",
+    "wantP": "Um toque, sem escrever nada. Quando o Diálogo abrir para todos, será dos primeiros a saber.",
+    "langQ": "Em que língua são os seus seminários?",
+    "other": "Outra",
+    "btnInterest": "Deixar interesse no Telegram",
+    "btnShare": "Enviar a um amigo",
+    "moreHint": "Quer saber como funciona por dentro?",
+    "moreLink": "Versão completa"
+  },
+  "full": {
+    "storyH": "Como começou",
+    "storyP": "Vivo na Madeira e ainda não falo português suficientemente bem. Nos primeiros cinco dias participei em cinco seminários online em português: fiz perguntas ligadas ao meu trabalho, os oradores responderam, e as ideias de cada sessão estão agora em cartões na minha estante. É assim que trabalha a dupla «uma pessoa e os seus pilotos de IA».",
+    "facts": [
+      {"b": "5", "s": "primeiros seminários em cinco dias"},
+      {"b": "3", "s": "vezes o orador respondeu à minha pergunta em direto"},
+      {"b": "30 min → minutos", "s": "das palavras do orador à minha resposta"}
+    ],
+    "levelsH": "Três níveis de participação",
+    "levels": [
+      {"h": "1. Estante", "st": "funciona", "cls": "ok", "main": true, "p": "O seminário é gravado, transcrito e analisado. Cinco ideias pelas suas palavras e a linha «o que apliquei» ficam num cartão na sua estante «Aprendizagem». Um mês depois, não se lembra de «um webinar qualquer», mas do que levou para o seu trabalho."},
+      {"h": "2. Voz na sessão", "st": "testado em direto", "cls": "ok", "p": "Uma ou duas perguntas sobre o essencial do tema e do seu trabalho, na língua do seminário. O orador responde a uma pergunta que interessa a todo o grupo, e isso é útil tanto para os organizadores como para os participantes."},
+      {"h": "3. Ponto", "st": "em construção", "cls": "test", "p": "A tradução acompanha o orador linha a linha e a pergunta nasce enquanto ele ainda está no tema. O objetivo: reagir tão depressa como quem tem a língua como materna e conhecer o orador e o que ele diz ao mesmo nível."}
+    ],
+    "pathH": "Como evoluiu a velocidade",
+    "path": [
+      {"b": "~30 minutos", "s": "Primeiras sessões. Gravação em partes de vinte minutos, transcrição, tradução, pergunta. Nessa altura o orador já estava noutro tema."},
+      {"b": "minutos", "s": "Na quinta sessão o organizador ativou as legendas e a velocidade aumentou: o piloto lê-as no ecrã e traduz de imediato. Se não houver legendas, é possível pedi-las com antecedência."},
+      {"b": "segundos", "s": "O passo seguinte. O ponto: tradução linha a linha e pergunta com um botão. Estamos a construir e a medir em sessões reais."}
+    ],
+    "stagesH": "Seis etapas de um seminário",
+    "stages": [
+      {"h": "1. Na véspera", "li": ["Inscrição confirmada, e-mail do organizador encontrado, evento no calendário.", "Uma página sobre o orador: função, empresa, publicações recentes, site, livros.", "Duas ou três perguntas na língua do seminário, com tradução. Cada uma ligada a um ponto do programa e ao seu trabalho.", "Glossário do tema: 15–30 termos que vão certamente surgir.", "Se a sessão não tiver legendas, é possível pedi-las ao organizador com antecedência."]},
+      {"h": "2. Gravação", "li": ["A gravação decorre durante toda a sessão e fica no arquivo pessoal. É dela que nasce a estante.", "Dez segundos depois de começar, uma verificação: está a gravar, o ficheiro cresce.", "Recebe sempre uma mensagem: está a gravar ou não está."]},
+      {"h": "3. Compreensão em direto", "li": ["As legendas da sessão e a sua tradução à medida que se fala.", "Uma captura de cada novo slide e o seu texto.", "O chat do seminário: o importante é traduzido de imediato.", "Um resumo curto na sua língua: de que se fala e o que lhe diz respeito."]},
+      {"h": "4. Participação", "li": ["Na primeira metade, ouvimos.", "A partir do meio, uma ou duas perguntas sobre o que foi dito, do lado prático do seu trabalho.", "Só vai para o chat aquilo a que disse «sim».", "Depois da resposta do orador, uma linha: obrigado e a conclusão.", "No fim, um agradecimento ao orador, ao moderador e ao organizador numa só mensagem."]},
+      {"h": "5. Pessoas", "li": ["Quem conduz a série, quem intervém, o que se pergunta no chat.", "Pessoas cujas perguntas e temas estão próximos do seu trabalho: vale a pena conhecê-las pessoalmente.", "Escrevemos a cada pessoa individualmente e com um motivo concreto. Nada de envios em massa à lista de participantes.", "Os oradores de uma mesma série conhecem-se. Com cada um falamos por palavras próprias."]},
+      {"h": "6. Estante e contacto", "li": ["Análise na sua língua: 10–12 ideias e o que levamos para o trabalho.", "Cartão na estante: cinco ideias pelas suas palavras, a sua pergunta, a resposta do orador e «o que estou a aplicar».", "LinkedIn do orador: seguir e comentar a publicação dele sobre o seminário.", "Questionário do organizador: avaliações honestas e um pormenor concreto da sessão.", "Se o orador não responder, não insistimos."]}
+    ],
+    "toolsH": "Com que gravamos e traduzimos",
+    "toolsHead": ["Método", "O que dá", "Até ao sentido", "Estado"],
+    "tools": [
+      ["Gravação no computador e transcrição por partes", "O texto completo da sessão para a estante", "Cerca de 30 minutos", "funciona", "ok"],
+      ["Legendas ativadas pelo organizador", "O texto acompanha o orador, o piloto traduz", "Minutos", "funciona", "ok"],
+      ["Legendas com tradução no navegador", "Tradução no ecrã, gratuita", "Segundos, vamos medir", "em teste", "test"],
+      ["Aplicação de tradução que ouve o som do computador", "Tradução sem pedidos ao organizador", "Segundos, vamos medir", "em teste", "test"],
+      ["O nosso ponto", "Tradução e pergunta pronta, tendo em conta o orador e o seu trabalho", "Segundos, vamos medir", "em construção", "test"],
+      ["Gravador na nuvem", "Gravação quando não está na sessão", "Depois da sessão", "com conhecimento do organizador", "wait"]
+    ],
+    "whoH": "Quem faz o quê",
+    "who": [
+      {"h": "Pilotos de IA", "li": ["Página sobre o orador e perguntas", "Gravação e a sua verificação", "Tradução e resumos", "Tradução do chat", "Análise e rascunho do cartão"]},
+      {"h": "A pessoa", "li": ["Entrada na sessão e códigos de acesso", "«Sim» a cada texto", "Envio para o chat e para o LinkedIn", "As suas palavras no cartão", "A decisão de quem conhecer"]}
+    ],
+    "rulesH": "Regras que não quebramos",
+    "rulesSum": "Honestidade e dados de terceiros",
+    "rules": ["A gravação e a transcrição ficam no arquivo pessoal. Na estante, apenas as próprias ideias e a ligação à fonte.", "As legendas pedem-se ao organizador de forma aberta e com antecedência.", "O gravador na nuvem é visível para todos os participantes. Só o usamos com conhecimento do organizador.", "A tradução pode errar; por isso, só vai para o chat texto verificado por uma pessoa."],
+    "btnLite": "Versão curta"
+  },
+  "goal": {
+    "h": "O objetivo: a sua estante «Aprendizagem»",
+    "p": "Um seminário que não foi para a estante está esquecido passado um mês. Crie a sua estante na Biblioteca SeedWave e ponha lá um cartão depois de cada sessão. Os meus estão na secção «Aprendizagem» e, a cada seminário, são mais.",
+    "btnOwn": "Criar a minha estante",
+    "btnMine": "Ver a minha"
+  },
+  "share": {
+    "text": "Diálogo: como participar num seminário online noutra língua e guardar as conclusões na sua estante.",
+    "copied": "Ligação copiada ✓",
+    "fail": "Não foi possível copiar"
+  }
+}

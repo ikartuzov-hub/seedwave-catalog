@@ -399,6 +399,26 @@
         "es": "Libros y películas en una estantería, un enlace",
         "de": "Bücher und Filme in einem Regal, ein Link"
       }
+    },
+    "dialogo": {
+      "url": "https://seedwave.pt/dialogo/",
+      "match": [
+        "seedwave.pt/dialogo/"
+      ],
+      "label": {
+        "pt": "Diálogo",
+        "en": "Diálogo",
+        "ru": "Diálogo",
+        "es": "Diálogo",
+        "de": "Diálogo"
+      },
+      "tagline": {
+        "pt": "Seminário online noutra língua, onde participa",
+        "en": "An online seminar in another language, where you take part",
+        "ru": "Онлайн-семинар на чужом языке, где ты участник",
+        "es": "Seminario online en otro idioma, donde participas",
+        "de": "Online-Seminar in einer anderen Sprache, bei dem du mitmachst"
+      }
     }
   },
   "related": {
@@ -494,6 +514,11 @@
       "trinta",
       "sono",
       "prazos"
+    ],
+    "seedwave.pt/dialogo/": [
+      "biblioteca",
+      "sono",
+      "trinta"
     ]
   }
 }

@@ -1,0 +1,30 @@
+{
+  "id": "/dialogo/en/",
+  "name": "Diálogo",
+  "short_name": "Diálogo",
+  "description": "Interested in an online seminar held in a language you don't speak yet? Diálogo records the session, translates it and leaves the takeaways on your shelf. In development: we are gauging demand.",
+  "lang": "en",
+  "start_url": "/dialogo/en/",
+  "scope": "/dialogo/",
+  "display": "standalone",
+  "background_color": "#F4F7F8",
+  "theme_color": "#0C7F5C",
+  "icons": [
+    {
+      "src": "/dialogo/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/dialogo/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/dialogo/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

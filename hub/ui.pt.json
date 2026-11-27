@@ -20,6 +20,7 @@
   "hubCtaBtn": "Abrir o bot",
   "footer": "© 2026 SeedWave · Igor Kartuzov",
   "stages": {
+    "demand": "Em desenvolvimento · a estudar a procura",
     "idea": "Ideia",
     "validation": "Validação",
     "mvp": "MVP — a funcionar",
